@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nri-0.1",
+  "title": "Neural Representation Interface document, v0.1",
+  "description": "A typed, executable description of what a network computes. Every claim is a predicate an executor checks against the network; status is written by the executor, never by the author.",
+  "type": "object",
+  "required": ["nri_version", "model", "author", "variables", "mechanisms", "claims"],
+  "properties": {
+    "nri_version": {"const": "0.1"},
+    "model": {
+      "type": "object",
+      "required": ["id", "weights_sha256", "sites"],
+      "properties": {
+        "id": {"type": "string"},
+        "weights_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "family": {"type": "string"},
+        "condition": {"type": "string"},
+        "sites": {
+          "type": "array",
+          "items": {"type": "object", "required": ["id", "dim"],
+                    "properties": {"id": {"type": "string"}, "dim": {"type": "integer"}}}
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "required": ["kind", "blinded"],
+      "properties": {
+        "kind": {"enum": ["reference", "human", "llm", "algorithm"]},
+        "blinded": {"type": "boolean", "description": "true if the author had no access to training code, task description or ground truth"},
+        "model_name": {"type": "string"},
+        "tool_calls": {"type": "integer"},
+        "notes": {"type": "string"}
+      }
+    },
+    "variables": {
+      "type": "array",
+      "description": "Computational variables. `ftype` is the ANLU-style functional type of the VARIABLE (what role it plays in the computation), independent of whether the network was trained with type embeddings.",
+      "items": {
+        "type": "object",
+        "required": ["id", "binding"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^V_[A-Za-z0-9_]+$"},
+          "name": {"type": "string"},
+          "ftype": {"enum": ["NUMBER", "OPERATION", "UNIT", "QUANTITY", "DIMENSION", "ROLE", "POSITION", "BOOLEAN", "CATEGORY", "OTHER"]},
+          "values": {"type": "array"},
+          "binding": {"type": "string", "description": "Python lambda over the input token list t, returning an int: how to compute the variable's ground value from the input"}
+        }
+      }
+    },
+    "mechanisms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "output_fn"],
+        "properties": {
+          "id": {"type": "string"},
+          "component": {"type": "string"},
+          "reads": {"type": "array", "items": {"type": "string"}},
+          "site_in": {"type": "string"},
+          "output_fn": {"type": "string", "description": "Python lambda over dict v of variable values, returning the predicted output class"},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "predicate"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["behavior", "linear_rep", "necessity", "edit"], "description": "behavior: model output == output_fn on >= threshold. linear_rep: a CAUSAL claim, tested by interchange intervention (swap the rank-r class-mean subspace of the variable between two inputs; output must follow output_fn with the variable taken from the source). Linear decodability alone does NOT pass it. necessity: mean-ablating that subspace drops behavior accuracy to <= threshold. edit: a weight program; success in scope, preservation out of scope, rank and relative norm reported."},
+          "mechanism": {"type": "string"},
+          "site": {"type": "string"},
+          "variable": {"type": "string"},
+          "rank": {"type": "integer", "minimum": 1},
+          "program": {
+            "type": "object",
+            "required": ["path", "entry"],
+            "properties": {"path": {"type": "string"}, "entry": {"type": "string"}, "args": {"type": "object"}}
+          },
+          "scope": {"type": "string", "description": "lambda v: bool, which inputs the edit is meant to change"},
+          "edit_fn": {"type": "string", "description": "lambda v: int, desired output after the edit"},
+          "predicate": {
+            "description": "[op, threshold] for scalar claims; {metric: [op, threshold]} for edit claims",
+            "oneOf": [
+              {"type": "array", "prefixItems": [{"enum": [">=", "<="]}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+              {"type": "object", "additionalProperties": {"type": "array"}}
+            ]
+          },
+          "status": {"type": "string", "description": "written by the executor: verified | refuted | error: ..."},
+          "measured": {}
+        }
+      }
+    },
+    "summary": {"type": "object"}
+  }
+}

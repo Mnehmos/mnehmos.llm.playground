@@ -1,0 +1,58 @@
+{
+  "blind_id": "net_Q2",
+  "condition": "typed",
+  "executor_summary": {
+    "claims": 6,
+    "verified": 3,
+    "refuted": 3,
+    "errors": 0
+  },
+  "claim_status": {
+    "C_behavior": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_lin_op": [
+      "linear_rep",
+      "refuted",
+      0.405029296875
+    ],
+    "C_lin_a": [
+      "linear_rep",
+      "refuted",
+      0.11181640625
+    ],
+    "C_lin_b": [
+      "linear_rep",
+      "refuted",
+      0.1181640625
+    ],
+    "C_nec_op": [
+      "necessity",
+      "verified",
+      0.954833984375
+    ],
+    "C_edit_plus_to_minus": [
+      "edit",
+      "verified",
+      {
+        "success": 0.9542042016983032,
+        "preserve": 0.9815484881401062,
+        "rel_norm": 5.228689193725586,
+        "rank": 64
+      }
+    ]
+  },
+  "variable_recall": {
+    "V_op": 1.0,
+    "V_a": 1.0,
+    "V_b": 1.0
+  },
+  "edit_vs_true_goal": {
+    "success": 0.9447739124298096,
+    "preserve": 0.9848926067352295,
+    "rank": 64,
+    "rel_norm": 5.228689193725586
+  }
+}

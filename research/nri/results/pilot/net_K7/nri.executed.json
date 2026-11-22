@@ -1,0 +1,194 @@
+{
+  "nri_version": "0.1",
+  "model": {
+    "id": "net_K7",
+    "weights_sha256": "bbcbc8d8f43ce089184c74894e4c794ffee42819921ab570f278a6af27820b2f",
+    "family": "2-layer bidirectional attention transformer (no LayerNorm), final-position MLP readout",
+    "condition": "ch2 is constant 0 in the input distribution; tokens 0-10 are digits, 11/12/13 are operators, 14 is an end marker at position 6",
+    "sites": [
+      {
+        "id": "resid_pre_mlp",
+        "dim": 64
+      }
+    ]
+  },
+  "author": {
+    "kind": "llm",
+    "blinded": true,
+    "model_name": "claude-opus-5-5",
+    "tool_calls": 40,
+    "notes": "Each input has exactly one operator token (11='+', 12='-', 13='*') at position 1..4, digits 0..10 elsewhere, token 14 at position 6. The output is (left neighbour OP right neighbour) mod 11; the other digits are distractors. Verified 20000/20000 on inputs.pt."
+  },
+  "variables": [
+    {
+      "id": "V_op_pos",
+      "name": "position of the operator token",
+      "ftype": "POSITION",
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "binding": "lambda t: [i for i in range(7) if t[i] in (11, 12, 13)][0]"
+    },
+    {
+      "id": "V_op",
+      "name": "operator (0='+' token 11, 1='-' token 12, 2='*' token 13)",
+      "ftype": "OPERATION",
+      "values": [
+        0,
+        1,
+        2
+      ],
+      "binding": "lambda t: [x for x in t if x in (11, 12, 13)][0] - 11"
+    },
+    {
+      "id": "V_a",
+      "name": "left operand (digit immediately before the operator)",
+      "ftype": "NUMBER",
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "binding": "lambda t: t[[i for i in range(7) if t[i] in (11, 12, 13)][0] - 1]"
+    },
+    {
+      "id": "V_b",
+      "name": "right operand (digit immediately after the operator)",
+      "ftype": "NUMBER",
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "binding": "lambda t: t[[i for i in range(7) if t[i] in (11, 12, 13)][0] + 1]"
+    },
+    {
+      "id": "V_result",
+      "name": "(a op b) mod 11",
+      "ftype": "NUMBER",
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "binding": "lambda t: (lambda p: ((t[p-1] + t[p+1]) % 11) if t[p] == 11 else (((t[p-1] - t[p+1]) % 11) if t[p] == 12 else ((t[p-1] * t[p+1]) % 11)))([i for i in range(7) if t[i] in (11, 12, 13)][0])"
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "M_main",
+      "component": "attn1+attn2 gather operator and its two neighbours into the final position; MLP (W_in/W_out) + residual direct path map to logits",
+      "site_in": "resid_pre_mlp",
+      "reads": [
+        "V_op",
+        "V_a",
+        "V_b"
+      ],
+      "output_fn": "lambda v: (v['V_a'] + v['V_b']) % 11 if v['V_op'] == 0 else ((v['V_a'] - v['V_b']) % 11 if v['V_op'] == 1 else (v['V_a'] * v['V_b']) % 11)",
+      "description": "Modular arithmetic mod 11 on the two digits adjacent to the single operator token. At resid_pre_mlp the operator is a clean rank-2 linear code; operands and partial result features (Fourier-like, op-dependent interactions such as a+b / a-b frequencies) are present but entangled; the MLP completes the computation."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C_behavior",
+      "kind": "behavior",
+      "mechanism": "M_main",
+      "predicate": [
+        ">=",
+        0.99
+      ],
+      "measured": 1.0,
+      "status": "verified"
+    },
+    {
+      "id": "C_linrep_op",
+      "kind": "linear_rep",
+      "site": "resid_pre_mlp",
+      "variable": "V_op",
+      "rank": 2,
+      "mechanism": "M_main",
+      "predicate": [
+        ">=",
+        0.9
+      ],
+      "measured": 0.459228515625,
+      "status": "refuted"
+    },
+    {
+      "id": "C_nec_result",
+      "kind": "necessity",
+      "site": "resid_pre_mlp",
+      "variable": "V_result",
+      "rank": 10,
+      "mechanism": "M_main",
+      "predicate": [
+        "<=",
+        0.5
+      ],
+      "measured": 0.1533203125,
+      "status": "verified"
+    },
+    {
+      "id": "C_edit_plus_to_minus",
+      "kind": "edit",
+      "mechanism": "M_main",
+      "program": {
+        "path": "/tmp/claude-0/-home-user-mnehmos-llm-playground/90e5df66-e1bb-5c2d-9530-797abdc5a5c7/scratchpad/blind/net_K7/edit_program.py",
+        "entry": "program",
+        "args": {}
+      },
+      "scope": "lambda v: v['V_op'] == 0",
+      "edit_fn": "lambda v: (v['V_a'] - v['V_b']) % 11",
+      "predicate": {
+        "success": [
+          ">=",
+          0.3
+        ],
+        "preserve": [
+          ">=",
+          0.95
+        ]
+      },
+      "measured": {
+        "success": 0.3768768906593323,
+        "preserve": 0.9659913182258606,
+        "rel_norm": 7.468029022216797,
+        "rank": 64
+      },
+      "status": "verified"
+    }
+  ],
+  "summary": {
+    "claims": 4,
+    "verified": 3,
+    "refuted": 1,
+    "errors": 0
+  }
+}
