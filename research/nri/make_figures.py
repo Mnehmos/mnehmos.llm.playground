@@ -144,9 +144,45 @@ def iit_dots():
     fig.savefig(ROOT / "results" / "fig_iit.png", dpi=160)
 
 
+DIM_ARMS = ["none", "none_2x", "aux_types", "iit_full", "iit_partial", "iit_noisy", "iit_raw"]
+DIM_METRICS = [("acc_ood", "OOD accuracy (held-out unit–value combos)"),
+               ("das_M", "DAS IIA, M (declared in all IIT arms)"),
+               ("das_A", "DAS IIA, A (undeclared in iit_partial)"),
+               ("edit2x_M_das", "held-out edit M→2M (blind)"),
+               ("edit2x_A_das", "held-out edit A→2A (blind)")]
+
+
+def dim_dots():
+    p = ROOT / "results" / "dim" / "metrics.json"
+    if not p.exists():
+        return
+    models = json.loads(p.read_text())
+    noop = st.mean(m["edit2x_noop"] for m in models)
+    fig, axes = plt.subplots(1, len(DIM_METRICS), figsize=(3.0 * len(DIM_METRICS), 3.6), facecolor=SURF)
+    for ax, (k, title) in zip(axes, DIM_METRICS):
+        style(ax)
+        for x, a in enumerate(DIM_ARMS):
+            ys = [m[k] for m in models if m["arm"] == a]
+            col = "#eb6834" if a.startswith("iit") else "#2a78d6"
+            ax.scatter([x] * len(ys), ys, s=16, color=col, edgecolor=SURF, linewidth=1, zorder=3)
+            ax.hlines(st.mean(ys), x - 0.3, x + 0.3, color=INK, linewidth=1.2, zorder=4)
+        if k.startswith("edit"):
+            ax.axhline(noop, color=INK2, linewidth=0.8, linestyle="--", zorder=2)
+            ax.annotate("no-op", (-0.45, noop), fontsize=7, color=INK2, va="bottom", ha="left")
+        ax.set_xticks(range(len(DIM_ARMS)))
+        ax.set_xticklabels(DIM_ARMS, rotation=55, ha="right", fontsize=7)
+        ax.set_ylim(0, 1.02)
+        ax.set_title(title, fontsize=8, color=INK, loc="left")
+    fig.suptitle("Dimensional reasoning, 10 seeds/arm (orange = interchange intervention training)",
+                 fontsize=9, color=INK2, x=0.01, ha="left")
+    fig.tight_layout()
+    fig.savefig(ROOT / "results" / "fig_dimensional.png", dpi=160)
+
+
 if __name__ == "__main__":
     learning_curves()
     causal_dots()
     untyped_dots()
     iit_dots()
+    dim_dots()
     print("ok", REGIMES)

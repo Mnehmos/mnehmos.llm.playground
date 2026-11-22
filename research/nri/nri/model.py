@@ -41,21 +41,22 @@ class Attn(nn.Module):
 
 class TinyTyped(nn.Module):
     def __init__(self, condition: str, d: int = 64, n_heads: int = 4, d_mlp: int = 256,
-                 type_dims: int = 16, n_types: int | None = None, aux_classes: int = 0):
+                 type_dims: int = 16, n_types: int | None = None, aux_classes: int = 0,
+                 vocab: int | None = None, seq_len: int | None = None, n_out: int | None = None):
         super().__init__()
         self.condition, self.d, self.d_mlp = condition, d, d_mlp
-        self.E_c = nn.Embedding(tasks.VOCAB, d)
+        self.E_c = nn.Embedding(vocab or tasks.VOCAB, d)
         self.E_t = nn.Embedding(n_types or tasks.N_TYPES, d)
         # optional auxiliary role-prediction head on the layer-1 residual (training only;
         # never used at inference). Present in every condition of an experiment that uses it,
         # so parameter counts stay matched.
         self.aux = nn.Linear(d, aux_classes) if aux_classes else None
-        self.E_p = nn.Embedding(tasks.SEQ_LEN, d)
+        self.E_p = nn.Embedding(seq_len or tasks.SEQ_LEN, d)
         self.attn1 = Attn(d, n_heads)
         self.attn2 = Attn(d, n_heads)
         self.W_in = nn.Linear(d, d_mlp)
         self.W_out = nn.Linear(d_mlp, d)
-        self.W_U = nn.Linear(d, tasks.P, bias=False)
+        self.W_U = nn.Linear(d, n_out or tasks.P, bias=False)
         # factored geometric prior: content and type live in disjoint coordinate blocks
         mc = torch.ones(d)
         mt = torch.ones(d)

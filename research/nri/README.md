@@ -20,6 +20,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 8 | [`docs/08_untyped_inference_results.md`](docs/08_untyped_inference_results.md) | **ANLU as specified**: typed training, untyped inference, 40 networks. No speed-up; removal needs a mechanism; **types as an auxiliary target make internals ~2.7× more editable**, specifically |
 | 9 | [`docs/09_r6_interchange_training.md`](docs/09_r6_interchange_training.md) | **R6**: interchange intervention training at the computation site → every variable perfectly localizable (DAS 1.00), op-swap edit 0.96, **held-out operand-shift edit 0.80 vs 0.04**, no accuracy cost |
 | 10 | [`docs/10_r1_white_vs_black_box.md`](docs/10_r1_white_vs_black_box.md) | **R1**: blinded LLM interpreters, white-box vs black-box × baseline vs role-supervised networks, plus cross-evaluation of their edit programs on unseen networks (incl. IIT) |
+| 11 | [`docs/11_preregistration.md`](docs/11_preregistration.md) | **Pre-registration** (committed before the run) of the dimensional-reasoning study: hypotheses, Holm-corrected primary family, decision rules |
+| 12 | [`docs/12_dimensional_results.md`](docs/12_dimensional_results.md) | **Results**: P1 (editability) supported but small (0.36 vs 0.17); P2 (OOD unit generalization) not supported; IIT unstable (sign-ambiguity trap); partial specs give the best edits; compute-matched control null |
 
 ## Layout
 
@@ -45,6 +47,7 @@ python run_experiment.py --seeds 5 --steps 3000 --wd 0.01     # ~15-30 min on 4 
 python run_experiment.py --seeds 5 --steps 3000 --wd 1
 python run_untyped_inference.py --seeds 5 --steps 3000   # doc 08, ~1 CPU-hour
 python run_iit.py --seeds 5 --steps 3000                 # doc 09 (R6), ~1 CPU-hour
+python run_dimensional.py --seeds 10 --steps 6000        # docs 11-12 (pre-registered), ~3 CPU-hours
 python make_figures.py
 ```
 

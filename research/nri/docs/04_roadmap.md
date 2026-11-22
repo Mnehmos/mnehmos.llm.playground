@@ -84,6 +84,15 @@ are R1 on aux-trained vs. baseline networks (do LLM interpreters also find them 
 ANLU-typed variables only, leave the rest free) on R2's unit-arithmetic task; (iii) a weights-only
 (no forward pass) interpreter arm, to test raw-weight reading separately from experimentation.
 
+**Update after the pre-registered dimensional study (doc 12):**
+- P1 is supported but small; P2 is not supported.
+- IIT needs optimization safeguards (λ warm-up, restarts), because a sign-ambiguity trap catches
+  half the seeds.
+- Partial specifications gave the best edits.
+
+Next: re-register with safeguards, enforce structure at the value–unit *binding* site to target
+generalization, then R1 at scale.
+
 ## Decision gates
 
 1. **After R0** (now): if typed ≈ canonical on every causal metric, the "type *geometry*"
