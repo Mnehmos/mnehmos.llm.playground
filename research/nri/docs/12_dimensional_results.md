@@ -143,3 +143,66 @@ harder to train.
 3. **Break the sign symmetry:** for example, an auxiliary target on the sign of F (its quadratic
    character), to test whether the trap is the only obstacle.
 4. R1 at scale with a weights-only arm, still deferred (doc 10 §10.6).
+
+## 12.8 Addendum (post hoc): does the edit change the *intended* variable?
+
+*Prompted by a reviewer. The analysis is `edit_specificity.py`; the data are
+`results/edit_specificity.{json,md}`. Everything in this section is exploratory: the edits below
+were not registered, and the inversion edit was chosen after the additive edit failed.*
+
+**The flaw in the registered edit (§11.4).** With F = M·A·S, the M→2M edit and the A→2A edit
+both produce exactly 2F. An edit that simply doubled the *output* would score the same. **The
+registered P1 result therefore shows that something changed, not that M changed.** The
+localization measures (DAS, designed-block IIA) were the only evidence specific to M.
+
+**Variable-discriminating edits.** These are scored only on examples where the intended target,
+the wrong-variable target and the original answer are pairwise distinct. Each edited output is
+classified as *intended*, *wrong-variable*, *unchanged* or *other*, and
+specificity = P(intended) − P(wrong). On the synthetic disentangled host, specificity is 1.00; on
+the entangled host it is 0.00.
+
+| edit | what distinguishes it at the output | result |
+|---|---|---|
+| **M→M+1 / A→A+1** (proposed by the reviewer) | changes F by A·S vs M·S | **fails in every arm, for every localization, including designed blocks** (intended ≤ 0.105; chance 0.077) |
+| **M→M⁻¹ / A→A⁻¹** (post hoc) | M⁻¹·A·S vs M·A⁻¹·S, distinct whenever A ≠ ±M | see below |
+
+**Inversion edit, DAS-located (blind), 10 seeds per arm:**
+
+| arm | M⁻¹ intended / wrong | **M⁻¹ specificity** (vs none) | A⁻¹ specificity (vs none) |
+|---|---|---|---|
+| none | 0.006 / 0.010 | −0.003 | +0.004 |
+| none_2x | 0.000 / 0.000 | +0.000 | +0.000 |
+| aux_types | 0.015 / 0.015 | −0.000 | −0.000 |
+| iit_full | 0.139 / 0.038 | +0.101 (p = 0.054) | +0.136 (p = 0.18) |
+| **iit_partial** (only M declared) | **0.357 / 0.022** | **+0.335 (p = 0.00007)** | **+0.019 (p = 0.87)** |
+| iit_noisy | 0.119 / 0.059 | +0.060 (p = 0.048) | +0.028 (p = 0.011) |
+| iit_raw | 0.056 / 0.050 | +0.007 | +0.006 |
+
+Within `iit_partial`, the declared variable is more editable than the undeclared one in 9/10
+seeds (paired exact sign-flip test, p = 0.006). Among converged `iit_full` seeds, M⁻¹ specificity
+is +0.18 and A⁻¹ +0.21.
+
+**Interpretation.**
+
+1. **With a variable-discriminating test, the dimensional evidence is weaker than P1 suggested,
+   but it is genuine where it exists.** Declaring a variable via IIT makes *that* variable, and
+   not its sibling, specifically editable. The clearest case is the partial specification. That
+   dissociation is the strongest evidence in this study for the original idea. It is post hoc and
+   must be confirmed under registration.
+2. **Why the additive edit fails everywhere.** IIT makes a block causally *sufficient* for a
+   variable (copying a real activation works; designed-block IIA ≈ 1), but it does not make the
+   block's geometry *clean*. In `iit_full_s0`'s M block, only 21% of the variance separates M
+   values, and 62% of the within-class variance encodes which (value, unit) route produced M. A
+   class-mean affine edit moves only the small M component and leaves the network off its data
+   manifold. `iit_partial_s0`'s M block is much cleaner (91% between-class), matching its better
+   edits. Some permutations of M (inversion) are reachable by an affine move in such a code and
+   others (+1) are not. **Edit success measures the edit family's expressibility as well as
+   localization.**
+3. **The R6 result passes the test** (§9 / doc 09 note). For a→a+1 on modular arithmetic, ADD rows
+   (where a+1 ≡ b+1) are excluded. IIT networks reach 0.797 intended vs 0.023 wrong-variable
+   (specificity +0.77); baselines are at 0.
+
+**Adopted for the next registration** (doc 13): variable-discriminating edits only,
+specificity as the primary edit metric, and a designed-block positive control. If the edit fails
+on the designed block, the *edit family* is inadequate, and that is reported separately from
+localization.

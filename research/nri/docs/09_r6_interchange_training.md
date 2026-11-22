@@ -7,6 +7,11 @@
 >
 > **Retracted:** the claim of "no significant slowdown" in §9.4, which was measured in steps, on
 > one easy task. The findings below hold for the modular-arithmetic task only.
+>
+> **Variable-specificity check (doc 12 §12.8):** for ADD, the operand-shift edit's output cannot
+> distinguish a+1 from b+1. On the discriminating rows (SUB; MUL with a ≠ b), IIT networks hit the
+> intended target 0.797 of the time and the wrong-variable target 0.023 (specificity +0.77;
+> baselines 0.00). The R6 editability result is variable-specific.
 
 *Script: `run_iit.py`. Data: `results/iit/metrics.json`; table: `results/iit/summary.md`;
 figure: `results/fig_iit.png`. 10 new networks, plus 10 reused from doc 08 with an identical setup.

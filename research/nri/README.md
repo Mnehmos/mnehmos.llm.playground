@@ -22,6 +22,7 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 10 | [`docs/10_r1_white_vs_black_box.md`](docs/10_r1_white_vs_black_box.md) | **R1**: blinded LLM interpreters, white-box vs black-box × baseline vs role-supervised networks, plus cross-evaluation of their edit programs on unseen networks (incl. IIT) |
 | 11 | [`docs/11_preregistration.md`](docs/11_preregistration.md) | **Pre-registration** (committed before the run) of the dimensional-reasoning study: hypotheses, Holm-corrected primary family, decision rules |
 | 12 | [`docs/12_dimensional_results.md`](docs/12_dimensional_results.md) | **Results**: P1 (editability) supported but small (0.36 vs 0.17); P2 (OOD unit generalization) not supported; IIT unstable (sign-ambiguity trap); partial specs give the best edits; compute-matched control null |
+| 13 | [`docs/13_next_registration_plan.md`](docs/13_next_registration_plan.md) | Plan (not a registration) for the next study: variable-discriminating edits with a specificity metric, a designed-block positive control, reliable IIT training |
 
 ## Layout
 
@@ -48,6 +49,7 @@ python run_experiment.py --seeds 5 --steps 3000 --wd 1
 python run_untyped_inference.py --seeds 5 --steps 3000   # doc 08, ~1 CPU-hour
 python run_iit.py --seeds 5 --steps 3000                 # doc 09 (R6), ~1 CPU-hour
 python run_dimensional.py --seeds 10 --steps 6000        # docs 11-12 (pre-registered), ~3 CPU-hours
+python edit_specificity.py                               # doc 12 §12.8 (post hoc), ~15 min
 python make_figures.py
 ```
 
