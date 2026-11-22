@@ -1,0 +1,194 @@
+{
+  "nri_version": "0.1",
+  "model": {
+    "id": "typed_s4",
+    "weights_sha256": "183ced6bd61b0f61c594f6d0109e8a69b7f574b8dc2136f12b8ae177edb6b121",
+    "family": "TinyTyped",
+    "condition": "typed",
+    "sites": [
+      {
+        "id": "resid_pre_mlp",
+        "dim": 64
+      }
+    ]
+  },
+  "author": {
+    "kind": "reference",
+    "blinded": false
+  },
+  "variables": [
+    {
+      "id": "V_op",
+      "name": "operation",
+      "ftype": "OPERATION",
+      "values": [
+        "ADD",
+        "SUB",
+        "MUL"
+      ],
+      "binding": "lambda t: t[[i for i, x in enumerate(t) if 11 <= x <= 13][0]] - 11"
+    },
+    {
+      "id": "V_a",
+      "name": "left operand",
+      "ftype": "NUMBER",
+      "binding": "lambda t: t[[i for i, x in enumerate(t) if 11 <= x <= 13][0] - 1]"
+    },
+    {
+      "id": "V_b",
+      "name": "right operand",
+      "ftype": "NUMBER",
+      "binding": "lambda t: t[[i for i, x in enumerate(t) if 11 <= x <= 13][0] + 1]"
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "M_arith",
+      "component": "mlp",
+      "reads": [
+        "V_op",
+        "V_a",
+        "V_b"
+      ],
+      "site_in": "resid_pre_mlp",
+      "output_fn": "lambda v: (v['V_a'] + v['V_b']) % 11 if v['V_op'] == 0 else ((v['V_a'] - v['V_b']) % 11 if v['V_op'] == 1 else (v['V_a'] * v['V_b']) % 11)",
+      "description": "MLP computes OP(a, b) mod 11 from the gathered variables"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C_behavior",
+      "kind": "behavior",
+      "mechanism": "M_arith",
+      "predicate": [
+        ">=",
+        0.99
+      ],
+      "measured": 1.0,
+      "status": "verified"
+    },
+    {
+      "id": "C_rep_V_op",
+      "kind": "linear_rep",
+      "site": "resid_pre_mlp",
+      "variable": "V_op",
+      "rank": 2,
+      "mechanism": "M_arith",
+      "predicate": [
+        ">=",
+        0.9
+      ],
+      "measured": 0.4609375,
+      "status": "refuted"
+    },
+    {
+      "id": "C_nec_V_op",
+      "kind": "necessity",
+      "site": "resid_pre_mlp",
+      "variable": "V_op",
+      "rank": 2,
+      "mechanism": "M_arith",
+      "predicate": [
+        "<=",
+        0.5
+      ],
+      "measured": 0.8837890625,
+      "status": "refuted"
+    },
+    {
+      "id": "C_rep_V_a",
+      "kind": "linear_rep",
+      "site": "resid_pre_mlp",
+      "variable": "V_a",
+      "rank": 10,
+      "mechanism": "M_arith",
+      "predicate": [
+        ">=",
+        0.9
+      ],
+      "measured": 0.10693359375,
+      "status": "refuted"
+    },
+    {
+      "id": "C_nec_V_a",
+      "kind": "necessity",
+      "site": "resid_pre_mlp",
+      "variable": "V_a",
+      "rank": 10,
+      "mechanism": "M_arith",
+      "predicate": [
+        "<=",
+        0.5
+      ],
+      "measured": 0.701416015625,
+      "status": "refuted"
+    },
+    {
+      "id": "C_rep_V_b",
+      "kind": "linear_rep",
+      "site": "resid_pre_mlp",
+      "variable": "V_b",
+      "rank": 10,
+      "mechanism": "M_arith",
+      "predicate": [
+        ">=",
+        0.9
+      ],
+      "measured": 0.111328125,
+      "status": "refuted"
+    },
+    {
+      "id": "C_nec_V_b",
+      "kind": "necessity",
+      "site": "resid_pre_mlp",
+      "variable": "V_b",
+      "rank": 10,
+      "mechanism": "M_arith",
+      "predicate": [
+        "<=",
+        0.5
+      ],
+      "measured": 0.636474609375,
+      "status": "refuted"
+    },
+    {
+      "id": "C_edit_add_to_sub",
+      "kind": "edit",
+      "mechanism": "M_arith",
+      "program": {
+        "path": "/home/user/mnehmos.llm.playground/research/nri/programs/op_swap.py",
+        "entry": "program",
+        "args": {
+          "var": "V_op",
+          "x": 0,
+          "y": 1
+        }
+      },
+      "scope": "lambda v: v['V_op'] == 0",
+      "edit_fn": "lambda v: (v['V_a'] - v['V_b']) % 11 if v['V_op'] in (0, 1) else (v['V_a'] * v['V_b']) % 11",
+      "predicate": {
+        "success": [
+          ">=",
+          0.9
+        ],
+        "preserve": [
+          ">=",
+          0.97
+        ]
+      },
+      "measured": {
+        "success": 0.1293421983718872,
+        "preserve": 1.0,
+        "rel_norm": 0.18476209044456482,
+        "rank": 1
+      },
+      "status": "refuted"
+    }
+  ],
+  "summary": {
+    "claims": 8,
+    "verified": 1,
+    "refuted": 7,
+    "errors": 0
+  }
+}

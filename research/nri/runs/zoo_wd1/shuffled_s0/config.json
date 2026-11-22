@@ -1,0 +1,25 @@
+{
+  "condition": "shuffled",
+  "seed": 0,
+  "steps": 3000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 1.0,
+  "n_params": 68800,
+  "model_kw": {},
+  "torch": "2.15.0+cu132",
+  "P": 11,
+  "ops": [
+    "ADD",
+    "SUB",
+    "MUL"
+  ],
+  "seq_len": 7,
+  "final_eval_acc": 0.603271484375,
+  "final_per_op": {
+    "ADD": 0.6268932223320007,
+    "SUB": 0.18068763613700867,
+    "MUL": 1.0
+  },
+  "train_seconds": 254.5
+}

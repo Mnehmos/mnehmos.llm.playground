@@ -1,0 +1,48 @@
+{
+  "blind_id": "net_K7",
+  "condition": "none",
+  "executor_summary": {
+    "claims": 4,
+    "verified": 3,
+    "refuted": 1,
+    "errors": 0
+  },
+  "claim_status": {
+    "C_behavior": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_linrep_op": [
+      "linear_rep",
+      "refuted",
+      0.459228515625
+    ],
+    "C_nec_result": [
+      "necessity",
+      "verified",
+      0.1533203125
+    ],
+    "C_edit_plus_to_minus": [
+      "edit",
+      "verified",
+      {
+        "success": 0.3768768906593323,
+        "preserve": 0.9659913182258606,
+        "rel_norm": 7.468029022216797,
+        "rank": 64
+      }
+    ]
+  },
+  "variable_recall": {
+    "V_op": 1.0,
+    "V_a": 1.0,
+    "V_b": 1.0
+  },
+  "edit_vs_true_goal": {
+    "success": 0.3587842881679535,
+    "preserve": 0.9745176434516907,
+    "rank": 64,
+    "rel_norm": 7.468029022216797
+  }
+}
