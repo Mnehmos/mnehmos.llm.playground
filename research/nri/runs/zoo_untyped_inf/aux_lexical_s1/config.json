@@ -1,0 +1,19 @@
+{
+  "condition": "aux_lexical",
+  "seed": 1,
+  "steps": 3000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "p_drop": 0.5,
+  "lambda_aux": 1.0,
+  "n_params": 69189,
+  "model_kw": {
+    "n_types": 6,
+    "aux_classes": 5
+  },
+  "torch": "2.15.0+cu132",
+  "final_untyped_acc": 1.0,
+  "final_typed_acc": 0.2210693359375,
+  "train_seconds": 131.0
+}

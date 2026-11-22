@@ -82,7 +82,40 @@ def causal_dots():
     fig.savefig(ROOT / "results" / "fig_causal.png", dpi=160)
 
 
+UI_CONDS = ["none", "typed_always", "typed_dropout", "typed_dropout_aux", "aux_only",
+            "aux_shuffled", "aux_lexical", "aux_contextual"]
+UI_METRICS = [("acc_untyped", "accuracy, untyped inference"), ("das_op", "DAS IIA, op (k=16)"),
+              ("iia_op", "class-mean IIA, op"), ("edit_success", "closed-form edit success"),
+              ("das_edit_success", "DAS-guided edit success")]
+
+
+def untyped_dots():
+    p = ROOT / "results" / "untyped_inf" / "metrics.json"
+    if not p.exists():
+        return
+    models = json.loads(p.read_text())
+    conds = [c for c in UI_CONDS if any(m["condition"] == c for m in models)]
+    role_sup = {"typed_dropout_aux", "aux_only"}  # highlighted: role-supervised arms
+    fig, axes = plt.subplots(1, len(UI_METRICS), figsize=(3.0 * len(UI_METRICS), 3.6), facecolor=SURF)
+    for ax, (k, title) in zip(axes, UI_METRICS):
+        style(ax)
+        for x, c in enumerate(conds):
+            ys = [m[k] for m in models if m["condition"] == c]
+            col = "#eb6834" if c in role_sup else "#2a78d6"
+            ax.scatter([x] * len(ys), ys, s=20, color=col, edgecolor=SURF, linewidth=1, zorder=3)
+            ax.hlines(st.mean(ys), x - 0.3, x + 0.3, color=INK, linewidth=1.2, zorder=4)
+        ax.set_xticks(range(len(conds)))
+        ax.set_xticklabels(conds, rotation=55, ha="right", fontsize=7)
+        ax.set_ylim(0, 1.02)
+        ax.set_title(title, fontsize=8, color=INK, loc="left")
+    fig.suptitle("Typed training, untyped inference: orange = role used as an auxiliary TARGET",
+                 fontsize=9, color=INK2, x=0.01, ha="left")
+    fig.tight_layout()
+    fig.savefig(ROOT / "results" / "fig_untyped_inference.png", dpi=160)
+
+
 if __name__ == "__main__":
     learning_curves()
     causal_dots()
+    untyped_dots()
     print("ok", REGIMES)

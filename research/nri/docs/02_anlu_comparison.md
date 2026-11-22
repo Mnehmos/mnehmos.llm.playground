@@ -1,11 +1,19 @@
 # 2. ANLU against the published record and the prototype
 
-*Caveat:* the original specification (*ANLU: Typed Token Embeddings as Structural Priors for
-Language Model Pre-Training*, Feb 2026) is not in this repository, and this session could not
-access it. This analysis uses the summary in the research brief: `e_i = c_i + t_{τ_i} + p_i`,
-contextual functional types (NUMBER, UNIT, QUANTITY, OPERATION, DIMENSION, grammatical roles,
-domain types), and a staged curriculum. Corrections are welcome. Point me to the spec and I will
-revise this.
+> **Update (after reading the full specification and the four companion papers):** the
+> specification makes *typed training, untyped inference* the core mechanism. The experiments in
+> this document fed types at inference, so they tested the runtime-dependency variant. The
+> specified variant is tested in **doc 08**, and the full review of all five papers is in
+> **doc 07**. In short:
+> - in the specified form, types give **no** speed-up;
+> - removing them requires dropout or an auxiliary loss;
+> - types used as an **auxiliary training target** make the internals substantially more
+>   localizable and editable, specifically.
+>
+> §2.1–2.4 below are kept as the record of the first round.
+
+*Original caveat (first round):* the specification was not available in that round, and the
+analysis used the summary in the research brief.
 
 ## 2.1 ANLU decomposed into separately testable hypotheses
 
