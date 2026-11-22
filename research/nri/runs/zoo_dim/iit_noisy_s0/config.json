@@ -1,0 +1,38 @@
+{
+  "arm": "iit_noisy",
+  "condition": "iit_noisy",
+  "seed": 0,
+  "steps": 6000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "spec": {
+    "M": [
+      0,
+      16
+    ],
+    "A": [
+      16,
+      32
+    ],
+    "S": [
+      32,
+      36
+    ]
+  },
+  "noise": 0.25,
+  "lambda_iit": 3.0,
+  "encoder_forwards_per_step": 2,
+  "n_params": 69831,
+  "model_kw": {
+    "n_types": 1,
+    "aux_classes": 7,
+    "vocab": 25,
+    "seq_len": 8,
+    "n_out": 13
+  },
+  "torch": "2.15.0+cu132",
+  "acc_id": 0.9010009765625,
+  "acc_ood": 0.8016357421875,
+  "train_seconds": 455.5
+}

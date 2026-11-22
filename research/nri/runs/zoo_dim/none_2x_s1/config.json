@@ -1,0 +1,25 @@
+{
+  "arm": "none_2x",
+  "condition": "none_2x",
+  "seed": 1,
+  "steps": 6000,
+  "batch": 1024,
+  "lr": 0.002,
+  "wd": 0.01,
+  "spec": {},
+  "noise": 0.0,
+  "lambda_iit": 3.0,
+  "encoder_forwards_per_step": 2,
+  "n_params": 69831,
+  "model_kw": {
+    "n_types": 1,
+    "aux_classes": 7,
+    "vocab": 25,
+    "seq_len": 8,
+    "n_out": 13
+  },
+  "torch": "2.15.0+cu132",
+  "acc_id": 1.0,
+  "acc_ood": 0.78759765625,
+  "train_seconds": 420.2
+}

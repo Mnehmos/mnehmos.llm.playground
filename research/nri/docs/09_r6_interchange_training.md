@@ -1,5 +1,13 @@
 # 9. R6: enforcing structure inside the network (interchange intervention training)
 
+> **Update after the pre-registered replication on dimensional reasoning (doc 12).** On a harder
+> task, IIT still improves held-out edits significantly, but much less: 0.36 vs 0.17, not 0.80 vs
+> 0.04. It does not improve generalization to held-out unit combinations. It is
+> optimization-unstable: 5/10 full-spec seeds fall into a sign-ambiguity trap.
+>
+> **Retracted:** the claim of "no significant slowdown" in §9.4, which was measured in steps, on
+> one easy task. The findings below hold for the modular-arithmetic task only.
+
 *Script: `run_iit.py`. Data: `results/iit/metrics.json`; table: `results/iit/summary.md`;
 figure: `results/fig_iit.png`. 10 new networks, plus 10 reused from doc 08 with an identical setup.
 About 1 CPU-hour.*

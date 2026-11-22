@@ -168,7 +168,7 @@ def dim_dots():
             ax.hlines(st.mean(ys), x - 0.3, x + 0.3, color=INK, linewidth=1.2, zorder=4)
         if k.startswith("edit"):
             ax.axhline(noop, color=INK2, linewidth=0.8, linestyle="--", zorder=2)
-            ax.annotate("no-op", (len(DIM_ARMS) - 0.5, noop), fontsize=7, color=INK2, va="bottom", ha="right")
+            ax.annotate("no-op", (-0.45, noop), fontsize=7, color=INK2, va="bottom", ha="left")
         ax.set_xticks(range(len(DIM_ARMS)))
         ax.set_xticklabels(DIM_ARMS, rotation=55, ha="right", fontsize=7)
         ax.set_ylim(0, 1.02)
