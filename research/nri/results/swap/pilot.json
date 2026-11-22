@@ -1,0 +1,122 @@
+[
+  {
+    "model": "mass_only_s200",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 0.999755859375
+  },
+  {
+    "model": "mass_only_s201",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s202",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s203",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s204",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s200",
+    "schedule": "const",
+    "acc_id": 0.631103515625,
+    "designed_iia": 0.641357421875
+  },
+  {
+    "model": "acc_only_s201",
+    "schedule": "const",
+    "acc_id": 0.2423095703125,
+    "designed_iia": 0.24755859375
+  },
+  {
+    "model": "acc_only_s202",
+    "schedule": "const",
+    "acc_id": 0.374755859375,
+    "designed_iia": 0.362548828125
+  },
+  {
+    "model": "acc_only_s203",
+    "schedule": "const",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s204",
+    "schedule": "const",
+    "acc_id": 0.5982666015625,
+    "designed_iia": 0.591064453125
+  },
+  {
+    "model": "mass_only_s200",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s201",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 0.999755859375
+  },
+  {
+    "model": "mass_only_s202",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s203",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "mass_only_s204",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s200",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s201",
+    "schedule": "warmup",
+    "acc_id": 0.6053466796875,
+    "designed_iia": 0.601318359375
+  },
+  {
+    "model": "acc_only_s202",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s203",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  },
+  {
+    "model": "acc_only_s204",
+    "schedule": "warmup",
+    "acc_id": 1.0,
+    "designed_iia": 1.0
+  }
+]
