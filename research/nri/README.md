@@ -26,6 +26,7 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 14 | [`docs/14_registration_role_swap.md`](docs/14_registration_role_swap.md) | **Registration** (committed before the run) of the role-swap study |
 | 15 | [`docs/15_role_swap_results.md`](docs/15_role_swap_results.md) | **Role-swap result**: the edit advantage follows the declared variable in 12/12 seeds (primary Δ +0.37, p = 0.0005); copying real patterns works (0.8–0.9) but the fitted edit doesn't (0.2–0.3), so edit construction is the bottleneck |
 | 16 | [`docs/16_registration_editors.md`](docs/16_registration_editors.md) | **Registration** (committed before scoring the fresh sample) of the editor comparison on the fixed role-swap networks: pooled vs route-aware editors in three tiers (weight edit / stored table / per-question), copy as benchmark |
+| 17 | [`docs/17_editor_results.md`](docs/17_editor_results.md) | **Editor result**: the same value leaves a different pattern per unit; a unit-aware editor reaches 0.76 / 0.89 (copy 0.80 / 0.91; current editor 0.18 / 0.31), 0.97–0.98 on converged networks, with no rise in wrong-variable changes; but only as a per-question lookup. A single linear weight edit gains just +0.05–0.07 |
 
 ## Layout
 
