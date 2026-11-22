@@ -46,7 +46,7 @@ def main():
     ap.add_argument("--keys", type=Path, required=True)
     a = ap.parse_args()
     key = json.loads((a.keys / f"{a.pkg.name}.json").read_text())
-    run, cond = Path(key["run"]), key["condition"]
+    run, cond = Path(key["run"]), key.get("input_condition", key["condition"])
     model = load(run)
     sampler = lambda n, g: (lambda b: (b.tokens, b.types))(tasks.make_batch(n, cond, g))  # noqa
     host = Host(model, sampler, tasks.P)

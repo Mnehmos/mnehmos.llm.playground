@@ -114,8 +114,39 @@ def untyped_dots():
     fig.savefig(ROOT / "results" / "fig_untyped_inference.png", dpi=160)
 
 
+IIT_CONDS = ["none", "aux_only", "iit", "iit_aux"]
+IIT_METRICS = [("das_op", "DAS IIA, op"), ("das_a", "DAS IIA, a (operand)"),
+               ("edit_success", "op-swap edit success"),
+               ("shift_edit_das", "held-out edit: a→a+1 (DAS-located)"),
+               ("additive_r2", "additive R² at site")]
+
+
+def iit_dots():
+    p = ROOT / "results" / "iit" / "metrics.json"
+    if not p.exists():
+        return
+    models = json.loads(p.read_text())
+    fig, axes = plt.subplots(1, len(IIT_METRICS), figsize=(2.7 * len(IIT_METRICS), 3.2), facecolor=SURF)
+    for ax, (k, title) in zip(axes, IIT_METRICS):
+        style(ax)
+        for x, c in enumerate(IIT_CONDS):
+            ys = [m[k] for m in models if m["condition"] == c]
+            col = "#eb6834" if c.startswith("iit") else "#2a78d6"
+            ax.scatter([x] * len(ys), ys, s=20, color=col, edgecolor=SURF, linewidth=1, zorder=3)
+            ax.hlines(st.mean(ys), x - 0.3, x + 0.3, color=INK, linewidth=1.2, zorder=4)
+        ax.set_xticks(range(len(IIT_CONDS)))
+        ax.set_xticklabels(IIT_CONDS, rotation=45, ha="right", fontsize=7)
+        ax.set_ylim(0, 1.02)
+        ax.set_title(title, fontsize=8, color=INK, loc="left")
+    fig.suptitle("R6: structure enforced inside the network (orange = interchange intervention training)",
+                 fontsize=9, color=INK2, x=0.01, ha="left")
+    fig.tight_layout()
+    fig.savefig(ROOT / "results" / "fig_iit.png", dpi=160)
+
+
 if __name__ == "__main__":
     learning_curves()
     causal_dots()
     untyped_dots()
+    iit_dots()
     print("ok", REGIMES)

@@ -15,6 +15,7 @@ so a negative result changes the plan instead of being explained away. Compute f
 |---|---|---|---|---|---|---|
 | **R0** | Prototype: typed priors vs causal localizability, editability and transfer on a toy task; 5 conditions incl. the **canonical** information control; 2 regimes (B0/C0/D0) | high | ~1 CPU-hour | low | **yes**, for the toy regime | **done** (doc 06) |
 | **R0b** | ANLU as specified: typed training, **untyped inference**; type dropout; auxiliary type loss; 3 auxiliary-target controls | very high | ~1 CPU-hour | low | yes | **done** (doc 08): aux-type target → ~2.7× edit success |
+| **R6a** | Interchange intervention training at the computation site; blind localization; held-out operand-shift edit | very high | ~1 CPU-hour | low | yes | **done** (doc 09): DAS 1.00, held-out edit 0.80 vs 0.04 |
 | **R1** | Blinded LLM interpreter, scored by NRI execution; **white-box vs black-box-only arms** (A, B) | very high | ~$20–100 API; CPU | medium | yes: if black-box ≈ white-box, "LLM reads weights" adds nothing here | harness done; n = 2 pilot (doc 06 §7) |
 | **R2** | Move to a task where types *must* be contextual and nontrivial: unit-bearing arithmetic (NUMBER, UNIT, QUANTITY, DIMENSION, OPERATION), with a learned or noisy typer | high | CPU-hours | medium | partly | next |
 | **R3** | Defect repair (C): planted defects (slice fine-tune, subspace rotation, head ablation); compare LLM-written programs, closed-form programs, fine-tuning and **random-direction controls**; collateral on held-out slices | high | CPU + API | medium | yes | design below |
@@ -77,6 +78,11 @@ Swap the optimizer in `nri/train.py` and rerun R0's metrics. About 1 CPU-hour.
 loss at layer 1 already raises causal localization and editability, specifically. The next steps
 are R1 on aux-trained vs. baseline networks (do LLM interpreters also find them easier?) and R2
 (do the effects survive types that are not recoverable from position?).
+
+**Update after R6a / R1 (docs 09–10):** R6's first form worked decisively at toy scale. Next:
+(i) a compute-matched invariance control for IIT; (ii) partially specified causal models (declare
+ANLU-typed variables only, leave the rest free) on R2's unit-arithmetic task; (iii) a weights-only
+(no forward pass) interpreter arm, to test raw-weight reading separately from experimentation.
 
 ## Decision gates
 

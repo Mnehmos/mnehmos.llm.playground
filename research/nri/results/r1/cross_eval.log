@@ -1,0 +1,133 @@
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.1943, 0.9477)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.3001, 0.9387)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.1549, 0.9556)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.2532, 0.9353)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.0901, 1.0)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.2144, 0.9985)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.0819, 1.0)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.1891, 0.9992)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 0.4512, 0.9959)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 0.4646, 0.9898)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 0.4326, 0.9944)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 0.3917, 0.9913)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 0.3954, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 0.3805, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 0.3924, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 0.3552, 1.0)
+[edit_program] chosen ('swap', 0.5, 1e-06, 'hinge', 0.4646, 0.9898)
+{"success": 0.5044477581977844, "preserve": 0.9923552870750427, "rank": 64, "rel_norm": 5.648382186889648, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_untyped_inf/none_s0", "host_condition": "none", "own_host": false, "seconds": 24.4}
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.1467, 0.956)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.2971, 0.9221)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.1303, 0.9676)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.2599, 0.9387)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.0767, 1.0)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.1504, 0.9955)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.0767, 1.0)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.1258, 0.9966)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 0.3835, 0.9778)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 0.5302, 0.9718)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 0.3567, 0.988)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 0.414, 0.9804)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 0.28, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 0.3187, 0.9992)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 0.271, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 0.2852, 1.0)
+[edit_program] chosen ('swap', 0.5, 1e-06, 'hinge', 0.5302, 0.9718)
+{"success": 0.5226093530654907, "preserve": 0.9732435345649719, "rank": 64, "rel_norm": 8.219878196716309, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_untyped_inf/none_s2", "host_condition": "none", "own_host": false, "seconds": 21.6}
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.1459, 0.8675)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.3425, 0.8589)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.1288, 0.8679)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.3075, 0.8513)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.0797, 0.9985)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.2085, 0.9932)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.0782, 0.9981)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.1876, 0.9955)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 0.9762, 0.9996)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 0.9806, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 0.9724, 0.9996)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 0.9777, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 0.9442, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 0.9434, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 0.9389, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 0.9345, 1.0)
+[edit_program] chosen ('swap', 0.5, 1e-06, 'hinge', 0.9806, 1.0)
+{"success": 0.9844329357147217, "preserve": 0.9994539618492126, "rank": 64, "rel_norm": 3.0270824432373047, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_untyped_inf/aux_only_s0", "host_condition": "aux_only", "own_host": false, "seconds": 21.6}
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.2189, 0.8626)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.4855, 0.805)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.1981, 0.8833)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.4609, 0.8182)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.0789, 1.0)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.4051, 0.9823)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.0767, 1.0)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.3686, 0.9797)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 0.8488, 1.0)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 0.8764, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 0.8384, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 0.8548, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 0.825, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 0.8541, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 0.8228, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 0.8369, 1.0)
+[edit_program] chosen ('swap', 0.5, 1e-06, 'hinge', 0.8764, 1.0)
+{"success": 0.8673090934753418, "preserve": 1.0, "rank": 64, "rel_norm": 9.379556655883789, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_untyped_inf/aux_only_s2", "host_condition": "aux_only", "own_host": false, "seconds": 22.7}
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.7453, 0.8837)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.9829, 0.9654)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.6731, 0.8818)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.9516, 0.9387)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.3931, 0.9996)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.9173, 0.9985)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.2748, 1.0)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.8325, 0.9992)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 0.8846, 1.0)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 0.8831, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 0.8838, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 0.8831, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 0.8801, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 0.8824, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 0.8794, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 0.8771, 1.0)
+[edit_program] chosen ('negb', 2.0, 1e-06, 'hinge', 0.9173, 0.9985)
+{"success": 0.9236471652984619, "preserve": 0.9978157877922058, "rank": 64, "rel_norm": 18.17271614074707, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_iit/iit_s0", "host_condition": "iit", "own_host": false, "seconds": 21.3}
+[edit_program] candidate ('negb', 0.5, 1e-06, 'ls', 0.5249, 0.688)
+[edit_program] candidate ('negb', 0.5, 1e-06, 'hinge', 0.9077, 0.962)
+[edit_program] candidate ('negb', 0.5, 0.001, 'ls', 0.4259, 0.7222)
+[edit_program] candidate ('negb', 0.5, 0.001, 'hinge', 0.8042, 0.9601)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'ls', 0.0938, 0.9996)
+[edit_program] candidate ('negb', 2.0, 1e-06, 'hinge', 0.7506, 0.9989)
+[edit_program] candidate ('negb', 2.0, 0.001, 'ls', 0.0767, 1.0)
+[edit_program] candidate ('negb', 2.0, 0.001, 'hinge', 0.615, 1.0)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'ls', 1.0, 1.0)
+[edit_program] candidate ('swap', 0.5, 1e-06, 'hinge', 1.0, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'ls', 1.0, 1.0)
+[edit_program] candidate ('swap', 0.5, 0.001, 'hinge', 1.0, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'ls', 1.0, 1.0)
+[edit_program] candidate ('swap', 2.0, 1e-06, 'hinge', 1.0, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'ls', 1.0, 1.0)
+[edit_program] candidate ('swap', 2.0, 0.001, 'hinge', 1.0, 1.0)
+[edit_program] chosen ('swap', 0.5, 1e-06, 'ls', 1.0, 1.0)
+{"success": 1.0, "preserve": 1.0, "rank": 55, "rel_norm": 1.4877065420150757, "program": "net_B3", "program_written_on": "none", "program_mode": "black", "host": "zoo_iit/iit_s2", "host_condition": "iit", "own_host": false, "seconds": 21.3}
+[edit_program] chosen rank=('irls_ow0.1_it2', 65) scale=1.0 val_success=0.6038 val_preserve=0.8812
+{"success": 0.6137880086898804, "preserve": 0.886603593826294, "rank": 64, "rel_norm": 3.4540183544158936, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_untyped_inf/none_s0", "host_condition": "none", "own_host": false, "seconds": 4.7}
+[edit_program] chosen rank=('irls_ow0.1_it2', 65) scale=1.0 val_success=0.6495 val_preserve=0.8183
+{"success": 0.6560415029525757, "preserve": 0.8212595582008362, "rank": 64, "rel_norm": 3.623932361602783, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_untyped_inf/none_s2", "host_condition": "none", "own_host": false, "seconds": 4.4}
+[edit_program] chosen rank=('irls_ow0.1_it2', 65) scale=1.0 val_success=0.9919 val_preserve=0.9962
+{"success": 0.9918457865715027, "preserve": 0.9978157877922058, "rank": 64, "rel_norm": 1.416555643081665, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_untyped_inf/aux_only_s0", "host_condition": "aux_only", "own_host": false, "seconds": 5.0}
+[edit_program] chosen rank=('irls_ow0.1_it2', 65) scale=1.0 val_success=0.8719 val_preserve=0.9921
+{"success": 0.8854707479476929, "preserve": 0.9919912815093994, "rank": 64, "rel_norm": 1.9379147291183472, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_untyped_inf/aux_only_s2", "host_condition": "aux_only", "own_host": false, "seconds": 4.7}
+[edit_program] chosen rank=('irls_ow0.1_it3', 65) scale=0.75 val_success=0.9109 val_preserve=1.0000
+{"success": 0.9110451936721802, "preserve": 1.0, "rank": 64, "rel_norm": 0.4722971022129059, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_iit/iit_s0", "host_condition": "iit", "own_host": false, "seconds": 4.6}
+[edit_program] chosen rank=('ls', 1) scale=1.0 val_success=1.0000 val_preserve=1.0000
+{"success": 1.0, "preserve": 1.0, "rank": 1, "rel_norm": 0.3989871144294739, "program": "net_J6", "program_written_on": "aux_only", "program_mode": "black", "host": "zoo_iit/iit_s2", "host_condition": "iit", "own_host": false, "seconds": 4.6}
+{"success": 0.4314306974411011, "preserve": 1.0, "rank": 58, "rel_norm": 1.27195405960083, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_untyped_inf/none_s0", "host_condition": "none", "own_host": false, "seconds": 0.6}
+{"success": 0.30615270137786865, "preserve": 0.999817967414856, "rank": 55, "rel_norm": 1.0919244289398193, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_untyped_inf/none_s2", "host_condition": "none", "own_host": false, "seconds": 0.6}
+{"success": 0.9518161416053772, "preserve": 1.0, "rank": 50, "rel_norm": 0.8550729155540466, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_untyped_inf/aux_only_s0", "host_condition": "aux_only", "own_host": false, "seconds": 0.8}
+{"success": 0.8213491439819336, "preserve": 1.0, "rank": 50, "rel_norm": 0.7073854804039001, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_untyped_inf/aux_only_s2", "host_condition": "aux_only", "own_host": false, "seconds": 0.6}
+{"success": 0.8825055360794067, "preserve": 1.0, "rank": 57, "rel_norm": 0.4824056923389435, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_iit/iit_s0", "host_condition": "iit", "own_host": false, "seconds": 0.6}
+{"success": 1.0, "preserve": 1.0, "rank": 54, "rel_norm": 0.39284324645996094, "program": "net_P4", "program_written_on": "none", "program_mode": "white", "host": "zoo_iit/iit_s2", "host_condition": "iit", "own_host": false, "seconds": 0.6}
+{"success": 0.4940696954727173, "preserve": 0.9827083945274353, "rank": 58, "rel_norm": 3.8376002311706543, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_untyped_inf/none_s0", "host_condition": "none", "own_host": false, "seconds": 0.6}
+{"success": 0.40289103984832764, "preserve": 0.9737895727157593, "rank": 54, "rel_norm": 4.157379150390625, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_untyped_inf/none_s2", "host_condition": "none", "own_host": false, "seconds": 0.6}
+{"success": 0.9792438745498657, "preserve": 0.9992719292640686, "rank": 52, "rel_norm": 1.9318140745162964, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_untyped_inf/aux_only_s0", "host_condition": "aux_only", "own_host": false, "seconds": 0.5}
+{"success": 0.8317272067070007, "preserve": 1.0, "rank": 53, "rel_norm": 2.5310781002044678, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_untyped_inf/aux_only_s2", "host_condition": "aux_only", "own_host": false, "seconds": 0.5}
+{"success": 0.8884359002113342, "preserve": 1.0, "rank": 57, "rel_norm": 1.2361159324645996, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_iit/iit_s0", "host_condition": "iit", "own_host": false, "seconds": 0.6}
+{"success": 1.0, "preserve": 1.0, "rank": 56, "rel_norm": 0.8593657612800598, "program": "net_W8", "program_written_on": "aux_only", "program_mode": "white", "host": "zoo_iit/iit_s2", "host_condition": "iit", "own_host": false, "seconds": 0.6}
+XDONE
