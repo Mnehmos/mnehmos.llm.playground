@@ -174,7 +174,7 @@ On the 982-question set, all six differences are positive in 10–12 of 12 netwo
 **Reading.**
 - The registered result does **not** depend on the editor having seen the exact question: rates
   on unseen questions match the full-sample rates to within about 0.04.
-- In none of the twelve unseen-question comparisons (6 per set) do wrong-variable changes rise
-  significantly (all p ≥ 0.09).
+- Wrong-variable changes never rise significantly. The only increases are in the weight edit,
+  with p ≥ 0.086; the table and per-question editors lower them.
 - The 125-question set is small, so treat it as a check, not a new estimate.
 - This does not address new *networks*; that is the job of the next study.
