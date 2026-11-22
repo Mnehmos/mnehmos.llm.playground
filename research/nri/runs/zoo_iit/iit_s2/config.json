@@ -1,0 +1,33 @@
+{
+  "condition": "iit",
+  "seed": 2,
+  "steps": 3000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "lambda_iit": 1.0,
+  "lambda_aux": 0.0,
+  "blocks": {
+    "op": [
+      0,
+      8
+    ],
+    "a": [
+      8,
+      24
+    ],
+    "b": [
+      24,
+      40
+    ]
+  },
+  "n_params": 69189,
+  "model_kw": {
+    "n_types": 6,
+    "aux_classes": 5
+  },
+  "torch": "2.15.0+cu132",
+  "final_untyped_acc": 1.0,
+  "final_typed_acc": 0.1146240234375,
+  "train_seconds": 354.3
+}

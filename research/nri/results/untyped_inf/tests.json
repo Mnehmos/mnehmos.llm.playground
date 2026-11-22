@@ -1,0 +1,250 @@
+{
+  "acc_untyped:typed_always": {
+    "delta": -0.864111328125,
+    "p": 0.00814959252037398
+  },
+  "acc_untyped:typed_dropout": {
+    "delta": 0.0,
+    "p": 1.0
+  },
+  "acc_untyped:typed_dropout_aux": {
+    "delta": 0.0,
+    "p": 1.0
+  },
+  "acc_untyped:aux_only": {
+    "delta": 0.0,
+    "p": 1.0
+  },
+  "acc_untyped:aux_shuffled": {
+    "delta": -0.0001953125000000444,
+    "p": 1.0
+  },
+  "acc_untyped:aux_lexical": {
+    "delta": 0.0,
+    "p": 1.0
+  },
+  "acc_untyped:aux_contextual": {
+    "delta": 0.0,
+    "p": 1.0
+  },
+  "steps_to_95:typed_dropout": {
+    "delta": 0,
+    "p": 1.0
+  },
+  "steps_to_95:typed_dropout_aux": {
+    "delta": 10,
+    "p": 1.0
+  },
+  "steps_to_95:aux_only": {
+    "delta": 40,
+    "p": 0.40422978851057445
+  },
+  "steps_to_95:aux_shuffled": {
+    "delta": 80,
+    "p": 0.07794610269486525
+  },
+  "steps_to_95:aux_lexical": {
+    "delta": 110,
+    "p": 0.16264186790660468
+  },
+  "steps_to_95:aux_contextual": {
+    "delta": 10,
+    "p": 1.0
+  },
+  "role_probe_L1:typed_always": {
+    "delta": -0.46896972457567854,
+    "p": 0.00814959252037398
+  },
+  "role_probe_L1:typed_dropout": {
+    "delta": -0.012228735287984294,
+    "p": 0.08849557522123894
+  },
+  "role_probe_L1:typed_dropout_aux": {
+    "delta": 3.255208333330373e-05,
+    "p": 1.0
+  },
+  "role_probe_L1:aux_only": {
+    "delta": 3.255208333330373e-05,
+    "p": 1.0
+  },
+  "role_probe_L1:aux_shuffled": {
+    "delta": -0.006909179687500044,
+    "p": 0.4120793960301985
+  },
+  "role_probe_L1:aux_lexical": {
+    "delta": -0.09877658287684121,
+    "p": 0.0503974801259937
+  },
+  "role_probe_L1:aux_contextual": {
+    "delta": -0.07843966881434128,
+    "p": 0.00814959252037398
+  },
+  "iia_op:typed_always": {
+    "delta": -0.323046875,
+    "p": 0.00814959252037398
+  },
+  "iia_op:typed_dropout": {
+    "delta": 0.06220703124999999,
+    "p": 0.06224688765561722
+  },
+  "iia_op:typed_dropout_aux": {
+    "delta": 0.200390625,
+    "p": 0.00814959252037398
+  },
+  "iia_op:aux_only": {
+    "delta": 0.21884765624999997,
+    "p": 0.00814959252037398
+  },
+  "iia_op:aux_shuffled": {
+    "delta": 0.03095703124999999,
+    "p": 0.41977901104944754
+  },
+  "iia_op:aux_lexical": {
+    "delta": 0.0005859374999999667,
+    "p": 1.0
+  },
+  "iia_op:aux_contextual": {
+    "delta": -0.09013671875000001,
+    "p": 0.00814959252037398
+  },
+  "das_op:typed_always": {
+    "delta": -0.31547851562499996,
+    "p": 0.00814959252037398
+  },
+  "das_op:typed_dropout": {
+    "delta": 0.09345703124999999,
+    "p": 0.054997250137493126
+  },
+  "das_op:typed_dropout_aux": {
+    "delta": 0.26342773437500006,
+    "p": 0.00814959252037398
+  },
+  "das_op:aux_only": {
+    "delta": 0.26967773437500003,
+    "p": 0.00814959252037398
+  },
+  "das_op:aux_shuffled": {
+    "delta": 0.04604492187500003,
+    "p": 0.3216839158042098
+  },
+  "das_op:aux_lexical": {
+    "delta": 0.061279296875,
+    "p": 0.25158742062896855
+  },
+  "das_op:aux_contextual": {
+    "delta": -0.06528320312499997,
+    "p": 0.07184640767961602
+  },
+  "das_a:typed_always": {
+    "delta": -0.04658203125,
+    "p": 0.00814959252037398
+  },
+  "das_a:typed_dropout": {
+    "delta": 0.010888671875000006,
+    "p": 0.2702864856757162
+  },
+  "das_a:typed_dropout_aux": {
+    "delta": 0.025048828125000006,
+    "p": 0.00814959252037398
+  },
+  "das_a:aux_only": {
+    "delta": 0.012353515625000006,
+    "p": 0.04099795010249487
+  },
+  "das_a:aux_shuffled": {
+    "delta": 0.000244140625,
+    "p": 0.9852007399630018
+  },
+  "das_a:aux_lexical": {
+    "delta": 0.01655273437499999,
+    "p": 0.041997900104994754
+  },
+  "das_a:aux_contextual": {
+    "delta": 0.12211914062499998,
+    "p": 0.00814959252037398
+  },
+  "additive_r2:typed_always": {
+    "delta": -0.3407564997673035,
+    "p": 0.00814959252037398
+  },
+  "additive_r2:typed_dropout": {
+    "delta": 0.025876235961914018,
+    "p": 0.432078396080196
+  },
+  "additive_r2:typed_dropout_aux": {
+    "delta": 0.07366644144058232,
+    "p": 0.06499675016249187
+  },
+  "additive_r2:aux_only": {
+    "delta": 0.06574383974075315,
+    "p": 0.01664916754162292
+  },
+  "additive_r2:aux_shuffled": {
+    "delta": 0.00690504312515261,
+    "p": 0.7909604519774012
+  },
+  "additive_r2:aux_lexical": {
+    "delta": 0.04230650663375857,
+    "p": 0.15144242787860607
+  },
+  "additive_r2:aux_contextual": {
+    "delta": 0.052938556671142556,
+    "p": 0.34068296585170743
+  },
+  "edit_success:typed_always": {
+    "delta": -0.10526852086186408,
+    "p": 0.04094795260236988
+  },
+  "edit_success:typed_dropout": {
+    "delta": 0.11132369861006738,
+    "p": 0.08654567271636418
+  },
+  "edit_success:typed_dropout_aux": {
+    "delta": 0.3219801651934783,
+    "p": 0.00814959252037398
+  },
+  "edit_success:aux_only": {
+    "delta": 0.3642380642394225,
+    "p": 0.00814959252037398
+  },
+  "edit_success:aux_shuffled": {
+    "delta": 0.0629867061972618,
+    "p": 0.27088645567721614
+  },
+  "edit_success:aux_lexical": {
+    "delta": 0.08182602127393088,
+    "p": 0.18259087045647718
+  },
+  "edit_success:aux_contextual": {
+    "delta": -0.03632474641005198,
+    "p": 0.456027198640068
+  },
+  "das_edit_success:typed_always": {
+    "delta": -0.049497308085362124,
+    "p": 0.1608919554022299
+  },
+  "das_edit_success:typed_dropout": {
+    "delta": 0.11448836723963421,
+    "p": 0.10299485025748713
+  },
+  "das_edit_success:typed_dropout_aux": {
+    "delta": 0.30818600952625275,
+    "p": 0.00814959252037398
+  },
+  "das_edit_success:aux_only": {
+    "delta": 0.3585586488246918,
+    "p": 0.00814959252037398
+  },
+  "das_edit_success:aux_shuffled": {
+    "delta": 0.06972212841113407,
+    "p": 0.23613819309034548
+  },
+  "das_edit_success:aux_lexical": {
+    "delta": 0.08675535892446837,
+    "p": 0.1897405129743513
+  },
+  "das_edit_success:aux_contextual": {
+    "delta": -0.02788079654177031,
+    "p": 0.4784260786960652
+  }
+}

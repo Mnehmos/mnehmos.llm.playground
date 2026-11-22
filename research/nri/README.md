@@ -16,6 +16,10 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 4 | [`docs/04_roadmap.md`](docs/04_roadmap.md) | Prioritized experiments R0–R7 with kill criteria |
 | 5 | [`docs/06_prototype_results.md`](docs/06_prototype_results.md) | **The prototype**: 50 trained networks, causal metrics, a transfer test, instrument-validity controls, and a blinded LLM-interpreter pilot |
 | 6 | [`docs/05_publication_pathway.md`](docs/05_publication_pathway.md) | What would be original rather than a replication, and where to publish it |
+| 7 | [`docs/07_review_of_research_program.md`](docs/07_review_of_research_program.md) | Review of the five ANLU-program papers: citation fixes (the scaling-law citation is misattributed), internal contradictions, the symmetry argument, missing prior art (Syntactic Scaffolds 2018), recommended design changes |
+| 8 | [`docs/08_untyped_inference_results.md`](docs/08_untyped_inference_results.md) | **ANLU as specified**: typed training, untyped inference, 40 networks. No speed-up; removal needs a mechanism; **types as an auxiliary target make internals ~2.7× more editable**, specifically |
+| 9 | [`docs/09_r6_interchange_training.md`](docs/09_r6_interchange_training.md) | **R6**: interchange intervention training at the computation site → every variable perfectly localizable (DAS 1.00), op-swap edit 0.96, **held-out operand-shift edit 0.80 vs 0.04**, no accuracy cost |
+| 10 | [`docs/10_r1_white_vs_black_box.md`](docs/10_r1_white_vs_black_box.md) | **R1**: blinded LLM interpreters, white-box vs black-box × baseline vs role-supervised networks, plus cross-evaluation of their edit programs on unseen networks (incl. IIT) |
 
 ## Layout
 
@@ -39,6 +43,8 @@ python -m pytest -q tests/                                    # 7 tests, ~15 s
 python validity_check.py                                      # instrument positive/negative controls
 python run_experiment.py --seeds 5 --steps 3000 --wd 0.01     # ~15-30 min on 4 cores
 python run_experiment.py --seeds 5 --steps 3000 --wd 1
+python run_untyped_inference.py --seeds 5 --steps 3000   # doc 08, ~1 CPU-hour
+python run_iit.py --seeds 5 --steps 3000                 # doc 09 (R6), ~1 CPU-hour
 python make_figures.py
 ```
 

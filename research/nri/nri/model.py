@@ -41,11 +41,15 @@ class Attn(nn.Module):
 
 class TinyTyped(nn.Module):
     def __init__(self, condition: str, d: int = 64, n_heads: int = 4, d_mlp: int = 256,
-                 type_dims: int = 16):
+                 type_dims: int = 16, n_types: int | None = None, aux_classes: int = 0):
         super().__init__()
         self.condition, self.d, self.d_mlp = condition, d, d_mlp
         self.E_c = nn.Embedding(tasks.VOCAB, d)
-        self.E_t = nn.Embedding(tasks.N_TYPES, d)
+        self.E_t = nn.Embedding(n_types or tasks.N_TYPES, d)
+        # optional auxiliary role-prediction head on the layer-1 residual (training only;
+        # never used at inference). Present in every condition of an experiment that uses it,
+        # so parameter counts stay matched.
+        self.aux = nn.Linear(d, aux_classes) if aux_classes else None
         self.E_p = nn.Embedding(tasks.SEQ_LEN, d)
         self.attn1 = Attn(d, n_heads)
         self.attn2 = Attn(d, n_heads)
@@ -65,6 +69,10 @@ class TinyTyped(nn.Module):
     def embed(self, tokens, types):
         pos = torch.arange(tokens.shape[1], device=tokens.device)
         return self.E_c(tokens) * self.mask_c + self.E_t(types) * self.mask_t + self.E_p(pos)
+
+    def resid_layer1(self, tokens, types):
+        x = self.embed(tokens, types)
+        return x + self.attn1(x)
 
     def resid_pre_mlp(self, tokens, types):
         x = self.embed(tokens, types)

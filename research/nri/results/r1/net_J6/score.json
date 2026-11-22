@@ -1,0 +1,73 @@
+{
+  "blind_id": "net_J6",
+  "condition": "none",
+  "executor_summary": {
+    "claims": 9,
+    "verified": 5,
+    "refuted": 4,
+    "errors": 0
+  },
+  "claim_status": {
+    "C_behavior": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_behavior_result": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_op_linrep": [
+      "linear_rep",
+      "refuted",
+      0.692626953125
+    ],
+    "C_a_linrep": [
+      "linear_rep",
+      "refuted",
+      0.1318359375
+    ],
+    "C_b_linrep": [
+      "linear_rep",
+      "refuted",
+      0.13232421875
+    ],
+    "C_op_necessity": [
+      "necessity",
+      "refuted",
+      0.616455078125
+    ],
+    "C_a_necessity": [
+      "necessity",
+      "verified",
+      0.31591796875
+    ],
+    "C_b_necessity": [
+      "necessity",
+      "verified",
+      0.2734375
+    ],
+    "C_edit_add_to_sub": [
+      "edit",
+      "verified",
+      {
+        "success": 0.759759783744812,
+        "preserve": 0.9782923460006714,
+        "rel_norm": 3.1082799434661865,
+        "rank": 64
+      }
+    ]
+  },
+  "variable_recall": {
+    "V_op": 1.0,
+    "V_a": 1.0,
+    "V_b": 1.0
+  },
+  "edit_vs_true_goal": {
+    "success": 0.7553743720054626,
+    "preserve": 0.9808882474899292,
+    "rank": 64,
+    "rel_norm": 3.1082799434661865
+  }
+}

@@ -133,34 +133,137 @@ EXAMPLE = {
 }
 
 
+ORACLE = '''"""Hidden oracle for a black-box package. The interpreter must not read this file."""
+import json, sys
+sys.path.insert(0, {hidden!r})
+import torch
+from arch import load_net
+net = load_net({weights!r})
+rows = json.loads(sys.stdin.read())
+t = torch.tensor(rows["tokens"]); c = torch.tensor(rows.get("ch2") or [[0] * t.shape[1]] * t.shape[0])
+with torch.no_grad():
+    p = net(t, c).softmax(-1)
+print(json.dumps({{"pred": p.argmax(-1).tolist(), "prob": [[round(x, 4) for x in r] for r in p.tolist()]}}))
+'''
+
+QUERY = '''"""Black-box query interface. This is the ONLY way to access the network.
+
+    from query import predict
+    out = predict([[7, 10, 13, 6, 0, 5, 14], ...])   # list of token lists (length {seqlen})
+    out["pred"]  -> list of predicted output classes (0..{nout_1})
+    out["prob"]  -> list of output probability vectors
+
+Do not open, read or import anything this module calls; that is the hidden network.
+"""
+import json, subprocess, sys
+
+_ORACLE = {oracle!r}
+
+
+def predict(rows, ch2=None):
+    payload = json.dumps({{"tokens": [list(map(int, r)) for r in rows], "ch2": ch2}})
+    out = subprocess.run([sys.executable, _ORACLE], input=payload, capture_output=True, text=True,
+                         check=True)
+    return json.loads(out.stdout)
+'''
+
+INSTRUCTIONS_BLACK = """# Task: reverse-engineer an unknown neural network (BLACK-BOX access)
+
+You are given query access to a small trained network and nothing about what it was trained to do.
+You CANNOT see its weights or activations. You may only query it with inputs and observe outputs.
+
+Files here:
+- `query.py`     `from query import predict; predict(list_of_token_lists)` returns predicted classes
+                 and output probabilities. Each input is a list of {seqlen} ints (token ids 0..{vmax}).
+                 Batches of thousands of rows are fine.
+- `inputs.pt`    a dict with `tokens` [N, {seqlen}] (long tensor): {npool} inputs drawn from the
+                 network's training distribution. (`ch2` is a second input channel; here it is
+                 always 0 and you can ignore it.)
+- `nri-0.1.schema.json` and `nri_example_shape.json`: the output format.
+- Architecture (all you are told): a small transformer (2 attention layers, d_model = 64), then an
+  MLP with residual connection. h = the residual stream at the final position before the MLP
+  (64-dim, site "resid_pre_mlp"); the MLP first layer is W_in: [256, 64] weight and [256] bias.
+
+Rules:
+1. Work only inside this directory and its scratch subdirectory `work/`. Do NOT read any other files
+   on this machine, and do NOT open or import what `query.py` calls (the hidden network): no
+   repositories, no parent directories, no answer keys. This is a blinded evaluation, and reading
+   outside this directory invalidates it.
+2. You may write and run Python (torch is installed), but only `predict` touches the network.
+3. Deliverables, written into this directory:
+   a. `nri.json`: an NRI v0.1 document. It must contain `variables` (each with a `binding`, a Python
+      lambda over the token list `t` returning an int, and an `ftype`), `mechanisms` (at least one
+      with an `output_fn`: a lambda over dict `v` of variable values giving the predicted output
+      class), and `claims`. Every claim is executed against the real network and verified or
+      refuted automatically. You may include `linear_rep` / `necessity` claims about the site
+      `resid_pre_mlp` as hypotheses. NOTE: `linear_rep` is a CAUSAL claim, tested by interchange
+      intervention: the executor swaps the rank-r class-mean subspace of the variable between two
+      inputs, and the output must follow output_fn with that variable taken from the source input.
+   b. `edit_program.py` with `def program(host, doc, **args)` returning `(dW_in, db_in)`, the
+      additive changes to `W_in.weight` [256, 64] and `W_in.bias` [256], so that:
+        **wherever token {tx} occurs in the input, the network outputs what it would output if
+        that token were {ty} instead; all other inputs keep their outputs.**
+      You cannot run this against the real network. The evaluator will run it once, and at that
+      time your program may use: `host.sampler(n, generator)` -> `(tokens, ch2)` from the input
+      distribution; `host.site("resid_pre_mlp", tokens, ch2)` -> [n, 64] activations;
+      `host.model.W_in.weight` / `.bias` and `host.model.head_from_resid(h, W_in, b_in)` -> logits.
+      Compute the edit with code, not gradient descent. Add a claim of kind `edit` to `nri.json`
+      referencing `edit_program.py` (entry `program`), with `scope` and `edit_fn` lambdas over your
+      variables.
+   c. `report.md`: what you think the network does, how you found out, and your confidence.
+4. Budget: about 60 tool calls.
+"""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", type=Path, required=True)
     ap.add_argument("--blind-id", required=True)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--npool", type=int, default=20000)
+    ap.add_argument("--mode", choices=("white", "black"), default="white")
+    ap.add_argument("--input-condition", default=None,
+                    help="task condition used to render inputs (default: the run's condition if "
+                         "it is a tasks condition, else 'none' = untyped inference)")
     a = ap.parse_args()
     cfg = json.loads((a.run / "config.json").read_text())
     cond = cfg["condition"]
+    in_cond = a.input_condition or (cond if cond in tasks.CONDITIONS else "none")
     pkg = a.out / a.blind_id
     pkg.mkdir(parents=True, exist_ok=False)
     (pkg / "work").mkdir()
     sd = torch.load(a.run / "model.pt", weights_only=True)
-    torch.save(sd, pkg / "weights.pt")
+    sd = {k: v for k, v in sd.items() if not k.startswith("aux.")}  # training-only head: never shipped
+    n_ch2 = sd["E_t.weight"].shape[0]
+    arch = ARCH.format(vocab=tasks.VOCAB, ntypes=n_ch2, seqlen=tasks.SEQ_LEN, nout=tasks.P)
     g = torch.Generator().manual_seed(2026)
-    b = tasks.make_batch(a.npool, cond, g)
-    torch.save({"tokens": b.tokens, "ch2": b.types}, pkg / "inputs.pt")
-    (pkg / "arch.py").write_text(ARCH.format(vocab=tasks.VOCAB, ntypes=tasks.N_TYPES,
-                                             seqlen=tasks.SEQ_LEN, nout=tasks.P))
+    b = tasks.make_batch(a.npool, in_cond, g)
     tx, ty = tasks.OP_TOKENS[0], tasks.OP_TOKENS[1]  # ADD -> SUB, stated only behaviorally
-    (pkg / "INSTRUCTIONS.md").write_text(INSTRUCTIONS.format(seqlen=tasks.SEQ_LEN, npool=a.npool,
-                                                             tx=tx, ty=ty))
+    if a.mode == "white":
+        torch.save(sd, pkg / "weights.pt")
+        torch.save({"tokens": b.tokens, "ch2": b.types}, pkg / "inputs.pt")
+        (pkg / "arch.py").write_text(arch)
+        (pkg / "INSTRUCTIONS.md").write_text(INSTRUCTIONS.format(seqlen=tasks.SEQ_LEN, npool=a.npool,
+                                                                 tx=tx, ty=ty))
+    else:
+        hidden = (a.out / "_hidden" / a.blind_id).resolve()
+        hidden.mkdir(parents=True, exist_ok=False)
+        torch.save(sd, hidden / "weights.pt")
+        (hidden / "arch.py").write_text(arch)
+        (hidden / "oracle.py").write_text(ORACLE.format(hidden=str(hidden),
+                                                        weights=str(hidden / "weights.pt")))
+        (pkg / "query.py").write_text(QUERY.format(seqlen=tasks.SEQ_LEN, nout_1=tasks.P - 1,
+                                                   oracle=str(hidden / "oracle.py")))
+        torch.save({"tokens": b.tokens, "ch2": b.types}, pkg / "inputs.pt")
+        (pkg / "INSTRUCTIONS.md").write_text(INSTRUCTIONS_BLACK.format(
+            seqlen=tasks.SEQ_LEN, npool=a.npool, tx=tx, ty=ty, vmax=tasks.VOCAB - 1))
     shutil.copy(ROOT / "schema" / "nri-0.1.schema.json", pkg)
     (pkg / "nri_example_shape.json").write_text(json.dumps(EXAMPLE, indent=2))
     keys = a.out / "answer_keys"
     keys.mkdir(exist_ok=True)
     (keys / f"{a.blind_id}.json").write_text(json.dumps(
-        {"run": str(a.run), "condition": cond, "edit_goal": {"token_from": tx, "token_to": ty}}))
+        {"run": str(a.run.resolve()), "condition": cond, "input_condition": in_cond, "mode": a.mode,
+         "edit_goal": {"token_from": tx, "token_to": ty}}))
     print(pkg)
 
 

@@ -1,0 +1,78 @@
+{
+  "blind_id": "net_W8",
+  "condition": "none",
+  "executor_summary": {
+    "claims": 10,
+    "verified": 9,
+    "refuted": 1,
+    "errors": 0
+  },
+  "claim_status": {
+    "C_beh": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_beh_res": [
+      "behavior",
+      "verified",
+      1.0
+    ],
+    "C_lr_tri": [
+      "linear_rep",
+      "verified",
+      0.999755859375
+    ],
+    "C_nec_tri": [
+      "necessity",
+      "verified",
+      0.106201171875
+    ],
+    "C_lr_op": [
+      "linear_rep",
+      "verified",
+      0.692626953125
+    ],
+    "C_nec_op": [
+      "necessity",
+      "verified",
+      0.616455078125
+    ],
+    "C_nec_a": [
+      "necessity",
+      "verified",
+      0.31591796875
+    ],
+    "C_nec_b": [
+      "necessity",
+      "verified",
+      0.2734375
+    ],
+    "C_lr_pos": [
+      "linear_rep",
+      "refuted",
+      0.83203125
+    ],
+    "C_edit": [
+      "edit",
+      "verified",
+      {
+        "success": 0.7762762904167175,
+        "preserve": 0.9905933141708374,
+        "rel_norm": 4.093140125274658,
+        "rank": 50
+      }
+    ]
+  },
+  "variable_recall": {
+    "V_op": 1.0,
+    "V_a": 1.0,
+    "V_b": 1.0
+  },
+  "edit_vs_true_goal": {
+    "success": 0.7802075743675232,
+    "preserve": 0.9934474229812622,
+    "rank": 50,
+    "rel_norm": 4.093140125274658
+  }
+}

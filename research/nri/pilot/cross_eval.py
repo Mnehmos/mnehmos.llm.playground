@@ -43,6 +43,10 @@ def main():
     ap.add_argument("--zoo", type=Path, required=True)
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     ap.add_argument("--conditions", nargs="+", default=["none", "typed"])
+    ap.add_argument("--hosts", type=Path, nargs="*", default=None,
+                    help="explicit host run dirs (overrides --zoo/--conditions/--seeds)")
+    ap.add_argument("--input-condition", default=None,
+                    help="task condition used to render host inputs (default: host condition)")
     ap.add_argument("--out", type=Path, default=ROOT / "results" / "pilot" / "cross_eval.json")
     a = ap.parse_args()
     set_determinism(4)
@@ -54,9 +58,9 @@ def main():
         spec = importlib.util.spec_from_file_location(f"p_{pkg.name}", pkg / "edit_program.py")
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        for cond in a.conditions:
-            for s in a.seeds:
-                run = a.zoo / f"{cond}_s{s}"
+        host_runs = a.hosts or [a.zoo / f"{c}_s{s}" for c in a.conditions for s in a.seeds]
+        for run in host_runs:
+                cond = a.input_condition or json.loads((run / "config.json").read_text())["condition"]
                 model = load(run)
                 host = Host(model, (lambda c: lambda n, g: (lambda b: (b.tokens, b.types))(
                     tasks.make_batch(n, c, g)))(cond), tasks.P)
@@ -66,8 +70,10 @@ def main():
                     r = true_goal_eval(host, cond, dW, db, model)
                 except Exception as e:  # noqa: BLE001
                     r = dict(error=f"{type(e).__name__}: {e}")
-                r.update(program=pkg.name, program_written_on=key["condition"], host=run.name,
-                         host_condition=cond, own_host=(str(run) == key["run"] or run.name == Path(key["run"]).name and a.zoo.name in key["run"]),
+                r.update(program=pkg.name, program_written_on=key["condition"],
+                         program_mode=key.get("mode", "white"), host=f"{run.parent.name}/{run.name}",
+                         host_condition=json.loads((run / "config.json").read_text())["condition"],
+                         own_host=Path(key["run"]).resolve() == run.resolve(),
                          seconds=round(time.time() - t, 1))
                 rows.append(r)
                 print(json.dumps(r))

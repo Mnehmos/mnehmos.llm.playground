@@ -1,107 +1,93 @@
-# 2. ANLU against the published record and the prototype
+# 2. ANLU against its specification, the literature, and the experiments
 
-*Caveat:* the original specification (*ANLU: Typed Token Embeddings as Structural Priors for
-Language Model Pre-Training*, Feb 2026) is not in this repository, and this session could not
-access it. This analysis uses the summary in the research brief: `e_i = c_i + t_{τ_i} + p_i`,
-contextual functional types (NUMBER, UNIT, QUANTITY, OPERATION, DIMENSION, grammatical roles,
-domain types), and a staged curriculum. Corrections are welcome. Point me to the spec and I will
-revise this.
+*Revised 2026-11-22 against the original documents, read in full:*
 
-## 2.1 ANLU decomposed into separately testable hypotheses
+- *ANLU: Typed Token Embeddings as Structural Priors for Language Model Pre-Training. Foundation
+  Specification (Vario / Mnehmos Research, Feb 2026)*
+- *ANLU & Pedagogy as Training Alternatives v3.0*
 
-| ID | Hypothesis | Type of claim |
+*Companion papers (Typed Loops, Three Scaling Axes, Learned Heuristics) are reviewed in doc 07.*
+
+*An earlier version of this document was written before the specification was available, and
+assumed types are supplied at inference. That assumption was wrong. The specification says the
+opposite, and doc 08 tests the specified version.*
+
+## 2.1 What the specification claims
+
+| Spec item | Content |
+|---|---|
+| **Claim 1, the bootstrapping tax** | Compute spent discovering functional structure that could be declared up front is wasted capacity. The specification argues this tax "may grow with scale". |
+| **Component 1, whole-word tokenization** | Whole words, compound units (m/s²), numbers and multi-word domain terms each become one token; numbers and units are separate tokens; polysemy is kept through context-dependent typing. |
+| **Component 2, typed embeddings** (Eq. 1) | `e_i = c_i + t_{τ_i} + p_i`, with 15–38 type ids. A soft prior that "pre-separates the representational space into functional regions from step zero". |
+| **Training/inference asymmetry** | "Type vectors are present during training. At inference, they are not required. The model has internalized the geometric structure." Pedagogy v3.0 gives the mechanism: "an auxiliary type prediction objective". |
+| **Type schema** | Six layers (closed class, open class, rhetorical, quantitative, domain, cognitive/MCP). Higher layers override lower; resolution takes the highest active layer (Def. 2). Types are contextual (Principle 2). |
+| **Labeling** | A teacher LLM labels the data, checked by inter-annotator agreement (κ > 0.8). Pedagogy v3.0 adds self-typing from dictionaries, rule-based typing for textbooks, and self-annotation later. |
+| **Curriculum ("crescendo")** | Dictionaries → textbooks → literature → internet, with phase transitions gated on probes. |
+| **Hypothesis 1, scaling exponents** | Typed models have larger data and parameter scaling exponents, so the gap widens with scale. The argument is by analogy to SE(3) equivariance. |
+| **Claim 2, self-knowledge** | In a typed space, recall, novel composition and structural incoherence have distinct geometric signatures. |
+| **Claims by strength** | Strong: faster convergence, more knowledge per parameter, better structured reasoning, better calibration, benefits compounding with scale. Moderate: types pre-organize the embedding space and reduce steps. Conservative: the changes alter information per token and geometry. |
+| **Measurements 1–8** | Convergence; knowledge storage; reasoning; OOD generalization; representation geometry; **type retention at inference**; confidence–accuracy correlation; scaling exponents. |
+| **Risks 1–7** | Wrong types; over-specification; open scaling question; polysemy; teacher bias; vocabulary size; curriculum may not matter. |
+
+## 2.2 Each claim against the literature and this repository's experiments
+
+Evidence tags: **[lit]** published work (doc 01 / doc 07); **[06]** first prototype, types at
+inference; **[08]** the specified version, untyped inference; **[R6]** interchange intervention
+training (doc 09). All experiments are toy-scale: 69K parameters, modular arithmetic with
+*contextual* roles, 5 seeds per arm.
+
+| Spec claim | Literature | This repository | Status |
+|---|---|---|---|
+| Bootstrapping tax / faster convergence (moderate claim) | **[lit]** Factored input features help in low-resource NMT (Sennrich & Haddow 2016). Allen-Zhu & Li 3.3: domain labels raise knowledge capacity. | **[06]** 40–64% faster *with types at inference*, but the `canonical` control (same role information by position, no type vectors) is equally fast. **[08]** No speed-up when inference is untyped (500–610 vs 500 steps). | **Not supported in the specified form.** The speed-up is an information effect that exists only while types are supplied. |
+| Types not required at inference (asymmetry) | **[lit]** Syntactic Scaffolds (Swayamdipta et al. 2018) shows a training-only auxiliary structure loss works. | **[08]** Without a mechanism, removing types drops accuracy to 0.14 (chance ≈ 0.09). With 50% type dropout, 1.00. | **Holds only with an explicit mechanism.** The spec should name one (dropout and/or an auxiliary loss). |
+| Types pre-structure geometry "from step zero" (Component 2) | **[lit]** Learned arithmetic geometry (Fourier features, helices) emerges *without* types. | **[06]** Input-side geometry does not survive the first attention layer; typed models are slightly *less* additive (R² 0.53 vs 0.63). **[08]** Typed-input dropout gives a small, n.s. gain. | **Weak / not supported** as an input-side mechanism. |
+| Internalization via an auxiliary type-prediction objective (Pedagogy v3.0) | **[lit]** Syntactic Scaffolds; low-layer auxiliary POS supervision (Søgaard & Goldberg 2016). | **[08]** Operator localization 0.43 → 0.70; edit success ×2.7; three matched auxiliary-target controls give nothing. **[R1]** A blinded white-box interpreter made 9/10 verified causal claims on such a network (doc 10). | **Supported, specifically**, as an *interpretability / editability* effect, not an efficiency effect. |
+| Structure enforced inside the network | **[lit]** IIT (Geiger et al., ICML 2022). | **[R6]** doc 09: every variable perfectly localizable by blind tools (DAS 1.00); op-swap edit 0.96 vs 0.22; held-out operand-shift edit 0.80 vs 0.04; no accuracy cost. **[R1]** doc 10: LLM-written edit programs, white- or black-box, reach 0.94–0.96 on IIT networks they never saw, vs 0.41–0.57 on baseline networks. | **Strongly supported at toy scale.** The most effective form of "structural prior" found here. |
+| Hypothesis 1, scaling exponents | **[lit]** Equivariance changes exponents in force fields (Ngo & Ravanbakhsh, ICLR 2026; the spec attributes this to "Batatia"). Exponent figures appear in arXiv 2509.21811. Functional types are not group symmetries; dimensional analysis is (doc 07 §7.4). | Not testable at toy scale. | **Open.** Fix the citation; recast around unit-rescaling equivariance. |
+| Claim 2, self-knowledge (three regions) | No direct evidence. Input-side types do not constrain *generated* content. | Not tested. | **Open.** Needs output-side type prediction to be testable (doc 07 §7.4). |
+| Component 1, whole-word tokenization | **[lit]** Tokenization affects arithmetic and numeracy (well documented). | Not tested: the toy has atomic tokens by construction. | **Open.** It is the Q3/Q4 column of the spec's own 2×2. |
+| Curriculum crescendo | **[lit]** Mixed results for curricula in LM pre-training. | Not tested. | **Open.** |
+| Risk 1, wrong types hurt | — | **[06]** Shuffled types: no gain, no harm with types at inference. **[08]** Shuffled role targets as an auxiliary loss: no gain. | Partly tested: meaningless types are *inert* here, not harmful. |
+
+## 2.3 The spec's measurement list: what has been run
+
+| # | Spec measurement | Status here |
 |---|---|---|
-| **H1** efficiency | Type priors reduce the compute spent rediscovering functional relations (faster learning) | learning dynamics |
-| **H2** geometry | Type priors organize internal representations: role and variable information sits in predictable, low-rank, separable subspaces | representation |
-| **H3** interpretability | Networks trained this way are easier to reverse engineer (for an LLM or an algorithm), *even without being told the types* | interpretation |
-| **H4** editability | Targeted edits are more successful and have less collateral damage | intervention |
-| **H5** reproducibility | Independently trained networks share more representation structure, so edits transfer more easily | transfer |
-| **H6** curriculum | A dictionary → textbook → unstructured curriculum improves pre-training | curriculum |
+| 1 | Convergence speed | ✓ toy ([06], [08]) |
+| 2 | Knowledge storage (bits/parameter) | ✗ |
+| 3 | Reasoning tasks | partial: the toy *is* a compositional reasoning task, solved perfectly by every arm |
+| 4 | OOD generalization | ✗ |
+| 5 | Representation geometry | ✓ CKA, probes, additivity, plus *causal* measures (IIA, DAS) that the spec does not list |
+| 6 | **Type retention at inference** | ✓ [08]: retained vs. removed, with and without dropout or an auxiliary loss |
+| 7 | Confidence–accuracy correlation | ✗ |
+| 8 | Scaling exponents | ✗ (needs ≥ 3 model sizes; deliberately deferred) |
 
-These are logically independent: H1 can hold while H2–H5 fail. That is exactly the pattern the
-prototype finds in its regime (doc 06).
+## 2.4 The spec's 2×2 and where these experiments sit
 
-## 2.2 Where published results support, contradict, or fail to address ANLU
+The spec crosses tokenization (BPE vs ANLU) with typing (untyped vs typed). These experiments sit
+entirely in the **typing** column, with atomic tokens throughout. The spec's tests rest on three
+discriminations: "Q2 ≈ Q4 ≫ Q1 ≈ Q3 → typing does all the work", and so on. They are underpowered
+unless each typed cell is split into **type input** vs **type target** arms. In [08] that
+distinction is where the entire effect lies.
 
-### Support
+**Recommended:** expand the spec's 2×2 to a 2×3:
 
-- **Factored and typed input features help when data is scarce.** Linguistic input features in NMT
-  (Sennrich & Haddow 2016) and factored LMs (Bilmes & Kirchhoff 2003) gave consistent but modest
-  gains, mostly in low-resource settings. This **supports H1** in the low-data regime that ANLU's
-  curriculum starts in.
-- **Training-time structural priors can buy interpretability.** Weight-sparse transformers (Gao et
-  al. 2025) give circuits about 16× smaller; Learning Transformer Programs gives decompilable
-  models; BIMT gives modular ones. These **support H3 in principle**, but for *architectural or
-  regularization* priors, not input-type priors.
-- **Training for editability works.** ERT (2611.26408) reports better LLM edit success on vision
-  heads. This **supports H4 in principle** for an *explicit* edit objective.
+| tokenization | untyped | typed input (+ dropout) | typed auxiliary target |
+|---|---|---|---|
+| BPE | Q1 | Q2a | Q2b |
+| ANLU | Q3 | Q4a | Q4b |
 
-### Contradict or complicate
+Evaluate *every* cell untyped, as the asymmetry requires.
 
-- **Models already discover the geometry ANLU would impose on content.** Fourier features for
-  modular arithmetic (Nanda et al. 2023), Fourier features in pretrained LLMs (Zhou et al. 2024),
-  and a helix for numbers (Kantamneni & Tegmark 2025) all emerge *without* type supervision. A
-  NUMBER type is therefore unlikely to add much **content** geometry. Its potential value is in
-  **role** information (which number is the operand, which is the unit), and that information has
-  to come from a typer.
-- **Convergence with scale** (Platonic representation hypothesis). If representations converge as
-  scale grows, the marginal benefit of hand-designed priors shrinks with scale, which is the
-  "bitter lesson" pattern. ANLU's best case is small models and small data, which is also the
-  cheapest place to test it.
-- **The information confound.** Contextual types are produced by a typer, which is computation
-  done *outside* the network. A typed network solves an easier problem. Any H1 gain must be charged
-  the typer's cost, and any H2–H5 gain must be shown to come from geometry rather than from the
-  information the types supply. No ANLU-adjacent publication separates the two; our `canonical`
-  control does.
-- **Localization ≠ editability** (Hase et al. 2023). Even if types make roles *readable*, that does
-  not imply edits at those locations work. H2 and H4 must be tested separately.
-- **Imposed structure can be fragile.** Written or structured weights do not survive later
-  gradient training (*Rule-to-Network Compilation*: 0.50 → 0.01 after PPO). This is a warning for
-  any prior that is not maintained by the loss.
+## 2.5 Revised claim the evidence supports
 
-### Not addressed anywhere we could find
+> **ANLU-R.** Contextual functional types are most valuable as a **training-time auxiliary
+> target**. Supervising the network to compute them internally yields representations whose
+> variables are more causally localizable and more editable by closed-form weight programs, at
+> zero inference cost and with no accuracy loss. As an **input** feature they mainly supply
+> information. That speeds learning only while the information is supplied, and does not by
+> itself organize internal computation.
 
-- **H2–H5 for typed input embeddings** specifically: no published study.
-- **Contextual (role) types as interpretability scaffolding:** no published study.
-- **H6:** the curriculum literature (Bengio et al. 2009 and successors) reports mixed results for
-  LM pre-training. Nothing tests ANLU's specific staged curriculum.
-
-## 2.3 What the prototype adds (doc 06)
-
-| hypothesis | verdict on the toy | key evidence |
-|---|---|---|
-| **H1 efficiency** | **supported, but it's the information, not the geometry** | Typed reaches 95% in 310 vs 520 steps (light regime) and 380 vs 1,063 (strong regime), p = 0.008. **Canonical** (same role information by position, no type vectors) is as fast or faster (270 / 340). Shuffled types give nothing. The orthogonal-subspace prior adds nothing over plain typing. |
-| **H2 geometry** | **not supported; slightly contradicted** | Variables are decodable but not causally separable in any condition (DAS ≤ 0.50 vs 1.00 on the validity control). Role information makes the site *less* additive (R² 0.53 typed / 0.55 canonical vs 0.63 none) and operand information more redundant. |
-| **H3 interpretability** | **not supported** | No head carries a variable; routing purity is ≈ 0.5 everywhere. Blinded LLM interpreters recovered the full rule on both typed and untyped nets (n = 2). The typed net's interpreter decoded the unlabeled type channel *itself*: types are trivially interpretable as *inputs*, which is not the same as making *internals* interpretable. |
-| **H4 editability** | **not supported** | Rank-one edit success 11–32% everywhere, typed ≤ none. The agent-written edit gap disappears on cross-evaluation (it's interpreter strategy plus own-host fit). |
-| **H5 reproducibility** | **not supported** | CKA across seeds is not higher for typed. Copied ΔW fails in all conditions. |
-| H6 curriculum | not tested | — |
-
-**The central mechanism:** a geometric prior applied at the **input** does not survive the first
-mixing operation. Attention combines typed embeddings into op-specific interaction features, so the
-neat `c ⊕ t` factorization is gone by the site where the computation happens. Giving the network
-role information *accelerates* that mixing.
-
-## 2.4 Revised hypothesis worth keeping
-
-The data reject "typed input embeddings ⇒ interpretable, editable internals". They leave open, and
-point toward, a sharper version:
-
-> **ANLU-R:** Functional types are valuable as **(a) an efficiency prior** (they supply role
-> information the network would otherwise compute) and **(b) a shared vocabulary for interpretation**
-> (the NRI's `ftype`). Internal interpretability and editability, however, require the type
-> structure to be **enforced at the internal sites where computation happens**, through the training
-> objective (an interchange-intervention / IIT-style `L_struct` and an internal `L_edit`). Seeding it
-> at the embedding layer is not enough.
-
-This is testable cheaply (roadmap R6). It also connects ANLU to the strongest existing evidence that
-training-time structure buys interpretability (weight-sparse transformers; ERT). Two falsifiers:
-
-1. If an IIT-style `L_struct` that pins *typed* variables to fixed subspaces gives no better held-out
-   edit success than the same loss with *shuffled* type assignments, then "typedness" adds nothing
-   beyond "some enforced factorization".
-2. If any interpretability gain costs more than the efficiency gain in task performance or learning
-   speed, the prior is not worth it at the scales ANLU targets.
-
-**Also to measure in R2 (not yet tested):** with a *noisy, learned* typer, does H1 survive once the
-typer's errors and cost are charged? Here the oracle typer was perfect and free.
+This keeps ANLU's ontology (the six-layer schema, contextual typing, the teacher pipeline) and moves
+its mechanism from the embedding sum to the loss. It also resolves the companion papers'
+dependence on types at inference: the auxiliary type head supplies **predicted** types (doc 07 §7.3).
