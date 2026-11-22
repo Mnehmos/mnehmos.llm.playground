@@ -14,9 +14,15 @@ Claim kinds implemented (v0.1):
   edit          a weight program returns (dW_in, db_in); measures success on in-scope
                 inputs (vs edit_fn) and preservation out of scope
 
-Binding/function strings are Python lambdas, evaluated in a restricted namespace.
-They come from the interpreter (human or LLM). Only run documents you are willing
-to execute; the pilot runs them locally on toy models.
+Binding/function strings are Python lambda expressions written by the interpreter (human or
+LLM). They are UNTRUSTED. They are never passed to eval(): nri/safe_expr.py parses them and
+interprets a small whitelisted subset of Python (no attribute access, no imports, bounded
+loops). See safe_expr.py for the exact subset.
+
+Edit claims reference a weight program: an arbitrary Python file. That IS code execution, so
+it is refused unless the caller passes allow_programs=True, which it should do only for
+programs it has reviewed, or inside an isolated environment (separate container or VM with no
+credentials or network). A refused program makes the claim an error, never evidence.
 """
 from __future__ import annotations
 
@@ -27,12 +33,28 @@ from pathlib import Path
 
 import torch
 
-SAFE_BUILTINS = {"len": len, "min": min, "max": max, "abs": abs, "range": range, "int": int,
-                 "list": list, "sum": sum, "any": any, "all": all, "enumerate": enumerate}
+from nri.safe_expr import UnsafeExpression, compile_expr  # noqa: F401 (re-exported)
+
+
+class ProgramNotAllowed(PermissionError):
+    """An edit program was referenced but the caller did not opt in to running code."""
 
 
 def _fn(src: str):
-    return eval(src, {"__builtins__": SAFE_BUILTINS}, {})  # noqa: S307 (documented above)
+    """Compile an NRI expression string safely (no eval)."""
+    return compile_expr(src)
+
+
+def load_program(path, entry="program", *, allow_programs=False):
+    """Import a weight-program file and return its entry function. This executes the file, so
+    it requires an explicit opt-in (see module docstring)."""
+    if not allow_programs:
+        raise ProgramNotAllowed(f"refusing to execute program {path}: pass allow_programs=True "
+                                "only for reviewed programs or inside an isolated environment")
+    spec = importlib.util.spec_from_file_location("nri_prog", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return getattr(mod, entry)
 
 
 class Host:
@@ -79,7 +101,7 @@ def _subspace(h, labels):
     return Vh[:r].T
 
 
-def run_claim(doc, claim, host: Host, n=4096, seed=0):
+def run_claim(doc, claim, host: Host, n=4096, seed=0, allow_programs=False):
     g = torch.Generator().manual_seed(seed)
     mech = {m["id"]: m for m in doc.get("mechanisms", [])}
     kind = claim["kind"]
@@ -110,10 +132,8 @@ def run_claim(doc, claim, host: Host, n=4096, seed=0):
             val = (host.head(hp) == y).float().mean().item()
     elif kind == "edit":
         prog = claim["program"]
-        spec = importlib.util.spec_from_file_location("nri_prog", prog["path"])
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        dW, db = getattr(mod, prog["entry"])(host, doc, **prog.get("args", {}))
+        entry = load_program(prog["path"], prog["entry"], allow_programs=allow_programs)
+        dW, db = entry(host, doc, **prog.get("args", {}))
         h = host.site("resid_pre_mlp", tok, typ)
         pred = host.head(h, dW, db)
         in_scope = torch.tensor([bool(_fn(claim["scope"])({k: int(V[k][i]) for k in V}))
@@ -141,12 +161,13 @@ def _cmp(x, op_thr):
     return x >= thr if op == ">=" else x <= thr
 
 
-def execute(doc: dict, host: Host, seed=0) -> dict:
-    """Run every claim; return the doc with status/measured filled in (copy)."""
+def execute(doc: dict, host: Host, seed=0, allow_programs=False) -> dict:
+    """Run every claim; return the doc with status/measured filled in (copy). Edit claims run
+    their weight program only with allow_programs=True (see module docstring)."""
     doc = json.loads(json.dumps(doc))
     for c in doc["claims"]:
         try:
-            val = run_claim(doc, c, host, seed=seed)
+            val = run_claim(doc, c, host, seed=seed, allow_programs=allow_programs)
             c["measured"] = val
             c["status"] = "verified" if _check(c["predicate"], val) else "refuted"
         except Exception as e:  # a claim that cannot run is not evidence

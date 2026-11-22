@@ -109,7 +109,7 @@ def per_model(args):
     host = Host(m, lambda n, g: (lambda b: (b.tokens, b.types))(tasks.make_batch(n, cond, g)),
                 tasks.P)
     doc = reference_doc(run.name, sha256(run / "model.pt"), cond, PROGRAM)
-    ex = execute(doc, host)
+    ex = execute(doc, host, allow_programs=True)  # PROGRAM is this repo's own reviewed op_swap.py
     (RES / "nri").mkdir(parents=True, exist_ok=True)
     (RES / "nri" / f"{run.name}.nri.json").write_text(json.dumps(ex, indent=2))
     out["nri_verified"] = ex["summary"]["verified"]

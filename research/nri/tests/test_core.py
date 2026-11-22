@@ -96,7 +96,19 @@ def test_executor_runs_and_refutes_on_untrained_model():
                 tasks.P)
     doc = reference_doc("untrained", "0" * 64, "typed",
                         str(ROOT / "programs" / "op_swap.py"))
-    ex = execute(doc, host)
+    ex = execute(doc, host, allow_programs=True)  # this repo's own reviewed program
     assert ex["summary"]["errors"] == 0, json.dumps(ex["claims"], indent=1)[:2000]
     st = {c["id"]: c["status"] for c in ex["claims"]}
     assert st["C_behavior"] == "refuted"  # an untrained net does not implement the task
+
+
+def test_edit_program_requires_opt_in():
+    torch.manual_seed(0)
+    m = TinyTyped("typed").eval()
+    host = Host(m, lambda n, gg: (lambda b: (b.tokens, b.types))(tasks.make_batch(n, "typed", gg)),
+                tasks.P)
+    doc = reference_doc("untrained", "0" * 64, "typed", str(ROOT / "programs" / "op_swap.py"))
+    ex = execute(doc, host)  # default: programs are not executed
+    edits = [c for c in ex["claims"] if c["kind"] == "edit"]
+    assert edits and all(c["status"].startswith("error: ProgramNotAllowed") for c in edits)
+    assert all(c["status"] != "verified" for c in edits)

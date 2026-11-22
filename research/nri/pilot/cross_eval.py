@@ -9,7 +9,6 @@ The goal is always the true one: '+' (token 11) behaves as '-' (token 12).
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import sys
 import time
@@ -20,7 +19,7 @@ import torch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nri import tasks  # noqa: E402
-from nri.nri_exec import Host  # noqa: E402
+from nri.nri_exec import Host, load_program  # noqa: E402
 from nri.train import load, set_determinism  # noqa: E402
 
 
@@ -48,6 +47,8 @@ def main():
     ap.add_argument("--input-condition", default=None,
                     help="task condition used to render host inputs (default: host condition)")
     ap.add_argument("--out", type=Path, default=ROOT / "results" / "pilot" / "cross_eval.json")
+    ap.add_argument("--allow-programs", action="store_true",
+                    help="execute interpreter-written edit_program.py files (review first, or run isolated)")
     a = ap.parse_args()
     set_determinism(4)
     rows = []
@@ -55,9 +56,8 @@ def main():
         key = json.loads((a.blind / "answer_keys" / f"{pkg.name}.json").read_text())
         doc = json.loads((pkg / "nri.json").read_text())
         args = next((c["program"].get("args", {}) for c in doc["claims"] if c["kind"] == "edit"), {})
-        spec = importlib.util.spec_from_file_location(f"p_{pkg.name}", pkg / "edit_program.py")
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
+        # interpreter-written code: requires --allow-programs (review first, or run isolated)
+        program = load_program(pkg / "edit_program.py", "program", allow_programs=a.allow_programs)
         host_runs = a.hosts or [a.zoo / f"{c}_s{s}" for c in a.conditions for s in a.seeds]
         for run in host_runs:
                 cond = a.input_condition or json.loads((run / "config.json").read_text())["condition"]
@@ -66,7 +66,7 @@ def main():
                     tasks.make_batch(n, c, g)))(cond), tasks.P)
                 t = time.time()
                 try:
-                    dW, db = mod.program(host, doc, **args)
+                    dW, db = program(host, doc, **args)
                     r = true_goal_eval(host, cond, dW, db, model)
                 except Exception as e:  # noqa: BLE001
                     r = dict(error=f"{type(e).__name__}: {e}")

@@ -31,11 +31,13 @@ an LLM's interpretation of a network be made *executable and refutable*?
 ```
 nri/            package: tasks.py (typed task, 5 conditions), model.py (LayerNorm-free transformer),
                 train.py (deterministic), analysis.py (IIA, DAS, head patching, role purity,
-                edit programs, transfer), nri_exec.py (NRI executor), reference_nri.py
+                edit programs, transfer), nri_exec.py (NRI executor), safe_expr.py (sandboxed
+                expression evaluator, no eval), reference_nri.py
 programs/       NRI weight programs (op_swap.py)
 schema/         NRI JSON schema
 pilot/          blinded-LLM-interpreter packaging and scoring
-tests/          unit tests (determinism, exact rank-one-fold equivalence, executor)
+tests/          unit tests (determinism, exact rank-one-fold equivalence, executor, safe
+                evaluator vs Python on every stored NRI document, rejection of unsafe input)
 runs/zoo_*/     checkpoints + config + training log for every model (never overwritten)
 results/        metrics.json, summary.md, executed NRI documents, figures, validity.json, pilot/
 ```
@@ -44,7 +46,7 @@ results/        metrics.json, summary.md, executed NRI documents, figures, valid
 
 ```bash
 pip install torch matplotlib pytest
-python -m pytest -q tests/                                    # 7 tests, ~15 s
+python -m pytest -q tests/                                    # 140 tests, ~2 min
 python validity_check.py                                      # instrument positive/negative controls
 python run_experiment.py --seeds 5 --steps 3000 --wd 0.01     # ~15-30 min on 4 cores
 python run_experiment.py --seeds 5 --steps 3000 --wd 1
@@ -59,3 +61,20 @@ python make_figures.py
 ```
 
 Training is bitwise deterministic (a test enforces it). Existing checkpoints are reused, not retrained.
+
+## Security: NRI documents are untrusted input
+
+NRI documents are written by interpreters, including LLMs, so the executor treats them as untrusted:
+- **Expressions** (`binding`, `output_fn`, `scope`, `edit_fn`) are never passed to `eval`.
+  `nri/safe_expr.py` interprets a small whitelisted subset of Python:
+  - arithmetic, comparisons and conditionals;
+  - indexing, list comprehensions and lambdas;
+  - a few builtins: `range`, `len`, `min`, `max`, `abs`, `sum`, `any`, `all`, `int`, `list` and `enumerate`.
+
+  There is no attribute access and there are no imports. Loops, lengths, nesting depth and
+  integer sizes are bounded.
+- **Edit programs** are Python files, which means running code. `execute(..., allow_programs=True)`
+  and the pilot scripts' `--allow-programs` flag are required to run them. Use them only for
+  reviewed programs or inside an isolated environment. Without the opt-in, an edit claim is
+  recorded as an error, never as evidence.
+
