@@ -134,3 +134,47 @@ trained networks.**
 
 The paraphrase experiment remains deferred. An edit now reliably follows the declared variable
 (0.97–0.98 on converged networks), but only with a per-question lookup.
+
+## 17.8 Follow-up check (post hoc): questions the editors had not seen
+
+*Added after the registered analysis, at a reviewer's request. Not part of the doc 16
+registration. Script: `followup_novel.py`. Output: `results/editors/followup_novel.md`.*
+
+**Qualification.** "Fresh test examples" means a fresh random **draw**, not fresh **questions**.
+The task has only 7,350 distinct in-distribution questions, so of the 7,371 scored rows:
+- **7,053 (96%)** repeat a question that appeared in the editor-fitting or development samples;
+- the remaining **318 rows** contain **125 distinct questions**;
+- counting only the fitting sample (the development sample was never used to fit editors),
+  **982 distinct questions** were unseen by the editors.
+
+All networks were trained on the full question set, so "unseen" here means unseen **by the
+editor**, not by the network.
+
+Every editor was re-scored, unchanged, on those questions, each distinct question counted once.
+
+| editor | mass: intended / wrong (125 / 982 questions) | acceleration: intended / wrong (125 / 982 questions) |
+|---|---|---|
+| current editor (doc 15) | 0.18 / 0.06 · 0.18 / 0.06 | 0.32 / 0.03 · 0.31 / 0.04 |
+| unit-aware weight edit | 0.26 / 0.07 · 0.27 / 0.07 | 0.40 / 0.05 · 0.40 / 0.04 |
+| pooled table | 0.41 / 0.08 · 0.44 / 0.08 | 0.55 / 0.04 · 0.55 / 0.04 |
+| **unit-aware table** | **0.76 / 0.05 · 0.76 / 0.04** | **0.89 / 0.02 · 0.89 / 0.01** |
+| unit-aware, per question | 0.76 / 0.04 · 0.76 / 0.04 | 0.88 / 0.02 · 0.89 / 0.01 |
+| copy (benchmark) | 0.79 / 0.04 · 0.80 / 0.04 | 0.90 / 0.01 · 0.91 / 0.01 |
+
+**Route-aware − pooled on the 125 questions** (exploratory, uncorrected):
+
+| tier | mass | acceleration |
+|---|---|---|
+| weight edit | +0.065 (p = 0.004, 9/12 networks) | +0.043 (p = 0.024, 9/12) |
+| stored table | +0.351 (p = 0.001, 11/12) | +0.335 (p = 0.0005, 12/12) |
+| per question | +0.344 (p = 0.002, 11/12) | +0.331 (p = 0.0005, 12/12) |
+
+On the 982-question set, all six differences are positive in 10–12 of 12 networks, with p ≤ 0.004.
+
+**Reading.**
+- The registered result does **not** depend on the editor having seen the exact question: rates
+  on unseen questions match the full-sample rates to within about 0.04.
+- In none of the twelve unseen-question comparisons (6 per set) do wrong-variable changes rise
+  significantly (all p ≥ 0.09).
+- The 125-question set is small, so treat it as a check, not a new estimate.
+- This does not address new *networks*; that is the job of the next study.
