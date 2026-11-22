@@ -23,6 +23,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 11 | [`docs/11_preregistration.md`](docs/11_preregistration.md) | **Pre-registration** (committed before the run) of the dimensional-reasoning study: hypotheses, Holm-corrected primary family, decision rules |
 | 12 | [`docs/12_dimensional_results.md`](docs/12_dimensional_results.md) | **Results**: P1 (editability) supported but small (0.36 vs 0.17); P2 (OOD unit generalization) not supported; IIT unstable (sign-ambiguity trap); partial specs give the best edits; compute-matched control null |
 | 13 | [`docs/13_next_registration_plan.md`](docs/13_next_registration_plan.md) | Plan (not a registration) for the next study: variable-discriminating edits with a specificity metric, a designed-block positive control, reliable IIT training |
+| 14 | [`docs/14_registration_role_swap.md`](docs/14_registration_role_swap.md) | **Registration** (committed before the run) of the role-swap study |
+| 15 | [`docs/15_role_swap_results.md`](docs/15_role_swap_results.md) | **Role-swap result**: the edit advantage follows the declared variable in 12/12 seeds (primary Δ +0.37, p = 0.0005); copying real patterns works (0.8–0.9) but the fitted edit doesn't (0.2–0.3), so edit construction is the bottleneck |
 
 ## Layout
 
@@ -50,6 +52,9 @@ python run_untyped_inference.py --seeds 5 --steps 3000   # doc 08, ~1 CPU-hour
 python run_iit.py --seeds 5 --steps 3000                 # doc 09 (R6), ~1 CPU-hour
 python run_dimensional.py --seeds 10 --steps 6000        # docs 11-12 (pre-registered), ~3 CPU-hours
 python edit_specificity.py                               # doc 12 §12.8 (post hoc), ~15 min
+python run_swap.py train --schedule warmup --seeds 300 301 302 303 304 305 306 307 308 309 310 311   # docs 14-15
+python run_swap.py analyse --seeds 300 301 302 303 304 305 306 307 308 309 310 311
+python run_swap.py report  --seeds 300 301 302 303 304 305 306 307 308 309 310 311
 python make_figures.py
 ```
 
