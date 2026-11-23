@@ -26,7 +26,7 @@ registration. They are not confirmatory results. No main-study network was train
      There, multiplying adds angles.
    - Temperature addition produces answers on **value-order circles** (1.00).
    - **Where** it happens differs too. The offset sum is already formed **before** the MLP, by the
-     attention layers (0.94 after layer 1). The scaled calculations appear only **after** the MLP.
+     attention layers (0.91 after layer 1). The scaled calculations appear only **after** the MLP.
 3. **In the trained network, no converted quantity (value × scale) exists as a separate,
    swappable variable at any bottleneck.** That held in every mode tested: multiply, mass + mass,
    temperature addition.
@@ -67,7 +67,7 @@ registration. They are not confirmatory results. No main-study network was train
 | 4 labels, **declared** | 30k steps (stopped) | 900–902 | 17,500–25,000 | 0.22–0.23 | 0.14–0.17 | 0.10–0.43 | 1.00 | 0.37–0.40 |
 
 **Notes on this table.**
-- Two other 6-label runs are missing from the table. A wider model without weight decay (d =
+- Two other 6-label runs are missing from the table. A wider model with the default weight decay (d =
   128) stalled at 0.25 on multiplication, at 5,500 steps when stopped. A constant learning rate
   with weight decay 1.0 stayed at 0.22–0.24 through 24,500 steps. Both were stopped and their
   directories deleted, so neither appears in `learnability_sweep.json`. Their final readings
