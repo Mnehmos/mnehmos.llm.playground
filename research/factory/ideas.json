@@ -1,0 +1,972 @@
+{
+  "version": 1,
+  "status": "exploratory",
+  "tier_definitions": {
+    "A": "existing checkpoint analysis",
+    "B": "short CPU pilot",
+    "C": "seeded study CPU or Colab",
+    "D": "substantial GPU"
+  },
+  "ideas": [
+    {
+      "id": "U01",
+      "title": "Unit-scale blind decoding",
+      "experiment": "recover hidden log-scale without scale table",
+      "metric": "exact label-scale accuracy",
+      "tier": "A",
+      "paper": "P01"
+    },
+    {
+      "id": "U02",
+      "title": "Equal-ratio fingerprint",
+      "experiment": "compare activation deltas for equal scale ratios",
+      "metric": "circular delta error",
+      "tier": "A",
+      "paper": "P01"
+    },
+    {
+      "id": "U03",
+      "title": "Canonical vs raw-route rivalry",
+      "experiment": "fit class-mean representations with matched capacity",
+      "metric": "held-out partial R² difference",
+      "tier": "A",
+      "paper": "P01"
+    },
+    {
+      "id": "U04",
+      "title": "Unit relabel causal swap",
+      "experiment": "change label only, not raw value",
+      "metric": "intended/wrong-answer fractions",
+      "tier": "A",
+      "paper": "P01"
+    },
+    {
+      "id": "U05",
+      "title": "Change-of-unit triangle",
+      "experiment": "compose A→B→C vs A→C swaps",
+      "metric": "composition residual",
+      "tier": "A",
+      "paper": "P01"
+    },
+    {
+      "id": "U06",
+      "title": "Invisible unit collision",
+      "experiment": "same canonical quantity via two unseen routes",
+      "metric": "interchange preservation accuracy",
+      "tier": "B",
+      "paper": "P01"
+    },
+    {
+      "id": "U07",
+      "title": "Hidden unit aliases",
+      "experiment": "two unrelated tokens encode identical scale",
+      "metric": "alias identity score vs shuffled control",
+      "tier": "B",
+      "paper": "P01"
+    },
+    {
+      "id": "U08",
+      "title": "New unit interpolation",
+      "experiment": "introduce one scale absent from train",
+      "metric": "novel unit transfer accuracy",
+      "tier": "C",
+      "paper": "P01"
+    },
+    {
+      "id": "U09",
+      "title": "Noncommutative unit path",
+      "experiment": "compare conversion order under multiple unit rules",
+      "metric": "order-specific error",
+      "tier": "B",
+      "paper": "P01"
+    },
+    {
+      "id": "U10",
+      "title": "Numeric magnitude stress",
+      "experiment": "shift values by orders of magnitude in real-number arm",
+      "metric": "relative error vs digit length",
+      "tier": "C",
+      "paper": "P01"
+    },
+    {
+      "id": "T01",
+      "title": "Pre-generalization meaning",
+      "experiment": "test if causal label feature appears before OOD accuracy",
+      "metric": "checkpoint lead/lag steps",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T02",
+      "title": "Concept birth certificate",
+      "experiment": "earliest checkpoint meeting preregistered behavior+causality",
+      "metric": "emergence step distribution",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T03",
+      "title": "Gradient omen",
+      "experiment": "predict future causal circuit from early update directions",
+      "metric": "future-site prediction AUC",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T04",
+      "title": "Feature migration",
+      "experiment": "track aligned subspace across layers during training",
+      "metric": "subspace drift and causal score",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T05",
+      "title": "Circuit death",
+      "experiment": "identify once-used features discarded after convergence",
+      "metric": "necessity change across time",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T06",
+      "title": "Semantic compression",
+      "experiment": "measure representation intrinsic dimension during acquisition",
+      "metric": "dimension vs OOD accuracy",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T07",
+      "title": "Learning as phase locking",
+      "experiment": "measure cross-neuron spectral synchrony before generalization",
+      "metric": "synchrony lead time",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "T08",
+      "title": "One example flips mechanism",
+      "experiment": "remove one training example family, compare trajectories",
+      "metric": "emergence-time effect",
+      "tier": "C",
+      "paper": "P02"
+    },
+    {
+      "id": "T09",
+      "title": "Curriculum reversal",
+      "experiment": "train conversions→arithmetic and arithmetic→conversions",
+      "metric": "sample efficiency and editability",
+      "tier": "C",
+      "paper": "P02"
+    },
+    {
+      "id": "T10",
+      "title": "Early-vs-late checkpoint edit",
+      "experiment": "apply identical semantic edit across learning stages",
+      "metric": "success per relative edit norm",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L01",
+      "title": "Compute-matched looping",
+      "experiment": "recurrent 4 unique vs unrolled 8 vs shallow",
+      "metric": "held-out accuracy per FLOP",
+      "tier": "C",
+      "paper": "P02"
+    },
+    {
+      "id": "L02",
+      "title": "Loop-count dose response",
+      "experiment": "execute same learned block 1–7 passes",
+      "metric": "accuracy/overthinking curve",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L03",
+      "title": "Pass-wise semantic itinerary",
+      "experiment": "track unit/value/calculator probes per iteration",
+      "metric": "causal emergence pass",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L04",
+      "title": "Recurrent attractor test",
+      "experiment": "look for hidden-state convergence or cycles",
+      "metric": "spectral radius and state distance",
+      "tier": "A",
+      "paper": "P02"
+    },
+    {
+      "id": "L05",
+      "title": "Pass-3 bypass",
+      "experiment": "skip only second or third recurrence",
+      "metric": "accuracy delta and intended change",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L06",
+      "title": "Cross-pass graft",
+      "experiment": "insert loop-2 state from matched counterfactual",
+      "metric": "intervention IIA / collateral",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L07",
+      "title": "Loop schedule randomization",
+      "experiment": "train fixed vs randomized recurrence lengths",
+      "metric": "OOD loop-count stability",
+      "tier": "C",
+      "paper": "P02"
+    },
+    {
+      "id": "L08",
+      "title": "Frozen first pass",
+      "experiment": "freeze early pass mapping by structural gate",
+      "metric": "held-out accuracy at equal compute",
+      "tier": "C",
+      "paper": "P02"
+    },
+    {
+      "id": "L09",
+      "title": "Recurrent error correction",
+      "experiment": "inject a unit corruption at pass k",
+      "metric": "recovery probability by remaining passes",
+      "tier": "B",
+      "paper": "P02"
+    },
+    {
+      "id": "L10",
+      "title": "Recurrent saturation",
+      "experiment": "map when additional loops cease useful change",
+      "metric": "accuracy per added pass / entropy",
+      "tier": "A",
+      "paper": "P02"
+    },
+    {
+      "id": "E01",
+      "title": "Semantic one-row rewrite",
+      "experiment": "redefine one unit via embedding-row edit",
+      "metric": "intended/preserve and norm",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "E02",
+      "title": "Zero-shot calculator patch",
+      "experiment": "install product→quotient edit without task retraining",
+      "metric": "specificity and rank",
+      "tier": "C",
+      "paper": "P03"
+    },
+    {
+      "id": "E03",
+      "title": "Edit budget ladder",
+      "experiment": "constrain ΔW to rank 1/2/4/8",
+      "metric": "Pareto success vs norm",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "E04",
+      "title": "Two edits in either order",
+      "experiment": "mass edit followed by acceleration edit and reverse",
+      "metric": "commutator error",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "E05",
+      "title": "Edit interference threshold",
+      "experiment": "increase overlap between declared subspaces",
+      "metric": "collateral vs overlap",
+      "tier": "C",
+      "paper": "P03"
+    },
+    {
+      "id": "E06",
+      "title": "Weight firewall",
+      "experiment": "train protected subspace that should resist unrelated edits",
+      "metric": "preservation after adversarial edit",
+      "tier": "C",
+      "paper": "P03"
+    },
+    {
+      "id": "E07",
+      "title": "Semantic checksum",
+      "experiment": "predict target shift from ΔW analytically before applying",
+      "metric": "prediction calibration",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "E08",
+      "title": "Semantic undo",
+      "experiment": "subtract stored delta after edit and test recovery",
+      "metric": "restoration accuracy",
+      "tier": "A",
+      "paper": "P03"
+    },
+    {
+      "id": "E09",
+      "title": "Edit transfer across seeds",
+      "experiment": "fit edit program on one model, run on another",
+      "metric": "program vs copied-delta gap",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "E10",
+      "title": "Edit error-correcting code",
+      "experiment": "encode one concept redundantly then damage one site",
+      "metric": "robustness vs editability tradeoff",
+      "tier": "C",
+      "paper": "P03"
+    },
+    {
+      "id": "N01",
+      "title": "Polysemy force test",
+      "experiment": "same surface word means physics quantity or compel",
+      "metric": "unseen-context sense accuracy",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "N02",
+      "title": "Type-dropout curve",
+      "experiment": "remove type hints at controlled training fractions",
+      "metric": "untyped inference performance",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "N03",
+      "title": "Aux-type placement sweep",
+      "experiment": "supervise type at embed vs attention vs MLP",
+      "metric": "editability by site",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "N04",
+      "title": "Type-alias cross-domain",
+      "experiment": "swap physical unit label for role-equivalent new symbol",
+      "metric": "zero-shot transfer accuracy",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "N05",
+      "title": "Syntactic shortcut audit",
+      "experiment": "hold out entire context templates from train",
+      "metric": "OOD minus IID gap",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "N06",
+      "title": "Ambiguous label under adversarial context",
+      "experiment": "one token carries two physical dimensions",
+      "metric": "contextual dimension error",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "N07",
+      "title": "Context-to-type head",
+      "experiment": "predict types from raw tokens without teacher at inference",
+      "metric": "type and task accuracy",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "N08",
+      "title": "Spurious type injection",
+      "experiment": "train random fake labels as placebo",
+      "metric": "gain vs shuffled prior",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "N09",
+      "title": "Typed vs canonical information control",
+      "experiment": "same information supplied in different embeddings",
+      "metric": "causal editability difference",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "N10",
+      "title": "Type-free compression",
+      "experiment": "remove type embedding after aux-trained model convergence",
+      "metric": "accuracy with zero external type",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "S01",
+      "title": "Gauge-respecting unit encoding",
+      "experiment": "add explicit dimensional equivariance",
+      "metric": "unit-rescale equivariance error",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "S02",
+      "title": "Gauge-choice stability",
+      "experiment": "rotate representational reference frame",
+      "metric": "inferred-scale invariance",
+      "tier": "A",
+      "paper": "P04"
+    },
+    {
+      "id": "S03",
+      "title": "Group-size sweep",
+      "experiment": "change modulus 7/11/13/17",
+      "metric": "recovery rate vs group order",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "S04",
+      "title": "Prime vs composite arithmetic",
+      "experiment": "compare Z_p and non-field cases",
+      "metric": "OOD formula performance",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "S05",
+      "title": "Zero as algebraic singularity",
+      "experiment": "treat zero input independently of log-space rules",
+      "metric": "zero-specific failure rate",
+      "tier": "A",
+      "paper": "P04"
+    },
+    {
+      "id": "S06",
+      "title": "Inverse identity ablation",
+      "experiment": "remove x×x⁻¹ examples from train",
+      "metric": "zero-shot identity accuracy",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "S07",
+      "title": "Dimensional nonsense rejection",
+      "experiment": "train valid dimensional equations, test impossible ones",
+      "metric": "false acceptance rate",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "S08",
+      "title": "Distributive law generalization",
+      "experiment": "compose plus and multiply without triple patterns in train",
+      "metric": "identity accuracy",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "S09",
+      "title": "Unit-conversion cycle consistency",
+      "experiment": "compare output after A→B→C→A",
+      "metric": "cycle drift / KL",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "S10",
+      "title": "Affine units versus multiplicative units",
+      "experiment": "add temperature-like offsets with distinct encoding",
+      "metric": "linear vs rotation spectrum separation",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "R01",
+      "title": "Break just one scale",
+      "experiment": "corrupt mapping for a single unit token",
+      "metric": "detection/repair precision",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "R02",
+      "title": "Damaged attention head triage",
+      "experiment": "ablate head, compare NRI diagnoses",
+      "metric": "causal localization F1",
+      "tier": "A",
+      "paper": "P03"
+    },
+    {
+      "id": "R03",
+      "title": "Wrong-unit implant",
+      "experiment": "swap unit embedding without touching values",
+      "metric": "edit specificity",
+      "tier": "A",
+      "paper": "P03"
+    },
+    {
+      "id": "R04",
+      "title": "Rotated latent coordinate attack",
+      "experiment": "apply function-preserving hidden permutation",
+      "metric": "invariance of interpreter output",
+      "tier": "A",
+      "paper": "P03"
+    },
+    {
+      "id": "R05",
+      "title": "Circuit transplant",
+      "experiment": "move a learned conversion subspace across models",
+      "metric": "transfer benefit vs random transplant",
+      "tier": "C",
+      "paper": "P03"
+    },
+    {
+      "id": "R06",
+      "title": "Detect silent corruption",
+      "experiment": "perturb weights without changing IID accuracy",
+      "metric": "OOD/counterfactual sensitivity",
+      "tier": "A",
+      "paper": "P03"
+    },
+    {
+      "id": "R07",
+      "title": "Repair with calibration budget 1/5/20",
+      "experiment": "vary examples supplied to editor",
+      "metric": "success vs examples",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "R08",
+      "title": "Self-healing after damage",
+      "experiment": "continue training after precise lesion",
+      "metric": "steps to restore accuracy",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "R09",
+      "title": "Minimal cut set",
+      "experiment": "find smallest set of heads/sites whose ablation breaks one concept",
+      "metric": "cut size and specificity",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "R10",
+      "title": "Robustness to quantization",
+      "experiment": "compare FP32/FP16/int8-like weight rounding",
+      "metric": "causal map stability",
+      "tier": "B",
+      "paper": "P03"
+    },
+    {
+      "id": "O01",
+      "title": "Muon vs AdamW editability",
+      "experiment": "match training compute and compare optimizer geometry",
+      "metric": "edit-specificity gap",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "O02",
+      "title": "Warm-start from rule table",
+      "experiment": "initialize unit scales from symbolic metadata",
+      "metric": "samples to accuracy",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "O03",
+      "title": "One-shot curriculum lesson",
+      "experiment": "single new relation taught, no full retrain",
+      "metric": "data efficiency",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "O04",
+      "title": "Gradient accumulation effects",
+      "experiment": "vary batch/accumulation keeping tokens fixed",
+      "metric": "causal structure variance",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "O05",
+      "title": "Weight decay as curriculum",
+      "experiment": "sweep regularization, track feature emergence",
+      "metric": "time-to-generalization",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "O06",
+      "title": "Low-precision tiny training",
+      "experiment": "compare bfloat16 versus float32 where supported",
+      "metric": "convergence per joule",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "O07",
+      "title": "Freeze embeddings mid-course",
+      "experiment": "lock token semantics at selected checkpoint",
+      "metric": "OOD gain or loss",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "O08",
+      "title": "Two-phase learning schedule",
+      "experiment": "convert then compose vs joint learning",
+      "metric": "compute to same OOD accuracy",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "O09",
+      "title": "Rare unit oversampling",
+      "experiment": "sample unusual labels nonuniformly",
+      "metric": "held-out minority-unit accuracy",
+      "tier": "B",
+      "paper": "P04"
+    },
+    {
+      "id": "O10",
+      "title": "Data-efficient teacher/student",
+      "experiment": "distill explicit rule network into free network",
+      "metric": "causal-map transfer vs cost",
+      "tier": "C",
+      "paper": "P04"
+    },
+    {
+      "id": "I01",
+      "title": "Probe versus causal explanation",
+      "experiment": "compare linear-probe top site with intervention top site",
+      "metric": "localization rank agreement",
+      "tier": "A",
+      "paper": "P05"
+    },
+    {
+      "id": "I02",
+      "title": "Blind LLM unit table recovery",
+      "experiment": "give weights without labels table",
+      "metric": "accuracy of executable claims",
+      "tier": "C",
+      "paper": "P05"
+    },
+    {
+      "id": "I03",
+      "title": "Black-box versus white-box parity",
+      "experiment": "same task, bounded calls for both interpreters",
+      "metric": "verified claims per dollar",
+      "tier": "C",
+      "paper": "P05"
+    },
+    {
+      "id": "I04",
+      "title": "Wrong explanation trap",
+      "experiment": "construct two networks with same behavior, different mechanisms",
+      "metric": "interpreter mechanism discrimination",
+      "tier": "C",
+      "paper": "P05"
+    },
+    {
+      "id": "I05",
+      "title": "NRI proof compression",
+      "experiment": "minimize typed causal claims needed to predict behavior",
+      "metric": "claims per covered behavior",
+      "tier": "B",
+      "paper": "P05"
+    },
+    {
+      "id": "I06",
+      "title": "Counterexample generator",
+      "experiment": "search input that refutes candidate NRI mechanism",
+      "metric": "counterexamples per compute",
+      "tier": "B",
+      "paper": "P05"
+    },
+    {
+      "id": "I07",
+      "title": "Interpreter self-consistency",
+      "experiment": "same weights, independent fresh interpreter runs",
+      "metric": "verified-claim agreement",
+      "tier": "C",
+      "paper": "P05"
+    },
+    {
+      "id": "I08",
+      "title": "Predict an unseen ablation",
+      "experiment": "freeze explanation before performing test",
+      "metric": "causal prediction Brier score",
+      "tier": "B",
+      "paper": "P05"
+    },
+    {
+      "id": "I09",
+      "title": "Editor source code portability",
+      "experiment": "reuse edit program on symmetry-transformed model",
+      "metric": "success retention ratio",
+      "tier": "B",
+      "paper": "P05"
+    },
+    {
+      "id": "I10",
+      "title": "Circuit translation to executable math",
+      "experiment": "fit minimal symbolic operation to discovered activations",
+      "metric": "held-out mechanism agreement",
+      "tier": "B",
+      "paper": "P05"
+    },
+    {
+      "id": "F01",
+      "title": "Blind future outcome forecast",
+      "experiment": "researcher predicts effect sign before new seed",
+      "metric": "forecast calibration",
+      "tier": "A",
+      "paper": "P06"
+    },
+    {
+      "id": "F02",
+      "title": "How often probes lie",
+      "experiment": "compare exploratory probe significance with causal held-out result",
+      "metric": "false discovery rate",
+      "tier": "B",
+      "paper": "P06"
+    },
+    {
+      "id": "F03",
+      "title": "Null result publication audit",
+      "experiment": "track failed ideas as proportion of all registered ideas",
+      "metric": "reporting completeness",
+      "tier": "A",
+      "paper": "P06"
+    },
+    {
+      "id": "F04",
+      "title": "Compute-to-discovery curve",
+      "experiment": "record compute for every hypothesis screened",
+      "metric": "verified effects per CPU-hour",
+      "tier": "A",
+      "paper": "P06"
+    },
+    {
+      "id": "F05",
+      "title": "Adversarial reviewer generator",
+      "experiment": "generate falsification tests before first training",
+      "metric": "caught flaw rate",
+      "tier": "B",
+      "paper": "P06"
+    },
+    {
+      "id": "F06",
+      "title": "Prior-art tripwire",
+      "experiment": "track overlap between proposed claims and references",
+      "metric": "novelty conflicts resolved",
+      "tier": "A",
+      "paper": "P06"
+    },
+    {
+      "id": "F07",
+      "title": "Tuner contamination test",
+      "experiment": "compare frozen vs hindsight parameter selection",
+      "metric": "held-out metric inflation",
+      "tier": "B",
+      "paper": "P06"
+    },
+    {
+      "id": "F08",
+      "title": "Paper reproducibility one-command",
+      "experiment": "fresh environment replays all paper numbers",
+      "metric": "checksum/metric concordance",
+      "tier": "A",
+      "paper": "P06"
+    },
+    {
+      "id": "F09",
+      "title": "Researcher disagreement",
+      "experiment": "independent interpretation of same opaque run",
+      "metric": "claim convergence after checks",
+      "tier": "B",
+      "paper": "P06"
+    },
+    {
+      "id": "F10",
+      "title": "Meta-experiment: random ideas",
+      "experiment": "compare curated vs randomized experiment ranking",
+      "metric": "yield per budget",
+      "tier": "B",
+      "paper": "P06"
+    },
+    {
+      "id": "X01",
+      "title": "Neural semantic periodic table",
+      "experiment": "cluster operations by reusable causal transformation signatures",
+      "metric": "cluster stability and transfer",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X02",
+      "title": "Algorithm vaccination",
+      "experiment": "teach inverse task before corruption, then lesion",
+      "metric": "damage tolerance improvement",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X03",
+      "title": "Artificial concept birth",
+      "experiment": "insert new semantic operation with no gradient training",
+      "metric": "OOD intended-answer accuracy",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X04",
+      "title": "Latent compiler",
+      "experiment": "compile symbolic unit algebra into low-rank weight edits",
+      "metric": "equivalence test pass rate",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X05",
+      "title": "Concept fusion",
+      "experiment": "make one shared subspace jointly encode mass and acceleration",
+      "metric": "independent edit selectivity",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X06",
+      "title": "Neural counterfactual time machine",
+      "experiment": "transplant earlier checkpoint subspace into later model",
+      "metric": "regressed behavior fraction",
+      "tier": "B",
+      "paper": "P07"
+    },
+    {
+      "id": "X07",
+      "title": "Knowledge without names",
+      "experiment": "randomize every symbol, retain only algebraic relationships",
+      "metric": "scale-recovery transfer",
+      "tier": "B",
+      "paper": "P07"
+    },
+    {
+      "id": "X08",
+      "title": "Causal map compression limit",
+      "experiment": "find minimum dimension preserving 95% intervention performance",
+      "metric": "rank-versus-fidelity frontier",
+      "tier": "B",
+      "paper": "P07"
+    },
+    {
+      "id": "X09",
+      "title": "Executable concept checksum across seeds",
+      "experiment": "hash canonicalized causal signatures, not raw weights",
+      "metric": "false-match rate",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "X10",
+      "title": "Semantics from unlabeled gradients",
+      "experiment": "recover which unit changed using only ΔW time series",
+      "metric": "label identification AUC",
+      "tier": "C",
+      "paper": "P07"
+    },
+    {
+      "id": "Q01",
+      "title": "Logit-lens false positive",
+      "experiment": "compare layerwise early answers with causal answer formation",
+      "metric": "early-decode vs patch agreement",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q02",
+      "title": "Activation nuisance subtraction",
+      "experiment": "remove raw token identity and re-probe canonical quantity",
+      "metric": "delta chance-adjusted accuracy",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q03",
+      "title": "Outlier neuron monopoly",
+      "experiment": "ablate top-1/top-5 high-activation neurons",
+      "metric": "causal effect vs random set",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q04",
+      "title": "Permutation stress",
+      "experiment": "permute hidden neurons with matching inverse matrices",
+      "metric": "identical logits and map invariance",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q05",
+      "title": "One-feature semantic knockoff",
+      "experiment": "fit synthetic feature matching probe score but causally inert",
+      "metric": "edit success difference",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q06",
+      "title": "Head-to-role traffic map",
+      "experiment": "patch head outputs by operand/token role",
+      "metric": "route-specific IIA",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q07",
+      "title": "Swap label twice",
+      "experiment": "perform A→B→A intervention composition",
+      "metric": "restoration rate",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q08",
+      "title": "Answer-preserving adversarial paraphrase",
+      "experiment": "change context without changing math result",
+      "metric": "internal drift and accuracy",
+      "tier": "B",
+      "paper": "P07"
+    },
+    {
+      "id": "Q09",
+      "title": "One-seed robustness alarm",
+      "experiment": "estimate how often exploratory best-site flips across seeds",
+      "metric": "selection instability",
+      "tier": "A",
+      "paper": "P07"
+    },
+    {
+      "id": "Q10",
+      "title": "Spectral coordinate mismatch",
+      "experiment": "compare additive power before/after valid basis orthogonalization",
+      "metric": "false spectral preference rate",
+      "tier": "A",
+      "paper": "P07"
+    }
+  ]
+}
