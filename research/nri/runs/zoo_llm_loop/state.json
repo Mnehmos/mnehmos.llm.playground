@@ -1,0 +1,12 @@
+{
+ "step": 1000,
+ "cum_rel_norm": 0.0,
+ "installed": [],
+ "diverged_at": null,
+ "ledger": {
+  "train_cpu_s": 60.876769842,
+  "observe_cpu_s": 21.791099337000002,
+  "gate_cpu_s": 1.2628109970000025,
+  "design_cpu_s": 120.753999496
+ }
+}

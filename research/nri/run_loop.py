@@ -68,9 +68,10 @@ def model_norm(m):
 
 
 @torch.no_grad()
-def gate_metrics(m):
+def gate_metrics(m, split="VAL"):
+    """split 'VAL' for the gate; 'OBS' for the agent's own pre-checks (never decides installation)."""
     d = AT.partition()
-    fit, val, vs = d["FIT"], d["VAL"], d["VAL_src"]
+    fit, val, vs = d["FIT"], d[split], d[split + "_src"]
     cf, cv, cvs = AT.capture(m, fit), AT.capture(m, val), AT.capture(m, vs)
     ff, fv = AT.factors(fit), AT.factors(val)
     pe = AT.pooled_edit(m, fit, val, h_fit=cf["h"], h_eval=cv["h"])
@@ -88,6 +89,17 @@ def gate_metrics(m):
                 pred=pred, correct=pred == y,
                 route_probe=AT.ridge_probe(cf["h"][:, AT.BLK], ff["route"], cv["h"][:, AT.BLK], fv["route"], 6),
                 unit_probe=AT.ridge_probe(cf["h"], ff["mu"], cv["h"], fv["mu"], 3))
+
+
+def precheck(m, delta, target):
+    """Agent-side dry run on OBS (the gate itself uses VAL)."""
+    mm = copy.deepcopy(m)
+    b = gate_metrics(mm, "OBS")
+    apply(mm, delta)
+    a = gate_metrics(mm, "OBS")
+    keep = a["correct"][b["correct"]].float().mean().item()
+    return dict(gain=gain(target, b, a), keep=keep, **{f"d_{k}": a[k] - b[k] for k in
+                ("acc", "iia", "ood_dev", "edit_inv", "interaction", "wrong", "route_probe", "unit_probe")})
 
 
 def gain(target, before, after):
@@ -327,8 +339,8 @@ def gate(path, install=False):
     v = run_gate(m, delta, mod.TARGET, meta["cum_rel_norm"])
     meta["ledger"]["gate_cpu_s"] += time.process_time() - t
     torch.set_rng_state(rng)
-    rec = dict(step=s, module=str(Path(path).relative_to(ROOT)), target=mod.TARGET, rationale=mod.RATIONALE,
-               installed=False, **{k: x for k, x in v.items()})
+    rec = dict(step=s, module=str(Path(path).resolve().relative_to(ROOT.resolve())), target=mod.TARGET, rationale=mod.RATIONALE,
+               installed=False, **{k: x for k, x in v.items() if k != "target"})
     if install and v["passed"]:
         apply(m, delta)
         torch.save(m.state_dict(), ckpt_dir(s) / "model_edited.pt")
