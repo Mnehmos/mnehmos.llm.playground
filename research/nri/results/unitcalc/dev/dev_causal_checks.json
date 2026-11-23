@@ -1,0 +1,57 @@
+{
+ "note": "Exploratory dev checks on pilot network sweep/L4_d64_30k_all/natural_s951 (lite4, 30k). IIA on reserved eligible pairs.",
+ "k_sweep_single_position_L1_query_mul_u1": {
+  "16": {
+   "canon": 0.11,
+   "value": 0.09,
+   "label": 0.76
+  },
+  "32": {
+   "canon": 0.11,
+   "value": 0.09,
+   "label": 0.76
+  },
+  "48": {
+   "canon": 0.11,
+   "value": 0.1,
+   "label": 0.76
+  }
+ },
+ "k_sweep_mlp_input_mul_u1": {
+  "16": {
+   "canon": 0.1,
+   "value": 0.1,
+   "label": 0.19
+  },
+  "32": {
+   "canon": 0.1,
+   "value": 0.1,
+   "label": 0.2
+  }
+ },
+ "das_sanity_mlp_input_mul": {
+  "source_answer_k16": 0.963,
+  "source_answer_k32": 0.982,
+  "canon_k64": 0.139,
+  "source_answer_k64": 1.0,
+  "random_k16_source_answer": 0.049
+ },
+ "layer1_full_stream_512d_k16_u1": {
+  "mul": {
+   "canon": 0.112,
+   "value": 0.126,
+   "label": 0.943
+  },
+  "msum": {
+   "canon": 0.074,
+   "value": 0.082,
+   "label": 0.138
+  },
+  "tsum": {
+   "canon": 0.145,
+   "value": 0.205,
+   "label": 0.626
+  }
+ },
+ "value_shift_positive_control_geometry": "a known value change x -> x*2^r (r=2,3,4) was recovered as ~1-3 steps before the MLP (value circles 23-60% concentrated): the rotation readout is unreliable before the calculator"
+}

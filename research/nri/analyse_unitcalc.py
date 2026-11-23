@@ -3,22 +3,22 @@
 Per network:
   A1 readability   linear probes (fit questions -> reserved questions) for every quantity at every
                    role-aligned site, per mode
-  A2 geometry      class-mean character spectra of each mode's calculator intermediate at the
-                   query site before the MLP (h): multiplicative (discrete-log circles, nonzero
-                   classes) vs additive (value-order circles, all 13 classes)
-  A3 label table   recover each label's meaning from the network: swap ONLY the label token,
-                   measure the rotation of h in the calculator's character plane (plane fitted on
-                   the network's own predicted answers, never on the true table), convert to a
-                   log-scale / offset step. Direction (inverse labels, divisors, output labels)
-                   is recovered as the sign / value-dependence of the rotation.
-  A4 composition   accuracy on held-out label pairs; agreement of the network's held-out answers
-                   with the answers implied by the recovered table
-  A5 convert-first canonical-operand readability at the operand's label site, msum vs mul
-  A6 edits         (a) map-guided relabel: rotate h in the character planes by the recovered
-                   step; copy benchmark = the real relabelled question's h
-                   (b) one-row embedding edit giving a label a NEW meaning (a log-scale no label
-                   in its dimension has); copy benchmark = copying another label's row for an
-                   existing meaning
+  A2 geometry      character spectra (multiplicative = discrete-log circles over the 12 nonzero
+                   classes; additive = value-order circles over all 13) of the calculator
+                   intermediate and of the ANSWER, at the query position before and after the MLP
+  A3 algorithm     CORE. Causal comparison of two candidate algorithms at each site feeding the
+                   calculator, with interchange interventions on a learned 16-dim subspace (DAS):
+                     convert-first: the converted quantity (value x label scale / + offset) exists
+                     route:         raw value and raw label are separately swappable
+                   For each operand slot, three counterfactuals: canonical quantity from the
+                   source; raw value only from the source (label from the base); label only.
+                   route index = min(IIA value-only, IIA label-only)
+                   Built-in controls: L0 embeddings (route by construction); the declared arm's
+                   16-dim block in mul mode (canonical mass by construction).
+  A4 composition   accuracy on held-out label pairs per mode
+  A5 edits         one-row embedding edit giving a label a NEW meaning (a parameter no label in
+                   its dimension has); benchmark = copying another label's row for an EXISTING
+                   meaning. Success: intended >= 0.9 x benchmark.
 
     python analyse_unitcalc.py --zoo runs/zoo_unitcalc --out results/unitcalc/metrics.json
 """
@@ -161,34 +161,6 @@ def top2(spec):
 
 
 # ------------------------------------------------------------------ A3 label-meaning recovery
-def plane(X, y, kind, f):
-    """Complex coordinate map z(x) for character frequency f, fitted from class means of X by
-    the class labels y (here: the network's own predicted answers). Returns (W, mean) with
-    z = (x - mean) @ W[:,0] + i (x - mean) @ W[:,1]."""
-    mu = class_means(X, y).double()
-    if kind == "mult":
-        xs = list(range(1, P))
-        ang = torch.tensor([2 * math.pi * f * U.LOG[x] / 12 for x in xs], dtype=torch.double)
-    else:
-        xs = list(range(P))
-        ang = torch.tensor([2 * math.pi * f * x / P for x in xs], dtype=torch.double)
-    target = torch.stack([torch.cos(ang), torch.sin(ang)], 1)
-    Mx = mu[xs] - mu[xs].mean(0)
-    W = torch.linalg.lstsq(Mx, target - target.mean(0), driver="gelsd").solution
-    return W, mu[xs].mean(0)
-
-
-def zc(X, W, m0):
-    v = (X.double() - m0) @ W
-    return torch.complex(v[:, 0], v[:, 1])
-
-
-def best_freq(spec, kind):
-    """Strongest frequency whose rotation is invertible: coprime to 12 (mult) or any (add)."""
-    ok = [f for f in spec if (math.gcd(f, 12) == 1 if kind == "mult" else True)]
-    return max(ok, key=lambda f: spec[f])
-
-
 SLOTS = {  # (mode, slot) -> (label dimension, expected sign of the label's step in its operand)
     ("mul", "u1"): ("mass", +1), ("mul", "u2"): ("acc", +1),
     ("div", "u1"): ("force", +1), ("div", "u2"): ("mass", +1),
@@ -201,95 +173,150 @@ def true_table():
     """Label parameters of the ACTIVE label set (set by run_unitcalc.load)."""
     return {"mass": U.MASS_LOG, "acc": U.ACC_LOG, "force": U.FORCE_LOG,
             "acc_out": U.ACC_LOG[:U.N_ACC_OUT], "temp": U.TEMP_OFF}
-GROUP_ORDER = {"mult": 12, "add": P}
-LABEL_SITES = ("L1:val", "L2:val", "L2:query", "L3:query")
-PRIMARY_SITE = "L2:query"      # the MLP input: before the calculator
-
-
 def kind_of(dim):
     return "add" if dim == "temp" else "mult"
 
 
-def slot_vectors(S, lat, slot, site):
-    """Activation at `site` for the operand that `slot` labels (role-aligned)."""
+# ------------------------------------------------------------------ A3 algorithm comparison (core)
+K_DAS, DAS_STEPS, DAS_LR, N_PAIRS = 16, 400, 1e-2, 8192
+ALGO_SITES = ("L0:val", "L1:val", "L1:lab", "L1:query", "L2:query")
+VARS = ("canon", "value", "label")
+
+
+def pairs(lat, seed):
+    """Source for each base question: a random question of the same mode and word order."""
+    g = torch.Generator().manual_seed(seed)
+    src = torch.empty_like(lat["mode"])
+    key = lat["mode"] * 2 + lat["order"]
+    for k_ in key.unique():
+        idx = (key == k_).nonzero().squeeze(1)
+        src[idx] = idx[torch.randperm(len(idx), generator=g)]
+    return subset(lat, src)
+
+
+def counterfactual(base, src, slot, var):
+    """Answer of the base question when, for operand `slot`, only `var` comes from the source:
+    canon = the converted quantity (value under its label); value = raw value (base label);
+    label = label (base value)."""
+    if var in ("value", "label"):
+        cf = dict(base)
+        key = VALUE_OF[slot] if var == "value" else slot
+        cf[key] = src[key]
+        return U.build(cf).y
+    qb, qs = quantities(base), quantities(src)
+    op1 = qs["op1 canonical"] if slot == "u1" else qb["op1 canonical"]
+    op2 = qs["op2 canonical"] if slot == "u2" else qb["op2 canonical"]
+    p_ = U._params(False)
+    mode = base["mode"]
+    y = torch.zeros_like(mode)
+    y = torch.where(mode == 0, op1 * op2 * U.INV[p_["force"][base["uo"]]] % P, y)
+    y = torch.where(mode == 1, op1 * U.INV[op2] * U.INV[p_["acc"][base["uo"]]] % P, y)
+    y = torch.where(mode == 2, (op1 + op2) * U.INV[p_["mass"][base["uo"]]] % P, y)
+    y = torch.where(mode == 3, (op1 + op2 - p_["temp"][base["uo"]]) % P, y)
+    return y
+
+
+def site_position(lat, slot, site):
     pos = role_pos(lat)
-    ar = torch.arange(len(lat["mode"]))
+    if site.endswith(":val"):
+        return pos["op1_val" if slot == "u1" else "op2_val"]
+    if site.endswith(":lab"):
+        return pos["op1_lab" if slot == "u1" else "op2_lab"]
+    return torch.full_like(lat["mode"], 7)
+
+
+def patched_logits(m, xb, xs, site, posb, Q, block=None):
+    """Swap span(Q) of the source activation into the base at `site`, then run to the output.
+    xb/xs: the stage activations (L0 or L1 residual streams, or h for L2:query)."""
+    ar = torch.arange(len(posb))
     if site == "L2:query":
-        return S["h"]
-    if site == "L3:query":
-        return S["r"]
-    L, _ = site.split(":")
-    return S[L][ar, pos["op1_val" if slot == "u1" else "op2_val"]]
+        hb = xb + (xs - xb) @ Q @ Q.T
+        return m.head_from_resid(hb)
+    x = xb.clone()
+    vb, vs = xb[ar, posb], xs[ar, posb]
+    x[ar, posb] = vb + (vs - vb) @ Q @ Q.T
+    if site.startswith("L0"):
+        x = x + m.attn1(x)
+    x = x + m.attn2(x)
+    return m.head_from_resid(x[:, -1])
 
 
-def value_plane(m, fit, mode, slot, site, kind):
-    """Plane in which the operand's RAW VALUE class means lie on a character circle (value
-    angles come from number theory: discrete log or the value itself; no unit table used).
-    Frequency: the strongest invertible one in the value spectrum at that site."""
-    mi = U.MODES.index(mode)
-    sel = fit["mode"] == mi
-    if mode == "mul" and slot == "u2":
-        sel = sel & ~torch.tensor(U.ACC_INVERSE)[fit["u2"]]       # direct labels define the circle
-    lat = subset(fit, sel)
-    X = slot_vectors(sites(m, U.build(lat).tokens), lat, slot, site)
-    y = lat[VALUE_OF[slot]]
-    spec = spectrum(class_means(X, y), kind)
-    f = best_freq(spec, kind)
-    return f, spec[f], plane(X, y, kind, f)
+def stage(m, tok, site):
+    z = torch.zeros_like(tok)
+    x0 = m.embed(tok, z)
+    if site.startswith("L0"):
+        return x0
+    x1 = x0 + m.attn1(x0)
+    if site.startswith("L1"):
+        return x1
+    return (x1 + m.attn2(x1))[:, -1]
 
 
-@torch.no_grad()
-def recover_slot(m, mode, slot, site, fit, ev, kind):
-    """Swap ONLY the label in `slot` from the reference label 0 to each other label and
-    measure the rotation of the operand's value-plane coordinate at `site`."""
-    mi = U.MODES.index(mode)
-    f, conc, (W, m0) = value_plane(m, fit, mode, slot, site, kind)
-    order = GROUP_ORDER[kind]
-    base = subset(ev, (ev["mode"] == mi) & (ev[slot] == 0))
-    if kind == "mult":
-        base = subset(base, base[VALUE_OF[slot]] != 0)
-    z0 = zc(slot_vectors(sites(m, U.build(base).tokens), base, slot, site), W, m0)
+def das_iia(m, base_f, src_f, base_e, src_e, slot, site, var, seed, dims=None):
+    """Learn a K_DAS-dim orthogonal subspace (inside `dims` if given) on fit pairs; IIA on
+    reserved pairs where the counterfactual differs from the base answer."""
+    d = m.d
+    with torch.no_grad():
+        xb_f, xs_f = stage(m, U.build(base_f).tokens, site), stage(m, U.build(src_f).tokens, site)
+        xb_e, xs_e = stage(m, U.build(base_e).tokens, site), stage(m, U.build(src_e).tokens, site)
+    pf, pe = site_position(base_f, slot, site), site_position(base_e, slot, site)
+    yf, ye = counterfactual(base_f, src_f, slot, var), counterfactual(base_e, src_e, slot, var)
+    y0e = U.build(base_e).y
+    torch.manual_seed(seed)
+    width = d if dims is None else len(dims)
+    rot = torch.nn.utils.parametrizations.orthogonal(torch.nn.Linear(width, K_DAS, bias=False))
+    embed_dims = torch.eye(d)[:, dims] if dims is not None else torch.eye(d)
+    opt = torch.optim.Adam(rot.parameters(), lr=DAS_LR)
+    for p_ in m.parameters():
+        p_.requires_grad_(False)
+    g = torch.Generator().manual_seed(seed)
+    for _ in range(DAS_STEPS):
+        i = torch.randint(0, len(yf), (1024,), generator=g)
+        Q = embed_dims @ rot.weight.T
+        loss = F.cross_entropy(patched_logits(m, xb_f[i], xs_f[i], site, pf[i], Q), yf[i])
+        opt.zero_grad()
+        loss.backward()
+        opt.step()
+    for p_ in m.parameters():
+        p_.requires_grad_(True)
+    with torch.no_grad():
+        Q = embed_dims @ rot.weight.T
+        pred = patched_logits(m, xb_e, xs_e, site, pe, Q).argmax(-1)
+        elig = ye != y0e
+        # random-subspace baseline of the same size
+        Rq, _ = torch.linalg.qr(torch.randn(width, K_DAS, generator=torch.Generator().manual_seed(seed + 1)))
+        pred_r = patched_logits(m, xb_e, xs_e, site, pe, embed_dims @ Rq).argmax(-1)
+    return dict(iia=(pred == ye)[elig].float().mean().item(),
+                unchanged=(pred == y0e)[elig].float().mean().item(),
+                random_iia=(pred_r == ye)[elig].float().mean().item(), n=int(elig.sum()))
+
+
+def algorithm(m, fit, ev, arm):
+    """A3 for every mode x operand slot x site x variable."""
     out = {}
-    for u in range(1, U.NL):
-        sw = dict(base)
-        sw[slot] = torch.full_like(base[slot], u)
-        keep = ~U.is_held(sw)
-        if keep.sum() < 20:
-            continue
-        swk = subset(sw, keep)
-        z1 = zc(slot_vectors(sites(m, U.build(swk).tokens), swk, slot, site), W, m0)
-        ratio = z1 / z0[keep]
-        ratio = ratio / ratio.abs().clamp_min(1e-9)
-        ks = (0, -2) if (mode == "mul" and slot == "u2") else (0,)
-        lv = torch.tensor([U.LOG.get(int(x), 0) for x in base[VALUE_OF[slot]][keep]], dtype=torch.double)
-        best = None
-        for k in ks:   # inverse labels: the value's own phase flips -> value-dependent rotation
-            c = (ratio * torch.exp(-1j * 2 * math.pi * f * k * lv / 12)).mean()
-            if best is None or c.abs() > best[1].abs():
-                best = (k, c)
-        k_hat, c = best
-        steps = torch.angle(c).item() * order / (2 * math.pi)
-        step = round(steps) * pow(f, -1, order) % order
-        out[u] = dict(step=int(step), raw=steps, coherence=c.abs().item(), inverse=k_hat == -2)
-    return dict(freq=f, value_conc=conc, rec=out)
+    for mi, mode in enumerate(U.MODES):
+        bf = subset(fit, fit["mode"] == mi)
+        be = subset(ev, ev["mode"] == mi)
+        bf, be = subset(bf, torch.arange(min(N_PAIRS, len(bf["mode"])))), subset(be, torch.arange(min(N_PAIRS, len(be["mode"]))))
+        sf, se = pairs(bf, 41), pairs(be, 42)
+        for slot in ("u1", "u2"):
+            for site in ALGO_SITES:
+                r = {var: das_iia(m, bf, sf, be, se, slot, site, var, seed=100 + mi * 10 + (slot == "u2"))
+                     for var in VARS}
+                r["route_index"] = min(r["value"]["iia"], r["label"]["iia"])
+                out[f"{mode}:{slot}:{site}"] = r
+    if arm == "declared":   # positive control: the declared canonical-mass block (mul mode)
+        mi = 0
+        bf, be = subset(fit, fit["mode"] == mi), subset(ev, ev["mode"] == mi)
+        bf, be = subset(bf, torch.arange(min(N_PAIRS, len(bf["mode"])))), subset(be, torch.arange(min(N_PAIRS, len(be["mode"]))))
+        sf, se = pairs(bf, 41), pairs(be, 42)
+        blk = list(range(*R.BLOCKS["M"]))
+        r = {var: das_iia(m, bf, sf, be, se, "u1", "L2:query", var, seed=7, dims=blk) for var in VARS}
+        r["route_index"] = min(r["value"]["iia"], r["label"]["iia"])
+        out["control:declared_block_M"] = r
+    return out
 
 
-def score_table(rec, dim, sign):
-    true = true_table()[dim]
-    order = 12 if dim != "temp" else P
-    res = []
-    for u, r in rec.items():
-        t = (sign * (true[u] - true[0])) % order
-        if dim == "acc" and U.ACC_INVERSE[u]:
-            t = (sign * (true[u] - true[0])) % order    # constant part; direction scored separately
-        err = min((r["step"] - t) % order, (t - r["step"]) % order)
-        res.append(dict(label=u, true=int(t), recovered=r["step"], exact=err == 0, circ_err=err,
-                        coherence=r["coherence"], inverse_recovered=r["inverse"],
-                        inverse_true=bool(dim == "acc" and U.ACC_INVERSE[u])))
-    return res
-
-
-# ------------------------------------------------------------------ A6b embedding-row edit
 def row_edit(m, mode, slot, u, target_step, fit, ev, steps=300, lr=0.05):
     """Give label `u` (in `slot` of `mode`) the parameter true[u] + target_step by changing ONLY
     its embedding row. Fit on fit questions; score on reserved questions with that label."""
@@ -306,8 +333,7 @@ def row_edit(m, mode, slot, u, target_step, fit, ev, steps=300, lr=0.05):
     new = (true + target_step) % order
     f_lat = subset(fit, (fit["mode"] == mi) & (fit[slot] == u))
     e_lat = subset(ev, (ev["mode"] == mi) & (ev[slot] == u))
-    y_new_f, y_new_e = answers(f_lat, new), answers(e_lat, new)
-    y_old_e = U.build(e_lat).y
+    y_new_f = answers(f_lat, new)
     E = m.E_c.weight
     row = E[tok_id].detach().clone().requires_grad_(True)
     opt = torch.optim.Adam([row], lr=lr)
@@ -389,59 +415,33 @@ def analyse(run):
         Sf, Se = sites(m, U.build(fit).tokens), sites(m, U.build(ev).tokens)
         Vf, Ve = site_vectors(Sf, fit), site_vectors(Se, ev)
         Qf, Qe = quantities(fit), quantities(ev)
-        pred_f = m.head_from_resid(Sf["h"]).argmax(-1)
         # A1 readability
         out["probe"] = {}
         for mi, mode in enumerate(U.MODES):
             sf, se = fit["mode"] == mi, ev["mode"] == mi
             out["probe"][mode] = {s: {q: probe(Vf[s][sf], Qf[q][sf], Ve[s][se], Qe[q][se]) for q in Qf}
                                   for s in Vf}
-        # A2 geometry (calculator intermediate, true classes) and fitted planes (predicted answers)
+        # A2 geometry: calculator intermediate and answer, before and after the MLP
         out["geometry"] = {}
         for mi, mode in enumerate(U.MODES):
             sf = fit["mode"] == mi
             g = {}
             for site in ("L1:query", "L2:query", "L3:query"):
                 X = Vf[site][sf]
-                spec_m = spectrum(class_means(X, Qf["calculator"][sf]), "mult")
-                spec_a = spectrum(class_means(X, Qf["calculator"][sf]), "add")
-                g[site] = dict(mult=spec_m, add=spec_a, mult_top2=top2(spec_m), add_top2=top2(spec_a))
+                for q in ("calculator", "answer"):
+                    sm = spectrum(class_means(X, Qf[q][sf]), "mult")
+                    sa = spectrum(class_means(X, Qf[q][sf]), "add")
+                    g[f"{site}|{q}"] = dict(mult=sm, add=sa, mult_top2=top2(sm), add_top2=top2(sa))
             out["geometry"][mode] = g
-        # A3 label tables: rotation of each operand's value circle when its label is swapped
-        out["labels"] = {}
-        for (mode, slot), (dim, sign) in SLOTS.items():
-            kind = kind_of(dim)
-            out["labels"][f"{mode}:{slot}"] = {}
-            for site in LABEL_SITES:
-                r = recover_slot(m, mode, slot, site, fit, ev, kind)
-                out["labels"][f"{mode}:{slot}"][site] = dict(
-                    dim=dim, sign=sign, kind=kind, freq=r["freq"], value_conc=r["value_conc"],
-                    rows=score_table(r["rec"], dim, sign))
-        # A4 composition: held-out label pairs; agreement with the recovered-table answers
+        # A4 composition: held-out label pairs
         Sh = sites(m, U.build(held).tokens)
         pred_h = m.head_from_resid(Sh["h"]).argmax(-1)
         y_h = U.build(held).y
-        out["held"] = {mode: dict(acc=(pred_h == y_h)[held["mode"] == mi].float().mean().item())
+        out["held"] = {mode: (pred_h == y_h)[held["mode"] == mi].float().mean().item()
                        for mi, mode in enumerate(U.MODES)}
-        tables = recovered_tables({k: v[PRIMARY_SITE] for k, v in out["labels"].items()})
-        for mi, mode in enumerate(U.MODES):
-            if mode == "msum":
-                continue
-            sel = held["mode"] == mi
-            y_tab = table_answers(subset(held, sel), mode, tables)
-            if y_tab is not None:
-                out["held"][mode]["agree_recovered_table"] = (pred_h[sel] == y_tab).float().mean().item()
-                out["held"][mode]["recovered_table_correct"] = (y_tab == y_h[sel]).float().mean().item()
-        # A5 convert-first: canonical operand readability at the operand label / value sites
-        out["convert_first"] = {mode: {s: out["probe"][mode][s]["op1 canonical"]
-                                       for s in ("L1:op1_lab", "L2:op1_lab", "L1:op1_val", "L2:op1_val", "L2:query")}
-                                for mode in ("mul", "msum")}
-        # A6a map-guided relabel at h (mul mass labels; tsum temp labels)
-        out["relabel"] = {}
-        for mode, slot in (("mul", "u1"), ("mul", "u2"), ("div", "u1"), ("tsum", "u1")):
-            out["relabel"][f"{mode}:{slot}"] = relabel(m, mode, slot, fit, ev,
-                                                       out["labels"][f"{mode}:{slot}"][PRIMARY_SITE])
-    # A6b one-row embedding edits: a NEW meaning (a parameter no label in the dimension has)
+    # A3 algorithm comparison (core)
+    out["algorithm"] = algorithm(m, fit, ev, cfg["arm"])
+    # A5 one-row embedding edits: a NEW meaning (a parameter no label in the dimension has)
     out["row_edit"] = {}
     if cfg["arm"] != "meaningless":
         for mode, slot, u in (("mul", "u1", 1), ("mul", "u2", 1), ("tsum", "u1", 1)):
@@ -456,102 +456,6 @@ def analyse(run):
                 novel=row_edit(m, mode, slot, u, novel, fit, ev),
                 copy_existing=copy_row(m, mode, slot, u, existing, fit, ev))
     return out
-
-
-def recovered_tables(labels):
-    t = {}
-    for key, v in labels.items():
-        t[key] = {0: 0, **{r["label"]: r["recovered"] for r in v["rows"]}}
-        t[key + ":inv"] = {0: False, **{r["label"]: r["inverse_recovered"] for r in v["rows"]}}
-    return t
-
-
-def table_answers(lat, mode, T):
-    """Answers implied by the recovered steps (reference label 0 has the true parameter)."""
-    if mode == "mul":
-        lm = torch.tensor([T["mul:u1"][int(u)] for u in lat["u1"]]) + U.MASS_LOG[0]
-        la = torch.tensor([T["mul:u2"][int(u)] for u in lat["u2"]]) + U.ACC_LOG[0]
-        lo = -torch.tensor([U.FORCE_LOG[int(u)] - U.FORCE_LOG[0] for u in lat["uo"]])  # output: true
-        inv = torch.tensor([T["mul:u2:inv"][int(u)] for u in lat["u2"]])
-        M = lat["x1"] * U.scale(lm.tolist()) % P
-        A = torch.where(inv, U.scale(la.tolist()) * U.INV[lat["x2"]], lat["x2"] * U.scale(la.tolist())) % P
-        return M * A * U.scale(lo.tolist()) * pow(pow(2, U.FORCE_LOG[0], P), -1, P) % P
-    if mode == "div":
-        lf = torch.tensor([T["div:u1"][int(u)] for u in lat["u1"]]) + U.FORCE_LOG[0]
-        lmn = -torch.tensor([T["div:u2"][int(u)] for u in lat["u2"]])    # divisor: opposite sign
-        lo = -torch.tensor([U.ACC_LOG[int(u)] - U.ACC_LOG[0] for u in lat["uo"]])     # output: true
-        return (lat["x1"] * U.scale(lf.tolist()) * U.INV[lat["x2"]] * U.scale(lmn.tolist())
-                * pow(pow(2, U.MASS_LOG[0], P), -1, P) * U.scale(lo.tolist())
-                * pow(pow(2, U.ACC_LOG[0], P), -1, P)) % P
-    if mode == "tsum":
-        c1 = torch.tensor([T["tsum:u1"][int(u)] for u in lat["u1"]]) + U.TEMP_OFF[0]
-        c2 = torch.tensor([T["tsum:u2"][int(u)] for u in lat["u2"]]) + U.TEMP_OFF[0]
-        co = -torch.tensor([U.TEMP_OFF[int(u)] for u in lat["uo"]])                    # output: true
-        return (lat["x1"] + c1 + lat["x2"] + c2 + co) % P
-    return None
-
-
-@torch.no_grad()
-def relabel(m, mode, slot, fit, ev, lab):
-    """Map-guided relabel at the MLP input: for questions with reference label 0 in `slot`,
-    rotate the operand's value-circle coordinates (every frequency of that character family)
-    by the RECOVERED step of label u; compare with the real relabelled question."""
-    mi = U.MODES.index(mode)
-    dim, _ = SLOTS[(mode, slot)]
-    kind = kind_of(dim)
-    order = GROUP_ORDER[kind]
-    base = subset(ev, (ev["mode"] == mi) & (ev[slot] == 0))
-    if kind == "mult":
-        base = subset(base, base[VALUE_OF[slot]] != 0)
-    hb = R.encode(m, U.build(base).tokens)
-    planes = {}
-    for ff in range(1, order // 2 + 1):
-        if kind == "mult" and ff == 6:
-            continue
-        lat_f = subset(fit, fit["mode"] == mi)
-        X = R.encode(m, U.build(lat_f).tokens)
-        planes[ff] = plane(X, lat_f[VALUE_OF[slot]], kind, ff)
-    res = {}
-    for r in lab["rows"]:
-        u = r["label"]
-        if r["inverse_true"]:
-            continue
-        sw = dict(base)
-        sw[slot] = torch.full_like(base[slot], u)
-        keep = ~U.is_held(sw)
-        if keep.sum() < 20:
-            continue
-        sw = subset(sw, keep)
-        hk = hb[keep]
-        y_new, y_old = U.build(sw).y, U.build(subset(base, keep)).y
-        elig = y_new != y_old
-        hp = hk.double()
-        for ff, (Wf, mf) in planes.items():
-            z = zc(hk, Wf, mf)
-            ang = 2 * math.pi * ff * r["recovered"] / order
-            dz = z * (complex(math.cos(ang), math.sin(ang)) - 1)
-            hp = hp + torch.stack([dz.real, dz.imag], 1) @ torch.linalg.pinv(Wf)
-        pred_rot = m.head_from_resid(hp.float()).argmax(-1)
-        pred_copy = m.head_from_resid(R.encode(m, U.build(sw).tokens)).argmax(-1)
-        res[u] = dict(n=int(elig.sum()),
-                      rotate=dict(intended=(pred_rot == y_new)[elig].float().mean().item(),
-                                  unchanged=(pred_rot == y_old)[elig].float().mean().item()),
-                      copy=dict(intended=(pred_copy == y_new)[elig].float().mean().item()))
-    return res
-
-
-_PLANES = {}
-
-
-def plane_cache(m, mode, kind, f):
-    key = (id(m), mode, kind, f)
-    if key not in _PLANES:
-        fit = draw(N, FIT_S, "fit")
-        sel = fit["mode"] == U.MODES.index(mode)
-        h = R.encode(m, U.build(subset(fit, sel)).tokens)
-        pred = m.head_from_resid(h).argmax(-1)
-        _PLANES[key] = plane(h, pred, kind, f)
-    return _PLANES[key]
 
 
 @torch.no_grad()
