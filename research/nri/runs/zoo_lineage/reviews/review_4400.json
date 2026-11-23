@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 4400: acc 1.000 (+0.000), ood 0.646 (+0.006), iia 0.941 (+0.000), edit 0.962 (-0.011), inter 0.392 (-0.003), A_L1 0.289 (-0.003); largest update attn2.qkv.weight 0.002; MLP match {'stable': 254, 'new': 2}.",
+ "hypothesis": "Frozen: editability -0.011 (0.973 -> 0.962) is the largest move, with weight updates <= 0.002; the pooled edit's evaluation uses a FIT-fitted affine map, so +-0.01 moves at this weight scale reflect near-boundary edited answers, the same mechanism as the OOD jitter.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Is the pooled-edit jitter (+-0.01) also a margin effect? (Expected yes; not worth a separate test.)",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

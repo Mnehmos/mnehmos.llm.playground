@@ -1,0 +1,11 @@
+{
+ "what_changed": "Small regression in everything at once: accuracy 0.995 -> 0.964, OOD_DEV 0.68 -> 0.64, IIA 0.90 -> 0.88, pooled edit 0.89 -> 0.82, copy 0.99 -> 0.96; mass in the block fell back to partial causal support (M@block weakening). Largest update moved to attn1.qkv.bias (0.13). Interaction 0.39 -> 0.36. Neuron identities still stable (237).",
+ "hypothesis": "An ordinary training loss spike (edge-of-stability style, learning rate ~1.9e-3), not reorganisation: everything degrades together and identities stay stable. Prediction: recovery to >= 0.99 accuracy within 200 steps. Because A = B here, this is a baseline for how often unedited training spikes in this window, which matters for attributing post-edit collapses (doc 27).",
+ "evidence": "Observation: simultaneous small drops in all metrics with neuron identities stable (237) suggest a uniform disturbance; the attn1 bias update is unusual for a settled network. No causal test needed beyond the routine audit. (Not done: the step-1,500 'unit-specific placement' experiment, deferred until the network is stable again.)",
+ "key_question": "Does the network return to the same organisation after the spike (attractor, as in doc 27), and does editability recover fully?",
+ "best_experiment": "Compare pooled edit, interaction and head anatomy at 1,700-1,800 against 1,500.",
+ "intervene": "no",
+ "intervention_rationale": "Editing during a spike would compound instability (doc 27) and confound attribution.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

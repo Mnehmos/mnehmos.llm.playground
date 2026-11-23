@@ -1,0 +1,11 @@
+{
+ "what_changed": "Output distribution diversified (predictions now spread over 0, 5, 12, 3, 7 instead of mostly 8): accuracy 0.267 (+0.017). Equivalence geometry in the block is eroding: equivalent-pair cosine 0.975 -> 0.943 (different masses 0.840). Mass decodable in the block rising slowly (kappa 0.19 -> 0.22); attn2.qkv and attn2.o now among the largest updates.",
+ "hypothesis": "The network has started to move off the zero-plus-constant solution by spreading its nonzero answers, but not yet by using mass: the block's early shared (unit-invariant) geometry is being dissolved before a causal code exists, i.e. symmetry breaking happens first in the readout/answer distribution.",
+ "evidence": "Observation: prediction histogram changed; all candidate-function agreements stay within ~0.02 of the zero-plus-chance baseline (F 0.267, acc-unit-ignored 0.268, log mod 4 0.264 vs 0.25) -> no specific function yet. Causal: block IIA 0.167, layer-1 0.096, heads 0.07 (none used).",
+ "key_question": "Which candidate function will rise above baseline first, and does the shared block geometry need to dissolve before the causal mass code can form?",
+ "best_experiment": "Continue predictions + matched-panel tracking; when any agreement exceeds the 0.25 baseline by >= 0.05, run the head anatomy to locate the first causal writer.",
+ "intervene": "no",
+ "intervention_rationale": "Still early phase with no causal code; the change is in the answer distribution, which an edit would only perturb.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

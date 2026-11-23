@@ -1,0 +1,10 @@
+{"primitive": "restricted_gradient_update",
+ "scope": ["attn1.qkv.weight", "attn1.o.weight", "attn2.qkv.weight", "attn2.o.weight", "W_in.weight", "W_out.weight"],
+ "target_claim": "interaction",
+ "objective": {"interaction": 2.0, "kl": 30.0, "iit": 1.0, "noise_kl": 10.0, "route_keep": 5.0},
+ "steps": 300, "lr": 0.001, "l2": 3.0, "max_rel_model": 0.02,
+ "rationale": "Test whether the block's remaining mass x route interaction (0.39) is removable without cost at maturity in this canonical-like network.",
+ "mechanism": "Jointly adjust the mass writers (attn2) and their inputs (attn1) and the readout so that the unit-specific parts of the mass code shrink, keeping predictions (KL), causal sufficiency (IIT), off-manifold behaviour (noise KL) and route information (frozen route probe).",
+ "predicted": "interaction -0.05 or more; editability not lower; ID accuracy unchanged; OOD_DEV change within +-0.01.",
+ "falsification": "If OOD_DEV falls by more than 0.01 for an interaction cut, the remaining interaction carries generalisation-relevant information (as in seed 700).",
+ "collateral_risk": "OOD loss; post-edit optimizer instability (doc 27)."}

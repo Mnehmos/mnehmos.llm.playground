@@ -1,0 +1,37 @@
+{
+ "step": 2000,
+ "cum_rel_norm": 0.06893217978870579,
+ "installed": [
+  {
+   "step": 1100,
+   "module": "loop_edits/step_1100_organize.py",
+   "target": "unit_transfer",
+   "rel_norm_model": 0.013477041840341241
+  },
+  {
+   "step": 1500,
+   "module": "loop_edits/step_1500_editable.py",
+   "target": "edit_inv",
+   "rel_norm_model": 0.02352523373607327
+  },
+  {
+   "step": 1800,
+   "module": "loop_edits/step_1800_auto.py",
+   "target": "edit_inv",
+   "rel_norm_model": 0.020018390376259583
+  },
+  {
+   "step": 1900,
+   "module": "loop_edits/step_1900_auto.py",
+   "target": "edit_inv",
+   "rel_norm_model": 0.011911513836031689
+  }
+ ],
+ "diverged_at": 1200,
+ "ledger": {
+  "train_cpu_s": 146.492815844,
+  "observe_cpu_s": 44.761460855,
+  "gate_cpu_s": 5.307905700000006,
+  "design_cpu_s": 367.435888708
+ }
+}

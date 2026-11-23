@@ -1,0 +1,11 @@
+{
+ "what_changed": "No meaningful change: OOD_DEV 0.662 (identical to 2,500), editability 0.950, IIA 0.939, interaction 0.395 -> 0.378; attn1.qkv.bias again the largest update (0.053), the third time in five checkpoints.",
+ "hypothesis": "attn1 query/key/value biases are the main locus of post-convergence motion; because biases shift the layer-1 binding uniformly for all inputs, they are a plausible carrier of the held-out (mass-combination) oscillation while leaving the ID organisation intact.",
+ "evidence": "Observation: attn1.qkv.bias among the top updates at 1,600, 2,400, 2,600 (and attn2.qkv.bias at 1,900, 2,400). Correlational; untested causally (a bias-only ablation would need a new tool).",
+ "key_question": "Is the held-out oscillation carried by the attention biases?",
+ "best_experiment": "Post hoc on stored snapshots (no new training): swap the attn1.qkv.bias of a low-OOD checkpoint (2,000) into a high-OOD one (1,800) and measure OOD_DEV; if OOD follows the bias, biases carry it. Deferred to the report analysis.",
+ "intervene": "no",
+ "intervention_rationale": "Stable; no addressable defect.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

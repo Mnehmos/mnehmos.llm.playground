@@ -1,0 +1,11 @@
+{
+ "what_changed": "OOD_DEV rebounded 0.584 -> 0.666 (the converged mean); editability 0.955; weight motion very small (<= 0.019).",
+ "hypothesis": "CONFIRMED: the 2,800 dip was noise around the converged mean (step-2,800 revision), not a trade-off event. The network is in a stationary phase: features, editability and organisation fixed; only held-out behaviour jitters.",
+ "evidence": "Observation: OOD_DEV returned to 0.666 within one checkpoint (2.2 sd swing); all organisational metrics within their converged bands.",
+ "key_question": "Anything new expected before the end of training? The learning rate is now decaying (OneCycle), which should shrink the jitter; a falling OOD_DEV variance would support the noise interpretation.",
+ "best_experiment": "Compare OOD_DEV sd over 3,000-4,500 and 4,500-6,000 with 1,500-2,900 (prediction: decreasing).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary phase; no defect addressable by registered primitives.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

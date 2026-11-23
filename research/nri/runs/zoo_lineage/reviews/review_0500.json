@@ -1,0 +1,11 @@
+{
+ "what_changed": "Plateau continues (acc 0.254, IIA 0.159). Group-gradient conflict has disappeared: all mass-unit pairs agree +0.31 to +0.51 in every tensor group. Interaction share 0.36 -> 0.40; mass-unit identity consolidated in the block (mu@block). Pooled edit and copy both 0.10 (chance-like).",
+ "hypothesis": "The lineage engine's head 'relocations' since step 100 are matching artifacts: layer-1 heads 1 and 3 have near-identical role-attention signatures, so the Hungarian assignment swaps them while still reporting 'confident' (cosine >= 0.8) matches. The registered confidence rule lacks a margin criterion.",
+ "evidence": "Level 2 (feature records): B-he-0002 alternates attn1.h1 / attn1.h3 at steps 0-500 with match cosines 0.977-0.998, all labelled 'confident'; B-he-0006 alternates attn1.h1/h2/h3 (0.92-0.99). Same swaps in A. This is a property of the matcher, not of the network.",
+ "key_question": "How much of the lineage-event stream is matching ambiguity rather than real change, and how should it be reported?",
+ "best_experiment": "Post hoc (report, disclosed): for every head/cluster match compute the best-vs-second-best similarity margin from stored evidence; flag matches with margin < 0.05 as ambiguous and exclude their relocation events from claims. The registered matcher keeps running unchanged so records stay consistent.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase; no causal code. The finding concerns the measuring instrument, not the network.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

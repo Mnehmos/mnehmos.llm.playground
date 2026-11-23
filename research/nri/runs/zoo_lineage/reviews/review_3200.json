@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary: changes <= 0.009 in every metric; weight motion <= 0.009 (smallest yet); 255/256 MLP identities stable. Acceleration layer-1 interchange 0.290 (no late rise).",
+ "hypothesis": "Unlike seed 700 (acceleration first causal at 3,200 via its tokens), seed 701's acceleration stays sub-threshold; with the learning rate decaying and weights nearly frozen, it is unlikely to cross 0.5 before 6,000. Prediction: acceleration layer-1 interchange stays < 0.35 to the end.",
+ "evidence": "Observation: acceleration interchange 0.30, 0.30, 0.29 over 3,000-3,200 with update norms falling below 0.01. Cross-seed contrast (correlational).",
+ "key_question": "Does the frozen state persist to 6,000 (the comparison would then be A = B with no edits), or will the low-learning-rate phase produce late changes?",
+ "best_experiment": "Routine; Level-2 re-check of the OOD locus and head anatomy at 4,000 to confirm nothing moves under the frozen surface.",
+ "intervene": "no",
+ "intervention_rationale": "Stationary; nothing to repair with the registered primitives.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

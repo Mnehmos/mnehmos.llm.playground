@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 3300: acc 1.000 (+0.000), ood 0.669 (-0.007), iia 0.941 (+0.000), edit 0.962 (+0.007), inter 0.388 (-0.005), A_L1 0.286 (-0.004); largest update W_in.weight 0.007; MLP match {'stable': 255, 'new': 1}.",
+ "hypothesis": "Frozen phase confirmed (updates <= 0.007); prediction from 3,200 holds (acceleration L1 interchange 0.286 < 0.35). The OOD_DEV jitter is shrinking with the learning rate (|change| 0.003-0.015 over 3,000-3,300 vs up to 0.08 before), supporting the noise interpretation.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Will OOD_DEV variance keep shrinking as the learning rate decays?",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

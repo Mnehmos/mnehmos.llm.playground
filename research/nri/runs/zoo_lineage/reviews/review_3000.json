@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary: all metrics within 0.004 of 2,900 (OOD_DEV 0.669, editability 0.959, IIA 0.940, interaction 0.393); weight updates at their smallest (<= 0.016); 253 stable identities, none relocated.",
+ "hypothesis": "Organisation is fixed for the rest of training; the decaying learning rate (OneCycle) is now shrinking both weight motion and held-out jitter (prediction from 2,900 starting to hold).",
+ "evidence": "Observation: max relative update fell from 0.05-0.10 (2,400-2,800) to 0.016; OOD_DEV moved 0.003.",
+ "key_question": "Is there any remaining development worth tracking (e.g. acceleration becoming causal late, as in seed 700 at 3,200)?",
+ "best_experiment": "Check acceleration's layer-1 interchange (A at its tokens) at 3,100-3,300 via the routine packet; compare with seed 700's late emergence.",
+ "intervene": "no",
+ "intervention_rationale": "Stationary; no defect addressable by registered primitives.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

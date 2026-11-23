@@ -1,0 +1,11 @@
+{
+ "what_changed": "accuracy 0.82 -> 0.92, OOD_DEV 0.42 -> 0.57 (the gap narrows 0.40 -> 0.35), block IIA 0.68 -> 0.82, pooled persistent inversion edit 0.58 -> 0.77, copy 0.93, interaction 0.36 -> 0.39; first fully causally supported neuron cluster (B-ne-0085); MLP identities settled (219 stable, 3 relocated). Equivalent inputs now get the same answer 0.94 at 0.92 accuracy.",
+ "hypothesis": "Seed 701 is forming a canonical-like, highly editable mass organisation (PR #21's seed-600 regime) rather than seed 700's route-dependent one; the deciding factor is that the two writer heads' unit-specific parts cancel in the block (block interaction 0.39 vs 0.67-0.77 per head). Prediction: pooled edit stays >= 0.7 to the end without intervention.",
+ "evidence": "Causal (OBS): block IIA 0.82, copy 0.93, pooled persistent edit 0.77 (seed 700 at maturity: about 0.12). Correlational: equivalent-pair block cosine 0.945 vs different-mass 0.213. The step-400 caution about the equivalence metric no longer applies, since accuracy is high.",
+ "key_question": "Is there any organisational defect worth repairing, or only the generalisation gap, which is upstream and outside the registered primitives' reach?",
+ "best_experiment": "Keep monitoring pooled edit, interaction and the OOD gap; if the gap stops narrowing while ID saturates, re-run ood_locus to see whether the upstream share of the failure changes.",
+ "intervene": "no",
+ "intervention_rationale": "No defect in organisation or editability; the remaining weakness (held-out combinations) was diagnosed at layer-1 binding (step 1,300), which no registered primitive targets. A gratuitous edit risks the post-edit instability documented in doc 27.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

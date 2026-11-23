@@ -1,0 +1,11 @@
+{
+ "what_changed": "Steady: OOD_DEV 0.692 (+0.024), editability 0.941, IIA 0.934; interaction fell back 0.410 -> 0.388; largest updates are attention BIASES (attn1.qkv.bias 0.046, attn2.qkv.bias 0.041); 251 stable identities.",
+ "hypothesis": "The post-convergence interaction also oscillates (it reversed); combined with OOD_DEV oscillation, the network is wandering within a flat region of solutions with the same ID organisation. Bias updates dominating suggests the wandering is along low-cost directions (offsets) rather than feature directions.",
+ "evidence": "Observation: interaction 0.355-0.410 band; OOD_DEV 0.625-0.73 band; updates concentrated in biases. Correlational.",
+ "key_question": "Do the OOD-relevant changes live in these offset (bias) directions? (Check at 2,500 with the OOD locus.)",
+ "best_experiment": "ood_locus at 2,500, compared with 1,300 and 1,700.",
+ "intervene": "no",
+ "intervention_rationale": "Stable network; no defect addressable by registered primitives.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

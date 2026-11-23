@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 4100: acc 1.000 (+0.000), ood 0.646 (-0.001), iia 0.941 (+0.000), edit 0.968 (-0.002), inter 0.394 (-0.002), A_L1 0.293 (+0.001); largest update W_in.weight 0.003; MLP match {'stable': 254, 'new': 2}.",
+ "hypothesis": "Writer-balance hypothesis (4,000) SUPPORTED by a read-only causal test on a copy (B untouched; disclosed): scaling either mass writer down raises the block interaction and cuts editability 3-4x more than accuracy -- head 0 x0.75: interaction 0.39 -> 0.46, editability 0.97 -> 0.76, accuracy 1.00 -> 0.95; head 3 x0.75: 0.42, 0.83, 0.93; at x0.5: editability 0.45 / 0.39. Caveat: scaling also damages the network generally, so this is supporting evidence, not a clean isolation of balance.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Would a cleaner test (rebalancing the writers while holding their summed block write fixed) separate balance from general damage? Recorded for the report as an open question.",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

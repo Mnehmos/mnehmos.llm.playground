@@ -1,0 +1,11 @@
+{
+ "what_changed": "Plateau persists (acc 0.249, IIA 0.159); my step-600 prediction (IIA > 0.3 by 900) is FALSIFIED. Mass decodability at the value token consolidated (kappa 0.50); answer F not decodable in the MLP (0.076). One MLP cluster split (B-ne-0046).",
+ "hypothesis": "The plateau is a degenerate partial solution, not a wrong algorithm: the network detects zero answers and otherwise emits constants; it has not broken the symmetry needed to use mass or acceleration. It is not the doc-12 sign-ambiguity trap.",
+ "evidence": "Level 2 (new read-only predictions tool, disclosed): predicts 0 for exactly the 17.7% of OBS questions whose answer is 0 (228/228), and otherwise mostly 8 (678) and 12 (241); agreement with F 0.249, with -F 0.228 (not a sign trap), with unit-ignoring variants 0.25 (chance-level after zeros); discrete-log agreement with F modulo 2/3/4/6 = 0.49/0.31/0.25/0.15 = chance -> no coarse multiplicative structure either.",
+ "key_question": "Will the network escape the zero-plus-constant plateau on its own (as other mass_only seeds did), and does escape happen through the mass block or elsewhere?",
+ "best_experiment": "Keep the predictions tool in the routine at each checkpoint until accuracy leaves 0.25; record which candidate function first rises above chance (F, a unit-ignoring variant, or the product without the output unit).",
+ "intervene": "no",
+ "intervention_rationale": "Nothing to reorganize: no mass, acceleration or calculation is used. Pushing the network off the plateau would be extra optimisation (the spec forbids crediting it to supervision); the precursor showed early edits fail behaviour-preservation. Decision: observe.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

@@ -1,0 +1,11 @@
+{
+ "what_changed": "End of training: no change since 5,800; final OBS values accuracy 1.000, OOD_DEV 0.647, block IIA 0.941, pooled persistent edit 0.975, interaction 0.395; A and B identical at all 61 checkpoints (no edit installed).",
+ "hypothesis": "Summary of this network's development, for the sealed comparison: a zero-plus-constant plateau (100-1,000); discrete-log circle at 1,100; fast formation 1,100-1,500 with two balanced mass writers (heads 0 and 3) whose unit splits partly cancel, giving a canonical-like, highly editable block; post-convergence oscillation of held-out accuracy carried by near-margin inputs; a held-out failure located upstream in mass formation for unseen unit-value pairs, with structured default-unit fallbacks for acceleration and unstructured errors for mass.",
+ "evidence": "Journal steps 100-5,900: Level-2 tools (predictions, ood_locus, heads, patch, sharpness), two OBS dry runs (1,500, 1,800) showing registered organisational edits cost held-out accuracy, read-only snapshot and copy analyses (bias swap, margins, error structure, writer scaling); causal claims rest on interchange, ablation and copy tests, probes reported as descriptive only.",
+ "key_question": "Does the sealed evaluation (FINAL, OOD_FINAL) confirm the OBS / OOD_DEV picture, including the add-one held-out edit (never measured during training)?",
+ "best_experiment": "The one-time sealed evaluation (run_lineage.py final).",
+ "intervene": "no",
+ "intervention_rationale": "Across 60 reviews no registered intervention had a credible predicted benefit without a generalisation cost: the network was highly editable from formation on, and the diagnosed defect (upstream held-out mass formation) lies outside the registered primitives. Two new primitives (layer-1 compositional binding supervision; checkpoint-anchored upstream regularisation) are proposed for a future registration.",
+ "previous_interventions": "none installed; two dry runs (1,500 interaction removal: OOD_DEV -0.017; 1,800 upstream OOD-targeted: -0.026); early-phase candidates never submitted",
+ "investigation_level": 2
+}

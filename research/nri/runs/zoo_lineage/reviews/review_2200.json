@@ -1,0 +1,11 @@
+{
+ "what_changed": "OOD_DEV 0.662 -> 0.681 (second rebound); editability 0.920 -> 0.945 (highest so far); IIA 0.937; interaction 0.392; neuron identities 249 stable, none relocated; weight motion <= 0.04 and spread evenly over readout and attention.",
+ "hypothesis": "REFUTED: the step-2,000 'monotone generalisation erosion' reading. Post-convergence OOD_DEV oscillates (0.63-0.73) while the internal organisation is frozen. New hypothesis: the oscillation is driven by small upstream weight changes that move held-out inputs across decision boundaries, without any change in the ID-defined features (which the lineage engine shows to be stable).",
+ "evidence": "Observation: two consecutive rebounds after the 2,000 low; lineage: 249/256 MLP identities stable, no relocations; per-step weight change small. Correlational only for the boundary-crossing mechanism.",
+ "key_question": "Does the stable ID organisation hide meaningful held-out changes (i.e. is the lineage engine, which is built on ID panels, blind to the generalisation-relevant changes)?",
+ "best_experiment": "At 2,500 compare the OOD_DEV-panel geometry (mass probes on OOD_DEV via ood_locus) with 1,700; if OOD-side geometry changes while ID-side lineage is frozen, the instrument has a blind spot that the final report must state.",
+ "intervene": "no",
+ "intervention_rationale": "No defect that a registered primitive can address; editability is excellent.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

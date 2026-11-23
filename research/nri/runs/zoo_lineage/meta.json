@@ -1,0 +1,418 @@
+{
+ "step": 6000,
+ "seed": 701,
+ "cum_rel_norm": 0.0,
+ "installed": [],
+ "reviews": {
+  "100": {
+   "key_question": "Is the unit-1 gradient conflict a stable property of the task (unit 1 needs a different conversion) or transient noise of early training?",
+   "intervene": "no"
+  },
+  "200": {
+   "key_question": "When the block becomes causal (IIA >= 0.5), does it keep this equivalence-preserving geometry (shared code across units) or does it split into unit routes as in the seed-700 network?",
+   "intervene": "no"
+  },
+  "300": {
+   "key_question": "Where is equivalence computed during the plateau, if not causally in the block?",
+   "intervene": "no"
+  },
+  "400": {
+   "key_question": "Is the rising interaction an early unit-specific rotation that will become the formation-time route split, or noise in a block that still carries little mass variance?",
+   "intervene": "no"
+  },
+  "500": {
+   "key_question": "How much of the lineage-event stream is matching ambiguity rather than real change, and how should it be reported?",
+   "intervene": "no"
+  },
+  "600": {
+   "key_question": "Will the circle form before causal use again (a reproducible ordering across seeds), and will the route split accompany it?",
+   "intervene": "no"
+  },
+  "700": {
+   "key_question": "Is the reorganisation leading toward formation (a causal mass code) or is the plateau extending?",
+   "intervene": "no"
+  },
+  "800": {
+   "key_question": "What is the network learning during the plateau, if not mass? Candidate: the answer distribution conditioned on zero-status and the output unit.",
+   "intervene": "no"
+  },
+  "900": {
+   "key_question": "Will the network escape the zero-plus-constant plateau on its own (as other mass_only seeds did), and does escape happen through the mass block or elsewhere?",
+   "intervene": "no"
+  },
+  "1000": {
+   "key_question": "Which candidate function will rise above baseline first, and does the shared block geometry need to dissolve before the causal mass code can form?",
+   "intervene": "no"
+  },
+  "1100": {
+   "key_question": "Which head will become the dominant mass writer, and will it inherit the unit-1 split from the value token?",
+   "intervene": "no"
+  },
+  "1200": {
+   "key_question": "Does the editable code at formation survive consolidation, or does the interaction between mass and unit route grow and erase editability (the seed-700 trajectory)?",
+   "intervene": "no"
+  },
+  "1300": {
+   "key_question": "Can the layer-1 binding be made compositional (value code rotated by unit scale) so held-out combinations form correct mass, without losing what the network already does?",
+   "intervene": "no"
+  },
+  "1400": {
+   "key_question": "Is there any organisational defect worth repairing, or only the generalisation gap, which is upstream and outside the registered primitives' reach?",
+   "intervene": "no"
+  },
+  "1500": {
+   "key_question": "What information does the residual interaction carry that helps held-out combinations, given that the held-out failure is mostly upstream (step 1,300)?",
+   "intervene": "no"
+  },
+  "1600": {
+   "key_question": "Does the network return to the same organisation after the spike (attractor, as in doc 27), and does editability recover fully?",
+   "intervene": "no"
+  },
+  "1700": {
+   "key_question": "Can held-out mass formation be improved without removing the unit-specific geometry that partly compensates?",
+   "intervene": "no"
+  },
+  "1800": {
+   "key_question": "Is there any remaining organisational property worth improving whose improvement would not cost generalisation?",
+   "intervene": "no"
+  },
+  "1900": {
+   "key_question": "How large is the natural checkpoint-to-checkpoint variance of OOD_DEV after convergence (needed to interpret any B-A difference at 6,000)?",
+   "intervene": "no"
+  },
+  "2000": {
+   "key_question": "Is the erosion transient (OOD recovers, as accuracy did after the 1,600 spike) or a monotone trend to the end of training?",
+   "intervene": "no"
+  },
+  "2100": {
+   "key_question": "What is the OOD_DEV noise floor over the remaining training, and does editability stay >= 0.9?",
+   "intervene": "no"
+  },
+  "2200": {
+   "key_question": "Does the stable ID organisation hide meaningful held-out changes (i.e. is the lineage engine, which is built on ID panels, blind to the generalisation-relevant changes)?",
+   "intervene": "no"
+  },
+  "2300": {
+   "key_question": "How should the lineage report separate real developmental events from threshold jitter in a stable network?",
+   "intervene": "no"
+  },
+  "2400": {
+   "key_question": "Do the OOD-relevant changes live in these offset (bias) directions? (Check at 2,500 with the OOD locus.)",
+   "intervene": "no"
+  },
+  "2500": {
+   "key_question": "Would the final-report comparison need held-out-panel lineage (features traced on OOD_DEV inputs) to explain generalisation changes?",
+   "intervene": "no"
+  },
+  "2600": {
+   "key_question": "Is the held-out oscillation carried by the attention biases?",
+   "intervene": "no"
+  },
+  "2700": {
+   "key_question": "Can the held-out oscillation be attributed below the level of whole attention layers?",
+   "intervene": "no"
+  },
+  "2800": {
+   "key_question": "What B-A difference at 6,000 would exceed the post-convergence noise floor? (Answer for the report: about 2 sd, i.e. 0.07 for OOD_DEV and 0.08 for editability, if B ever diverges.)",
+   "intervene": "no"
+  },
+  "2900": {
+   "key_question": "Anything new expected before the end of training? The learning rate is now decaying (OneCycle), which should shrink the jitter; a falling OOD_DEV variance would support the noise interpretation.",
+   "intervene": "no"
+  },
+  "3000": {
+   "key_question": "Is there any remaining development worth tracking (e.g. acceleration becoming causal late, as in seed 700 at 3,200)?",
+   "intervene": "no"
+  },
+  "3100": {
+   "key_question": "Will acceleration become causal through its tokens late, as in seed 700, or stay sub-threshold?",
+   "intervene": "no"
+  },
+  "3200": {
+   "key_question": "Does the frozen state persist to 6,000 (the comparison would then be A = B with no edits), or will the low-learning-rate phase produce late changes?",
+   "intervene": "no"
+  },
+  "3300": {
+   "key_question": "Will OOD_DEV variance keep shrinking as the learning rate decays?",
+   "intervene": "no"
+  },
+  "3400": {
+   "key_question": "How sensitive are held-out answers to weight perturbation compared with ID answers (margin distribution on OOD_DEV vs OBS)?",
+   "intervene": "no"
+  },
+  "3500": {
+   "key_question": "Are the near-miss held-out answers wrong in a structured way (e.g. off by the unit factor)?",
+   "intervene": "no"
+  },
+  "3600": {
+   "key_question": "Does the IIT declaration of mass cause the unstructured failure mode (mass binding entangled with the block's interchange code) while undeclared acceleration keeps a simpler, unit-ignoring fallback?",
+   "intervene": "no"
+  },
+  "3700": {
+   "key_question": "Will the add-one held-out edit (scored only at the sealed evaluation) be as good as inversion, i.e. is the editability general rather than edit-specific?",
+   "intervene": "no"
+  },
+  "3800": {
+   "key_question": "Will the frozen state change at all before 6,000 (learning rate falls toward ~1e-5 at the end of OneCycle)?",
+   "intervene": "no"
+  },
+  "3900": {
+   "key_question": "Is the 3,000-3,900 OOD_DEV decline (0.669 -> 0.639) a trend or noise? (sd ~0.036 -> within 1 sd).",
+   "intervene": "no"
+  },
+  "4000": {
+   "key_question": "Is writer balance a cause of editability (testable by an intervention that rebalances writers) or a correlate?",
+   "intervene": "no"
+  },
+  "4100": {
+   "key_question": "Would a cleaner test (rebalancing the writers while holding their summed block write fixed) separate balance from general damage? Recorded for the report as an open question.",
+   "intervene": "no"
+  },
+  "4200": {
+   "key_question": "Will the sealed FINAL / OOD_FINAL numbers match the OBS / OOD_DEV picture (editability ~0.97, held-out ~0.65)?",
+   "intervene": "no"
+  },
+  "4300": {
+   "key_question": "Does anything distinguish the late frozen phase from 3,000-4,000 other than the smaller learning rate? (So far no.)",
+   "intervene": "no"
+  },
+  "4400": {
+   "key_question": "Is the pooled-edit jitter (+-0.01) also a margin effect? (Expected yes; not worth a separate test.)",
+   "intervene": "no"
+  },
+  "4500": {
+   "key_question": "Will the sealed OOD_FINAL (values 11-12) sit near OOD_DEV (values 9-10), or do held-out values differ in difficulty?",
+   "intervene": "no"
+  },
+  "4600": {
+   "key_question": "None new for this network; continue to 6,000.",
+   "intervene": "no"
+  },
+  "4700": {
+   "key_question": "How many of all neuron-cluster lineage events over the run survive a stability filter (membership Jaccard >= 0.5 to the previous checkpoint and no reversal within two checkpoints)? To be computed in the report.",
+   "intervene": "no"
+  },
+  "4800": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "4900": {
+   "key_question": "Do any held-out answers still flip before 6,000? (Expected: very few.)",
+   "intervene": "no"
+  },
+  "5000": {
+   "key_question": "None new; the final comparison is now predictable: A = B.",
+   "intervene": "no"
+  },
+  "5100": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5200": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5300": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5400": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5500": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5600": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5700": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5800": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5900": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "6000": {
+   "key_question": "Does the sealed evaluation (FINAL, OOD_FINAL) confirm the OBS / OOD_DEV picture, including the add-one held-out edit (never measured during training)?",
+   "intervene": "no"
+  }
+ },
+ "proposals": {},
+ "inspections": {
+  "400": [
+   {
+    "tool": "patch",
+    "args": {
+     "site": "L1:aval+aunit",
+     "variable": "A"
+    },
+    "cpu_s": 1.0
+   },
+   {
+    "tool": "patch",
+    "args": {
+     "site": "rest",
+     "variable": "S"
+    },
+    "cpu_s": 1.0
+   },
+   {
+    "tool": "patch",
+    "args": {
+     "site": "L1:mval+munit",
+     "variable": "M"
+    },
+    "cpu_s": 1.0
+   }
+  ],
+  "500": [
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-he-0002"
+    },
+    "cpu_s": 0.0
+   },
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-he-0006"
+    },
+    "cpu_s": 0.0
+   }
+  ],
+  "700": [
+   {
+    "tool": "sharpness",
+    "args": {
+     "iters": 12
+    },
+    "cpu_s": 42.2
+   }
+  ],
+  "900": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   },
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "1000": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "1100": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   },
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "1200": [
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.2
+   }
+  ],
+  "1300": [
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.2
+   },
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
+  ],
+  "1500": [
+   {
+    "tool": "dryrun",
+    "args": {
+     "proposal": "runs/zoo_lineage/proposals/p1500_interaction_dryrun.json"
+    },
+    "cpu_s": 53.2
+   }
+  ],
+  "1700": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
+  ],
+  "1800": [
+   {
+    "tool": "dryrun",
+    "args": {
+     "proposal": "runs/zoo_lineage/proposals/p1800_ood_upstream_dryrun.json"
+    },
+    "cpu_s": 61.3
+   }
+  ],
+  "2500": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
+  ],
+  "4000": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   },
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "4700": [
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-ne-0080"
+    },
+    "cpu_s": 0.0
+   }
+  ],
+  "5000": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.4
+   }
+  ]
+ },
+ "ledger": {
+  "train_cpu_s": 1074.3761520480002,
+  "supervisor_extra_grad_steps": 0,
+  "proposal_cpu_s": 0.0,
+  "inspect_cpu_s": 175.35146189700004
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "what_changed": "Small dips: editability 0.950 -> 0.920, OOD_DEV 0.662 -> 0.654, IIA 0.930; organisation unchanged (interaction 0.382, 250 stable identities).",
+ "hypothesis": "REFUTED (step-2,600): the attention biases do not carry the held-out oscillation. Revised: held-out behaviour is set upstream by the attention WEIGHT matrices, jointly and co-adapted with the readout, not by any single separable component.",
+ "evidence": "Level 2 read-only snapshot swaps on the control (posthoc_bias_swap.py; 1,800 OOD_DEV 0.726 vs 2,000 0.625): swapping attn1, attn2 or all attention biases moves OOD_DEV by <= 0.008; swapping MLP+unembed leaves OOD_DEV with the upstream donor's level (0.718 / 0.627); swapping attn1 or attn2 weight matrices breaks both ID (0.93-0.95) and OOD (0.58-0.64) in both directions (components co-adapted).",
+ "key_question": "Can the held-out oscillation be attributed below the level of whole attention layers?",
+ "best_experiment": "Not within budget here; future: interpolate attention weights between the two checkpoints along the straight line and along the top singular directions of the difference, reading OOD_DEV and ID along the path.",
+ "intervene": "no",
+ "intervention_rationale": "Stable organisation; the generalisation question remains outside the registered primitives.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

@@ -1,0 +1,11 @@
+{
+ "what_changed": "Full recovery from the 1,600 spike and beyond the 1,500 level: accuracy 0.999, OOD_DEV 0.72 (best so far), IIA 0.93, pooled edit 0.94, copy 0.998; interaction 0.36 (unchanged organisation); M-family neurons 99 -> 130; M@block back to fully causally supported. Weight motion small (max 0.07).",
+ "hypothesis": "(1) Step-1,600 prediction CONFIRMED: recovery within 100 steps to the same organisation (attractor). (2) The residual interaction is how the network places held-out masses: it produces correct answers for many held-out combinations whose canonical mass is NOT linearly decodable, i.e. via the unit-specific (non-linear) geometry.",
+ "evidence": "Level 2 ood_locus: block given the true mass's class mean -> OOD_DEV 0.94 (downstream almost perfect; actual 0.72) so the gap is upstream; held-out-mass-only 0.61 vs held-out-acceleration-only 0.85; linear M probe on OOD_DEV at the value token 0.41 and block 0.33 while the network gets 0.72 right -> correct held-out answers are produced without a linearly readable canonical mass. Together with the step-1,500 dry run (removing the interaction cost 0.017 OOD_DEV) this supports (2); still correlational for the mechanism.",
+ "key_question": "Can held-out mass formation be improved without removing the unit-specific geometry that partly compensates?",
+ "best_experiment": "Requires the layer-1 compositional-binding primitive proposed at 1,300 (not registered). Within the registered primitives, test whether off-manifold KL alone (noise_kl) with a small route-preserving translation improves OOD_DEV on OBS, as a dry run, at the next quiet checkpoint.",
+ "intervene": "no",
+ "intervention_rationale": "Network just recovered from a spike; I wait for a quiet checkpoint before any dry run, and no installed edit is justified by evidence yet.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

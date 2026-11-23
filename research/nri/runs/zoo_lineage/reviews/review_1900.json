@@ -1,0 +1,11 @@
+{
+ "what_changed": "ID perfect (1.000) but OOD_DEV fell 0.726 -> 0.663; large UPSTREAM weight motion in a mature network (attn2.qkv 0.24, attn1.o 0.23, attn2.qkv.bias 0.16, attn1.qkv 0.16), neuron identities less stable (209 stable, 28 uncertain); IIA 0.93 -> 0.91, pooled edit 0.90 -> 0.87.",
+ "hypothesis": "ID-silent upstream drift: once the training task is solved, training keeps reshaping the layer-1 binding and the mass writers in directions that are invisible on familiar questions but change held-out formation. Held-out accuracy is therefore not settled after convergence, and its checkpoint-to-checkpoint variance must be considered when comparing the two networks at 6,000.",
+ "evidence": "Observation: OOD_DEV moved 0.062 while ID stayed at 1.000; the weight updates are concentrated upstream (the locus of the held-out failure, steps 1,300 and 1,700). Correlational: the coincidence of upstream motion and OOD change; not yet causally tied.",
+ "key_question": "How large is the natural checkpoint-to-checkpoint variance of OOD_DEV after convergence (needed to interpret any B-A difference at 6,000)?",
+ "best_experiment": "Record OOD_DEV at every remaining checkpoint for A (= B so far) and report its standard deviation over 2,000-6,000 as the noise floor for the final comparison.",
+ "intervene": "no",
+ "intervention_rationale": "Nothing to repair that the registered primitives can address; noting the noise floor protects the final comparison from over-reading a single number.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}
