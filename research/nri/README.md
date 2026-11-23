@@ -31,6 +31,7 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 19 | [`docs/19_permanent_edit_results.md`](docs/19_permanent_edit_results.md) | **Permanent-edit result**: on new networks and reserved questions, the unit-aware edit installed once, as an added ~70-unit layer or by re-fitting the existing post-site weights, matches the stored table (0.90 mass / 0.87 acceleration vs 0.27 / 0.34 for the linear edit), with fewer wrong-variable changes; the existing-weights version is a large re-fit (35–59% weight change) |
 | 20 | [`docs/20_design_unit_calculus.md`](docs/20_design_unit_calculus.md) | **Design** (not a registration): map every quantity in the computation (values, labels, label meanings, converted quantities, the calculator) and test whether label↔value relationships correspond to calculations. Feasibility probe: the calculator multiplies in discrete-log space (≈ 0.93 multiplicative-character concentration; additive flat) |
 | 21 | [`docs/21_unit_calculus_pilot_findings.md`](docs/21_unit_calculus_pilot_findings.md) | **Pilot findings** (exploratory, n = 1–2): the 6-label design does not learn (4 labels does, unevenly); calculation type shows in answer geometry (scaled → discrete-log circles after the MLP; offsets → value-order circles already in attention); no converted quantity is ever a separable variable: value fuses early, the label stays separable through layer 1; the declared control failed |
+| 22 | [`docs/22_registration_checkpoint_correction.md`](docs/22_registration_checkpoint_correction.md) | **Registration** (Issue #20; committed before training): checkpoint-guided correction pilot. 3 fresh `mass_only` networks, checkpoints 0/600/1,500/3,000/4,500/6,000, bitwise-matched control vs downstream-readout-correction branches from step 3,000 |
 
 ## Layout
 
@@ -65,6 +66,7 @@ python run_swap.py analyse --seeds 300 301 302 303 304 305 306 307 308 309 310 3
 python run_swap.py report  --seeds 300 301 302 303 304 305 306 307 308 309 310 311
 python run_editors.py --split test && python run_editors.py --report   # docs 16-17 (fixed networks)
 python train_perm.py && python run_perm.py analyse && python run_perm.py report   # docs 18-19
+python run_correction.py run && python run_correction.py report                   # docs 22-23 (Issue #20)
 python make_figures.py
 ```
 
