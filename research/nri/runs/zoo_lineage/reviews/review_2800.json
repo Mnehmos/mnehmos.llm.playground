@@ -1,0 +1,11 @@
+{
+ "what_changed": "OOD_DEV fell to 0.584 (lowest since formation) while editability reached its high (0.959) and ID stayed 1.000; attention biases again the largest updates (attn1.qkv.bias 0.097, attn2.o.bias 0.066).",
+ "hypothesis": "My first reading (a spontaneous editability-vs-generalisation trade-off) is NOT supported in aggregate. Revised: post-convergence OOD_DEV is noise with sd ~0.036 around ~0.67; across checkpoints, higher interaction goes with LOWER OOD_DEV, whereas the edited interaction-removal direction cost OOD_DEV (1,500, 1,800 dry runs): natural variation and the edited direction differ.",
+ "evidence": "Read-only statistics over the 14 converged checkpoints 1,500-2,800 (A = B): corr(editability, OOD_DEV) -0.02; corr of step-to-step changes +0.45; corr(interaction, OOD_DEV) -0.47; OOD_DEV mean 0.666, sd 0.036; editability mean 0.918, sd 0.038. Correlational, n = 14.",
+ "key_question": "What B-A difference at 6,000 would exceed the post-convergence noise floor? (Answer for the report: about 2 sd, i.e. 0.07 for OOD_DEV and 0.08 for editability, if B ever diverges.)",
+ "best_experiment": "None needed now; the noise floor will be recomputed over 1,500-6,000 for the report.",
+ "intervene": "no",
+ "intervention_rationale": "No defect addressable by registered primitives; the drop is within ~2.3 sd of the converged mean.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

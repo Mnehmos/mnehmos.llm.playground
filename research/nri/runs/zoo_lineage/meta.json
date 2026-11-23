@@ -1,5 +1,5 @@
 {
- "step": 2500,
+ "step": 3000,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -102,6 +102,26 @@
   },
   "2500": {
    "key_question": "Would the final-report comparison need held-out-panel lineage (features traced on OOD_DEV inputs) to explain generalisation changes?",
+   "intervene": "no"
+  },
+  "2600": {
+   "key_question": "Is the held-out oscillation carried by the attention biases?",
+   "intervene": "no"
+  },
+  "2700": {
+   "key_question": "Can the held-out oscillation be attributed below the level of whole attention layers?",
+   "intervene": "no"
+  },
+  "2800": {
+   "key_question": "What B-A difference at 6,000 would exceed the post-convergence noise floor? (Answer for the report: about 2 sd, i.e. 0.07 for OOD_DEV and 0.08 for editability, if B ever diverges.)",
+   "intervene": "no"
+  },
+  "2900": {
+   "key_question": "Anything new expected before the end of training? The learning rate is now decaying (OneCycle), which should shrink the jitter; a falling OOD_DEV variance would support the noise interpretation.",
+   "intervene": "no"
+  },
+  "3000": {
+   "key_question": "Is there any remaining development worth tracking (e.g. acceleration becoming causal late, as in seed 700 at 3,200)?",
    "intervene": "no"
   }
  },
@@ -242,7 +262,7 @@
   ]
  },
  "ledger": {
-  "train_cpu_s": 408.3490071410001,
+  "train_cpu_s": 504.07797682200004,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
   "inspect_cpu_s": 171.51901710400003

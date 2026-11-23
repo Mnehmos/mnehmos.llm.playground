@@ -1,0 +1,58 @@
+{
+ "1800 (high)": {
+  "ood_dev": 0.7257,
+  "obs": 0.9969
+ },
+ "2000 (low)": {
+  "ood_dev": 0.625,
+  "obs": 0.9992
+ },
+ "1800 with 2000's attn1 biases": {
+  "ood_dev": 0.7211,
+  "obs": 0.9969
+ },
+ "2000 with 1800's attn1 biases": {
+  "ood_dev": 0.6285,
+  "obs": 0.9992
+ },
+ "1800 with 2000's attn2 biases": {
+  "ood_dev": 0.7211,
+  "obs": 0.9969
+ },
+ "2000 with 1800's attn2 biases": {
+  "ood_dev": 0.625,
+  "obs": 0.9992
+ },
+ "1800 with 2000's all attention biases": {
+  "ood_dev": 0.7176,
+  "obs": 0.9969
+ },
+ "2000 with 1800's all attention biases": {
+  "ood_dev": 0.6262,
+  "obs": 0.9984
+ },
+ "1800 with 2000's attn1 weights": {
+  "ood_dev": 0.6227,
+  "obs": 0.9526
+ },
+ "2000 with 1800's attn1 weights": {
+  "ood_dev": 0.588,
+  "obs": 0.9277
+ },
+ "1800 with 2000's attn2 weights": {
+  "ood_dev": 0.6389,
+  "obs": 0.9448
+ },
+ "2000 with 1800's attn2 weights": {
+  "ood_dev": 0.5822,
+  "obs": 0.9542
+ },
+ "1800 with 2000's MLP + unembed": {
+  "ood_dev": 0.7176,
+  "obs": 0.9759
+ },
+ "2000 with 1800's MLP + unembed": {
+  "ood_dev": 0.6273,
+  "obs": 0.9953
+ }
+}
