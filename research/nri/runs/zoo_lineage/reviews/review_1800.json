@@ -1,0 +1,11 @@
+{
+ "what_changed": "Quiet: accuracy 0.997, OOD_DEV 0.726, IIA 0.93, pooled edit 0.94 -> 0.90, copy 0.998, interaction 0.355; weight updates <= 0.06; neuron identities 249 stable; two new partially causal neuron clusters (B-ne-0089/0090).",
+ "hypothesis": "No combination of the REGISTERED objective terms acting upstream can improve held-out formation, because none of them encodes compositional value-unit binding; such edits can raise editability but will cost generalisation.",
+ "evidence": "Level 2 causal dry run on OBS (p1800_ood_upstream_dryrun.json; attn1+attn2 only; KL, IIT, noise KL, translation, route probe; 2% of model norm): OOD_DEV -0.026 (prediction confirmed), editability +0.036, interaction -0.098, unit-transfer -0.159, keep 1.000, route information +0.33. Together with the 1,500 dry run: two different registered recipes both trade generalisation for organisation in this network.",
+ "key_question": "Is there any remaining organisational property worth improving whose improvement would not cost generalisation?",
+ "best_experiment": "None available within the frozen primitives; the decisive experiment (layer-1 compositional binding supervision) is recorded for a future registration. Continue observation; re-check the OOD locus at 2,500 and 4,000.",
+ "intervene": "no",
+ "intervention_rationale": "The editability gain on offer (+0.04 on an already 0.90-editable network) would cost 0.026 held-out accuracy, a trade-off the spec says is not a success. The evidence-based decision is not to edit.",
+ "previous_interventions": "none (two dry runs, both showing a generalisation cost)",
+ "investigation_level": 2
+}

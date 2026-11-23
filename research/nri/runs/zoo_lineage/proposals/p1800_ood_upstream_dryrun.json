@@ -1,0 +1,10 @@
+{"primitive": "restricted_gradient_update",
+ "scope": ["attn1.qkv.weight", "attn1.o.weight", "attn2.qkv.weight", "attn2.o.weight"],
+ "target_claim": "ood_dev",
+ "objective": {"kl": 30.0, "iit": 1.0, "noise_kl": 10.0, "translate": 0.3, "route_keep": 5.0},
+ "steps": 300, "lr": 0.001, "l2": 3.0, "max_rel_model": 0.02,
+ "rationale": "Step 1,700: the held-out gap is upstream (mass formation). Test whether registered terms acting on the upstream weights can improve held-out formation.",
+ "mechanism": "Upstream-only update under behaviour (KL), causal-sufficiency (IIT), off-manifold (noise KL), additive-translation and route-information constraints.",
+ "predicted": "OOD_DEV change <= 0 (no registered term encodes compositional value-unit binding).",
+ "falsification": "OOD_DEV improves by >= 0.01 with ID kept.",
+ "collateral_risk": "OOD loss; instability."}

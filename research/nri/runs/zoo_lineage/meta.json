@@ -1,5 +1,5 @@
 {
- "step": 1500,
+ "step": 2000,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -62,6 +62,26 @@
   },
   "1500": {
    "key_question": "What information does the residual interaction carry that helps held-out combinations, given that the held-out failure is mostly upstream (step 1,300)?",
+   "intervene": "no"
+  },
+  "1600": {
+   "key_question": "Does the network return to the same organisation after the spike (attractor, as in doc 27), and does editability recover fully?",
+   "intervene": "no"
+  },
+  "1700": {
+   "key_question": "Can held-out mass formation be improved without removing the unit-specific geometry that partly compensates?",
+   "intervene": "no"
+  },
+  "1800": {
+   "key_question": "Is there any remaining organisational property worth improving whose improvement would not cost generalisation?",
+   "intervene": "no"
+  },
+  "1900": {
+   "key_question": "How large is the natural checkpoint-to-checkpoint variance of OOD_DEV after convergence (needed to interpret any B-A difference at 6,000)?",
+   "intervene": "no"
+  },
+  "2000": {
+   "key_question": "Is the erosion transient (OOD recovers, as accuracy did after the 1,600 spike) or a monotone trend to the end of training?",
    "intervene": "no"
   }
  },
@@ -176,12 +196,28 @@
     },
     "cpu_s": 53.2
    }
+  ],
+  "1700": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
+  ],
+  "1800": [
+   {
+    "tool": "dryrun",
+    "args": {
+     "proposal": "runs/zoo_lineage/proposals/p1800_ood_upstream_dryrun.json"
+    },
+    "cpu_s": 61.3
+   }
   ]
  },
  "ledger": {
-  "train_cpu_s": 195.07587682700003,
+  "train_cpu_s": 305.13488009900004,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
-  "inspect_cpu_s": 107.55432202300001
+  "inspect_cpu_s": 170.23772778300003
  }
 }
