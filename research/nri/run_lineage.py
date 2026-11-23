@@ -366,7 +366,37 @@ def tool_dryrun(args):
                                                                                    "unit_transfer", "wrong", "route_probe", "unit_probe")})
 
 
-TOOLS = dict(heads=tool_heads, ablate=tool_ablate, patch=tool_patch, sharpness=tool_sharpness, feature=tool_feature,
+@torch.no_grad()
+def tool_predictions(args):
+    """Read-only (added during the pilot at step 900; disclosed): which function of the inputs do the
+    network's answers follow? Fraction of OBS answers equal to each candidate."""
+    from nri import dimtask as T
+    d = AT.partition()
+    out = {}
+    for n in NETS:
+        m = load_live(n)["model"]
+        lat = d["OBS"]
+        pred = AT.capture(m, lat)["logits"].argmax(-1)
+        M, A, S_ = T.canon(lat)
+        F_ = T.target(M, A, S_)
+        cand = {"F (correct)": F_, "-F (sign flip)": (-F_) % T.P, "F^-1": torch.tensor([0] + [pow(x, -1, T.P) for x in range(1, T.P)])[F_],
+                "mass unit ignored (m*A*S)": T.target(lat["m"], A, S_), "acc unit ignored (M*a*S)": T.target(M, lat["a"], S_),
+                "both units ignored (m*a*S)": T.target(lat["m"], lat["a"], S_), "output unit ignored (M*A)": M * A % T.P,
+                "zero": torch.zeros_like(F_), "2F": 2 * F_ % T.P}
+        out[n] = {k: round((pred == v).float().mean().item(), 4) for k, v in cand.items()}
+        out[n]["pred_histogram"] = torch.bincount(pred, minlength=T.P).tolist()
+        # coarse multiplicative structure: does log(pred) agree with log(F) modulo a divisor of 12?
+        nz = (F_ != 0) & (pred != 0)
+        lg = torch.tensor([0] + [AT.LOG[x] for x in range(1, T.P)])
+        base = {}
+        for dv in (2, 3, 4, 6):
+            agree = ((lg[pred[nz]] - lg[F_[nz]]) % dv == 0).float().mean().item()
+            out[n][f"log agreement mod {dv} (chance {1 / dv:.2f})"] = round(agree, 4)
+        out[n]["target_zero_share"] = round((F_ == 0).float().mean().item(), 4)
+    return out
+
+
+TOOLS = dict(predictions=tool_predictions, heads=tool_heads, ablate=tool_ablate, patch=tool_patch, sharpness=tool_sharpness, feature=tool_feature,
              features=tool_features, dryrun=tool_dryrun)
 
 

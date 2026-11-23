@@ -1,0 +1,11 @@
+{
+ "what_changed": "Plateau extends: acc 0.243, IIA 0.158 (-0.018). Mult-char at h fell again 0.34 -> 0.27; interaction rebounded 0.23 -> 0.41; weight motion slowed (attn1 no longer in the top updates; W_out 0.25). Equivalent-pair prediction agreement fell to 0.54 (from 0.77).",
+ "hypothesis": "The step-700 basis rotation did not initiate formation; seed 701 has a longer plateau than seed 700. My step-600 prediction (IIA > 0.3 by step 900, circle first) is now likely to fail; the circle's rise at 600 was a fluctuation, not a precursor.",
+ "evidence": "Observation: three consecutive checkpoints of falling mult-char (0.47, 0.34, 0.27) with flat IIA. The equivalence-agreement drop (0.77 -> 0.54) together with flat accuracy supports the step-400 reading that this metric reflects coarse output statistics, not a mass variable.",
+ "key_question": "What is the network learning during the plateau, if not mass? Candidate: the answer distribution conditioned on zero-status and the output unit.",
+ "best_experiment": "At 900, check F decodability at the MLP and acceleration/product families against accuracy; a rise in F kappa without IIA would mean output-side learning precedes the mass variable.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase. The only eligible targets would be iia/ood_dev; nothing indicates a code that a small edit could strengthen.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

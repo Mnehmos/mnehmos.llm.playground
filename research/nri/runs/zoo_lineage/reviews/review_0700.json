@@ -1,0 +1,11 @@
+{
+ "what_changed": "Silent reorganisation: behaviour flat (acc 0.239, IIA 0.176) while weights moved fast (relative change per 100 steps: attn1.qkv 0.46, W_out 0.43, attn2.qkv 0.37, attn1.o 0.35, the largest so far); MLP neuron identities churned (stable 19 vs 94 at 600, relocated 36). Block now separates masses (other-mass cosine 0.918 -> 0.848) and accelerations (0.972 -> 0.902). Route@block and A@mlp consolidated. Mult-char at h fell back 0.47 -> 0.34.",
+ "hypothesis": "The network is rebuilding its internal basis on the plateau (large, coordinated weight motion with no behavioural change) before formation; the loss landscape is flat here, so this phase is not an edge-of-stability phase.",
+ "evidence": "Observation: weight-update magnitudes and neuron-identity churn. Level 2 (Hessian power iteration on the training objective): sharpness 15.1, Adam-preconditioned 10.4 vs edge 2/lr = 1,001 -> two orders of magnitude below the edge. My step-600 prediction (circle before causal use, IIA > 0.3 by 900) is weakened by the circle's fall but not yet falsified.",
+ "key_question": "Is the reorganisation leading toward formation (a causal mass code) or is the plateau extending?",
+ "best_experiment": "Next checkpoint: block IIA, copy and mult-char together; if IIA rises with weight motion slowing, formation has started.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase (IIA 0.18); rapid basis rotation means any edit now targets a transient basis.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

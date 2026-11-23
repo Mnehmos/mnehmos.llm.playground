@@ -1,0 +1,127 @@
+{
+ "step": 1000,
+ "seed": 701,
+ "cum_rel_norm": 0.0,
+ "installed": [],
+ "reviews": {
+  "100": {
+   "key_question": "Is the unit-1 gradient conflict a stable property of the task (unit 1 needs a different conversion) or transient noise of early training?",
+   "intervene": "no"
+  },
+  "200": {
+   "key_question": "When the block becomes causal (IIA >= 0.5), does it keep this equivalence-preserving geometry (shared code across units) or does it split into unit routes as in the seed-700 network?",
+   "intervene": "no"
+  },
+  "300": {
+   "key_question": "Where is equivalence computed during the plateau, if not causally in the block?",
+   "intervene": "no"
+  },
+  "400": {
+   "key_question": "Is the rising interaction an early unit-specific rotation that will become the formation-time route split, or noise in a block that still carries little mass variance?",
+   "intervene": "no"
+  },
+  "500": {
+   "key_question": "How much of the lineage-event stream is matching ambiguity rather than real change, and how should it be reported?",
+   "intervene": "no"
+  },
+  "600": {
+   "key_question": "Will the circle form before causal use again (a reproducible ordering across seeds), and will the route split accompany it?",
+   "intervene": "no"
+  },
+  "700": {
+   "key_question": "Is the reorganisation leading toward formation (a causal mass code) or is the plateau extending?",
+   "intervene": "no"
+  },
+  "800": {
+   "key_question": "What is the network learning during the plateau, if not mass? Candidate: the answer distribution conditioned on zero-status and the output unit.",
+   "intervene": "no"
+  },
+  "900": {
+   "key_question": "Will the network escape the zero-plus-constant plateau on its own (as other mass_only seeds did), and does escape happen through the mass block or elsewhere?",
+   "intervene": "no"
+  },
+  "1000": {
+   "key_question": "Which candidate function will rise above baseline first, and does the shared block geometry need to dissolve before the causal mass code can form?",
+   "intervene": "no"
+  }
+ },
+ "proposals": {},
+ "inspections": {
+  "400": [
+   {
+    "tool": "patch",
+    "args": {
+     "site": "L1:aval+aunit",
+     "variable": "A"
+    },
+    "cpu_s": 1.0
+   },
+   {
+    "tool": "patch",
+    "args": {
+     "site": "rest",
+     "variable": "S"
+    },
+    "cpu_s": 1.0
+   },
+   {
+    "tool": "patch",
+    "args": {
+     "site": "L1:mval+munit",
+     "variable": "M"
+    },
+    "cpu_s": 1.0
+   }
+  ],
+  "500": [
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-he-0002"
+    },
+    "cpu_s": 0.0
+   },
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-he-0006"
+    },
+    "cpu_s": 0.0
+   }
+  ],
+  "700": [
+   {
+    "tool": "sharpness",
+    "args": {
+     "iters": 12
+    },
+    "cpu_s": 42.2
+   }
+  ],
+  "900": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   },
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "1000": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ]
+ },
+ "ledger": {
+  "train_cpu_s": 123.54127037299999,
+  "supervisor_extra_grad_steps": 0,
+  "proposal_cpu_s": 0.0,
+  "inspect_cpu_s": 48.345716409000005
+ }
+}

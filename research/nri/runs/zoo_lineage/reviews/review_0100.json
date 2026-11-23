@@ -1,0 +1,11 @@
+{
+ "what_changed": "Accuracy 0.06 -> 0.18 (output-marginal learning); per-unit CKA of mass class means at the block 0.36 -> 0.71; mass decodable at the value token kappa 0.53 (embedding identity), not causal anywhere (all IIA ~0.09). Group-gradient agreement: unit-1 mass examples conflict with unit 0 (attn2 +0.20, mlp_in +0.20, mlp_out +0.13) while unit 2 agrees with unit 0 (+0.46-0.49).",
+ "hypothesis": "Unit 1 (scale 5) receives gradients that pull the shared weights in a different direction from units 0 and 2; if this conflict persists, unit 1 will form its own mass route at formation (as in the seed-700 precursor), i.e. gradient conflict precedes and predicts a representational split.",
+ "evidence": "Observation: unit-1 gradient cosine with unit 0 is 0.13-0.28 vs 0.46-0.56 for unit 2, across all tensor groups. Correlation only; no representation exists yet. Speculation: the seed-700 split also involved unit 1 (different seed, different network). Head relocation events at this step are a matching artifact (near-uniform attention; heads indistinguishable), not real relocations.",
+ "key_question": "Is the unit-1 gradient conflict a stable property of the task (unit 1 needs a different conversion) or transient noise of early training?",
+ "best_experiment": "Track u0~u1 vs u0~u2 gradient agreement and per-unit CKA (pairwise) over steps 200-900; if conflict persists and per-unit CKA for unit 1 drops at formation, the hypothesis is supported.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase: no causal representation (block IIA 0.09), nothing to organize; edits at this stage were rejected or ineffective in the precursor (doc 27).",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

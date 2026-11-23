@@ -1,0 +1,11 @@
+{
+ "what_changed": "Accuracy 0.18 -> 0.24, block IIA 0.09 -> 0.14 (still not causal). Matched panel: equivalent pairs are closer at the block (cos 0.998) than different-mass pairs (0.949) or different-acceleration pairs (0.933). Group-gradient pattern flipped: unit 0 vs unit 2 now orthogonal (-0.03 to +0.01), unit 1 agrees weakly with both (+0.15 to +0.27). MLP: 102 neurons in the M*A (product) family, 47 answer-F family (none causally important yet).",
+ "hypothesis": "(a) The step-100 unit-1 conflict was transient optimisation noise, not a stable property (refuted as a stable effect). (b) A unit-invariant (canonical) mass geometry exists in the block BEFORE the block is causally used: decodability-before-causality.",
+ "evidence": "Observation: gradient cosines changed sign/ranking between 100 and 200 (transient). Observation: equivalent-pair block cosine 0.998 vs other-mass 0.949. Correlational only; block IIA 0.14, so the geometry is not yet used. Product-family neurons: eta^2 selectivity only (no ablation effect).",
+ "key_question": "When the block becomes causal (IIA >= 0.5), does it keep this equivalence-preserving geometry (shared code across units) or does it split into unit routes as in the seed-700 network?",
+ "best_experiment": "Track equivalent vs other-mass block distance on the matched panel, per-unit-pair CKA, and the interaction share through the formation window; compare with the moment IIA crosses 0.5.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase; the only eligible targets are iia/ood_dev and there is no causal code to strengthen; the precursor showed early edits fail S2 and do not create codes faster than training.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

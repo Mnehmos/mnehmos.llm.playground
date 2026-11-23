@@ -1,0 +1,11 @@
+{
+ "what_changed": "Mass multiplicative (discrete-log) character at h rose 0.35 -> 0.47, the first sign of the circular calculator code; equivalent-pair block cosine dropped 0.996 -> 0.990 and different-mass 0.931 -> 0.918 (mass separation growing); interaction 0.40 -> 0.30. Accuracy flat 0.246, IIA 0.166. Gradient groups agree (+0.13 to +0.48).",
+ "hypothesis": "Formation is approaching: in the seed-700 network the discrete-log circle formed 1-2 checkpoints before block IIA rose (doc 25). Prediction (falsifiable): block IIA(M) will exceed 0.3 within 300 steps and the multiplicative character will exceed 0.7 before or with it.",
+ "evidence": "Observation: mult-char trajectory 0.60 (100) -> 0.45 -> 0.40 -> 0.39 -> 0.35 -> 0.47; precursor pattern from doc 25 (different seed, correlation only). No causal change yet (all IIA 0.07-0.17).",
+ "key_question": "Will the circle form before causal use again (a reproducible ordering across seeds), and will the route split accompany it?",
+ "best_experiment": "Keep the Level-1 audit; at the first checkpoint with block IIA >= 0.3 run the head anatomy inspection (which heads write mass, per-unit CKA per head) to compare with seed 700's head-0/head-2 story.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase; prediction registered above so that the formation-window decision can be judged against it.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

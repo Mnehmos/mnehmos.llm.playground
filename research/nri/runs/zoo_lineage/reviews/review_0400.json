@@ -1,0 +1,11 @@
+{
+ "what_changed": "Block interaction share jumped 0.05 -> 0.36 while per-unit CKA rose to 0.996; acceleration became more separable at the block (other-acc cosine 0.928 -> 0.971, i.e. the block now IGNORES acceleration more). MLP: mass-family neurons appear (M 20, A 12) alongside m/a input families; the product family shrank 83 -> 40. attn2.h1 again the main IIT-loss reducer (-0.033).",
+ "hypothesis": "(1) The interaction jump with near-perfect per-unit CKA means the units share the SHAPE of the mass configuration but at unit-specific offsets/rotations: a route split can begin invisibly to CKA. (2) The 0.88-0.90 equivalent-pair agreement is not evidence of a mass variable: it reflects coarse output statistics (zero-status), because nothing is causally used yet.",
+ "evidence": "Causal (Level 2, OBS interchange): acceleration at its layer-1 tokens 0.059, output factor S at dims 16-63 0.064, mass at its layer-1 tokens 0.068, block 0.153 -> no variable is causally used anywhere (all near the chance-like floor). Observation: CKA is rotation/scale invariant by construction, interaction is not; both measured on OBS. Speculation: zero-status explanation of equivalence agreement (to be checked once accuracy rises above the zero-case share).",
+ "key_question": "Is the rising interaction an early unit-specific rotation that will become the formation-time route split, or noise in a block that still carries little mass variance?",
+ "best_experiment": "Watch interaction and pairwise per-unit CKA after normalising for mass-variance magnitude; the onset of causal IIA will show whether the split carries into the causal code.",
+ "intervene": "no",
+ "intervention_rationale": "Early phase and no causal variable exists (Level-2 tests); an interaction-removal edit now would act on noise and is not eligible (early-phase targets are iia/ood_dev only).",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}
