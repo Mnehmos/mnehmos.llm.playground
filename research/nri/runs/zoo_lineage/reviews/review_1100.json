@@ -1,0 +1,11 @@
+{
+ "what_changed": "Formation began: mass multiplicative character at h jumped 0.31 -> 0.81 (discrete-log circle formed in one interval); accuracy 0.27 -> 0.31; F decodable in the MLP 0.10 -> 0.17; three MLP clusters became causally supported (partial) by ablation for the first time; the block geometry reorganised wholesale (equivalent-pair cosine 0.94 -> 0.71, different masses 0.84 -> 0.63); large weight motion (W_out 0.67, W_in 0.43, attn2.qkv 0.35).",
+ "hypothesis": "(1) The mass unit conversion is learned before the acceleration conversion (mass is the declared variable). (2) Unit 1 (scale 5) is converted differently at the layer-1 value token in this seed as in seed 700, so the unit-1 route split is a property of the task's arithmetic, not of one seed. (3) No head is yet the dominant mass writer; one will be selected in the next few hundred steps.",
+ "evidence": "Level 2 predictions: agreement with 'acceleration unit ignored' 0.316 = F 0.311 > 'mass unit ignored' 0.274 (causal-behavioural, supports 1). Level 2 head anatomy: value-token per-unit CKA 01 0.84 vs 02 0.92 (correlational, supports 2, cross-seed with doc 25/27); heads 0, 1, 3 each attend ~0.3 to the mass value; head 0 writes the most mass variance (interaction 0.34; CKA 0.09-0.30 across units), head 1 shares units 0/2 (0.77) but not unit 1 (0.34). Block IIA still 0.16 -> the circle is not yet used through the block.",
+ "key_question": "Which head will become the dominant mass writer, and will it inherit the unit-1 split from the value token?",
+ "best_experiment": "Next checkpoint: head anatomy again plus block IIA; a head whose mass variance grows fastest and whose attention to the mass value exceeds 0.6 is the writer; compare its per-unit CKA with the value token's.",
+ "intervene": "no",
+ "intervention_rationale": "Still early phase (VAL IIA < 0.5). No defect is established: in seed 700 the unit-1 route was the organisation that persisted, and removing it later cost generalisation (docs 25, 27). An edit now would also hit a writer that has not yet been selected.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

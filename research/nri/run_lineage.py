@@ -396,7 +396,48 @@ def tool_predictions(args):
     return out
 
 
-TOOLS = dict(predictions=tool_predictions, heads=tool_heads, ablate=tool_ablate, patch=tool_patch, sharpness=tool_sharpness, feature=tool_feature,
+@torch.no_grad()
+def tool_ood_locus(args):
+    """Read-only (added during the pilot at step 1,300; disclosed): where do held-out unit-value
+    combinations fail? Probes for canonical mass fitted on FIT are scored on OBS (ID) vs OOD_DEV at the
+    layer-1 value token and the block; plus a label-using diagnostic (D1-style): replace the OOD block
+    by the FIT class mean of the TRUE mass and measure accuracy (would the downstream compute correctly
+    if mass were formed correctly?)."""
+    from nri import dimtask as T
+    d = AT.partition()
+    out = {}
+    for n in NETS:
+        m = load_live(n)["model"]
+        r = {}
+        cf = AT.capture(m, d["FIT"])
+        ff = AT.factors(d["FIT"])
+        idxf = torch.arange(len(ff["M"]))
+        for split in ("OBS", "OOD_DEV"):
+            lat = d[split]
+            c = AT.capture(m, lat)
+            fo = AT.factors(lat)
+            idx = torch.arange(len(fo["M"]))
+            rpf, rp = AT.role_pos(d["FIT"]), AT.role_pos(lat)
+            r[f"M_probe_value_token_{split}"] = round(AT.ridge_probe(cf["x1"][idxf, rpf["mval"]], ff["M"], c["x1"][idx, rp["mval"]], fo["M"], T.P), 4)
+            r[f"M_probe_block_{split}"] = round(AT.ridge_probe(cf["h"][:, AT.BLK], ff["M"], c["h"][:, AT.BLK], fo["M"], T.P), 4)
+            r[f"A_probe_value_token_{split}"] = round(AT.ridge_probe(cf["x1"][idxf, AT.role_pos(d["FIT"])["aval"]], ff["A"], c["x1"][idx, rp["aval"]], fo["A"], T.P), 4)
+            mu = AT.class_means(cf["h"][:, AT.BLK], ff["M"], T.P)
+            h = c["h"].clone()
+            h[:, AT.BLK] = mu[fo["M"]]
+            r[f"acc_{split}"] = round(AT.accuracy(m, lat, c), 4)
+            r[f"acc_{split}_block_set_to_true_mass_mean"] = round((m.head_from_resid(h).argmax(-1) == T.build(lat).y).float().mean().item(), 4)
+        ood = d["OOD_DEV"]
+        mass_ood = (ood["mu"] == 2) & (ood["m"] >= 9)
+        acc_ood = (ood["au"] == 2) & (ood["a"] >= 9)
+        pred = AT.capture(m, ood)["logits"].argmax(-1)
+        y = T.build(ood).y
+        r["acc_OOD_DEV_mass_held_out_only"] = round((pred == y)[mass_ood & ~acc_ood].float().mean().item(), 4)
+        r["acc_OOD_DEV_acc_held_out_only"] = round((pred == y)[acc_ood & ~mass_ood].float().mean().item(), 4)
+        out[n] = r
+    return out
+
+
+TOOLS = dict(ood_locus=tool_ood_locus, predictions=tool_predictions, heads=tool_heads, ablate=tool_ablate, patch=tool_patch, sharpness=tool_sharpness, feature=tool_feature,
              features=tool_features, dryrun=tool_dryrun)
 
 

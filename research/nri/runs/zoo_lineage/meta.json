@@ -1,5 +1,5 @@
 {
- "step": 1000,
+ "step": 1500,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -42,6 +42,26 @@
   },
   "1000": {
    "key_question": "Which candidate function will rise above baseline first, and does the shared block geometry need to dissolve before the causal mass code can form?",
+   "intervene": "no"
+  },
+  "1100": {
+   "key_question": "Which head will become the dominant mass writer, and will it inherit the unit-1 split from the value token?",
+   "intervene": "no"
+  },
+  "1200": {
+   "key_question": "Does the editable code at formation survive consolidation, or does the interaction between mass and unit route grow and erase editability (the seed-700 trajectory)?",
+   "intervene": "no"
+  },
+  "1300": {
+   "key_question": "Can the layer-1 binding be made compositional (value code rotated by unit scale) so held-out combinations form correct mass, without losing what the network already does?",
+   "intervene": "no"
+  },
+  "1400": {
+   "key_question": "Is there any organisational defect worth repairing, or only the generalisation gap, which is upstream and outside the registered primitives' reach?",
+   "intervene": "no"
+  },
+  "1500": {
+   "key_question": "What information does the residual interaction carry that helps held-out combinations, given that the held-out failure is mostly upstream (step 1,300)?",
    "intervene": "no"
   }
  },
@@ -116,12 +136,52 @@
     "args": {},
     "cpu_s": 1.1
    }
+  ],
+  "1100": [
+   {
+    "tool": "predictions",
+    "args": {},
+    "cpu_s": 1.1
+   },
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "1200": [
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.2
+   }
+  ],
+  "1300": [
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.2
+   },
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
+  ],
+  "1500": [
+   {
+    "tool": "dryrun",
+    "args": {
+     "proposal": "runs/zoo_lineage/proposals/p1500_interaction_dryrun.json"
+    },
+    "cpu_s": 53.2
+   }
   ]
  },
  "ledger": {
-  "train_cpu_s": 123.54127037299999,
+  "train_cpu_s": 195.07587682700003,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
-  "inspect_cpu_s": 48.345716409000005
+  "inspect_cpu_s": 107.55432202300001
  }
 }

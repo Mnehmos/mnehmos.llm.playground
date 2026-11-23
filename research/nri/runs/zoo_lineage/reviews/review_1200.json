@@ -1,0 +1,11 @@
+{
+ "what_changed": "Rapid formation: accuracy 0.31 -> 0.61, OOD_DEV 0.16 -> 0.31, block IIA 0.16 -> 0.48, copy 0.18 -> 0.50, pooled inversion edit 0.10 -> 0.35, mult-char 0.81 -> 0.95, M kappa at the value token 0.62 -> 0.84, M-family MLP neurons 26 -> 98, F decodable in the MLP 0.39. Different-mass block cosine fell 0.63 -> 0.39 while equivalents rose 0.71 -> 0.84 (a canonical mass axis is forming in the block). Neuron identities churned (10 stable).",
+ "hypothesis": "(1) Head 0 has been selected as the dominant mass writer (as in seed 700) with head 3 as a secondary writer. (2) My step-1,100 claim that the unit-1 split is a cross-seed property is REFUTED at the writer level: head 0's code separates unit 2 (CKA 0-1 0.74, 0-2 0.44, 1-2 0.11). (3) This network forms a much more editable mass code than seed 700 (0.35 vs 0.04-0.07 at the same stage); prediction: editability will FALL as the interaction (0.29 now; head-0 0.54, head-3 0.60) consolidates, as happened in seed 700 (0.45 -> 0.66).",
+ "evidence": "Level 2 head anatomy (causal-adjacent): head 0 attends 0.52 to the mass value, mass between-class variance 28.8 (head 3 9.6, heads 1-2 <= 1.7); head-0 single-head IIA 0.14 (only head above floor). Value-token per-unit CKA became uniform (0.72-0.76). Causal: block IIA 0.48, copy 0.50; pooled persistent edit 0.35 (OBS). Prediction (3) is testable at the next checkpoints.",
+ "key_question": "Does the editable code at formation survive consolidation, or does the interaction between mass and unit route grow and erase editability (the seed-700 trajectory)?",
+ "best_experiment": "Track pooled edit, interaction (block and per head) and head-0 per-unit CKA over 1,300-1,600. If editability falls while interaction rises, the window to act is now-to-1,400, and a dry run of an interaction-limiting, route-preserving edit (with the stability lookahead) is the experiment.",
+ "intervene": "no",
+ "intervention_rationale": "VAL phase is still early (IIA < 0.5) so only iia/ood_dev targets are eligible, and there is no evidence yet that the current organisation is defective (editability is high). Wait one checkpoint to see whether prediction (3) holds before acting.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

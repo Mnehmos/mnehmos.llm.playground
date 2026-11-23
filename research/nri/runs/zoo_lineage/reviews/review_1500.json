@@ -1,0 +1,11 @@
+{
+ "what_changed": "Mature: accuracy 0.995, OOD_DEV 0.68, block IIA 0.90 (mass in the block now causally verified), pooled persistent edit 0.89, copy 0.99; interaction flat 0.385; MLP identities stable (226); weight motion slowing (largest update 0.13).",
+ "hypothesis": "The remaining mass x route interaction in the block is not noise: it carries information the network uses for held-out unit-value combinations, as in seed 700. Prediction written in the dry-run proposal: interaction removable with OOD_DEV within +-0.01; falsifier: OOD_DEV falls by more than 0.01.",
+ "evidence": "Level 2 causal dry run on OBS (installs nothing; p1500_interaction_dryrun.json; 2% of model norm; attention + MLP; KL, IIT, off-manifold KL and route-probe guards): interaction -0.222, editability +0.038, IIA +0.004, keep 0.998, route information +0.287, OOD_DEV -0.017 -> FALSIFIER MET. Cross-seed: the doc-27 precursor (seed 700) showed the same OOD cost for post-formation interaction removal.",
+ "key_question": "What information does the residual interaction carry that helps held-out combinations, given that the held-out failure is mostly upstream (step 1,300)?",
+ "best_experiment": "Compare, for held-out vs ID examples, the per-unit block offsets (route-specific cell means) the network produces; if held-out mass is placed near the correct unit-specific cell rather than the pooled mean, the interaction encodes unit-specific placement that partly compensates for wrong fusion.",
+ "intervene": "no",
+ "intervention_rationale": "The only candidate with a real organisational effect fails the generalisation check (S3) on OBS; editability is already 0.89, so there is no editability defect to repair. A dry run answered the question without risking the trajectory.",
+ "previous_interventions": "none (dry runs only)",
+ "investigation_level": 2
+}
