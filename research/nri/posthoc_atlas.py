@@ -90,5 +90,44 @@ def main():
     (OUT / "posthoc.json").write_text(json.dumps(rows, indent=1))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(__import__("sys").argv) == 1:
     main()
+
+
+def p4():
+    """P4: after layer 1, is the unit already fused into the VALUE token? Swap only the layer-1
+    residual at the mass-value position (same-order pairs) and score against three hypotheses:
+    the source's canonical mass M (fused), the source's raw value in the base's unit 'm'
+    (unfused), and the base answer (ignored)."""
+    d = AT.partition()
+    obs, src = d["OBS"], d["OBS_src_same_order"]
+    out = []
+    for s in (600, 800, 900, 1000, 1100, 1200, 1500, 3000, 6000):
+        m = RA.load_model("control", s)
+        with torch.no_grad():
+            cs = AT.capture(m, src)
+            rp = AT.role_pos(obs)
+            idx = torch.arange(len(obs["m"]))
+
+            def f(x1, pos):
+                x1 = x1.clone()
+                x1[idx, pos] = cs["x1"][idx, pos]
+                return x1
+            y0 = AT.T.build(obs).y
+            r = dict(step=s)
+            for tag, pos in (("value_token", rp["mval"]), ("unit_token", rp["munit"])):
+                pred = AT.capture(m, obs, {"x1": lambda x, p=pos: f(x, p)})["logits"].argmax(-1)
+                for hyp in ("M", "m", "mu"):
+                    cf = AT.counterfactual(obs, src, hyp)
+                    el = cf != y0
+                    r[f"{tag}->{hyp}"] = round((pred == cf)[el].float().mean().item(), 3)
+                r[f"{tag}->unchanged"] = round((pred == y0).float().mean().item(), 3)
+        out.append(r)
+        print(r, flush=True)
+    return out
+
+
+if __name__ == "__main__" and len(__import__("sys").argv) > 1 and __import__("sys").argv[1] == "p4":
+    res = json.loads((OUT / "posthoc.json").read_text())
+    res["P4_fusion"] = p4()
+    (OUT / "posthoc.json").write_text(json.dumps(res, indent=1))

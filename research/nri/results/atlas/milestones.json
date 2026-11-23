@@ -1,0 +1,1697 @@
+{
+ "control": {
+  "milestones": [
+   0,
+   100,
+   500,
+   600,
+   700,
+   800,
+   900,
+   1000,
+   1100,
+   1200,
+   1300,
+   1400,
+   1500,
+   2000,
+   3000,
+   4500,
+   6000
+  ],
+  "rows": [
+   {
+    "step": 0,
+    "das_iia_M": 0.0898035541176796,
+    "das_block_overlap_M": 0.2643577456474304,
+    "edit_das_M_intended": 0.0803571417927742,
+    "edit_das_M_wrong": 0.05535714328289032,
+    "das_iia_A": 0.08555657416582108,
+    "das_block_overlap_A": 0.2380436360836029,
+    "edit_das_A_intended": 0.05535714328289032,
+    "edit_das_A_wrong": 0.08214285969734192,
+    "D1_acc_without_route_variance_obs": 0.0699300691485405,
+    "acc_obs": 0.07226107269525528,
+    "D1_acc_without_route_variance_ood_dev": 0.07870370149612427,
+    "acc_ood_dev": 0.0833333358168602,
+    "ablate_family_F": {
+     "n": 1,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_MA": {
+     "n": 3,
+     "acc": 0.07148407399654388
+    },
+    "ablate_family_a": {
+     "n": 37,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_au": {
+     "n": 18,
+     "acc": 0.0699300691485405
+    },
+    "ablate_family_dead": {
+     "n": 107,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_fu": {
+     "n": 25,
+     "acc": 0.0683760717511177
+    },
+    "ablate_family_m": {
+     "n": 26,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_mixed": {
+     "n": 31,
+     "acc": 0.0699300691485405
+    },
+    "ablate_family_route": {
+     "n": 8,
+     "acc": 0.0699300691485405
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.09261186420917511,
+    "edit_block_inv_intended": 0.0803571417927742,
+    "edit_block_inv_wrong": 0.05535714328289032
+   },
+   {
+    "step": 100,
+    "das_iia_M": 0.1487371325492859,
+    "das_block_overlap_M": 0.2713317275047302,
+    "edit_das_M_intended": 0.0982142835855484,
+    "edit_das_M_wrong": 0.09642857313156128,
+    "das_iia_A": 0.1435142606496811,
+    "das_block_overlap_A": 0.23483186960220337,
+    "edit_das_A_intended": 0.09642857313156128,
+    "edit_das_A_wrong": 0.10357142984867096,
+    "D1_acc_without_route_variance_obs": 0.2533022463321686,
+    "acc_obs": 0.249417245388031,
+    "D1_acc_without_route_variance_ood_dev": 0.17245370149612427,
+    "acc_ood_dev": 0.1770833283662796,
+    "ablate_family_F": {
+     "n": 36,
+     "acc": 0.24630925059318542
+    },
+    "ablate_family_MA": {
+     "n": 71,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_a": {
+     "n": 7,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_dead": {
+     "n": 98,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_m": {
+     "n": 12,
+     "acc": 0.2486402541399002
+    },
+    "ablate_family_mixed": {
+     "n": 31,
+     "acc": 0.24630925059318542
+    },
+    "edit_block_add1_intended": 0.08428720384836197,
+    "edit_block_add1_wrong": 0.08844953030347824,
+    "edit_block_inv_intended": 0.10000000149011612,
+    "edit_block_inv_wrong": 0.10178571194410324
+   },
+   {
+    "step": 500,
+    "das_iia_M": 0.15247894823551178,
+    "das_block_overlap_M": 0.265432208776474,
+    "edit_das_M_intended": 0.07857143133878708,
+    "edit_das_M_wrong": 0.12321428209543228,
+    "das_iia_A": 0.16743330657482147,
+    "das_block_overlap_A": 0.22801725566387177,
+    "edit_das_A_intended": 0.12321428209543228,
+    "edit_das_A_wrong": 0.0803571417927742,
+    "D1_acc_without_route_variance_obs": 0.25874125957489014,
+    "acc_obs": 0.24786324799060822,
+    "D1_acc_without_route_variance_ood_dev": 0.1493055522441864,
+    "acc_ood_dev": 0.15162037312984467,
+    "ablate_family_A": {
+     "n": 26,
+     "acc": 0.2525252401828766
+    },
+    "ablate_family_F": {
+     "n": 24,
+     "acc": 0.25485625863075256
+    },
+    "ablate_family_M": {
+     "n": 8,
+     "acc": 0.2533022463321686
+    },
+    "ablate_family_MA": {
+     "n": 34,
+     "acc": 0.25563326478004456
+    },
+    "ablate_family_a": {
+     "n": 35,
+     "acc": 0.25641027092933655
+    },
+    "ablate_family_dead": {
+     "n": 76,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.24630925059318542
+    },
+    "ablate_family_m": {
+     "n": 47,
+     "acc": 0.2602952718734741
+    },
+    "ablate_family_mixed": {
+     "n": 5,
+     "acc": 0.24708624184131622
+    },
+    "edit_block_add1_intended": 0.08116545528173447,
+    "edit_block_add1_wrong": 0.07492195814847946,
+    "edit_block_inv_intended": 0.0803571417927742,
+    "edit_block_inv_wrong": 0.125
+   },
+   {
+    "step": 600,
+    "das_iia_M": 0.16651076078414917,
+    "das_block_overlap_M": 0.300006628036499,
+    "edit_das_M_intended": 0.09107142686843872,
+    "edit_das_M_wrong": 0.10357142984867096,
+    "das_iia_A": 0.17663294076919556,
+    "das_block_overlap_A": 0.22797498106956482,
+    "edit_das_A_intended": 0.10357142984867096,
+    "edit_das_A_wrong": 0.09107142686843872,
+    "D1_acc_without_route_variance_obs": 0.24320124089717865,
+    "acc_obs": 0.24786324799060822,
+    "D1_acc_without_route_variance_ood_dev": 0.16087962687015533,
+    "acc_ood_dev": 0.1666666716337204,
+    "ablate_family_A": {
+     "n": 18,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_F": {
+     "n": 25,
+     "acc": 0.24320124089717865
+    },
+    "ablate_family_M": {
+     "n": 15,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_MA": {
+     "n": 30,
+     "acc": 0.24242424964904785
+    },
+    "ablate_family_a": {
+     "n": 44,
+     "acc": 0.2525252401828766
+    },
+    "ablate_family_dead": {
+     "n": 77,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_fu": {
+     "n": 5,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_m": {
+     "n": 30,
+     "acc": 0.2486402541399002
+    },
+    "ablate_family_mixed": {
+     "n": 12,
+     "acc": 0.24708624184131622
+    },
+    "edit_block_add1_intended": 0.07284078747034073,
+    "edit_block_add1_wrong": 0.0770031213760376,
+    "edit_block_inv_intended": 0.09107142686843872,
+    "edit_block_inv_wrong": 0.10357142984867096
+   },
+   {
+    "step": 700,
+    "das_iia_M": 0.1552853137254715,
+    "das_block_overlap_M": 0.2885030508041382,
+    "edit_das_M_intended": 0.06964285671710968,
+    "edit_das_M_wrong": 0.08214285969734192,
+    "das_iia_A": 0.1665133386850357,
+    "das_block_overlap_A": 0.23182934522628784,
+    "edit_das_A_intended": 0.08214285969734192,
+    "edit_das_A_wrong": 0.0714285746216774,
+    "D1_acc_without_route_variance_obs": 0.25407925248146057,
+    "acc_obs": 0.250971257686615,
+    "D1_acc_without_route_variance_ood_dev": 0.15625,
+    "acc_ood_dev": 0.16550925374031067,
+    "ablate_family_A": {
+     "n": 11,
+     "acc": 0.2649572789669037
+    },
+    "ablate_family_F": {
+     "n": 11,
+     "acc": 0.250194251537323
+    },
+    "ablate_family_M": {
+     "n": 12,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_MA": {
+     "n": 31,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_a": {
+     "n": 52,
+     "acc": 0.2602952718734741
+    },
+    "ablate_family_dead": {
+     "n": 67,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_m": {
+     "n": 35,
+     "acc": 0.2610722482204437
+    },
+    "ablate_family_mixed": {
+     "n": 37,
+     "acc": 0.250971257686615
+    },
+    "edit_block_add1_intended": 0.07075962424278259,
+    "edit_block_add1_wrong": 0.0832466185092926,
+    "edit_block_inv_intended": 0.0714285746216774,
+    "edit_block_inv_wrong": 0.08214285969734192
+   },
+   {
+    "step": 800,
+    "das_iia_M": 0.16089802980422974,
+    "das_block_overlap_M": 0.3199588656425476,
+    "edit_das_M_intended": 0.06071428582072258,
+    "edit_das_M_wrong": 0.05892857164144516,
+    "das_iia_A": 0.16467341780662537,
+    "das_block_overlap_A": 0.2261086404323578,
+    "edit_das_A_intended": 0.06964285671710968,
+    "edit_das_A_wrong": 0.06428571790456772,
+    "D1_acc_without_route_variance_obs": 0.32400932908058167,
+    "acc_obs": 0.34343433380126953,
+    "D1_acc_without_route_variance_ood_dev": 0.16435185074806213,
+    "acc_ood_dev": 0.1770833283662796,
+    "ablate_family_A": {
+     "n": 6,
+     "acc": 0.34110334515571594
+    },
+    "ablate_family_F": {
+     "n": 8,
+     "acc": 0.3465423583984375
+    },
+    "ablate_family_M": {
+     "n": 19,
+     "acc": 0.34188035130500793
+    },
+    "ablate_family_MA": {
+     "n": 12,
+     "acc": 0.34032633900642395
+    },
+    "ablate_family_a": {
+     "n": 43,
+     "acc": 0.3465423583984375
+    },
+    "ablate_family_dead": {
+     "n": 45,
+     "acc": 0.34343433380126953
+    },
+    "ablate_family_m": {
+     "n": 28,
+     "acc": 0.34032633900642395
+    },
+    "ablate_family_mixed": {
+     "n": 95,
+     "acc": 0.2929292917251587
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.06659729778766632,
+    "edit_block_inv_intended": 0.06428571790456772,
+    "edit_block_inv_wrong": 0.0535714291036129
+   },
+   {
+    "step": 900,
+    "das_iia_M": 0.3058933615684509,
+    "das_block_overlap_M": 0.41037601232528687,
+    "edit_das_M_intended": 0.02500000037252903,
+    "edit_das_M_wrong": 0.03035714291036129,
+    "das_iia_A": 0.19687213003635406,
+    "das_block_overlap_A": 0.22070004045963287,
+    "edit_das_A_intended": 0.04107142984867096,
+    "edit_das_A_wrong": 0.03035714291036129,
+    "D1_acc_without_route_variance_obs": 0.42191141843795776,
+    "acc_obs": 0.5135974884033203,
+    "D1_acc_without_route_variance_ood_dev": 0.28356480598449707,
+    "acc_ood_dev": 0.26157405972480774,
+    "ablate_family_A": {
+     "n": 7,
+     "acc": 0.49494948983192444
+    },
+    "ablate_family_F": {
+     "n": 8,
+     "acc": 0.4864024817943573
+    },
+    "ablate_family_M": {
+     "n": 28,
+     "acc": 0.47863247990608215
+    },
+    "ablate_family_MA": {
+     "n": 5,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_a": {
+     "n": 30,
+     "acc": 0.5089355111122131
+    },
+    "ablate_family_dead": {
+     "n": 39,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_m": {
+     "n": 22,
+     "acc": 0.4747474789619446
+    },
+    "ablate_family_mixed": {
+     "n": 116,
+     "acc": 0.32400932908058167
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.06867846101522446,
+    "edit_block_inv_intended": 0.01785714365541935,
+    "edit_block_inv_wrong": 0.03214285895228386
+   },
+   {
+    "step": 1000,
+    "das_iia_M": 0.7202993631362915,
+    "das_block_overlap_M": 0.4399709403514862,
+    "edit_das_M_intended": 0.04285714402794838,
+    "edit_das_M_wrong": 0.04821428656578064,
+    "das_iia_A": 0.22355106472969055,
+    "das_block_overlap_A": 0.21501365303993225,
+    "edit_das_A_intended": 0.0053571430034935474,
+    "edit_das_A_wrong": 0.01785714365541935,
+    "D1_acc_without_route_variance_obs": 0.6682206392288208,
+    "acc_obs": 0.7948718070983887,
+    "D1_acc_without_route_variance_ood_dev": 0.5972222089767456,
+    "acc_ood_dev": 0.45949074625968933,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.7909867763519287
+    },
+    "ablate_family_F": {
+     "n": 6,
+     "acc": 0.7987567782402039
+    },
+    "ablate_family_M": {
+     "n": 35,
+     "acc": 0.6340326070785522
+    },
+    "ablate_family_a": {
+     "n": 31,
+     "acc": 0.6379176378250122
+    },
+    "ablate_family_dead": {
+     "n": 29,
+     "acc": 0.7948718070983887
+    },
+    "ablate_family_m": {
+     "n": 17,
+     "acc": 0.6961926817893982
+    },
+    "ablate_family_mixed": {
+     "n": 135,
+     "acc": 0.3714063763618469
+    },
+    "edit_block_add1_intended": 0.09781477600336075,
+    "edit_block_add1_wrong": 0.05931321531534195,
+    "edit_block_inv_intended": 0.0357142873108387,
+    "edit_block_inv_wrong": 0.03928571566939354
+   },
+   {
+    "step": 1100,
+    "das_iia_M": 0.840972900390625,
+    "das_block_overlap_M": 0.41979682445526123,
+    "edit_das_M_intended": 0.07857143133878708,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18951241672039032,
+    "das_block_overlap_A": 0.2333982139825821,
+    "edit_das_A_intended": 0.0017857142956927419,
+    "edit_das_A_wrong": 0.012500000186264515,
+    "D1_acc_without_route_variance_obs": 0.7956488132476807,
+    "acc_obs": 0.9463869333267212,
+    "D1_acc_without_route_variance_ood_dev": 0.7951388955116272,
+    "acc_ood_dev": 0.5300925970077515,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.9448329210281372
+    },
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.9347319602966309
+    },
+    "ablate_family_M": {
+     "n": 57,
+     "acc": 0.4895104765892029
+    },
+    "ablate_family_MA": {
+     "n": 1,
+     "acc": 0.9463869333267212
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.746697723865509
+    },
+    "ablate_family_dead": {
+     "n": 27,
+     "acc": 0.9463869333267212
+    },
+    "ablate_family_m": {
+     "n": 18,
+     "acc": 0.8741258978843689
+    },
+    "ablate_family_mixed": {
+     "n": 123,
+     "acc": 0.3916083872318268
+    },
+    "edit_block_add1_intended": 0.10822060704231262,
+    "edit_block_add1_wrong": 0.07492195814847946,
+    "edit_block_inv_intended": 0.0714285746216774,
+    "edit_block_inv_wrong": 0.06071428582072258
+   },
+   {
+    "step": 1200,
+    "das_iia_M": 0.9223573207855225,
+    "das_block_overlap_M": 0.40050116181373596,
+    "edit_das_M_intended": 0.08392857015132904,
+    "edit_das_M_wrong": 0.06607142835855484,
+    "das_iia_A": 0.181232750415802,
+    "das_block_overlap_A": 0.2326410710811615,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0017857142956927419,
+    "D1_acc_without_route_variance_obs": 0.8430458307266235,
+    "acc_obs": 0.9898989796638489,
+    "D1_acc_without_route_variance_ood_dev": 0.9016203880310059,
+    "acc_ood_dev": 0.6550925970077515,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.9906759858131409
+    },
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9821289777755737
+    },
+    "ablate_family_M": {
+     "n": 58,
+     "acc": 0.5695415735244751
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.7808857560157776
+    },
+    "ablate_family_dead": {
+     "n": 25,
+     "acc": 0.9898989796638489
+    },
+    "ablate_family_m": {
+     "n": 22,
+     "acc": 0.8251748085021973
+    },
+    "ablate_family_mixed": {
+     "n": 120,
+     "acc": 0.440559446811676
+    },
+    "edit_block_add1_intended": 0.09573361277580261,
+    "edit_block_add1_wrong": 0.0738813728094101,
+    "edit_block_inv_intended": 0.06785714626312256,
+    "edit_block_inv_wrong": 0.05000000074505806
+   },
+   {
+    "step": 1300,
+    "das_iia_M": 0.9298409819602966,
+    "das_block_overlap_M": 0.41205543279647827,
+    "edit_das_M_intended": 0.10357142984867096,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18767249584197998,
+    "das_block_overlap_A": 0.23769511282444,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0017857142956927419,
+    "D1_acc_without_route_variance_obs": 0.8850038647651672,
+    "acc_obs": 0.9953380227088928,
+    "D1_acc_without_route_variance_ood_dev": 0.9305555820465088,
+    "acc_ood_dev": 0.65625,
+    "ablate_family_A": {
+     "n": 1,
+     "acc": 0.99611496925354
+    },
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.9906759858131409
+    },
+    "ablate_family_M": {
+     "n": 71,
+     "acc": 0.5547785758972168
+    },
+    "ablate_family_a": {
+     "n": 25,
+     "acc": 0.8772338628768921
+    },
+    "ablate_family_dead": {
+     "n": 24,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_m": {
+     "n": 20,
+     "acc": 0.8430458307266235
+    },
+    "ablate_family_mixed": {
+     "n": 112,
+     "acc": 0.3597513735294342
+    },
+    "edit_block_add1_intended": 0.11966701596975327,
+    "edit_block_add1_wrong": 0.06347554922103882,
+    "edit_block_inv_intended": 0.09464285522699356,
+    "edit_block_inv_wrong": 0.05714285746216774
+   },
+   {
+    "step": 1400,
+    "das_iia_M": 0.937324583530426,
+    "das_block_overlap_M": 0.39898741245269775,
+    "edit_das_M_intended": 0.08571428805589676,
+    "edit_das_M_wrong": 0.05714285746216774,
+    "das_iia_A": 0.17939282953739166,
+    "das_block_overlap_A": 0.24683880805969238,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9090909361839294,
+    "acc_obs": 0.999222993850708,
+    "D1_acc_without_route_variance_ood_dev": 0.9513888955116272,
+    "acc_ood_dev": 0.6921296119689941,
+    "ablate_family_F": {
+     "n": 2,
+     "acc": 0.998445987701416
+    },
+    "ablate_family_M": {
+     "n": 71,
+     "acc": 0.5236985087394714
+    },
+    "ablate_family_a": {
+     "n": 27,
+     "acc": 0.8174048066139221
+    },
+    "ablate_family_dead": {
+     "n": 23,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_m": {
+     "n": 29,
+     "acc": 0.7404817342758179
+    },
+    "ablate_family_mixed": {
+     "n": 104,
+     "acc": 0.41181039810180664
+    },
+    "edit_block_add1_intended": 0.1155046820640564,
+    "edit_block_add1_wrong": 0.07284078747034073,
+    "edit_block_inv_intended": 0.0892857164144516,
+    "edit_block_inv_wrong": 0.05535714328289032
+   },
+   {
+    "step": 1500,
+    "das_iia_M": 0.9382600784301758,
+    "das_block_overlap_M": 0.387519508600235,
+    "edit_das_M_intended": 0.09285714477300644,
+    "edit_das_M_wrong": 0.05000000074505806,
+    "das_iia_A": 0.1784728616476059,
+    "das_block_overlap_A": 0.2436254918575287,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9129759073257446,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9490740895271301,
+    "acc_ood_dev": 0.7094907164573669,
+    "ablate_family_A": {
+     "n": 1,
+     "acc": 1.0
+    },
+    "ablate_family_F": {
+     "n": 1,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 76,
+     "acc": 0.3916083872318268
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.8850038647651672
+    },
+    "ablate_family_dead": {
+     "n": 22,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 29,
+     "acc": 0.7373737096786499
+    },
+    "ablate_family_mixed": {
+     "n": 103,
+     "acc": 0.4296814203262329
+    },
+    "edit_block_add1_intended": 0.10926118493080139,
+    "edit_block_add1_wrong": 0.06971904635429382,
+    "edit_block_inv_intended": 0.0982142835855484,
+    "edit_block_inv_wrong": 0.0535714291036129
+   },
+   {
+    "step": 2000,
+    "das_iia_M": 0.937324583530426,
+    "das_block_overlap_M": 0.3936935365200043,
+    "edit_das_M_intended": 0.13571429252624512,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18951241672039032,
+    "das_block_overlap_A": 0.2553774118423462,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9160839319229126,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9178240895271301,
+    "acc_ood_dev": 0.6273148059844971,
+    "ablate_family_F": {
+     "n": 2,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 68,
+     "acc": 0.4560994505882263
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8515928387641907
+    },
+    "ablate_family_dead": {
+     "n": 25,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 32,
+     "acc": 0.6977466940879822
+    },
+    "ablate_family_mixed": {
+     "n": 108,
+     "acc": 0.36985236406326294
+    },
+    "edit_block_add1_intended": 0.11446409672498703,
+    "edit_block_add1_wrong": 0.0738813728094101,
+    "edit_block_inv_intended": 0.12142857164144516,
+    "edit_block_inv_wrong": 0.05178571492433548
+   },
+   {
+    "step": 3000,
+    "das_iia_M": 0.9382600784301758,
+    "das_block_overlap_M": 0.37749385833740234,
+    "edit_das_M_intended": 0.1428571492433548,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18031278252601624,
+    "das_block_overlap_A": 0.24595199525356293,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.937839925289154,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9629629850387573,
+    "acc_ood_dev": 0.7083333134651184,
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 72,
+     "acc": 0.42579641938209534
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8857808709144592
+    },
+    "ablate_family_dead": {
+     "n": 22,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 37,
+     "acc": 0.7249417304992676
+    },
+    "ablate_family_mixed": {
+     "n": 101,
+     "acc": 0.4172494113445282
+    },
+    "edit_block_add1_intended": 0.12278876453638077,
+    "edit_block_add1_wrong": 0.06867846101522446,
+    "edit_block_inv_intended": 0.1160714253783226,
+    "edit_block_inv_wrong": 0.04821428656578064
+   },
+   {
+    "step": 4500,
+    "das_iia_M": 0.9391955137252808,
+    "das_block_overlap_M": 0.37310266494750977,
+    "edit_das_M_intended": 0.1428571492433548,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.1904323846101761,
+    "das_block_overlap_A": 0.2512367367744446,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9448329210281372,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9675925970077515,
+    "acc_ood_dev": 0.7152777910232544,
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_M": {
+     "n": 74,
+     "acc": 0.3760683834552765
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8842268586158752
+    },
+    "ablate_family_dead": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 39,
+     "acc": 0.7171717286109924
+    },
+    "ablate_family_mixed": {
+     "n": 98,
+     "acc": 0.4289044141769409
+    },
+    "edit_block_add1_intended": 0.13007284700870514,
+    "edit_block_add1_wrong": 0.06451612710952759,
+    "edit_block_inv_intended": 0.125,
+    "edit_block_inv_wrong": 0.05178571492433548
+   },
+   {
+    "step": 6000,
+    "das_iia_M": 0.9391955137252808,
+    "das_block_overlap_M": 0.3726280927658081,
+    "edit_das_M_intended": 0.12678571045398712,
+    "edit_das_M_wrong": 0.05000000074505806,
+    "das_iia_A": 0.18583256006240845,
+    "das_block_overlap_A": 0.25256580114364624,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9448329210281372,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9710648059844971,
+    "acc_ood_dev": 0.71875,
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_M": {
+     "n": 73,
+     "acc": 0.3729603588581085
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8857808709144592
+    },
+    "ablate_family_dead": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 40,
+     "acc": 0.7140637040138245
+    },
+    "ablate_family_mixed": {
+     "n": 98,
+     "acc": 0.4289044141769409
+    },
+    "edit_block_add1_intended": 0.13215400278568268,
+    "edit_block_add1_wrong": 0.06555671244859695,
+    "edit_block_inv_intended": 0.11964285373687744,
+    "edit_block_inv_wrong": 0.05535714328289032
+   }
+  ],
+  "post_edit_rows": []
+ },
+ "supervised": {
+  "milestones": [
+   0,
+   100,
+   500,
+   600,
+   700,
+   800,
+   900,
+   1000,
+   1100,
+   1200,
+   1300,
+   1400,
+   1500,
+   2000,
+   3000,
+   4500,
+   6000
+  ],
+  "rows": [
+   {
+    "step": 0,
+    "das_iia_M": 0.0898035541176796,
+    "das_block_overlap_M": 0.2643577456474304,
+    "edit_das_M_intended": 0.0803571417927742,
+    "edit_das_M_wrong": 0.05535714328289032,
+    "das_iia_A": 0.08555657416582108,
+    "das_block_overlap_A": 0.2380436360836029,
+    "edit_das_A_intended": 0.05535714328289032,
+    "edit_das_A_wrong": 0.08214285969734192,
+    "D1_acc_without_route_variance_obs": 0.0699300691485405,
+    "acc_obs": 0.07226107269525528,
+    "D1_acc_without_route_variance_ood_dev": 0.07870370149612427,
+    "acc_ood_dev": 0.0833333358168602,
+    "ablate_family_F": {
+     "n": 1,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_MA": {
+     "n": 3,
+     "acc": 0.07148407399654388
+    },
+    "ablate_family_a": {
+     "n": 37,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_au": {
+     "n": 18,
+     "acc": 0.0699300691485405
+    },
+    "ablate_family_dead": {
+     "n": 107,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_fu": {
+     "n": 25,
+     "acc": 0.0683760717511177
+    },
+    "ablate_family_m": {
+     "n": 26,
+     "acc": 0.07226107269525528
+    },
+    "ablate_family_mixed": {
+     "n": 31,
+     "acc": 0.0699300691485405
+    },
+    "ablate_family_route": {
+     "n": 8,
+     "acc": 0.0699300691485405
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.09261186420917511,
+    "edit_block_inv_intended": 0.0803571417927742,
+    "edit_block_inv_wrong": 0.05535714328289032
+   },
+   {
+    "step": 100,
+    "das_iia_M": 0.1487371325492859,
+    "das_block_overlap_M": 0.2713317275047302,
+    "edit_das_M_intended": 0.0982142835855484,
+    "edit_das_M_wrong": 0.09642857313156128,
+    "das_iia_A": 0.1435142606496811,
+    "das_block_overlap_A": 0.23483186960220337,
+    "edit_das_A_intended": 0.09642857313156128,
+    "edit_das_A_wrong": 0.10357142984867096,
+    "D1_acc_without_route_variance_obs": 0.2533022463321686,
+    "acc_obs": 0.249417245388031,
+    "D1_acc_without_route_variance_ood_dev": 0.17245370149612427,
+    "acc_ood_dev": 0.1770833283662796,
+    "ablate_family_F": {
+     "n": 36,
+     "acc": 0.24630925059318542
+    },
+    "ablate_family_MA": {
+     "n": 71,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_a": {
+     "n": 7,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_dead": {
+     "n": 98,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.249417245388031
+    },
+    "ablate_family_m": {
+     "n": 12,
+     "acc": 0.2486402541399002
+    },
+    "ablate_family_mixed": {
+     "n": 31,
+     "acc": 0.24630925059318542
+    },
+    "edit_block_add1_intended": 0.08428720384836197,
+    "edit_block_add1_wrong": 0.08844953030347824,
+    "edit_block_inv_intended": 0.10000000149011612,
+    "edit_block_inv_wrong": 0.10178571194410324
+   },
+   {
+    "step": 500,
+    "das_iia_M": 0.15247894823551178,
+    "das_block_overlap_M": 0.265432208776474,
+    "edit_das_M_intended": 0.07857143133878708,
+    "edit_das_M_wrong": 0.12321428209543228,
+    "das_iia_A": 0.16743330657482147,
+    "das_block_overlap_A": 0.22801725566387177,
+    "edit_das_A_intended": 0.12321428209543228,
+    "edit_das_A_wrong": 0.0803571417927742,
+    "D1_acc_without_route_variance_obs": 0.25874125957489014,
+    "acc_obs": 0.24786324799060822,
+    "D1_acc_without_route_variance_ood_dev": 0.1493055522441864,
+    "acc_ood_dev": 0.15162037312984467,
+    "ablate_family_A": {
+     "n": 26,
+     "acc": 0.2525252401828766
+    },
+    "ablate_family_F": {
+     "n": 24,
+     "acc": 0.25485625863075256
+    },
+    "ablate_family_M": {
+     "n": 8,
+     "acc": 0.2533022463321686
+    },
+    "ablate_family_MA": {
+     "n": 34,
+     "acc": 0.25563326478004456
+    },
+    "ablate_family_a": {
+     "n": 35,
+     "acc": 0.25641027092933655
+    },
+    "ablate_family_dead": {
+     "n": 76,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.24630925059318542
+    },
+    "ablate_family_m": {
+     "n": 47,
+     "acc": 0.2602952718734741
+    },
+    "ablate_family_mixed": {
+     "n": 5,
+     "acc": 0.24708624184131622
+    },
+    "edit_block_add1_intended": 0.08116545528173447,
+    "edit_block_add1_wrong": 0.07492195814847946,
+    "edit_block_inv_intended": 0.0803571417927742,
+    "edit_block_inv_wrong": 0.125
+   },
+   {
+    "step": 600,
+    "das_iia_M": 0.16651076078414917,
+    "das_block_overlap_M": 0.300006628036499,
+    "edit_das_M_intended": 0.09107142686843872,
+    "edit_das_M_wrong": 0.10357142984867096,
+    "das_iia_A": 0.17663294076919556,
+    "das_block_overlap_A": 0.22797498106956482,
+    "edit_das_A_intended": 0.10357142984867096,
+    "edit_das_A_wrong": 0.09107142686843872,
+    "D1_acc_without_route_variance_obs": 0.24320124089717865,
+    "acc_obs": 0.24786324799060822,
+    "D1_acc_without_route_variance_ood_dev": 0.16087962687015533,
+    "acc_ood_dev": 0.1666666716337204,
+    "ablate_family_A": {
+     "n": 18,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_F": {
+     "n": 25,
+     "acc": 0.24320124089717865
+    },
+    "ablate_family_M": {
+     "n": 15,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_MA": {
+     "n": 30,
+     "acc": 0.24242424964904785
+    },
+    "ablate_family_a": {
+     "n": 44,
+     "acc": 0.2525252401828766
+    },
+    "ablate_family_dead": {
+     "n": 77,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_fu": {
+     "n": 5,
+     "acc": 0.24786324799060822
+    },
+    "ablate_family_m": {
+     "n": 30,
+     "acc": 0.2486402541399002
+    },
+    "ablate_family_mixed": {
+     "n": 12,
+     "acc": 0.24708624184131622
+    },
+    "edit_block_add1_intended": 0.07284078747034073,
+    "edit_block_add1_wrong": 0.0770031213760376,
+    "edit_block_inv_intended": 0.09107142686843872,
+    "edit_block_inv_wrong": 0.10357142984867096
+   },
+   {
+    "step": 700,
+    "das_iia_M": 0.1552853137254715,
+    "das_block_overlap_M": 0.2885030508041382,
+    "edit_das_M_intended": 0.06964285671710968,
+    "edit_das_M_wrong": 0.08214285969734192,
+    "das_iia_A": 0.1665133386850357,
+    "das_block_overlap_A": 0.23182934522628784,
+    "edit_das_A_intended": 0.08214285969734192,
+    "edit_das_A_wrong": 0.0714285746216774,
+    "D1_acc_without_route_variance_obs": 0.25407925248146057,
+    "acc_obs": 0.250971257686615,
+    "D1_acc_without_route_variance_ood_dev": 0.15625,
+    "acc_ood_dev": 0.16550925374031067,
+    "ablate_family_A": {
+     "n": 11,
+     "acc": 0.2649572789669037
+    },
+    "ablate_family_F": {
+     "n": 11,
+     "acc": 0.250194251537323
+    },
+    "ablate_family_M": {
+     "n": 12,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_MA": {
+     "n": 31,
+     "acc": 0.25407925248146057
+    },
+    "ablate_family_a": {
+     "n": 52,
+     "acc": 0.2602952718734741
+    },
+    "ablate_family_dead": {
+     "n": 67,
+     "acc": 0.250971257686615
+    },
+    "ablate_family_m": {
+     "n": 35,
+     "acc": 0.2610722482204437
+    },
+    "ablate_family_mixed": {
+     "n": 37,
+     "acc": 0.250971257686615
+    },
+    "edit_block_add1_intended": 0.07075962424278259,
+    "edit_block_add1_wrong": 0.0832466185092926,
+    "edit_block_inv_intended": 0.0714285746216774,
+    "edit_block_inv_wrong": 0.08214285969734192
+   },
+   {
+    "step": 800,
+    "das_iia_M": 0.16089802980422974,
+    "das_block_overlap_M": 0.3199588656425476,
+    "edit_das_M_intended": 0.06071428582072258,
+    "edit_das_M_wrong": 0.05892857164144516,
+    "das_iia_A": 0.16467341780662537,
+    "das_block_overlap_A": 0.2261086404323578,
+    "edit_das_A_intended": 0.06964285671710968,
+    "edit_das_A_wrong": 0.06428571790456772,
+    "D1_acc_without_route_variance_obs": 0.32400932908058167,
+    "acc_obs": 0.34343433380126953,
+    "D1_acc_without_route_variance_ood_dev": 0.16435185074806213,
+    "acc_ood_dev": 0.1770833283662796,
+    "ablate_family_A": {
+     "n": 6,
+     "acc": 0.34110334515571594
+    },
+    "ablate_family_F": {
+     "n": 8,
+     "acc": 0.3465423583984375
+    },
+    "ablate_family_M": {
+     "n": 19,
+     "acc": 0.34188035130500793
+    },
+    "ablate_family_MA": {
+     "n": 12,
+     "acc": 0.34032633900642395
+    },
+    "ablate_family_a": {
+     "n": 43,
+     "acc": 0.3465423583984375
+    },
+    "ablate_family_dead": {
+     "n": 45,
+     "acc": 0.34343433380126953
+    },
+    "ablate_family_m": {
+     "n": 28,
+     "acc": 0.34032633900642395
+    },
+    "ablate_family_mixed": {
+     "n": 95,
+     "acc": 0.2929292917251587
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.06659729778766632,
+    "edit_block_inv_intended": 0.06428571790456772,
+    "edit_block_inv_wrong": 0.0535714291036129
+   },
+   {
+    "step": 900,
+    "das_iia_M": 0.3058933615684509,
+    "das_block_overlap_M": 0.41037601232528687,
+    "edit_das_M_intended": 0.02500000037252903,
+    "edit_das_M_wrong": 0.03035714291036129,
+    "das_iia_A": 0.19687213003635406,
+    "das_block_overlap_A": 0.22070004045963287,
+    "edit_das_A_intended": 0.04107142984867096,
+    "edit_das_A_wrong": 0.03035714291036129,
+    "D1_acc_without_route_variance_obs": 0.42191141843795776,
+    "acc_obs": 0.5135974884033203,
+    "D1_acc_without_route_variance_ood_dev": 0.28356480598449707,
+    "acc_ood_dev": 0.26157405972480774,
+    "ablate_family_A": {
+     "n": 7,
+     "acc": 0.49494948983192444
+    },
+    "ablate_family_F": {
+     "n": 8,
+     "acc": 0.4864024817943573
+    },
+    "ablate_family_M": {
+     "n": 28,
+     "acc": 0.47863247990608215
+    },
+    "ablate_family_MA": {
+     "n": 5,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_a": {
+     "n": 30,
+     "acc": 0.5089355111122131
+    },
+    "ablate_family_dead": {
+     "n": 39,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_fu": {
+     "n": 1,
+     "acc": 0.5135974884033203
+    },
+    "ablate_family_m": {
+     "n": 22,
+     "acc": 0.4747474789619446
+    },
+    "ablate_family_mixed": {
+     "n": 116,
+     "acc": 0.32400932908058167
+    },
+    "edit_block_add1_intended": 0.0738813728094101,
+    "edit_block_add1_wrong": 0.06867846101522446,
+    "edit_block_inv_intended": 0.01785714365541935,
+    "edit_block_inv_wrong": 0.03214285895228386
+   },
+   {
+    "step": 1000,
+    "das_iia_M": 0.7202993631362915,
+    "das_block_overlap_M": 0.4399709403514862,
+    "edit_das_M_intended": 0.04285714402794838,
+    "edit_das_M_wrong": 0.04821428656578064,
+    "das_iia_A": 0.22355106472969055,
+    "das_block_overlap_A": 0.21501365303993225,
+    "edit_das_A_intended": 0.0053571430034935474,
+    "edit_das_A_wrong": 0.01785714365541935,
+    "D1_acc_without_route_variance_obs": 0.6682206392288208,
+    "acc_obs": 0.7948718070983887,
+    "D1_acc_without_route_variance_ood_dev": 0.5972222089767456,
+    "acc_ood_dev": 0.45949074625968933,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.7909867763519287
+    },
+    "ablate_family_F": {
+     "n": 6,
+     "acc": 0.7987567782402039
+    },
+    "ablate_family_M": {
+     "n": 35,
+     "acc": 0.6340326070785522
+    },
+    "ablate_family_a": {
+     "n": 31,
+     "acc": 0.6379176378250122
+    },
+    "ablate_family_dead": {
+     "n": 29,
+     "acc": 0.7948718070983887
+    },
+    "ablate_family_m": {
+     "n": 17,
+     "acc": 0.6961926817893982
+    },
+    "ablate_family_mixed": {
+     "n": 135,
+     "acc": 0.3714063763618469
+    },
+    "edit_block_add1_intended": 0.09781477600336075,
+    "edit_block_add1_wrong": 0.05931321531534195,
+    "edit_block_inv_intended": 0.0357142873108387,
+    "edit_block_inv_wrong": 0.03928571566939354
+   },
+   {
+    "step": 1100,
+    "das_iia_M": 0.840972900390625,
+    "das_block_overlap_M": 0.41979682445526123,
+    "edit_das_M_intended": 0.07857143133878708,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18951241672039032,
+    "das_block_overlap_A": 0.2333982139825821,
+    "edit_das_A_intended": 0.0017857142956927419,
+    "edit_das_A_wrong": 0.012500000186264515,
+    "D1_acc_without_route_variance_obs": 0.7956488132476807,
+    "acc_obs": 0.9463869333267212,
+    "D1_acc_without_route_variance_ood_dev": 0.7951388955116272,
+    "acc_ood_dev": 0.5300925970077515,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.9448329210281372
+    },
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.9347319602966309
+    },
+    "ablate_family_M": {
+     "n": 57,
+     "acc": 0.4895104765892029
+    },
+    "ablate_family_MA": {
+     "n": 1,
+     "acc": 0.9463869333267212
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.746697723865509
+    },
+    "ablate_family_dead": {
+     "n": 27,
+     "acc": 0.9463869333267212
+    },
+    "ablate_family_m": {
+     "n": 18,
+     "acc": 0.8741258978843689
+    },
+    "ablate_family_mixed": {
+     "n": 123,
+     "acc": 0.3916083872318268
+    },
+    "edit_block_add1_intended": 0.10822060704231262,
+    "edit_block_add1_wrong": 0.07492195814847946,
+    "edit_block_inv_intended": 0.0714285746216774,
+    "edit_block_inv_wrong": 0.06071428582072258
+   },
+   {
+    "step": 1200,
+    "das_iia_M": 0.9223573207855225,
+    "das_block_overlap_M": 0.40050116181373596,
+    "edit_das_M_intended": 0.08392857015132904,
+    "edit_das_M_wrong": 0.06607142835855484,
+    "das_iia_A": 0.181232750415802,
+    "das_block_overlap_A": 0.2326410710811615,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0017857142956927419,
+    "D1_acc_without_route_variance_obs": 0.8430458307266235,
+    "acc_obs": 0.9898989796638489,
+    "D1_acc_without_route_variance_ood_dev": 0.9016203880310059,
+    "acc_ood_dev": 0.6550925970077515,
+    "ablate_family_A": {
+     "n": 3,
+     "acc": 0.9906759858131409
+    },
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9821289777755737
+    },
+    "ablate_family_M": {
+     "n": 58,
+     "acc": 0.5695415735244751
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.7808857560157776
+    },
+    "ablate_family_dead": {
+     "n": 25,
+     "acc": 0.9898989796638489
+    },
+    "ablate_family_m": {
+     "n": 22,
+     "acc": 0.8251748085021973
+    },
+    "ablate_family_mixed": {
+     "n": 120,
+     "acc": 0.440559446811676
+    },
+    "edit_block_add1_intended": 0.09573361277580261,
+    "edit_block_add1_wrong": 0.0738813728094101,
+    "edit_block_inv_intended": 0.06785714626312256,
+    "edit_block_inv_wrong": 0.05000000074505806
+   },
+   {
+    "step": 1300,
+    "das_iia_M": 0.9298409819602966,
+    "das_block_overlap_M": 0.41205543279647827,
+    "edit_das_M_intended": 0.10357142984867096,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18767249584197998,
+    "das_block_overlap_A": 0.23769511282444,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0017857142956927419,
+    "D1_acc_without_route_variance_obs": 0.8850038647651672,
+    "acc_obs": 0.9953380227088928,
+    "D1_acc_without_route_variance_ood_dev": 0.9305555820465088,
+    "acc_ood_dev": 0.65625,
+    "ablate_family_A": {
+     "n": 1,
+     "acc": 0.99611496925354
+    },
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.9906759858131409
+    },
+    "ablate_family_M": {
+     "n": 71,
+     "acc": 0.5547785758972168
+    },
+    "ablate_family_a": {
+     "n": 25,
+     "acc": 0.8772338628768921
+    },
+    "ablate_family_dead": {
+     "n": 24,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_m": {
+     "n": 20,
+     "acc": 0.8430458307266235
+    },
+    "ablate_family_mixed": {
+     "n": 112,
+     "acc": 0.3597513735294342
+    },
+    "edit_block_add1_intended": 0.11966701596975327,
+    "edit_block_add1_wrong": 0.06347554922103882,
+    "edit_block_inv_intended": 0.09464285522699356,
+    "edit_block_inv_wrong": 0.05714285746216774
+   },
+   {
+    "step": 1400,
+    "das_iia_M": 0.937324583530426,
+    "das_block_overlap_M": 0.39898741245269775,
+    "edit_das_M_intended": 0.08571428805589676,
+    "edit_das_M_wrong": 0.05714285746216774,
+    "das_iia_A": 0.17939282953739166,
+    "das_block_overlap_A": 0.24683880805969238,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9090909361839294,
+    "acc_obs": 0.999222993850708,
+    "D1_acc_without_route_variance_ood_dev": 0.9513888955116272,
+    "acc_ood_dev": 0.6921296119689941,
+    "ablate_family_F": {
+     "n": 2,
+     "acc": 0.998445987701416
+    },
+    "ablate_family_M": {
+     "n": 71,
+     "acc": 0.5236985087394714
+    },
+    "ablate_family_a": {
+     "n": 27,
+     "acc": 0.8174048066139221
+    },
+    "ablate_family_dead": {
+     "n": 23,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_m": {
+     "n": 29,
+     "acc": 0.7404817342758179
+    },
+    "ablate_family_mixed": {
+     "n": 104,
+     "acc": 0.41181039810180664
+    },
+    "edit_block_add1_intended": 0.1155046820640564,
+    "edit_block_add1_wrong": 0.07284078747034073,
+    "edit_block_inv_intended": 0.0892857164144516,
+    "edit_block_inv_wrong": 0.05535714328289032
+   },
+   {
+    "step": 1500,
+    "das_iia_M": 0.9382600784301758,
+    "das_block_overlap_M": 0.387519508600235,
+    "edit_das_M_intended": 0.09285714477300644,
+    "edit_das_M_wrong": 0.05000000074505806,
+    "das_iia_A": 0.1784728616476059,
+    "das_block_overlap_A": 0.2436254918575287,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9129759073257446,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9490740895271301,
+    "acc_ood_dev": 0.7094907164573669,
+    "ablate_family_A": {
+     "n": 1,
+     "acc": 1.0
+    },
+    "ablate_family_F": {
+     "n": 1,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 76,
+     "acc": 0.3916083872318268
+    },
+    "ablate_family_a": {
+     "n": 24,
+     "acc": 0.8850038647651672
+    },
+    "ablate_family_dead": {
+     "n": 22,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 29,
+     "acc": 0.7373737096786499
+    },
+    "ablate_family_mixed": {
+     "n": 103,
+     "acc": 0.4296814203262329
+    },
+    "edit_block_add1_intended": 0.10926118493080139,
+    "edit_block_add1_wrong": 0.06971904635429382,
+    "edit_block_inv_intended": 0.0982142835855484,
+    "edit_block_inv_wrong": 0.0535714291036129
+   },
+   {
+    "step": 2000,
+    "das_iia_M": 0.937324583530426,
+    "das_block_overlap_M": 0.3936935365200043,
+    "edit_das_M_intended": 0.13571429252624512,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18951241672039032,
+    "das_block_overlap_A": 0.2553774118423462,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9160839319229126,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9178240895271301,
+    "acc_ood_dev": 0.6273148059844971,
+    "ablate_family_F": {
+     "n": 2,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 68,
+     "acc": 0.4560994505882263
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8515928387641907
+    },
+    "ablate_family_dead": {
+     "n": 25,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 32,
+     "acc": 0.6977466940879822
+    },
+    "ablate_family_mixed": {
+     "n": 108,
+     "acc": 0.36985236406326294
+    },
+    "edit_block_add1_intended": 0.11446409672498703,
+    "edit_block_add1_wrong": 0.0738813728094101,
+    "edit_block_inv_intended": 0.12142857164144516,
+    "edit_block_inv_wrong": 0.05178571492433548
+   },
+   {
+    "step": 3000,
+    "das_iia_M": 0.9382600784301758,
+    "das_block_overlap_M": 0.37749385833740234,
+    "edit_das_M_intended": 0.1428571492433548,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.18031278252601624,
+    "das_block_overlap_A": 0.24595199525356293,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.937839925289154,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9629629850387573,
+    "acc_ood_dev": 0.7083333134651184,
+    "ablate_family_F": {
+     "n": 3,
+     "acc": 0.999222993850708
+    },
+    "ablate_family_M": {
+     "n": 72,
+     "acc": 0.42579641938209534
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8857808709144592
+    },
+    "ablate_family_dead": {
+     "n": 22,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 37,
+     "acc": 0.7249417304992676
+    },
+    "ablate_family_mixed": {
+     "n": 101,
+     "acc": 0.4172494113445282
+    },
+    "edit_block_add1_intended": 0.12278876453638077,
+    "edit_block_add1_wrong": 0.06867846101522446,
+    "edit_block_inv_intended": 0.1160714253783226,
+    "edit_block_inv_wrong": 0.04821428656578064
+   },
+   {
+    "step": 4500,
+    "das_iia_M": 0.9391955137252808,
+    "das_block_overlap_M": 0.37310266494750977,
+    "edit_das_M_intended": 0.1428571492433548,
+    "edit_das_M_wrong": 0.05178571492433548,
+    "das_iia_A": 0.1904323846101761,
+    "das_block_overlap_A": 0.2512367367744446,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9448329210281372,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9675925970077515,
+    "acc_ood_dev": 0.7152777910232544,
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_M": {
+     "n": 74,
+     "acc": 0.3760683834552765
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8842268586158752
+    },
+    "ablate_family_dead": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 39,
+     "acc": 0.7171717286109924
+    },
+    "ablate_family_mixed": {
+     "n": 98,
+     "acc": 0.4289044141769409
+    },
+    "edit_block_add1_intended": 0.13007284700870514,
+    "edit_block_add1_wrong": 0.06451612710952759,
+    "edit_block_inv_intended": 0.125,
+    "edit_block_inv_wrong": 0.05178571492433548
+   },
+   {
+    "step": 6000,
+    "das_iia_M": 0.9391955137252808,
+    "das_block_overlap_M": 0.3726280927658081,
+    "edit_das_M_intended": 0.12678571045398712,
+    "edit_das_M_wrong": 0.05000000074505806,
+    "das_iia_A": 0.18583256006240845,
+    "das_block_overlap_A": 0.25256580114364624,
+    "edit_das_A_intended": 0.0,
+    "edit_das_A_wrong": 0.0,
+    "D1_acc_without_route_variance_obs": 0.9448329210281372,
+    "acc_obs": 1.0,
+    "D1_acc_without_route_variance_ood_dev": 0.9710648059844971,
+    "acc_ood_dev": 0.71875,
+    "ablate_family_F": {
+     "n": 4,
+     "acc": 0.9953380227088928
+    },
+    "ablate_family_M": {
+     "n": 73,
+     "acc": 0.3729603588581085
+    },
+    "ablate_family_a": {
+     "n": 21,
+     "acc": 0.8857808709144592
+    },
+    "ablate_family_dead": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "ablate_family_m": {
+     "n": 40,
+     "acc": 0.7140637040138245
+    },
+    "ablate_family_mixed": {
+     "n": 98,
+     "acc": 0.4289044141769409
+    },
+    "edit_block_add1_intended": 0.13215400278568268,
+    "edit_block_add1_wrong": 0.06555671244859695,
+    "edit_block_inv_intended": 0.11964285373687744,
+    "edit_block_inv_wrong": 0.05535714328289032
+   }
+  ],
+  "post_edit_rows": []
+ },
+ "cpu_s": 471.7
+}
