@@ -34,8 +34,8 @@ ARMS = ("natural", "declared", "meaningless", "untrained")
 CONV_ACC = 0.95
 
 
-def new_model(arm):
-    return TinyTyped(arm, **MODEL_KW)
+def new_model(arm, size=None):
+    return TinyTyped(arm, **MODEL_KW, **(size or {}))
 
 
 def encode(m, tok):
@@ -68,27 +68,32 @@ def iit_targets(base, src, var):
 
 
 def train_one(args):
-    arm, seed, steps, zoo = args
+    arm, seed, steps, zoo, *rest = args
+    hp = {"size": {}, "wd": WD, "lr": LR, "modes": U.MODES, "sched": "onecycle", **(rest[0] if rest else {})}
     run = Path(zoo) / f"{arm}_s{seed}"
     if (run / "model.pt").exists():
         return str(run)
     run.mkdir(parents=True, exist_ok=True)
     set_determinism()
     torch.manual_seed(seed)
-    m = new_model(arm)
+    m = new_model(arm, hp["size"])
     meaningless = arm == "meaningless"
-    cfg = dict(arm=arm, seed=seed, steps=steps, batch=BATCH, lr=LR, wd=WD, model_kw=MODEL_KW,
+    cfg = dict(arm=arm, seed=seed, steps=steps, batch=BATCH, lr=hp["lr"], wd=hp["wd"], model_kw=MODEL_KW,
+               size=hp["size"], modes=list(hp["modes"]), sched=hp["sched"],
                lambda_iit=LAMBDA if arm == "declared" else 0.0, blocks=BLOCKS if arm == "declared" else None,
                n_params=m.n_params(), torch=torch.__version__)
     t0 = time.time()
     if arm != "untrained":
-        opt = torch.optim.AdamW(m.parameters(), lr=LR, weight_decay=WD)
-        sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=LR, total_steps=steps, pct_start=0.1)
+        opt = torch.optim.AdamW(m.parameters(), lr=hp["lr"], weight_decay=hp["wd"])
+        if hp["sched"] == "onecycle":
+            sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=hp["lr"], total_steps=steps, pct_start=0.1)
+        else:  # constant after a 5% linear warm-up
+            sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s_: min(1.0, (s_ + 1) / (0.05 * steps)))
         g = torch.Generator().manual_seed(10_000 + seed)
         g_iit = torch.Generator().manual_seed(20_000 + seed)
         with open(run / "log.jsonl", "w") as log:
             for step in range(1, steps + 1):
-                b = U.build(U.sample(BATCH, g), meaningless)
+                b = U.build(U.sample(BATCH, g, modes=tuple(hp["modes"])), meaningless)
                 loss = F.cross_entropy(m.head_from_resid(encode(m, b.tokens)), b.y)
                 if arm == "declared":
                     lam = LAMBDA * min(1.0, step / (WARMUP_FRAC * steps))
@@ -97,7 +102,7 @@ def train_one(args):
                         src = U.sample(BATCH // 2, g_iit, modes=("mul",))
                         hb = encode(m, U.build(base).tokens)
                         hs = encode(m, U.build(src).tokens)
-                        mk = torch.zeros(64)
+                        mk = torch.zeros(m.d)
                         mk[BLOCKS[var][0]:BLOCKS[var][1]] = 1
                         loss = loss + lam * F.cross_entropy(m.head_from_resid(hb * (1 - mk) + hs * mk),
                                                             iit_targets(base, src, var))
@@ -121,7 +126,7 @@ def train_one(args):
 
 def load(run):
     cfg = json.loads((Path(run) / "config.json").read_text())
-    m = new_model(cfg["arm"])
+    m = new_model(cfg["arm"], cfg.get("size"))
     m.load_state_dict(torch.load(Path(run) / "model.pt", weights_only=True))
     return m.eval(), cfg
 
