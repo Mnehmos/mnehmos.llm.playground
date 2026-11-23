@@ -1,0 +1,11 @@
+{
+ "what_changed": "Steady: accuracy 0.999, OOD_DEV 0.668, IIA 0.933, editability 0.939; interaction 0.392 -> 0.410 (slow upward drift since 1,800: 0.355, 0.370, 0.397, 0.382, 0.392, 0.410); lineage events are consolidation/weakening flips of the same clusters (B-ne-0080/81/82/88/91).",
+ "hypothesis": "(1) The slow interaction rise after convergence is not harmful here: editability stays >= 0.92 throughout, unlike the seed-700 network where a larger interaction coincided with failed pooled edits. (2) The recurring consolidation/weakening flips are THRESHOLD JITTER: those clusters' summed single-neuron ablation effect sits near the registered 0.05-nat boundary.",
+ "evidence": "Observation: interaction trend vs flat editability (both OBS). Lineage records: clusters B-ne-0080/0081/0082 alternate 'causally supported (partial)' and 'correlationally supported' across 2,000-2,300 with no other change (instrument property, to be confirmed from the stored ablation values in the report).",
+ "key_question": "How should the lineage report separate real developmental events from threshold jitter in a stable network?",
+ "best_experiment": "In the report: mark a status change as jitter when the underlying evidence value moves by less than 20% of the threshold and reverts within two checkpoints; report both raw and de-jittered event counts (post hoc, disclosed).",
+ "intervene": "no",
+ "intervention_rationale": "Nothing to repair; the findings concern measurement.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

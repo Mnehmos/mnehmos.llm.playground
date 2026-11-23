@@ -1,0 +1,11 @@
+{
+ "what_changed": "OOD_DEV rebounded 0.625 -> 0.662 with ID 1.000; IIA 0.926, editability 0.92, interaction 0.38 (-0.016); weight motion small (<= 0.05); two clusters newly partially causal, two identities lost.",
+ "hypothesis": "The post-convergence OOD_DEV movement is an oscillation (+-0.05 around ~0.67) rather than a monotone erosion; step-2,000's 'monotone trend' reading is weakened.",
+ "evidence": "Observation: OOD_DEV 0.73, 0.66, 0.63, 0.66 over 1,800-2,100; no matching change in ID, IIA or editability. One more rebound would refute the monotone-erosion reading.",
+ "key_question": "What is the OOD_DEV noise floor over the remaining training, and does editability stay >= 0.9?",
+ "best_experiment": "Routine recording; compute the 2,000-6,000 OOD_DEV standard deviation at the end.",
+ "intervene": "no",
+ "intervention_rationale": "No new defect; the generalisation question is outside the registered primitives (steps 1,500/1,800 dry runs).",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

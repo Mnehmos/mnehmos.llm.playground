@@ -1,5 +1,5 @@
 {
- "step": 2000,
+ "step": 2500,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -82,6 +82,26 @@
   },
   "2000": {
    "key_question": "Is the erosion transient (OOD recovers, as accuracy did after the 1,600 spike) or a monotone trend to the end of training?",
+   "intervene": "no"
+  },
+  "2100": {
+   "key_question": "What is the OOD_DEV noise floor over the remaining training, and does editability stay >= 0.9?",
+   "intervene": "no"
+  },
+  "2200": {
+   "key_question": "Does the stable ID organisation hide meaningful held-out changes (i.e. is the lineage engine, which is built on ID panels, blind to the generalisation-relevant changes)?",
+   "intervene": "no"
+  },
+  "2300": {
+   "key_question": "How should the lineage report separate real developmental events from threshold jitter in a stable network?",
+   "intervene": "no"
+  },
+  "2400": {
+   "key_question": "Do the OOD-relevant changes live in these offset (bias) directions? (Check at 2,500 with the OOD locus.)",
+   "intervene": "no"
+  },
+  "2500": {
+   "key_question": "Would the final-report comparison need held-out-panel lineage (features traced on OOD_DEV inputs) to explain generalisation changes?",
    "intervene": "no"
   }
  },
@@ -212,12 +232,19 @@
     },
     "cpu_s": 61.3
    }
+  ],
+  "2500": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   }
   ]
  },
  "ledger": {
-  "train_cpu_s": 305.13488009900004,
+  "train_cpu_s": 408.3490071410001,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
-  "inspect_cpu_s": 170.23772778300003
+  "inspect_cpu_s": 171.51901710400003
  }
 }

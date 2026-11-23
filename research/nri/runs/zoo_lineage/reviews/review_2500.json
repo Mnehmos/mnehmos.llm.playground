@@ -1,0 +1,11 @@
+{
+ "what_changed": "OOD_DEV 0.692 -> 0.662; editability 0.950 (new high); everything else flat; weight motion lowest so far (<= 0.03).",
+ "hypothesis": "The post-convergence held-out oscillation is specific to held-out MASS combinations and lives in the non-linear (unit-specific) placement of held-out masses, which the lineage engine's in-distribution panels and linear probes cannot see: an instrument blind spot.",
+ "evidence": "Level 2 ood_locus vs step 1,700: held-out-mass-only accuracy 0.61 -> 0.51, held-out-acceleration-only 0.85 -> 0.83; downstream with the true mass still 0.92-0.94; linear canonical-mass probe on held-out inputs flat (value token 0.41 -> 0.44, block 0.33 -> 0.33) while accuracy moves; ID-side lineage frozen (251 stable identities).",
+ "key_question": "Would the final-report comparison need held-out-panel lineage (features traced on OOD_DEV inputs) to explain generalisation changes?",
+ "best_experiment": "Future registration: run the candidate-feature extraction and matching on an OOD_DEV-derived panel too (disjoint from OOD_FINAL), so generalisation-relevant changes become visible as lineage events. Here: report the blind spot.",
+ "intervene": "no",
+ "intervention_rationale": "No registered primitive addresses held-out mass placement (dry runs 1,500/1,800 worsened it).",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}
