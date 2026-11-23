@@ -1,0 +1,52 @@
+{
+ "tag": "s602/control/step_6000",
+ "model_sha256": "054360954ccccbc8b66cc3fd677a213d166c8bb71e2f23337af6725b919e0cfb",
+ "acc_id": 1.0,
+ "acc_ood": 0.5308837890625,
+ "acc_id_legacy": 1.0,
+ "designed_iia_M": 0.9516388773918152,
+ "designed_iia_M_legacy": 1.0,
+ "route_share_upstream": 0.8450724514820674,
+ "route_share_readout": 0.9036052736686201,
+ "probe_M_block": 0.4947845935821533,
+ "info_necessity": {
+  "id": 0.8489795923233032,
+  "ood": 0.7745361328125
+ },
+ "edit_block": {
+  "n_eligible": 1011,
+  "intended": 0.09891197085380554,
+  "wrong": 0.05242334306240082,
+  "unchanged": 0.19485658407211304,
+  "other": 0.6538081020116806,
+  "specificity": 0.046488627791404724
+ },
+ "copy_block": {
+  "n_eligible": 1011,
+  "intended": 1.0,
+  "wrong": 0.0,
+  "unchanged": 0.0,
+  "other": 0.0,
+  "specificity": 1.0
+ },
+ "das_iia_M": 0.9521762728691101,
+ "das_block_overlap_M": 0.396649569272995,
+ "edit_das_M": {
+  "n_eligible": 1011,
+  "intended": 0.07121662050485611,
+  "wrong": 0.05440158396959305,
+  "unchanged": 0.20178040862083435,
+  "other": 0.6726013869047165,
+  "specificity": 0.01681503653526306
+ },
+ "das_iia_A": 0.1579514890909195,
+ "edit_das_A": {
+  "n_eligible": 1011,
+  "intended": 0.0,
+  "wrong": 0.0,
+  "unchanged": 0.8714144229888916,
+  "other": 0.1285855770111084,
+  "specificity": 0.0
+ },
+ "audit_cpu_s": 10.4
+}
