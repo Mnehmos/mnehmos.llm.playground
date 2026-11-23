@@ -29,3 +29,25 @@ supported (exemplar > mean at every learned ckpt) but sits at the 0.6 threshold,
 copies still fail: the block carries something beyond the mass class (likely unit/route identity that
 must match the base) — a new falsifiable prediction for a follow-up instrument: *copying an exemplar
 matched on mass-unit should exceed 0.9*.
+
+## Update — T002 falsified the "route identity" follow-up; T001 v3 (canonical-style pool)
+
+The follow-up prediction above ("route-matched exemplar > 0.9") was already implied by v2, whose exemplars
+*were* route-matched — so it was effectively falsified at 0.54–0.60. A new instrument, T002_swap_reconciler,
+stratified swap success by source attributes and found the real cause: sources with **word numbers or
+abbreviated units** (never shown in pretraining) swap at 0.14, canonical-style sources at **1.00**; source
+pool, family and unit are irrelevant. With `canonical_style_only` (v3):
+
+| ckpt | pooled | per-route full | per-route rank-2 | copy mean | copy exemplar | verdict |
+|---|---|---|---|---|---|---|
+| inv s2800 | .32 | .72 | .54 | 1.0 | 1.0 | H2 |
+| inv s3100 | .34 | .75 | .55 | 1.0 | 1.0 | H2 |
+| add1 s2800 | .11 | .28 | .10 | 1.0 | 1.0 | H2 |
+| add1 s3100 | .10 | .31 | .11 | 1.0 | 1.0 | H2 |
+
+Corrected reading: H4 rejected (class means are on-manifold). **H2**: the mass code is class-separable but
+curved within each route — linear (affine) edits fail, lookup edits succeed; inversion is "more linear" than
+add-one, consistent with doc 29's finding that editability follows the representation's algebra.
+**Instrument caveat for the study:** the registered card metric `observe.pooled_edit` fits on the styled fit
+pool, so for a student that has not yet learned the surface forms it is contaminated; it is kept unchanged
+(registered) and this caveat is reported in doc 31.

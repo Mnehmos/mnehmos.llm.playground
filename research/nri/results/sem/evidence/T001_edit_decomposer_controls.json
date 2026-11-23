@@ -2,8 +2,8 @@
  "record": {
   "tool_id": "T001_edit_decomposer",
   "mode": "controls",
-  "source_sha256": "89f2284421231a7efce81dc09a5ebdd6fdea576dba2e5e6eb877917717f641f7",
-  "git_commit": "dddd013f488adbd8e9c1f44e4f31ddef58ca320a",
+  "source_sha256": "0824524d539fd2cc38d8ebf40cd5ecbda31ff78dbf8fd47751932a66a52e7e35",
+  "git_commit": "921a8d6abf53b10778af24d9f0d0721682a3c32c",
   "manifest": {
    "tool_id": "T001_edit_decomposer",
    "author": "LLM supervisor (session of Issue #25)",
@@ -14,7 +14,8 @@
    "input_schema": {
     "args.checkpoints": "list of checkpoint names",
     "args.kind": "inv | add1",
-    "args.route": "unit | family | unit_family"
+    "args.route": "unit | family | unit_family",
+    "args.canonical_style_only": "bool: fit/exemplar pool restricted to digit numbers + full unit names"
    },
    "output_schema": {
     "per checkpoint": {
@@ -27,10 +28,11 @@
    },
    "read_scope": "model copies (safetensors); training-pool force examples (ctx.observe.fit_pool) for fitting; development force examples of pretraining families for scoring; never sealed",
    "measurement_definitions": "intended = share of eligible examples (answers for edited mass, edited acceleration and unedited all distinct) whose prediction equals the answer computed with the edited mass; edits act on h[0:16] only, routes are (mass unit) x (phrasing family) cells; affine maps are least-squares fits on training-pool examples",
-   "version": "2",
+   "version": "3",
    "changelog": [
     "v1: pooled / per-route / copy-mean (controls: additive, route-rotated, scrambled, random)",
-    "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)"
+    "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)",
+    "v3: optional canonical_style_only after T002 showed non-canonical-style sources swap at 0.14 vs 1.00 (the v2 'undetermined' verdicts were contaminated by unseen surface forms)"
    ]
   },
   "checkpoints": {
@@ -47,9 +49,9 @@
    "ok": true
   },
   "returncode": 0,
-  "wall_s": 2.2,
+  "wall_s": 2.1,
   "error": "",
-  "time": "2026-11-23T23:01:28Z",
+  "time": "2026-11-23T23:23:44Z",
   "validated": true
  },
  "result": {

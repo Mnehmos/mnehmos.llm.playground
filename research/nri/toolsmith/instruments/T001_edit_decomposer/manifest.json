@@ -8,7 +8,8 @@
  "input_schema": {
   "args.checkpoints": "list of checkpoint names",
   "args.kind": "inv | add1",
-  "args.route": "unit | family | unit_family"
+  "args.route": "unit | family | unit_family",
+  "args.canonical_style_only": "bool: fit/exemplar pool restricted to digit numbers + full unit names"
  },
  "output_schema": {
   "per checkpoint": {
@@ -21,9 +22,10 @@
  },
  "read_scope": "model copies (safetensors); training-pool force examples (ctx.observe.fit_pool) for fitting; development force examples of pretraining families for scoring; never sealed",
  "measurement_definitions": "intended = share of eligible examples (answers for edited mass, edited acceleration and unedited all distinct) whose prediction equals the answer computed with the edited mass; edits act on h[0:16] only, routes are (mass unit) x (phrasing family) cells; affine maps are least-squares fits on training-pool examples",
- "version": "2",
+ "version": "3",
  "changelog": [
   "v1: pooled / per-route / copy-mean (controls: additive, route-rotated, scrambled, random)",
-  "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)"
+  "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)",
+  "v3: optional canonical_style_only after T002 showed non-canonical-style sources swap at 0.14 vs 1.00 (the v2 'undetermined' verdicts were contaminated by unseen surface forms)"
  ]
 }

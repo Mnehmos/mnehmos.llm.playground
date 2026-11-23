@@ -204,6 +204,8 @@ def run(ctx):
     how = ctx.args.get("route", "unit_family")
     fams = ctx.args.get("families", ["F01", "F04", "F11"])
     fit = [e for e in O.fit_pool(4096, seed=99) if e["fid"] in fams]
+    if ctx.args.get("canonical_style_only", False):                      # v3 (T002 finding)
+        fit = [e for e in fit if e["style"] == dict(num="num", unit="full")]
     import random
     rng = random.Random(41)
     evl = []
