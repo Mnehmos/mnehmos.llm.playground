@@ -26,7 +26,8 @@ from nri.model import TinyTyped
 from nri.train import set_determinism
 
 ROOT = Path(__file__).parent
-MODEL_KW = dict(n_types=1, aux_classes=0, vocab=U.VOCAB, seq_len=U.SEQ_LEN, n_out=U.P)
+def model_kw():
+    return dict(n_types=1, aux_classes=0, vocab=U.VOCAB, seq_len=U.SEQ_LEN, n_out=U.P)
 BATCH, LR, WD = 512, 2e-3, 0.01
 LAMBDA, WARMUP_FRAC = 3.0, 1 / 3
 BLOCKS = {"M": (0, 16), "A": (16, 32)}
@@ -35,7 +36,7 @@ CONV_ACC = 0.95
 
 
 def new_model(arm, size=None):
-    return TinyTyped(arm, **MODEL_KW, **(size or {}))
+    return TinyTyped(arm, **model_kw(), **(size or {}))
 
 
 def encode(m, tok):
@@ -69,7 +70,9 @@ def iit_targets(base, src, var):
 
 def train_one(args):
     arm, seed, steps, zoo, *rest = args
-    hp = {"size": {}, "wd": WD, "lr": LR, "modes": U.MODES, "sched": "onecycle", **(rest[0] if rest else {})}
+    hp = {"size": {}, "wd": WD, "lr": LR, "modes": U.MODES, "sched": "onecycle", "labelset": "full6",
+          **(rest[0] if rest else {})}
+    U.use_labelset(hp["labelset"])
     run = Path(zoo) / f"{arm}_s{seed}"
     if (run / "model.pt").exists():
         return str(run)
@@ -78,8 +81,8 @@ def train_one(args):
     torch.manual_seed(seed)
     m = new_model(arm, hp["size"])
     meaningless = arm == "meaningless"
-    cfg = dict(arm=arm, seed=seed, steps=steps, batch=BATCH, lr=hp["lr"], wd=hp["wd"], model_kw=MODEL_KW,
-               size=hp["size"], modes=list(hp["modes"]), sched=hp["sched"],
+    cfg = dict(arm=arm, seed=seed, steps=steps, batch=BATCH, lr=hp["lr"], wd=hp["wd"], model_kw=model_kw(),
+               size=hp["size"], labelset=hp["labelset"], modes=list(hp["modes"]), sched=hp["sched"],
                lambda_iit=LAMBDA if arm == "declared" else 0.0, blocks=BLOCKS if arm == "declared" else None,
                n_params=m.n_params(), torch=torch.__version__)
     t0 = time.time()
@@ -126,6 +129,7 @@ def train_one(args):
 
 def load(run):
     cfg = json.loads((Path(run) / "config.json").read_text())
+    U.use_labelset(cfg.get("labelset", "full6"))
     m = new_model(cfg["arm"], cfg.get("size"))
     m.load_state_dict(torch.load(Path(run) / "model.pt", weights_only=True))
     return m.eval(), cfg

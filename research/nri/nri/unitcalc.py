@@ -31,30 +31,53 @@ G = 2
 LOG = {pow(G, k, P): k for k in range(12)}
 INV = torch.tensor([0] + [pow(x, -1, P) for x in range(1, P)])
 
-# label parameters: discrete logs for scale labels, offsets for temperature labels
-MASS_LOG = (0, 1, 3, 4, 7, 9)
-ACC_LOG = (0, 2, 5, 8, 0, 3)            # labels 4 and 5 are inverse ("per") labels
-ACC_INVERSE = (False, False, False, False, True, True)
-FORCE_LOG = (0, 1, 4, 6, 9, 10)
-TEMP_OFF = (0, 1, 3, 4, 8, 11)
-ACC_OUT = (0, 1, 2, 3)                  # quotient outputs use the direct acceleration labels
+# Label sets. "full6" is the design in docs/20 (6 labels per dimension); "lite4" (4 per
+# dimension) is the fallback the owner chose if full6 does not learn (pilot, docs/21).
+LABELSETS = {
+    "full6": dict(MASS_LOG=(0, 1, 3, 4, 7, 9), ACC_LOG=(0, 2, 5, 8, 0, 3),
+                  ACC_INVERSE=(False, False, False, False, True, True),
+                  FORCE_LOG=(0, 1, 4, 6, 9, 10), TEMP_OFF=(0, 1, 3, 4, 8, 11)),
+    "lite4": dict(MASS_LOG=(0, 1, 3, 4), ACC_LOG=(0, 3, 6, 0),
+                  ACC_INVERSE=(False, False, False, True),
+                  FORCE_LOG=(0, 2, 4, 7), TEMP_OFF=(0, 2, 4, 9)),
+}
+LABELSET = "full6"
+MASS_LOG = ACC_LOG = ACC_INVERSE = FORCE_LOG = TEMP_OFF = None
+NL = N_ACC_OUT = None
 
-# token ids
-VAL = list(range(P))
-MASS_U = [P + i for i in range(6)]           # 13..18
-ACC_U = [P + 6 + i for i in range(6)]        # 19..24
-FORCE_U = [P + 12 + i for i in range(6)]     # 25..30
-TEMP_U = [P + 18 + i for i in range(6)]      # 31..36
-TIMES, DIVIDE, PLUS, ARROW, EQ = P + 24, P + 25, P + 26, P + 27, P + 28
-VOCAB = EQ + 1                               # 42
+P_ = P
+
+
+def use_labelset(name):
+    """Activate a label set: parameters, token ids, held-out combinations."""
+    global LABELSET, MASS_LOG, ACC_LOG, ACC_INVERSE, FORCE_LOG, TEMP_OFF, NL, N_ACC_OUT
+    global MASS_U, ACC_U, FORCE_U, TEMP_U, TIMES, DIVIDE, PLUS, ARROW, EQ, VOCAB, HELD, HELD_T
+    LABELSET = name
+    for k, v in LABELSETS[name].items():
+        globals()[k] = v
+    NL = len(MASS_LOG)
+    N_ACC_OUT = sum(not x for x in ACC_INVERSE)       # quotient outputs: direct acceleration labels
+    MASS_U = [P + i for i in range(NL)]
+    ACC_U = [P + NL + i for i in range(NL)]
+    FORCE_U = [P + 2 * NL + i for i in range(NL)]
+    TEMP_U = [P + 3 * NL + i for i in range(NL)]
+    TIMES, DIVIDE, PLUS, ARROW, EQ = (P + 4 * NL + i for i in range(5))
+    VOCAB = EQ + 1
+    if NL == 6:
+        HELD = {"mul": {(i, i) for i in range(6)}, "div": {(i, i) for i in range(6)},
+                "msum": {(i, (i + 1) % 6) for i in range(6)} | {((i + 1) % 6, i) for i in range(6)},
+                "tsum": {(i, (i + 1) % 6) for i in range(6)} | {((i + 1) % 6, i) for i in range(6)}}
+    else:
+        HELD = {m: {(i, (i + 1) % NL) for i in range(NL)} for m in ("msum", "tsum")}
+        HELD.update({m: {(i, i) for i in range(NL)} for m in ("mul", "div")})
+    HELD_T = torch.zeros(len(MODES), NL, NL, dtype=torch.bool)
+    for k, m in enumerate(MODES):
+        for a, b in HELD[m]:
+            HELD_T[k, a, b] = True
+
+
 SEQ_LEN = 8
 MODES = ("mul", "div", "msum", "tsum")
-
-# held-out label combinations (composition test): never in training
-HELD = {"mul": {(i, i) for i in range(6)},                      # (mass label, acc label)
-        "div": {(i, i) for i in range(6)},                      # (force label, mass label)
-        "msum": {(i, (i + 1) % 6) for i in range(6)} | {((i + 1) % 6, i) for i in range(6)},
-        "tsum": {(i, (i + 1) % 6) for i in range(6)} | {((i + 1) % 6, i) for i in range(6)}}
 
 
 def scale(log):
@@ -70,29 +93,23 @@ class Batch:
 
 def _params(meaningless):
     if meaningless:
-        z6 = (0,) * 6
-        return dict(mass=scale(z6), acc=scale(z6), acc_inv=torch.zeros(6, dtype=torch.bool),
-                    force=scale(z6), temp=torch.zeros(6, dtype=torch.long))
+        z = (0,) * NL
+        return dict(mass=scale(z), acc=scale(z), acc_inv=torch.zeros(NL, dtype=torch.bool),
+                    force=scale(z), temp=torch.zeros(NL, dtype=torch.long))
     return dict(mass=scale(MASS_LOG), acc=scale(ACC_LOG), acc_inv=torch.tensor(ACC_INVERSE),
                 force=scale(FORCE_LOG), temp=torch.tensor(TEMP_OFF))
-
-
-HELD_T = torch.zeros(len(MODES), 6, 6, dtype=torch.bool)
-for _k, _m in enumerate(MODES):
-    for _a, _b in HELD[_m]:
-        HELD_T[_k, _a, _b] = True
 
 
 def _draw(n, g, modes):
     mode = torch.tensor([MODES.index(m) for m in modes])[torch.randint(len(modes), (n,), generator=g)]
     x1 = torch.randint(0, P, (n,), generator=g)
     x2 = torch.randint(0, P, (n,), generator=g)
-    u1 = torch.randint(0, 6, (n,), generator=g)
-    u2 = torch.randint(0, 6, (n,), generator=g)
-    uo = torch.randint(0, 6, (n,), generator=g)
+    u1 = torch.randint(0, NL, (n,), generator=g)
+    u2 = torch.randint(0, NL, (n,), generator=g)
+    uo = torch.randint(0, NL, (n,), generator=g)
     order = torch.randint(0, 2, (n,), generator=g)          # mul only: 0 = mass written first
     div = mode == MODES.index("div")
-    uo = torch.where(div, uo % 4, uo)                       # quotient outputs: 4 direct labels
+    uo = torch.where(div, uo % N_ACC_OUT, uo)               # quotient outputs: direct labels
     x2 = torch.where(div & (x2 == 0), torch.randint(1, P, (n,), generator=g), x2)  # mass != 0
     return dict(mode=mode, x1=x1, u1=u1, x2=x2, u2=u2, uo=uo, order=order)
 
@@ -169,3 +186,6 @@ def build(lat, meaningless=False) -> Batch:
     tok = torch.stack([first_v, first_u, op, second_v, second_u, torch.full((n,), ARROW), to,
                        torch.full((n,), EQ)], 1)
     return Batch(tok, quantities(lat, meaningless)["y"], lat)
+
+
+use_labelset(LABELSET)
