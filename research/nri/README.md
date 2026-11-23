@@ -27,6 +27,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 15 | [`docs/15_role_swap_results.md`](docs/15_role_swap_results.md) | **Role-swap result**: the edit advantage follows the declared variable in 12/12 seeds (primary Δ +0.37, p = 0.0005); copying real patterns works (0.8–0.9) but the fitted edit doesn't (0.2–0.3), so edit construction is the bottleneck |
 | 16 | [`docs/16_registration_editors.md`](docs/16_registration_editors.md) | **Registration** (committed before scoring the fresh sample) of the editor comparison on the fixed role-swap networks: pooled vs route-aware editors in three tiers (weight edit / stored table / per-question), copy as benchmark |
 | 17 | [`docs/17_editor_results.md`](docs/17_editor_results.md) | **Editor result**: the same value leaves a different pattern per unit; a unit-aware editor reaches 0.76 / 0.89 (copy 0.80 / 0.91; current editor 0.18 / 0.31), 0.97–0.98 on converged networks, with no rise in wrong-variable changes; but only as a per-question lookup. A single linear weight edit gains just +0.05–0.07 |
+| 18 | [`docs/18_registration_permanent_edit.md`](docs/18_registration_permanent_edit.md) | **Registration** (committed before any editor touched the new networks): can the unit-aware edit be installed once (added layer) or within the existing weights (distillation)? New networks (seeds 400–411), 30% of questions reserved from the editors |
+| 19 | [`docs/19_permanent_edit_results.md`](docs/19_permanent_edit_results.md) | **Permanent-edit result**: on new networks and reserved questions, the unit-aware edit installed once, as an added ~70-unit layer or by re-fitting the existing post-site weights, matches the stored table (0.90 mass / 0.87 acceleration vs 0.27 / 0.34 for the linear edit), with fewer wrong-variable changes; the existing-weights version is a large re-fit (35–59% weight change) |
 
 ## Layout
 
@@ -60,6 +62,7 @@ python run_swap.py train --schedule warmup --seeds 300 301 302 303 304 305 306 3
 python run_swap.py analyse --seeds 300 301 302 303 304 305 306 307 308 309 310 311
 python run_swap.py report  --seeds 300 301 302 303 304 305 306 307 308 309 310 311
 python run_editors.py --split test && python run_editors.py --report   # docs 16-17 (fixed networks)
+python train_perm.py && python run_perm.py analyse && python run_perm.py report   # docs 18-19
 python make_figures.py
 ```
 
