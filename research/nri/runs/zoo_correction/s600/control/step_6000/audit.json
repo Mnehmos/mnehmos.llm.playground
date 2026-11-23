@@ -1,0 +1,52 @@
+{
+ "tag": "s600/control/step_6000",
+ "model_sha256": "e595e96297644ed21c9acb777e4382ff763fbf1d744d9a9ea5315ebd6b51e5d1",
+ "acc_id": 1.0,
+ "acc_ood": 0.2237548828125,
+ "acc_id_legacy": 1.0,
+ "designed_iia_M": 0.9382052421569824,
+ "designed_iia_M_legacy": 1.0,
+ "route_share_upstream": 0.559590902332984,
+ "route_share_readout": 0.7134511543278127,
+ "probe_M_block": 0.6693877577781677,
+ "info_necessity": {
+  "id": 1.0,
+  "ood": 0.609130859375
+ },
+ "edit_block": {
+  "n_eligible": 1011,
+  "intended": 0.8941642045974731,
+  "wrong": 0.0,
+  "unchanged": 0.0,
+  "other": 0.10583579540252686,
+  "specificity": 0.8941642045974731
+ },
+ "copy_block": {
+  "n_eligible": 1011,
+  "intended": 1.0,
+  "wrong": 0.0,
+  "unchanged": 0.0,
+  "other": 0.0,
+  "specificity": 1.0
+ },
+ "das_iia_M": 0.9392799735069275,
+ "das_block_overlap_M": 0.3672838807106018,
+ "edit_das_M": {
+  "n_eligible": 1011,
+  "intended": 0.882294774055481,
+  "wrong": 0.0,
+  "unchanged": 0.0,
+  "other": 0.11770522594451904,
+  "specificity": 0.882294774055481
+ },
+ "das_iia_A": 0.13692721724510193,
+ "edit_das_A": {
+  "n_eligible": 1011,
+  "intended": 0.0,
+  "wrong": 0.0,
+  "unchanged": 0.9139465689659119,
+  "other": 0.08605343103408813,
+  "specificity": 0.0
+ },
+ "audit_cpu_s": 9.2
+}

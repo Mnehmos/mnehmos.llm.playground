@@ -1,0 +1,6 @@
+{
+ "seed": 600,
+ "bitwise_identical": true,
+ "run": "runs/zoo_correction/fidelity_reference/mass_only_s600",
+ "cpu_s": 388.0
+}
