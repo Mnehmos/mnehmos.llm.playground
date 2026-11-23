@@ -1,0 +1,29 @@
+{
+ "tool_id": "T001_edit_decomposer",
+ "author": "LLM supervisor (session of Issue #25)",
+ "created_at_checkpoint": "non-study smoke run (seed 999) step 3100, before registration",
+ "kind": "causal-readonly",
+ "purpose": "Explain WHY a pooled persistent edit of the declared mass block fails while the block is causally sufficient: decompose editability into pooled-affine, per-route-affine and copy-target-mean components.",
+ "hypothesis": "H1 route-specific (non-additive) mass code: per-route affine edits succeed where pooled fails. H2 curved code within a route: per-route affine fails but copying the route-specific target class mean succeeds. H3 block not sufficient alone: copy fails. H4 (added in v2 after v1 returned 'undetermined' on the smoke run): the block is sufficient but each class occupies an extended region whose MEAN is off the code manifold; only copying a real exemplar works.",
+ "input_schema": {
+  "args.checkpoints": "list of checkpoint names",
+  "args.kind": "inv | add1",
+  "args.route": "unit | family | unit_family"
+ },
+ "output_schema": {
+  "per checkpoint": {
+   "pooled": "intended rate",
+   "per_route": "intended rate",
+   "copy_target_mean": "intended rate",
+   "verdict": "H1|H2|H3|editable|undetermined",
+   "n_eligible": "int"
+  }
+ },
+ "read_scope": "model copies (safetensors); training-pool force examples (ctx.observe.fit_pool) for fitting; development force examples of pretraining families for scoring; never sealed",
+ "measurement_definitions": "intended = share of eligible examples (answers for edited mass, edited acceleration and unedited all distinct) whose prediction equals the answer computed with the edited mass; edits act on h[0:16] only, routes are (mass unit) x (phrasing family) cells; affine maps are least-squares fits on training-pool examples",
+ "version": "2",
+ "changelog": [
+  "v1: pooled / per-route / copy-mean (controls: additive, route-rotated, scrambled, random)",
+  "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)"
+ ]
+}
