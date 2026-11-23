@@ -161,3 +161,24 @@ with no restarts. Pilot seeds are used only to fix budgets.
    two masses?
 4. **Edit threshold for H5:** absolute (e.g. ≥ 0.8 intended) or relative to copying (e.g.
    ≥ 90% of the copy benchmark)?
+
+## 20.10 Future experiments (GitHub tracking issues; not part of this study)
+
+These are **proposed follow-ups**, not registered hypotheses or results for unit calculus v2.
+Each must receive its own prospective protocol, pilot/frozen settings, reserved evaluation,
+complete per-seed reporting, and compute controls before any confirmatory claim.
+
+| Order | Issue | Question | Depends on |
+|---|---|---|---|
+| 1 | [#12: looped transformer backbone](https://github.com/Mnehmos/mnehmos.llm.playground/issues/12) | Does shared-weight recurrence help beyond more layers or more FLOPs? | Current NRI tasks |
+| 2 | [#13: concept formation atlas](https://github.com/Mnehmos/mnehmos.llm.playground/issues/13) | When do representations and causal mechanisms emerge **during training**? | #12 |
+| 3 | [#14: unit equivalence and routing](https://github.com/Mnehmos/mnehmos.llm.playground/issues/14) | Are equivalent quantities canonicalized or processed through label-conditioned routes? | #12 and this study |
+| 4 | [#15: pass-by-pass causal tracing](https://github.com/Mnehmos/mnehmos.llm.playground/issues/15) | Do conversion, calculation and output occur in successive passes or remain distributed? | #12, #13 |
+| 5 | [#16: force polysemy and ANLU typing](https://github.com/Mnehmos/mnehmos.llm.playground/issues/16) | Does recurrence help separate contextual meanings of the same token? | #12, #13 |
+| 6 | [#17: shared-weight edits](https://github.com/Mnehmos/mnehmos.llm.playground/issues/17) | Can one bounded weight change be predicted across repeated uses of the same block? | #12, #15, docs 17–19 |
+| 7 | [#18: adaptive loops and gates](https://github.com/Mnehmos/mnehmos.llm.playground/issues/18) | Does variable compute improve performance at matched FLOPs? | #12, #15 |
+
+**Critical distinctions:** a *training checkpoint* changes weights, whereas a *loop pass* changes
+activations with fixed weights; a high linear-probe score is not causal identification; and
+modular-scale equivalence in this study is not literal SI conversion (e.g., 1 kg = 1000 g).
+The issues specify negative controls and falsifiable alternatives, not expected findings.
