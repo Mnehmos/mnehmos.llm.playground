@@ -143,7 +143,7 @@ def canonical_head_edit(m, ctx, heads=(0, 2), mode="canonical", alpha=1.0, ridge
 
 def rewire_edit(m, ctx, upstream_delta, post=("W_in.weight", "W_in.bias", "W_out.weight", "W_out.bias"),
                 steps=400, lr=2e-3, batch=512, seed=1, translate=0.5, also_upstream=False, kl=1.0, iit=0.0,
-                l2=0.0, task=0.0):
+                l2=0.0, task=0.0, noise_kl=0.0, noise_scale=1.0, route_keep=0.0):
     """Install `upstream_delta` (e.g. a canonical-head edit), then re-fit the post-site weights (and
     optionally keep optimizing the upstream ones) so the NEW network reproduces the ORIGINAL network's
     predictions on FIT (KL), plus a mean-translation term that rewards an additive block code.
@@ -159,6 +159,13 @@ def rewire_edit(m, ctx, upstream_delta, post=("W_in.weight", "W_in.bias", "W_out
     M_all, A_all, S_all = T.canon(fit)
     with torch.no_grad():
         p0 = torch.log_softmax(m(tok, torch.zeros_like(tok)), -1)
+        h_orig = forward_h(m, tok)
+        cm = torch.stack([h_orig[M_all == c].mean(0) for c in range(T.P)])
+        blk_sd = (h_orig - cm[M_all]).std(0)
+        # frozen linear probe of route (unit x position) and mass unit from the ORIGINAL block
+        R_all = AT.factors(fit)["route"]
+        Zb = torch.cat([h_orig[:, AT.BLK], torch.ones(len(h_orig), 1)], 1)
+        Wr = torch.linalg.lstsq(Zb, F.one_hot(R_all, 6).float()).solution
     train_keys = list(post) + (list(upstream_delta) if also_upstream else [])
     W0 = dict(m.named_parameters())
     for k, p in P.items():
@@ -173,6 +180,22 @@ def rewire_edit(m, ctx, upstream_delta, post=("W_in.weight", "W_in.bias", "W_out
         loss = kl * F.kl_div(torch.log_softmax(logits, -1), p0[i], log_target=True, reduction="batchmean")
         if task:
             loss = loss + task * F.cross_entropy(logits, y[i])
+        if route_keep:
+            zr = torch.cat([hf[i][:, AT.BLK], torch.ones(len(i), 1)], 1) @ Wr
+            loss = loss + route_keep * F.cross_entropy(zr * 5.0, R_all[i])
+        if noise_kl:
+            # function preservation OFF the data manifold: original vs new readout on perturbed
+            # block activations (the ORIGINAL network's h, so upstream drift is also penalised)
+            with torch.no_grad():
+                h0 = h_orig[i]
+                eps = torch.randn(h0.shape, generator=g) * noise_scale * blk_sd
+                hn = h0.clone()
+                hn[:, AT.BLK] += eps[:, AT.BLK]
+                pn = torch.log_softmax(m.head_from_resid(hn), -1)
+            hn2 = hf[i].clone()
+            hn2[:, AT.BLK] = hn2[:, AT.BLK] + eps[:, AT.BLK]
+            loss = loss + noise_kl * F.kl_div(torch.log_softmax(mm.head_from_resid(hn2), -1), pn,
+                                              log_target=True, reduction="batchmean")
         if iit:
             j = torch.randint(0, n, (batch,), generator=g)
             hb = hf[i].clone()

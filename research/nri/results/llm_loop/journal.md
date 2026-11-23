@@ -89,3 +89,56 @@ at the same step) and the gate (VAL / OOD_DEV).
 - Reading: OBS and VAL disagree on keep-correct by ~1.5 points at this stage. At 78% accuracy many
   answers sit at tiny margins, and S2's 1% tolerance is below that noise. Editability is at floor
   (0.03), so "must not fall" is also noise-limited. Both are registered rules; I keep them.
+
+## Step 1,100 — first accepted edit
+- Packet: accuracy 0.95, block IIA 0.83, interaction 0.50, unit 0–1 CKA 0.55; 89% of the
+  interaction from attn2; full closed-form removal would need 4.4× the producer rows.
+- Submission `step_1100_organize.py`: `organize_edit` with KL × 60, target `unit_transfer`, 1.35% of
+  model norm, spread over attention and MLP weights (2–4% per tensor).
+- **Gate: PASSED and installed.** On VAL: unit-transfer ratio 0.548 → 0.583 (+0.034; shams −0.008,
+  −0.002, +0.003); interaction 0.526 → 0.427; accuracy unchanged; IIA +0.005; OOD_DEV −0.003;
+  keep-correct 0.993; route/unit information up; editability −0.005 (not claimed).
+
+## Step 1,200 — the network collapsed (training instability after the edit)
+- Packet: accuracy **0.21** (control 0.99), block IIA **0.12** (0.92), copy 0.03 (0.98).
+- Diagnosis (replays from the saved step-1,100 states, both bitwise to the saved 1,200 models):
+  - after the edit the network trained normally (accuracy 0.992 at 1,130, 0.997 at 1,150);
+  - around 1,160–1,190 the gradient norm rose (5 → 9) and then, at **1,192–1,200, diverged**
+    (15 → 25 → 65 → 151; loss 0.05 → 3.6);
+  - **the control was at the same edge**: its gradient norm spiked to ~11 at 1,165–1,183, then it
+    recovered.
+- Interpretation: steps 1,100–1,200 are an edge-of-stability phase (OneCycle learning rate near its
+  2e-3 peak; IIT λ still ramping to 3). A 1.35% weight change that kept behaviour at installation
+  moved the trajectory onto a divergent path ~90 steps later. **The gate checks the edited network
+  statically; it cannot see training dynamics.** This is a failure mode of in-training editing that
+  no static check covers.
+- Per the registration there is no restart. I continue training and record whether the network
+  recovers.
+
+## Steps 1,300–1,400 — recovery
+- Accuracy 0.999 / 1.000, block IIA 0.93 / 0.94; the interaction returns to the control's value
+  (0.61–0.62 vs 0.60–0.62). **The unit-split organization is an attractor**: after collapse and
+  recovery the network rebuilt it.
+
+## Step 1,500 — second accepted edit (a new bespoke method: editability with generalization guards)
+- Packet: accuracy 0.999 (control 1.000), OOD_DEV 0.727 (0.709), block IIA 0.94, interaction 0.63,
+  pooled editability 0.06 (control 0.10), unit 0–1 CKA 0.36 (control 0.48). Head anatomy is the same
+  as the control's (heads 0 and 2 copy mass from the value token; unit 1 split in both).
+- OBS pre-checks of `organize_edit` now hit the trade-off: shrinking the interaction enough to
+  matter costs OOD_DEV (−0.014 for unit-transfer +0.031).
+- So I targeted **editability directly** (`rewire_edit`, translation along class-mean differences
+  for random permutations; never inversion or add-one). On OBS this mapped the trade-off:
+
+| variant | editability | OOD_DEV | route info |
+|---|---|---|---|
+| translation only | +0.41 | −0.13 | −0.08 |
+| + noise-KL (function preserved off the data manifold) | +0.23 | −0.05 | −0.12 |
+| + noise-KL, scaled 0.3–0.5× | +0.02 to +0.07 | ±0.006 | **−0.04 to −0.06** |
+| + noise-KL + frozen route probe (`route_keep` × 5), 0.4× | **+0.07** | **0.000** | **+0.19** |
+
+  - editability gain is superlinear in edit size;
+  - the editable direction erodes unit/route information unless it is explicitly protected. That
+    is the owner's caution (doc 23), now measured.
+- **Gate: PASSED and installed** (`step_1500_editable.py`, 2.35% of model norm). On VAL: editability
+  0.073 → 0.114 (+0.040; shams −0.008 / 0 / 0); OOD_DEV 0.727 → 0.727; accuracy 1.000 → 0.999;
+  IIA −0.002; keep 0.999; route information 0.74 → 0.95; unit information 0.96 → 0.99.
