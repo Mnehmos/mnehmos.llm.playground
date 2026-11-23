@@ -1,0 +1,1 @@
+[{"name":"ALL_nkl10_rk5","p":"ALL","scales":[0.4],"kw":{"kl":30,"iit":1,"translate":1.0,"l2":3,"steps":400,"lr":1e-3,"noise_kl":10,"route_keep":5}}]
