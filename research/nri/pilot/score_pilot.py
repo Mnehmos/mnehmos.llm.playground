@@ -12,7 +12,6 @@ Scores (docs/03_nri_spec.md §3.5):
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import sys
 from collections import Counter
@@ -23,7 +22,7 @@ import torch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nri import tasks  # noqa: E402
-from nri.nri_exec import Host, _vars, execute  # noqa: E402
+from nri.nri_exec import Host, _vars, execute, load_program  # noqa: E402
 from nri.reference_nri import reference_doc  # noqa: E402
 from nri.train import load  # noqa: E402
 
@@ -44,6 +43,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pkg", type=Path, required=True)
     ap.add_argument("--keys", type=Path, required=True)
+    ap.add_argument("--allow-programs", action="store_true",
+                    help="execute the interpreter's edit_program.py (review it first, or run isolated)")
     a = ap.parse_args()
     key = json.loads((a.keys / f"{a.pkg.name}.json").read_text())
     run, cond = Path(key["run"]), key.get("input_condition", key["condition"])
@@ -55,7 +56,8 @@ def main():
         if c.get("kind") == "edit":
             p = Path(c["program"]["path"])
             c["program"]["path"] = str(p if p.is_absolute() else a.pkg / p)
-    ex = execute(doc, host, seed=123)  # fresh seed: not the pool the interpreter saw
+    # The interpreter's edit program is code: run only after review or inside an isolated env.
+    ex = execute(doc, host, seed=123, allow_programs=a.allow_programs)  # fresh seed
 
     # variable recall
     g = torch.Generator().manual_seed(77)
@@ -76,11 +78,9 @@ def main():
     edit_res = None
     prog = a.pkg / "edit_program.py"
     if prog.exists():
-        spec = importlib.util.spec_from_file_location("p", prog)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
+        program = load_program(prog, "program", allow_programs=a.allow_programs)
         args = next((c["program"].get("args", {}) for c in doc["claims"] if c["kind"] == "edit"), {})
-        dW, db = mod.program(host, doc, **args)
+        dW, db = program(host, doc, **args)
         g = torch.Generator().manual_seed(999)
         lat = tasks.sample_latents(8192, g)
         b = tasks.build(lat, cond)
