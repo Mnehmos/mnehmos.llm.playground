@@ -1,0 +1,693 @@
+{
+ "step": 1500,
+ "common_hash": "d9319c4298a67468cd6bdf9366b6695ce6ca9b2c0aa2b651505aa0025a0bdcbe",
+ "start_hash": "de68ed7555566964411c376b1f6859c9964fecba1f8f460d5c21ff1f1c679549",
+ "lessons": {
+  "0": {
+   "task_weights": {
+    "force": 0.5,
+    "convert": 0.3,
+    "equiv": 0.1,
+    "sense": 0.1
+   },
+   "replay_weight": 0.2,
+   "style": {
+    "p_word": 0.5,
+    "p_abbr": 0.5
+   },
+   "hard_negative_rate": 0.2,
+   "paraphrase_pair_rate": 0.3,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.5
+   },
+   "note": "L0: bind word-numbers/abbreviations to the known value pathway (H-lex test)"
+  },
+  "100": {
+   "task_weights": {
+    "force": 0.45,
+    "convert": 0.25,
+    "equiv": 0.1,
+    "sense": 0.2
+   },
+   "replay_weight": 0.5,
+   "style": {
+    "p_word": 0.5,
+    "p_abbr": 0.5
+   },
+   "hard_negative_rate": 0.2,
+   "paraphrase_pair_rate": 0.3,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.5
+   },
+   "note": "L1: protect the known pathway (replay 0.5) while keeping style exposure (H-interf test)"
+  },
+  "200": {
+   "task_weights": {
+    "force": 0.2,
+    "convert": 0.15,
+    "equiv": 0.3,
+    "inverse": 0.05,
+    "sense": 0.3
+   },
+   "replay_weight": 0.35,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L2: concentrate on binary-answer tasks to form the answer-type mapping (H-plateau/type test)"
+  },
+  "300": {
+   "task_weights": {
+    "force": 0.4,
+    "convert": 0.2,
+    "equiv": 0.15,
+    "inverse": 0.1,
+    "sense": 0.15
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.3,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 1.0,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L3: generalise value-unit binding across templates (force on all training families, aux_role max)"
+  },
+  "400": {
+   "task_weights": {
+    "force": 0.3,
+    "convert": 0.2,
+    "equiv": 0.1,
+    "inverse": 0.1,
+    "sense": 0.3
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.5
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.5,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 1.0
+   },
+   "note": "L4: frame-invariant sense decision via cross-frame twins + max consistency (H-memo test)"
+  },
+  "500": {
+   "task_weights": {
+    "force": 0.25,
+    "convert": 0.2,
+    "equiv": 0.25,
+    "inverse": 0.1,
+    "sense": 0.2
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L5: restore equiv answer routing; balanced binary tasks; lower consistency"
+  },
+  "600": {
+   "task_weights": {
+    "force": 0.15,
+    "convert": 0.4,
+    "equiv": 0.2,
+    "inverse": 0.1,
+    "sense": 0.15
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.15,
+    "p_abbr": 0.15
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L6: convert is readout-limited (T005) - dose the readout mapping with low surface noise"
+  },
+  "700": {
+   "task_weights": {
+    "force": 0.3,
+    "convert": 0.2,
+    "equiv": 0.15,
+    "inverse": 0.2,
+    "sense": 0.15
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "distractor_rate": 0.2,
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.1,
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.2
+   },
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "note": "L7: A's stage-2 lesson verbatim (H-prior vs H-hyst diagnostic)"
+  },
+  "800": {
+   "task_weights": {
+    "force": 0.175,
+    "convert": 0.175,
+    "equiv": 0.175,
+    "inverse": 0.175,
+    "sense": 0.3
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "distractor_rate": 0.2,
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L8: restore sense task-type recognition on unseen frames (sense 0.3), otherwise A-like"
+  },
+  "900": {
+   "task_weights": {
+    "force": 0.167,
+    "convert": 0.167,
+    "equiv": 0.25,
+    "inverse": 0.167,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "distractor_rate": 0.2,
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.3
+   },
+   "note": "L9: hold sense at 0.25 (durability test) and dose equiv for new-family generalisation"
+  },
+  "1000": {
+   "task_weights": {
+    "force": 0.167,
+    "convert": 0.167,
+    "equiv": 0.25,
+    "inverse": 0.167,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.2,
+   "distractor_rate": 0.2,
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 1.0,
+    "consistency": 0.3
+   },
+   "note": "L10: IIT 3 -> 1 (H-iit-tax test)"
+  },
+  "1100": {
+   "task_weights": {
+    "force": 0.1875,
+    "convert": 0.1875,
+    "equiv": 0.1875,
+    "inverse": 0.1875,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "distractor_rate": 0.25,
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.1,
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.2
+   },
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "note": "L11: A's stage-3 lesson except sense 0.25 (hold the one B-specific effect)"
+  },
+  "1200": {
+   "task_weights": {
+    "force": 0.3,
+    "convert": 0.15,
+    "equiv": 0.15,
+    "inverse": 0.15,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "distractor_rate": 0.6,
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.1,
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.2
+   },
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "note": "L12: distractor exposure (content deficit of B's earlier lessons)"
+  },
+  "1300": {
+   "task_weights": {
+    "force": 0.1875,
+    "convert": 0.1875,
+    "equiv": 0.1875,
+    "inverse": 0.1875,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "distractor_rate": 0.25,
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.1,
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.2
+   },
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "note": "L13: hold (A-like stage-3 mix, sense 0.25)"
+  },
+  "1400": {
+   "task_weights": {
+    "force": 0.1875,
+    "convert": 0.1875,
+    "equiv": 0.1875,
+    "inverse": 0.1875,
+    "sense": 0.25
+   },
+   "replay_weight": 0.3,
+   "style": {
+    "p_word": 0.3,
+    "p_abbr": 0.3
+   },
+   "distractor_rate": 0.25,
+   "hard_negative_rate": 0.3,
+   "paraphrase_pair_rate": 0.1,
+   "objectives": {
+    "aux_role": 0.5,
+    "iit": 3.0,
+    "consistency": 0.2
+   },
+   "sense_contexts": [
+    "P-force-acts",
+    "P-mass-has",
+    "P-work-done",
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "distractor_contexts": [
+    "O-force-compel",
+    "O-mass-church",
+    "O-work-job"
+   ],
+   "note": "L14: hold"
+  }
+ },
+ "reviews": {
+  "0": {
+   "what_changed": "Start of continuation (common = pretrain step 5000, trigger never fired). Identical to A.",
+   "knows": "Force on the 3 pretrain families in canonical surface form: canonical-style ID 0.995 (style breakdown of dev/force_id_pretrainfam); the h[0:16] block is causally sufficient for canonical-style sources (T002 on common: swap 0.99).",
+   "fails": "Every word-number (ID 0.13) or abbreviated-unit (0.15) input; train phrasing families (force_id_trainfam 0.315, mostly style-limited); all non-force tasks (convert 0.07-0.10, inverse 0.12-0.15 = chance; equiv and sense 0.00 because the yes/no/phys/other answers were never trained); paraphrase all-agree 0.00.",
+   "explanation": "H-lex: the failure on new surface forms is an UPSTREAM lexical-binding gap - number-word and abbreviation embeddings were never trained, so the value/unit reading pathway that writes the mass block receives garbage (T002: word-number sources write a block that moves the answer only 7% of the time).",
+   "competing_explanation": "H-route: embeddings are not the bottleneck; the attention routing that pairs a value with its unit is template/position specific to the pretrain families, so new families fail even with known tokens and fixing style alone will not transfer to train families.",
+   "prediction": "With a style-heavy force lesson (p_word=p_abbr=0.5, paraphrase twins 0.3 + consistency 0.5 tying new forms to known forms): after 100 steps dev/force_id_pretrainfam >= 0.85 (H-lex) and T002 non-canonical swap >= 0.6. H-route predicts force_id_pretrainfam rises but force_id_trainfam stays < 0.5 while force_newfam stays < 0.2. Falsifier of H-lex: force_id_pretrainfam < 0.7.",
+   "tool_needed": "T002_swap_reconciler (exists, validated) re-run at step 100 to test the block-level prediction; no new tool yet.",
+   "next_action": "Lesson L0: force 0.5 / convert 0.3 / equiv 0.1 / sense 0.1 over all training families; style 0.5/0.5; replay 0.2 (floor); pair rate 0.3, consistency 0.5; hard negatives 0.2; no distractors yet (they add a second number token before the binding is fixed). Convert shares value-unit binding, so it reuses the same upstream fix.",
+   "why_this_checkpoint": "Step 0: the only checkpoint at which the binding gap can be addressed before the high-lr warm-up phase sets representations for the other tasks; the evidence (T002, style breakdown) is specific to this common state.",
+   "previous_outcome": "None (first review). Pre-continuation prediction from the smoke T002 card (style axis is first-order) replicated on the study common checkpoint: canonical 0.99 vs non-canonical 0.19."
+  },
+  "100": {
+   "what_changed": "Both arms regressed on the one known skill: canonical-style force on pretrain families 0.99 -> 0.63 (A and B identical, T003). force_id_pretrainfam 0.58 -> 0.40 (A) / 0.38 (B). Word-number inputs did not improve (0.13 -> 0.10/0.11). B sense 0.00 vs A 0.12 on trainframe_newctx. CKA(h, prev) 0.84 (B) / 0.87 (A): the representation moved a lot.",
+   "knows": "Still: canonical-style force partially (0.63); nothing new acquired yet in either arm (convert, inverse at chance; equiv ~0).",
+   "fails": "Word numbers (0.10), abbreviations (0.14), all new tasks; canonical force is now damaged.",
+   "explanation": "H-interf: gradients from new tasks (convert/equiv/sense share the trunk and the 0-12 answer space) overwrite the force pathway; replay at 0.2-0.3 of canonical pretrain examples is not enough protection. The H-lex prediction for this block (>= 0.85) is FALSIFIED as stated - binding did not happen, and the known skill was lost instead.",
+   "competing_explanation": "H-shock: a transient disruption from the fresh AdamW (zero second moments) plus warm-up to 1e-3; it recovers in the next block without any curriculum change. Style weight is NOT the driver: B (style 0.5) and A (0.3) lost the same amount.",
+   "prediction": "B with replay 0.5: canonical-style force on pretrain families >= 0.90 at step 200. Discriminating test via A (unchanged stage-1 lesson, replay 0.3): H-interf predicts A canonical < 0.85 at step 200; H-shock predicts A recovers >= 0.90 too. Falsifier for the B choice: B canonical < 0.80.",
+   "tool_needed": "Built T003_stratified_accuracy (new, validated with 3 bookkeeping/oracle controls) to separate lost skill vs unbound surface form; harness gained ctx.dev_sets() so tools never handle paths.",
+   "next_action": "L1: replay 0.5 (protection); force 0.45 / convert 0.25 / equiv 0.1 / sense 0.2 over training pools; style 0.5/0.5; pair 0.3 + consistency 0.5; IIT 3; hard negatives 0.2.",
+   "why_this_checkpoint": "The regression is visible now and the lr is at its peak (1e-3) for the next blocks - protection matters most while the step size is largest.",
+   "previous_outcome": "Step-0 prediction (H-lex: ID >= 0.85, T002 non-canonical swap >= 0.6) falsified: ID 0.38, word-number accuracy unchanged. H-route not tested because the shared regression dominates."
+  },
+  "200": {
+   "what_changed": "B canonical force on pretrain families 0.63 -> 0.77 (A 0.63 -> 0.65). B force_id_pretrainfam 0.47 vs A 0.40. B lost on equiv (0.00) and sense newframe (0.00); A has equiv 0.065, sense 0.09-0.14.",
+   "knows": "B: partially restored canonical force. Neither arm has learned anything new in-distribution (T004 train-pool: convert 0.16-0.21, inverse 0.13-0.15 = chance-level).",
+   "fails": "ANSWER TYPE: equiv items answered with numbers (B: '0' for 231/384 train-pool items, yes/no ~0); sense answered mostly with numbers; outputs collapse to '0', the modal mod-13 product. In-distribution, not a generalisation gap.",
+   "explanation": "H-plateau/type: the trunk/readout has not yet formed the question-type -> answer-type mapping; each new task sits below the dose needed to leave its plateau, and B's 50% numeric replay pushed the prior further toward numeric answers (B equiv 0.00 vs A 0.065).",
+   "competing_explanation": "H-trunk: task identity is not linearly available at the query position (h), so no lesson mix will flip answer type within 100 steps; outputs remain numeric whatever the dose.",
+   "prediction": "L2 (equiv 0.3, sense 0.3, replay 0.35): at step 300 B dev/equiv_trainfam >= 0.45 and B equiv train-pool outputs are yes/no for >= 90% of items; B dev/sense_trainframe_newctx >= 0.40. A (stage-1 mix) equiv_trainfam < 0.30. H-trunk falsifier for my choice: B equiv outputs still mostly numeric. Cost prediction: B canonical force stays >= 0.70.",
+   "tool_needed": "Built T004_generalization_gap (validated: training-pools-only, oracle 1.0, constant-predictor share) - it is what revealed the answer-type collapse. Re-run at 300.",
+   "next_action": "L2: force 0.2 / convert 0.15 / equiv 0.3 / inverse 0.05 / sense 0.3; replay 0.35; style 0.3/0.3 (style binding did not move, lower its noise); hard negatives 0.3; pair 0.2 + consistency 0.3; IIT 3.",
+   "why_this_checkpoint": "The lr is still near its peak (cosine just started); a type mapping is cheapest to form while steps are large, and the binary tasks are 4/8 of the registered primary sets.",
+   "previous_outcome": "Step-100 prediction: B canonical >= 0.90 - FALSIFIED (0.77; also below my 0.80 falsifier) though direction right; discriminating test: A did not recover (0.65), so H-shock FALSIFIED, H-interf supported."
+  },
+  "300": {
+   "what_changed": "Answer-type mapping formed in BOTH arms this block (T004: equiv outputs now yes/no for 66% (B) / 55% (A) of items; sense outputs phys/other ~76% / 73%). Dev equiv_trainfam 0.25 (B) / 0.27 (A); sense dev 0.30-0.46. B canonical force kept (force_id_pretrainfam 0.51 vs A 0.43).",
+   "knows": "Answer types for equiv and sense. B: sense in-distribution 0.64 (styled 0.74) vs A 0.44/0.53.",
+   "fails": "All numeric computation outside canonical pretrain-family force: convert in-distribution 0.15-0.16 (chance-level), equiv in-distribution 0.35-0.38 (below the 0.48 yes-share: it is guessing yes/no), force on train families 0.41-0.48. B sense GENERALISATION gap: 0.64 in-distribution vs 0.30 dev.",
+   "explanation": "H-bind: every numeric task depends on reading value x unit-scale into a canonical quantity; this exists only for the 3 pretrain templates in canonical style. Equiv/convert/inverse cannot leave chance until value-unit binding generalises across templates. The binding probe (canonical mass at the mass-value token, layer 1) is ~0.47 ID and has not moved.",
+   "competing_explanation": "H-route2: the bottleneck is not the token-level binding but the readout composition (multiplying two canonical quantities mod 13 per task); the probe can rise without any task improving. Also for the step-200 lesson: answer type formed in A without concentration, so my concentrated lesson was not what caused it (shared time/lr effect).",
+   "prediction": "L3 (force 0.4 across all training families, aux_role at its max 1.0, pair 0.3): at step 400 B binding probe ID >= 0.60 and B dev/force_id_trainfam >= 0.40 while A < 0.35. H-route2 predicts the probe rises but force_id_trainfam does not. Falsifier of H-bind for B: probe < 0.52.",
+   "tool_needed": "T004 (re-run at 400 on force/convert); the card's binding probe; T003 for canonical-style force.",
+   "next_action": "L3: force 0.4 / convert 0.2 / equiv 0.15 / inverse 0.1 / sense 0.15; replay 0.3; aux_role 1.0 (max: role supervision of value/unit tokens at layer 1 is the only upstream lever available); IIT 3; consistency 0.3; pair 0.3; style 0.3/0.3; hard negatives 0.3.",
+   "why_this_checkpoint": "Answer types have just formed, so further binary-task dosing has diminishing value; all 6 numeric primary sets are blocked by the same upstream binding.",
+   "previous_outcome": "Step-200 predictions FALSIFIED: equiv 0.25 (< 0.45), yes/no share 66% (< 90%), sense 0.31 (< 0.40); A formed answer type too (equiv 0.27), so the lesson was not causal. Cost prediction held (canonical force not lost: force_id_pretrainfam 0.51)."
+  },
+  "400": {
+   "what_changed": "B sense_newframe_trainctx 0.30 -> 0.01 (A 0.47); T004 v2: on the NEW sense frame B answers only numbers ('0' 164, '10' 110, '7' 66 of 384) - it no longer recognises the question type. B sense in-distribution rose 0.64 -> 0.76. Equiv dev 0.37 both arms. Binding probe flat (0.47).",
+   "knows": "Answer types; sense on TRAINING contexts and frames (B 0.76/0.81 styled); equiv slightly above guessing in-distribution (0.45).",
+   "fails": "Frame-level task recognition for the unseen sense frame (its cue words does/mean/measured are <unk>); sense on new contexts (both arms answer 'phys' for ~60-65% while gold is 54% other) - the discriminating context words are <unk>; numeric tasks outside canonical pretrain force.",
+   "explanation": "H-memo: with only 2 training sense frames and 6 training contexts, the student identifies the task by frame-specific words and the sense by memorised context words; neither survives the whole-word tokenizer's <unk> on new frames/contexts. A frame-invariant, unit-presence cue (number+unit => phys; bare number => other) would generalise and is learnable from the training contexts.",
+   "competing_explanation": "H-cap: memorisation of 6 contexts is the minimum-loss solution and no consistency pressure within the training pools can move the student to the unit-presence rule; generalisation stays at the phys-biased level. Separately: my step-300 binding hypothesis (aux_role max -> probe up) is FALSIFIED; role supervision at layer 1 does not produce canonical-quantity binding.",
+   "prediction": "L4 (sense 0.3, pair rate 0.5 = max, consistency 1.0 = max, p_abbr 0.5): at step 500 B sense_newframe_trainctx >= 0.45 with >= 80% phys/other answers; B sense_trainframe_newctx >= 0.40 with the phys share falling below 55%. H-cap predicts newctx <= 0.32, phys share >= 60%.",
+   "tool_needed": "T004 v2 (dev answer histograms, added this checkpoint after the below-chance anomaly).",
+   "next_action": "L4: force 0.3 / convert 0.2 / equiv 0.1 / inverse 0.1 / sense 0.3; replay 0.3; style 0.3/0.5; pair 0.5 + consistency 1.0; aux 0.5; IIT 3; hard negatives 0.3.",
+   "why_this_checkpoint": "The type-recognition failure appeared at this block and is specific to B's state (A still answers phys/other on the new frame); sense is 2/8 primary sets.",
+   "previous_outcome": "Step-300 prediction FALSIFIED: binding probe 0.471 (< 0.60, below falsifier 0.52), force_id_trainfam 0.305 (< 0.40), A 0.323. Side effect not predicted: B lost sense type-recognition on the new frame."
+  },
+  "500": {
+   "what_changed": "B sense in-distribution 0.76 -> 0.93 (memorised: 6 training contexts) while dev new-context sense became MORE phys-biased (phys 307/384, gold phys 177/384); B new-frame sense 0.30 (numeric answers 209/384). B equiv collapsed 0.37 -> 0.27: equiv questions now answered phys/other 180/384 (cross-task answer-type contamination). A equiv 0.51 = mostly 'yes' (322/384 in-distribution) - not a skill.",
+   "knows": "Sense on training contexts (B 0.93); answer types still mostly correct for force/convert/inverse.",
+   "fails": "Equiv answer type (B), sense generalisation (both), all numeric computation beyond canonical force (convert in-distribution 0.19-0.23).",
+   "explanation": "Cross-task answer-type contamination: heavy sense dosing with max pair rate/consistency made the binary-answer region dominated by phys/other; equiv (dose 0.07 of the batch) lost its yes/no routing. The sense memorisation result supports H-cap: within training pools the student prefers memorising context words to a unit-presence rule.",
+   "competing_explanation": "Equiv routing loss is not dose-driven but consistency-driven: consistency=1.0 on twins pulls equiv twins (different families) toward each other's errors; lowering consistency alone would restore it.",
+   "prediction": "L5 (equiv 0.25, sense 0.2, consistency 0.3, pair 0.2): at step 600 B dev/equiv_trainfam >= 0.45 with yes/no >= 85% of answers; B sense in-distribution stays >= 0.85; sense dev does not improve (H-cap). Falsifier: B equiv yes/no share < 70%.",
+   "tool_needed": "T004 v2 again; NEW: why is convert at chance even in-distribution? If the canonical source quantity (value x unit scale) is decodable at h for convert items but the answer is wrong, the failure is in the readout composition; if not decodable, it is upstream. Building T005 for that.",
+   "next_action": "L5: force 0.25 / convert 0.2 / equiv 0.25 / inverse 0.1 / sense 0.2; replay 0.3; style 0.3/0.3; pair 0.2 + consistency 0.3; aux 0.5; IIT 3; hard negatives 0.3.",
+   "why_this_checkpoint": "B's equiv type routing broke at this block; repairing it is the cheapest recoverable primary-endpoint loss (2/8 sets) and the lr is still 0.85 of peak.",
+   "previous_outcome": "Step-400 predictions FALSIFIED: newframe 0.305 (< 0.45, numeric answers persist), newctx 0.375 (< 0.40) and phys share 80% (prediction < 55%); H-cap's prediction (newctx <= 0.32) also not met exactly (0.375) but its phys-bias prediction held. Unpredicted cost: equiv answer type lost."
+  },
+  "600": {
+   "what_changed": "B equiv answer routing restored (dev equiv_trainfam 0.27 -> 0.46; yes/no on 97% of answers); B sense in-distribution held (0.92); sense dev did not move (0.20 newframe, 0.36 newctx); force_id_pretrainfam 0.54 both arms.",
+   "knows": "Answer types for all tasks in B again; sense on training contexts; canonical force partially (~0.54 on the mixed-style dev set).",
+   "fails": "Convert (model accuracy in-distribution 0.21 B / 0.25 A), inverse (chance), equiv beyond the yes-prior, sense generalisation.",
+   "explanation": "H-read (T005, new): for canonical convert items the ingredients are present at the query position - source value 0.98 (linear), source unit 0.82, target unit 0.91 - and a probe recovers the answer at ~0.47-0.50, about twice the model's own 0.21-0.25. The bottleneck is the shared readout's composition mapping, not upstream reading. T005 also showed canonical mass in the force block is NOT linearly decodable (0.39 ridge vs 0.62 kNN) - consistent with T001's curved-code verdict; linear probes under-read this student.",
+   "competing_explanation": "H-cap-readout: the 256-unit readout MLP is already saturated by force; more convert dose will trade force for convert (force_id_pretrainfam falls by > 0.05) rather than add convert.",
+   "prediction": "L6 (convert 0.4, low style noise 0.15/0.15): at step 700 B dev/convert_trainfam >= 0.20 (A < 0.12) and T005 model accuracy on canonical convert >= 0.35. H-cap-readout predicts force_id_pretrainfam drops below 0.49. Falsifier: B convert_trainfam < 0.12.",
+   "tool_needed": "Built T005_decodability_ladder (validated on planted-truth codes; five pre-validation fixes logged in its manifest - the planted case exposed a kNN standardisation flaw). Re-run at 700.",
+   "next_action": "L6: force 0.15 / convert 0.4 / equiv 0.2 / inverse 0.1 / sense 0.15; replay 0.3; style 0.15/0.15; pair 0.2 + consistency 0.3; aux 0.5; IIT 3; hard negatives 0.3.",
+   "why_this_checkpoint": "Convert is 2/8 primary sets and is now shown to be readout-limited, not input-limited - the cheapest numeric skill to unlock; lr still 0.79 of peak.",
+   "previous_outcome": "Step-500 prediction CONFIRMED: equiv 0.464 (>= 0.45) with yes/no 97% (>= 85%); sense in-distribution 0.92 (>= 0.85); sense dev unchanged (H-cap). Note: A reached the same equiv (0.49) - B only recovered what its step-400 lesson cost."
+  },
+  "700": {
+   "what_changed": "Little: convert_trainfam B 0.115 / A 0.104; T005 convert model accuracy B 0.265 / A 0.280; CKA(h, prev) 0.99 in both arms - representations nearly frozen. B sense_newframe fell again 0.20 -> 0.10 (A 0.48).",
+   "knows": "Same as step 600. Ingredients of convert remain decodable at h (v 0.98, t 0.92) with answer probe ~0.46-0.51.",
+   "fails": "Convert readout (dose did not help), inverse, equiv beyond prior, sense generalisation; B persistently fails to recognise the new sense frame as a sense question.",
+   "explanation": "H-prior: after the step-300 type formation, B-A differences on dev track the CURRENT lesson's task mixture (answer-prior shifts: e.g. heavy numeric dosing -> numeric answers on the ambiguous new sense frame) rather than learned skills; the student's representation barely changes per block (CKA 0.99), so the curriculum lever acts mainly on output priors.",
+   "competing_explanation": "H-hyst: B's history (e.g. the step-400 max-consistency sense block) left persistent changes that do not wash out with a matched mixture; B will keep its newframe deficit even on A's lesson.",
+   "prediction": "Test by giving B exactly A's next lesson (FIXED_CURRICULUM block 7): H-prior predicts at step 800 |B - A| <= 0.05 on every dev set and B sense_newframe >= 0.40. H-hyst predicts B newframe stays <= 0.20 and >= 3 dev sets differ by > 0.05.",
+   "tool_needed": "None new. T005 result for the convert prediction recorded: FALSIFIED.",
+   "next_action": "L7 = A's stage-2 lesson verbatim (a deliberate diagnostic: matched mixture from different histories).",
+   "why_this_checkpoint": "After 7 blocks without a single B-specific skill gain, the most informative experiment for the remaining 8 is to measure how much of B-A is history vs current mixture; this decides whether further lesson steering can matter at all.",
+   "previous_outcome": "Step-600 prediction FALSIFIED: B convert_trainfam 0.115 (< 0.20 and below the 0.12 falsifier), model accuracy 0.265 (< 0.35); A achieved the same without convert dosing. H-cap-readout's force-loss prediction also failed (force_id_pretrainfam rose to 0.555), so the readout was not traded either - the convert lesson simply had no effect."
+  },
+  "800": {
+   "what_changed": "On A's own lesson B converged to A on 15/16 dev sets (|B-A| <= 0.057); the exception persisted: sense_newframe B 0.198 vs A 0.435. CKA 0.98-1.0.",
+   "knows": "As before; T006: the sense task-type decision on the training frames is carried mainly by 'is' (occlusion drop 0.47-0.56 in S01), 'physics' contributes little (0.04-0.07) in both arms.",
+   "fails": "B: the new sense frame S03 is read as a numeric question (type mass 0.17 vs A 0.28); occluding 'quantity' RAISES type mass by 0.22 in B (0.08 in A): in B 'quantity' pushes toward numeric answers.",
+   "explanation": "H-slot (conjecture): numeric frames end '... in {unit} ?', so the token right before '?' is read as an output-unit slot; in S03 that token is 'quantity' (in S01 it is 'here'); B's numeric-heavy lessons (step 300 force 0.4, step 600 convert 0.4) strengthened this slot reading, which is why B's newframe dropped after exactly those blocks (0.30 -> 0.01, 0.20 -> 0.10). Step-700 H-prior is confirmed for 15/16 sets; newframe shows hysteresis.",
+   "competing_explanation": "H-physics (my step-800 hypothesis) is FALSIFIED by T006: 'physics' is not more important in B. Alternative to H-slot: B simply has a stronger global numeric prior, unrelated to position; then sense dosing restores newframe proportionally to dose regardless of frame words.",
+   "prediction": "L8 (sense 0.3, numeric tasks 0.175 each): at step 900 B sense_newframe >= 0.35 and T006 'quantity' drop in B rises above -0.10 (less negative); all other dev sets stay within 0.06 of A. Falsifier: newframe < 0.25.",
+   "tool_needed": "Built T006_cue_occlusion (validated: causal token drop 0.88 on a planted toy, irrelevant token 0.0). A positional-slot test would need a frame not in the training pools; not allowed in the confirmatory arm - recorded as follow-up.",
+   "next_action": "L8: force 0.175 / convert 0.175 / equiv 0.175 / inverse 0.175 / sense 0.3; replay 0.3; style 0.3/0.3; pair 0.2 + consistency 0.3; hard negatives 0.3; distractors 0.2 (as A); aux 0.5; IIT 3.",
+   "why_this_checkpoint": "The diagnostic block isolated the only history-dependent B deficit; it is on a primary set (sense_newframe_newctx is sealed's analogue) and lr is 0.6 of peak - the last blocks where a prior shift can still be made durable.",
+   "previous_outcome": "Step-700 prediction MOSTLY CONFIRMED: 15/16 dev sets within 0.057 of A (inverse_newfam +0.057 marginally over 0.05) - H-prior; but sense_newframe stayed 0.198 (prediction >= 0.40 FALSIFIED) - H-hyst for that set."
+  },
+  "900": {
+   "what_changed": "B sense_newframe 0.198 -> 0.497 (A 0.422) and sense_trainframe_newctx 0.401 (A 0.354): B now leads on both sense dev sets. Equiv_newfam B 0.398 vs A 0.490 (-0.09). Other sets within 0.05 of A. CKA 0.996.",
+   "knows": "Sense task type on the new frame (when dosed); answer types; partial canonical force.",
+   "fails": "Equiv generalisation to new families (B), all numeric computation beyond canonical force; sense on new contexts stays phys-biased.",
+   "explanation": "H-dose: the newframe deficit was a dose-sensitive global answer-type prior (sense 0.3 restored it within one block), not a positional 'slot' reading - T006 shows the 'quantity' occlusion effect became MORE negative (-0.28) while accuracy recovered, so H-slot is FALSIFIED as the mechanism; whatever 'quantity' does, it is not what limited accuracy.",
+   "competing_explanation": "The recovery is transient (H-prior): it will decay within a block once the sense dose drops, as at step 500->600.",
+   "prediction": "L9 (sense 0.25, equiv 0.25 to address equiv_newfam, others 0.167): at step 1000 B sense_newframe >= 0.42 (holds within 0.08), B equiv_newfam >= 0.45, no other dev set falls > 0.05 below A. Falsifier: newframe < 0.35 at sense 0.25.",
+   "tool_needed": "None new; T004 v2 on equiv at 1000 for the answer histogram on new families.",
+   "next_action": "L9: force 0.167 / convert 0.167 / equiv 0.25 / inverse 0.167 / sense 0.25; replay 0.3; style 0.3/0.3; distractors 0.2; hard negatives 0.3; pair 0.2 + consistency 0.3; aux 0.5; IIT 3.",
+   "why_this_checkpoint": "Durability of the sense recovery at a lower dose decides how to spend the last 5 blocks while lr is still ~0.5 of peak; equiv_newfam (a primary-set analogue) is now B's largest deficit.",
+   "previous_outcome": "Step-800 prediction: newframe >= 0.35 CONFIRMED (0.497); 'quantity' drop rising above -0.10 FALSIFIED (-0.276); other sets within 0.06 of A - mostly (equiv_newfam -0.091, inverse_newfam +0.065)."
+  },
+  "1000": {
+   "what_changed": "B sense_newframe held 0.456 (A 0.357) at sense 0.25; equiv_newfam B 0.359 / A 0.414; all other sets within 0.05. Training log: the IIT term DOMINATES the objective - A: 3 x 1.456 = 4.37 of total 6.21 (task 1.51); B: 3 x 0.84 = 2.52 of 3.79. Within-pretrain-family block IIA has eroded to 0.34 (A) / 0.39 (B).",
+   "knows": "Sense type on the new frame (B), equiv answer types; partial canonical force.",
+   "fails": "Equiv is NOT computed: T004 v2 shows a frame-conditional prior (both arms answer 'no' on new families for ~66% while 61% of gold is 'yes'; in-distribution 0.56). Convert/inverse at chance. I deliberately do NOT exploit the dev yes-prior (it would raise dev/sealed numbers without any skill).",
+   "explanation": "H-iit-tax: the IIT target (swap the mass block between force items) is unattainable for styled and new-family force items whose block is unbound (T002: word-number sources swap at 0.07), so IIT produces large irreducible gradients (4.4 of 6.2 of A's loss) that crowd out task learning in the shared trunk/readout and even erode the block causality it is meant to train.",
+   "competing_explanation": "H-slow: the loss share is irrelevant; the student is simply in a long plateau (CKA 0.98-0.99/block) and lowering IIT will not accelerate task learning within 100 steps.",
+   "prediction": "L10 = L9 with IIT 1.0 (from 3.0): at step 1100 B task loss < 1.0 (from 1.12), B convert_trainfam >= 0.18 (A ~0.13), and B within-family IIA falls below 0.30 (cost). H-slow predicts no dev set moves by > 0.05 relative to A except via IIA.",
+   "tool_needed": "None new: training-log components and card IIA suffice.",
+   "next_action": "L10: as L9 but objectives iit 1.0.",
+   "why_this_checkpoint": "Five blocks remain and the lr is ~0.5 of peak; the objective-mixing hypothesis is the only untested lever that acts on learning speed rather than output priors.",
+   "previous_outcome": "Step-900 prediction: newframe >= 0.42 CONFIRMED (0.456); equiv_newfam >= 0.45 FALSIFIED (0.359); other sets within 0.05 of A CONFIRMED (largest gap equiv_newfam -0.055)."
+  },
+  "1100": {
+   "what_changed": "IIT 3 -> 1 changed nothing measurable: B task loss 1.12 -> 1.18, convert_trainfam 0.120 (A 0.102), within-family IIA 0.38 (unchanged), CKA(h, prev) 0.999 - B's representation barely moved. Equiv_newfam B 0.349 vs A 0.500 (A's yes-prior moved, not B's skill). Sense sets now equal to A (0.43/0.40 vs 0.45/0.39).",
+   "knows": "No change since step 900.",
+   "fails": "Numeric computation beyond canonical force; equiv is prior-driven in both arms.",
+   "explanation": "H-slow: the student is in a long plateau; per-block representation change is ~0.1-1% (CKA 0.99+), so lesson mixtures only shift output priors; the IIT share of the loss is not what limits learning (H-iit-tax FALSIFIED).",
+   "competing_explanation": "The plateau could still break late (pretraining broke its plateau after ~2,400 steps); with lr decaying to 1e-4 a break in the last 400 steps is unlikely but not excluded.",
+   "prediction": "L11 (registered objective weights restored: IIT 3, consistency 0.2; sense 0.25): at step 1200 B sense_newframe >= 0.40; B-A on equiv_newfam stays in [-0.20, -0.05] (prior-driven, not fixed by this lesson); no dev set changes by > 0.05 from step 1100 in B except equiv sets (prior drift).",
+   "tool_needed": "None.",
+   "next_action": "L11: force 0.1875 / convert 0.1875 / equiv 0.1875 / inverse 0.1875 / sense 0.25; replay 0.3; style 0.3/0.3; distractors 0.25; hard negatives 0.3; pair 0.1 + consistency 0.2; aux 0.5; IIT 3 (= A's stage-3 except sense 0.25).",
+   "why_this_checkpoint": "The objective-mixing test is resolved; remaining blocks should not introduce unproductive differences from A beyond the one B-specific effect that worked (sense dosing).",
+   "previous_outcome": "Step-1000 prediction FALSIFIED on all three parts: task loss 1.18 (>= 1.0), convert 0.120 (< 0.18), IIA 0.38 (did not fall below 0.30). H-slow's prediction (no relative movement > 0.05 except prior-driven sets) held, except equiv_newfam where A's prior moved (+0.09)."
+  },
+  "1200": {
+   "what_changed": "Stable (CKA 0.998). B sense_newframe 0.398 (A 0.458), equiv_newfam -0.107, force_distractor B 0.211 vs A 0.281 (-0.07, persistent since step 900).",
+   "knows": "Unchanged.",
+   "fails": "force_distractor in B: B had NO distractor exposure in blocks 1-8 (A: 0.10-0.25 throughout) - a content deficit of my curriculum, not a prior.",
+   "explanation": "H-distract: robustness to a prepended other-sense sentence with a bare number requires exposure (the student must learn that a number not followed by a unit is not the mass/acceleration value); B's 800 steps without distractors left it less robust.",
+   "competing_explanation": "The force_distractor gap is noise/prior (force answers are 13-way; a 0.07 gap is ~27 items of 384) and dosing will not close it.",
+   "prediction": "L12 (distractor rate 0.6, force 0.3): at step 1300 B force_distractor >= 0.26 (closing >= 2/3 of the gap) while force_id_pretrainfam stays >= 0.57. Falsifier: force_distractor < 0.23.",
+   "tool_needed": "None.",
+   "next_action": "L12: force 0.3 / convert 0.15 / equiv 0.15 / inverse 0.15 / sense 0.25; distractor rate 0.6; replay 0.3; style 0.3/0.3; hard negatives 0.3; pair 0.1 + consistency 0.2; aux 0.5; IIT 3.",
+   "why_this_checkpoint": "Three blocks remain; this is the one remaining B deficit that traces to curriculum content rather than to an output prior, so it is the only one a lesson can legitimately fix.",
+   "previous_outcome": "Step-1100 prediction: newframe >= 0.40 FALSIFIED marginally (0.398); equiv_newfam gap in [-0.20, -0.05] CONFIRMED (-0.107); no B set moved > 0.05 CONFIRMED (largest equiv_trainfam +0.049)."
+  },
+  "1300": {
+   "what_changed": "Distractor dosing 0.6 moved B force_distractor only 0.211 -> 0.221; the gap to A narrowed (-0.07 -> -0.034) mostly because A fell (0.281 -> 0.255). All sets within 0.065 of A; CKA 0.999.",
+   "knows": "Unchanged; sense newframe 0.406 (A 0.372).",
+   "fails": "Unchanged.",
+   "explanation": "H-distract FALSIFIED: 100 steps of heavy distractor exposure at lr ~0.3 of peak do not change robustness - consistent with H-slow (representation frozen at this stage); the step-to-step B-A gaps of ~0.03-0.07 on 384-item sets are within the block-to-block fluctuation of either arm (e.g. A force_distractor moved 0.026 with an unchanged lesson).",
+   "competing_explanation": "A distractor effect needs longer exposure than one block; it may appear at step 1400 with continued dosing.",
+   "prediction": "L13 (A-like stage-3 mix, sense 0.25, distractors 0.25): at step 1400 every B dev set within 0.06 of its step-1300 value (frozen regime) and B-A within [-0.12, +0.08] everywhere.",
+   "tool_needed": "None.",
+   "next_action": "L13: force 0.1875 / convert 0.1875 / equiv 0.1875 / inverse 0.1875 / sense 0.25; otherwise A's stage-3 lesson (distractors 0.25, IIT 3, consistency 0.2, pair 0.1).",
+   "why_this_checkpoint": "Two blocks remain at lr <= 0.3 of peak; the evidence says lessons now move only priors, so B should hold its state rather than inject new prior shifts before the sealed evaluation.",
+   "previous_outcome": "Step-1200 prediction FALSIFIED: force_distractor 0.221 (< 0.23 falsifier); force_id_pretrainfam held 0.589 (>= 0.57, the cost part held)."
+  },
+  "1400": {
+   "what_changed": "With the same lesson kind as step 1100-1200, B sets still moved by up to 0.12 in one block (sense_newframe 0.406 -> 0.284, convert_newfam +0.094, equiv_trainfam -0.073); A moved similarly on some sets. B-A in [-0.094, +0.068].",
+   "knows": "Unchanged: canonical force (partial), answer types, training-context sense.",
+   "fails": "Unchanged.",
+   "explanation": "The dev metrics of prior-driven sets (sense on unseen frames, equiv, small numeric sets near chance) have a block-to-block fluctuation of ~0.1 even when the representation is nearly frozen (CKA 0.993-0.998): small readout/bias changes flip many near-tie items. Any final B-A difference of this size on those sets is within this fluctuation and cannot be attributed to adaptive selection.",
+   "competing_explanation": "The step-1300->1400 drop of B newframe is a real decay of the sense-dose effect (H-prior), not fluctuation; it would not recover without more sense dose.",
+   "prediction": "Final block L14 (same as L13): at step 1500 B-A on the registered-primary analogues (convert, equiv, inverse, sense dev sets) stays within [-0.15, +0.10] each, and the mean B-A over those 8 dev sets is within [-0.05, +0.03] - i.e. NO adaptive advantage. For the sealed primary I predict the bootstrap CI includes 0.",
+   "tool_needed": "None.",
+   "next_action": "L14: same as L13 (hold).",
+   "why_this_checkpoint": "Last block at lr ~0.12 of peak; no lever tested in 14 blocks moved learning speed, so holding is the evidence-based choice.",
+   "previous_outcome": "Step-1300 prediction PARTLY FALSIFIED: B-A stayed within [-0.12, +0.08] (confirmed) but B's own sets did not stay within 0.06 of step 1300 (falsified: newframe -0.122, convert_newfam +0.094, equiv_trainfam -0.073)."
+  }
+ },
+ "tools": {},
+ "ledger": {
+  "A_train_cpu_s": 207.10037696999999,
+  "B_train_cpu_s": 198.28088348400004,
+  "observe_cpu_s": 186.69683864900003,
+  "A_tokens": 2810135,
+  "B_tokens": 2796234
+ }
+}

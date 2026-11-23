@@ -116,7 +116,7 @@ def build(model=None, vocab=None, checkpoint=None):
                                     sealed=["generated only in memory by run_sem.py final; content hashes frozen in eval/manifest.json",
                                             "sem.data.SEALED_LOCK blocks every sealed request"]),
         tool_api=dict(context="toolsmith.sandbox_child.Ctx", methods=["load_model(name)", "vocab", "data (guarded sem.data facade)",
-                                                                       "lang", "encode(examples)", "observe (sem.observe)", "out(name, obj)"]),
+                                                                       "lang", "encode(examples)", "dev_sets()", "observe (sem.observe)", "out(name, obj)"]),
         instruments_prebuilt=[n for n, f in inspect.getmembers(O, inspect.isfunction) if f.__module__ == "sem.observe"])
     m["version"] = hashlib.sha256(json.dumps(dict(src=m["source_sha256"], rt=m["runtime"]["sites"]), sort_keys=True).encode()).hexdigest()[:16]
     return m

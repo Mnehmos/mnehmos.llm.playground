@@ -1,0 +1,36 @@
+{
+ "task_weights": {
+  "force": 0.1875,
+  "convert": 0.1875,
+  "equiv": 0.1875,
+  "inverse": 0.1875,
+  "sense": 0.25
+ },
+ "replay_weight": 0.3,
+ "style": {
+  "p_word": 0.3,
+  "p_abbr": 0.3
+ },
+ "distractor_rate": 0.25,
+ "hard_negative_rate": 0.3,
+ "paraphrase_pair_rate": 0.1,
+ "objectives": {
+  "aux_role": 0.5,
+  "iit": 3.0,
+  "consistency": 0.2
+ },
+ "sense_contexts": [
+  "P-force-acts",
+  "P-mass-has",
+  "P-work-done",
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "distractor_contexts": [
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "note": "L13: hold (A-like stage-3 mix, sense 0.25)"
+}

@@ -1,0 +1,12 @@
+{
+ "what_changed": "B canonical force on pretrain families 0.63 -> 0.77 (A 0.63 -> 0.65). B force_id_pretrainfam 0.47 vs A 0.40. B lost on equiv (0.00) and sense newframe (0.00); A has equiv 0.065, sense 0.09-0.14.",
+ "knows": "B: partially restored canonical force. Neither arm has learned anything new in-distribution (T004 train-pool: convert 0.16-0.21, inverse 0.13-0.15 = chance-level).",
+ "fails": "ANSWER TYPE: equiv items answered with numbers (B: '0' for 231/384 train-pool items, yes/no ~0); sense answered mostly with numbers; outputs collapse to '0', the modal mod-13 product. In-distribution, not a generalisation gap.",
+ "explanation": "H-plateau/type: the trunk/readout has not yet formed the question-type -> answer-type mapping; each new task sits below the dose needed to leave its plateau, and B's 50% numeric replay pushed the prior further toward numeric answers (B equiv 0.00 vs A 0.065).",
+ "competing_explanation": "H-trunk: task identity is not linearly available at the query position (h), so no lesson mix will flip answer type within 100 steps; outputs remain numeric whatever the dose.",
+ "prediction": "L2 (equiv 0.3, sense 0.3, replay 0.35): at step 300 B dev/equiv_trainfam >= 0.45 and B equiv train-pool outputs are yes/no for >= 90% of items; B dev/sense_trainframe_newctx >= 0.40. A (stage-1 mix) equiv_trainfam < 0.30. H-trunk falsifier for my choice: B equiv outputs still mostly numeric. Cost prediction: B canonical force stays >= 0.70.",
+ "tool_needed": "Built T004_generalization_gap (validated: training-pools-only, oracle 1.0, constant-predictor share) - it is what revealed the answer-type collapse. Re-run at 300.",
+ "next_action": "L2: force 0.2 / convert 0.15 / equiv 0.3 / inverse 0.05 / sense 0.3; replay 0.35; style 0.3/0.3 (style binding did not move, lower its noise); hard negatives 0.3; pair 0.2 + consistency 0.3; IIT 3.",
+ "why_this_checkpoint": "The lr is still near its peak (cosine just started); a type mapping is cheapest to form while steps are large, and the binary tasks are 4/8 of the registered primary sets.",
+ "previous_outcome": "Step-100 prediction: B canonical >= 0.90 - FALSIFIED (0.77; also below my 0.80 falsifier) though direction right; discriminating test: A did not recover (0.65), so H-shock FALSIFIED, H-interf supported."
+}

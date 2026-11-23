@@ -1,0 +1,9 @@
+{
+ "stop_step": 5000,
+ "trigger_fired": false,
+ "state_hash": "d9319c4298a67468cd6bdf9366b6695ce6ca9b2c0aa2b651505aa0025a0bdcbe",
+ "ledger": {
+  "train_cpu_s": 2202.1,
+  "observe_cpu_s": 531.8
+ }
+}

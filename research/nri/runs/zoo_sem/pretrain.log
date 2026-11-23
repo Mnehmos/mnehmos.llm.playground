@@ -1,0 +1,52 @@
+[pretrain] step 0 pre-fam ID 0.052 OOD 0.052 newfam 0.057 IIA 0.089 cka 0.000 trigger False too early
+[pretrain] step 100 pre-fam ID 0.151 OOD 0.151 newfam 0.174 IIA 0.127 cka 0.072 trigger False too early
+[pretrain] step 200 pre-fam ID 0.146 OOD 0.107 newfam 0.164 IIA 0.100 cka 0.909 trigger False too early
+[pretrain] step 300 pre-fam ID 0.143 OOD 0.133 newfam 0.182 IIA 0.131 cka 0.968 trigger False too early
+[pretrain] step 400 pre-fam ID 0.169 OOD 0.112 newfam 0.182 IIA 0.090 cka 0.934 trigger False too early
+[pretrain] step 500 pre-fam ID 0.172 OOD 0.109 newfam 0.177 IIA 0.107 cka 0.929 trigger False too early
+[pretrain] step 600 pre-fam ID 0.156 OOD 0.096 newfam 0.146 IIA 0.092 cka 0.943 trigger False too early
+[pretrain] step 700 pre-fam ID 0.146 OOD 0.120 newfam 0.120 IIA 0.098 cka 0.928 trigger False too early
+[pretrain] step 800 pre-fam ID 0.177 OOD 0.112 newfam 0.148 IIA 0.090 cka 0.635 trigger False too early
+[pretrain] step 900 pre-fam ID 0.162 OOD 0.133 newfam 0.164 IIA 0.076 cka 0.899 trigger False too early
+[pretrain] step 1000 pre-fam ID 0.159 OOD 0.122 newfam 0.164 IIA 0.087 cka 0.989 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 1100 pre-fam ID 0.201 OOD 0.109 newfam 0.177 IIA 0.113 cka 0.953 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 1200 pre-fam ID 0.135 OOD 0.094 newfam 0.177 IIA 0.090 cka 0.994 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 1300 pre-fam ID 0.180 OOD 0.112 newfam 0.182 IIA 0.103 cka 0.983 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 1400 pre-fam ID 0.156 OOD 0.096 newfam 0.177 IIA 0.090 cka 0.986 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 1500 pre-fam ID 0.169 OOD 0.125 newfam 0.180 IIA 0.100 cka 0.991 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 1600 pre-fam ID 0.169 OOD 0.125 newfam 0.162 IIA 0.076 cka 0.985 trigger False {'id': False, 'ood': False, 'cka': True}
+[pretrain] step 1700 pre-fam ID 0.154 OOD 0.117 newfam 0.164 IIA 0.083 cka 0.985 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 1800 pre-fam ID 0.143 OOD 0.115 newfam 0.169 IIA 0.096 cka 0.966 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 1900 pre-fam ID 0.138 OOD 0.094 newfam 0.169 IIA 0.083 cka 0.958 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2000 pre-fam ID 0.159 OOD 0.109 newfam 0.177 IIA 0.087 cka 0.977 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2100 pre-fam ID 0.159 OOD 0.120 newfam 0.138 IIA 0.090 cka 0.960 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 2200 pre-fam ID 0.156 OOD 0.091 newfam 0.122 IIA 0.087 cka 0.972 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2300 pre-fam ID 0.193 OOD 0.112 newfam 0.125 IIA 0.105 cka 0.459 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2400 pre-fam ID 0.365 OOD 0.164 newfam 0.109 IIA 0.096 cka 0.649 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 2500 pre-fam ID 0.503 OOD 0.198 newfam 0.143 IIA 0.114 cka 0.968 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 2600 pre-fam ID 0.521 OOD 0.180 newfam 0.120 IIA 0.114 cka 0.950 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2700 pre-fam ID 0.573 OOD 0.198 newfam 0.102 IIA 0.103 cka 0.973 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 2800 pre-fam ID 0.576 OOD 0.216 newfam 0.115 IIA 0.111 cka 0.987 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 2900 pre-fam ID 0.591 OOD 0.219 newfam 0.096 IIA 0.127 cka 0.985 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 3000 pre-fam ID 0.568 OOD 0.203 newfam 0.112 IIA 0.098 cka 0.952 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3100 pre-fam ID 0.578 OOD 0.219 newfam 0.107 IIA 0.103 cka 0.968 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3200 pre-fam ID 0.578 OOD 0.224 newfam 0.099 IIA 0.102 cka 0.999 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 3300 pre-fam ID 0.589 OOD 0.221 newfam 0.099 IIA 0.092 cka 0.999 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3400 pre-fam ID 0.570 OOD 0.203 newfam 0.109 IIA 0.100 cka 0.995 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 3500 pre-fam ID 0.544 OOD 0.211 newfam 0.185 IIA 0.116 cka 0.970 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3600 pre-fam ID 0.562 OOD 0.227 newfam 0.117 IIA 0.118 cka 0.925 trigger False {'id': False, 'ood': False, 'cka': False}
+[pretrain] step 3700 pre-fam ID 0.581 OOD 0.216 newfam 0.148 IIA 0.124 cka 0.977 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3800 pre-fam ID 0.578 OOD 0.221 newfam 0.128 IIA 0.122 cka 0.998 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 3900 pre-fam ID 0.565 OOD 0.224 newfam 0.128 IIA 0.114 cka 0.998 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 4000 pre-fam ID 0.578 OOD 0.216 newfam 0.094 IIA 0.111 cka 0.997 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4100 pre-fam ID 0.560 OOD 0.216 newfam 0.104 IIA 0.114 cka 0.998 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4200 pre-fam ID 0.495 OOD 0.221 newfam 0.130 IIA 0.096 cka 0.969 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 4300 pre-fam ID 0.576 OOD 0.229 newfam 0.128 IIA 0.114 cka 0.989 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 4400 pre-fam ID 0.570 OOD 0.221 newfam 0.130 IIA 0.111 cka 0.999 trigger False {'id': False, 'ood': True, 'cka': False}
+[pretrain] step 4500 pre-fam ID 0.570 OOD 0.224 newfam 0.120 IIA 0.107 cka 0.999 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4600 pre-fam ID 0.573 OOD 0.221 newfam 0.117 IIA 0.109 cka 1.000 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4700 pre-fam ID 0.573 OOD 0.221 newfam 0.120 IIA 0.107 cka 1.000 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4800 pre-fam ID 0.576 OOD 0.224 newfam 0.117 IIA 0.103 cka 1.000 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 4900 pre-fam ID 0.576 OOD 0.224 newfam 0.117 IIA 0.102 cka 1.000 trigger False {'id': False, 'ood': True, 'cka': True}
+[pretrain] step 5000 pre-fam ID 0.581 OOD 0.216 newfam 0.122 IIA 0.100 cka 1.000 trigger False {'id': False, 'ood': True, 'cka': True}
+common checkpoint 5000 d9319c4298a67468

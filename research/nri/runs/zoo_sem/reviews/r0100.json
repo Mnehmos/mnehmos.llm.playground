@@ -1,0 +1,12 @@
+{
+ "what_changed": "Both arms regressed on the one known skill: canonical-style force on pretrain families 0.99 -> 0.63 (A and B identical, T003). force_id_pretrainfam 0.58 -> 0.40 (A) / 0.38 (B). Word-number inputs did not improve (0.13 -> 0.10/0.11). B sense 0.00 vs A 0.12 on trainframe_newctx. CKA(h, prev) 0.84 (B) / 0.87 (A): the representation moved a lot.",
+ "knows": "Still: canonical-style force partially (0.63); nothing new acquired yet in either arm (convert, inverse at chance; equiv ~0).",
+ "fails": "Word numbers (0.10), abbreviations (0.14), all new tasks; canonical force is now damaged.",
+ "explanation": "H-interf: gradients from new tasks (convert/equiv/sense share the trunk and the 0-12 answer space) overwrite the force pathway; replay at 0.2-0.3 of canonical pretrain examples is not enough protection. The H-lex prediction for this block (>= 0.85) is FALSIFIED as stated - binding did not happen, and the known skill was lost instead.",
+ "competing_explanation": "H-shock: a transient disruption from the fresh AdamW (zero second moments) plus warm-up to 1e-3; it recovers in the next block without any curriculum change. Style weight is NOT the driver: B (style 0.5) and A (0.3) lost the same amount.",
+ "prediction": "B with replay 0.5: canonical-style force on pretrain families >= 0.90 at step 200. Discriminating test via A (unchanged stage-1 lesson, replay 0.3): H-interf predicts A canonical < 0.85 at step 200; H-shock predicts A recovers >= 0.90 too. Falsifier for the B choice: B canonical < 0.80.",
+ "tool_needed": "Built T003_stratified_accuracy (new, validated with 3 bookkeeping/oracle controls) to separate lost skill vs unbound surface form; harness gained ctx.dev_sets() so tools never handle paths.",
+ "next_action": "L1: replay 0.5 (protection); force 0.45 / convert 0.25 / equiv 0.1 / sense 0.2 over training pools; style 0.5/0.5; pair 0.3 + consistency 0.5; IIT 3; hard negatives 0.2.",
+ "why_this_checkpoint": "The regression is visible now and the lr is at its peak (1e-3) for the next blocks - protection matters most while the step size is largest.",
+ "previous_outcome": "Step-0 prediction (H-lex: ID >= 0.85, T002 non-canonical swap >= 0.6) falsified: ID 0.38, word-number accuracy unchanged. H-route not tested because the shared regression dominates."
+}

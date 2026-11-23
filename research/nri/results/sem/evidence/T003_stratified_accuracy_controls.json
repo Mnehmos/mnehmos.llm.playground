@@ -1,0 +1,73 @@
+{
+ "record": {
+  "tool_id": "T003_stratified_accuracy",
+  "mode": "controls",
+  "source_sha256": "8e6ee57191373717eef13651fc8ad0131f4346d97160e858880f40b239512e69",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T003_stratified_accuracy",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 100 (A and B)",
+   "kind": "observational",
+   "purpose": "Accuracy on development sets stratified by number style, unit style, canonical style, phrasing family, mass unit, distractor.",
+   "hypothesis": "Step-100 regression of both arms: if canonical-style accuracy fell, the shared optimizer-restart/warm-up shock disrupted a known skill; if only non-canonical strata are low, nothing was lost and the drop is a mixture effect.",
+   "input_schema": {
+    "args.sets": "optional list of set names",
+    "args.keys": "attributes to report"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "set": {
+      "acc": "rate",
+      "<attr>": {
+       "value": "[rate, n]"
+      }
+     }
+    }
+   },
+   "read_scope": "model copies; frozen development sets; never sealed",
+   "measurement_definitions": "accuracy = argmax answer equals the gold answer; a stratum's rate is over the examples of the set having that attribute value",
+   "version": "1"
+  },
+  "checkpoints": {
+   "c": "runs/zoo_sem/common"
+  },
+  "args": {},
+  "nonmutation": {
+   "before": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860"
+   },
+   "after": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 1.7,
+  "error": "",
+  "time": "2026-11-23T23:32:25Z",
+  "validated": true
+ },
+ "result": {
+  "cases": [
+   {
+    "name": "strata reweight to total",
+    "expected": 0.25,
+    "observed": 0.25,
+    "pass": true
+   },
+   {
+    "name": "constant-predictor strata = answer share",
+    "expected": 0.05,
+    "observed": 0.05,
+    "pass": true
+   },
+   {
+    "name": "model accuracy = reweighted strata",
+    "expected": 0.3333,
+    "observed": 0.3334,
+    "pass": true
+   }
+  ]
+ }
+}

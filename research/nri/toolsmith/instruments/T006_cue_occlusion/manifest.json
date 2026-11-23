@@ -1,0 +1,13 @@
+{
+ "tool_id": "T006_cue_occlusion",
+ "author": "LLM supervisor (session of Issue #25)",
+ "created_at_checkpoint": "study continuation step 800 (A and B)",
+ "kind": "causal-readonly",
+ "purpose": "Identify which question-frame words drive the sense task-type decision (probability mass on phys/other) by occlusion with <unk>.",
+ "hypothesis": "H-physics: B's history (cross-frame consistency between S01 and S02 at step 400) made the word 'physics' - the only content word the two training frames share - the dominant type cue; S03 lacks it, so B reads S03 as numeric. Prediction: occluding 'physics' drops type mass more in B than in A, and 'quantity' contributes less in B than in A.",
+ "input_schema": {"args.checkpoints": "list"},
+ "output_schema": {"per checkpoint": {"pool": {"type_mass": "mean P(phys)+P(other)", "drop <word>": "mean decrease when the word is occluded"}}},
+ "read_scope": "model copies; fresh TRAINING-pool sense items (frames S01, S02); development new-frame sense set",
+ "measurement_definitions": "type mass = softmax probability on {phys, other}; occlusion replaces every occurrence of the word after the last '.' (the question frame) with <unk>; drop = base - occluded, averaged over items containing the word",
+ "version": "1"
+}

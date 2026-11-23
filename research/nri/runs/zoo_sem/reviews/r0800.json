@@ -1,0 +1,12 @@
+{
+ "what_changed": "On A's own lesson B converged to A on 15/16 dev sets (|B-A| <= 0.057); the exception persisted: sense_newframe B 0.198 vs A 0.435. CKA 0.98-1.0.",
+ "knows": "As before; T006: the sense task-type decision on the training frames is carried mainly by 'is' (occlusion drop 0.47-0.56 in S01), 'physics' contributes little (0.04-0.07) in both arms.",
+ "fails": "B: the new sense frame S03 is read as a numeric question (type mass 0.17 vs A 0.28); occluding 'quantity' RAISES type mass by 0.22 in B (0.08 in A): in B 'quantity' pushes toward numeric answers.",
+ "explanation": "H-slot (conjecture): numeric frames end '... in {unit} ?', so the token right before '?' is read as an output-unit slot; in S03 that token is 'quantity' (in S01 it is 'here'); B's numeric-heavy lessons (step 300 force 0.4, step 600 convert 0.4) strengthened this slot reading, which is why B's newframe dropped after exactly those blocks (0.30 -> 0.01, 0.20 -> 0.10). Step-700 H-prior is confirmed for 15/16 sets; newframe shows hysteresis.",
+ "competing_explanation": "H-physics (my step-800 hypothesis) is FALSIFIED by T006: 'physics' is not more important in B. Alternative to H-slot: B simply has a stronger global numeric prior, unrelated to position; then sense dosing restores newframe proportionally to dose regardless of frame words.",
+ "prediction": "L8 (sense 0.3, numeric tasks 0.175 each): at step 900 B sense_newframe >= 0.35 and T006 'quantity' drop in B rises above -0.10 (less negative); all other dev sets stay within 0.06 of A. Falsifier: newframe < 0.25.",
+ "tool_needed": "Built T006_cue_occlusion (validated: causal token drop 0.88 on a planted toy, irrelevant token 0.0). A positional-slot test would need a frame not in the training pools; not allowed in the confirmatory arm - recorded as follow-up.",
+ "next_action": "L8: force 0.175 / convert 0.175 / equiv 0.175 / inverse 0.175 / sense 0.3; replay 0.3; style 0.3/0.3; pair 0.2 + consistency 0.3; hard negatives 0.3; distractors 0.2 (as A); aux 0.5; IIT 3.",
+ "why_this_checkpoint": "The diagnostic block isolated the only history-dependent B deficit; it is on a primary set (sense_newframe_newctx is sealed's analogue) and lr is 0.6 of peak - the last blocks where a prior shift can still be made durable.",
+ "previous_outcome": "Step-700 prediction MOSTLY CONFIRMED: 15/16 dev sets within 0.057 of A (inverse_newfam +0.057 marginally over 0.05) - H-prior; but sense_newframe stayed 0.198 (prediction >= 0.40 FALSIFIED) - H-hyst for that set."
+}

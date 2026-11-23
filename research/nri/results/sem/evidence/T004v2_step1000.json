@@ -1,0 +1,124 @@
+{
+ "record": {
+  "tool_id": "T004_generalization_gap",
+  "mode": "run",
+  "source_sha256": "84143c0a76586e666fce2f7d324f47e8f0a6ee904e8fd2484d27b48328aba24d",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T004_generalization_gap",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 200 (A and B)",
+   "kind": "observational",
+   "purpose": "Per task: accuracy on fresh training-pool items (canonical and styled) vs matching dev sets, plus the model's most frequent answers on the training pool.",
+   "hypothesis": "New tasks near zero on dev after 200 steps: H-plateau (not learned even in-distribution; output collapses to a few answers) vs H-gen (learned in-distribution but fails on dev tuples/families/contexts).",
+   "input_schema": {
+    "args.tasks": "subset of tasks",
+    "args.n": "items per pool"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "task": {
+      "train_canonical": "rate",
+      "train_styled": "rate",
+      "train_canonical_top_answers": "{answer: count}",
+      "<dev set>": "rate"
+     }
+    }
+   },
+   "read_scope": "model copies; freshly generated TRAINING-pool items (ctx.data, guarded); frozen dev sets; never sealed",
+   "measurement_definitions": "accuracy = argmax equals gold; canonical = digits + full unit names; styled = p_word = p_abbr = 0.5",
+   "version": "2",
+   "changelog": [
+    "v2 (step 400): predicted and gold answer histograms on dev sets, after B's sense_newframe fell to 0.01 (below binary chance)"
+   ]
+  },
+  "checkpoints": {
+   "A1000": "runs/zoo_sem/A_fixed/step_1000",
+   "B1000": "runs/zoo_sem/B_adaptive/step_1000"
+  },
+  "args": {
+   "tasks": [
+    "equiv"
+   ]
+  },
+  "nonmutation": {
+   "before": {
+    "A1000": "ba05d5037e77b80a7039650de3e845067d70cf5321608d187d30ab4a12bf36aa",
+    "B1000": "8e7546b5cdc8db90fd9dd435cb1ef248862aced8075e98e77a7617b9d8f5b284"
+   },
+   "after": {
+    "A1000": "ba05d5037e77b80a7039650de3e845067d70cf5321608d187d30ab4a12bf36aa",
+    "B1000": "8e7546b5cdc8db90fd9dd435cb1ef248862aced8075e98e77a7617b9d8f5b284"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 2.4,
+  "error": "",
+  "time": "2026-11-23T23:44:04Z"
+ },
+ "result": {
+  "A1000": {
+   "equiv": {
+    "train_canonical": 0.5573,
+    "train_styled": 0.5885,
+    "train_canonical_top_answers": {
+     "yes": 248,
+     "no": 136
+    },
+    "dev/equiv_trainfam": 0.5078,
+    "dev/equiv_trainfam top_answers": {
+     "yes": 205,
+     "no": 168,
+     "other": 5,
+     "phys": 5
+    },
+    "dev/equiv_trainfam gold_answers": {
+     "yes": 234,
+     "no": 150
+    },
+    "dev/equiv_newfam": 0.4141,
+    "dev/equiv_newfam top_answers": {
+     "no": 247,
+     "yes": 109,
+     "other": 11,
+     "0": 8
+    },
+    "dev/equiv_newfam gold_answers": {
+     "yes": 233,
+     "no": 151
+    }
+   }
+  },
+  "B1000": {
+   "equiv": {
+    "train_canonical": 0.5599,
+    "train_styled": 0.5156,
+    "train_canonical_top_answers": {
+     "yes": 311,
+     "no": 73
+    },
+    "dev/equiv_trainfam": 0.5521,
+    "dev/equiv_trainfam top_answers": {
+     "yes": 294,
+     "no": 90
+    },
+    "dev/equiv_trainfam gold_answers": {
+     "yes": 234,
+     "no": 150
+    },
+    "dev/equiv_newfam": 0.3594,
+    "dev/equiv_newfam top_answers": {
+     "no": 257,
+     "yes": 113,
+     "12": 5,
+     "0": 4
+    },
+    "dev/equiv_newfam gold_answers": {
+     "yes": 233,
+     "no": 151
+    }
+   }
+  }
+ }
+}

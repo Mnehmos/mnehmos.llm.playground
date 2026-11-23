@@ -1,0 +1,28 @@
+{
+ "tool_id": "T004_generalization_gap",
+ "author": "LLM supervisor (session of Issue #25)",
+ "created_at_checkpoint": "study continuation step 200 (A and B)",
+ "kind": "observational",
+ "purpose": "Per task: accuracy on fresh training-pool items (canonical and styled) vs matching dev sets, plus the model's most frequent answers on the training pool.",
+ "hypothesis": "New tasks near zero on dev after 200 steps: H-plateau (not learned even in-distribution; output collapses to a few answers) vs H-gen (learned in-distribution but fails on dev tuples/families/contexts).",
+ "input_schema": {
+  "args.tasks": "subset of tasks",
+  "args.n": "items per pool"
+ },
+ "output_schema": {
+  "per checkpoint": {
+   "task": {
+    "train_canonical": "rate",
+    "train_styled": "rate",
+    "train_canonical_top_answers": "{answer: count}",
+    "<dev set>": "rate"
+   }
+  }
+ },
+ "read_scope": "model copies; freshly generated TRAINING-pool items (ctx.data, guarded); frozen dev sets; never sealed",
+ "measurement_definitions": "accuracy = argmax equals gold; canonical = digits + full unit names; styled = p_word = p_abbr = 0.5",
+ "version": "2",
+ "changelog": [
+  "v2 (step 400): predicted and gold answer histograms on dev sets, after B's sense_newframe fell to 0.01 (below binary chance)"
+ ]
+}

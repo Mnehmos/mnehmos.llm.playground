@@ -1,0 +1,30 @@
+{
+ "task_weights": {
+  "force": 0.2,
+  "convert": 0.15,
+  "equiv": 0.3,
+  "inverse": 0.05,
+  "sense": 0.3
+ },
+ "replay_weight": 0.35,
+ "style": {
+  "p_word": 0.3,
+  "p_abbr": 0.3
+ },
+ "hard_negative_rate": 0.3,
+ "paraphrase_pair_rate": 0.2,
+ "sense_contexts": [
+  "P-force-acts",
+  "P-mass-has",
+  "P-work-done",
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "objectives": {
+  "aux_role": 0.5,
+  "iit": 3.0,
+  "consistency": 0.3
+ },
+ "note": "L2: concentrate on binary-answer tasks to form the answer-type mapping (H-plateau/type test)"
+}

@@ -1,0 +1,12 @@
+{
+ "what_changed": "Stable (CKA 0.998). B sense_newframe 0.398 (A 0.458), equiv_newfam -0.107, force_distractor B 0.211 vs A 0.281 (-0.07, persistent since step 900).",
+ "knows": "Unchanged.",
+ "fails": "force_distractor in B: B had NO distractor exposure in blocks 1-8 (A: 0.10-0.25 throughout) - a content deficit of my curriculum, not a prior.",
+ "explanation": "H-distract: robustness to a prepended other-sense sentence with a bare number requires exposure (the student must learn that a number not followed by a unit is not the mass/acceleration value); B's 800 steps without distractors left it less robust.",
+ "competing_explanation": "The force_distractor gap is noise/prior (force answers are 13-way; a 0.07 gap is ~27 items of 384) and dosing will not close it.",
+ "prediction": "L12 (distractor rate 0.6, force 0.3): at step 1300 B force_distractor >= 0.26 (closing >= 2/3 of the gap) while force_id_pretrainfam stays >= 0.57. Falsifier: force_distractor < 0.23.",
+ "tool_needed": "None.",
+ "next_action": "L12: force 0.3 / convert 0.15 / equiv 0.15 / inverse 0.15 / sense 0.25; distractor rate 0.6; replay 0.3; style 0.3/0.3; hard negatives 0.3; pair 0.1 + consistency 0.2; aux 0.5; IIT 3.",
+ "why_this_checkpoint": "Three blocks remain; this is the one remaining B deficit that traces to curriculum content rather than to an output prior, so it is the only one a lesson can legitimately fix.",
+ "previous_outcome": "Step-1100 prediction: newframe >= 0.40 FALSIFIED marginally (0.398); equiv_newfam gap in [-0.20, -0.05] CONFIRMED (-0.107); no B set moved > 0.05 CONFIRMED (largest equiv_trainfam +0.049)."
+}

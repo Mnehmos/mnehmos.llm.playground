@@ -89,6 +89,11 @@ class Ctx:
         m.eval()
         return m
 
+    def dev_sets(self):
+        """The frozen development sets (runs/zoo_sem/eval/dev); sealed sets do not exist on disk."""
+        from pathlib import Path
+        return O.dev_sets(Path(NRI) / "runs" / "zoo_sem" / "eval")
+
     def encode(self, examples):
         return D.encode_batch(examples, self.vocab)
 

@@ -7,7 +7,7 @@
   "sem/train.py": "edddbbc92cfa989883b689c7602523a49caec9e45127fe2dc5e3604c87be469f",
   "sem/observe.py": "9260e1c6773b8a51aae03c96989de99e4bb6fbc191961a94629b890df85a5ccd",
   "run_sem.py": "f2456e92655da5a63aad4eb355367020b0aa8ef940ba1f6c726fc134b20b97ce",
-  "toolsmith/sandbox_child.py": "913a350e835bf8bfc036d7f21d628788926b41b730b6302e14fcfc193bb56615",
+  "toolsmith/sandbox_child.py": "a07507cf64bd8ad5e606aace11cda550bd6f1b5c79faa9ffaf5d9c87da70fdc6",
   "toolsmith/runner.py": "50b0e1207a3a50515a6440ef49f1270abf73ea17db8469fa6a6425b5d3dbee97"
  },
  "tokenization": {
@@ -962,6 +962,7 @@
    "data (guarded sem.data facade)",
    "lang",
    "encode(examples)",
+   "dev_sets()",
    "observe (sem.observe)",
    "out(name, obj)"
   ]
@@ -982,5 +983,5 @@
   "role_vectors",
   "sense_probe"
  ],
- "version": "b98012f25582578b"
+ "version": "9d515845e5dd08e3"
 }

@@ -1,0 +1,30 @@
+{
+ "tool_id": "T005_decodability_ladder",
+ "author": "LLM supervisor (session of Issue #25)",
+ "created_at_checkpoint": "study continuation step 600 (A and B)",
+ "kind": "observational",
+ "purpose": "Locate why convert stays at chance in-distribution: which answer ingredients (v, u, t, canonical v*s_u, answer) are linearly decodable at the query position h and at the source-value token (x1, x2).",
+ "hypothesis": "H-up: ingredients are not even decodable (upstream reading fails). H-comp: v, u, t decodable at h but canonical quantity / answer not (composition fails). H-read: answer decodable at h but readout fails.",
+ "input_schema": {
+  "args.checkpoints": "list",
+  "args.n": "training-pool items for fitting"
+ },
+ "output_schema": {
+  "per checkpoint": {
+   "site": {
+    "v|u|t|canon|answer": "held-out ridge accuracy"
+   },
+   "model_accuracy": "rate"
+  }
+ },
+ "read_scope": "model copies; fresh TRAINING-pool convert/force items (canonical style); never dev or sealed",
+ "measurement_definitions": "ridge one-vs-all linear classifier (sem.observe.ridge, lam 1e-2) fit on n items, scored on n/2 disjoint items; chance = 1/13 for values (1/3 for units); kNN = Euclidean 10-nearest-neighbour vote on centred unscaled vectors (separability without a linear-code assumption)",
+ "version": "1",
+ "changelog": [
+  "v1 pre-validation fix: the positive control (canonical mass at h, linear) failed at 0.43 on the common checkpoint although the model is 0.995 accurate and the block is causally sufficient - consistent with T001's curved-code verdict; added kNN and moved the positive control to kNN",
+  "v1 pre-validation fix 2: kNN on the full h was also 0.50 (other quantities dominate distances); positive control moved to the declared block h[0:16]; block added as a site",
+  "v1 pre-validation fix 3: the model-based control had an ARBITRARY threshold (0.8; observed 0.735 on the block) and was replaced by a planted-truth curved code (route-rotated discrete-log circle) - the real-model block decodability is reported as an observation, not used as a gate",
+  "v1 pre-validation fix 4: the planted code exposed a decoder flaw - per-dimension standardisation inflated pure-noise dimensions (kNN 0.36 on a decodable code); kNN now uses centred, unscaled Euclidean distance",
+  "v1 pre-validation fix 5: planted noise 0.15 made the gold case itself ambiguous (16-D noise distance ~0.85 > adjacent-class chord 0.52); set to 0.05 so the planted truth is unambiguous"
+ ]
+}

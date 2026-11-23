@@ -1,0 +1,36 @@
+{
+ "task_weights": {
+  "force": 0.167,
+  "convert": 0.167,
+  "equiv": 0.25,
+  "inverse": 0.167,
+  "sense": 0.25
+ },
+ "replay_weight": 0.3,
+ "style": {
+  "p_word": 0.3,
+  "p_abbr": 0.3
+ },
+ "hard_negative_rate": 0.3,
+ "paraphrase_pair_rate": 0.2,
+ "distractor_rate": 0.2,
+ "distractor_contexts": [
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "sense_contexts": [
+  "P-force-acts",
+  "P-mass-has",
+  "P-work-done",
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "objectives": {
+  "aux_role": 0.5,
+  "iit": 3.0,
+  "consistency": 0.3
+ },
+ "note": "L9: hold sense at 0.25 (durability test) and dose equiv for new-family generalisation"
+}

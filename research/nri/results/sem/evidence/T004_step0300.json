@@ -1,0 +1,162 @@
+{
+ "record": {
+  "tool_id": "T004_generalization_gap",
+  "mode": "run",
+  "source_sha256": "4669fa210303047aeaddb52d317f5441bd519bf80c0f3f16cc8ef37fa94a97a5",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T004_generalization_gap",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 200 (A and B)",
+   "kind": "observational",
+   "purpose": "Per task: accuracy on fresh training-pool items (canonical and styled) vs matching dev sets, plus the model's most frequent answers on the training pool.",
+   "hypothesis": "New tasks near zero on dev after 200 steps: H-plateau (not learned even in-distribution; output collapses to a few answers) vs H-gen (learned in-distribution but fails on dev tuples/families/contexts).",
+   "input_schema": {
+    "args.tasks": "subset of tasks",
+    "args.n": "items per pool"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "task": {
+      "train_canonical": "rate",
+      "train_styled": "rate",
+      "train_canonical_top_answers": "{answer: count}",
+      "<dev set>": "rate"
+     }
+    }
+   },
+   "read_scope": "model copies; freshly generated TRAINING-pool items (ctx.data, guarded); frozen dev sets; never sealed",
+   "measurement_definitions": "accuracy = argmax equals gold; canonical = digits + full unit names; styled = p_word = p_abbr = 0.5",
+   "version": "1"
+  },
+  "checkpoints": {
+   "A300": "runs/zoo_sem/A_fixed/step_0300",
+   "B300": "runs/zoo_sem/B_adaptive/step_0300"
+  },
+  "args": {
+   "tasks": [
+    "force",
+    "equiv",
+    "sense",
+    "convert"
+   ]
+  },
+  "nonmutation": {
+   "before": {
+    "A300": "d8732d1343fa0b281f1ebb01f29600daf200279a8253b2c53f05dbf369e963d8",
+    "B300": "bb0dad5351148ec154aacb9cdb62c77c52b0b2f7fcabb85c4a3b778e924e39e1"
+   },
+   "after": {
+    "A300": "d8732d1343fa0b281f1ebb01f29600daf200279a8253b2c53f05dbf369e963d8",
+    "B300": "bb0dad5351148ec154aacb9cdb62c77c52b0b2f7fcabb85c4a3b778e924e39e1"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 4.0,
+  "error": "",
+  "time": "2026-11-23T23:34:54Z"
+ },
+ "result": {
+  "A300": {
+   "force": {
+    "train_canonical": 0.4115,
+    "train_styled": 0.224,
+    "train_canonical_top_answers": {
+     "0": 101,
+     "11": 54,
+     "7": 47,
+     "3": 33
+    },
+    "dev/force_id_trainfam": 0.2865,
+    "dev/force_newfam": 0.1849
+   },
+   "equiv": {
+    "train_canonical": 0.3516,
+    "train_styled": 0.401,
+    "train_canonical_top_answers": {
+     "yes": 211,
+     "phys": 67,
+     "0": 36,
+     "other": 32
+    },
+    "dev/equiv_trainfam": 0.2734,
+    "dev/equiv_newfam": 0.1771
+   },
+   "sense": {
+    "train_canonical": 0.4427,
+    "train_styled": 0.5339,
+    "train_canonical_top_answers": {
+     "other": 142,
+     "phys": 137,
+     "0": 39,
+     "yes": 33
+    },
+    "dev/sense_trainframe_newctx": 0.3281,
+    "dev/sense_newframe_trainctx": 0.4583
+   },
+   "convert": {
+    "train_canonical": 0.1536,
+    "train_styled": 0.1458,
+    "train_canonical_top_answers": {
+     "0": 187,
+     "4": 35,
+     "3": 32,
+     "11": 25
+    },
+    "dev/convert_trainfam": 0.0625,
+    "dev/convert_newfam": 0.0417
+   }
+  },
+  "B300": {
+   "force": {
+    "train_canonical": 0.4766,
+    "train_styled": 0.2708,
+    "train_canonical_top_answers": {
+     "0": 96,
+     "6": 54,
+     "9": 41,
+     "1": 33
+    },
+    "dev/force_id_trainfam": 0.3021,
+    "dev/force_newfam": 0.1615
+   },
+   "equiv": {
+    "train_canonical": 0.3776,
+    "train_styled": 0.3568,
+    "train_canonical_top_answers": {
+     "no": 128,
+     "yes": 124,
+     "0": 63,
+     "other": 31
+    },
+    "dev/equiv_trainfam": 0.25,
+    "dev/equiv_newfam": 0.0911
+   },
+   "sense": {
+    "train_canonical": 0.6432,
+    "train_styled": 0.7396,
+    "train_canonical_top_answers": {
+     "other": 151,
+     "phys": 142,
+     "no": 38,
+     "yes": 17
+    },
+    "dev/sense_trainframe_newctx": 0.3099,
+    "dev/sense_newframe_trainctx": 0.2969
+   },
+   "convert": {
+    "train_canonical": 0.1615,
+    "train_styled": 0.1302,
+    "train_canonical_top_answers": {
+     "0": 83,
+     "6": 58,
+     "4": 52,
+     "9": 47
+    },
+    "dev/convert_trainfam": 0.0755,
+    "dev/convert_newfam": 0.0729
+   }
+  }
+ }
+}
