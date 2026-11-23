@@ -33,6 +33,7 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 21 | [`docs/21_unit_calculus_pilot_findings.md`](docs/21_unit_calculus_pilot_findings.md) | **Pilot findings** (exploratory, n = 1–2): the 6-label design does not learn (4 labels does, unevenly); calculation type shows in answer geometry (scaled → discrete-log circles after the MLP; offsets → value-order circles already in attention); no converted quantity is ever a separable variable: value fuses early, the label stays separable through layer 1; the declared control failed |
 | 22 | [`docs/22_registration_checkpoint_correction.md`](docs/22_registration_checkpoint_correction.md) | **Registration** (Issue #20; committed before training): checkpoint-guided correction pilot. 3 fresh `mass_only` networks, checkpoints 0/600/1,500/3,000/4,500/6,000, bitwise-matched control vs downstream-readout-correction branches from step 3,000 |
 | 23 | [`docs/23_checkpoint_correction_results.md`](docs/23_checkpoint_correction_results.md) | **Checkpoint-correction result** (exploratory, n = 3): mass representations form between steps 600 and 1,500 in three distinct regimes (canonical-like / intermediate / route-dependent); the registered readout correction passed in 1 of 3 networks and met the 'improved' criterion narrowly (+0.055), but the same fold applied after training did as well (0.722 vs 0.705); no upstream reorganization; canonicalization destroys the calculation in the route-dependent network |
+| 24 | [`docs/24_registration_atlas_continuous_edit.md`](docs/24_registration_atlas_continuous_edit.md) | **Registration** (Issue #22; committed before training): two-trajectory concept-formation atlas (61 checkpoints each, every 100 steps) and a continuous, validated **upstream** edit loop on `attn2.o` rows 0–15 that shrinks the mass × route interaction while keeping unit information; one control and one supervised network from the same seed |
 
 ## Layout
 
@@ -68,6 +69,7 @@ python run_swap.py report  --seeds 300 301 302 303 304 305 306 307 308 309 310 3
 python run_editors.py --split test && python run_editors.py --report   # docs 16-17 (fixed networks)
 python train_perm.py && python run_perm.py analyse && python run_perm.py report   # docs 18-19
 python run_correction.py run && python run_correction.py report                   # docs 22-23 (Issue #20)
+python run_atlas.py train && python run_atlas.py analyse && python run_atlas.py final && python run_atlas.py report   # docs 24-25 (Issue #22)
 python make_figures.py
 ```
 
