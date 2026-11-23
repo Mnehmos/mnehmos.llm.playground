@@ -1,0 +1,4376 @@
+{
+ "B-he-0001": {
+  "id": "B-he-0001",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn1.h2",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.086,
+    "mass_unit": 0.002,
+    "acc_value": 0.087,
+    "acc_unit": 0.003,
+    "out_unit": 0.0
+   }
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0002": {
+  "id": "B-he-0002",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn1.h1",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.288,
+    "mass_unit": 0.169,
+    "acc_value": 0.407,
+    "acc_unit": 0.046,
+    "out_unit": 0.033
+   }
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0003": {
+  "id": "B-he-0003",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn2.h3",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.47,
+    "mass_unit": 0.063,
+    "acc_value": 0.052,
+    "acc_unit": 0.202,
+    "out_unit": 0.023
+   },
+   "iia_M": 0.131,
+   "iia_A": 0.058,
+   "block_write_rms": 16.576,
+   "causal": 0.131
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0004": {
+  "id": "B-he-0004",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn1.h0",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.361,
+    "mass_unit": 0.009,
+    "acc_value": 0.353,
+    "acc_unit": 0.0,
+    "out_unit": 0.277
+   }
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0005": {
+  "id": "B-he-0005",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn2.h0",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.568,
+    "mass_unit": 0.222,
+    "acc_value": 0.001,
+    "acc_unit": 0.207,
+    "out_unit": 0.001
+   },
+   "iia_M": 0.161,
+   "iia_A": 0.059,
+   "block_write_rms": 16.92,
+   "causal": 0.161
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0006": {
+  "id": "B-he-0006",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn1.h3",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.145,
+    "mass_unit": 0.63,
+    "acc_value": 0.065,
+    "acc_unit": 0.144,
+    "out_unit": 0.008
+   }
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0007": {
+  "id": "B-he-0007",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn2.h2",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.007,
+    "mass_unit": 0.003,
+    "acc_value": 0.476,
+    "acc_unit": 0.02,
+    "out_unit": 0.486
+   },
+   "iia_M": 0.065,
+   "iia_A": 0.147,
+   "block_write_rms": 1.53,
+   "causal": 0.147
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-he-0008": {
+  "id": "B-he-0008",
+  "kind": "head",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "attn2.h1",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "attends": {
+    "mass_value": 0.044,
+    "mass_unit": 0.0,
+    "acc_value": 0.465,
+    "acc_unit": 0.087,
+    "out_unit": 0.379
+   },
+   "iia_M": 0.09,
+   "iia_A": 0.107,
+   "block_write_rms": 4.227,
+   "causal": 0.107
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0009": {
+  "id": "B-ne-0009",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 9,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.218,
+   "selectivity": 0.219,
+   "ablation_dloss": -0.0004
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0010": {
+  "id": "B-ne-0010",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 22,
+   "dominant_factor": "fu",
+   "dominant_eta2": 0.183,
+   "selectivity": 0.19,
+   "ablation_dloss": -0.0004
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0011": {
+  "id": "B-ne-0011",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 9,
+   "dominant_factor": "fu",
+   "dominant_eta2": 0.183,
+   "selectivity": 0.187,
+   "ablation_dloss": 0.0001
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0012": {
+  "id": "B-ne-0012",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 1100,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 11,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 6,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.315,
+   "selectivity": 0.268,
+   "ablation_dloss": 0.0002
+  },
+  "match_confidence": [
+   [
+    600,
+    0.722,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    700,
+    0.638,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.822,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    900,
+    0.91,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1000,
+    0.592,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0013": {
+  "id": "B-ne-0013",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 15,
+   "dominant_factor": "fu",
+   "dominant_eta2": 0.236,
+   "selectivity": 0.235,
+   "ablation_dloss": -0.0001
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0014": {
+  "id": "B-ne-0014",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 14,
+   "dominant_factor": "route",
+   "dominant_eta2": 0.167,
+   "selectivity": 0.165,
+   "ablation_dloss": -0.0005
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0015": {
+  "id": "B-ne-0015",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 11,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.183,
+   "selectivity": 0.2,
+   "ablation_dloss": 0.0002
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0016": {
+  "id": "B-ne-0016",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 23,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.195,
+   "selectivity": 0.215,
+   "ablation_dloss": 0.0004
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0017": {
+  "id": "B-ne-0017",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 200,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 8,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.251,
+   "selectivity": 0.21,
+   "ablation_dloss": 0.0002
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ],
+   [
+    100,
+    0.651,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0018": {
+  "id": "B-ne-0018",
+  "kind": "neuron_cluster",
+  "first_observed": 0,
+  "ended": 100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 23,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.176,
+   "selectivity": 0.176,
+   "ablation_dloss": -0.0002
+  },
+  "match_confidence": [
+   [
+    0,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-su-0019": {
+  "id": "B-su-0019",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "M@L1_mass_value",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 6,
+   "kappa": 0.8891,
+   "mean_eta2": 0.249,
+   "causal": 0.394
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0020": {
+  "id": "B-su-0020",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "M@block",
+  "current_status": "causally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 2,
+   "kappa": 0.5976,
+   "mean_eta2": 0.893,
+   "causal": 0.941
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0021": {
+  "id": "B-su-0021",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "M@h",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 2,
+   "kappa": 0.804,
+   "mean_eta2": 0.251
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0022": {
+  "id": "B-su-0022",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "M@mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.8126,
+   "mean_eta2": 0.27
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0023": {
+  "id": "B-su-0023",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "A@L1_mass_value",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 6,
+   "kappa": 0.1795,
+   "mean_eta2": 0.02
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0024": {
+  "id": "B-su-0024",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "A@block",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.1932,
+   "mean_eta2": 0.019,
+   "causal": 0.07
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0025": {
+  "id": "B-su-0025",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "A@h",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.4607,
+   "mean_eta2": 0.172
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0026": {
+  "id": "B-su-0026",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "A@mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 4,
+   "kappa": 0.4735,
+   "mean_eta2": 0.101
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0027": {
+  "id": "B-su-0027",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "m@L1_mass_value",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 9,
+   "kappa": 1.0,
+   "mean_eta2": 0.539,
+   "causal": 0.328
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0028": {
+  "id": "B-su-0028",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "m@block",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.4501,
+   "mean_eta2": 0.292
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0029": {
+  "id": "B-su-0029",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "m@h",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.858,
+   "mean_eta2": 0.101
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0030": {
+  "id": "B-su-0030",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "m@mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.6282,
+   "mean_eta2": 0.098
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0031": {
+  "id": "B-su-0031",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "mu@L1_mass_value",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 2,
+   "kappa": 0.9558,
+   "mean_eta2": 0.183
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0032": {
+  "id": "B-su-0032",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "mu@block",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 1,
+   "kappa": 0.6338,
+   "mean_eta2": 0.035
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0033": {
+  "id": "B-su-0033",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "mu@h",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 2,
+   "kappa": 0.9495,
+   "mean_eta2": 0.021
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0034": {
+  "id": "B-su-0034",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "mu@mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 1,
+   "kappa": 0.8321,
+   "mean_eta2": 0.012
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0035": {
+  "id": "B-su-0035",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "F@L1_mass_value",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.0567,
+   "mean_eta2": 0.069
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0036": {
+  "id": "B-su-0036",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "F@block",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.0595,
+   "mean_eta2": 0.061
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0037": {
+  "id": "B-su-0037",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "F@h",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 4,
+   "kappa": 0.0831,
+   "mean_eta2": 0.08
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0038": {
+  "id": "B-su-0038",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "F@mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.8017,
+   "mean_eta2": 0.122
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0039": {
+  "id": "B-su-0039",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "route@L1_mass_value",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.969,
+   "mean_eta2": 0.322
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0040": {
+  "id": "B-su-0040",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "route@block",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 1,
+   "kappa": 0.5392,
+   "mean_eta2": 0.042
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0041": {
+  "id": "B-su-0041",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "route@h",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 3,
+   "kappa": 0.9526,
+   "mean_eta2": 0.031
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-su-0042": {
+  "id": "B-su-0042",
+  "kind": "subspace",
+  "first_observed": 0,
+  "ended": null,
+  "current_site": "route@mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 61,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "rank90": 2,
+   "kappa": 0.817,
+   "mean_eta2": 0.016
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "subspace overlap",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0043": {
+  "id": "B-ne-0043",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 1800,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 17,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 22,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.375,
+   "selectivity": 0.273,
+   "ablation_dloss": 0.0967
+  },
+  "match_confidence": [
+   [
+    1300,
+    0.805,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1400,
+    0.798,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1500,
+    0.917,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1600,
+    0.939,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1700,
+    0.801,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0044": {
+  "id": "B-ne-0044",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 1100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 10,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 15,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.227,
+   "selectivity": 0.159,
+   "ablation_dloss": 0.0009
+  },
+  "match_confidence": [
+   [
+    600,
+    0.937,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    700,
+    0.881,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    800,
+    0.85,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    900,
+    0.868,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1000,
+    0.75,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0045": {
+  "id": "B-ne-0045",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 300,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 6,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.188,
+   "selectivity": 0.261,
+   "ablation_dloss": 0.0001
+  },
+  "match_confidence": [
+   [
+    100,
+    null,
+    null,
+    "new"
+   ],
+   [
+    200,
+    0.575,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0046": {
+  "id": "B-ne-0046",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 11,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 15,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.27,
+   "selectivity": 0.248,
+   "ablation_dloss": 0.0056
+  },
+  "match_confidence": [
+   [
+    700,
+    0.511,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.875,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    900,
+    0.714,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1000,
+    0.896,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1100,
+    0.621,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0047": {
+  "id": "B-ne-0047",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 200,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 7,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.179,
+   "selectivity": 0.163,
+   "ablation_dloss": -0.0002
+  },
+  "match_confidence": [
+   [
+    100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0048": {
+  "id": "B-ne-0048",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 700,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 6,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 4,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.496,
+   "selectivity": 0.303,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    200,
+    0.625,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    300,
+    0.613,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    400,
+    0.545,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    500,
+    0.613,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    600,
+    0.64,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0049": {
+  "id": "B-ne-0049",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 200,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 11,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.222,
+   "selectivity": 0.202,
+   "ablation_dloss": 0.0001
+  },
+  "match_confidence": [
+   [
+    100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0050": {
+  "id": "B-ne-0050",
+  "kind": "neuron_cluster",
+  "first_observed": 100,
+  "ended": 200,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 12,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.214,
+   "selectivity": 0.197,
+   "ablation_dloss": -0.0001
+  },
+  "match_confidence": [
+   [
+    100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0051": {
+  "id": "B-ne-0051",
+  "kind": "neuron_cluster",
+  "first_observed": 200,
+  "ended": 300,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 2,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.217,
+   "selectivity": 0.261,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    200,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0052": {
+  "id": "B-ne-0052",
+  "kind": "neuron_cluster",
+  "first_observed": 200,
+  "ended": 300,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 2,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.315,
+   "selectivity": 0.323,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    200,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0053": {
+  "id": "B-ne-0053",
+  "kind": "neuron_cluster",
+  "first_observed": 200,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 10,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 20,
+   "dominant_factor": "F",
+   "dominant_eta2": 0.374,
+   "selectivity": 0.217,
+   "ablation_dloss": 0.0099
+  },
+  "match_confidence": [
+   [
+    700,
+    0.675,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.86,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    900,
+    0.864,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1000,
+    0.856,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1100,
+    0.732,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0054": {
+  "id": "B-ne-0054",
+  "kind": "neuron_cluster",
+  "first_observed": 200,
+  "ended": 300,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 1,
+   "dominant_factor": "fu",
+   "dominant_eta2": 0.212,
+   "selectivity": 0.3,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    200,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0055": {
+  "id": "B-ne-0055",
+  "kind": "neuron_cluster",
+  "first_observed": 300,
+  "ended": 900,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 6,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 5,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.698,
+   "selectivity": 0.341,
+   "ablation_dloss": 0.0003
+  },
+  "match_confidence": [
+   [
+    400,
+    0.771,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    500,
+    0.907,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    600,
+    0.916,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    700,
+    0.642,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.801,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0056": {
+  "id": "B-ne-0056",
+  "kind": "neuron_cluster",
+  "first_observed": 300,
+  "ended": 400,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 2,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.251,
+   "selectivity": 0.266,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    300,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0057": {
+  "id": "B-ne-0057",
+  "kind": "neuron_cluster",
+  "first_observed": 300,
+  "ended": 400,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 4,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.255,
+   "selectivity": 0.239,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    300,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0058": {
+  "id": "B-ne-0058",
+  "kind": "neuron_cluster",
+  "first_observed": 300,
+  "ended": 500,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 1,
+   "dominant_factor": "fu",
+   "dominant_eta2": 0.235,
+   "selectivity": 0.21,
+   "ablation_dloss": -0.0
+  },
+  "match_confidence": [
+   [
+    300,
+    null,
+    null,
+    "new"
+   ],
+   [
+    400,
+    0.529,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0059": {
+  "id": "B-ne-0059",
+  "kind": "neuron_cluster",
+  "first_observed": 400,
+  "ended": 500,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 9,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.685,
+   "selectivity": 0.286,
+   "ablation_dloss": 0.0001
+  },
+  "match_confidence": [
+   [
+    400,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0060": {
+  "id": "B-ne-0060",
+  "kind": "neuron_cluster",
+  "first_observed": 400,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 8,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 30,
+   "dominant_factor": "F",
+   "dominant_eta2": 0.557,
+   "selectivity": 0.239,
+   "ablation_dloss": 0.0313
+  },
+  "match_confidence": [
+   [
+    700,
+    0.723,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.779,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    900,
+    0.807,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1000,
+    0.915,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1100,
+    0.782,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0061": {
+  "id": "B-ne-0061",
+  "kind": "neuron_cluster",
+  "first_observed": 500,
+  "ended": 600,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 3,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.378,
+   "selectivity": 0.268,
+   "ablation_dloss": -0.0
+  },
+  "match_confidence": [
+   [
+    500,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0062": {
+  "id": "B-ne-0062",
+  "kind": "neuron_cluster",
+  "first_observed": 500,
+  "ended": 900,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 4,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 5,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.355,
+   "selectivity": 0.271,
+   "ablation_dloss": -0.0001
+  },
+  "match_confidence": [
+   [
+    500,
+    null,
+    null,
+    "new"
+   ],
+   [
+    600,
+    0.657,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    700,
+    0.599,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    800,
+    0.539,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0063": {
+  "id": "B-ne-0063",
+  "kind": "neuron_cluster",
+  "first_observed": 600,
+  "ended": 700,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 6,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.164,
+   "selectivity": 0.203,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    600,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0064": {
+  "id": "B-ne-0064",
+  "kind": "neuron_cluster",
+  "first_observed": 700,
+  "ended": 800,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 1,
+   "dominant_factor": "route",
+   "dominant_eta2": 0.231,
+   "selectivity": 0.253,
+   "ablation_dloss": -0.0
+  },
+  "match_confidence": [
+   [
+    700,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0065": {
+  "id": "B-ne-0065",
+  "kind": "neuron_cluster",
+  "first_observed": 700,
+  "ended": 800,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 3,
+   "dominant_factor": "route",
+   "dominant_eta2": 0.181,
+   "selectivity": 0.306,
+   "ablation_dloss": -0.0
+  },
+  "match_confidence": [
+   [
+    700,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0066": {
+  "id": "B-ne-0066",
+  "kind": "neuron_cluster",
+  "first_observed": 800,
+  "ended": 1000,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 3,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.283,
+   "selectivity": 0.265,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    800,
+    null,
+    null,
+    "new"
+   ],
+   [
+    900,
+    0.86,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0067": {
+  "id": "B-ne-0067",
+  "kind": "neuron_cluster",
+  "first_observed": 800,
+  "ended": 900,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 6,
+   "dominant_factor": "F",
+   "dominant_eta2": 0.355,
+   "selectivity": 0.183,
+   "ablation_dloss": -0.0001
+  },
+  "match_confidence": [
+   [
+    800,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0068": {
+  "id": "B-ne-0068",
+  "kind": "neuron_cluster",
+  "first_observed": 900,
+  "ended": 1400,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 5,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 18,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.249,
+   "selectivity": 0.281,
+   "ablation_dloss": 0.2219
+  },
+  "match_confidence": [
+   [
+    900,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1000,
+    0.609,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1100,
+    0.63,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1200,
+    0.57,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1300,
+    0.513,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0069": {
+  "id": "B-ne-0069",
+  "kind": "neuron_cluster",
+  "first_observed": 900,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 52,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 25,
+   "dominant_factor": "A",
+   "dominant_eta2": 0.338,
+   "selectivity": 0.278,
+   "ablation_dloss": 0.0304
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0070": {
+  "id": "B-ne-0070",
+  "kind": "neuron_cluster",
+  "first_observed": 900,
+  "ended": 1000,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 1,
+   "dominant_factor": "MA",
+   "dominant_eta2": 0.164,
+   "selectivity": 0.164,
+   "ablation_dloss": 0.0
+  },
+  "match_confidence": [
+   [
+    900,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0071": {
+  "id": "B-ne-0071",
+  "kind": "neuron_cluster",
+  "first_observed": 1000,
+  "ended": 1100,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 7,
+   "dominant_factor": "a",
+   "dominant_eta2": 0.285,
+   "selectivity": 0.25,
+   "ablation_dloss": 0.0006
+  },
+  "match_confidence": [
+   [
+    1000,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0072": {
+  "id": "B-ne-0072",
+  "kind": "neuron_cluster",
+  "first_observed": 1000,
+  "ended": 1100,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 13,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.187,
+   "selectivity": 0.15,
+   "ablation_dloss": 0.0016
+  },
+  "match_confidence": [
+   [
+    1000,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0073": {
+  "id": "B-ne-0073",
+  "kind": "neuron_cluster",
+  "first_observed": 1100,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 19,
+   "dominant_factor": "m",
+   "dominant_eta2": 0.181,
+   "selectivity": 0.187,
+   "ablation_dloss": -0.0132
+  },
+  "match_confidence": [
+   [
+    1100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0074": {
+  "id": "B-ne-0074",
+  "kind": "neuron_cluster",
+  "first_observed": 1100,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 18,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.171,
+   "selectivity": 0.188,
+   "ablation_dloss": 0.073
+  },
+  "match_confidence": [
+   [
+    1100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0075": {
+  "id": "B-ne-0075",
+  "kind": "neuron_cluster",
+  "first_observed": 1100,
+  "ended": 1300,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 16,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.192,
+   "selectivity": 0.272,
+   "ablation_dloss": 0.1289
+  },
+  "match_confidence": [
+   [
+    1100,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1200,
+    0.552,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0076": {
+  "id": "B-ne-0076",
+  "kind": "neuron_cluster",
+  "first_observed": 1100,
+  "ended": 1200,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 11,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.237,
+   "selectivity": 0.246,
+   "ablation_dloss": 0.0052
+  },
+  "match_confidence": [
+   [
+    1100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0077": {
+  "id": "B-ne-0077",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": 2100,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 9,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 28,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.294,
+   "selectivity": 0.443,
+   "ablation_dloss": 0.0618
+  },
+  "match_confidence": [
+   [
+    1600,
+    0.905,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1700,
+    0.755,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1800,
+    0.571,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1900,
+    0.814,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2000,
+    0.709,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0078": {
+  "id": "B-ne-0078",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": 1400,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 17,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.282,
+   "selectivity": 0.369,
+   "ablation_dloss": 0.216
+  },
+  "match_confidence": [
+   [
+    1200,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1300,
+    0.628,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0079": {
+  "id": "B-ne-0079",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": 1700,
+  "current_site": "mlp",
+  "current_status": "causally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 5,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 23,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.235,
+   "selectivity": 0.319,
+   "ablation_dloss": 0.3591
+  },
+  "match_confidence": [
+   [
+    1200,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1300,
+    0.737,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1400,
+    0.777,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1500,
+    0.848,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1600,
+    0.921,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0080": {
+  "id": "B-ne-0080",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": 3100,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 19,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 28,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.274,
+   "selectivity": 0.449,
+   "ablation_dloss": 0.0264
+  },
+  "match_confidence": [
+   [
+    2600,
+    0.75,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2700,
+    0.969,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2800,
+    0.892,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2900,
+    0.958,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3000,
+    0.927,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0081": {
+  "id": "B-ne-0081",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": 3000,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 18,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 16,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.265,
+   "selectivity": 0.451,
+   "ablation_dloss": 0.0193
+  },
+  "match_confidence": [
+   [
+    2500,
+    0.963,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2600,
+    0.68,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2700,
+    0.71,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2800,
+    0.789,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2900,
+    0.997,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0082": {
+  "id": "B-ne-0082",
+  "kind": "neuron_cluster",
+  "first_observed": 1200,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 49,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 32,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.31,
+   "selectivity": 0.362,
+   "ablation_dloss": 0.0012
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0083": {
+  "id": "B-ne-0083",
+  "kind": "neuron_cluster",
+  "first_observed": 1300,
+  "ended": 1900,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 6,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 19,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.275,
+   "selectivity": 0.348,
+   "ablation_dloss": 0.0374
+  },
+  "match_confidence": [
+   [
+    1400,
+    0.812,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1500,
+    0.691,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    1600,
+    0.985,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1700,
+    0.835,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    1800,
+    0.601,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0084": {
+  "id": "B-ne-0084",
+  "kind": "neuron_cluster",
+  "first_observed": 1400,
+  "ended": 1500,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 17,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.201,
+   "selectivity": 0.328,
+   "ablation_dloss": 0.1333
+  },
+  "match_confidence": [
+   [
+    1400,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0085": {
+  "id": "B-ne-0085",
+  "kind": "neuron_cluster",
+  "first_observed": 1400,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 47,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 22,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.273,
+   "selectivity": 0.439,
+   "ablation_dloss": 0.0048
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0086": {
+  "id": "B-ne-0086",
+  "kind": "neuron_cluster",
+  "first_observed": 1500,
+  "ended": 1700,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 27,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.217,
+   "selectivity": 0.332,
+   "ablation_dloss": 0.199
+  },
+  "match_confidence": [
+   [
+    1500,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1600,
+    0.894,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0087": {
+  "id": "B-ne-0087",
+  "kind": "neuron_cluster",
+  "first_observed": 1700,
+  "ended": 1800,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 12,
+   "dominant_factor": "A",
+   "dominant_eta2": 0.149,
+   "selectivity": 0.18,
+   "ablation_dloss": 0.0124
+  },
+  "match_confidence": [
+   [
+    1700,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0088": {
+  "id": "B-ne-0088",
+  "kind": "neuron_cluster",
+  "first_observed": 1700,
+  "ended": 3100,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 14,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 18,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.296,
+   "selectivity": 0.343,
+   "ablation_dloss": 0.0085
+  },
+  "match_confidence": [
+   [
+    2600,
+    0.865,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2700,
+    0.934,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2800,
+    0.799,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3000,
+    0.886,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0089": {
+  "id": "B-ne-0089",
+  "kind": "neuron_cluster",
+  "first_observed": 1800,
+  "ended": 2100,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 3,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 19,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.216,
+   "selectivity": 0.336,
+   "ablation_dloss": 0.1063
+  },
+  "match_confidence": [
+   [
+    1800,
+    null,
+    null,
+    "new"
+   ],
+   [
+    1900,
+    0.747,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2000,
+    0.659,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0090": {
+  "id": "B-ne-0090",
+  "kind": "neuron_cluster",
+  "first_observed": 1800,
+  "ended": 3000,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": true,
+  "n_checkpoints": 12,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 34,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.208,
+   "selectivity": 0.321,
+   "ablation_dloss": 0.0114
+  },
+  "match_confidence": [
+   [
+    2500,
+    0.917,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2600,
+    0.878,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2700,
+    0.866,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2800,
+    0.764,
+    "hungarian signature match",
+    "uncertain"
+   ],
+   [
+    2900,
+    0.964,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0091": {
+  "id": "B-ne-0091",
+  "kind": "neuron_cluster",
+  "first_observed": 1900,
+  "ended": 2600,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 7,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 22,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.467,
+   "selectivity": 0.292,
+   "ablation_dloss": 0.0116
+  },
+  "match_confidence": [
+   [
+    2100,
+    0.948,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2200,
+    0.92,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2300,
+    0.925,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2400,
+    0.917,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    2500,
+    0.952,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0092": {
+  "id": "B-ne-0092",
+  "kind": "neuron_cluster",
+  "first_observed": 2100,
+  "ended": 2200,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 23,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.261,
+   "selectivity": 0.434,
+   "ablation_dloss": 0.1179
+  },
+  "match_confidence": [
+   [
+    2100,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0093": {
+  "id": "B-ne-0093",
+  "kind": "neuron_cluster",
+  "first_observed": 2100,
+  "ended": 2300,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 15,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.309,
+   "selectivity": 0.37,
+   "ablation_dloss": 0.0376
+  },
+  "match_confidence": [
+   [
+    2100,
+    null,
+    null,
+    "new"
+   ],
+   [
+    2200,
+    0.89,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0094": {
+  "id": "B-ne-0094",
+  "kind": "neuron_cluster",
+  "first_observed": 2200,
+  "ended": 2300,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 14,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.209,
+   "selectivity": 0.336,
+   "ablation_dloss": 0.0592
+  },
+  "match_confidence": [
+   [
+    2200,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0095": {
+  "id": "B-ne-0095",
+  "kind": "neuron_cluster",
+  "first_observed": 2300,
+  "ended": 2400,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 18,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.235,
+   "selectivity": 0.343,
+   "ablation_dloss": 0.0304
+  },
+  "match_confidence": [
+   [
+    2300,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0096": {
+  "id": "B-ne-0096",
+  "kind": "neuron_cluster",
+  "first_observed": 2300,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 38,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 36,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.312,
+   "selectivity": 0.459,
+   "ablation_dloss": 0.03
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0097": {
+  "id": "B-ne-0097",
+  "kind": "neuron_cluster",
+  "first_observed": 2400,
+  "ended": 2500,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 16,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.302,
+   "selectivity": 0.37,
+   "ablation_dloss": 0.0729
+  },
+  "match_confidence": [
+   [
+    2400,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0098": {
+  "id": "B-ne-0098",
+  "kind": "neuron_cluster",
+  "first_observed": 2500,
+  "ended": 2600,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 1,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 14,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.341,
+   "selectivity": 0.436,
+   "ablation_dloss": 0.0291
+  },
+  "match_confidence": [
+   [
+    2500,
+    null,
+    null,
+    "new"
+   ]
+  ]
+ },
+ "B-ne-0099": {
+  "id": "B-ne-0099",
+  "kind": "neuron_cluster",
+  "first_observed": 2600,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 35,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 24,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.327,
+   "selectivity": 0.396,
+   "ablation_dloss": 0.012
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0100": {
+  "id": "B-ne-0100",
+  "kind": "neuron_cluster",
+  "first_observed": 2600,
+  "ended": 2800,
+  "current_site": "mlp",
+  "current_status": "causally supported (partial)",
+  "ever_causally_supported": true,
+  "n_checkpoints": 2,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 17,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.258,
+   "selectivity": 0.373,
+   "ablation_dloss": 0.0518
+  },
+  "match_confidence": [
+   [
+    2600,
+    null,
+    null,
+    "new"
+   ],
+   [
+    2700,
+    0.642,
+    "hungarian signature match",
+    "uncertain"
+   ]
+  ]
+ },
+ "B-ne-0101": {
+  "id": "B-ne-0101",
+  "kind": "neuron_cluster",
+  "first_observed": 2800,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": true,
+  "n_checkpoints": 33,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 23,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.44,
+   "selectivity": 0.286,
+   "ablation_dloss": 0.04
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0102": {
+  "id": "B-ne-0102",
+  "kind": "neuron_cluster",
+  "first_observed": 3000,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 31,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 19,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.276,
+   "selectivity": 0.458,
+   "ablation_dloss": 0.0076
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0103": {
+  "id": "B-ne-0103",
+  "kind": "neuron_cluster",
+  "first_observed": 3000,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 31,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 19,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.209,
+   "selectivity": 0.333,
+   "ablation_dloss": 0.0048
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0104": {
+  "id": "B-ne-0104",
+  "kind": "neuron_cluster",
+  "first_observed": 3100,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "correlationally supported",
+  "ever_causally_supported": false,
+  "n_checkpoints": 30,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 20,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.304,
+   "selectivity": 0.415,
+   "ablation_dloss": 0.0021
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0105": {
+  "id": "B-ne-0105",
+  "kind": "neuron_cluster",
+  "first_observed": 3100,
+  "ended": 4000,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 9,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 12,
+   "dominant_factor": "F",
+   "dominant_eta2": 0.225,
+   "selectivity": 0.208,
+   "ablation_dloss": 0.0002
+  },
+  "match_confidence": [
+   [
+    3500,
+    0.933,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3800,
+    0.975,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    3900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ },
+ "B-ne-0106": {
+  "id": "B-ne-0106",
+  "kind": "neuron_cluster",
+  "first_observed": 4000,
+  "ended": null,
+  "current_site": "mlp",
+  "current_status": "hypothesized",
+  "ever_causally_supported": false,
+  "n_checkpoints": 21,
+  "parents": [],
+  "descendants": [],
+  "evidence_last": {
+   "size": 28,
+   "dominant_factor": "M",
+   "dominant_eta2": 0.237,
+   "selectivity": 0.355,
+   "ablation_dloss": 0.0008
+  },
+  "match_confidence": [
+   [
+    5600,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5700,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5800,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    5900,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ],
+   [
+    6000,
+    1.0,
+    "hungarian signature match",
+    "confident"
+   ]
+  ]
+ }
+}

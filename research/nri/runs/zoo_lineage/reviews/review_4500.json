@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 4500: acc 1.000 (+0.000), ood 0.637 (-0.009), iia 0.941 (+0.000), edit 0.971 (+0.009), inter 0.394 (+0.002), A_L1 0.291 (+0.002); largest update W_in.weight 0.002; MLP match {'stable': 254, 'new': 2}.",
+ "hypothesis": "Frozen. OOD_DEV 0.637 is the lowest since 2,800 but within one sd of the converged mean; the late-phase OOD_DEV average (3,000-4,500, mean ~0.65) is slightly below the 1,500-2,900 average (~0.67), a difference of ~0.5 sd: not interpretable as a trend in one network.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Will the sealed OOD_FINAL (values 11-12) sit near OOD_DEV (values 9-10), or do held-out values differ in difficulty?",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

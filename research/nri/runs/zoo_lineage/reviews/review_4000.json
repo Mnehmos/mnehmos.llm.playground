@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary (OOD_DEV 0.647, editability 0.970, IIA 0.941, interaction 0.396; updates <= 0.004). Level-2 checks scheduled for this checkpoint.",
+ "hypothesis": "Cross-seed explanation of editability: seed 701 is canonical-like because it has TWO BALANCED mass writers whose unit-specific parts differ and partly cancel in the block, whereas seed 700 had ONE dominant writer, and both of its writers split off the same unit. Prediction for future seeds: block interaction (and pooled-edit failure) scales with how dominant a single writer is and with how aligned the writers' unit splits are.",
+ "evidence": "Level 2 head anatomy: head 0 mass variance 157 (attends value 0.57, UNIT token 0.22; per-unit CKA 0-1 0.76, 0-2 0.24, 1-2 0.24), head 3 135 (value 0.47; CKA 0.51-0.69), heads 1/2 read acceleration and output unit; per-head interactions 0.70/0.71 but block 0.40. Seed 700 (doc 27): head 0 295 vs head 2 78, both splitting unit 1, block 0.66. Level 2 ood_locus: unchanged since 2,500 (held-out mass 0.50, held-out acceleration 0.81, downstream with true mass 0.91) -> the 3,000-3,900 decline was noise.",
+ "key_question": "Is writer balance a cause of editability (testable by an intervention that rebalances writers) or a correlate?",
+ "best_experiment": "A rebalancing intervention (scale head 3's value weights down and head 0's up, keeping their sum) on a COPY, measuring pooled editability and interaction (a dry run). If editability falls as balance is broken, balance is causal. Uses the registered low-rank/gradient primitives only as a read-only dry run.",
+ "intervene": "no",
+ "intervention_rationale": "The network is already highly editable; the test is diagnostic (dry run), not a repair.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

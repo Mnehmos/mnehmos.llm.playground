@@ -1,5 +1,5 @@
 {
- "step": 3700,
+ "step": 6000,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -151,6 +151,98 @@
   "3700": {
    "key_question": "Will the add-one held-out edit (scored only at the sealed evaluation) be as good as inversion, i.e. is the editability general rather than edit-specific?",
    "intervene": "no"
+  },
+  "3800": {
+   "key_question": "Will the frozen state change at all before 6,000 (learning rate falls toward ~1e-5 at the end of OneCycle)?",
+   "intervene": "no"
+  },
+  "3900": {
+   "key_question": "Is the 3,000-3,900 OOD_DEV decline (0.669 -> 0.639) a trend or noise? (sd ~0.036 -> within 1 sd).",
+   "intervene": "no"
+  },
+  "4000": {
+   "key_question": "Is writer balance a cause of editability (testable by an intervention that rebalances writers) or a correlate?",
+   "intervene": "no"
+  },
+  "4100": {
+   "key_question": "Would a cleaner test (rebalancing the writers while holding their summed block write fixed) separate balance from general damage? Recorded for the report as an open question.",
+   "intervene": "no"
+  },
+  "4200": {
+   "key_question": "Will the sealed FINAL / OOD_FINAL numbers match the OBS / OOD_DEV picture (editability ~0.97, held-out ~0.65)?",
+   "intervene": "no"
+  },
+  "4300": {
+   "key_question": "Does anything distinguish the late frozen phase from 3,000-4,000 other than the smaller learning rate? (So far no.)",
+   "intervene": "no"
+  },
+  "4400": {
+   "key_question": "Is the pooled-edit jitter (+-0.01) also a margin effect? (Expected yes; not worth a separate test.)",
+   "intervene": "no"
+  },
+  "4500": {
+   "key_question": "Will the sealed OOD_FINAL (values 11-12) sit near OOD_DEV (values 9-10), or do held-out values differ in difficulty?",
+   "intervene": "no"
+  },
+  "4600": {
+   "key_question": "None new for this network; continue to 6,000.",
+   "intervene": "no"
+  },
+  "4700": {
+   "key_question": "How many of all neuron-cluster lineage events over the run survive a stability filter (membership Jaccard >= 0.5 to the previous checkpoint and no reversal within two checkpoints)? To be computed in the report.",
+   "intervene": "no"
+  },
+  "4800": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "4900": {
+   "key_question": "Do any held-out answers still flip before 6,000? (Expected: very few.)",
+   "intervene": "no"
+  },
+  "5000": {
+   "key_question": "None new; the final comparison is now predictable: A = B.",
+   "intervene": "no"
+  },
+  "5100": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5200": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5300": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5400": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5500": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5600": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5700": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5800": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "5900": {
+   "key_question": "None new.",
+   "intervene": "no"
+  },
+  "6000": {
+   "key_question": "Does the sealed evaluation (FINAL, OOD_FINAL) confirm the OBS / OOD_DEV picture, including the add-one held-out edit (never measured during training)?",
+   "intervene": "no"
   }
  },
  "proposals": {},
@@ -287,12 +379,40 @@
     "args": {},
     "cpu_s": 1.3
    }
+  ],
+  "4000": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.3
+   },
+   {
+    "tool": "heads",
+    "args": {},
+    "cpu_s": 1.1
+   }
+  ],
+  "4700": [
+   {
+    "tool": "feature",
+    "args": {
+     "id": "B-ne-0080"
+    },
+    "cpu_s": 0.0
+   }
+  ],
+  "5000": [
+   {
+    "tool": "ood_locus",
+    "args": {},
+    "cpu_s": 1.4
+   }
   ]
  },
  "ledger": {
-  "train_cpu_s": 625.4898754400002,
+  "train_cpu_s": 1074.3761520480002,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
-  "inspect_cpu_s": 171.51901710400003
+  "inspect_cpu_s": 175.35146189700004
  }
 }

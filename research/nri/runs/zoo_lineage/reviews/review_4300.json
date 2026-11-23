@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 4300: acc 1.000 (+0.000), ood 0.640 (-0.007), iia 0.941 (+0.000), edit 0.973 (+0.005), inter 0.395 (+0.001), A_L1 0.292 (-0.004); largest update W_in.weight 0.003; MLP match {'stable': 254, 'new': 2}.",
+ "hypothesis": "Frozen; the only movements are OOD_DEV -0.007 and editability +0.005, both inside one standard deviation of the converged noise. Neither the interaction (0.395) nor IIA (0.941) has moved by more than 0.002 since 3,700.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Does anything distinguish the late frozen phase from 3,000-4,000 other than the smaller learning rate? (So far no.)",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}

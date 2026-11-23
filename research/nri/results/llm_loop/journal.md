@@ -142,3 +142,17 @@ at the same step) and the gate (VAL / OOD_DEV).
 - **Gate: PASSED and installed** (`step_1500_editable.py`, 2.35% of model norm). On VAL: editability
   0.073 → 0.114 (+0.040; shams −0.008 / 0 / 0); OOD_DEV 0.727 → 0.727; accuracy 1.000 → 0.999;
   IIA −0.002; keep 0.999; route information 0.74 → 0.95; unit information 0.96 → 0.99.
+
+## Steps 1,600–2,000 (codified procedure, then stopped)
+- 1,600: OBS pre-check of the step-1,500 method could not meet the margins (OOD_DEV −0.009 for
+  editability +0.02). No submission.
+- 1,700: no submission (pre-check OOD_DEV −0.006 at 0.3×).
+- 1,800 and 1,900: **installed** (`step_1800_auto.py`, `step_1900_auto.py`): VAL editability
+  0.100 → 0.167 → 0.200, OOD_DEV −0.002 / −0.001, keep 1.000.
+- 2,000: second divergence (gradient norm 0.3 → 298 at 1,960–1,990; accuracy 0.74). The automatic
+  procedure was halted as promised.
+- **Sharpness diagnosis** (`loop_edits/sharpness.py`): static Hessian sharpness did not predict
+  either collapse (doc 27 §27.2.5).
+- The run was then **stopped** when spec v1.0 replaced doc 26 (docs 27–28). Disk note: per-checkpoint
+  training states other than every 500 steps and the edited states were deleted to save space; they
+  are reproducible by replay.

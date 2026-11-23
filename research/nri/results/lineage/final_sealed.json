@@ -1,0 +1,267 @@
+{
+ "A_control": {
+  "metrics": {
+   "acc_id": 1.0,
+   "acc_ood_final": 0.3541666567325592,
+   "acc_ood_legacy": 0.48095703125,
+   "acc_ood_dev": 0.6469907164573669,
+   "iia_M_block": 0.9506239891052246,
+   "iia_M_rest": 0.06945198029279709,
+   "iia_A_block": 0.0774986669421196,
+   "copy_block_intended": 1.0,
+   "block_interaction_share": 0.3422927198448619,
+   "block_route_main_share": 0.08474517693658515,
+   "das_iia_M": 0.951166570186615,
+   "das_block_overlap_M": 0.35430213809013367,
+   "edit_inv_block": {
+    "n_eligible": 1011,
+    "intended": 0.9604352116584778,
+    "wrong": 0.0,
+    "unchanged": 0.0,
+    "other": 0.03956478834152222,
+    "specificity": 0.9604352116584778,
+    "preserved_on_fixed_points": 0.9877622127532959,
+    "n_fixed": 572,
+    "rel_change_W_in": 0.7816452980041504
+   },
+   "edit_inv_das": {
+    "n_eligible": 1011,
+    "intended": 0.9525222778320312,
+    "wrong": 0.0,
+    "unchanged": 0.0,
+    "other": 0.04747772216796875,
+    "specificity": 0.9525222778320312,
+    "preserved_on_fixed_points": 0.9772727489471436,
+    "n_fixed": 572,
+    "rel_change_W_in": 1.0082579851150513
+   },
+   "edit_add1_block": {
+    "n_eligible": 1705,
+    "intended": 0.09384164214134216,
+    "wrong": 0.07390028983354568,
+    "unchanged": 0.13665689527988434,
+    "other": 0.6956011727452278,
+    "specificity": 0.01994135230779648,
+    "preserved_on_fixed_points": NaN,
+    "n_fixed": 0,
+    "rel_change_W_in": 1.4360913038253784
+   },
+   "edit_add1_das": {
+    "n_eligible": 1705,
+    "intended": 0.09912023693323135,
+    "wrong": 0.07565982639789581,
+    "unchanged": 0.12903225421905518,
+    "other": 0.6961876824498177,
+    "specificity": 0.02346041053533554,
+    "preserved_on_fixed_points": NaN,
+    "n_fixed": 0,
+    "rel_change_W_in": 1.420670747756958
+   },
+   "edit_dbl_block": {
+    "n_eligible": 0,
+    "intended": NaN,
+    "wrong": NaN,
+    "unchanged": NaN,
+    "other": NaN,
+    "specificity": NaN,
+    "preserved_on_fixed_points": 1.0,
+    "n_fixed": 190,
+    "rel_change_W_in": 0.4879222512245178
+   },
+   "edit_dbl_das": {
+    "n_eligible": 0,
+    "intended": NaN,
+    "wrong": NaN,
+    "unchanged": NaN,
+    "other": NaN,
+    "specificity": NaN,
+    "preserved_on_fixed_points": 1.0,
+    "n_fixed": 190,
+    "rel_change_W_in": 0.5173380970954895
+   }
+  },
+  "benchmarks": {
+   "readout_fold": {
+    "alpha": null,
+    "note": "no alpha passed the doc-22 checks on VAL"
+   },
+   "upstream_once": {
+    "status": "rejected",
+    "reason": "no candidate magnitude passed; failing checks: E1"
+   },
+   "upstream_full_unbudgeted": {
+    "rel_norm": 1.7926545386154753,
+    "acc_id": 0.999546468257904,
+    "acc_ood_final": 0.3611111044883728,
+    "iia_M_block": 0.943027675151825,
+    "edit_inv_block": {
+     "n_eligible": 1011,
+     "intended": 0.9594460725784302,
+     "wrong": 0.0,
+     "unchanged": 0.0,
+     "other": 0.040553927421569824,
+     "specificity": 0.9594460725784302,
+     "preserved_on_fixed_points": 0.9912587404251099,
+     "n_fixed": 572,
+     "rel_change_W_in": 0.9085538983345032
+    },
+    "edit_add1_block": {
+     "n_eligible": 1705,
+     "intended": 0.11847507208585739,
+     "wrong": 0.07565982639789581,
+     "unchanged": 0.11202345788478851,
+     "other": 0.6938416436314583,
+     "specificity": 0.04281524568796158,
+     "preserved_on_fixed_points": NaN,
+     "n_fixed": 0,
+     "rel_change_W_in": 1.8739680051803589
+    },
+    "edit_dbl_block": {
+     "n_eligible": 0,
+     "intended": NaN,
+     "wrong": NaN,
+     "unchanged": NaN,
+     "other": NaN,
+     "specificity": NaN,
+     "preserved_on_fixed_points": 1.0,
+     "n_fixed": 190,
+     "rel_change_W_in": 0.6005536913871765
+    },
+    "block_interaction_share": 0.1590223665773708
+   }
+  }
+ },
+ "B_supervised": {
+  "metrics": {
+   "acc_id": 1.0,
+   "acc_ood_final": 0.3541666567325592,
+   "acc_ood_legacy": 0.48095703125,
+   "acc_ood_dev": 0.6469907164573669,
+   "iia_M_block": 0.9506239891052246,
+   "iia_M_rest": 0.06945198029279709,
+   "iia_A_block": 0.0774986669421196,
+   "copy_block_intended": 1.0,
+   "block_interaction_share": 0.3422927198448619,
+   "block_route_main_share": 0.08474517693658515,
+   "das_iia_M": 0.951166570186615,
+   "das_block_overlap_M": 0.35430213809013367,
+   "edit_inv_block": {
+    "n_eligible": 1011,
+    "intended": 0.9604352116584778,
+    "wrong": 0.0,
+    "unchanged": 0.0,
+    "other": 0.03956478834152222,
+    "specificity": 0.9604352116584778,
+    "preserved_on_fixed_points": 0.9877622127532959,
+    "n_fixed": 572,
+    "rel_change_W_in": 0.7816452980041504
+   },
+   "edit_inv_das": {
+    "n_eligible": 1011,
+    "intended": 0.9525222778320312,
+    "wrong": 0.0,
+    "unchanged": 0.0,
+    "other": 0.04747772216796875,
+    "specificity": 0.9525222778320312,
+    "preserved_on_fixed_points": 0.9772727489471436,
+    "n_fixed": 572,
+    "rel_change_W_in": 1.0082579851150513
+   },
+   "edit_add1_block": {
+    "n_eligible": 1705,
+    "intended": 0.09384164214134216,
+    "wrong": 0.07390028983354568,
+    "unchanged": 0.13665689527988434,
+    "other": 0.6956011727452278,
+    "specificity": 0.01994135230779648,
+    "preserved_on_fixed_points": NaN,
+    "n_fixed": 0,
+    "rel_change_W_in": 1.4360913038253784
+   },
+   "edit_add1_das": {
+    "n_eligible": 1705,
+    "intended": 0.09912023693323135,
+    "wrong": 0.07565982639789581,
+    "unchanged": 0.12903225421905518,
+    "other": 0.6961876824498177,
+    "specificity": 0.02346041053533554,
+    "preserved_on_fixed_points": NaN,
+    "n_fixed": 0,
+    "rel_change_W_in": 1.420670747756958
+   },
+   "edit_dbl_block": {
+    "n_eligible": 0,
+    "intended": NaN,
+    "wrong": NaN,
+    "unchanged": NaN,
+    "other": NaN,
+    "specificity": NaN,
+    "preserved_on_fixed_points": 1.0,
+    "n_fixed": 190,
+    "rel_change_W_in": 0.4879222512245178
+   },
+   "edit_dbl_das": {
+    "n_eligible": 0,
+    "intended": NaN,
+    "wrong": NaN,
+    "unchanged": NaN,
+    "other": NaN,
+    "specificity": NaN,
+    "preserved_on_fixed_points": 1.0,
+    "n_fixed": 190,
+    "rel_change_W_in": 0.5173380970954895
+   }
+  },
+  "benchmarks": {
+   "readout_fold": {
+    "alpha": null,
+    "note": "no alpha passed the doc-22 checks on VAL"
+   },
+   "upstream_once": {
+    "status": "rejected",
+    "reason": "no candidate magnitude passed; failing checks: E1"
+   },
+   "upstream_full_unbudgeted": {
+    "rel_norm": 1.7926545386154753,
+    "acc_id": 0.999546468257904,
+    "acc_ood_final": 0.3611111044883728,
+    "iia_M_block": 0.943027675151825,
+    "edit_inv_block": {
+     "n_eligible": 1011,
+     "intended": 0.9594460725784302,
+     "wrong": 0.0,
+     "unchanged": 0.0,
+     "other": 0.040553927421569824,
+     "specificity": 0.9594460725784302,
+     "preserved_on_fixed_points": 0.9912587404251099,
+     "n_fixed": 572,
+     "rel_change_W_in": 0.9085538983345032
+    },
+    "edit_add1_block": {
+     "n_eligible": 1705,
+     "intended": 0.11847507208585739,
+     "wrong": 0.07565982639789581,
+     "unchanged": 0.11202345788478851,
+     "other": 0.6938416436314583,
+     "specificity": 0.04281524568796158,
+     "preserved_on_fixed_points": NaN,
+     "n_fixed": 0,
+     "rel_change_W_in": 1.8739680051803589
+    },
+    "edit_dbl_block": {
+     "n_eligible": 0,
+     "intended": NaN,
+     "wrong": NaN,
+     "unchanged": NaN,
+     "other": NaN,
+     "specificity": NaN,
+     "preserved_on_fixed_points": 1.0,
+     "n_fixed": 190,
+     "rel_change_W_in": 0.6005536913871765
+    },
+    "block_interaction_share": 0.1590223665773708
+   }
+  }
+ },
+ "cpu_s": 28.7
+}

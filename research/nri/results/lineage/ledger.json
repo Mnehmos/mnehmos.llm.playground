@@ -1,0 +1,28 @@
+{
+ "base_training_cpu_s_both": 1074.4,
+ "observation_cpu_s": {
+  "A_control": {
+   "io_cpu_s": 0.0,
+   "observe_cpu_s": 161.0,
+   "trace_cpu_s": 6.1,
+   "lineage_cpu_s": 6.8,
+   "weights_cpu_s": 42.9
+  },
+  "B_supervised": {
+   "io_cpu_s": 0.0,
+   "observe_cpu_s": 113.8,
+   "trace_cpu_s": 6.1,
+   "lineage_cpu_s": 6.3,
+   "weights_cpu_s": 43.0
+  }
+ },
+ "supervisor_inspect_cpu_s": 175.4,
+ "supervisor_proposal_cpu_s": 0.0,
+ "supervisor_extra_grad_steps": 0,
+ "dry_run_extra_grad_steps": 600,
+ "inspections": 25,
+ "proposals_submitted": 0,
+ "installed": 0,
+ "storage_bytes": 88862721,
+ "sealed_eval_cpu_s": 28.7
+}
