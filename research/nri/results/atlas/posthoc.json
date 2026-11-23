@@ -1,0 +1,747 @@
+{
+ "control": [
+  {
+   "step": 600,
+   "block": {
+    "interaction_ss": 243.14150973409414,
+    "within_ss": 1145.1553955078125,
+    "interaction_share": 0.21232184792376974,
+    "route_main_share": 0.03836280016088326
+   },
+   "x1_last_part": {
+    "interaction_ss": 120.27347199618816,
+    "within_ss": 1004.9126586914062,
+    "interaction_share": 0.11968549799423152,
+    "route_main_share": 0.02238647945296987
+   },
+   "attn2_part": {
+    "interaction_ss": 124.21094482950865,
+    "within_ss": 728.0902709960938,
+    "interaction_share": 0.17059827575992298,
+    "route_main_share": 0.030456982518970225
+   },
+   "interaction_from_x1_last": 0.49432456493377686,
+   "interaction_from_attn2": 0.5056754350662231,
+   "alpha1_rel_norm": 0.86497615758278,
+   "alpha1_interaction_share_after": 0.08581027261418128,
+   "alpha1_acc_after": 0.24708624184131622,
+   "acc_before": 0.24786324799060822,
+   "per_unit_cka_block": {
+    "units 0-1": 0.981,
+    "units 0-2": 0.987,
+    "units 1-2": 0.997
+   }
+  },
+  {
+   "step": 800,
+   "block": {
+    "interaction_ss": 2229.4020835459232,
+    "within_ss": 16556.595703125,
+    "interaction_share": 0.1346534108533635,
+    "route_main_share": 0.07094521537387384
+   },
+   "x1_last_part": {
+    "interaction_ss": 1013.726872459054,
+    "within_ss": 7321.52294921875,
+    "interaction_share": 0.13845847093427804,
+    "route_main_share": 0.06743561033685103
+   },
+   "attn2_part": {
+    "interaction_ss": 1230.063486665487,
+    "within_ss": 9150.8408203125,
+    "interaction_share": 0.134420815618939,
+    "route_main_share": 0.07265469401130095
+   },
+   "interaction_from_x1_last": 0.4573199450969696,
+   "interaction_from_attn2": 0.5426800847053528,
+   "alpha1_rel_norm": 1.4038555920995037,
+   "alpha1_interaction_share_after": 0.07431137839531714,
+   "alpha1_acc_after": 0.34188035130500793,
+   "acc_before": 0.34343433380126953,
+   "per_unit_cka_block": {
+    "units 0-1": 0.942,
+    "units 0-2": 0.949,
+    "units 1-2": 0.966
+   }
+  },
+  {
+   "step": 900,
+   "block": {
+    "interaction_ss": 14862.072045564651,
+    "within_ss": 45711.375,
+    "interaction_share": 0.3251285275396912,
+    "route_main_share": 0.1722763943588272
+   },
+   "x1_last_part": {
+    "interaction_ss": 2917.7733995318413,
+    "within_ss": 14513.7021484375,
+    "interaction_share": 0.20103577775612266,
+    "route_main_share": 0.054874719320871145
+   },
+   "attn2_part": {
+    "interaction_ss": 8760.686936855316,
+    "within_ss": 30527.650390625,
+    "interaction_share": 0.28697547386567657,
+    "route_main_share": 0.21287776530486355
+   },
+   "interaction_from_x1_last": 0.30046093463897705,
+   "interaction_from_attn2": 0.699539065361023,
+   "alpha1_rel_norm": 2.596810450061356,
+   "alpha1_interaction_share_after": 0.14699607569975376,
+   "alpha1_acc_after": 0.4320124387741089,
+   "acc_before": 0.5135974884033203,
+   "per_unit_cka_block": {
+    "units 0-1": 0.663,
+    "units 0-2": 0.904,
+    "units 1-2": 0.679
+   }
+  },
+  {
+   "step": 1000,
+   "block": {
+    "interaction_ss": 57042.3481297493,
+    "within_ss": 126550.8125,
+    "interaction_share": 0.45074659737762884,
+    "route_main_share": 0.28940627274418385
+   },
+   "x1_last_part": {
+    "interaction_ss": 3773.6792688965797,
+    "within_ss": 16604.748046875,
+    "interaction_share": 0.22726507251079808,
+    "route_main_share": 0.08191150836556725
+   },
+   "attn2_part": {
+    "interaction_ss": 42420.45368432999,
+    "within_ss": 106492.65625,
+    "interaction_share": 0.3983415869047776,
+    "route_main_share": 0.321176759499008
+   },
+   "interaction_from_x1_last": 0.15955139696598053,
+   "interaction_from_attn2": 0.8404486179351807,
+   "alpha1_rel_norm": 3.6875326148855962,
+   "alpha1_interaction_share_after": 0.15913448285193396,
+   "alpha1_acc_after": 0.4553224444389343,
+   "acc_before": 0.7948718070983887,
+   "per_unit_cka_block": {
+    "units 0-1": 0.515,
+    "units 0-2": 0.963,
+    "units 1-2": 0.536
+   }
+  },
+  {
+   "step": 1100,
+   "block": {
+    "interaction_ss": 85461.15853261948,
+    "within_ss": 172344.109375,
+    "interaction_share": 0.49587513517312215,
+    "route_main_share": 0.31621176240930576
+   },
+   "x1_last_part": {
+    "interaction_ss": 3072.8569652438164,
+    "within_ss": 14342.9619140625,
+    "interaction_share": 0.21424145052153043,
+    "route_main_share": 0.11003334989580386
+   },
+   "attn2_part": {
+    "interaction_ss": 70242.4742474556,
+    "within_ss": 153739.734375,
+    "interaction_share": 0.4568921270289244,
+    "route_main_share": 0.3302423996742367
+   },
+   "interaction_from_x1_last": 0.10664066672325134,
+   "interaction_from_attn2": 0.8933593034744263,
+   "alpha1_rel_norm": 4.416795912086707,
+   "alpha1_interaction_share_after": 0.16507298910210622,
+   "alpha1_acc_after": 0.49417248368263245,
+   "acc_before": 0.9463869333267212,
+   "per_unit_cka_block": {
+    "units 0-1": 0.55,
+    "units 0-2": 0.977,
+    "units 1-2": 0.6
+   }
+  },
+  {
+   "step": 1200,
+   "block": {
+    "interaction_ss": 152387.25573539734,
+    "within_ss": 267919.4375,
+    "interaction_share": 0.5687801421104333,
+    "route_main_share": 0.29263227641881423
+   },
+   "x1_last_part": {
+    "interaction_ss": 3206.6861338615417,
+    "within_ss": 14791.103515625,
+    "interaction_share": 0.21679830247108123,
+    "route_main_share": 0.12599330469527195
+   },
+   "attn2_part": {
+    "interaction_ss": 132923.62399291992,
+    "within_ss": 244616.546875,
+    "interaction_share": 0.5433958809861068,
+    "route_main_share": 0.29603467283138807
+   },
+   "interaction_from_x1_last": 0.07378653436899185,
+   "interaction_from_attn2": 0.9262135028839111,
+   "alpha1_rel_norm": 6.040813431298071,
+   "alpha1_interaction_share_after": 0.19058131604865408,
+   "alpha1_acc_after": 0.5369075536727905,
+   "acc_before": 0.9898989796638489,
+   "per_unit_cka_block": {
+    "units 0-1": 0.459,
+    "units 0-2": 0.995,
+    "units 1-2": 0.582
+   }
+  },
+  {
+   "step": 1500,
+   "block": {
+    "interaction_ss": 186988.57738304138,
+    "within_ss": 296992.875,
+    "interaction_share": 0.6296062738307826,
+    "route_main_share": 0.2880425963829471
+   },
+   "x1_last_part": {
+    "interaction_ss": 2173.59884211421,
+    "within_ss": 12032.033203125,
+    "interaction_share": 0.18065100099205808,
+    "route_main_share": 0.17799937955112546
+   },
+   "attn2_part": {
+    "interaction_ss": 170019.76749801636,
+    "within_ss": 274779.0625,
+    "interaction_share": 0.618750810018563,
+    "route_main_share": 0.2865502429424994
+   },
+   "interaction_from_x1_last": 0.05068220570683479,
+   "interaction_from_attn2": 0.9493176341056824,
+   "alpha1_rel_norm": 9.908484263378757,
+   "alpha1_interaction_share_after": 0.19180767325670797,
+   "alpha1_acc_after": 0.5858585834503174,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.454,
+    "units 0-2": 0.995,
+    "units 1-2": 0.583
+   }
+  },
+  {
+   "step": 2000,
+   "block": {
+    "interaction_ss": 127666.56129789352,
+    "within_ss": 201295.75,
+    "interaction_share": 0.6342238288582522,
+    "route_main_share": 0.287275616976253
+   },
+   "x1_last_part": {
+    "interaction_ss": 1478.159669995308,
+    "within_ss": 8913.814453125,
+    "interaction_share": 0.16582796038312145,
+    "route_main_share": 0.1672307283279208
+   },
+   "attn2_part": {
+    "interaction_ss": 117184.80199623108,
+    "within_ss": 186945.109375,
+    "interaction_share": 0.6268406934420832,
+    "route_main_share": 0.28629854071876076
+   },
+   "interaction_from_x1_last": 0.046693336218595505,
+   "interaction_from_attn2": 0.9533066153526306,
+   "alpha1_rel_norm": 7.972581657378448,
+   "alpha1_interaction_share_after": 0.20734194690394198,
+   "alpha1_acc_after": 0.6037296056747437,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.503,
+    "units 0-2": 0.983,
+    "units 1-2": 0.595
+   }
+  },
+  {
+   "step": 3000,
+   "block": {
+    "interaction_ss": 217877.4129037857,
+    "within_ss": 333728.9375,
+    "interaction_share": 0.6528574193653366,
+    "route_main_share": 0.29448043297249393
+   },
+   "x1_last_part": {
+    "interaction_ss": 1208.307504415512,
+    "within_ss": 8770.3486328125,
+    "interaction_share": 0.13777188969374285,
+    "route_main_share": 0.21974612105803637
+   },
+   "attn2_part": {
+    "interaction_ss": 205757.68980026245,
+    "within_ss": 314310.03125,
+    "interaction_share": 0.6546329080938693,
+    "route_main_share": 0.2899500598205101
+   },
+   "interaction_from_x1_last": 0.030382459983229637,
+   "interaction_from_attn2": 0.969617486000061,
+   "alpha1_rel_norm": 12.022646122924689,
+   "alpha1_interaction_share_after": 0.18820115311839272,
+   "alpha1_acc_after": 0.6262626051902771,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.436,
+    "units 0-2": 0.987,
+    "units 1-2": 0.57
+   }
+  },
+  {
+   "step": 6000,
+   "block": {
+    "interaction_ss": 242360.65816688538,
+    "within_ss": 367377.21875,
+    "interaction_share": 0.6597051907342455,
+    "route_main_share": 0.29286894792228335
+   },
+   "x1_last_part": {
+    "interaction_ss": 1106.75909948349,
+    "within_ss": 8500.615234375,
+    "interaction_share": 0.13019752911623972,
+    "route_main_share": 0.22438232320975146
+   },
+   "attn2_part": {
+    "interaction_ss": 230262.48677539825,
+    "within_ss": 347186.625,
+    "interaction_share": 0.6632239556330785,
+    "route_main_share": 0.2877697235169155
+   },
+   "interaction_from_x1_last": 0.027039840817451477,
+   "interaction_from_attn2": 0.9729601740837097,
+   "alpha1_rel_norm": 13.083692827183718,
+   "alpha1_interaction_share_after": 0.1827346221251756,
+   "alpha1_acc_after": 0.6254855990409851,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.436,
+    "units 0-2": 0.988,
+    "units 1-2": 0.567
+   }
+  }
+ ],
+ "supervised": [
+  {
+   "step": 600,
+   "block": {
+    "interaction_ss": 243.14150973409414,
+    "within_ss": 1145.1553955078125,
+    "interaction_share": 0.21232184792376974,
+    "route_main_share": 0.03836280016088326
+   },
+   "x1_last_part": {
+    "interaction_ss": 120.27347199618816,
+    "within_ss": 1004.9126586914062,
+    "interaction_share": 0.11968549799423152,
+    "route_main_share": 0.02238647945296987
+   },
+   "attn2_part": {
+    "interaction_ss": 124.21094482950865,
+    "within_ss": 728.0902709960938,
+    "interaction_share": 0.17059827575992298,
+    "route_main_share": 0.030456982518970225
+   },
+   "interaction_from_x1_last": 0.49432456493377686,
+   "interaction_from_attn2": 0.5056754350662231,
+   "alpha1_rel_norm": 0.86497615758278,
+   "alpha1_interaction_share_after": 0.08581027261418128,
+   "alpha1_acc_after": 0.24708624184131622,
+   "acc_before": 0.24786324799060822,
+   "per_unit_cka_block": {
+    "units 0-1": 0.981,
+    "units 0-2": 0.987,
+    "units 1-2": 0.997
+   }
+  },
+  {
+   "step": 800,
+   "block": {
+    "interaction_ss": 2229.4020835459232,
+    "within_ss": 16556.595703125,
+    "interaction_share": 0.1346534108533635,
+    "route_main_share": 0.07094521537387384
+   },
+   "x1_last_part": {
+    "interaction_ss": 1013.726872459054,
+    "within_ss": 7321.52294921875,
+    "interaction_share": 0.13845847093427804,
+    "route_main_share": 0.06743561033685103
+   },
+   "attn2_part": {
+    "interaction_ss": 1230.063486665487,
+    "within_ss": 9150.8408203125,
+    "interaction_share": 0.134420815618939,
+    "route_main_share": 0.07265469401130095
+   },
+   "interaction_from_x1_last": 0.4573199450969696,
+   "interaction_from_attn2": 0.5426800847053528,
+   "alpha1_rel_norm": 1.4038555920995037,
+   "alpha1_interaction_share_after": 0.07431137839531714,
+   "alpha1_acc_after": 0.34188035130500793,
+   "acc_before": 0.34343433380126953,
+   "per_unit_cka_block": {
+    "units 0-1": 0.942,
+    "units 0-2": 0.949,
+    "units 1-2": 0.966
+   }
+  },
+  {
+   "step": 900,
+   "block": {
+    "interaction_ss": 14862.072045564651,
+    "within_ss": 45711.375,
+    "interaction_share": 0.3251285275396912,
+    "route_main_share": 0.1722763943588272
+   },
+   "x1_last_part": {
+    "interaction_ss": 2917.7733995318413,
+    "within_ss": 14513.7021484375,
+    "interaction_share": 0.20103577775612266,
+    "route_main_share": 0.054874719320871145
+   },
+   "attn2_part": {
+    "interaction_ss": 8760.686936855316,
+    "within_ss": 30527.650390625,
+    "interaction_share": 0.28697547386567657,
+    "route_main_share": 0.21287776530486355
+   },
+   "interaction_from_x1_last": 0.30046093463897705,
+   "interaction_from_attn2": 0.699539065361023,
+   "alpha1_rel_norm": 2.596810450061356,
+   "alpha1_interaction_share_after": 0.14699607569975376,
+   "alpha1_acc_after": 0.4320124387741089,
+   "acc_before": 0.5135974884033203,
+   "per_unit_cka_block": {
+    "units 0-1": 0.663,
+    "units 0-2": 0.904,
+    "units 1-2": 0.679
+   }
+  },
+  {
+   "step": 1000,
+   "block": {
+    "interaction_ss": 57042.3481297493,
+    "within_ss": 126550.8125,
+    "interaction_share": 0.45074659737762884,
+    "route_main_share": 0.28940627274418385
+   },
+   "x1_last_part": {
+    "interaction_ss": 3773.6792688965797,
+    "within_ss": 16604.748046875,
+    "interaction_share": 0.22726507251079808,
+    "route_main_share": 0.08191150836556725
+   },
+   "attn2_part": {
+    "interaction_ss": 42420.45368432999,
+    "within_ss": 106492.65625,
+    "interaction_share": 0.3983415869047776,
+    "route_main_share": 0.321176759499008
+   },
+   "interaction_from_x1_last": 0.15955139696598053,
+   "interaction_from_attn2": 0.8404486179351807,
+   "alpha1_rel_norm": 3.6875326148855962,
+   "alpha1_interaction_share_after": 0.15913448285193396,
+   "alpha1_acc_after": 0.4553224444389343,
+   "acc_before": 0.7948718070983887,
+   "per_unit_cka_block": {
+    "units 0-1": 0.515,
+    "units 0-2": 0.963,
+    "units 1-2": 0.536
+   }
+  },
+  {
+   "step": 1100,
+   "block": {
+    "interaction_ss": 85461.15853261948,
+    "within_ss": 172344.109375,
+    "interaction_share": 0.49587513517312215,
+    "route_main_share": 0.31621176240930576
+   },
+   "x1_last_part": {
+    "interaction_ss": 3072.8569652438164,
+    "within_ss": 14342.9619140625,
+    "interaction_share": 0.21424145052153043,
+    "route_main_share": 0.11003334989580386
+   },
+   "attn2_part": {
+    "interaction_ss": 70242.4742474556,
+    "within_ss": 153739.734375,
+    "interaction_share": 0.4568921270289244,
+    "route_main_share": 0.3302423996742367
+   },
+   "interaction_from_x1_last": 0.10664066672325134,
+   "interaction_from_attn2": 0.8933593034744263,
+   "alpha1_rel_norm": 4.416795912086707,
+   "alpha1_interaction_share_after": 0.16507298910210622,
+   "alpha1_acc_after": 0.49417248368263245,
+   "acc_before": 0.9463869333267212,
+   "per_unit_cka_block": {
+    "units 0-1": 0.55,
+    "units 0-2": 0.977,
+    "units 1-2": 0.6
+   }
+  },
+  {
+   "step": 1200,
+   "block": {
+    "interaction_ss": 152387.25573539734,
+    "within_ss": 267919.4375,
+    "interaction_share": 0.5687801421104333,
+    "route_main_share": 0.29263227641881423
+   },
+   "x1_last_part": {
+    "interaction_ss": 3206.6861338615417,
+    "within_ss": 14791.103515625,
+    "interaction_share": 0.21679830247108123,
+    "route_main_share": 0.12599330469527195
+   },
+   "attn2_part": {
+    "interaction_ss": 132923.62399291992,
+    "within_ss": 244616.546875,
+    "interaction_share": 0.5433958809861068,
+    "route_main_share": 0.29603467283138807
+   },
+   "interaction_from_x1_last": 0.07378653436899185,
+   "interaction_from_attn2": 0.9262135028839111,
+   "alpha1_rel_norm": 6.040813431298071,
+   "alpha1_interaction_share_after": 0.19058131604865408,
+   "alpha1_acc_after": 0.5369075536727905,
+   "acc_before": 0.9898989796638489,
+   "per_unit_cka_block": {
+    "units 0-1": 0.459,
+    "units 0-2": 0.995,
+    "units 1-2": 0.582
+   }
+  },
+  {
+   "step": 1500,
+   "block": {
+    "interaction_ss": 186988.57738304138,
+    "within_ss": 296992.875,
+    "interaction_share": 0.6296062738307826,
+    "route_main_share": 0.2880425963829471
+   },
+   "x1_last_part": {
+    "interaction_ss": 2173.59884211421,
+    "within_ss": 12032.033203125,
+    "interaction_share": 0.18065100099205808,
+    "route_main_share": 0.17799937955112546
+   },
+   "attn2_part": {
+    "interaction_ss": 170019.76749801636,
+    "within_ss": 274779.0625,
+    "interaction_share": 0.618750810018563,
+    "route_main_share": 0.2865502429424994
+   },
+   "interaction_from_x1_last": 0.05068220570683479,
+   "interaction_from_attn2": 0.9493176341056824,
+   "alpha1_rel_norm": 9.908484263378757,
+   "alpha1_interaction_share_after": 0.19180767325670797,
+   "alpha1_acc_after": 0.5858585834503174,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.454,
+    "units 0-2": 0.995,
+    "units 1-2": 0.583
+   }
+  },
+  {
+   "step": 2000,
+   "block": {
+    "interaction_ss": 127666.56129789352,
+    "within_ss": 201295.75,
+    "interaction_share": 0.6342238288582522,
+    "route_main_share": 0.287275616976253
+   },
+   "x1_last_part": {
+    "interaction_ss": 1478.159669995308,
+    "within_ss": 8913.814453125,
+    "interaction_share": 0.16582796038312145,
+    "route_main_share": 0.1672307283279208
+   },
+   "attn2_part": {
+    "interaction_ss": 117184.80199623108,
+    "within_ss": 186945.109375,
+    "interaction_share": 0.6268406934420832,
+    "route_main_share": 0.28629854071876076
+   },
+   "interaction_from_x1_last": 0.046693336218595505,
+   "interaction_from_attn2": 0.9533066153526306,
+   "alpha1_rel_norm": 7.972581657378448,
+   "alpha1_interaction_share_after": 0.20734194690394198,
+   "alpha1_acc_after": 0.6037296056747437,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.503,
+    "units 0-2": 0.983,
+    "units 1-2": 0.595
+   }
+  },
+  {
+   "step": 3000,
+   "block": {
+    "interaction_ss": 217877.4129037857,
+    "within_ss": 333728.9375,
+    "interaction_share": 0.6528574193653366,
+    "route_main_share": 0.29448043297249393
+   },
+   "x1_last_part": {
+    "interaction_ss": 1208.307504415512,
+    "within_ss": 8770.3486328125,
+    "interaction_share": 0.13777188969374285,
+    "route_main_share": 0.21974612105803637
+   },
+   "attn2_part": {
+    "interaction_ss": 205757.68980026245,
+    "within_ss": 314310.03125,
+    "interaction_share": 0.6546329080938693,
+    "route_main_share": 0.2899500598205101
+   },
+   "interaction_from_x1_last": 0.030382459983229637,
+   "interaction_from_attn2": 0.969617486000061,
+   "alpha1_rel_norm": 12.022646122924689,
+   "alpha1_interaction_share_after": 0.18820115311839272,
+   "alpha1_acc_after": 0.6262626051902771,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.436,
+    "units 0-2": 0.987,
+    "units 1-2": 0.57
+   }
+  },
+  {
+   "step": 6000,
+   "block": {
+    "interaction_ss": 242360.65816688538,
+    "within_ss": 367377.21875,
+    "interaction_share": 0.6597051907342455,
+    "route_main_share": 0.29286894792228335
+   },
+   "x1_last_part": {
+    "interaction_ss": 1106.75909948349,
+    "within_ss": 8500.615234375,
+    "interaction_share": 0.13019752911623972,
+    "route_main_share": 0.22438232320975146
+   },
+   "attn2_part": {
+    "interaction_ss": 230262.48677539825,
+    "within_ss": 347186.625,
+    "interaction_share": 0.6632239556330785,
+    "route_main_share": 0.2877697235169155
+   },
+   "interaction_from_x1_last": 0.027039840817451477,
+   "interaction_from_attn2": 0.9729601740837097,
+   "alpha1_rel_norm": 13.083692827183718,
+   "alpha1_interaction_share_after": 0.1827346221251756,
+   "alpha1_acc_after": 0.6254855990409851,
+   "acc_before": 1.0,
+   "per_unit_cka_block": {
+    "units 0-1": 0.436,
+    "units 0-2": 0.988,
+    "units 1-2": 0.567
+   }
+  }
+ ],
+ "P4_fusion": [
+  {
+   "step": 600,
+   "value_token->M": 0.114,
+   "value_token->m": 0.132,
+   "value_token->mu": 0.078,
+   "value_token->unchanged": 0.239,
+   "unit_token->M": 0.058,
+   "unit_token->m": 0.08,
+   "unit_token->mu": 0.066,
+   "unit_token->unchanged": 0.248
+  },
+  {
+   "step": 800,
+   "value_token->M": 0.15,
+   "value_token->m": 0.156,
+   "value_token->mu": 0.066,
+   "value_token->unchanged": 0.291,
+   "unit_token->M": 0.068,
+   "unit_token->m": 0.065,
+   "unit_token->mu": 0.065,
+   "unit_token->unchanged": 0.346
+  },
+  {
+   "step": 900,
+   "value_token->M": 0.206,
+   "value_token->m": 0.174,
+   "value_token->mu": 0.065,
+   "value_token->unchanged": 0.243,
+   "unit_token->M": 0.05,
+   "unit_token->m": 0.042,
+   "unit_token->mu": 0.023,
+   "unit_token->unchanged": 0.458
+  },
+  {
+   "step": 1000,
+   "value_token->M": 0.262,
+   "value_token->m": 0.16,
+   "value_token->mu": 0.068,
+   "value_token->unchanged": 0.207,
+   "unit_token->M": 0.025,
+   "unit_token->m": 0.026,
+   "unit_token->mu": 0.009,
+   "unit_token->unchanged": 0.692
+  },
+  {
+   "step": 1100,
+   "value_token->M": 0.397,
+   "value_token->m": 0.191,
+   "value_token->mu": 0.078,
+   "value_token->unchanged": 0.183,
+   "unit_token->M": 0.014,
+   "unit_token->m": 0.02,
+   "unit_token->mu": 0.001,
+   "unit_token->unchanged": 0.838
+  },
+  {
+   "step": 1200,
+   "value_token->M": 0.521,
+   "value_token->m": 0.237,
+   "value_token->mu": 0.071,
+   "value_token->unchanged": 0.175,
+   "unit_token->M": 0.01,
+   "unit_token->m": 0.015,
+   "unit_token->mu": 0.0,
+   "unit_token->unchanged": 0.87
+  },
+  {
+   "step": 1500,
+   "value_token->M": 0.709,
+   "value_token->m": 0.312,
+   "value_token->mu": 0.082,
+   "value_token->unchanged": 0.164,
+   "unit_token->M": 0.008,
+   "unit_token->m": 0.01,
+   "unit_token->mu": 0.0,
+   "unit_token->unchanged": 0.905
+  },
+  {
+   "step": 3000,
+   "value_token->M": 0.876,
+   "value_token->m": 0.368,
+   "value_token->mu": 0.079,
+   "value_token->unchanged": 0.162,
+   "unit_token->M": 0.009,
+   "unit_token->m": 0.009,
+   "unit_token->mu": 0.0,
+   "unit_token->unchanged": 0.895
+  },
+  {
+   "step": 6000,
+   "value_token->M": 0.9,
+   "value_token->m": 0.375,
+   "value_token->mu": 0.078,
+   "value_token->unchanged": 0.163,
+   "unit_token->M": 0.008,
+   "unit_token->m": 0.009,
+   "unit_token->mu": 0.0,
+   "unit_token->unchanged": 0.891
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "trajectory": "supervised",
+ "seed": 700,
+ "final_state_hash": "f412472d3e7ab30e2555e330e2401023e0b1470cbce8d66bb02040d12ebe4b23",
+ "ledger": {
+  "train_cpu_s": 564.2,
+  "observe_cpu_s": 116.4,
+  "weights_cpu_s": 46.0,
+  "policy_cpu_s": 79.5,
+  "edit_apply_cpu_s": 0.0,
+  "io_cpu_s": 0.2
+ },
+ "n_accepted": 0,
+ "cum_rel_norm_used": 0.0,
+ "storage_bytes": 35535005,
+ "n_params": 69831,
+ "torch": "2.15.0+cu132"
+}

@@ -1,0 +1,26 @@
+{
+ "per_trajectory": {
+  "control": {
+   "train_cpu_s": 563.5,
+   "observe_cpu_s": 113.7,
+   "weights_cpu_s": 45.9,
+   "policy_cpu_s": 78.5,
+   "edit_apply_cpu_s": 0.0,
+   "io_cpu_s": 0.2
+  },
+  "supervised": {
+   "train_cpu_s": 564.2,
+   "observe_cpu_s": 116.4,
+   "weights_cpu_s": 46.0,
+   "policy_cpu_s": 79.5,
+   "edit_apply_cpu_s": 0.0,
+   "io_cpu_s": 0.2
+  }
+ },
+ "storage_bytes": {
+  "control": 35534334,
+  "supervised": 35535005
+ },
+ "offline_milestones_cpu_s": 471.7,
+ "sealed_eval_cpu_s": 42.3
+}
