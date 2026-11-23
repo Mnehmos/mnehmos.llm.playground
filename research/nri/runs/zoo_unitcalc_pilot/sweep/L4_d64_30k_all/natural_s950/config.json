@@ -1,0 +1,45 @@
+{
+  "arm": "natural",
+  "seed": 950,
+  "steps": 30000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "model_kw": {
+    "n_types": 1,
+    "aux_classes": 0,
+    "vocab": 34,
+    "seq_len": 8,
+    "n_out": 13
+  },
+  "size": {},
+  "labelset": "lite4",
+  "modes": [
+    "mul",
+    "div",
+    "msum",
+    "tsum"
+  ],
+  "sched": "onecycle",
+  "lambda_iit": 0.0,
+  "blocks": null,
+  "n_params": 69952,
+  "torch": "2.15.0+cu132",
+  "acc": {
+    "train": {
+      "mul": 0.86962890625,
+      "div": 0.9140776991844177,
+      "msum": 0.9795421361923218,
+      "tsum": 1.0,
+      "all": 0.940673828125
+    },
+    "held": {
+      "mul": 0.5036249160766602,
+      "div": 0.1257309913635254,
+      "msum": 0.19693221151828766,
+      "tsum": 0.9482926726341248,
+      "all": 0.444580078125
+    }
+  },
+  "train_seconds": 1206.6
+}
