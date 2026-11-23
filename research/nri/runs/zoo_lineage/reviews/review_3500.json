@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary at step 3500: acc 1.000 (+0.000), ood 0.652 (+0.000), iia 0.940 (-0.001), edit 0.962 (-0.002), inter 0.395 (+0.003), A_L1 0.295 (-0.007); largest update W_in.weight 0.006; MLP match {'stable': 254, 'new': 2}.",
+ "hypothesis": "CONFIRMED (step-3,400 question, ad hoc read-only margin measurement, disclosed): correctly answered held-out questions have half the logit margin of ID ones (median 5.1 vs 11.0; 4.4% below 1 vs 0%), and wrong held-out answers are near misses (median margin 1.6). Held-out jitter at a near-zero learning rate is therefore boundary-crossing by near-margin inputs, not representational change.",
+ "evidence": "Routine Level-1 audit (OBS interchange, persistent pooled edit, geometry, weight lineage); all deltas inside the stationary bands (acc 0.01, OOD_DEV 0.08 (~2 sd of the converged noise), IIA 0.02, editability 0.04, interaction 0.03, acceleration L1 0.05).",
+ "key_question": "Are the near-miss held-out answers wrong in a structured way (e.g. off by the unit factor)?",
+ "best_experiment": "Continue routine recording; scheduled Level-2 checks at 4,000 and 5,000 (OOD locus, head anatomy).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary network; editability already high; registered primitives shown (1,500 / 1,800 dry runs) to cost held-out accuracy.",
+ "previous_interventions": "none",
+ "investigation_level": 2
+}

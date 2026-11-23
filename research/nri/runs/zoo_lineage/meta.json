@@ -1,5 +1,5 @@
 {
- "step": 3000,
+ "step": 3700,
  "seed": 701,
  "cum_rel_norm": 0.0,
  "installed": [],
@@ -122,6 +122,34 @@
   },
   "3000": {
    "key_question": "Is there any remaining development worth tracking (e.g. acceleration becoming causal late, as in seed 700 at 3,200)?",
+   "intervene": "no"
+  },
+  "3100": {
+   "key_question": "Will acceleration become causal through its tokens late, as in seed 700, or stay sub-threshold?",
+   "intervene": "no"
+  },
+  "3200": {
+   "key_question": "Does the frozen state persist to 6,000 (the comparison would then be A = B with no edits), or will the low-learning-rate phase produce late changes?",
+   "intervene": "no"
+  },
+  "3300": {
+   "key_question": "Will OOD_DEV variance keep shrinking as the learning rate decays?",
+   "intervene": "no"
+  },
+  "3400": {
+   "key_question": "How sensitive are held-out answers to weight perturbation compared with ID answers (margin distribution on OOD_DEV vs OBS)?",
+   "intervene": "no"
+  },
+  "3500": {
+   "key_question": "Are the near-miss held-out answers wrong in a structured way (e.g. off by the unit factor)?",
+   "intervene": "no"
+  },
+  "3600": {
+   "key_question": "Does the IIT declaration of mass cause the unstructured failure mode (mass binding entangled with the block's interchange code) while undeclared acceleration keeps a simpler, unit-ignoring fallback?",
+   "intervene": "no"
+  },
+  "3700": {
+   "key_question": "Will the add-one held-out edit (scored only at the sealed evaluation) be as good as inversion, i.e. is the editability general rather than edit-specific?",
    "intervene": "no"
   }
  },
@@ -262,7 +290,7 @@
   ]
  },
  "ledger": {
-  "train_cpu_s": 504.07797682200004,
+  "train_cpu_s": 625.4898754400002,
   "supervisor_extra_grad_steps": 0,
   "proposal_cpu_s": 0.0,
   "inspect_cpu_s": 171.51901710400003

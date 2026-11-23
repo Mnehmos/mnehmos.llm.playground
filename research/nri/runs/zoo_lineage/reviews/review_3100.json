@@ -1,0 +1,11 @@
+{
+ "what_changed": "Stationary (OOD_DEV 0.684, editability 0.964, IIA 0.940). Layer-1 token interchange: mass 0.399, acceleration 0.299 (both flat for several checkpoints).",
+ "hypothesis": "Seed 701 assembles mass later in the network than seed 700: swapping the layer-1 mass tokens transfers mass only 0.40 of the time here vs 0.66-0.80 in seed 700, so a larger share of the conversion happens in the layer-2 writers (heads 0 and 3) rather than at the value token. Acceleration stays below the 0.5 causal threshold through its tokens (seed 700 crossed it at 3,200).",
+ "evidence": "Causal (OBS interchange): block 0.94 vs layer-1 tokens 0.40 for mass; acceleration 0.30 at its tokens, 0.07 at the block. Cross-seed comparison with doc 25 (different network): correlational.",
+ "key_question": "Will acceleration become causal through its tokens late, as in seed 700, or stay sub-threshold?",
+ "best_experiment": "Routine packet through 3,500 (acceleration L1 interchange).",
+ "intervene": "no",
+ "intervention_rationale": "Stationary; acceleration is not a declared variable and no registered target concerns it.",
+ "previous_interventions": "none",
+ "investigation_level": 1
+}
