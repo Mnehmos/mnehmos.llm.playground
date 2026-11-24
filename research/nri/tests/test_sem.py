@@ -276,3 +276,32 @@ def test_primary_endpoint_bootstrap():
     same = {"A_fixed": correct["A_fixed"], "B_adaptive": correct["A_fixed"], "common (pre-curriculum reference)": correct["A_fixed"]}
     r0 = RS.primary(same, {n: res["A_fixed"] for n in same})
     assert r0["diff_B_minus_A"] == 0 and not r0["B_better_claimed"] and not r0["A_better"]
+
+
+# ------------------------------------------------------------------ post-training feature programming
+def test_program_validator_and_rollback():
+    import copy
+    from sem import model as SM
+    from sem import program as PG
+    rng = random.Random(0)
+    for cap in PG.CAPS:
+        ex = PG.sample(rng, cap)
+        assert PG.validate(ex["ast"], ex["tokens"])[0]
+        bad = dict(ex["ast"], m=(ex["ast"]["m"] + 1) % 13)
+        if PG.answer(bad) != PG.answer(ex["ast"]):
+            assert not PG.validate(bad, ex["tokens"])[0]
+    V = _vocab()
+    stoi = dict(V.stoi, **{w: len(V.itos) + i for i, w in enumerate(PG.NEW_WORDS)})
+    base = SM.SemStudent(len(V.itos))
+    h0 = PG.sd_hash(base)
+    for meth in ("head", "adapter", "bounded"):
+        net = PG.Programmed(copy.deepcopy(base), meth)
+        before = {n: p.detach().clone() for n, p in net.base.named_parameters() if not n.startswith("E.new")}
+        PG.train_cap(net, ["null"], stoi, V, 3, 0)
+        for n, p in net.base.named_parameters():
+            if n in before and meth != "bounded":
+                assert torch.equal(p, before[n]), f"{meth} changed frozen {n}"
+            if meth == "bounded" and n in net.W0:
+                assert (p - net.W0[n]).norm() <= PG.EPS_BOUND * net.W0[n].norm() * (1 + 1e-5)
+        net.remove_hooks()
+    assert PG.sd_hash(base) == h0                                         # the original object is never touched

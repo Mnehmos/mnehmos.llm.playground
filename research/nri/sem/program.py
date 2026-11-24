@@ -5,8 +5,10 @@ paraphrase/order generalisation, held-out values, preservation of every previous
 between two new capabilities, parameters added, and exact rollback.
 
 Capabilities (new question types over existing concepts; modular toy, not real-world arithmetic):
-  gap   = (M - A) mod 13      cue word "gap"
-  total = (M + A) mod 13      cue word "total"
+  hard pair:  gap = (M - A) mod 13 ("gap"), total = (M + A) mod 13 ("total")
+  easy pair:  null = is the product zero? yes/no ("null"; balanced), kind = which mass unit, 0/1/2 ("kind")
+  (the easy pair was added after a non-study development run showed no method learns the hard pair in 600
+  steps on this student - it is the positive control that the methods can add anything at all)
 M, A are the canonical mass and acceleration. Both capabilities share their frames and differ only in the cue
 word, so coexistence is a hard test. New words get new embedding rows in every method (counted).
 
@@ -41,13 +43,16 @@ from sem import lang as L  # noqa: E402
 from sem import model as SM  # noqa: E402
 from sem import observe as O  # noqa: E402
 
-CAPS = {"gap": lambda M, A: (M - A) % 13, "total": lambda M, A: (M + A) % 13}
+CAPS = {"gap": lambda a, M, A: str((M - A) % 13), "total": lambda a, M, A: str((M + A) % 13),
+        "null": lambda a, M, A: "yes" if M * A % 13 == 0 else "no",        # easy pair: lexically grounded
+        "kind": lambda a, M, A: str(a["mu"])}                            # which mass unit (0/1/2)
+PAIRS = {"hard": ("gap", "total"), "easy": ("null", "kind")}
 FRAMES = {   # {cue} is the capability word; train frames are used for training, the others only for evaluation
     "train": [T for T in (L.T("{m} {mu} and {a} {au} : what is the {cue} ?"), L.T("find the {cue} for {m} {mu} and {a} {au} ."))],
     "heldout_order": [L.T("for {a} {au} and {m} {mu} , what is the {cue} ?")],        # acceleration first
     "heldout_phrase": [L.T("the {cue} of {m} {mu} and {a} {au} is what ?")],
 }
-NEW_WORDS = ["gap", "total"]
+NEW_WORDS = ["gap", "total", "null", "kind"]
 STEPS, LR, BATCH, NEW_FRAC = 1200, 3e-3, 128, 0.5
 EPS_BOUND = 0.10
 BOUNDED_SUBSET = ("attn3", "mlp2", "W_in", "W_out")
@@ -69,7 +74,7 @@ def tuple_split(ast):
 def answer(ast):
     M = ast["m"] * L.MASS_S[ast["mu"]] % 13
     A = ast["a"] * L.ACC_S[ast["au"]] % 13
-    return str(CAPS[ast["cap"]](M, A))
+    return CAPS[ast["cap"]](ast, M, A)
 
 
 def render(ast, frame, style):
@@ -108,8 +113,11 @@ def validate(ast, toks):
 
 
 def sample(rng, cap, splits=("train",), numeric=("train",), frames="train", style_p=(0.3, 0.3)):
+    want_yes = rng.random() < 0.5                                     # balance the yes/no capability
     while True:
         ast = dict(cap=cap, m=rng.randrange(13), mu=rng.randrange(3), a=rng.randrange(13), au=rng.randrange(3))
+        if cap == "null" and (answer(ast) == "yes") != want_yes:
+            continue
         if tuple_split(ast) in splits and numeric_split(ast) in numeric:
             break
     toks = render(ast, rng.choice(FRAMES[frames]), D.draw_style(rng, *style_p))
@@ -217,10 +225,10 @@ def sd_hash(model):
 
 
 # ------------------------------------------------------------------ evaluation
-def eval_sets(seed=5, n=384):
+def eval_sets(caps, seed=5, n=384):
     rng = random.Random(seed)
     out = {}
-    for cap in CAPS:
+    for cap in caps:
         out[f"{cap}/id"] = [sample(rng, cap, ("dev",), ("train",), "train") for _ in range(n)]
         out[f"{cap}/order"] = [sample(rng, cap, ("dev",), ("train",), "heldout_order") for _ in range(n)]
         out[f"{cap}/phrase"] = [sample(rng, cap, ("dev",), ("train",), "heldout_phrase") for _ in range(n)]
@@ -266,7 +274,8 @@ def train_cap(net, caps, stoi, vocab, steps, seed):
     net.eval()
 
 
-def run(ckpt, methods=("head", "adapter", "bounded"), steps=STEPS, seed=0):
+def run(ckpt, methods=("head", "adapter", "bounded"), steps=STEPS, seed=0, pair="hard"):
+    c1, c2 = PAIRS[pair]
     torch.manual_seed(seed)
     vocab = D.Vocab.from_json(json.loads((ROOT / "runs/zoo_sem/eval/vocab.json").read_text()))
     stoi = dict(vocab.stoi, **{w: len(vocab.itos) + i for i, w in enumerate(NEW_WORDS)})
@@ -276,17 +285,17 @@ def run(ckpt, methods=("head", "adapter", "bounded"), steps=STEPS, seed=0):
     h0 = sd_hash(base)
     backup = copy.deepcopy(base.state_dict())
     devsets = O.dev_sets(ROOT / "runs/zoo_sem/eval")
-    ev = eval_sets()
-    res = dict(checkpoint=str(ckpt), base_hash=h0, steps_per_capability=steps, before=dict(old=acc_old(base, devsets, vocab)))
+    ev = eval_sets((c1, c2))
+    res = dict(checkpoint=str(ckpt), pair=pair, capabilities=[c1, c2], base_hash=h0, steps_per_capability=steps, before=dict(old=acc_old(base, devsets, vocab)))
     for meth in methods:
         t0 = time.process_time()
         net = Programmed(copy.deepcopy(base), meth)
         r = dict(params=net.added_params())
         r["new_before"] = {k: acc_new(net, v, stoi) for k, v in ev.items()}
-        train_cap(net, ["gap"], stoi, vocab, steps, seed + 1)                      # capability 1
-        r["after_gap"] = dict(new={k: acc_new(net, v, stoi) for k, v in ev.items()}, old=acc_old(net, devsets, vocab))
-        train_cap(net, ["total", "gap"], stoi, vocab, steps, seed + 2)             # capability 2 (+ gap replay)
-        r["after_total"] = dict(new={k: acc_new(net, v, stoi) for k, v in ev.items()}, old=acc_old(net, devsets, vocab))
+        train_cap(net, [c1], stoi, vocab, steps, seed + 1)                         # capability 1
+        r["after_cap1"] = dict(new={k: acc_new(net, v, stoi) for k, v in ev.items()}, old=acc_old(net, devsets, vocab))
+        train_cap(net, [c2, c1], stoi, vocab, steps, seed + 2)                     # capability 2 (+ cap-1 replay)
+        r["after_cap2"] = dict(new={k: acc_new(net, v, stoi) for k, v in ev.items()}, old=acc_old(net, devsets, vocab))
         r["cpu_s"] = round(time.process_time() - t0, 1)
         net.remove_hooks()
         res[meth] = r
@@ -305,9 +314,10 @@ if __name__ == "__main__":
     ap.add_argument("out")
     ap.add_argument("--steps", type=int, default=STEPS)
     ap.add_argument("--methods", default="head,adapter,bounded")
+    ap.add_argument("--pair", default="hard", choices=sorted(PAIRS))
     a = ap.parse_args()
     torch.set_num_threads(2)
-    r = run(a.ckpt, tuple(a.methods.split(",")), a.steps)
+    r = run(a.ckpt, tuple(a.methods.split(",")), a.steps, pair=a.pair)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(r, indent=1))
     print(json.dumps({k: v for k, v in r.items() if k != "before"}, indent=1)[:6000])
