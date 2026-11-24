@@ -2,3 +2,5 @@ done A 103 0.1
 done B 101 0.1
 done A 102 0.1
 done A 101 0.1
+done C 101 0.1
+done B 102 0.1
