@@ -100,3 +100,14 @@ def test_episode_counter_on_planted_logs():
     assert not any(b["episode"] for b in E.blocks(calm, 600))
     eps = [b["step"] for b in E.blocks(planted, 600) if b["episode"]]
     assert eps == [500]
+
+
+def test_registered_statistics_known_answers():
+    from sci import factorial_analysis as FA
+    assert FA.sign_flip_p([1.0] * 12) == 1 / 4096                      # all-positive: only the identity pattern
+    assert abs(FA.sign_flip_p([1, -1] * 6) - 1.0) < 1e-9 or FA.sign_flip_p([1, -1] * 6) > 0.5
+    assert FA.sign_flip_p([0.5] * 12, "two-sided") == 2 / 4096
+    assert FA.holm([0.01, 0.04, 0.03]) == [0.03, 0.06, 0.06]
+    lo, hi = FA.bootstrap_ci([0.2] * 12)
+    assert lo == hi == 0.2
+    assert abs(FA.binom_greater(10, 10) - 1 / 1024) < 1e-12
