@@ -1,0 +1,18 @@
+{
+ "population": "B",
+ "seed": 102,
+ "steps": 6000,
+ "wd": 0.1,
+ "lr": 0.001,
+ "batch": 128,
+ "aux_weight": 0,
+ "split_sha": "c103174ee0bfc1fa",
+ "n_train_combos": 120,
+ "frames": [
+  "C01",
+  "C02",
+  "C04",
+  "C05"
+ ],
+ "n_params_inference": 129280
+}
