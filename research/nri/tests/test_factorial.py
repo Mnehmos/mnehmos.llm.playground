@@ -89,3 +89,14 @@ def test_archive_roundtrip(tmp_path):
     subprocess.run(["tar", "-C", str(tmp_path / "x"), "-xJf", str(tgt)] if (tmp_path / "x").mkdir() is None else [], check=True)
     for rel, h in man["files"].items():
         assert Fx.sha256_file(tmp_path / "x" / "wd1.0_A_s9" / rel) == h
+
+
+def test_episode_counter_on_planted_logs():
+    from sci import episodes as E
+    calm = [dict(step=i, task=0.01, grad_norm=0.1) for i in range(1, 601)]
+    planted = [dict(r) for r in calm]
+    for i in range(450, 456):                                    # a planted episode in block 401-500
+        planted[i - 1].update(task=0.5, grad_norm=5.0)
+    assert not any(b["episode"] for b in E.blocks(calm, 600))
+    eps = [b["step"] for b in E.blocks(planted, 600) if b["episode"]]
+    assert eps == [500]
