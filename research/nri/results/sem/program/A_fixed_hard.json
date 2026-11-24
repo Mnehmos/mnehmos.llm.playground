@@ -1,0 +1,265 @@
+{
+ "checkpoint": "runs/zoo_sem/A_fixed/step_1500",
+ "pair": "hard",
+ "capabilities": [
+  "gap",
+  "total"
+ ],
+ "base_hash": "a0b50ce8c5315c66d65ba1ed3465c217e2390b542f5a683db23cc92c705cf8f8",
+ "steps_per_capability": 1200,
+ "before": {
+  "old": {
+   "dev/convert_newfam": 0.1068,
+   "dev/convert_ood_value": 0.0234,
+   "dev/convert_trainfam": 0.1198,
+   "dev/equiv_newfam": 0.4479,
+   "dev/equiv_trainfam": 0.5911,
+   "dev/force_crossed": 0.151,
+   "dev/force_distractor": 0.2917,
+   "dev/force_id_pretrainfam": 0.6042,
+   "dev/force_id_trainfam": 0.3698,
+   "dev/force_newfam": 0.1641,
+   "dev/force_ood_value": 0.237,
+   "dev/inverse_newfam": 0.0286,
+   "dev/inverse_ood_value": 0.1172,
+   "dev/inverse_trainfam": 0.151,
+   "dev/sense_newframe_trainctx": 0.362,
+   "dev/sense_trainframe_newctx": 0.4036
+  }
+ },
+ "head": {
+  "params": {
+   "added": 5521,
+   "existing_modified": 0
+  },
+  "new_before": {
+   "gap/id": 0.0859,
+   "gap/order": 0.0703,
+   "gap/phrase": 0.026,
+   "gap/ood_value": 0.0755,
+   "total/id": 0.0729,
+   "total/order": 0.0964,
+   "total/phrase": 0.0625,
+   "total/ood_value": 0.0573
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0755,
+    "gap/order": 0.0781,
+    "gap/phrase": 0.026,
+    "gap/ood_value": 0.0573,
+    "total/id": 0.0807,
+    "total/order": 0.0625,
+    "total/phrase": 0.0365,
+    "total/ood_value": 0.0312
+   },
+   "old": {
+    "dev/convert_newfam": 0.099,
+    "dev/convert_ood_value": 0.0078,
+    "dev/convert_trainfam": 0.112,
+    "dev/equiv_newfam": 0.4115,
+    "dev/equiv_trainfam": 0.5521,
+    "dev/force_crossed": 0.151,
+    "dev/force_distractor": 0.2812,
+    "dev/force_id_pretrainfam": 0.5833,
+    "dev/force_id_trainfam": 0.3542,
+    "dev/force_newfam": 0.1354,
+    "dev/force_ood_value": 0.2422,
+    "dev/inverse_newfam": 0.0521,
+    "dev/inverse_ood_value": 0.1276,
+    "dev/inverse_trainfam": 0.1589,
+    "dev/sense_newframe_trainctx": 0.362,
+    "dev/sense_trainframe_newctx": 0.4401
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0807,
+    "gap/order": 0.1068,
+    "gap/phrase": 0.0156,
+    "gap/ood_value": 0.0312,
+    "total/id": 0.0781,
+    "total/order": 0.0469,
+    "total/phrase": 0.0208,
+    "total/ood_value": 0.0443
+   },
+   "old": {
+    "dev/convert_newfam": 0.1146,
+    "dev/convert_ood_value": 0.0156,
+    "dev/convert_trainfam": 0.1042,
+    "dev/equiv_newfam": 0.4557,
+    "dev/equiv_trainfam": 0.5833,
+    "dev/force_crossed": 0.1562,
+    "dev/force_distractor": 0.2708,
+    "dev/force_id_pretrainfam": 0.5911,
+    "dev/force_id_trainfam": 0.3516,
+    "dev/force_newfam": 0.1901,
+    "dev/force_ood_value": 0.237,
+    "dev/inverse_newfam": 0.0365,
+    "dev/inverse_ood_value": 0.1016,
+    "dev/inverse_trainfam": 0.1797,
+    "dev/sense_newframe_trainctx": 0.3672,
+    "dev/sense_trainframe_newctx": 0.4375
+   }
+  },
+  "cpu_s": 239.1
+ },
+ "adapter": {
+  "params": {
+   "added": 3544,
+   "existing_modified": 0
+  },
+  "new_before": {
+   "gap/id": 0.0755,
+   "gap/order": 0.0599,
+   "gap/phrase": 0.0312,
+   "gap/ood_value": 0.0807,
+   "total/id": 0.0964,
+   "total/order": 0.0651,
+   "total/phrase": 0.0365,
+   "total/ood_value": 0.0755
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0729,
+    "gap/order": 0.0807,
+    "gap/phrase": 0.0312,
+    "gap/ood_value": 0.0677,
+    "total/id": 0.0859,
+    "total/order": 0.0625,
+    "total/phrase": 0.0495,
+    "total/ood_value": 0.0781
+   },
+   "old": {
+    "dev/convert_newfam": 0.112,
+    "dev/convert_ood_value": 0.0156,
+    "dev/convert_trainfam": 0.1068,
+    "dev/equiv_newfam": 0.4427,
+    "dev/equiv_trainfam": 0.5781,
+    "dev/force_crossed": 0.1016,
+    "dev/force_distractor": 0.2656,
+    "dev/force_id_pretrainfam": 0.5781,
+    "dev/force_id_trainfam": 0.3229,
+    "dev/force_newfam": 0.1667,
+    "dev/force_ood_value": 0.2109,
+    "dev/inverse_newfam": 0.026,
+    "dev/inverse_ood_value": 0.0964,
+    "dev/inverse_trainfam": 0.1615,
+    "dev/sense_newframe_trainctx": 0.3672,
+    "dev/sense_trainframe_newctx": 0.3932
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0755,
+    "gap/order": 0.1068,
+    "gap/phrase": 0.0052,
+    "gap/ood_value": 0.0833,
+    "total/id": 0.0807,
+    "total/order": 0.0911,
+    "total/phrase": 0.0078,
+    "total/ood_value": 0.0417
+   },
+   "old": {
+    "dev/convert_newfam": 0.1068,
+    "dev/convert_ood_value": 0.0391,
+    "dev/convert_trainfam": 0.1016,
+    "dev/equiv_newfam": 0.4531,
+    "dev/equiv_trainfam": 0.5599,
+    "dev/force_crossed": 0.1276,
+    "dev/force_distractor": 0.2708,
+    "dev/force_id_pretrainfam": 0.5938,
+    "dev/force_id_trainfam": 0.3516,
+    "dev/force_newfam": 0.1615,
+    "dev/force_ood_value": 0.2474,
+    "dev/inverse_newfam": 0.0391,
+    "dev/inverse_ood_value": 0.099,
+    "dev/inverse_trainfam": 0.1562,
+    "dev/sense_newframe_trainctx": 0.375,
+    "dev/sense_trainframe_newctx": 0.4635
+   }
+  },
+  "cpu_s": 256.8
+ },
+ "bounded": {
+  "params": {
+   "added": 256,
+   "existing_modified": 66304
+  },
+  "new_before": {
+   "gap/id": 0.0938,
+   "gap/order": 0.0833,
+   "gap/phrase": 0.0286,
+   "gap/ood_value": 0.0833,
+   "total/id": 0.0651,
+   "total/order": 0.0703,
+   "total/phrase": 0.026,
+   "total/ood_value": 0.0547
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0703,
+    "gap/order": 0.0807,
+    "gap/phrase": 0.0339,
+    "gap/ood_value": 0.0495,
+    "total/id": 0.0781,
+    "total/order": 0.0677,
+    "total/phrase": 0.0651,
+    "total/ood_value": 0.0547
+   },
+   "old": {
+    "dev/convert_newfam": 0.1927,
+    "dev/convert_ood_value": 0.0391,
+    "dev/convert_trainfam": 0.1406,
+    "dev/equiv_newfam": 0.4089,
+    "dev/equiv_trainfam": 0.5911,
+    "dev/force_crossed": 0.0755,
+    "dev/force_distractor": 0.2604,
+    "dev/force_id_pretrainfam": 0.4922,
+    "dev/force_id_trainfam": 0.3203,
+    "dev/force_newfam": 0.1719,
+    "dev/force_ood_value": 0.2214,
+    "dev/inverse_newfam": 0.0547,
+    "dev/inverse_ood_value": 0.1172,
+    "dev/inverse_trainfam": 0.1589,
+    "dev/sense_newframe_trainctx": 0.3255,
+    "dev/sense_trainframe_newctx": 0.401
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0885,
+    "gap/order": 0.0599,
+    "gap/phrase": 0.0365,
+    "gap/ood_value": 0.0599,
+    "total/id": 0.0547,
+    "total/order": 0.0599,
+    "total/phrase": 0.0625,
+    "total/ood_value": 0.1198
+   },
+   "old": {
+    "dev/convert_newfam": 0.0833,
+    "dev/convert_ood_value": 0.0833,
+    "dev/convert_trainfam": 0.1276,
+    "dev/equiv_newfam": 0.3984,
+    "dev/equiv_trainfam": 0.5599,
+    "dev/force_crossed": 0.1094,
+    "dev/force_distractor": 0.2682,
+    "dev/force_id_pretrainfam": 0.5104,
+    "dev/force_id_trainfam": 0.3307,
+    "dev/force_newfam": 0.1432,
+    "dev/force_ood_value": 0.2526,
+    "dev/inverse_newfam": 0.0234,
+    "dev/inverse_ood_value": 0.2188,
+    "dev/inverse_trainfam": 0.1901,
+    "dev/sense_newframe_trainctx": 0.3542,
+    "dev/sense_trainframe_newctx": 0.3828
+   }
+  },
+  "cpu_s": 253.8
+ },
+ "rollback": {
+  "original_untouched": true,
+  "restore_hash_equal": true
+ }
+}

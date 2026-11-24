@@ -1,0 +1,257 @@
+/home/user/mnehmos.llm.playground/research/nri/sem/program.py:143: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  nn.init.normal_(self.new.weight, std=float(old.weight.std()))
+  [head] ['gap'] step 300/1200 loss 1.975
+  [head] ['gap'] step 600/1200 loss 2.038
+  [head] ['gap'] step 900/1200 loss 1.777
+  [head] ['gap'] step 1200/1200 loss 1.772
+  [head] ['total', 'gap'] step 300/1200 loss 2.105
+  [head] ['total', 'gap'] step 600/1200 loss 2.010
+  [head] ['total', 'gap'] step 900/1200 loss 1.969
+  [head] ['total', 'gap'] step 1200/1200 loss 1.968
+  [adapter] ['gap'] step 300/1200 loss 1.941
+  [adapter] ['gap'] step 600/1200 loss 1.951
+  [adapter] ['gap'] step 900/1200 loss 1.798
+  [adapter] ['gap'] step 1200/1200 loss 1.808
+  [adapter] ['total', 'gap'] step 300/1200 loss 1.910
+  [adapter] ['total', 'gap'] step 600/1200 loss 1.996
+  [adapter] ['total', 'gap'] step 900/1200 loss 1.932
+  [adapter] ['total', 'gap'] step 1200/1200 loss 2.016
+  [bounded] ['gap'] step 300/1200 loss 2.091
+  [bounded] ['gap'] step 600/1200 loss 2.001
+  [bounded] ['gap'] step 900/1200 loss 1.905
+  [bounded] ['gap'] step 1200/1200 loss 1.798
+  [bounded] ['total', 'gap'] step 300/1200 loss 2.085
+  [bounded] ['total', 'gap'] step 600/1200 loss 2.160
+  [bounded] ['total', 'gap'] step 900/1200 loss 2.097
+  [bounded] ['total', 'gap'] step 1200/1200 loss 2.041
+{
+ "checkpoint": "runs/zoo_sem/B_adaptive/step_1500",
+ "pair": "hard",
+ "capabilities": [
+  "gap",
+  "total"
+ ],
+ "base_hash": "36069a05197054dddea813bfd95c25fede1b1d1802caad88d9fbd595e9ecfa46",
+ "steps_per_capability": 1200,
+ "head": {
+  "params": {
+   "added": 5521,
+   "existing_modified": 0
+  },
+  "new_before": {
+   "gap/id": 0.0859,
+   "gap/order": 0.0964,
+   "gap/phrase": 0.0339,
+   "gap/ood_value": 0.0677,
+   "total/id": 0.0677,
+   "total/order": 0.099,
+   "total/phrase": 0.0339,
+   "total/ood_value": 0.0286
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0599,
+    "gap/order": 0.0755,
+    "gap/phrase": 0.0443,
+    "gap/ood_value": 0.0729,
+    "total/id": 0.0807,
+    "total/order": 0.0964,
+    "total/phrase": 0.0625,
+    "total/ood_value": 0.0443
+   },
+   "old": {
+    "dev/convert_newfam": 0.1901,
+    "dev/convert_ood_value": 0.0365,
+    "dev/convert_trainfam": 0.1432,
+    "dev/equiv_newfam": 0.3594,
+    "dev/equiv_trainfam": 0.5729,
+    "dev/force_crossed": 0.1198,
+    "dev/force_distractor": 0.2161,
+    "dev/force_id_pretrainfam": 0.5729,
+    "dev/force_id_trainfam": 0.3359,
+    "dev/force_newfam": 0.1276,
+    "dev/force_ood_value": 0.2292,
+    "dev/inverse_newfam": 0.1094,
+    "dev/inverse_ood_value": 0.1094,
+    "dev/inverse_trainfam": 0.1615,
+    "dev/sense_newframe_trainctx": 0.4818,
+    "dev/sense_trainframe_newctx": 0.4557
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0859,
+    "gap/order": 0.0833,
+    "gap/phrase": 0.0547,
+    "gap/ood_value": 0.0885,
+    "total/id": 0.0625,
+    "total/order": 0.0573,
+    "total/phrase": 0.0781,
+    "total/ood_value": 0.0625
+   },
+   "old": {
+    "dev/convert_newfam": 0.1589,
+    "dev/convert_ood_value": 0.0599,
+    "dev/convert_trainfam": 0.1172,
+    "dev/equiv_newfam": 0.3776,
+    "dev/equiv_trainfam": 0.6042,
+    "dev/force_crossed": 0.138,
+    "dev/force_distractor": 0.2188,
+    "dev/force_id_pretrainfam": 0.5677,
+    "dev/force_id_trainfam": 0.3411,
+    "dev/force_newfam": 0.1693,
+    "dev/force_ood_value": 0.2344,
+    "dev/inverse_newfam": 0.1094,
+    "dev/inverse_ood_value": 0.0964,
+    "dev/inverse_trainfam": 0.1615,
+    "dev/sense_newframe_trainctx": 0.4401,
+    "dev/sense_trainframe_newctx": 0.4609
+   }
+  },
+  "cpu_s": 236.0
+ },
+ "adapter": {
+  "params": {
+   "added": 3544,
+   "existing_modified": 0
+  },
+  "new_before": {
+   "gap/id": 0.099,
+   "gap/order": 0.1094,
+   "gap/phrase": 0.0312,
+   "gap/ood_value": 0.0885,
+   "total/id": 0.0938,
+   "total/order": 0.1224,
+   "total/phrase": 0.0391,
+   "total/ood_value": 0.0573
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0807,
+    "gap/order": 0.0938,
+    "gap/phrase": 0.0547,
+    "gap/ood_value": 0.0625,
+    "total/id": 0.112,
+    "total/order": 0.0938,
+    "total/phrase": 0.0911,
+    "total/ood_value": 0.0677
+   },
+   "old": {
+    "dev/convert_newfam": 0.1641,
+    "dev/convert_ood_value": 0.0365,
+    "dev/convert_trainfam": 0.1484,
+    "dev/equiv_newfam": 0.3333,
+    "dev/equiv_trainfam": 0.5182,
+    "dev/force_crossed": 0.0755,
+    "dev/force_distractor": 0.2161,
+    "dev/force_id_pretrainfam": 0.5599,
+    "dev/force_id_trainfam": 0.3516,
+    "dev/force_newfam": 0.1641,
+    "dev/force_ood_value": 0.2135,
+    "dev/inverse_newfam": 0.0911,
+    "dev/inverse_ood_value": 0.112,
+    "dev/inverse_trainfam": 0.1667,
+    "dev/sense_newframe_trainctx": 0.1771,
+    "dev/sense_trainframe_newctx": 0.3229
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0859,
+    "gap/order": 0.0651,
+    "gap/phrase": 0.0573,
+    "gap/ood_value": 0.0521,
+    "total/id": 0.0938,
+    "total/order": 0.0573,
+    "total/phrase": 0.0755,
+    "total/ood_value": 0.0573
+   },
+   "old": {
+    "dev/convert_newfam": 0.125,
+    "dev/convert_ood_value": 0.0521,
+    "dev/convert_trainfam": 0.1276,
+    "dev/equiv_newfam": 0.3958,
+    "dev/equiv_trainfam": 0.5104,
+    "dev/force_crossed": 0.0781,
+    "dev/force_distractor": 0.2188,
+    "dev/force_id_pretrainfam": 0.6068,
+    "dev/force_id_trainfam": 0.3464,
+    "dev/force_newfam": 0.1771,
+    "dev/force_ood_value": 0.2292,
+    "dev/inverse_newfam": 0.0807,
+    "dev/inverse_ood_value": 0.1198,
+    "dev/inverse_trainfam": 0.1667,
+    "dev/sense_newframe_trainctx": 0.0286,
+    "dev/sense_trainframe_newctx": 0.3568
+   }
+  },
+  "cpu_s": 256.2
+ },
+ "bounded": {
+  "params": {
+   "added": 256,
+   "existing_modified": 66304
+  },
+  "new_before": {
+   "gap/id": 0.0964,
+   "gap/order": 0.0755,
+   "gap/phrase": 0.026,
+   "gap/ood_value": 0.0807,
+   "total/id": 0.0573,
+   "total/order": 0.0651,
+   "total/phrase": 0.0391,
+   "total/ood_value": 0.0391
+  },
+  "after_cap1": {
+   "new": {
+    "gap/id": 0.0833,
+    "gap/order": 0.0911,
+    "gap/phrase": 0.0469,
+    "gap/ood_value": 0.0807,
+    "total/id": 0.0859,
+    "total/order": 0.0781,
+    "total/phrase": 0.0807,
+    "total/ood_value": 0.0755
+   },
+   "old": {
+    "dev/convert_newfam": 0.1693,
+    "dev/convert_ood_value": 0.0833,
+    "dev/convert_trainfam": 0.0573,
+    "dev/equiv_newfam": 0.3828,
+    "dev/equiv_trainfam": 0.5885,
+    "dev/force_crossed": 0.1016,
+    "dev/force_distractor": 0.2318,
+    "dev/force_id_pretrainfam": 0.5443,
+    "dev/force_id_trainfam": 0.3333,
+    "dev/force_newfam": 0.1536,
+    "dev/force_ood_value": 0.2214,
+    "dev/inverse_newfam": 0.0911,
+    "dev/inverse_ood_value": 0.1406,
+    "dev/inverse_trainfam": 0.1562,
+    "dev/sense_newframe_trainctx": 0.4219,
+    "dev/sense_trainframe_newctx": 0.4453
+   }
+  },
+  "after_cap2": {
+   "new": {
+    "gap/id": 0.0859,
+    "gap/order": 0.1042,
+    "gap/phrase": 0.0495,
+    "gap/ood_value": 0.0625,
+    "total/id": 0.0625,
+    "total/order": 0.0703,
+    "total/phrase": 0.0885,
+    "total/ood_value": 0.0625
+   },
+   "old": {
+    "dev/convert_newfam": 0.1016,
+    "dev/convert_ood_value": 0.1354,
+    "dev/convert_trainfam": 0.138,
+    "dev/equiv_newfam": 0.3594,
+    "dev/equiv_trainfam": 0.5495,
+    "dev/force_crossed": 0.0911,
+    "dev/force_distractor": 0.2474,
+    "dev/force_id_pretrainfam": 0.4844,
+    "dev/force_id_trainfam": 0.2969,
+    "dev/force_new

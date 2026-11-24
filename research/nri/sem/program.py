@@ -271,6 +271,8 @@ def train_cap(net, caps, stoi, vocab, steps, seed):
         loss.backward()
         opt.step()
         net.project()
+        if (s + 1) % 300 == 0:
+            print(f"  [{net.method}] {caps} step {s + 1}/{steps} loss {loss.item():.3f}", flush=True)
     net.eval()
 
 

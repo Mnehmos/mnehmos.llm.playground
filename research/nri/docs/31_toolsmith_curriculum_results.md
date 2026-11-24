@@ -19,7 +19,11 @@ Confirmatory = §31.4 (sealed primary endpoint). Everything else is exploratory 
 * **The student mostly did not learn the new tasks in either arm.** After 1,500 continuation steps, convert and
   inverse are at chance even in-distribution; equiv and sense are prior-driven. Lessons moved output priors, not
   skills (tested directly at step 700, §31.3).
-* **Post-training feature programming**: §31.7.
+* **Post-training feature programming** (exploratory, §31.7): a new *lexically grounded* query type was installed
+  by all three methods and two such capabilities coexisted, with low-rank adapters generalising best and a bounded
+  edit of existing weights interfering most; the registered example — a new *operation over existing concepts*
+  (M ± A mod 13) — could not be installed by any method. New knowledge that must reuse concepts the student never
+  made usable was not programmable here.
 
 ## 31.2 What was built (all in `research/nri/`)
 
@@ -33,7 +37,14 @@ Confirmatory = §31.4 (sealed primary endpoint). Everything else is exploratory 
 | Instruments T001–T006 | `toolsmith/instruments/*` | each: planted-truth controls in the sandbox + unit tests |
 | Post-training feature programming (3 methods, rollback) | `sem/program.py` | rollback hash checks in every run |
 
-Test suite: 49 Issue-#25 tests; whole repository suite 214 passed at registration.
+Test suite: 50 Issue-#25 tests; whole repository suite 214 passed at registration.
+
+**Student specification.** Whole-word lexicon, 136 tokens (3 specials), sequence length 42 (left-padded, query
+marker last); 3 pre-LN attention layers (4 heads, d = 64, MLP 128) + readout MLP (256); 130,255 parameters
+(129,280 without the training-only role head); 17 answers. Compute: pretraining 2,202 CPU-s (5,000 steps) +
+532 s observation; each continuation arm ~200 CPU-s (1,500 steps); 4 CPU threads. It is "language-capable"
+only in the narrow sense of reading templated English with paraphrase, word order and polysemy variation; it is
+not a natural-language model.
 
 ## 31.3 Continuation: reviews, predictions, outcomes (exploratory)
 
@@ -116,6 +127,13 @@ should be read as "not learned".
    the sense and new-family sets for both arms. **No BPE-vs-ANLU comparison was run.**
 6. B's lessons were restricted to the frozen training pools (registered); B authored no new phrasing families.
 7. Modular-arithmetic toy semantics (mod 13, fictional units) — not real-world unit arithmetic.
+8. **Concept lineage was only partly extended.** The per-checkpoint card tracks the chain surface form → (binding
+   probe at the value token) → canonical quantity → (block IIA, edits) → output, plus sense probes, paraphrase
+   invariance, attention-head role signatures with a distinctness margin (the ambiguous-head-matching repair) and
+   CKA/weight change; T002–T006 add stratified, causal and decodability views. The doc-28 lineage engine's
+   gradient tracer and feature-lineage event log were **not** ported to this student, and no clustering-based
+   lineage was used (so its artefacts could not arise, but neither could its findings). Threshold flicker was
+   avoided by reporting continuous values instead of event thresholds.
 
 ## 31.6 Toolsmith: instruments and what they found (exploratory)
 
@@ -128,13 +146,72 @@ should be read as "not learned".
 | T005 decodability ladder | Step 600: why is convert at chance? | planted linear code, random features, planted route-rotated circle (kNN must decode, linear must under-read) | Convert ingredients present at the query position (v 0.98, t 0.91 linear) and an answer probe reaches ~0.5 vs the model's 0.21–0.25 → **readout-limited, not input-limited**; canonical mass in the block is not linearly decodable (0.39 linear vs 0.62 kNN) — linear probes under-read this student. **Six failed validations are logged**: the controls caught an arbitrary threshold, an ill-posed planted code, a decoder flaw (per-dimension standardisation inflating noise) and an ambiguous gold case before any result was used |
 | T006 cue occlusion | Step 800: B lost new-frame sense type | planted causal token 0.88 vs irrelevant 0.0 | Falsified my "physics-word" hypothesis; the type cue is "is" (drop 0.47–0.56); "quantity" pushes B toward numeric answers on the new frame |
 
+**Retrospective lineage replay (T005 across both trajectories, flagged retrospective in the registry).** For
+canonical training-pool convert items, the ingredients at the query position barely changed from the common
+checkpoint to step 1,500 (canonical v·s_u, linear: 0.54 → 0.63 A / 0.60 B; answer probe 0.43 → 0.49 / 0.45;
+canonical quantity at the source-value token, kNN, flat at 0.65-0.67), while the model's own accuracy rose
+0.11 → 0.31 (A) / 0.27 (B). The learning that did occur was readout-side use of information already present, not
+new trunk representations — consistent with CKA(h, previous) ≥ 0.98 from step 300. A led B on this measure at
+every replayed checkpoint, including directly after B's convert-heavy block.
+
 Every instrument ran in the sandbox on checkpoint copies with source hash, git commit, args and before/after
 checkpoint hashes in `results/sem/tool_registry.jsonl`; `run` refuses any tool without a passing validation of its
 current source.
 
 ## 31.7 Post-training feature programming (exploratory, after the sealed evaluation)
 
-{{PROGRAM}}
+Run on copies of the final A and B checkpoints (step 1,500), after the sealed evaluation; nothing was written
+back to the study models. Each method trains capability 1 for 1,200 steps (50% new items, 50% replay of all old
+tasks from training pools), then capability 2 for 1,200 steps with capability-1 replay. Evaluation uses fresh
+in-memory items on dev tuples: `id` (training frames), `order` (held-out frame, acceleration first), `phrase`
+(held-out frame wording), `ood` (held-out unit-2 values 9-10). Every run checked that the original object is
+unchanged and that restoring from the backup reproduces the original hash (`rollback`): **12/12 passed**.
+Files: `sem/program.py`, `results/sem/program/*.json`.
+
+Methods: **head** = gated residual head on the frozen network (5,521 added params incl. 4 new token rows);
+**adapter** = rank-8 residual adapters after mlp1/mlp2/attn3, originals frozen (3,544 added); **bounded** = existing
+weights of attn3/mlp2/W_in/W_out modified (66,304 parameters touched) under a per-tensor bound
+‖ΔW‖ ≤ 0.10‖W₀‖, plus new token rows (256 added). The head and adapter are task-specific additions; only
+"bounded" modifies existing knowledge.
+
+**Hard pair — gap = (M − A) mod 13, total = (M + A) mod 13 (the registered example): not installed.** All three
+methods on both students stay at chance (0.02-0.12 vs 1/13 = 0.077) on every split, after capability 1 and after
+capability 2. The new capabilities require composing the canonical mass and acceleration, which this student
+never learned to expose in usable form beyond the pretrained force task (§31.3, §31.6); no method could add it.
+
+**Easy pair — positive control (added after a non-study development run showed the hard pair fails): installed.**
+null = "is the product zero?" (yes/no, balanced) and kind = "which mass unit?" (0/1/2). Both are lexically grounded
+(a zero value token; the unit word), so they test whether a *usable new query type* can be added, **not** whether
+existing canonical concepts are reused.
+
+| Student / method | null after cap 1 (id/order/phrase/ood) | null after cap 2 | kind after cap 2 | old-task change, mean (worst set) after cap 2 |
+|---|---|---|---|---|
+| A / head | 1.00 / .83 / .58 / 1.00 | 1.00 / .79 / .58 / 1.00 | .78 / .49 / **.06** / .72 | −0.008 (0.047) |
+| A / adapter | 1.00 / .98 / .80 / 1.00 | 1.00 / .91 / .85 / 1.00 | **.96 / .51 / .52 / .98** | +0.005 (0.086) |
+| A / bounded | .99 / .94 / .80 / .98 | .94 / .93 / .84 / .95 | .79 / .64 / .38 / .76 | +0.018 (0.156) |
+| B / head | .93 / .85 / .86 / .94 | .91 / .79 / .84 / .93 | .79 / .52 / **.16** / .79 | +0.009 (0.143) |
+| B / adapter | 1.00 / .94 / .85 / 1.00 | 1.00 / .98 / .88 / 1.00 | **.90 / .79 / .58 / .89** | −0.018 (0.122) |
+| B / bounded | .97 / .98 / .66 / .92 | .85 / .90 / .62 / .77 | .85 / .52 / .53 / .76 | +0.016 (0.107) |
+
+(Before installation: null 0.00 on id/order/ood — the student never answered that question type; chance-level
+0.21-0.40 on the held-out phrase.)
+
+Findings (exploratory, one run per cell):
+* **Usable, not merely decodable**: the installed capabilities are measured as end-to-end model answers.
+* **Generalisation**: adapters generalised best to held-out word order and values; the head on a frozen trunk
+  generalised worst to a held-out phrasing (kind/phrase 0.06 and 0.16) — it can only reweight existing features
+  and cannot build new routing for an unseen frame.
+* **Coexistence / interference**: adapters kept capability 1 intact while adding capability 2 (null unchanged or
+  improved). The bounded edit showed the clearest interference: null degraded after kind was added (B: ood 0.92 →
+  0.77, id 0.97 → 0.85).
+* **Preservation**: mean old-task change stayed within ±0.02 for every method, but the worst single dev set moved
+  0.05-0.16 (up to 0.38 for B/adapter on the hard pair: sense_newframe, the prior-driven set that also fluctuated
+  ~0.1 per block in-study). Under a strict per-set gate (≤ 0.02) **no configuration would be accepted**; under a
+  mean gate all would. The registration named 0.02 as the target without fixing mean vs worst-set — reported as an
+  ambiguity, not resolved after the fact.
+* **Not measured**: causal interpretability of the installed features (no interchange tests on the new
+  capabilities) and weight-change magnitude beyond the bound for "bounded". Follow-up.
+* Compute: 236-263 CPU-s per method per student per pair (2,400 steps).
 
 ## 31.8 Executable follow-up specification
 
@@ -145,7 +222,10 @@ current source.
    dev-selection overfitting directly (this study's sense reversal suggests it is substantial).
 4. **A student that can learn the tasks** (larger d, longer continuation) so that curricula act on skills rather
    than priors; then repeat the comparison.
-5. **Positional-slot test** for T006's "quantity" effect with a new non-training frame — outside the confirmatory
+5. **Feature programming follow-up**: interchange tests on installed capabilities; a capability that reuses the
+   one concept this student does represent causally (canonical mass on canonical pretrain-family force items,
+   e.g. "the mass in another unit"); explicit mean vs worst-set preservation gates.
+6. **Positional-slot test** for T006's "quantity" effect with a new non-training frame — outside the confirmatory
    arm.
 
 ## 31.9 Reproduce
