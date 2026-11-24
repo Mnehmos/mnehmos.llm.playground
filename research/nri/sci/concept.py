@@ -216,6 +216,37 @@ def number_patch(model, vocab, bases, donors, site=1, n=400, seed=0):
                 other=round(((pred != tgt) & (pred != base)).float().mean().item(), 4), n=len(pairs))
 
 
+@torch.no_grad()
+def novel_combo_patch(model, vocab, split, site=1, seed=3):
+    """THE causal composition test: for every withheld combination (route r, value v), take a trained example on
+    route r as base and a trained example carrying value v on another route as donor; patch the source-number
+    residual. Intended = v converted along r, a combination never seen in training. Discriminating pairs only."""
+    rng = random.Random(seed)
+    canon = dict(num="num", unit="full")
+    train = split["train"]
+    bases, donors, tgts = [], [], []
+    for r, v in split["dev"]:
+        tgt = answer(r[0], v, r[1], r[2])
+        for _ in range(8):
+            rb, vb = rng.choice([(rr, vv) for rr, vv in train if rr == r and vv != v])
+            if answer(r[0], vb, r[1], r[2]) == tgt:
+                continue
+            rd = rng.choice([rr for rr, vv in train if vv == v and rr != r])
+            bases.append(example(rb, vb, "C01", canon, rng))
+            donors.append(example(rd, v, "C01", canon, rng))
+            tgts.append(tgt)
+    bb, bd = D.encode_batch(bases, vocab), D.encode_batch(donors, vocab)
+    key = "x1" if site == 1 else "x2"
+    cb, cd = model.trunk(bb["tok"], ret=True), model.trunk(bd["tok"], ret=True)
+    x = cb[key].clone()
+    a = torch.arange(len(bases))
+    x[a, src_pos(bb)] = cd[key][a, src_pos(bd)]
+    pred = finish_from(model, x, bb["tok"] != D.PAD, site).argmax(-1)
+    tgt = torch.tensor([L.ANS_ID[str(t)] for t in tgts])
+    return dict(intended=round((pred == tgt).float().mean().item(), 4), unchanged=round((pred == bb["ans"]).float().mean().item(), 4),
+                n=len(bases))
+
+
 def knn(Xf, yf, Xe, ye, k=10):
     mu = Xf.mean(0)
     idx = torch.cdist(Xe - mu, Xf - mu).topk(min(k, len(Xf)), dim=1, largest=False).indices
@@ -255,8 +286,12 @@ def circle_scores(codes_by_value):
 
 
 @torch.no_grad()
-def scorecard(model, vocab, sets, split, prev_params=None):
+def scorecard(model, vocab, sets, split, prev_params=None, own=None):
     out = {k: round(accuracy(model, v, vocab), 4) for k, v in sets.items()}
+    if own is not None:                                                   # the population's own training combos
+        out["own_practiced"] = round(accuracy(model, own, vocab), 4)
+    out["patch_x1_novel_combo"] = novel_combo_patch(model, vocab, split, 1)
+    out["patch_x2_novel_combo"] = novel_combo_patch(model, vocab, split, 2)
     out["heldout_best_constant"] = round(best_constant(sets["heldout"]), 4)
     canon = [e for e in sets["practiced"] if e["ast"]["v"] != 0]
     held = [e for e in sets["heldout"] if e["fid"] == "C01"]
@@ -309,6 +344,7 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
     opt = torch.optim.AdamW(params, lr=LR, weight_decay=wd)
     rng = random.Random(seed)
     sets = eval_sets(split)
+    own = [e for e in sets["practiced"] if (tuple((e["ast"]["dim"], e["ast"]["u"], e["ast"]["t"])), e["ast"]["v"]) in set(spec["combos"])]
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     meta = dict(population=pop, seed=seed, steps=steps, wd=wd, lr=LR, batch=BATCH, aux_weight=AUX_W if aux_head else 0,
@@ -317,7 +353,7 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
     (out / "meta.json").write_text(json.dumps(meta, indent=1))
     log = open(out / "scorecard.jsonl", "w")
     model.eval()
-    card, prev = scorecard(model, vocab, sets, split)
+    card, prev = scorecard(model, vocab, sets, split, own=own)
     log.write(json.dumps(dict(step=0, **card)) + "\n")
     t0 = time.process_time()
     for step in range(1, steps + 1):
@@ -338,7 +374,7 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
         opt.step()
         if step % AUDIT_EVERY == 0:
             model.eval()
-            card, prev = scorecard(model, vocab, sets, split, prev)
+            card, prev = scorecard(model, vocab, sets, split, prev, own=own)
             log.write(json.dumps(dict(step=step, loss=parts, train_cpu_s=round(time.process_time() - t0, 1), **card)) + "\n")
             log.flush()
         if step % SAVE_EVERY == 0:
@@ -347,9 +383,29 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
     return out
 
 
+def rescore(run_dir):
+    """Re-measure saved checkpoints of a finished run with the current scorecard (writes rescore.jsonl)."""
+    from safetensors.torch import load_file
+    d = Path(run_dir)
+    meta = json.loads((d / "meta.json").read_text())
+    vocab = D.Vocab.from_json(json.loads((ROOT / "runs/zoo_sem/eval/vocab.json").read_text()))
+    split = make_split()
+    spec = population_spec(meta["population"], split)
+    sets = eval_sets(split)
+    own = [e for e in sets["practiced"] if (tuple((e["ast"]["dim"], e["ast"]["u"], e["ast"]["t"])), e["ast"]["v"]) in set(spec["combos"])]
+    prev = None
+    with open(d / "rescore.jsonl", "w") as f:
+        for ck in sorted(d.glob("model_*.safetensors")):
+            m = SM.SemStudent(len(vocab.itos))
+            m.load_state_dict(load_file(ck))
+            m.eval()
+            card, prev = scorecard(m, vocab, sets, split, prev, own=own)
+            f.write(json.dumps(dict(step=int(ck.stem.split("_")[1]), **card)) + "\n")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=("run", "split"))
+    ap.add_argument("cmd", choices=("run", "split", "rescore"))
     ap.add_argument("pop", nargs="?")
     ap.add_argument("seed", nargs="?", type=int)
     ap.add_argument("out", nargs="?")
@@ -359,5 +415,8 @@ if __name__ == "__main__":
     if a.cmd == "split":
         s = make_split()
         print({k: len(v) for k, v in s.items()}, "A:", len(narrow_subset(s["train"])))
+    elif a.cmd == "rescore":
+        torch.set_num_threads(1)
+        rescore(a.pop)
     else:
         run(a.pop, a.seed, a.out, a.steps, a.wd)
