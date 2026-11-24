@@ -1,0 +1,110 @@
+{
+  "step": 1200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "6b5fd71b264b4eb2f90c2f09e7ea9d674db98a12e5f42e0cbcdab7ddd5a8e929",
+  "prediction": {
+    "statement": "Predict that reverse remains at least 7/9 over the next 100 updates.",
+    "metric": "/concepts/conversion/reverse/correct",
+    "threshold": 7.0,
+    "direction": "at_least",
+    "due": 1300
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 58
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out moved 2.74 against W_in 1.02. Their displacement diverged since step 1100.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Output projection updates average .0379 despite a raw norm .0392 compared with attention-two QKV .0879.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word form has largest measured content gradient .00374. Task-role cosine is -.004.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force binding rose .211 to .219 on held values without better force accuracy. Head-zero margin .0016 remains ambiguous.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "The prior prediction narrowly failed at 58/90. Cross-route donor-number use fell from 137/270 at 900 to 91/270 at 1100. Unit-only output stayed base on all trials.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Ten forward items are solved in every practiced form and vosk remains 8/8.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Reverse sticks at 7/9 and the one withheld forward value remains wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The drop in cross-route raw-number control may be caused by route information mixed into source activations or reliance on locations left unpatched.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict that reverse remains at least 7/9 over the next 100 updates.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Patch the layer-one result into a later boundary under the same controls to distinguish transport from weak representation.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The cross-route evidence comes from overlapping question pairs and its substitutions can leave the activation manifold.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Maintain six directions because retention is strong and the mechanism is still adapting.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict at least 60/90 forward swaps by 1200 if continued practice restores a more swappable number representation. The measured value was 58, against threshold 60.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

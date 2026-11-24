@@ -1,0 +1,110 @@
+{
+  "step": 4400,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "06390021fd8844c84f626ed49a092592f5affc632c241aaa983f72ce6975a5d4",
+  "prediction": {
+    "statement": "Predict force remains at least .20 next checkpoint.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 4500
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 58
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "E leads net displacement 1.16 followed by L2 QKV 1.08, both below the prior QKV peaks.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 actual movement .0352 just exceeds L3 .0344, while its gradient is .152.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient declines to .00586 but still dominates. Task/IIT cosine is .148.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding .216 is steady, and force paraphrase cosine .377 moves modestly up. No confident heads.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value patch recovers to 58, and force block gives only two more intended than wrong matches.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force rebounds .2214 and equivalence .667, with perfect practiced forward scores.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Broad numeric transfer falls to .026 and C03 stays zero.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "This pattern favors incremental acquisition of practiced tasks alongside unstable extrapolation. Increasing force accuracy did not yield a monotonic causal improvement.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force remains at least .20 next checkpoint.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Seek stable intended swap outcomes among identical questions at adjacent checkpoints.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A margin of two targets is small on this overlapping set. Avoid declaring causal consolidation.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Retain the current curriculum.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 50 value swaps at the next checkpoint. The measured value was 58, against threshold 50.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

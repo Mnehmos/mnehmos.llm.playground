@@ -1,0 +1,162 @@
+{
+  "step": 2400,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "16dd03ae9add24099b89712eb7524d0fabb0e7816a7e8d55d84fb2b099942f0f",
+  "prediction": {
+    "statement": "Predict forward retention of at least nine answers while adding additional train frames.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 2500
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 47
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV displacement stays 1.07 and L3 reaches .88.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 actual step norm ticks up .0344 to .0376 while L1 raw remains higher.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word token gradient .00360 leads despite example loss below .001. Objective gradient cosine at E is effectively zero.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Only one head clears hysteresis and force paraphrase cosine reaches .281. Held-out binding remains .206.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap recovers to 47 while force mass lags acceleration 3 to 7.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Ten familiar conversions still score perfectly; equivalence ticks down to .742.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Broad numeric transfer remains zero. The targeted held point remains wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The previous two trained frames may share a shortcut that is unavailable in the new wording. Diverse frames can test that possibility.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict forward retention of at least nine answers while adding additional train frames.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the independent C03 score and causal number swaps after wider syntax exposure.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The narrow frame-transfer panel now measures retention after C02 training. C03 remains a development probe with mixed routes.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Add C04 and C05 train families. Keep six directions, token variation and equivalence allocation.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 44 forward swaps in the next interval. The measured value was 47, against threshold 44.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.8,
+      "equiv": 0.2
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02",
+        "C04",
+        "C05"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

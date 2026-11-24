@@ -1,0 +1,110 @@
+{
+  "step": 4900,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "7ab9d4e9a9602cd0893a7caa5076a0e682784f39a4bbdae138e72aedefd17755",
+  "prediction": {
+    "statement": "Predict forward swap stays above 55 next interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 55.0,
+    "direction": "at_least",
+    "due": 5000
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 58
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "E delta eases to .830, while L2 QKV moves .793.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 effective .0251 leads L3 .0233. Both are smaller than at 4700.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient climbs .0288 to .0319 with ~.0076 loss. Task/IIT cosine collapses from .426 to .020.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding rises .234 and force within-paraphrase geometry .467 while no head IDs qualify.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap improves to 58, meeting the bound. Force patch is 12 intended versus 7 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Ordinary force recovers .206, and practiced conversion stays perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence falls below half and C03 stays at zero. The held forward number remains wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The unusually strong C02 gradient can reflect framing sensitivity even when logits select the right class.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict forward swap stays above 55 next interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Use held-out conversion strata to identify whether the numeric hits come from the task families actually trained.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "One exact prompt is useful longitudinally but cannot represent every C02 prompt.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the same objectives through step 5000.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 52 forward swaps on another block. The measured value was 58, against threshold 52.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

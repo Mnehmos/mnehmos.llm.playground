@@ -1,0 +1,110 @@
+{
+  "step": 5400,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "22a90ce8ca90ce044cf8affd9cb1506b2eb2890c569bba4c6b021748df2fd13e",
+  "prediction": {
+    "statement": "Predict at least 60 value swaps next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 60.0,
+    "direction": "at_least",
+    "due": 5500
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 65
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 displacement rise modestly to .943 and .789.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 leads .0276 effective updates while L3 .0231 trails.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Digit content gradient .00004 is the smallest; C02 tops at .00020. Aux/task gradient alignment stays slightly negative at -.020.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Four head identities qualify and force paraphrase geometry increases .505 to .541 despite held binding slipping.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "The value swap rebounds 57 to 65, confirming the earlier bound; force intended-minus-wrong widens to seven.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All practiced conversion formats are perfect and numeric dev remains .0833.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Held 4 still predicts 6 and C03 stays under 2%.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Improving intervention behavior without better held numbers supports recovery in use of familiar representations rather than evidence of a general rule.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 60 value swaps next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Assess whether the recovered count comes from the same donor values that worked before expansion.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The fixed panel can detect recurrence, but rate alone cannot identify a restored feature.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the existing lesson.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 55 value swaps next. The measured value was 65, against threshold 55.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

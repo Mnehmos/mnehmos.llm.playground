@@ -1,0 +1,110 @@
+{
+  "step": 3700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "113762a3d2f672c0f2ed84e7496f5f9c6e224abeaf3fa76c6396468dfee31a4a",
+  "prediction": {
+    "statement": "Predict force development stays at or above .20 next.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 3800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L3 QKV and E move almost equally at 1.50 and 1.47.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 also leads .0454 actual step norm even with lower raw gradient than L2.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 leads the small content gradients at .00065. Task/IIT cosine declines to .189.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Within-force paraphrase similarity drops markedly to .422 and one lineage survives.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward patch slips to 43. Force scores 11 mass versus 6 acceleration.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Original conversion scores 10/10 and force reaches .2135.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence is at .508 and the narrow held number still fails despite numeric dev recovering .0625.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Force improvement without equivalence improvement fits partially separate circuits or different output priors.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force development stays at or above .20 next.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Check task-specific confusion matrices to determine whether equivalence has become a constant predictor.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A near-.5 binary score could represent substantial imbalance in errors; the scalar alone is insufficient.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the current lesson while narrow arithmetic retention stays high.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict original-format retention of at least nine. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "step": 900,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "d391797fbecb7aabcc25fbc531175902d64a5725bdf387bb71dc289d898a8d2a",
+  "prediction": {
+    "statement": "After adding all mass directions, predict at least nine of ten on the original digit panel.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 1000
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 8
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Readout W_out moved .655, above E .419. Both changed less than after the third-route introduction.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "First QKV leads actual displacement at .0154. Third QKV is second at .0135 despite its lower raw gradient.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form content gradient .00369 now exceeds both digit forms, with task-role embedding alignment only .025.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force binding holdout holds .2057. A single head clears hysteresis, while L1.h0 fails the margin criterion at .0038.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Same-route value swap is 74/90. In the recorded cross-route study, value-only yields the base-route donor-number answer in 137/270 and unit-only leaves the base answer in 270/270.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward and vosk probe panels remain perfect. Reverse retains 8/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Withheld forward 4 remains 6 and broad numeric development conversion is 1.04%.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The cross-route pattern supports partial transfer of a raw number but weak causal access to scale via the source-unit occurrence at layer one. A multi-site or later representation could account for the discrepancy.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "After adding all mass directions, predict at least nine of ten on the original digit panel.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare cross-route intervention counts after all six directions are present and test degradation on the original route.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The diagnostic in diagnostics/cross-900.json uses 270 discriminating examples on three familiar routes. It preserves a base output check and separates four candidate targets.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Extend to the remaining three mass directions to provide variations of both source and destination units.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict 8/9 or better reverse accuracy during another interval on the three routes. The measured value was 8, against threshold 8.0.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 1.0
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    }
+  }
+}

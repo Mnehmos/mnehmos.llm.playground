@@ -1,0 +1,110 @@
+{
+  "step": 3600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "215f0b036d8221be33be58b98be912fca1c12419cdb62840b9bde4c277320330",
+  "prediction": {
+    "statement": "Predict original-format retention of at least nine.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 3700
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.1979
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Third QKV moves furthest at 1.21; E moves .973.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 leads actual updates .036 while L2 is .0297 despite the larger L2 raw norm.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient collapses to .00056 and word form leads at .00198. Task/IIT cosine halves to .213.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Two identities reappear and force paraphrase similarity reaches .496, while held binding falls .214.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Force mass patch climbs to 13 but also reaches six wrong-variable targets. Forward swap recovers to 45.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force .198 confirms the prior .19 retention bound. The three familiar conversion checks remain perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Broad numeric development falls to zero. The fixed withheld number still fails.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Fluctuating generalization despite low familiar loss fits changes in off-distribution outputs rather than loss of stored answers.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict original-format retention of at least nine.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare paired same-AST outputs after filtering to trained mass directions.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A stable ordinary output on the fixed probes need not mean that all intermediate pathways remain stable.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the existing recipe for another block to establish whether the zero score is transient.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force retains at least .19 next interval. The measured value was 0.1979, against threshold 0.19.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

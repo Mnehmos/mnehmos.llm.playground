@@ -1,0 +1,110 @@
+{
+  "step": 3200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "b5a080a50a6647fe8d8189886fc99fc761350694ff7e3bdd9891337324d8876e",
+  "prediction": {
+    "statement": "Predict force rises past .20 in the next 100 steps.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 3300
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 0.1953
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Embedding displacement recedes to 1.53, only slightly ahead of L2 QKV 1.38.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 and L3 average actual steps tie near .0445 while their raw norms differ.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word and C02 content gradients remain above C01 digit. The task/interchange alignment rises from .219 to .366.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force binding reaches .214 and within-paraphrase cosine .426. No head identity meets hysteresis.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Force mass reaches 10/77 versus 5 wrong. Forward number swaps rebound to 49.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Practiced conversion stays perfect and numeric development improves to .0677.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force stays just under the .20 target and the withheld forward example stays wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The larger swap score could reflect more available source information or decreased interference as E moves less.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force rises past .20 in the next 100 steps.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare sampled force accuracy against the three constant predictions and measure intention specificity over time.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The existing block audit requires both sufficient rate and margin before calling sustained causal support.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Hold the current mixture and collect another causal observation.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force reaches at least .20 after a second interval of increased exposure. The measured value was 0.1953, against threshold 0.2.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

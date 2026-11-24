@@ -1,0 +1,113 @@
+{
+  "step": 300,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "assessment": {
+    "weights": {
+      "analysis": "Layer-one QKV moved 2.65 over the final interval while W_out moved 2.35. Both the upstream representation and answer path changed during the addition of C02.",
+      "evidence": [
+        "/weight_changes/attn1.qkv.weight",
+        "/weight_changes/W_out.weight"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Readout W_out led average effective update norms at .0551, ahead of first-layer QKV at .0503. Their ranking differs from endpoint displacement, which accumulates directions.",
+      "evidence": [
+        "/interval_overview/W_out.weight",
+        "/interval_overview/attn1.qkv.weight"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The C02 example loss fell from .8014 to .000268 during direct practice. Its source-value occurrence gradient is now .00055. Task embedding-gradient norm on the objective batch is .0493 and task/role cosine is -.061.",
+      "evidence": [
+        "/token_trace/examples/14",
+        "/objective_dynamics/tensor_norms/task/E.weight",
+        "/objective_dynamics/cosine_by_tensor/task:aux/E.weight"
+      ]
+    },
+    "representations": {
+      "analysis": "The paired C01/C02 gradient cosine rose to .877, on examples whose loss is already tiny. Layer-one h0 still has a negative matching margin, so this does not identify a moving head or shared semantic circuit.",
+      "evidence": [
+        "/token_trace/embedding_gradient_alignment/12:14",
+        "/head_lineage/L1.h0"
+      ]
+    },
+    "causal": {
+      "analysis": "Within the practiced frame, value swaps give 89/90 donor targets and unit swaps give zero. On the unrelated force instrument the declared mass block gives just 8/77 for mass. The positive result is specific to the trained conversion path.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Both practiced frames and the practiced word-plus-abbreviation style score 10/10. The initial digit mapping is retained.",
+      "evidence": [
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/practiced"
+      ]
+    },
+    "failures": {
+      "analysis": "Withheld value 4 is still wrong, unfamiliar unit gives 1/8 and broader development wording gives 4.17%. The broad development set also changes directions and units.",
+      "evidence": [
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values",
+        "/concepts/dev_acc/dev~1convert_newfam"
+      ]
+    },
+    "alternatives": {
+      "analysis": "One direction admits a table mapping familiar input numbers to answers. The causal value patch is compatible with that table or with a route-conditioned representation. The reverse results resemble reuse of the forward mapping on the same digits.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_values",
+        "/concepts/conversion/swap_value"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least 85 of 90 same-frame value swaps in a further 100 updates with this lesson before adding directions.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "The discriminating next feasibility test trains multiple directions with a prospective numeric split containing more than one held-out value per direction. Cross-direction value-only and unit-only swaps should predict different answers under a reusable scale.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit"
+      ]
+    },
+    "instruments": {
+      "analysis": "The current sampler protects the repository split but yields only one numeric probe for this direction. That axis needs more test coverage. These are development comparisons and a single seed.",
+      "evidence": [
+        "/concepts/conversion/new_values/n",
+        "/token_trace/examples/14"
+      ]
+    },
+    "decision": {
+      "analysis": "End the 300-step feasibility run with a verified review. Keep the observed objective and weights. A three-arm comparison would need broader learnability first.",
+      "evidence": [
+        "/step",
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The step-200 prediction of at least nine correct in C02 was confirmed at ten following direct C02 practice.",
+      "evidence": [
+        "/concepts/conversion/new_frame/correct"
+      ]
+    }
+  },
+  "checkpoint_sha256": "414e5c54e87efac62e3396fbfd3e85af42c5ada94f5bf02e0a4c0912d6bef789",
+  "prediction": {
+    "statement": "I predict at least 85 of 90 same-frame value swaps in a further 100 updates with this lesson before adding directions.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 85.0,
+    "direction": "at_least",
+    "due": 400
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  }
+}

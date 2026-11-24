@@ -1,0 +1,145 @@
+{
+  "step": 600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "dc73ff0444b0e4c4ef190ef3b33d79c0fa9b7eeb112d091e5ab1f5bb2c6f43de",
+  "prediction": {
+    "statement": "I predict at least five of eight correct on the new-unit panel after the first vosk-to-brel block.",
+    "metric": "/concepts/conversion/new_unit/correct",
+    "threshold": 5.0,
+    "direction": "at_least",
+    "due": 700
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 7
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out endpoint displacement fell to .988 from 4.06 after the second interval on both routes.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "First and second attention QKV lead mean effective steps at .0195 and .0191 while endpoint movement ranks W_out highest. Direction cancellation can explain the rank difference.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Content gradients now peak on the tested digit form at .00835 rather than the word form at .00225. Task and role cosine at E is -.042.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held-out binding stayed .219 and the attended role match remains ambiguous for L1.h0 at .00554. Force paraphrase geometry recovered slightly to .394.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward value swaps recovered to 80/90; unit swaps stay 0/90. The force mass patch scores 4/77, below the acceleration match.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward has all three perfect panels and reverse holds 7/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "New source vosk yielded just 1/8. The previously missed forward number still yields 6.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Stable knowledge of two routes does not imply a common scale operation. Identical source digits can still index distinct tables conditional on the written units.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least five of eight correct on the new-unit panel after the first vosk-to-brel block.",
+      "evidence": [
+        "/concepts/conversion/new_unit/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Introduce the third source explicitly, then check which out-of-range numeric combinations remain unsolved. Compare retained swap accuracy.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The current new-unit panel contains some tuples that can become practice under this change, so any gains need to be qualified as acquisition.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Add vosk to brel while retaining both existing directions, widening numeric coverage without altered weights or output heads.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict at least seven of nine reverse probes remain correct after consolidating both directions. The measured value was 7, against threshold 7.0.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 1.0
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "394918991bd759a144f82063684cf713cf606aa43987cfb3632c567e4259337b",
+  "prediction": {
+    "statement": "I predict at least 75/90 forward value swaps after an additional interval of consolidation.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 75.0,
+    "direction": "at_least",
+    "due": 800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 8
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out moved 3.69 after adding the third source route. The embedding moved 2.42, consistent with broader lexical exposure.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "First QKV led the top three raw gradients at .366, while W_out led actual displacement at .0721 per step.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The unabridged alternate frame now has the highest loss of these three traces, .00238. E task/role cosine turned positive at .097.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force paraphrase cosine falls to .334. No attention match yet carries an identity through the stability threshold.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "The forward number patch is 74/90 and the same-unit patch still 0. The force patch hits the wrong variable 11 times versus 3 mass matches.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All familiar forward panels are perfect; the added source route panel is 8/8 and reverse reaches 8/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Untrained numeric combinations across the broader conversion set fall to .0052. The single unseen forward value still predicts 6.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Direct practice on vosk can explain the new-route result. The drop outside training could reflect confidently wrong unit routing or number recall.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least 75/90 forward value swaps after an additional interval of consolidation.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the hardest cross-route and held-out-number cases against training exposure before adding more directions.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "No head lineage should be inferred from one matching statistic. Use the intact swap control and future cross-route tests to check specificity.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue this lesson to distinguish a transient route-addition effect from a stable interaction.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict at least five of eight correct on the new-unit panel after the first vosk-to-brel block. The measured value was 8, against threshold 5.0.",
+      "evidence": [
+        "/concepts/conversion/new_unit/correct"
+      ]
+    }
+  }
+}

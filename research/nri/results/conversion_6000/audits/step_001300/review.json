@@ -1,0 +1,110 @@
+{
+  "step": 1300,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "2fde64aa84fd0a7b156a526aba9ea22b8272bb14b5120d0cfb87ca3a7624debd",
+  "prediction": {
+    "statement": "Predict force retention stays above .17 next interval.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.17,
+    "direction": "at_least",
+    "due": 1400
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 7
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Readout displacement drops to 1.25 from 2.74 and attention three moves .47.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "W_out still leads effective updates .0231 even though W_in raw gradients are over twice as large.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word form content gradient .00267 leads this small panel; task-role alignment rebounds to .099.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Withheld force binding rises to .229 as familiar binding slips to .443. The leading candidate for L1.h0 remains ambiguous.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap at 57/90 stays near its recent plateau. Force mass has six intended and seven acceleration matches.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward and third-source probe panels retain all correct; reverse satisfies the 7/9 prediction.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Broader conversion across a new family is .0052. More practice across directions alone has yet to help that panel.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The gap between the taught prompts and the new family fits frame-dependent attention or specialization in the readout.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force retention stays above .17 next interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare same AST across familiar and unfamiliar frames to isolate wording from data distribution before attributing the new-family failure.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The current aggregate new-family panel also includes acceleration. It is not a clean measure of mass wording alone.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue for another interval. Six routes are stable on the narrow probes, with no specific edit indicated.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict that reverse remains at least 7/9 over the next 100 updates. The measured value was 7, against threshold 7.0.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    }
+  }
+}

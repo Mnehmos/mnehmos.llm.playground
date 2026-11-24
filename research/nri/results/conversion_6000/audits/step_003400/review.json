@@ -1,0 +1,110 @@
+{
+  "step": 3400,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "d3d543b839558e7b3d8872c6274e9e691e566d1be09346b1eb4d87c3b93a82a0",
+  "prediction": {
+    "statement": "Predict the forward patch remains at or above 50 next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 50.0,
+    "direction": "at_least",
+    "due": 3500
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.2005
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 QKV deltas move up to 1.61 and 1.35.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 actual updates .0416 exceed L3 .0374. Both layers move more per step than at 3300.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word content gradient .00217 roughly halves, and task/interchange cosine returns to .353.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding is .219 and one head now qualifies. Paraphrase similarity declines to .448.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap reaches 54, while force specificity falls from 12 versus 1 to 9 versus 4.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All familiar forward forms maintain perfect accuracy and force barely satisfies .20 at .2005.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Reverse errors persist and the broad new-family score is .0156.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The force gains may be sensitive to sample-driven changes in attention. No sustained switch to a strong mass mechanism appears.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict the forward patch remains at or above 50 next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Examine whether the same successful force trials persist rather than using just total counts.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The block score needs larger headroom over wrong-variable target matching to justify an edit.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the current mix. No intervention based on this checkpoint.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force remains at least .20 next interval. The measured value was 0.2005, against threshold 0.2.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

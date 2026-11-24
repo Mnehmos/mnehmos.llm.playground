@@ -1,0 +1,110 @@
+{
+  "step": 5200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "8ab4a87396ed34ea6d310aba934f078a35d397f642f332cad9ee0466208c0cea",
+  "prediction": {
+    "statement": "Predict at least 58 value swaps next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 58.0,
+    "direction": "at_least",
+    "due": 5300
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 61
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Net L2 change increases to .969 and L1 follows at .756.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 also leads actual steps .0298 while readout input is .0233.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "All local source gradients cluster below .0005 and the task-role E cosine stays -.015.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "One attention identity returns. Force paraphrase similarity improves to .495 while held binding is .234.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward patch at 61 meets its predicted 58, and force patch margin declines to four hits.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All familiar conversion forms remain at ceiling, and the numeric aggregate remains .0781.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force is now below .18. The held forward case and two reverse cases remain wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The feature may be partially recovering under unchanged training, but the intervention metric is not monotonic.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 58 value swaps next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Use final stratified development scoring to test which task types benefited from the phase.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The new head match and geometry need separate intervention evidence before using them as causal explanations.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the final lesson.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 58 forward swaps at the next checkpoint. The measured value was 61, against threshold 58.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 2500,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "df3a116940385a9bbfd95092c466fac65f0143570078db406a8ba37f00bfbd45",
+  "prediction": {
+    "statement": "Predict that the broader numeric transfer stays at least 5% for another interval.",
+    "metric": "/concepts/dev_acc/dev~1convert_ood_value",
+    "threshold": 0.05,
+    "direction": "at_least",
+    "due": 2600
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Adding the frames moves first attention QKV 2.57 and second QKV 1.92.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Mean updates widen to .0578 and .0551 for those layers, nearly tied despite different raw gradients.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Digit gradient rises to .00954, four times the word variant. Task/role cosine turns .042.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held force binding drops below .20 and one head clears alignment, so expanding grammar changed the upstream state.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap falls to 39 while unrelated force still favors the wrong target. At step 2400, an x2 value patch left 258/270 cross-route responses at the base answer, compared with more responsive x1 patches earlier.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All three familiar forward forms retain 10/10.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "C03 is still 1.56% and reverse holds 7/9.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The low x2 response could mean number information has already been routed away from its source position. Testing query and source separately would distinguish this from no signal.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict that the broader numeric transfer stays at least 5% for another interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Repeat x1 and x2 at the same checkpoint before inferring a depth transition.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The x2 control uses the same discriminating targets and its unpatched branch matches all 270, though comparison across steps is confounded.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Retain four frames to gauge whether numeric improvement survives another review.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict forward retention of at least nine answers while adding additional train frames. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  }
+}

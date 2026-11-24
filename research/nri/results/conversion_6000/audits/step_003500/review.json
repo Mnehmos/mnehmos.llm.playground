@@ -1,0 +1,110 @@
+{
+  "step": 3500,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "990dc43b5bae9480cc4de4b75b836f444044a844fe1fa6dd9f2c5c80c9990c0c",
+  "prediction": {
+    "statement": "Predict force retains at least .19 next interval.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.19,
+    "direction": "at_least",
+    "due": 3600
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 40
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "QKV layer two falls to displacement 1.26; third remains 1.18.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 and L3 actual steps are .0358 and .0340, close despite distinct raw norms.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 .0126 and word .0116 content gradients surge relative to the practiced digit .00121. Task/IIT cosine increases .421.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held force binding moves up .224 with little paraphrase change. One confident head persists.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap falls to 40, falsifying 50. Force mass is 11/77 versus 4 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Original formats retain ten each, while force stays .2005.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence falls near chance at .523 under the force-enriched mixture. Numeric transfer remains low.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "A shift of gradient allocation toward force could interfere with equivalence or expose earlier prior-driven accuracy. Their output class frequencies also change.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force retains at least .19 next interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare gradient alignment for the force and equivalence examples on the shared readout.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The objective cosine combines task types on one fixed batch and is not a task-separated interference test.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue. Measure whether the swap collapse is persistent or oscillatory.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict the forward patch remains at or above 50 next. The measured value was 40, against threshold 50.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

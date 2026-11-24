@@ -1,0 +1,110 @@
+{
+  "step": 800,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "f08ff225f80b19fc026f7ff48b9d84b1ec391da06f976193949f925cf35bc50d",
+  "prediction": {
+    "statement": "I predict 8/9 or better reverse accuracy during another interval on the three routes.",
+    "metric": "/concepts/conversion/reverse/correct",
+    "threshold": 8.0,
+    "direction": "at_least",
+    "due": 900
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 73
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out displacement drops to .565 and E to .548 as the student consolidates three routes.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L1 and L2 QKV still lead effective steps (.0176, .0165). E receives .0158 despite raw gradient .026.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 has the strongest local content gradient .00635 among the controlled variants. Embedding task/role cosine is .064.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held force binding remains .206 and force paraphrase geometry is .338. No identity clears the attention hysteresis.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "The value swap fell narrowly short of its prediction at 73. Force swaps are still biased toward the wrong target 11 versus 5.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Three forward panels stay perfect, reverse is 8/9 and the third-source panel 8/8.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The broad numeric holdout remains .0052 and the missing forward number stays wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The strong ordinary but weaker interchange behavior after route expansion may reflect a changed distribution of contextual representations at layer one.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict 8/9 or better reverse accuracy during another interval on the three routes.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Fit a matched development analysis that asks whether reusing the donor raw number under the base unit works across routes.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A layer-one full-residual patch changes several representational coordinates jointly. A site comparison would narrow the mechanism.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the three-route lesson to measure stability before expanding to all six directions.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict at least 75/90 forward value swaps after an additional interval of consolidation. The measured value was 73, against threshold 75.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

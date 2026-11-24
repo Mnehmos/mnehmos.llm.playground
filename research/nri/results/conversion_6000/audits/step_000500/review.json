@@ -1,0 +1,110 @@
+{
+  "step": 500,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "d195e688eed4e0e3b5a4fdb8f983e0a15948bdd2430110e6c3fa46b6374c7efb",
+  "prediction": {
+    "statement": "I predict at least seven of nine reverse probes remain correct after consolidating both directions.",
+    "metric": "/concepts/conversion/reverse/correct",
+    "threshold": 7.0,
+    "direction": "at_least",
+    "due": 600
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 7
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Readout W_out and W_in moved 4.06 and 3.63 compared with attention-one QKV at 3.14 after introducing reverse direction.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Attention-one QKV raw gradient .373 exceeds the readout\u2019s .285, while W_out moved more per step, .082 versus .068.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form loss is .00281 and its strongest content gradient .0116, both above their forward-only values. Task and role cosine .009 is close to orthogonal.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Within-force-paraphrase cosine fell .513 to .372 even as held-out force binding rose .208 to .219. Head-one matching margin .002 is ambiguous.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward source-number patch performance fell 90 to 76 despite perfect ordinary forward accuracy. The force mass patch misses specificity with 5 mass and 7 acceleration targets.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward retains all three 10/10 panels. Reverse is 7/9 after direct practice.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Withheld forward input predicts 6 rather than 7. The novel source unit remains only 2/8.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Adding the reverse route likely turns the layer-one feature into a context-dependent representation or moves usable number information downstream. Perfect answers alongside weaker swapping distinguish answer performance from intervention stability.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least seven of nine reverse probes remain correct after consolidating both directions.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Remeasure the forward swap after stability returns. A persistent drop with stable scores would motivate a layer-two value patch.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Only an identity on one attention head passes the matching hysteresis. The probes cannot identify which downstream layer repairs forward arithmetic on the failed patch trials.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the two-direction lesson for another interval to distinguish transient disruption from a persistent change.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was After reverse practice I predict at least six correct on the nine reverse probes, which include examples beyond the training tuple split. The measured value was 7, against threshold 6.0.",
+      "evidence": [
+        "/concepts/conversion/reverse/correct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 2100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "6edd71819a2640bed2bdc439b64ce79f10c609e24255459f01aa31a62654d63e",
+  "prediction": {
+    "statement": "Predict at least 40 forward swaps over the next interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 40.0,
+    "direction": "at_least",
+    "due": 2200
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV moves 1.74, above readout input 1.61, after withdrawing consistency.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 .0505 average effective step beats L1 .040 even with less raw gradient.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word content spikes to .0151 as digit and alternate-frame stay below .001. Task-role cosine is .032.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding .201 and geometry .221 remain weak. Zero head matches survive.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap 37/90 gives no immediate recovery. Force acceleration target wins 11 to 5.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar formats retained ten and reverse recovered to seven.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Broad numeric accuracy drops to 1.3%, and the fixed withheld case stays wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Persistent degradation could be carried in the learned representation even after changing the objective. The two observations are insufficient to infer reversibility.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 40 forward swaps over the next interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Check a layer-two transplant separately for a later corrective representation.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Head similarity alone cannot locate a shifted mechanism with zero confident matches.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Repeat the new objective mix unchanged for one interval to measure lag.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict forward accuracy stays at least 9/10 after withdrawing the consistency loss. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  }
+}

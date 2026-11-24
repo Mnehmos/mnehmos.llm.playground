@@ -1,0 +1,110 @@
+{
+  "step": 4800,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "b4c5ae1e20080ce4948abf941943a4c6570954482e1a94b35af152abf8cf4d24",
+  "prediction": {
+    "statement": "Predict at least 52 forward swaps on another block.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 52.0,
+    "direction": "at_least",
+    "due": 4900
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 55
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "E and L3 deltas now fall below one at .862 and .808.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 .0253 just leads L2 .0242 actual movement, with L2 raw .098.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient surges to .0288 while digit stays .00033. Task/IIT alignment rebounds .426.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "The confident head count falls to zero; held binding remains .221 and force geometry .428.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward patch repeats 55 and force intention target is double the wrong count, ten versus five.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar answers still score 10/10 and reverse remains 7/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "C03 returns to zero while broader numeric development is .0573.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Small endpoint changes can coexist with foreground sensitivity shifts, especially for C02 in this interval.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 52 forward swaps on another block.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Test final cross-format swaps to see whether donor value can be read from C02 as easily as C01.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Gradient magnitude for a single occurrence is sensitive to its context and loss. It does not identify a failed semantic unit by itself.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue observing the same lesson.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 52 forward swaps next. The measured value was 55, against threshold 52.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

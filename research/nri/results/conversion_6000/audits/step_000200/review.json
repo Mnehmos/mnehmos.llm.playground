@@ -1,0 +1,138 @@
+{
+  "step": 200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "assessment": {
+    "weights": {
+      "analysis": "The readout projection moved 3.07 and the embedding moved 2.70 in the second interval. Earlier changes had been largest in attention.",
+      "evidence": [
+        "/weight_changes/W_out.weight",
+        "/weight_changes/E.weight"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Readout W_out and W_in led mean actual updates at .0538 and .0473 while LR finished its warm-up. This shows where the largest averaged displacement occurred.",
+      "evidence": [
+        "/interval_overview/W_out.weight",
+        "/interval_overview/W_in.weight"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The word-form source occurrence gradient fell from 1.52 to .00106 as loss collapsed on that example. The C02 question's source occurrence remains near .968. Task and auxiliary embedding gradients are mildly opposed at -.069 on the panel.",
+      "evidence": [
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics/cosine_by_tensor/task:aux/E.weight"
+      ]
+    },
+    "representations": {
+      "analysis": "Layer-one h0 is highly similar to a previous head, but its margin is only .00053. Conversion style accuracy can rise despite no credible head relocation. The force binding holdout is still .211.",
+      "evidence": [
+        "/head_lineage/L1.h0",
+        "/concepts/binding_probe",
+        "/token_trace/embedding_gradient_alignment/12:13"
+      ]
+    },
+    "causal": {
+      "analysis": "Same-frame value replacement falls slightly to 87/90 while the same-unit control stays at 0/90. The chosen source site still transfers most practiced answers.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The student retains 10/10 digit accuracy and reaches 10/10 on the word-plus-abbreviation format after exposure to those forms.",
+      "evidence": [
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/practiced"
+      ]
+    },
+    "failures": {
+      "analysis": "Unpracticed C02 is 6/10. Value 4 is still mistaken and the new unit is 1/8.",
+      "evidence": [
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_values",
+        "/concepts/conversion/new_unit"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Rapid style acquisition could be lexical normalization or a parallel lookup. Reverse at 1/9 is consistent with the conversion direction being fixed in the learned rule or mapping.",
+      "evidence": [
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/reverse"
+      ]
+    },
+    "prediction": {
+      "analysis": "I expect at least nine of ten on C02 after directly practicing that frame, with same-direction numbers and style mixture maintained.",
+      "evidence": [
+        "/concepts/conversion/new_frame/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Add C02 and keep the separate C03 development family outside training to watch whether practice translates to another wording.",
+      "evidence": [
+        "/concepts/conversion/new_frame",
+        "/concepts/dev_acc/dev~1convert_newfam"
+      ]
+    },
+    "instruments": {
+      "analysis": "The exact trace is useful for isolating C02 gradient pressure. The numeric holdout has just one example and cannot estimate unseen-value performance broadly.",
+      "evidence": [
+        "/token_trace/examples/14",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "decision": {
+      "analysis": "Broaden the lesson to include C02 alongside C01, leaving units and direction fixed. Continue observation without a weight intervention.",
+      "evidence": [
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/new_frame"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The predicted eight or more correct in the changed style was confirmed at ten.",
+      "evidence": [
+        "/concepts/conversion/new_style/correct"
+      ]
+    }
+  },
+  "checkpoint_sha256": "64780e450d565a56383db20d531aca89d0230ad2829dc13f791212223c464764",
+  "prediction": {
+    "statement": "I expect at least nine of ten on C02 after directly practicing that frame, with same-direction numbers and style mixture maintained.",
+    "metric": "/concepts/conversion/new_frame/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 300
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 1.0
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    }
+  }
+}

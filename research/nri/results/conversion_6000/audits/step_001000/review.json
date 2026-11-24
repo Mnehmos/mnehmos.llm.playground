@@ -1,0 +1,110 @@
+{
+  "step": 1000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "82db8dc2e67a672f19b546d165b2e284f6e94d994dd70e7d175fe34fac16ccba",
+  "prediction": {
+    "statement": "Predict recovery to at least 58 of 90 forward swaps after one interval at the new route mix.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 58.0,
+    "direction": "at_least",
+    "due": 1100
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out and W_in moved 3.20 and 3.18 on introducing all six routes.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "W_in takes the biggest effective step at .0729 although QKV raw gradient leads at .446.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form loss .00205 exceeds the other two forms again; task/role cosine .055 remains small.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force holdout binding rose to .216 and within-paraphrase geometry fell to .325. The h0 margin is .0032.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward value patch falls to 56/90, even though ordinary forward answers remain perfect. Force mass swap matches acceleration more often than mass.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward and third-source panels retain perfect scores; reverse slips to 7/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Withheld 4 keeps yielding 6. Broader numeric conversion accuracy is 3.12%.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Training all directions may distribute the number signal across more sites. The fall in a single patch site does not by itself distinguish distribution from interference.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict recovery to at least 58 of 90 forward swaps after one interval at the new route mix.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Repeat the joint and isolated cross-route patches after consolidation to test which control channel changed.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The within-route patch is sensitive to the stage of curriculum, but all 90 trials still reuse ten prompts.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the six-direction curriculum and observe adaptation before changing targets again.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was After adding all mass directions, predict at least nine of ten on the original digit panel. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  }
+}

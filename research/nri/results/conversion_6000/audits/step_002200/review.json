@@ -1,0 +1,110 @@
+{
+  "step": 2200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "f5defda9d81a9b5c605bad51cbcd11573cb9cd68f44f2b0d78e649525d32b4b4",
+  "prediction": {
+    "statement": "Predict at least 42 value swaps on continued paired exposure.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 42.0,
+    "direction": "at_least",
+    "due": 2300
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 42
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV still leads displacement at 1.14 with E next at .933.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Effective L2 steps ease to .0391 and L3 to .0285.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form content gradient stays elevated at .0121, with task-role alignment .024.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force binding edges up to .203 and within-paraphrase cosine .238; zero identities remain.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap recovers to 42, while the force control remains wrong-variable biased at 3 versus 7.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar conversion maintains 10/10 and familiar-frame equivalence now reaches .711.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Held-out conversion falls to .0052, and the known miss stays unchanged.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The equivalence branch and conversion transfer appear dissociated over this interval. Shared parameters need not imply shared computation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 42 value swaps on continued paired exposure.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Probe cross-unit transfer separately from training-family equivalence accuracy.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Equivalence accuracy here is from a familiar family and does not certify general semantic equivalence.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue current curriculum for an additional interval to examine recovery.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 40 forward swaps over the next interval. The measured value was 42, against threshold 40.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

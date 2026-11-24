@@ -1,0 +1,110 @@
+{
+  "step": 4700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "6b2aa9f13beb919b30bba58d8640ff6abbda79883ca676b5196ce6a2ba681acd",
+  "prediction": {
+    "statement": "Predict at least 52 forward swaps next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 52.0,
+    "direction": "at_least",
+    "due": 4800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.1927
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L3 and L2 QKV endpoint deltas rise to 1.057 and .914.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 and L3 updates remain tied near .031 despite raw norms .120 versus .080.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient returns below .001. Task/IIT alignment falls from .310 to .029 on the fixed objective batch.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "One attention identity returns. Force held binding reaches .224 and geometry .444.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward patch rises to 55 and force mass specificity improves to 12 versus four.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force .1927 exceeds its .18 prediction and original conversions remain perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "New-family conversion rebounds to .0391, still very low, and held 4 remains wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The abrupt alignment drop could reflect saturation of easy intervention targets or gradient redirection. Neither explains all force errors.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 52 forward swaps next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare force gradients and accuracy on zero and nonzero products.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The controlled gradient batch samples a finite collection with several objectives and can mask item-specific conflicts.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Retain the current objective and collect the next audit.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force at least .18 next. The measured value was 0.1927, against threshold 0.18.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "step": 100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "assessment": {
+    "weights": {
+      "analysis": "Attention QKV dominates absolute movement in layers one and three at 2.61 and 2.39.",
+      "evidence": [
+        "/weight_changes/attn1.qkv.weight",
+        "/weight_changes/attn3.qkv.weight"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Layer-one QKV also led actual optimizer displacement at .0344 per step compared with .0306 for layer three. These norms are measured weight differences.",
+      "evidence": [
+        "/interval_overview/attn1.qkv.weight",
+        "/interval_overview/attn3.qkv.weight"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Source-value occurrence gradient for word form is 1.52 versus .00075 for the practiced digit in its context. Controlled task-to-role embedding cosine is -.026.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/objective_dynamics/cosine_by_tensor/task:aux/E.weight"
+      ]
+    },
+    "representations": {
+      "analysis": "The force binding reader scarcely moved. L1.h0 matches a prior head with a negative runner-up margin, so identity stays uncertain. Paired digit and word gradient cosine fell from .988 to .407.",
+      "evidence": [
+        "/concepts/binding_probe",
+        "/head_lineage/L1.h0",
+        "/token_trace/embedding_gradient_alignment/12:13"
+      ]
+    },
+    "causal": {
+      "analysis": "Replacing layer-one source value now produces all 90 donor answers. Swapping the same written unit in its context produces zero donor answers. This localizes a value-dependent signal on the practiced path.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/conversion/swap_value_and_unit"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The model gets 10/10 on practiced conversions and 5/10 on the changed frame.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame"
+      ]
+    },
+    "failures": {
+      "analysis": "Word plus abbreviation scores 1/10, reverse 0/9, and the withheld value remains incorrect.",
+      "evidence": [
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/new_values",
+        "/concepts/conversion/reverse"
+      ]
+    },
+    "alternatives": {
+      "analysis": "A value-to-answer dictionary is consistent with the perfect value swap on one path. A reusable scale would have to support other values or directions too.",
+      "evidence": [
+        "/concepts/conversion/reverse/predicted",
+        "/concepts/conversion/swap_value"
+      ]
+    },
+    "prediction": {
+      "analysis": "After a block with word and abbreviation variation, at least eight of the ten practiced values will work in the new style.",
+      "evidence": [
+        "/concepts/conversion/new_style/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Expose styles within C01 and score C02 separately so the frame still tests transfer.",
+      "evidence": [
+        "/concepts/conversion/new_style",
+        "/concepts/conversion/new_frame"
+      ]
+    },
+    "instruments": {
+      "analysis": "The occurrence trace localizes the large supervised error on the word value. A cross-route causal control is still needed to distinguish the raw number from the converted number.",
+      "evidence": [
+        "/token_trace/examples/13",
+        "/concepts/conversion/swap_unit"
+      ]
+    },
+    "decision": {
+      "analysis": "Introduce random digit or word and full or abbreviated units. Keep direction and question frame fixed for this block.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The step-zero prediction of at least eight practiced answers is confirmed with ten.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  },
+  "checkpoint_sha256": "9816bcf723157a135d8295cc69ce3ad293283519577c21a30c323f1926d3e271",
+  "prediction": {
+    "statement": "After a block with word and abbreviation variation, at least eight of the ten practiced values will work in the new style.",
+    "metric": "/concepts/conversion/new_style/correct",
+    "threshold": 8.0,
+    "direction": "at_least",
+    "due": 200
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 1.0
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    }
+  }
+}

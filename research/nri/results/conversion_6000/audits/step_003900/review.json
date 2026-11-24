@@ -1,0 +1,110 @@
+{
+  "step": 3900,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "91c6b9c9910617fec8e1334ff0169c3c1ff0d234f28c184a933671021d0aa722",
+  "prediction": {
+    "statement": "Predict at least 43 forward swaps next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 43.0,
+    "direction": "at_least",
+    "due": 4000
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.2135
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 are both above one in displacement at 1.22 and 1.09.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Their updates are nearly tied at .0368 and .0362, with L3 smaller in raw norm.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word form leads at .00226 while the C02 gradient is .00044. Task/IIT cosine rises to .364.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding stays .214; two attention identities meet the rule.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap repeats 43 for a third checkpoint. Force intention specificity narrows to 9 versus 6.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force ordinary rises to .2135, confirming the prediction, and all forward items remain correct.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The withheld 4 remains wrong and C03 score is only .0417.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The plateau in patching could indicate structural reliance on other coordinates. The ordinary scores show no need for a rescue edit.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 43 forward swaps next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare cause-specific scores with the force and conversion readout norms after this long plateau.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The cross-route test already showed sensitivity at layer one, but a final checkpoint repeat is needed to characterize the mature model.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue observing under the same curriculum through step 4000.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force returns to at least .18 next interval. The measured value was 0.2135, against threshold 0.18.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

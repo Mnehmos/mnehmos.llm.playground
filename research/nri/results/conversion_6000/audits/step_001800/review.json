@@ -1,0 +1,110 @@
+{
+  "step": 1800,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "6988275e5b5500d6133633c92dda28dbc0e6ccb4c893aff72659c60346429ce0",
+  "prediction": {
+    "statement": "I predict at least 57/90 forward swaps next interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 57.0,
+    "direction": "at_least",
+    "due": 1900
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 60
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "QKV in layer two continues to lead displacement at 1.17; layer one is .893.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Layer two leads actual steps at .0364 despite lower raw gradients than layer one.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form content gradient rebounds .00038 to .00788. Task/consistency cosine at E is .065.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Withheld force binding .208 and paraphrase cosine .300 move in opposite directions. Two head identities qualify.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Number swaps recover to 60/90; joint patch gives 58, and same-unit alone gives zero.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward panels remain perfect and equivalence dev is .484.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Numeric transfer falls to .0078. The new-family score stays near zero.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Consistency may improve the picked forward swap while increasing reliance on practiced forms. One interval cannot isolate this.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least 57/90 forward swaps next interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Measure task gradients against consistency at later layers and check whether the recovery survives.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Joint-minus-number differs by two answers, so the unit site can have an interaction even without standalone donor targets.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep this lesson and look for a repeatable change.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict forward value-swap score of at least 52 after a small matched-output consistency lesson. The measured value was 60, against threshold 52.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}
