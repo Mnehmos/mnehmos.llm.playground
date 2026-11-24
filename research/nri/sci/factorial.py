@@ -263,14 +263,17 @@ def archive(name, live=LIVE, archive_dir=ARCHIVE, repo=REPO_RUNS, steps=STEPS):
     files = {str(p.relative_to(src)): sha256_file(p) for p in sorted(src.rglob("*")) if p.is_file()}
     archive_dir.mkdir(parents=True, exist_ok=True)
     tgt = archive_dir / f"{name}.tar.xz"
-    subprocess.run(["tar", "-C", str(live), "-cJf", str(tgt), name], check=True, env=dict(os.environ, XZ_OPT="-6 -T1"))
+    subprocess.run(["tar", "-C", str(live), "-cJf", str(tgt), name], check=True, env=dict(os.environ, XZ_OPT="-3 -T1"))
     listed = subprocess.run(["tar", "-tJf", str(tgt)], check=True, capture_output=True, text=True).stdout.split()
     assert sum(1 for x in listed if not x.endswith("/")) == len(files), "archive file count mismatch"
+    # byte-for-byte comparison of every archived file against the live files (tar --diff exits non-zero on any difference)
+    subprocess.run(["tar", "-C", str(live), "--diff", "-Jf", str(tgt)], check=True, capture_output=True)
     rd = repo / name
     rd.mkdir(parents=True, exist_ok=True)
     (rd / "meta.json").write_text((src / "meta.json").read_text())
     (rd / "manifest.json").write_text(json.dumps(dict(run=name, archive=tgt.name, archive_sha256=sha256_file(tgt),
-                                                      archive_bytes=tgt.stat().st_size, files=files), indent=0))
+                                                      archive_bytes=tgt.stat().st_size, verified="tar --diff against live files",
+                                                      files=files), indent=0))
     with gzip.open(rd / "audits.jsonl.gz", "wt") as f:
         for c in cks:
             f.write((c / "audit.json").read_text() + "\n")
