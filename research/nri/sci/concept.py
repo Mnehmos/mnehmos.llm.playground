@@ -49,7 +49,7 @@ TRAIN_FRAMES = ("C01", "C02", "C04", "C05")
 NEWFRAME = "C03"
 POPULATIONS = ("A", "B", "C", "D")
 STEPS, BATCH, LR, WARMUP, WD, AUX_W = 6000, 128, 1e-3, 100, 0.1, 1.0
-AUDIT_EVERY, SAVE_EVERY = 100, 500
+AUDIT_EVERY = 100                     # scorecard AND complete checkpoint every 100 steps
 SPLIT_SEED = 2811
 
 
@@ -247,6 +247,52 @@ def novel_combo_patch(model, vocab, split, site=1, seed=3):
                 n=len(bases))
 
 
+@torch.no_grad()
+def patch_semantics(model, vocab, split, site=1, n=600, seed=4, positions="src"):
+    """Which quantity does the patched code carry? Base and donor share the dimension and have DIFFERENT source
+    units. After copying the donor residual (after block `site`) at `positions` ('src' = source-number token,
+    'src+unit' = number and unit tokens), score two competing predictions on pairs where they differ from each
+    other and from the base answer:
+      number    : donor value v_d converted along the base route  (code = raw number)
+      canonical : donor canonical quantity v_d * s_ud expressed in the base target unit (code = quantity)
+    `unchanged` = base answer kept (code ignored / inaccessible at this site)."""
+    rng = random.Random(seed)
+    canon = dict(num="num", unit="full")
+    tr = split["train"]
+    bases, donors, tn, tc = [], [], [], []
+    while len(bases) < n:
+        (rb, vb), (rd, vd) = rng.choice(tr), rng.choice(tr)
+        if rb[0] != rd[0] or rb[1] == rd[1]:
+            continue
+        dim, ub, tb = rb
+        a_base = answer(dim, vb, ub, tb)
+        a_num = answer(dim, vd, ub, tb)
+        a_can = canonical(dim, vd, rd[1]) * L.INV[L.SCALES[dim][tb]] % P
+        if len({a_base, a_num, a_can}) < 3:
+            continue
+        bases.append(example(rb, vb, "C01", canon, rng))
+        donors.append(example(rd, vd, "C01", canon, rng))
+        tn.append(a_num)
+        tc.append(a_can)
+    bb, bd = D.encode_batch(bases, vocab), D.encode_batch(donors, vocab)
+    key = {0: "x0", 1: "x1", 2: "x2"}[site]
+    cb, cd = model.trunk(bb["tok"], ret=True), model.trunk(bd["tok"], ret=True)
+    x = cb[key].clone()
+    a = torch.arange(len(bases))
+    pos_b = [src_pos(bb)] + ([(bb["role"] == L.ROLE_ID["src_unit"]).long().argmax(1)] if positions == "src+unit" else [])
+    pos_d = [src_pos(bd)] + ([(bd["role"] == L.ROLE_ID["src_unit"]).long().argmax(1)] if positions == "src+unit" else [])
+    for pb, pd in zip(pos_b, pos_d):
+        x[a, pb] = cd[key][a, pd]
+    if site == 0:
+        x = x + model.attn1(model.ln1a(x), bb["tok"] != D.PAD)
+        x = x + model.mlp1(model.ln1m(x))
+        site = 1
+    pred = finish_from(model, x, bb["tok"] != D.PAD, site).argmax(-1)
+    ids = lambda xs: torch.tensor([L.ANS_ID[str(t)] for t in xs])
+    return dict(number=round((pred == ids(tn)).float().mean().item(), 4), canonical=round((pred == ids(tc)).float().mean().item(), 4),
+                unchanged=round((pred == bb["ans"]).float().mean().item(), 4), n=len(bases))
+
+
 def knn(Xf, yf, Xe, ye, k=10):
     mu = Xf.mean(0)
     idx = torch.cdist(Xe - mu, Xf - mu).topk(min(k, len(Xf)), dim=1, largest=False).indices
@@ -292,6 +338,9 @@ def scorecard(model, vocab, sets, split, prev_params=None, own=None):
         out["own_practiced"] = round(accuracy(model, own, vocab), 4)
     out["patch_x1_novel_combo"] = novel_combo_patch(model, vocab, split, 1)
     out["patch_x2_novel_combo"] = novel_combo_patch(model, vocab, split, 2)
+    for site in (0, 1, 2):
+        out[f"semantics_x{site}_src"] = patch_semantics(model, vocab, split, site)
+        out[f"semantics_x{site}_src_unit"] = patch_semantics(model, vocab, split, site, positions="src+unit")
     out["heldout_best_constant"] = round(best_constant(sets["heldout"]), 4)
     canon = [e for e in sets["practiced"] if e["ast"]["v"] != 0]
     held = [e for e in sets["heldout"] if e["fid"] == "C01"]
@@ -330,7 +379,92 @@ def scorecard(model, vocab, sets, split, prev_params=None, own=None):
 
 
 # ------------------------------------------------------------------ training
-def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
+def probe_panel(sets, n_each=16):
+    """Fixed probe set for token-level gradient traces: practiced, paraphrased and held-out items."""
+    return sets["practiced"][:n_each] + sets["practiced_paraphrase"][:n_each] + sets["heldout"][:n_each]
+
+
+def token_traces(model, panel_batch):
+    """Per-token gradient of the answer loss w.r.t. the token embedding input (x0) on the probe panel: L2 norm and
+    signed gradient x input (attribution). Shapes [n_probe, MAX_LEN]. Parameter gradients are not left behind."""
+    model.zero_grad(set_to_none=True)
+    tok = panel_batch["tok"]
+    x0 = (model.E(tok) + model.P(torch.arange(tok.shape[1]))).detach().requires_grad_(True)
+    keymask = tok != D.PAD
+    a1 = model.attn1(model.ln1a(x0), keymask)
+    x1 = x0 + a1
+    x1m = x1 + model.mlp1(model.ln1m(x1))
+    x2 = x1m + model.attn2(model.ln2a(x1m), keymask)
+    x2m = x2 + model.mlp2(model.ln2m(x2))
+    x3 = x2m + model.attn3(model.ln3a(x2m), keymask)
+    loss = F.cross_entropy(model.head(x3[:, -1]), panel_batch["ans"], reduction="sum")
+    g, = torch.autograd.grad(loss, x0)
+    model.zero_grad(set_to_none=True)
+    return dict(grad_norm=g.norm(dim=-1), grad_x_input=(g * x0.detach()).sum(-1), loss_per_item=torch.zeros(len(tok)) + loss.detach() / len(tok))
+
+
+def save_checkpoint(d, model, aux_head, opt, rng, step, traces=None):
+    """Complete training state, safe formats only: weights (safetensors), AdamW state (safetensors + JSON),
+    torch + python RNG (safetensors + JSON), token traces (safetensors). Restorable bit-exactly."""
+    d.mkdir(parents=True, exist_ok=True)
+    save_file({k: v.contiguous() for k, v in model.state_dict().items()}, d / "model.safetensors")
+    if aux_head is not None:
+        save_file({k: v.contiguous() for k, v in aux_head.state_dict().items()}, d / "aux.safetensors")
+    names = [n for n, _ in model.named_parameters()] + ([f"auxhead.{n}" for n, _ in aux_head.named_parameters()] if aux_head else [])
+    params = list(model.parameters()) + (list(aux_head.parameters()) if aux_head else [])
+    assert len(set(names)) == len(names), "parameter names must be unique for optimizer-state persistence"
+    tens, steps_ = {}, {}
+    for n, p in zip(names, params):
+        st = opt.state.get(p, {})
+        if st:
+            tens[n + "::exp_avg"] = st["exp_avg"].contiguous()
+            tens[n + "::exp_avg_sq"] = st["exp_avg_sq"].contiguous()
+            steps_[n] = float(st["step"])
+    save_file(tens, d / "optim.safetensors")
+    save_file(dict(torch_rng=torch.get_rng_state()), d / "rng.safetensors")
+    s0 = rng.getstate()
+    (d / "state.json").write_text(json.dumps(dict(step=step, adam_steps=steps_, lr=opt.param_groups[0]["lr"],
+                                                 py_rng=[s0[0], list(s0[1]), s0[2]])))
+    if traces is not None:
+        save_file({k: v.contiguous().to(torch.float32) for k, v in traces.items()}, d / "traces.safetensors")
+
+
+def load_checkpoint(d, model, aux_head, opt, rng):
+    from safetensors.torch import load_file
+    model.load_state_dict(load_file(d / "model.safetensors"))
+    if aux_head is not None:
+        aux_head.load_state_dict(load_file(d / "aux.safetensors"))
+    meta = json.loads((d / "state.json").read_text())
+    tens = load_file(d / "optim.safetensors")
+    names = [n for n, _ in model.named_parameters()] + ([f"auxhead.{n}" for n, _ in aux_head.named_parameters()] if aux_head else [])
+    params = list(model.parameters()) + (list(aux_head.parameters()) if aux_head else [])
+    for n, p in zip(names, params):
+        if n in meta["adam_steps"]:
+            opt.state[p] = dict(step=torch.tensor(meta["adam_steps"][n]), exp_avg=tens[n + "::exp_avg"].clone(),
+                                exp_avg_sq=tens[n + "::exp_avg_sq"].clone())
+    torch.set_rng_state(load_file(d / "rng.safetensors")["torch_rng"])
+    r = meta["py_rng"]
+    rng.setstate((r[0], tuple(r[1]), r[2]))
+    return meta["step"]
+
+
+def state_digest(model, aux_head, opt):
+    """Order-independent digest of weights and AdamW moments, keyed by parameter name."""
+    h = hashlib.sha256()
+    named = list(model.named_parameters()) + ([("auxhead." + n, p) for n, p in aux_head.named_parameters()] if aux_head else [])
+    for n, p in sorted(named, key=lambda x: x[0]):
+        h.update(n.encode())
+        h.update(p.detach().contiguous().numpy().tobytes())
+        st = opt.state.get(p, {})
+        for k in ("exp_avg", "exp_avg_sq"):
+            if k in st:
+                h.update(st[k].contiguous().numpy().tobytes())
+    return h.hexdigest()
+
+
+def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1, resume=False, audit=True):
+    """Train one network. Every AUDIT_EVERY steps: scorecard + COMPLETE checkpoint (ckpt/step_NNNNN/) + token
+    traces; every step: a line in interval.jsonl. resume=True continues from the latest checkpoint bit-exactly."""
     assert pop in POPULATIONS
     torch.set_num_threads(threads)
     torch.use_deterministic_algorithms(True)
@@ -345,18 +479,29 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
     rng = random.Random(seed)
     sets = eval_sets(split)
     own = [e for e in sets["practiced"] if (tuple((e["ast"]["dim"], e["ast"]["u"], e["ast"]["t"])), e["ast"]["v"]) in set(spec["combos"])]
+    panel = D.encode_batch(probe_panel(sets), vocab)
     out = Path(out_dir)
-    out.mkdir(parents=True, exist_ok=True)
-    meta = dict(population=pop, seed=seed, steps=steps, wd=wd, lr=LR, batch=BATCH, aux_weight=AUX_W if aux_head else 0,
-                split_sha=hashlib.sha256(json.dumps(split).encode()).hexdigest()[:16], n_train_combos=len(spec["combos"]),
-                frames=list(spec["frames"]), n_params_inference=model.n_params(False))
-    (out / "meta.json").write_text(json.dumps(meta, indent=1))
-    log = open(out / "scorecard.jsonl", "w")
-    model.eval()
-    card, prev = scorecard(model, vocab, sets, split, own=own)
-    log.write(json.dumps(dict(step=0, **card)) + "\n")
+    ck = out / "ckpt"
+    start = 0
+    if resume and ck.exists() and any(ck.iterdir()):
+        start = load_checkpoint(max(ck.iterdir()), model, aux_head, opt, rng)
+    else:
+        out.mkdir(parents=True, exist_ok=True)
+        meta = dict(population=pop, seed=seed, steps=steps, wd=wd, lr=LR, batch=BATCH, aux_weight=AUX_W if aux_head else 0,
+                    split_sha=hashlib.sha256(json.dumps(split).encode()).hexdigest()[:16], n_train_combos=len(spec["combos"]),
+                    frames=list(spec["frames"]), n_params_inference=model.n_params(False), checkpoint_every=AUDIT_EVERY,
+                    checkpoint_contents=["model", "aux", "AdamW exp_avg/exp_avg_sq/step", "torch+python RNG", "token traces"])
+        (out / "meta.json").write_text(json.dumps(meta, indent=1))
+        model.eval()
+        if audit:
+            card, _ = scorecard(model, vocab, sets, split, own=own)
+            with open(out / "scorecard.jsonl", "w") as f:
+                f.write(json.dumps(dict(step=0, **card)) + "\n")
+        save_checkpoint(ck / "step_00000", model, aux_head, opt, rng, 0, token_traces(model, panel))
+    prev = {n: p.detach().clone() for n, p in model.named_parameters()}
     t0 = time.process_time()
-    for step in range(1, steps + 1):
+    interval = open(out / "interval.jsonl", "a")
+    for step in range(start + 1, steps + 1):
         model.train()
         for g in opt.param_groups:
             g["lr"] = LR * min(1.0, step / WARMUP)
@@ -371,16 +516,21 @@ def run(pop, seed, out_dir, steps=STEPS, wd=WD, threads=1):
             loss = loss + AUX_W * la
         opt.zero_grad()
         loss.backward()
+        gn = math.sqrt(sum(p.grad.pow(2).sum().item() for p in params if p.grad is not None))
         opt.step()
+        interval.write(json.dumps(dict(step=step, grad_norm=round(gn, 5), lr=opt.param_groups[0]["lr"],
+                                       batch_sha=hashlib.sha256(b["tok"].numpy().tobytes()).hexdigest()[:12],
+                                       **{k: round(v, 5) for k, v in parts.items()})) + "\n")
         if step % AUDIT_EVERY == 0:
+            interval.flush()
             model.eval()
-            card, prev = scorecard(model, vocab, sets, split, prev, own=own)
-            log.write(json.dumps(dict(step=step, loss=parts, train_cpu_s=round(time.process_time() - t0, 1), **card)) + "\n")
-            log.flush()
-        if step % SAVE_EVERY == 0:
-            save_file({k: v.contiguous() for k, v in model.state_dict().items()}, out / f"model_{step:05d}.safetensors")
-    log.close()
-    return out
+            if audit:
+                card, prev = scorecard(model, vocab, sets, split, prev, own=own)
+                with open(out / "scorecard.jsonl", "a") as f:
+                    f.write(json.dumps(dict(step=step, loss=parts, train_cpu_s=round(time.process_time() - t0, 1), **card)) + "\n")
+            save_checkpoint(ck / f"step_{step:05d}", model, aux_head, opt, rng, step, token_traces(model, panel))
+    interval.close()
+    return out, state_digest(model, aux_head, opt)
 
 
 def rescore(run_dir):
@@ -395,12 +545,14 @@ def rescore(run_dir):
     own = [e for e in sets["practiced"] if (tuple((e["ast"]["dim"], e["ast"]["u"], e["ast"]["t"])), e["ast"]["v"]) in set(spec["combos"])]
     prev = None
     with open(d / "rescore.jsonl", "w") as f:
-        for ck in sorted(d.glob("model_*.safetensors")):
+        cks = [(int(c.stem.split("_")[1]), c) for c in d.glob("model_*.safetensors")]
+        cks += [(int(c.name.split("_")[1]), c / "model.safetensors") for c in (d / "ckpt").glob("step_*")] if (d / "ckpt").exists() else []
+        for step, ck in sorted(cks):
             m = SM.SemStudent(len(vocab.itos))
             m.load_state_dict(load_file(ck))
             m.eval()
             card, prev = scorecard(m, vocab, sets, split, prev, own=own)
-            f.write(json.dumps(dict(step=int(ck.stem.split("_")[1]), **card)) + "\n")
+            f.write(json.dumps(dict(step=step, **card)) + "\n")
 
 
 if __name__ == "__main__":
@@ -411,6 +563,7 @@ if __name__ == "__main__":
     ap.add_argument("out", nargs="?")
     ap.add_argument("--steps", type=int, default=STEPS)
     ap.add_argument("--wd", type=float, default=WD)
+    ap.add_argument("--resume", action="store_true")
     a = ap.parse_args()
     if a.cmd == "split":
         s = make_split()
@@ -419,4 +572,4 @@ if __name__ == "__main__":
         torch.set_num_threads(1)
         rescore(a.pop)
     else:
-        run(a.pop, a.seed, a.out, a.steps, a.wd)
+        run(a.pop, a.seed, a.out, a.steps, a.wd, resume=a.resume)

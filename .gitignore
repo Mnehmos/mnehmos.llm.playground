@@ -1,4 +1,2 @@
 research/nri/runs/concept_pilot/**/*.safetensors
 research/nri/runs/concept_pilot/*.log
-# TEMPORARY while the concept pilot runs; complete results are committed at the end
-research/nri/runs/concept_pilot/

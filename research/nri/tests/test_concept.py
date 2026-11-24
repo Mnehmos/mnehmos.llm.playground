@@ -74,3 +74,22 @@ def test_circle_score_detects_planted_dlog_circle():
     codes += 0.01 * torch.randn(12, 8, generator=torch.Generator().manual_seed(0))
     s = C.circle_scores(codes)
     assert s["dlog"] > 0.95 and s["dlog_k"] == 1 and s["additive"] < 0.6 and s["shuffled_mean"] < 0.6
+
+
+def test_complete_checkpoints_every_100_and_bit_exact_resume(tmp_path):
+    from safetensors.torch import load_file
+    _, full = C.run("C", 7, tmp_path / "full", steps=300, audit=False)
+    _, _ = C.run("C", 7, tmp_path / "cut", steps=200, audit=False)            # stop at 200
+    _, resumed = C.run("C", 7, tmp_path / "cut", steps=300, resume=True, audit=False)
+    assert resumed == full                                                     # bit-exact continuation
+    cks = sorted(p.name for p in (tmp_path / "full" / "ckpt").iterdir())
+    assert cks == ["step_00000", "step_00100", "step_00200", "step_00300"]
+    d = tmp_path / "full" / "ckpt" / "step_00100"
+    for f in ("model.safetensors", "aux.safetensors", "optim.safetensors", "rng.safetensors", "state.json", "traces.safetensors"):
+        assert (d / f).exists(), f
+    tr = load_file(d / "traces.safetensors")
+    assert tr["grad_norm"].shape == (48, 42) and tr["grad_norm"].abs().sum() > 0
+    assert len((tmp_path / "full" / "interval.jsonl").read_text().splitlines()) == 300
+    # checkpointed weights equal the interval endpoint weights used for update analysis
+    a, b = load_file(d / "model.safetensors"), load_file(tmp_path / "cut" / "ckpt" / "step_00100" / "model.safetensors")
+    assert all(torch.equal(a[k], b[k]) for k in a)
