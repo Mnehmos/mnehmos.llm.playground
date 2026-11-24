@@ -18,4 +18,11 @@ s=subprocess.run(['pandoc','--standalone','--ascii','-V','geometry:margin=0.95in
 s=s.replace(r'\usepackage{lmodern}','').replace(r'\usepackage[T1]{fontenc}','').replace(r'\usepackage[]{microtype}',r'\usepackage[expansion=false]{microtype}')
 s=s.replace(r'\begin{document}',r'\renewcommand{\labelitemi}{\ensuremath{\bullet}}'+'\n'+r'\begin{document}')
 s=re.sub(r'\\includegraphics\{(.*?)\}',lambda m:r'\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{'+m[1]+'}',s)
+# Flush earlier floats before the final three-panel figure.
+marker=s.index('Experiment_32_Transfer.png')
+prior=s.rfind(chr(92)+'begin{figure}',0,marker)
+opening=chr(92)+'begin{figure}'
+s=s[:prior]+chr(92)+'clearpage'+chr(10)+opening+'[t]'+s[prior+len(opening):]
+for i in range(1,6):
+    s=s.replace(chr(92)+'caption{Figure '+str(i)+'. ',chr(92)+'caption{')
 dst.write_text(s)
