@@ -1,0 +1,110 @@
+{
+  "step": 2900,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "4fe18e9ba21efe71d86c91fe9d453716000820401bedc4cf36bea29f579a7730",
+  "prediction": {
+    "statement": "Predict 35 or more forward value swaps at step 3000.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 35.0,
+    "direction": "at_least",
+    "due": 3000
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 0.0182
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV moves 1.04 and L3 .853, both above lower layers this interval.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 leads effective displacement .0343 while L3 receives .0266.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Alternate-frame content gradient leads at .00197, and objective alignment turns negative (-.072).",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force held binding is .206, but only one attention signature remains confidently matched.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Number swap falls to 35, and force targets again favor the wrong variable 9 to 3.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward tests remain perfect and replay force rises to .201.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The prior held numeric prediction fails at .0182. The separate frame panel stays .0156.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The earlier held numeric gain appears unstable under this curriculum. A particular answer prior could underlie the few hits.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict 35 or more forward value swaps at step 3000.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Stratify numeric results by expected answer and compare against a constant-class rule.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The exact native checkpoints can support retrospective analyses rather than relying on the order of these noisy accuracies.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the current lesson through the midpoint for a stable comparison.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least .06 numeric dev next interval. The measured value was 0.0182, against threshold 0.06.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    }
+  }
+}

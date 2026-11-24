@@ -1,0 +1,110 @@
+{
+  "step": 3300,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "d1f84a0bcdcc4f755c9037c668067f90bc34a736529ddce8942849d88e5f4f51",
+  "prediction": {
+    "statement": "Predict force remains at least .20 next interval.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 3400
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.2135
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "E and L3 QKV deltas now converge at 1.15 and 1.06.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 takes slightly larger actual updates than L2 despite the lower raw gradient.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word content gradient .00414 is dropping and task/IIT cosine retreats to .238.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding and paraphrase similarity both rise, to .221 and .475, while head identities remain unresolved.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Mass patch improves to 12/77 versus one acceleration target. Forward swap reaches 51/90.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force .2135 confirms the prediction, and the practiced conversion probes remain perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The numeric development score is .0833 and never-seen forward digit 4 still fails.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Rising force specificity supports a developing role-dependent circuit. The magnitude is still low and selective successes could be confined to favored outputs.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force remains at least .20 next interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Identify which same-panel force targets contribute the new causal successes.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A panel with distinguishable swapped variables supports specificity, but the repeated prompts are not independent networks.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the lesson and watch whether force localization consolidates.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force rises past .20 in the next 100 steps. The measured value was 0.2135, against threshold 0.2.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

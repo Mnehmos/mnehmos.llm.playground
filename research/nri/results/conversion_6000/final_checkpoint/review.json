@@ -1,0 +1,110 @@
+{
+  "step": 6000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "c9ac5cfa7403b95ecdfb1d6ab466480094755ec6328592d7e87b9f69007ac673",
+  "prediction": {
+    "statement": "If the final lesson were extended by 100 updates I predict all ten original-format answers would still be correct. This prediction is outside the completed trajectory.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 10.0,
+    "direction": "at_least",
+    "due": 6100
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Final interval displacement is led by third QKV 1.35 and second QKV 1.30. These layers still move after familiar accuracy saturates.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 actual steps .0412 exceed L2 .0372 despite smaller raw gradient .062 versus .082.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient .00116 remains largest of the three exact traced prompts. Task-role E alignment is .014. This is a local sensitivity result.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Five attention signatures sustain matching and force paraphrase cosine reaches .590, but held force binding stays .229.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Same-route value patch gets 60/90, and same-unit patch 0/90. Cross-route x1 number substitution follows the base route with the donor number on 105/270, whereas x2 does so on 1/270. Source-unit-only swaps preserve the base answer at both sites in all 270 cases.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All ten original, word-abbreviation and C02 probes stay correct. Reverse 7/9 and third-source 8/8 are now practiced-direction probes. Force development is .1745.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The withheld forward value still predicts 6 for target 7. Numeric development is 34/384, all in mass, and new-frame conversion is 0/384. Held numeric mass accuracy is 34/245, below the best constant-class reference.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Perfect familiar behavior with weak cross-route unit substitution fits a route-conditioned lookup or a representation whose unit is used elsewhere. The early patch pattern and final positional insensitivity at layer two also fit upstream routing away from the source position.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "If the final lesson were extended by 100 updates I predict all ten original-format answers would still be correct. This prediction is outside the completed trajectory.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Repeat with matched seeds, a broader prespecified numeric split and causal unit routing tests at the query, source and destination sites.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The final cross-layer comparison uses the same 270 discriminating pairs and verifies intact outputs. The fixed probes have overlapping questions and there is only one trainee.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Finish the audited budget at step 6000. Keep the final checkpoint and its review. No edit or continuation is warranted by the completed trajectory.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict all ten practiced forward answers will remain correct at step 6000. The measured value was 10, against threshold 10.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 5900,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "bfa07e0cba27e2f2b869e58c3f711fa6c5e3cce88543463010b543471840b5fd",
+  "prediction": {
+    "statement": "I predict all ten practiced forward answers will remain correct at step 6000.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 10.0,
+    "direction": "at_least",
+    "due": 6000
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 58
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L3 QKV now leads endpoint movement at 1.23 with L2 1.14.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 .0374 narrowly leads actual motion despite lower raw gradient than L2.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient jumps .00028 to .00183. Task/role cosine goes negative at -.036.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Four persistent heads remain and held binding stays .229. Paraphrase geometry barely moves.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap falls to 58 and falsifies the threshold. Force intention margin shrinks from seven to five.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar conversion is still perfect and force hits .229.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence drops to .497 and the narrow held-out value is still wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The swings under a fixed lesson illustrate why finishing accuracy alone would give a misleading account of this trajectory.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict all ten practiced forward answers will remain correct at step 6000.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Repeat the cross-route intervention and separate mass from acceleration in the development-only final assessment.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The final audit needs both the unchanged forward control and competing targets to interpret patch specificity.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Advance the last 100 updates under the frozen final lesson and review the resulting snapshot.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 60 forward swaps at 5900. The measured value was 58, against threshold 60.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

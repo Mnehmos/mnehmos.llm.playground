@@ -1,0 +1,110 @@
+{
+  "step": 5800,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "e7dc1cd4889e391114e1ff7442796988101f9231ca5dc38783361c6b42bd2391",
+  "prediction": {
+    "statement": "Predict at least 60 forward swaps at 5900.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 60.0,
+    "direction": "at_least",
+    "due": 5900
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 66
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV delta 1.081 tops L3 at .983, both below their earlier peak.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "The effective L2 and L3 means remain nearly tied at .0295 and .0285.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient recedes from .00198 to .00028; task/role cosine returns positive at .016.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Five attention signatures qualify. Force paraphrase geometry rises .544 while held binding dips .229.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap recovers to 66. Force mass patch scores 10 against three wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All familiar forward forms stay perfect, and equivalence recovers to .555.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force ordinary falls to .180 without the mass patch margin collapsing. The withheld number still fails.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The force representation can be partially steerable under this patch even when ordinary force arithmetic is weak.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 60 forward swaps at 5900.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Check whether recovered forward control persists over the last two intervals.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The separate unpatched force control remains necessary when the force target distribution is skewed.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the same curriculum and objective weights.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 55 forward swaps next interval. The measured value was 66, against threshold 55.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

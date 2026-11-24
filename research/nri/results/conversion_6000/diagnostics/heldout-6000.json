@@ -1,0 +1,386 @@
+{
+  "convert_newfam": {
+    "mass": {
+      "n": 147,
+      "hits": 0,
+      "best_constant": 27,
+      "most_frequent_prediction": [
+        6,
+        43
+      ]
+    },
+    "mass:2->2": {
+      "n": 22,
+      "hits": 0,
+      "best_constant": 22,
+      "most_frequent_prediction": [
+        5,
+        22
+      ]
+    },
+    "all": {
+      "n": 384,
+      "hits": 0,
+      "best_constant": 86,
+      "most_frequent_prediction": [
+        6,
+        97
+      ]
+    },
+    "mass:0->1": {
+      "n": 39,
+      "hits": 0,
+      "best_constant": 20,
+      "most_frequent_prediction": [
+        3,
+        20
+      ]
+    },
+    "mass:0->0": {
+      "n": 35,
+      "hits": 0,
+      "best_constant": 19,
+      "most_frequent_prediction": [
+        12,
+        19
+      ]
+    },
+    "acc": {
+      "n": 237,
+      "hits": 0,
+      "best_constant": 64,
+      "most_frequent_prediction": [
+        13,
+        80
+      ]
+    },
+    "acc:2->2": {
+      "n": 40,
+      "hits": 0,
+      "best_constant": 27,
+      "most_frequent_prediction": [
+        13,
+        27
+      ]
+    },
+    "acc:0->2": {
+      "n": 16,
+      "hits": 0,
+      "best_constant": 16,
+      "most_frequent_prediction": [
+        13,
+        13
+      ]
+    },
+    "mass:0->2": {
+      "n": 16,
+      "hits": 0,
+      "best_constant": 16,
+      "most_frequent_prediction": [
+        4,
+        16
+      ]
+    },
+    "acc:0->0": {
+      "n": 45,
+      "hits": 0,
+      "best_constant": 20,
+      "most_frequent_prediction": [
+        14,
+        25
+      ]
+    },
+    "acc:1->1": {
+      "n": 28,
+      "hits": 0,
+      "best_constant": 28,
+      "most_frequent_prediction": [
+        5,
+        28
+      ]
+    },
+    "acc:0->1": {
+      "n": 41,
+      "hits": 0,
+      "best_constant": 21,
+      "most_frequent_prediction": [
+        13,
+        32
+      ]
+    },
+    "mass:1->1": {
+      "n": 27,
+      "hits": 0,
+      "best_constant": 27,
+      "most_frequent_prediction": [
+        8,
+        25
+      ]
+    },
+    "acc:1->0": {
+      "n": 50,
+      "hits": 0,
+      "best_constant": 26,
+      "most_frequent_prediction": [
+        6,
+        26
+      ]
+    },
+    "acc:2->0": {
+      "n": 17,
+      "hits": 0,
+      "best_constant": 17,
+      "most_frequent_prediction": [
+        14,
+        9
+      ]
+    },
+    "mass:1->0": {
+      "n": 8,
+      "hits": 0,
+      "best_constant": 8,
+      "most_frequent_prediction": [
+        6,
+        8
+      ]
+    }
+  },
+  "convert_ood_value": {
+    "acc": {
+      "n": 139,
+      "hits": 0,
+      "best_constant": 60,
+      "most_frequent_prediction": [
+        6,
+        54
+      ]
+    },
+    "acc:2->0": {
+      "n": 54,
+      "hits": 0,
+      "best_constant": 31,
+      "most_frequent_prediction": [
+        11,
+        31
+      ]
+    },
+    "all": {
+      "n": 384,
+      "hits": 34,
+      "best_constant": 152,
+      "most_frequent_prediction": [
+        6,
+        82
+      ]
+    },
+    "mass": {
+      "n": 245,
+      "hits": 34,
+      "best_constant": 96,
+      "most_frequent_prediction": [
+        4,
+        58
+      ]
+    },
+    "mass:2->2": {
+      "n": 65,
+      "hits": 0,
+      "best_constant": 34,
+      "most_frequent_prediction": [
+        11,
+        29
+      ]
+    },
+    "acc:0->2": {
+      "n": 28,
+      "hits": 0,
+      "best_constant": 28,
+      "most_frequent_prediction": [
+        12,
+        15
+      ]
+    },
+    "mass:2->1": {
+      "n": 57,
+      "hits": 0,
+      "best_constant": 34,
+      "most_frequent_prediction": [
+        2,
+        21
+      ]
+    },
+    "mass:0->2": {
+      "n": 54,
+      "hits": 0,
+      "best_constant": 30,
+      "most_frequent_prediction": [
+        3,
+        24
+      ]
+    },
+    "acc:1->2": {
+      "n": 57,
+      "hits": 0,
+      "best_constant": 32,
+      "most_frequent_prediction": [
+        6,
+        31
+      ]
+    },
+    "mass:1->2": {
+      "n": 69,
+      "hits": 34,
+      "best_constant": 35,
+      "most_frequent_prediction": [
+        10,
+        34
+      ]
+    }
+  },
+  "convert_trainfam": {
+    "acc": {
+      "n": 217,
+      "hits": 0,
+      "best_constant": 48,
+      "most_frequent_prediction": [
+        10,
+        52
+      ]
+    },
+    "acc:2->2": {
+      "n": 47,
+      "hits": 0,
+      "best_constant": 31,
+      "most_frequent_prediction": [
+        10,
+        25
+      ]
+    },
+    "all": {
+      "n": 384,
+      "hits": 25,
+      "best_constant": 73,
+      "most_frequent_prediction": [
+        6,
+        92
+      ]
+    },
+    "acc:0->1": {
+      "n": 31,
+      "hits": 0,
+      "best_constant": 18,
+      "most_frequent_prediction": [
+        10,
+        13
+      ]
+    },
+    "acc:0->0": {
+      "n": 54,
+      "hits": 0,
+      "best_constant": 23,
+      "most_frequent_prediction": [
+        7,
+        23
+      ]
+    },
+    "acc:2->0": {
+      "n": 20,
+      "hits": 0,
+      "best_constant": 20,
+      "most_frequent_prediction": [
+        9,
+        10
+      ]
+    },
+    "mass": {
+      "n": 167,
+      "hits": 25,
+      "best_constant": 25,
+      "most_frequent_prediction": [
+        6,
+        78
+      ]
+    },
+    "mass:0->0": {
+      "n": 43,
+      "hits": 0,
+      "best_constant": 24,
+      "most_frequent_prediction": [
+        6,
+        24
+      ]
+    },
+    "mass:1->1": {
+      "n": 21,
+      "hits": 8,
+      "best_constant": 21,
+      "most_frequent_prediction": [
+        12,
+        8
+      ]
+    },
+    "mass:0->1": {
+      "n": 37,
+      "hits": 0,
+      "best_constant": 21,
+      "most_frequent_prediction": [
+        10,
+        18
+      ]
+    },
+    "mass:2->2": {
+      "n": 25,
+      "hits": 0,
+      "best_constant": 25,
+      "most_frequent_prediction": [
+        5,
+        25
+      ]
+    },
+    "acc:0->2": {
+      "n": 18,
+      "hits": 0,
+      "best_constant": 18,
+      "most_frequent_prediction": [
+        9,
+        13
+      ]
+    },
+    "mass:0->2": {
+      "n": 20,
+      "hits": 17,
+      "best_constant": 20,
+      "most_frequent_prediction": [
+        6,
+        17
+      ]
+    },
+    "mass:1->0": {
+      "n": 21,
+      "hits": 0,
+      "best_constant": 21,
+      "most_frequent_prediction": [
+        6,
+        21
+      ]
+    },
+    "acc:1->0": {
+      "n": 35,
+      "hits": 0,
+      "best_constant": 20,
+      "most_frequent_prediction": [
+        7,
+        17
+      ]
+    },
+    "acc:1->1": {
+      "n": 12,
+      "hits": 0,
+      "best_constant": 12,
+      "most_frequent_prediction": [
+        5,
+        12
+      ]
+    }
+  }
+}

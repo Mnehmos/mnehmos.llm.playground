@@ -112,7 +112,7 @@ def state_hash(st):
 
 
 # ------------------------------------------------------------------ objectives
-def loss_on(model, b, twins, obj):
+def loss_on(model, b, twins, obj, *, retain_parts=False):
     """Answer CE + aux role CE (training only) + IIT on force examples (block swap within the batch;
     no extra forward) + paraphrase consistency (symmetric KL between twins; no extra forward)."""
     h, x1 = model.trunk(b["tok"])
@@ -139,10 +139,10 @@ def loss_on(model, b, twins, obj):
         parts["cons"] = 0.5 * (F.kl_div(lp, lq, log_target=True, reduction="batchmean") +
                                F.kl_div(lq, lp, log_target=True, reduction="batchmean"))
         loss = loss + obj["consistency"] * parts["cons"]
-    return loss, {k: v.item() for k, v in parts.items()}
+    return loss, parts if retain_parts else {k: v.item() for k, v in parts.items()}
 
 
-def train_steps(st, lesson, n, log=None):
+def train_steps(st, lesson, n, log=None, *, recorder=None):
     """n optimizer steps on batches drawn from `lesson` (validated). Returns per-step digests."""
     D.validate_lesson(lesson)
     m, opt = st["model"], st["opt"]
@@ -162,7 +162,10 @@ def train_steps(st, lesson, n, log=None):
         loss, parts = loss_on(m, b, twins, o)
         opt.zero_grad()
         loss.backward()
-        opt.step()
+        if recorder is None:
+            opt.step()
+        else:
+            recorder(st, b, exs, twins, o, loss, parts)
         digests.append(hashlib.sha256(b["tok"].numpy().tobytes()).hexdigest()[:12])
         if log is not None:
             log.append(dict(step=st["step"], loss=round(loss.item(), 5), quarantined=quar, **{k: round(v, 5) for k, v in parts.items()}))

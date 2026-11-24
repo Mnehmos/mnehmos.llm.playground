@@ -1,0 +1,110 @@
+{
+  "step": 4500,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "a16febe23e243c829c273d6dd77943364f7bcdb4d507783601048e425347b92d",
+  "prediction": {
+    "statement": "Predict at least 50 forward swaps in the next checkpoint.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 50.0,
+    "direction": "at_least",
+    "due": 4600
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.2109
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "First QKV and first MLP input lead endpoint deltas at 1.42 and 1.33.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Effective motion instead leads at L3 and L2 QKV, about .037 each.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 has gradient .0133 and word form .00816, both above digit .00065. Task/IIT cosine drops further to .123.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "No head identity qualifies, while held force binding edges up to .221.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swaps drop 58 to 53. Force patch yields 10 intended versus 3 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force .2109 meets the bound and familiar conversion remains perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence deteriorates to .510 and the novel value is still wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Upstream drift may be amplified for more complex phrasings even when the final answers are retained.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 50 forward swaps in the next checkpoint.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare gradient directions between C02 and C01 after removing shared high-norm occurrences.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The source-token intervention is informative about its tested site, not about all representations visible to the decoder.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the mixed lesson and reassess concentration at the next audit.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force remains at least .20 next checkpoint. The measured value was 0.2109, against threshold 0.2.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

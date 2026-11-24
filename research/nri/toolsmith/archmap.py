@@ -1,7 +1,7 @@
 """student_architecture_map: a versioned, machine-readable description of the student, generated from
 the ACTUAL source files and a runtime trace (Issue #25 §1). Code and runtime shapes are authoritative.
 
-    python -m toolsmith.archmap [checkpoint_dir]      -> results/sem/student_architecture_map.json
+    python -m toolsmith.archmap [checkpoint_dir]      -> sci/student_architecture_map.json
 
 The version is the SHA-256 of (source file hashes + runtime site shapes); `revalidate()` recomputes it
 and reports any drift, so tools can refuse to run against a map that no longer matches the build.
@@ -27,7 +27,7 @@ from sem import train as TR  # noqa: E402
 
 SOURCES = ["sem/lang.py", "sem/data.py", "sem/model.py", "sem/train.py", "sem/observe.py", "run_sem.py",
            "toolsmith/sandbox_child.py", "toolsmith/runner.py"]
-OUT = ROOT / "results" / "sem" / "student_architecture_map.json"
+OUT = ROOT / "sci" / "student_architecture_map.json"
 
 
 def _sha(p):

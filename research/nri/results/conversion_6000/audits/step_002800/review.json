@@ -1,0 +1,110 @@
+{
+  "step": 2800,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "ac0db09032f8a23fb4b37eaccc9619f73b079c1c599fecdaecee5fd873e2f9a0",
+  "prediction": {
+    "statement": "Predict at least .06 numeric dev next interval.",
+    "metric": "/concepts/dev_acc/dev~1convert_ood_value",
+    "threshold": 0.06,
+    "direction": "at_least",
+    "due": 2900
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.0703
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 stays the most displaced tensor at 1.149. L1 changes .818.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 steps .0342 slightly exceed the last interval while L3 reaches .0251.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Traced content gradients are all below .0006 and E objective cosine falls toward zero at .008.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding holds .203 and two attention IDs persist while force paraphrase cosine slips .292.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swaps fall six to 38. Force edits match acceleration ten times and mass twice.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All forward prompts still score 10/10 and force recovers to .182.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Held-out value 4 is wrong. The mixed numeric panel is .0703, down slightly.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The intervention loss and behavior loss may use separate geometries. The target cohort needs stratification before reading this as rule learning.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least .06 numeric dev next interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare same-route patch errors against the value identities that failed.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "A single selected 10-item cohort can be saturated while the wider domain remains poorly sampled.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue with four families and observe whether the numeric gain survives.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict numeric transfer stays at least .06 next interval. The measured value was 0.0703, against threshold 0.06.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    }
+  }
+}

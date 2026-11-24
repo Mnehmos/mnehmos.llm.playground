@@ -1,0 +1,110 @@
+{
+  "step": 3100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "997813b39d17ed5828b494a7ed18cfd0363fdf2ee083e7d760b10e073d79813f",
+  "prediction": {
+    "statement": "Predict force reaches at least .20 after a second interval of increased exposure.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 3200
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 0.1823
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "E moves 6.78 and P 2.91, a switch from QKV-dominated displacement after enriching force.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "E updates lead at .1143 despite raw norm .068 versus .240 at L2.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word content gradient .0147 rises sharply. Task and interchange embedding cosine .219 shows positive local agreement.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Force paraphrase geometry rises to .366 while confident head count drops from three to one.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Force block scores nine intended and four wrong compared with five and seven before. Forward swap stays low at 35.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All forward prompts remain correct, with broad new wording up to .0885.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force accuracy only .1823 falsifies the .22 prediction. Withheld forward value remains incorrect.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Interchange supervision might start to alter the force block before accuracy catches up, or the target counts may be ordinary variation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force reaches at least .20 after a second interval of increased exposure.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Track whether intended and wrong-variable matches separate over multiple observations.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The intervention panel is a specific causal check, while agreement of objective gradients is local and can change with batch selection.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the force-enriched mixture to test whether these changes persist.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force development accuracy above .22 after the first force-enriched interval. The measured value was 0.1823, against threshold 0.22.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

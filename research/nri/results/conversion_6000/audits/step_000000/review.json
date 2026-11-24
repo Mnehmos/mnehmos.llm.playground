@@ -1,0 +1,101 @@
+{
+  "step": 0,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "assessment": {
+    "weights": {
+      "analysis": "Embedding and all other deltas are zero at the fresh initialization. The fixed mass conversion samples are a baseline separate from the previous mixed run.",
+      "evidence": [
+        "/weight_changes/E.weight"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "No actual updates exist yet. Task embedding-gradient norm .2395 exceeds the role objective at .1598 on the fixed batch before weighting.",
+      "evidence": [
+        "/interval_overview",
+        "/objective_dynamics/tensor_norms/task/E.weight"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Query gradient norm .657 exceeds every content occurrence by more than 12 times. Task and role gradient cosine .029 is near orthogonal at E.weight.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/objective_dynamics/cosine_by_tensor/task:aux/E.weight"
+      ]
+    },
+    "representations": {
+      "analysis": "The layer-1 force binding reader is already .432 on familiar forms. The .988 embedding-gradient agreement on digit versus word conversion has a large shared-query component.",
+      "evidence": [
+        "/concepts/binding_probe",
+        "/token_trace/embedding_gradient_alignment/12:13"
+      ]
+    },
+    "causal": {
+      "analysis": "Replacing the layer-1 value yields 9/90 donor targets, identical to the unit replacement and the constant-answer baseline.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit"
+      ]
+    },
+    "capabilities": {
+      "analysis": "One out of ten correct comes from selecting class 2 for every prompt.",
+      "evidence": [
+        "/concepts/conversion/practiced"
+      ]
+    },
+    "failures": {
+      "analysis": "The held-out input 4 misses and the unfamiliar unit scores 0/8. The single held-out value is an individual case, not a stable transfer rate.",
+      "evidence": [
+        "/concepts/conversion/new_values",
+        "/concepts/conversion/new_unit"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The model may learn a value-specific lookup in this wording. Scoring a new wording with the same values can expose template dependence, and reverse direction can expose a fixed multiplier.",
+      "evidence": [
+        "/concepts/conversion/practiced/predicted",
+        "/concepts/conversion/practiced/expected"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least 8 of 10 practiced values correct by step 100 because the single direction and rendering leave only a small mapping to learn.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare value and same-unit activation swaps after learning. Test word and abbreviation forms before exposing the student to them.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "instruments": {
+      "analysis": "The focus panels cover value, frame, style, direction and unit separately. A learned conversion law requires a richer held-out numeric split than this one provides.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/concepts/conversion"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue with C01 and the single klot-to-brel direction. Keep the 20% force replay inherited from the lesson policy.",
+      "evidence": [
+        "/concepts/conversion/practiced"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "This fresh seed starts its own prediction ledger at step zero.",
+      "evidence": [
+        "/step"
+      ]
+    }
+  },
+  "checkpoint_sha256": "bf95b750918f126e89ff2199794cf93bb31e200ee6ad3ad3b90dfb0d37fbfc8a",
+  "prediction": {
+    "statement": "I predict at least 8 of 10 practiced values correct by step 100 because the single direction and rendering leave only a small mapping to learn.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 8.0,
+    "direction": "at_least",
+    "due": 100
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 1100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "960861789f9fa60d23b7b950b89cfb719edfe125d86723860880f19039408e29",
+  "prediction": {
+    "statement": "I predict at least 60/90 forward swaps by 1200 if continued practice restores a more swappable number representation.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 60.0,
+    "direction": "at_least",
+    "due": 1200
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 56
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "W_out movement receded to 1.64 and W_in to 1.22 after the six-route transition.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "W_out leads mean updates at .0299 even with smaller raw gradient than attention-two QKV.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The alternate frame loss is .000273, and the word form has the largest tested content gradient at .00293. Task-role cosine remains .054.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Familiar force binding is .464 and withheld .211. One head is assigned while L1.h0 remains ambiguous at margin .0024.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swaps plateau at 56/90. The separate force patch has three mass matches and ten acceleration matches.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar forward accuracy stays at 10/10 in all three renderings. Reverse is 7/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The broad new-family score dropped to 1.56% and withheld 4 remains wrong. These panels differ in more than one factor.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "A route-dependent lookup remains plausible. Stable ordinary predictions with a lower patch score suggest that forcing the full activation across examples can bring mismatched context.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "I predict at least 60/90 forward swaps by 1200 if continued practice restores a more swappable number representation.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Audit cross-route replacements on the six-route checkpoint and compare against the pre-expansion evidence.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Raw example gradients are local and often tiny on these familiar prompts. The effective updates can reflect other draws, including force replay.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Maintain six directions. The mass task lacks a justified bounded weight edit at this point.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict recovery to at least 58 of 90 forward swaps after one interval at the new route mix. The measured value was 56, against threshold 58.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 2600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "b13d533c1e69184f8ce6ba7a5b858cb8f9c8818014cb9dc7fc472f5eebf1f07e",
+  "prediction": {
+    "statement": "Predict at least 40 same-route number swaps after another interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 40.0,
+    "direction": "at_least",
+    "due": 2700
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.0547
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Delta leadership returns to layer two at 1.06, while layer three changes .893.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 QKV's effective .0354 beats L3 .0264 with higher raw gradient as well.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Original digit gradient declines to .00319 and continues to lead the panel. Task/aux cosine is .030.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding remains .193 and force geometry drops to .256. Two head IDs are confident.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward value swap recovers slightly to 41, and force mass reaches seven versus nine for acceleration.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The practiced conversions retain full accuracy and force scores .193.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "C03 broad accuracy is zero despite the four-frame training, while numeric accuracy is .0547.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Grammar variation may help input parsing without delivering a shared numerical rule.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 40 same-route number swaps after another interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Audit same-AST changes in all four training frames and C03 at the final model.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The aggregate development metrics still mix input dimensions, directions and surface forms. Keep those scope limits in view.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the existing lesson to see if the wider syntax starts to improve transfer.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict that the broader numeric transfer stays at least 5% for another interval. The measured value was 0.0547, against threshold 0.05.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    }
+  }
+}

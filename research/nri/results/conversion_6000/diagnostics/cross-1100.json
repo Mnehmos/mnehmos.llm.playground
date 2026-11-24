@@ -1,0 +1,33 @@
+{
+  "n": 270,
+  "matches": {
+    "none": {
+      "base": 270,
+      "base_route_donor_number": 0,
+      "base_number_donor_unit": 0,
+      "donor_number_and_unit": 0,
+      "full_donor": 10
+    },
+    "value": {
+      "base": 23,
+      "base_route_donor_number": 91,
+      "base_number_donor_unit": 5,
+      "donor_number_and_unit": 54,
+      "full_donor": 86
+    },
+    "unit": {
+      "base": 270,
+      "base_route_donor_number": 0,
+      "base_number_donor_unit": 0,
+      "donor_number_and_unit": 0,
+      "full_donor": 10
+    },
+    "joint": {
+      "base": 23,
+      "base_route_donor_number": 92,
+      "base_number_donor_unit": 5,
+      "donor_number_and_unit": 54,
+      "full_donor": 85
+    }
+  }
+}

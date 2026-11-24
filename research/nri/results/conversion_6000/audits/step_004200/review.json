@@ -1,0 +1,110 @@
+{
+  "step": 4200,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "3a808d27a2275d5e33621d4df0e9c7fb1709ea14f74a711f70b541b8d07bf421",
+  "prediction": {
+    "statement": "Predict value swaps remain at least 55 next.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 55.0,
+    "direction": "at_least",
+    "due": 4300
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 0.1823
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Attention-one QKV moves 4.97 and MLP1 input 4.82. This is a large reorganization.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L1 raw .916 and actual .158 exceed L2 .611 and .141, respectively.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 remains the strongest content gradient at .00404 while task/IIT E alignment rises to .862.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "No head match persists, held force binding rises .227, and paraphrase geometry falls .376.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swaps rebound to 63. Force mass reaches 12 against two wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar conversion survives and equivalence reaches .615.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force .1823 falsifies the prior and numeric development falls to .0417.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The attention transition and large objective alignment could reflect a strong shared task pathway. Accuracy did not improve enough to treat it as learning the full computation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict value swaps remain at least 55 next.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Look for stabilization of the layer-one effect after the large upstream update.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Sparse repeated token traces cannot identify which training examples were responsible for the direction of this update.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the mix and collect evidence across another interval before adjusting it again.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict the ordinary force score retains at least .20 next. The measured value was 0.1823, against threshold 0.2.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}

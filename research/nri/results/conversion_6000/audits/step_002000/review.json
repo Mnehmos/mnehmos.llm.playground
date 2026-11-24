@@ -1,0 +1,160 @@
+{
+  "step": 2000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "7b41cef729ce170562d442372f3719307fa3cd9835129f8e60ff3732fa43c2d8",
+  "prediction": {
+    "statement": "Predict forward accuracy stays at least 9/10 after withdrawing the consistency loss.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 2100
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "First QKV moved 2.88 and third 2.57, far above the preceding interval.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L1 actual update .0865 and raw norm .496 both dominate among the leading tensors.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The paired-form losses nearly vanish even as E task-consistency alignment surges to .604.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "All confident head identities disappear at this observation. Within-force paraphrase similarity drops to .237.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward number control falls by 20 trials to 38/90 despite intact answers.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All familiar forward scores are 10/10. Equivalence reaches .641.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Reverse drops to 6/9 and new-family conversion returns to zero.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The network may have gained an answer-readout invariance at the cost of mixing number with the route or phrasing. Update directions and model behavior show a transition but do not identify its cause.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict forward accuracy stays at least 9/10 after withdrawing the consistency loss.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Keep paired exposure and remove the extra objective so that a subsequent change is easier to interpret.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Hysteresis prevents claiming specific head relocation when the signatures are ambiguous. The zero unit-only target count does not rule out later unit use.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep equivalent pairs and set consistency weight to zero. Check for recovery in the patch test.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was I predict at least nine forward answers remain correct. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.8,
+      "equiv": 0.2
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

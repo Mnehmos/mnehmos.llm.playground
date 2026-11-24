@@ -1,0 +1,110 @@
+{
+  "step": 5700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "68f218270a1e27d9019b95b7c99a02c3d0038ffb004a46253733bab26b1370fc",
+  "prediction": {
+    "statement": "Predict at least 55 forward swaps next interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 55.0,
+    "direction": "at_least",
+    "due": 5800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 60
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L1 QKV net movement 1.26 exceeds L2 1.20, reversing the previous ranking.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Mean effective steps are larger in L2 and L3 at .0355 and .0313.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient rises to .00198 versus .00130 for original digits. E alignment drops -.022.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Six head signatures qualify even though force paraphrase cosine falls .528.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap recovers 48 to 60. Force mass gives 11 versus three wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Ordinary force remains .203 and original formats stay perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Equivalence drops to .422 and new conversion family is .013.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The rebound in source swaps under identical lessons supports intermittent geometry changes. It remains unclear whether the same pairs recover.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 55 forward swaps next interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare final broad conversion strata for unseen numbers and changed wording.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The paired score identifies usefulness of a position in one context. Joint geometry or other locations may compensate.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the final recipe unchanged.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 48 swaps in the next checkpoint. The measured value was 60, against threshold 48.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

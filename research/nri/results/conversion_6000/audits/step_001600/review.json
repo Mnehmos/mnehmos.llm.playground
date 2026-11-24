@@ -1,0 +1,110 @@
+{
+  "step": 1600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "7137d0f7c67039497b57beff893c5c5b6fd58cf85fecdc21b328bd579b34f878",
+  "prediction": {
+    "statement": "Predict at least nine original-form answers next.",
+    "metric": "/concepts/conversion/practiced/correct",
+    "threshold": 9.0,
+    "direction": "at_least",
+    "due": 1700
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 0.0469
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Largest displacement shifts to attn2 .823, followed by attn3 .736.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Attn2 leads effective updates at .026 while first QKV raw norm is larger at .120.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "The word example again has the highest content gradient at .00961. Task-role cosine is -.004.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held force binding falls to .203 while within-paraphrase geometry rebounds to .306.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward number patch slips to 52/90. The force block is only 6/77 on intended mass.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All three practiced conversion formats stay 10/10.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The .065 numeric prediction fails at .0469. The broad unfamiliar wording panel is still zero.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The equivalence tasks might be learning an independent output pathway. A transfer benefit should improve numeric scores while preserving trained answers.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least nine original-form answers next.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Inspect the equivalence and force scores together to see whether training redistributes behavior across task families.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The current fixed token panel measures practiced conversion gradients more directly than equivalence learning dynamics.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the mixed curriculum because one additional interval can distinguish onset from a persistent outcome.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict numeric development conversion rises above .065 once the new task consolidates. The measured value was 0.0469, against threshold 0.065.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    }
+  }
+}

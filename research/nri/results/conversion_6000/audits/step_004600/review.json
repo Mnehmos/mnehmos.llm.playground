@@ -1,0 +1,110 @@
+{
+  "step": 4600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "7cac2df9126ae32b7ff8d3da82cf00402cc034f17b04fa0f3bb70dac65de1bc9",
+  "prediction": {
+    "statement": "Predict force at least .18 next.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.18,
+    "direction": "at_least",
+    "due": 4700
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 52
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L3 and L2 move .928 and .892, reducing net movement since 4500.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 .0292 and L3 .0278 lead actual updates, both below their previous rates.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient doubles to .0241 despite correct classification. Task/IIT alignment returns to .310.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding stays .221 while force geometry rises .421, and no head match qualifies.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap 52 confirms the prediction; force margins stay small at 10 versus 7.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Ten forward cases remain correct in each format and equivalence rebounds to .565.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force falls below .20 and C03 again scores zero.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The force objective may perturb calibration more than classification on the narrow probes, as the C02 loss rises while answers remain correct.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force at least .18 next.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare losses and margins on practiced prompts as sensitivity measures even when the accuracy has saturated.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Residual geometry and intervention outputs can disagree. The checkpoint preserves both channels.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue the current lesson through the next observation.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 50 forward swaps in the next checkpoint. The measured value was 52, against threshold 50.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

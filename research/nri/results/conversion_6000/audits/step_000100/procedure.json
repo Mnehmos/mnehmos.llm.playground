@@ -1,0 +1,78 @@
+{
+  "config": {
+    "conversion": true,
+    "seed": 482111,
+    "budget": 300,
+    "arm": "toolsmith",
+    "checkpoint_interval": 100,
+    "source": {
+      "sem/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sem/data.py": "8514470628c0dec995770d80aa35718a1a9829f992b0ba44575ab2a4bc3fe91b",
+      "sem/lang.py": "2b3d8e8d466d3f72520a72e7fb74b00abd2cba7a59bb86f0968f9fac3bce12cd",
+      "sem/model.py": "e3866efc0796c6451ff750a9b78d3d60a10ac91ec5859452e1ee3ec394d14684",
+      "sem/observe.py": "9260e1c6773b8a51aae03c96989de99e4bb6fbc191961a94629b890df85a5ccd",
+      "sem/program.py": "8a557fcd4e7669c9ad96c37e3b1d6bcf852dfadbd903ea004f70242b1e6d9f12",
+      "sem/sealed_extras.py": "f0e13078c1b66e0497e373d8e75901d9655f8627b9e5026ef4ada66a05905c07",
+      "sem/train.py": "8bdb82efeaca922a7e5265052e11e6345a83f38d88b6635781181c395d499377",
+      "sci/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sci/conversion.py": "fdaa4bef399f792d202fdfadbacc5a10d7e87ec408c1ac6809ee4f1a0666177f",
+      "sci/loop.py": "bbf6d40b1853dcba9c83c566fec7d6ede927cef6becb9199b11d39846f59a0dc",
+      "sci/measure.py": "60f8d86e7826d90d6f753b9874a42d080bfc741eb5f9da8f818f533eb744c0fa",
+      "sci/tool.py": "c5631db9bdb187614f23f08a1bd39443903b0799915b96371efb2a52ee90f9a2",
+      "run_sem.py": "f2456e92655da5a63aad4eb355367020b0aa8ef940ba1f6c726fc134b20b97ce"
+    },
+    "purpose": "non-study feasibility",
+    "base_commit": "b1b537a8c7d7333c1c9ce9c2f154330562a4c89a"
+  },
+  "active_lesson": {
+    "task_weights": {
+      "convert": 1.0
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "scheduler": {
+    "phase": "pretrain",
+    "step": 100,
+    "learning_rates": [
+      0.001
+    ]
+  },
+  "tokenizer": "sem.data.Vocab",
+  "schema": "sem.lang",
+  "source_hashes": {
+    "sem/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sem/data.py": "8514470628c0dec995770d80aa35718a1a9829f992b0ba44575ab2a4bc3fe91b",
+    "sem/lang.py": "2b3d8e8d466d3f72520a72e7fb74b00abd2cba7a59bb86f0968f9fac3bce12cd",
+    "sem/model.py": "e3866efc0796c6451ff750a9b78d3d60a10ac91ec5859452e1ee3ec394d14684",
+    "sem/observe.py": "9260e1c6773b8a51aae03c96989de99e4bb6fbc191961a94629b890df85a5ccd",
+    "sem/program.py": "8a557fcd4e7669c9ad96c37e3b1d6bcf852dfadbd903ea004f70242b1e6d9f12",
+    "sem/sealed_extras.py": "f0e13078c1b66e0497e373d8e75901d9655f8627b9e5026ef4ada66a05905c07",
+    "sem/train.py": "8bdb82efeaca922a7e5265052e11e6345a83f38d88b6635781181c395d499377",
+    "sci/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sci/conversion.py": "fdaa4bef399f792d202fdfadbacc5a10d7e87ec408c1ac6809ee4f1a0666177f",
+    "sci/loop.py": "bbf6d40b1853dcba9c83c566fec7d6ede927cef6becb9199b11d39846f59a0dc",
+    "sci/measure.py": "60f8d86e7826d90d6f753b9874a42d080bfc741eb5f9da8f818f533eb744c0fa",
+    "sci/tool.py": "c5631db9bdb187614f23f08a1bd39443903b0799915b96371efb2a52ee90f9a2",
+    "run_sem.py": "f2456e92655da5a63aad4eb355367020b0aa8ef940ba1f6c726fc134b20b97ce"
+  },
+  "previous_manifest": "bf95b750918f126e89ff2199794cf93bb31e200ee6ad3ad3b90dfb0d37fbfc8a",
+  "rng": "CPU Torch and dedicated Python data-stream RNG; no NumPy or CUDA training RNG",
+  "objective_gradients": "unweighted, local, controlled batch",
+  "batch_fingerprint": "canonical JSON AST, render and twin indices"
+}

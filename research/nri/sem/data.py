@@ -100,6 +100,9 @@ def sample_ast(task, rng, tuple_splits=("train",), numeric=("train",), sense_ctx
 
 def _focus_ok(ast, focus):
     for k, allowed in focus.items():
+        if k == "conversion_directions" and ast["task"] == "convert":
+            if ast["dim"] != "mass" or [ast["u"], ast["t"]] not in allowed:
+                return False
         if k == "mass_unit":
             us = [ast[x] for x in ("mu", "u1", "u2") if x in ast] + ([ast["u"], ast["t"]] if ast.get("dim") == "mass" else [])
             if us and not any(u in allowed for u in us):
@@ -137,7 +140,7 @@ class LessonError(ValueError):
 def validate_lesson(spec):
     """Reject any lesson that touches non-training pools or exceeds bounds. Returns the normalized spec."""
     allowed_keys = {"task_weights", "replay_weight", "families", "style", "distractor_rate", "distractor_contexts",
-                    "sense_contexts", "hard_negative_rate", "paraphrase_pair_rate", "objectives", "focus", "note"}
+                    "sense_contexts", "hard_negative_rate", "paraphrase_pair_rate", "objectives", "focus", "note", "conversion_directions"}
     extra = set(spec) - allowed_keys
     if extra:
         raise LessonError(f"unknown lesson fields {extra}")
@@ -174,6 +177,12 @@ def validate_lesson(spec):
         lo, hi = LESSON_BOUNDS["objectives"].get(k, (None, None))
         if lo is None or not lo <= v <= hi:
             raise LessonError(f"objective {k}={v} not allowed")
+    if "conversion_directions" in spec:
+        directions = spec["conversion_directions"]
+        if not isinstance(directions, list) or not directions or any(
+            pair not in [[u,t] for u in range(3) for t in range(3) if u != t] for pair in directions
+        ):
+            raise LessonError("conversion directions must contain distinct unit IDs")
     for k, v in spec.get("focus", {}).items():
         if k not in ("mass_unit", "acc_unit") or not v or any(u not in (0, 1, 2) for u in v):
             raise LessonError("focus must restrict mass_unit / acc_unit to unit ids")
@@ -188,6 +197,9 @@ def lesson_batch(spec, n, rng):
     tw = dict(spec["task_weights"])
     tasks, weights = list(tw), [tw[t] for t in tw]
     st = spec.get("style", {})
+    focus = dict(spec.get("focus", {}))
+    if "conversion_directions" in spec:
+        focus["conversion_directions"] = spec["conversion_directions"]
     out, quarantined, twins = [], 0, []
     n_replay = int(round(spec["replay_weight"] * n))
     n_pair = int(spec.get("paraphrase_pair_rate", 0) * (n - n_replay) / 2)
@@ -203,7 +215,7 @@ def lesson_batch(spec, n, rng):
         task = rng.choices(tasks, weights)[0]
         fams = spec.get("families", {}).get(task) or families(task, TRAIN_FAMILY_SPLITS)
         ast = sample_ast(task, rng, sense_ctx=spec.get("sense_contexts"), hard_negative=rng.random() < spec.get("hard_negative_rate", 0),
-                         focus=spec.get("focus"))
+                         focus=focus)
         dis = None
         if task == "force" and rng.random() < spec.get("distractor_rate", 0):
             dis = rng.choice(spec["distractor_contexts"])

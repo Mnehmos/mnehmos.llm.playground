@@ -1,0 +1,163 @@
+{
+  "step": 3000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "94b1b2307608ce0534e16d8cd8ce52e2a8f953a37a724b67bb946f765b68b7bd",
+  "prediction": {
+    "statement": "Predict force development accuracy above .22 after the first force-enriched interval.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.22,
+    "direction": "at_least",
+    "due": 3100
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 34
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV delta rises to 1.30, with first-layer QKV also above one at 1.13.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Effective steps .0409 for layer two exceed .0311 for L1 despite lower raw norm.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient .00088 leads, and the task-role embedding gradient is effectively orthogonal.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Three attention identities clear the threshold. Held force binding .201 does not improve alongside that count.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Number swap falls to 34 against the predicted 35. The force block has 5 intended versus 7 wrong hits.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The student retains all practiced forward formats, while equivalence is .654.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force remains .193 on familiar development and held-out forward 4 is still wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Halfway through the run, generalization from conversion practice alone is weak. Direct force and low-weight interchange may improve compositional control or compete for the same representation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force development accuracy above .22 after the first force-enriched interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the force mass patch with both its wrong-variable and unpatched controls before crediting causal emergence.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The three surviving head signatures support continuity hypotheses, but they are not causal modules by themselves.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Increase force exposure and add weight .5 on its interchange objective. Preserve all conversion routes and surface families.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict 35 or more forward value swaps at step 3000. The measured value was 34, against threshold 35.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.6,
+      "equiv": 0.15,
+      "force": 0.25
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02",
+        "C04",
+        "C05"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.5,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

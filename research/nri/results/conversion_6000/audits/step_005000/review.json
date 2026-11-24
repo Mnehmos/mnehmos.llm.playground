@@ -1,0 +1,163 @@
+{
+  "step": 5000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "5f3bb32df1a7365ae381dd06b9becd712c3d5634015aff22c053216f788f9a71",
+  "prediction": {
+    "statement": "Predict forward swaps stay at least 55/90 once the force swap loss is withdrawn.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 55.0,
+    "direction": "at_least",
+    "due": 5100
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 58
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 QKV moved .922 and .872, slightly more than the previous interval.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Layer two still leads mean effective updates .0319 to .0274.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient decreases from .0319 to .00737. Task/IIT cosine rises from .020 to .326.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held force binding .232 and paraphrase similarity .439 have no matching stable head ID.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward patch holds 58 and force mass remains only 10/77 at its stronger IIT weight.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward correctness stays perfect across forms and numeric development holds .0703.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The held value remains wrong, and equivalence returns to 50%.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The force IIT change produced modest force margins without a robust declared mass representation. A withdrawal phase may show whether those margins depend on ongoing supervision.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict forward swaps stay at least 55/90 once the force swap loss is withdrawn.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Freeze task mix, vary only the objective, and use late force intention counts to test retention.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The late-stage withdrawal is exploratory. Time trends and earlier curriculum changes confound causal claims about the objective.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Set IIT back to zero for the last thousand updates while maintaining force practice and all conversion routes.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict forward swap stays above 55 next interval. The measured value was 58, against threshold 55.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.6,
+      "equiv": 0.15,
+      "force": 0.25
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02",
+        "C04",
+        "C05"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

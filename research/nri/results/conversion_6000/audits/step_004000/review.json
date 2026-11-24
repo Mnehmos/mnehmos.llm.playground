@@ -1,0 +1,163 @@
+{
+  "step": 4000,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "e333d4458f8b0fc21bbef938a4b255b2a71193ea39d0cdab2869eeb53cd59228",
+  "prediction": {
+    "statement": "Predict force ordinary accuracy at least .19 after stronger interchange practice.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.19,
+    "direction": "at_least",
+    "due": 4100
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 42
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 QKV have grown to 1.406 and 1.327 net displacement.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Their effective steps .0422 and .0408 remain close.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "All three traced content gradients are below .0006 and task/IIT cosine is .389.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding .216 and two confident identities indicate modest continuity. Force paraphrase geometry reaches .477.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Number swap drops to 42, while force intended reaches 14 against five wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar prompts stay perfect and equivalence reaches .565.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force development falls to .175 and the missed forward value persists.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The increasing force intervention margin could reflect partial causal organization while the answer pathway remains weak. A larger IIT coefficient can test whether the margin responds.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict force ordinary accuracy at least .19 after stronger interchange practice.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Hold task sampling fixed, increase just interchange weight, and inspect intended versus wrong counts.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The force swap is the correct instrument for the declared block, while ordinary accuracy has several other causes.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Increase IIT from .5 to 1.5 for force examples, preserving the curriculum and optimizer.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 43 forward swaps next. The measured value was 42, against threshold 43.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.6,
+      "equiv": 0.15,
+      "force": 0.25
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02",
+        "C04",
+        "C05"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 1.5,
+      "consistency": 0.0
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

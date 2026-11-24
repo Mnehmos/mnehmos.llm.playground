@@ -1,0 +1,160 @@
+{
+  "step": 1700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "curriculum",
+  "checkpoint_sha256": "91ff1ad4363fe4bd7710ac2cc01f06918fee2f7ed03af3b06e69492b59e6c5cf",
+  "prediction": {
+    "statement": "Predict forward value-swap score of at least 52 after a small matched-output consistency lesson.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 52.0,
+    "direction": "at_least",
+    "due": 1800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 10
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Second QKV moved 1.15, larger than E .776 or the readout .763.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Its .0277 effective update norm leads despite first QKV having stronger raw gradients.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form content gradient decreased to .000379. C02 now leads content at .00176. Objective cosine is .058.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Two attention identities meet hysteresis, but h0 margin .006 remains below threshold. The force binding holdout falls to .201.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap drifts down to 51. Mass and acceleration targets each score 5/77 on the declared force block.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Original conversion formats are perfect and reverse stays at 7/9.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Held-out conversion falls to .0312 and new-family accuracy is .0026.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Although the current equivalence lesson could build a separate ability, it has shown little near-term benefit to conversion transfer. Pairing paraphrases could change this or simply reduce variation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict forward value-swap score of at least 52 after a small matched-output consistency lesson.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the same AST in matched frames, and inspect task versus consistency gradients at E.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The separate force-level cosine is a useful retention signal but does not show that conversion representations were normalized.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Introduce a 30% paraphrase-pair allocation among the non-replay examples and weight consistency at .15. Keep the task mixture and directions fixed.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least nine original-form answers next. The measured value was 10, against threshold 9.0.",
+      "evidence": [
+        "/concepts/conversion/practiced/correct"
+      ]
+    }
+  },
+  "lesson": {
+    "task_weights": {
+      "convert": 0.8,
+      "equiv": 0.2
+    },
+    "replay_weight": 0.2,
+    "families": {
+      "convert": [
+        "C01",
+        "C02"
+      ]
+    },
+    "objectives": {
+      "aux_role": 0.5,
+      "iit": 0.0,
+      "consistency": 0.15
+    },
+    "conversion_directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "style": {
+      "p_word": 0.5,
+      "p_abbr": 0.5
+    },
+    "hard_negative_rate": 0.3,
+    "paraphrase_pair_rate": 0.3
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "step": 5500,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "373859a6f0b7a2e43eba537618730946af13ab09fb36ec27808eb4cffc8c5def",
+  "prediction": {
+    "statement": "Predict at least 60 correct value swaps on the next interval.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 60.0,
+    "direction": "at_least",
+    "due": 5600
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 67
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 endpoint deltas both cross one again, at 1.09 and 1.03.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3's .0315 average actual update narrowly leads L2 despite smaller raw gradients.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "All three local task losses are under .00004; word and C02 gradients round to .00007. Role alignment stays -.022.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Four head IDs persist and force paraphrase similarity rises a little to .545.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swaps improve to 67, while force patch intention falls to 7/77 against six wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "All three familiar forward panels still score 10/10, and broad numeric development is .0885.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force ordinary is .188 and the one withheld forward input remains incorrect.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The later swap recovery and fully saturated practiced loss co-occur without robust novel-value results. This is compatible with a restructured familiar mapping.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 60 correct value swaps on the next interval.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the final donor manipulations to the best early 90/90 checkpoint for an explicit longitudinal contrast.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "There are enough overlapping examples to characterize this run, but no seed-level estimate.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep observing under the same lesson for the last five checkpoints.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 60 value swaps next. The measured value was 67, against threshold 60.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

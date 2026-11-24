@@ -1,0 +1,110 @@
+{
+  "step": 2700,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "db99dcb0c4f3e85c12780fe453d7792c8f5e370904acab9c5690b0648e6c66c7",
+  "prediction": {
+    "statement": "Predict numeric transfer stays at least .06 next interval.",
+    "metric": "/concepts/dev_acc/dev~1convert_ood_value",
+    "threshold": 0.06,
+    "direction": "at_least",
+    "due": 2800
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 44
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 QKV endpoint displacement increases to 1.136 while L1 is .806.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 leads actual steps at .032 and L3 follows at .0238.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word-form gradient .00084 is largest but all three example losses are very small. E cosine is .058.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding rises to .203 and force paraphrase geometry to .300; two head IDs remain.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Source value swap reaches 44, above the predicted threshold. Force outcomes remain ambiguous at 4 intended versus 5 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Forward conversions remain perfect and broad numeric conversion reaches .0781.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force retention fell .193 to .151 and reverse stays 7/9.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Wider format practice may be helping some nonreported strata while eroding other skills. Aggregate scores could conceal the affected group.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict numeric transfer stays at least .06 next interval.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1convert_ood_value"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Record new-family accuracy by mass versus acceleration before interpreting the peak as scale learning.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "OOD score changes involve different unit/value combinations but a fixed panel. They can be tracked within this run.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Continue without changing the lesson while the direction of transfer change remains uncertain.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 40 same-route number swaps after another interval. The measured value was 44, against threshold 40.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

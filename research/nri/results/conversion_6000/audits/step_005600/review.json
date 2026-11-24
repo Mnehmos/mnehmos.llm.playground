@@ -1,0 +1,110 @@
+{
+  "step": 5600,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "3ad16c9f68ece2703c9fdfaeac8784c66ca6589c440c68ba0dc78a186ebe8a8b",
+  "prediction": {
+    "statement": "Predict at least 48 swaps in the next checkpoint.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 48.0,
+    "direction": "at_least",
+    "due": 5700
+  },
+  "previous_resolution": {
+    "status": "falsified",
+    "observed": 48
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "Layer-two QKV displacement increases to 1.36 and layer one to 1.03.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 update norm .044 exceeds both its earlier value and L1 .0324 despite lower raw norm.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 content gradient is now .00043, still small. Task-role cosine returns to .001.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Head persistence rises to five, and force paraphrase similarity holds .545.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value swap collapses by 19 to 48. The declared force block has 9 intended versus 2 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The original panel still scores 10/10 and broad unseen frame improves to .0521.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Unseen 4 stays incorrect and numeric development remains .0885.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "The collapse occurred without a curriculum change. This supports intrinsic trajectory variation in causal accessibility, possibly from changed geometry of the transplanted vectors.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 48 swaps in the next checkpoint.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare ordered donor pairs shared across 5500 and 5600 for losses specific to certain numbers.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Stable head assignments do not predict stable patch efficacy here.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the lesson unchanged to observe whether the decline persists.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict at least 60 correct value swaps on the next interval. The measured value was 48, against threshold 60.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

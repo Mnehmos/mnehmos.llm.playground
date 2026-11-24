@@ -1,0 +1,110 @@
+{
+  "step": 4300,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "abfa4ca7b74b3316e02e22a2f38d0b20782227b1bf1be6489c6e28800d2caf05",
+  "prediction": {
+    "statement": "Predict at least 50 value swaps at the next checkpoint.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 50.0,
+    "direction": "at_least",
+    "due": 4400
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 56
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L1 QKV deltas settle near 2.14 and 2.13.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L2 and L3 mean updates are .0557 and .053, much lower than the previous L1 peak.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "C02 gradient .00905 stands apart from both other variants under .0002. Task/IIT cosine falls back to .188.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "Held binding recedes to .214 and no head clears hysteresis.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Value patch retains 56 and confirms the bound. Force specificity is 11 versus 5.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "The student still gets the original conversions right and force reaches .1953.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "The C03 panel again yields zero; held digit 4 remains a fixed miss.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Changing frame cues may affect where information moves even when all three forward panels are at ceiling.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 50 value swaps at the next checkpoint.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Compare the stable C01 and C02 prompts in raw trace space and test a matched C03 counterpart.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The strongest local gradient here is concentrated on one example, so it gives only a narrow hint about frame difficulty.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Hold the objective and data settings for another checkpoint.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict value swaps remain at least 55 next. The measured value was 56, against threshold 55.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

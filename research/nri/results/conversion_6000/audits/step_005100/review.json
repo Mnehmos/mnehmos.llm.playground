@@ -1,0 +1,110 @@
+{
+  "step": 5100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "0e2f9203c66bf441dfed6a9bc96d459d4580c11933294f20fe5396b5aee1ee81",
+  "prediction": {
+    "statement": "Predict at least 58 forward swaps at the next checkpoint.",
+    "metric": "/concepts/conversion/swap_value/intended",
+    "threshold": 58.0,
+    "direction": "at_least",
+    "due": 5200
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 64
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L2 and L3 deltas decrease to .761 and .745 after withdrawing IIT.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "Effective step norms also decline to .0236 and .0218, though the objective changed their raw gradient content.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "All controlled content gradients fall below .0017, and task-role cosine is -.015.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "No confident head ID returns, and held force binding stays .232. Paraphrase geometry increases to .456.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Forward swap climbs to 64, confirming the prediction. The force block keeps 9 intended versus 5 wrong.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Familiar arithmetic remains perfect in all three formats, and numeric dev is .0781.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "Force declines to .185 and the same unseen forward value is still wrong.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Withdrawing the swap loss may reduce interference in the conversion pathway, but a time-matched control is needed to distinguish that from fluctuation.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict at least 58 forward swaps at the next checkpoint.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Track gradual recovery across the remaining nine intervals.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "The previous and present gradient panels have different active objectives, so their cosine columns are not directly interchangeable.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Keep the fixed final lesson for the remaining interval.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict forward swaps stay at least 55/90 once the force swap loss is withdrawn. The measured value was 64, against threshold 55.0.",
+      "evidence": [
+        "/concepts/conversion/swap_value/intended"
+      ]
+    }
+  }
+}

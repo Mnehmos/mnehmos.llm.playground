@@ -1,0 +1,110 @@
+{
+  "step": 4100,
+  "supervisor": "Codex scientific supervisor",
+  "action": "continue",
+  "checkpoint_sha256": "04232792fa8d91678caa81cbb786eee871c7245519b08a1edfbb70f6f999839c",
+  "prediction": {
+    "statement": "Predict the ordinary force score retains at least .20 next.",
+    "metric": "/concepts/dev_acc/dev~1force_id_trainfam",
+    "threshold": 0.2,
+    "direction": "at_least",
+    "due": 4200
+  },
+  "previous_resolution": {
+    "status": "confirmed",
+    "observed": 0.2214
+  },
+  "assessment": {
+    "weights": {
+      "analysis": "L3 QKV moved 2.21 versus 1.82 at L2 after increasing interchange strength.",
+      "evidence": [
+        "/weight_changes"
+      ]
+    },
+    "effective_updates": {
+      "analysis": "L3 mean update rises to .0654 while L2 .0588 has the larger raw norm.",
+      "evidence": [
+        "/interval_overview"
+      ]
+    },
+    "tokens_and_objectives": {
+      "analysis": "Word content gradient spikes to .0785 and task-role cosine rises to .137. Task/IIT cosine drops to .225.",
+      "evidence": [
+        "/token_trace/examples/12",
+        "/token_trace/examples/13",
+        "/token_trace/examples/14",
+        "/objective_dynamics"
+      ]
+    },
+    "representations": {
+      "analysis": "All prior confident head IDs are withheld here. Force binding stays near .211.",
+      "evidence": [
+        "/head_lineage",
+        "/concepts/binding_probe",
+        "/concepts/paraphrase"
+      ]
+    },
+    "causal": {
+      "analysis": "Force swap specificity falls to 11 versus six wrong. Forward swap recovers to 45.",
+      "evidence": [
+        "/concepts/conversion/swap_value",
+        "/concepts/conversion/swap_unit",
+        "/concepts/causal_controls"
+      ]
+    },
+    "capabilities": {
+      "analysis": "Force ordinary improves to .2214 and all three familiar conversion probes remain perfect.",
+      "evidence": [
+        "/concepts/conversion/practiced",
+        "/concepts/conversion/new_frame",
+        "/concepts/conversion/new_style"
+      ]
+    },
+    "failures": {
+      "analysis": "C03 newly drops to zero and the fixed unseen number still fails.",
+      "evidence": [
+        "/concepts/conversion/reverse",
+        "/concepts/conversion/new_unit",
+        "/concepts/conversion/new_values"
+      ]
+    },
+    "alternatives": {
+      "analysis": "Increasing supervision improved ordinary answers before improving the causal target. The optimizer may be favoring a shared shortcut or reorganizing representations.",
+      "evidence": [
+        "/concepts/conversion",
+        "/concepts/binding_probe"
+      ]
+    },
+    "prediction": {
+      "analysis": "Predict the ordinary force score retains at least .20 next.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    },
+    "next_experiment": {
+      "analysis": "Check whether the force intended-target margin rises again after the transient attention motion.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "instruments": {
+      "analysis": "Checkpoint traces support a current gradient comparison, not an exact attribution to earlier reinforcement.",
+      "evidence": [
+        "/token_trace",
+        "/head_lineage"
+      ]
+    },
+    "decision": {
+      "analysis": "Retain coefficient 1.5 for another checkpoint.",
+      "evidence": [
+        "/concepts/conversion"
+      ]
+    },
+    "prior_predictions": {
+      "analysis": "The previous prediction was Predict force ordinary accuracy at least .19 after stronger interchange practice. The measured value was 0.2214, against threshold 0.19.",
+      "evidence": [
+        "/concepts/dev_acc/dev~1force_id_trainfam"
+      ]
+    }
+  }
+}
