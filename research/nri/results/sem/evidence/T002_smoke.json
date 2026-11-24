@@ -1,0 +1,222 @@
+{
+ "record": {
+  "tool_id": "T002_swap_reconciler",
+  "mode": "run",
+  "source_sha256": "c6f0b54e99e45d0e78c6ecb6574300a4a96c7b3d7505ff91f1ad9d725cfc385a",
+  "git_commit": "921a8d6abf53b10778af24d9f0d0721682a3c32c",
+  "manifest": {
+   "tool_id": "T002_swap_reconciler",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "after registration commit 921a8d6, during study pretrain; validated and first run on non-study smoke checkpoints (seed 999)",
+   "kind": "causal-readonly",
+   "purpose": "Reconcile block-swap IIA (1.0) with exemplar-copy success (~0.55, T001) by stratifying swap success over source/base attributes.",
+   "hypothesis": "H-style: the fit-pool sources include word-number and abbreviated-unit surface forms that pretraining never showed (PRETRAIN_LESSON has no style); their block codes are off-distribution. Prediction: canonical-style sources >= 0.9, non-canonical-style sources markedly lower. Competing: H-pool (train vs dev tuples) or H-family (cross-family) explain the gap instead.",
+   "input_schema": {
+    "args.checkpoints": "list",
+    "args.families": "force family ids (default pretrain families)",
+    "args.n": "pairs per pool"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "overall": "rate",
+     "canonical_style_sources": "rate",
+     "noncanonical_style_sources": "rate",
+     "strata": "{attr: {value: [rate, n]}}"
+    }
+   },
+   "read_scope": "model copies; dev-tuple force examples of the given families; ctx.observe.fit_pool; never sealed",
+   "measurement_definitions": "swap success = argmax of head(h_base with h[0:16] replaced by h_src[0:16]) equals M_src*A_base*S_base mod 13; only pairs whose target differs from the base answer are scored; bases are canonical style (digits, full units)",
+   "version": "1"
+  },
+  "checkpoints": {
+   "s2800": "/tmp/claude-0/-home-user-mnehmos-llm-playground/82990fa8-f737-5830-b8e7-6c5b12a6882f/scratchpad/smoke_sem/step_2800",
+   "s3100": "/tmp/claude-0/-home-user-mnehmos-llm-playground/82990fa8-f737-5830-b8e7-6c5b12a6882f/scratchpad/smoke_sem/step_3100"
+  },
+  "args": {},
+  "nonmutation": {
+   "before": {
+    "s2800": "67cd3c0ce97161db3f6763ea6635760ce7fd54a6eb9e4df23bf816e09107e1cf",
+    "s3100": "1eb5365b41cdb8d81c9ee6db6877959c4ed361211a06a475a24c130b04d68b30"
+   },
+   "after": {
+    "s2800": "67cd3c0ce97161db3f6763ea6635760ce7fd54a6eb9e4df23bf816e09107e1cf",
+    "s3100": "1eb5365b41cdb8d81c9ee6db6877959c4ed361211a06a475a24c130b04d68b30"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 3.9,
+  "error": "",
+  "time": "2026-11-23T23:23:29Z"
+ },
+ "result": {
+  "s2800": {
+   "overall": 0.5714,
+   "n": 1365,
+   "canonical_style_sources": 1.0,
+   "noncanonical_style_sources": 0.141,
+   "strata": {
+    "src_num": {
+     "num": [
+      0.783,
+      954
+     ],
+     "word": [
+      0.0803,
+      411
+     ]
+    },
+    "src_unit": {
+     "abbr": [
+      0.1804,
+      377
+     ],
+     "full": [
+      0.7206,
+      988
+     ]
+    },
+    "base_num": {
+     "num": [
+      0.5714,
+      1365
+     ]
+    },
+    "base_unit": {
+     "full": [
+      0.5714,
+      1365
+     ]
+    },
+    "src_canonical_style": {
+     "False": [
+      0.141,
+      681
+     ],
+     "True": [
+      1.0,
+      684
+     ]
+    },
+    "same_family": {
+     "False": [
+      0.5784,
+      944
+     ],
+     "True": [
+      0.5558,
+      421
+     ]
+    },
+    "src_pool": {
+     "dev": [
+      0.5704,
+      682
+     ],
+     "fit": [
+      0.5725,
+      683
+     ]
+    },
+    "src_mass_unit": {
+     "0": [
+      0.5952,
+      504
+     ],
+     "1": [
+      0.5439,
+      524
+     ],
+     "2": [
+      0.5786,
+      337
+     ]
+    }
+   }
+  },
+  "s3100": {
+   "overall": 0.5692,
+   "n": 1365,
+   "canonical_style_sources": 1.0,
+   "noncanonical_style_sources": 0.1366,
+   "strata": {
+    "src_num": {
+     "num": [
+      0.7788,
+      954
+     ],
+     "word": [
+      0.0827,
+      411
+     ]
+    },
+    "src_unit": {
+     "abbr": [
+      0.1724,
+      377
+     ],
+     "full": [
+      0.7206,
+      988
+     ]
+    },
+    "base_num": {
+     "num": [
+      0.5692,
+      1365
+     ]
+    },
+    "base_unit": {
+     "full": [
+      0.5692,
+      1365
+     ]
+    },
+    "src_canonical_style": {
+     "False": [
+      0.1366,
+      681
+     ],
+     "True": [
+      1.0,
+      684
+     ]
+    },
+    "same_family": {
+     "False": [
+      0.5731,
+      944
+     ],
+     "True": [
+      0.5606,
+      421
+     ]
+    },
+    "src_pool": {
+     "dev": [
+      0.5674,
+      682
+     ],
+     "fit": [
+      0.571,
+      683
+     ]
+    },
+    "src_mass_unit": {
+     "0": [
+      0.5913,
+      504
+     ],
+     "1": [
+      0.5458,
+      524
+     ],
+     "2": [
+      0.5727,
+      337
+     ]
+    }
+   }
+  }
+ }
+}

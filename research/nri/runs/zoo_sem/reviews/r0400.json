@@ -1,0 +1,12 @@
+{
+ "what_changed": "B sense_newframe_trainctx 0.30 -> 0.01 (A 0.47); T004 v2: on the NEW sense frame B answers only numbers ('0' 164, '10' 110, '7' 66 of 384) - it no longer recognises the question type. B sense in-distribution rose 0.64 -> 0.76. Equiv dev 0.37 both arms. Binding probe flat (0.47).",
+ "knows": "Answer types; sense on TRAINING contexts and frames (B 0.76/0.81 styled); equiv slightly above guessing in-distribution (0.45).",
+ "fails": "Frame-level task recognition for the unseen sense frame (its cue words does/mean/measured are <unk>); sense on new contexts (both arms answer 'phys' for ~60-65% while gold is 54% other) - the discriminating context words are <unk>; numeric tasks outside canonical pretrain force.",
+ "explanation": "H-memo: with only 2 training sense frames and 6 training contexts, the student identifies the task by frame-specific words and the sense by memorised context words; neither survives the whole-word tokenizer's <unk> on new frames/contexts. A frame-invariant, unit-presence cue (number+unit => phys; bare number => other) would generalise and is learnable from the training contexts.",
+ "competing_explanation": "H-cap: memorisation of 6 contexts is the minimum-loss solution and no consistency pressure within the training pools can move the student to the unit-presence rule; generalisation stays at the phys-biased level. Separately: my step-300 binding hypothesis (aux_role max -> probe up) is FALSIFIED; role supervision at layer 1 does not produce canonical-quantity binding.",
+ "prediction": "L4 (sense 0.3, pair rate 0.5 = max, consistency 1.0 = max, p_abbr 0.5): at step 500 B sense_newframe_trainctx >= 0.45 with >= 80% phys/other answers; B sense_trainframe_newctx >= 0.40 with the phys share falling below 55%. H-cap predicts newctx <= 0.32, phys share >= 60%.",
+ "tool_needed": "T004 v2 (dev answer histograms, added this checkpoint after the below-chance anomaly).",
+ "next_action": "L4: force 0.3 / convert 0.2 / equiv 0.1 / inverse 0.1 / sense 0.3; replay 0.3; style 0.3/0.5; pair 0.5 + consistency 1.0; aux 0.5; IIT 3; hard negatives 0.3.",
+ "why_this_checkpoint": "The type-recognition failure appeared at this block and is specific to B's state (A still answers phys/other on the new frame); sense is 2/8 primary sets.",
+ "previous_outcome": "Step-300 prediction FALSIFIED: binding probe 0.471 (< 0.60, below falsifier 0.52), force_id_trainfam 0.305 (< 0.40), A 0.323. Side effect not predicted: B lost sense type-recognition on the new frame."
+}

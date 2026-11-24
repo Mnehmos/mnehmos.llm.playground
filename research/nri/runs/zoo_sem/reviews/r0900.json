@@ -1,0 +1,12 @@
+{
+ "what_changed": "B sense_newframe 0.198 -> 0.497 (A 0.422) and sense_trainframe_newctx 0.401 (A 0.354): B now leads on both sense dev sets. Equiv_newfam B 0.398 vs A 0.490 (-0.09). Other sets within 0.05 of A. CKA 0.996.",
+ "knows": "Sense task type on the new frame (when dosed); answer types; partial canonical force.",
+ "fails": "Equiv generalisation to new families (B), all numeric computation beyond canonical force; sense on new contexts stays phys-biased.",
+ "explanation": "H-dose: the newframe deficit was a dose-sensitive global answer-type prior (sense 0.3 restored it within one block), not a positional 'slot' reading - T006 shows the 'quantity' occlusion effect became MORE negative (-0.28) while accuracy recovered, so H-slot is FALSIFIED as the mechanism; whatever 'quantity' does, it is not what limited accuracy.",
+ "competing_explanation": "The recovery is transient (H-prior): it will decay within a block once the sense dose drops, as at step 500->600.",
+ "prediction": "L9 (sense 0.25, equiv 0.25 to address equiv_newfam, others 0.167): at step 1000 B sense_newframe >= 0.42 (holds within 0.08), B equiv_newfam >= 0.45, no other dev set falls > 0.05 below A. Falsifier: newframe < 0.35 at sense 0.25.",
+ "tool_needed": "None new; T004 v2 on equiv at 1000 for the answer histogram on new families.",
+ "next_action": "L9: force 0.167 / convert 0.167 / equiv 0.25 / inverse 0.167 / sense 0.25; replay 0.3; style 0.3/0.3; distractors 0.2; hard negatives 0.3; pair 0.2 + consistency 0.3; aux 0.5; IIT 3.",
+ "why_this_checkpoint": "Durability of the sense recovery at a lower dose decides how to spend the last 5 blocks while lr is still ~0.5 of peak; equiv_newfam (a primary-set analogue) is now B's largest deficit.",
+ "previous_outcome": "Step-800 prediction: newframe >= 0.35 CONFIRMED (0.497); 'quantity' drop rising above -0.10 FALSIFIED (-0.276); other sets within 0.06 of A - mostly (equiv_newfam -0.091, inverse_newfam +0.065)."
+}

@@ -1,0 +1,85 @@
+{
+ "record": {
+  "tool_id": "T001_edit_decomposer",
+  "mode": "run",
+  "source_sha256": "0824524d539fd2cc38d8ebf40cd5ecbda31ff78dbf8fd47751932a66a52e7e35",
+  "git_commit": "921a8d6abf53b10778af24d9f0d0721682a3c32c",
+  "manifest": {
+   "tool_id": "T001_edit_decomposer",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "non-study smoke run (seed 999) step 3100, before registration",
+   "kind": "causal-readonly",
+   "purpose": "Explain WHY a pooled persistent edit of the declared mass block fails while the block is causally sufficient: decompose editability into pooled-affine, per-route-affine and copy-target-mean components.",
+   "hypothesis": "H1 route-specific (non-additive) mass code: per-route affine edits succeed where pooled fails. H2 curved code within a route: per-route affine fails but copying the route-specific target class mean succeeds. H3 block not sufficient alone: copy fails. H4 (added in v2 after v1 returned 'undetermined' on the smoke run): the block is sufficient but each class occupies an extended region whose MEAN is off the code manifold; only copying a real exemplar works.",
+   "input_schema": {
+    "args.checkpoints": "list of checkpoint names",
+    "args.kind": "inv | add1",
+    "args.route": "unit | family | unit_family",
+    "args.canonical_style_only": "bool: fit/exemplar pool restricted to digit numbers + full unit names"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "pooled": "intended rate",
+     "per_route": "intended rate",
+     "copy_target_mean": "intended rate",
+     "verdict": "H1|H2|H3|editable|undetermined",
+     "n_eligible": "int"
+    }
+   },
+   "read_scope": "model copies (safetensors); training-pool force examples (ctx.observe.fit_pool) for fitting; development force examples of pretraining families for scoring; never sealed",
+   "measurement_definitions": "intended = share of eligible examples (answers for edited mass, edited acceleration and unedited all distinct) whose prediction equals the answer computed with the edited mass; edits act on h[0:16] only, routes are (mass unit) x (phrasing family) cells; affine maps are least-squares fits on training-pool examples",
+   "version": "3",
+   "changelog": [
+    "v1: pooled / per-route / copy-mean (controls: additive, route-rotated, scrambled, random)",
+    "v2: added exemplar copy and the H4 ring gold case after v1 returned 'undetermined' at smoke steps 2600-3100 (copy-mean 0.44-0.48 while block IIA 1.00)",
+    "v3: optional canonical_style_only after T002 showed non-canonical-style sources swap at 0.14 vs 1.00 (the v2 'undetermined' verdicts were contaminated by unseen surface forms)"
+   ]
+  },
+  "checkpoints": {
+   "s2800": "/tmp/claude-0/-home-user-mnehmos-llm-playground/82990fa8-f737-5830-b8e7-6c5b12a6882f/scratchpad/smoke_sem/step_2800",
+   "s3100": "/tmp/claude-0/-home-user-mnehmos-llm-playground/82990fa8-f737-5830-b8e7-6c5b12a6882f/scratchpad/smoke_sem/step_3100"
+  },
+  "args": {
+   "kind": "add1",
+   "route": "unit_family",
+   "canonical_style_only": true
+  },
+  "nonmutation": {
+   "before": {
+    "s2800": "67cd3c0ce97161db3f6763ea6635760ce7fd54a6eb9e4df23bf816e09107e1cf",
+    "s3100": "1eb5365b41cdb8d81c9ee6db6877959c4ed361211a06a475a24c130b04d68b30"
+   },
+   "after": {
+    "s2800": "67cd3c0ce97161db3f6763ea6635760ce7fd54a6eb9e4df23bf816e09107e1cf",
+    "s3100": "1eb5365b41cdb8d81c9ee6db6877959c4ed361211a06a475a24c130b04d68b30"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 2.6,
+  "error": "",
+  "time": "2026-11-23T23:23:49Z"
+ },
+ "result": {
+  "s2800": {
+   "pooled": 0.11,
+   "per_route_full": 0.2822,
+   "per_route_lowrank": 0.0954,
+   "copy_target_mean": 1.0,
+   "copy_target_exemplar": 1.0,
+   "unedited_acc": 1.0,
+   "verdict": "H2",
+   "n_eligible": 482
+  },
+  "s3100": {
+   "pooled": 0.0996,
+   "per_route_full": 0.305,
+   "per_route_lowrank": 0.1058,
+   "copy_target_mean": 1.0,
+   "copy_target_exemplar": 1.0,
+   "unedited_acc": 1.0,
+   "verdict": "H2",
+   "n_eligible": 482
+  }
+ }
+}

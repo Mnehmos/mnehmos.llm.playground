@@ -1,0 +1,12 @@
+{
+ "what_changed": "Little: convert_trainfam B 0.115 / A 0.104; T005 convert model accuracy B 0.265 / A 0.280; CKA(h, prev) 0.99 in both arms - representations nearly frozen. B sense_newframe fell again 0.20 -> 0.10 (A 0.48).",
+ "knows": "Same as step 600. Ingredients of convert remain decodable at h (v 0.98, t 0.92) with answer probe ~0.46-0.51.",
+ "fails": "Convert readout (dose did not help), inverse, equiv beyond prior, sense generalisation; B persistently fails to recognise the new sense frame as a sense question.",
+ "explanation": "H-prior: after the step-300 type formation, B-A differences on dev track the CURRENT lesson's task mixture (answer-prior shifts: e.g. heavy numeric dosing -> numeric answers on the ambiguous new sense frame) rather than learned skills; the student's representation barely changes per block (CKA 0.99), so the curriculum lever acts mainly on output priors.",
+ "competing_explanation": "H-hyst: B's history (e.g. the step-400 max-consistency sense block) left persistent changes that do not wash out with a matched mixture; B will keep its newframe deficit even on A's lesson.",
+ "prediction": "Test by giving B exactly A's next lesson (FIXED_CURRICULUM block 7): H-prior predicts at step 800 |B - A| <= 0.05 on every dev set and B sense_newframe >= 0.40. H-hyst predicts B newframe stays <= 0.20 and >= 3 dev sets differ by > 0.05.",
+ "tool_needed": "None new. T005 result for the convert prediction recorded: FALSIFIED.",
+ "next_action": "L7 = A's stage-2 lesson verbatim (a deliberate diagnostic: matched mixture from different histories).",
+ "why_this_checkpoint": "After 7 blocks without a single B-specific skill gain, the most informative experiment for the remaining 8 is to measure how much of B-A is history vs current mixture; this decides whether further lesson steering can matter at all.",
+ "previous_outcome": "Step-600 prediction FALSIFIED: B convert_trainfam 0.115 (< 0.20 and below the 0.12 falsifier), model accuracy 0.265 (< 0.35); A achieved the same without convert dosing. H-cap-readout's force-loss prediction also failed (force_id_pretrainfam rose to 0.555), so the readout was not traded either - the convert lesson simply had no effect."
+}

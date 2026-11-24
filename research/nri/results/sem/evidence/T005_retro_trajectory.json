@@ -1,0 +1,1090 @@
+{
+ "record": {
+  "tool_id": "T005_decodability_ladder",
+  "mode": "run",
+  "source_sha256": "34dca53563e4296463f076239653eaf8fcc1f8ca1271124575572d924737be29",
+  "git_commit": "8fae35b177da0731f6a578dc6d7d03a6951338da",
+  "manifest": {
+   "tool_id": "T005_decodability_ladder",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 600 (A and B)",
+   "kind": "observational",
+   "purpose": "Locate why convert stays at chance in-distribution: which answer ingredients (v, u, t, canonical v*s_u, answer) are linearly decodable at the query position h and at the source-value token (x1, x2).",
+   "hypothesis": "H-up: ingredients are not even decodable (upstream reading fails). H-comp: v, u, t decodable at h but canonical quantity / answer not (composition fails). H-read: answer decodable at h but readout fails.",
+   "input_schema": {
+    "args.checkpoints": "list",
+    "args.n": "training-pool items for fitting"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "site": {
+      "v|u|t|canon|answer": "held-out ridge accuracy"
+     },
+     "model_accuracy": "rate"
+    }
+   },
+   "read_scope": "model copies; fresh TRAINING-pool convert/force items (canonical style); never dev or sealed",
+   "measurement_definitions": "ridge one-vs-all linear classifier (sem.observe.ridge, lam 1e-2) fit on n items, scored on n/2 disjoint items; chance = 1/13 for values (1/3 for units); kNN = Euclidean 10-nearest-neighbour vote on centred unscaled vectors (separability without a linear-code assumption)",
+   "version": "1",
+   "changelog": [
+    "v1 pre-validation fix: the positive control (canonical mass at h, linear) failed at 0.43 on the common checkpoint although the model is 0.995 accurate and the block is causally sufficient - consistent with T001's curved-code verdict; added kNN and moved the positive control to kNN",
+    "v1 pre-validation fix 2: kNN on the full h was also 0.50 (other quantities dominate distances); positive control moved to the declared block h[0:16]; block added as a site",
+    "v1 pre-validation fix 3: the model-based control had an ARBITRARY threshold (0.8; observed 0.735 on the block) and was replaced by a planted-truth curved code (route-rotated discrete-log circle) - the real-model block decodability is reported as an observation, not used as a gate",
+    "v1 pre-validation fix 4: the planted code exposed a decoder flaw - per-dimension standardisation inflated pure-noise dimensions (kNN 0.36 on a decodable code); kNN now uses centred, unscaled Euclidean distance",
+    "v1 pre-validation fix 5: planted noise 0.15 made the gold case itself ambiguous (16-D noise distance ~0.85 > adjacent-class chord 0.52); set to 0.05 so the planted truth is unambiguous"
+   ]
+  },
+  "checkpoints": {
+   "c": "runs/zoo_sem/common",
+   "A0300": "runs/zoo_sem/A_fixed/step_0300",
+   "B0300": "runs/zoo_sem/B_adaptive/step_0300",
+   "A0600": "runs/zoo_sem/A_fixed/step_0600",
+   "B0600": "runs/zoo_sem/B_adaptive/step_0600",
+   "A0900": "runs/zoo_sem/A_fixed/step_0900",
+   "B0900": "runs/zoo_sem/B_adaptive/step_0900",
+   "A1200": "runs/zoo_sem/A_fixed/step_1200",
+   "B1200": "runs/zoo_sem/B_adaptive/step_1200",
+   "A1500": "runs/zoo_sem/A_fixed/step_1500",
+   "B1500": "runs/zoo_sem/B_adaptive/step_1500"
+  },
+  "args": {
+   "n": 900
+  },
+  "nonmutation": {
+   "before": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860",
+    "A0300": "d8732d1343fa0b281f1ebb01f29600daf200279a8253b2c53f05dbf369e963d8",
+    "B0300": "bb0dad5351148ec154aacb9cdb62c77c52b0b2f7fcabb85c4a3b778e924e39e1",
+    "A0600": "8da2b099c178588aba1eb3ceab3a8245ec8169a0cb1fd384630df540b778be49",
+    "B0600": "94ef12fa257cb70a647e71f462b8d9e5e6a98ac7885244d21d1a20731ee9cff9",
+    "A0900": "9da5443f148806e4c50aa109c2e12a7383929056938f27d881fc01f1dfffb0c6",
+    "B0900": "f345efbf4e3476e17442661633fe6a9248241371b8cad7f64e4c98089050f30e",
+    "A1200": "bac361b20587ad336fe3716df0520d80d05d46494333a1d394fe2059db26c639",
+    "B1200": "cf70bdfbc17bd2d4119a47f3cb750f84ffe8cc82bfe3f4690fea6d20d8338a56",
+    "A1500": "11cfcea2acaf0b9ce444c84e6e1baa44981d5c5f60beffa1b580e8fa5ac772fd",
+    "B1500": "0d8c35d7a6dd50f9f57878fa8524a05dea75d3d18943bad55e13650320d9ecb2"
+   },
+   "after": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860",
+    "A0300": "d8732d1343fa0b281f1ebb01f29600daf200279a8253b2c53f05dbf369e963d8",
+    "B0300": "bb0dad5351148ec154aacb9cdb62c77c52b0b2f7fcabb85c4a3b778e924e39e1",
+    "A0600": "8da2b099c178588aba1eb3ceab3a8245ec8169a0cb1fd384630df540b778be49",
+    "B0600": "94ef12fa257cb70a647e71f462b8d9e5e6a98ac7885244d21d1a20731ee9cff9",
+    "A0900": "9da5443f148806e4c50aa109c2e12a7383929056938f27d881fc01f1dfffb0c6",
+    "B0900": "f345efbf4e3476e17442661633fe6a9248241371b8cad7f64e4c98089050f30e",
+    "A1200": "bac361b20587ad336fe3716df0520d80d05d46494333a1d394fe2059db26c639",
+    "B1200": "cf70bdfbc17bd2d4119a47f3cb750f84ffe8cc82bfe3f4690fea6d20d8338a56",
+    "A1500": "11cfcea2acaf0b9ce444c84e6e1baa44981d5c5f60beffa1b580e8fa5ac772fd",
+    "B1500": "0d8c35d7a6dd50f9f57878fa8524a05dea75d3d18943bad55e13650320d9ecb2"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 44.2,
+  "error": "",
+  "time": "2026-11-24T00:40:39Z"
+ },
+ "result": {
+  "A0300": {
+   "h": {
+    "v": {
+     "linear": 0.964,
+     "knn": 0.633
+    },
+    "u": {
+     "linear": 0.862,
+     "knn": 0.667
+    },
+    "t": {
+     "linear": 0.887,
+     "knn": 0.702
+    },
+    "canon": {
+     "linear": 0.598,
+     "knn": 0.493
+    },
+    "answer": {
+     "linear": 0.438,
+     "knn": 0.409
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.656,
+     "knn": 0.644
+    },
+    "u": {
+     "linear": 0.549,
+     "knn": 0.662
+    },
+    "t": {
+     "linear": 0.664,
+     "knn": 0.649
+    },
+    "canon": {
+     "linear": 0.387,
+     "knn": 0.54
+    },
+    "answer": {
+     "linear": 0.34,
+     "knn": 0.424
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.782,
+     "knn": 0.556
+    },
+    "t": {
+     "linear": 0.727,
+     "knn": 0.502
+    },
+    "canon": {
+     "linear": 0.567,
+     "knn": 0.649
+    },
+    "answer": {
+     "linear": 0.444,
+     "knn": 0.427
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.829,
+     "knn": 0.578
+    },
+    "t": {
+     "linear": 0.724,
+     "knn": 0.482
+    },
+    "canon": {
+     "linear": 0.562,
+     "knn": 0.66
+    },
+    "answer": {
+     "linear": 0.46,
+     "knn": 0.42
+    }
+   },
+   "model_accuracy": 0.173
+  },
+  "A0600": {
+   "h": {
+    "v": {
+     "linear": 0.971,
+     "knn": 0.662
+    },
+    "u": {
+     "linear": 0.871,
+     "knn": 0.64
+    },
+    "t": {
+     "linear": 0.88,
+     "knn": 0.718
+    },
+    "canon": {
+     "linear": 0.596,
+     "knn": 0.478
+    },
+    "answer": {
+     "linear": 0.471,
+     "knn": 0.398
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.642,
+     "knn": 0.609
+    },
+    "u": {
+     "linear": 0.567,
+     "knn": 0.66
+    },
+    "t": {
+     "linear": 0.629,
+     "knn": 0.664
+    },
+    "canon": {
+     "linear": 0.411,
+     "knn": 0.504
+    },
+    "answer": {
+     "linear": 0.338,
+     "knn": 0.396
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.793,
+     "knn": 0.56
+    },
+    "t": {
+     "linear": 0.718,
+     "knn": 0.509
+    },
+    "canon": {
+     "linear": 0.573,
+     "knn": 0.667
+    },
+    "answer": {
+     "linear": 0.449,
+     "knn": 0.422
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.818,
+     "knn": 0.578
+    },
+    "t": {
+     "linear": 0.738,
+     "knn": 0.471
+    },
+    "canon": {
+     "linear": 0.556,
+     "knn": 0.664
+    },
+    "answer": {
+     "linear": 0.451,
+     "knn": 0.422
+    }
+   },
+   "model_accuracy": 0.262
+  },
+  "A0900": {
+   "h": {
+    "v": {
+     "linear": 0.971,
+     "knn": 0.656
+    },
+    "u": {
+     "linear": 0.851,
+     "knn": 0.651
+    },
+    "t": {
+     "linear": 0.904,
+     "knn": 0.731
+    },
+    "canon": {
+     "linear": 0.607,
+     "knn": 0.48
+    },
+    "answer": {
+     "linear": 0.507,
+     "knn": 0.416
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.611,
+     "knn": 0.611
+    },
+    "u": {
+     "linear": 0.564,
+     "knn": 0.673
+    },
+    "t": {
+     "linear": 0.598,
+     "knn": 0.642
+    },
+    "canon": {
+     "linear": 0.424,
+     "knn": 0.464
+    },
+    "answer": {
+     "linear": 0.342,
+     "knn": 0.387
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.791,
+     "knn": 0.567
+    },
+    "t": {
+     "linear": 0.729,
+     "knn": 0.516
+    },
+    "canon": {
+     "linear": 0.58,
+     "knn": 0.664
+    },
+    "answer": {
+     "linear": 0.444,
+     "knn": 0.416
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.818,
+     "knn": 0.596
+    },
+    "t": {
+     "linear": 0.738,
+     "knn": 0.48
+    },
+    "canon": {
+     "linear": 0.558,
+     "knn": 0.671
+    },
+    "answer": {
+     "linear": 0.451,
+     "knn": 0.422
+    }
+   },
+   "model_accuracy": 0.296
+  },
+  "A1200": {
+   "h": {
+    "v": {
+     "linear": 0.973,
+     "knn": 0.671
+    },
+    "u": {
+     "linear": 0.827,
+     "knn": 0.649
+    },
+    "t": {
+     "linear": 0.898,
+     "knn": 0.72
+    },
+    "canon": {
+     "linear": 0.618,
+     "knn": 0.5
+    },
+    "answer": {
+     "linear": 0.491,
+     "knn": 0.389
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.647,
+     "knn": 0.64
+    },
+    "u": {
+     "linear": 0.569,
+     "knn": 0.642
+    },
+    "t": {
+     "linear": 0.593,
+     "knn": 0.658
+    },
+    "canon": {
+     "linear": 0.402,
+     "knn": 0.524
+    },
+    "answer": {
+     "linear": 0.34,
+     "knn": 0.416
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.798,
+     "knn": 0.578
+    },
+    "t": {
+     "linear": 0.713,
+     "knn": 0.511
+    },
+    "canon": {
+     "linear": 0.573,
+     "knn": 0.66
+    },
+    "answer": {
+     "linear": 0.447,
+     "knn": 0.409
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.802,
+     "knn": 0.602
+    },
+    "t": {
+     "linear": 0.742,
+     "knn": 0.498
+    },
+    "canon": {
+     "linear": 0.567,
+     "knn": 0.684
+    },
+    "answer": {
+     "linear": 0.473,
+     "knn": 0.429
+    }
+   },
+   "model_accuracy": 0.307
+  },
+  "A1500": {
+   "h": {
+    "v": {
+     "linear": 0.989,
+     "knn": 0.66
+    },
+    "u": {
+     "linear": 0.807,
+     "knn": 0.653
+    },
+    "t": {
+     "linear": 0.898,
+     "knn": 0.724
+    },
+    "canon": {
+     "linear": 0.629,
+     "knn": 0.489
+    },
+    "answer": {
+     "linear": 0.487,
+     "knn": 0.376
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.651,
+     "knn": 0.651
+    },
+    "u": {
+     "linear": 0.56,
+     "knn": 0.66
+    },
+    "t": {
+     "linear": 0.6,
+     "knn": 0.662
+    },
+    "canon": {
+     "linear": 0.398,
+     "knn": 0.522
+    },
+    "answer": {
+     "linear": 0.336,
+     "knn": 0.398
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.793,
+     "knn": 0.569
+    },
+    "t": {
+     "linear": 0.718,
+     "knn": 0.496
+    },
+    "canon": {
+     "linear": 0.567,
+     "knn": 0.669
+    },
+    "answer": {
+     "linear": 0.447,
+     "knn": 0.409
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.787,
+     "knn": 0.609
+    },
+    "t": {
+     "linear": 0.744,
+     "knn": 0.504
+    },
+    "canon": {
+     "linear": 0.567,
+     "knn": 0.673
+    },
+    "answer": {
+     "linear": 0.467,
+     "knn": 0.422
+    }
+   },
+   "model_accuracy": 0.307
+  },
+  "B0300": {
+   "h": {
+    "v": {
+     "linear": 0.962,
+     "knn": 0.638
+    },
+    "u": {
+     "linear": 0.813,
+     "knn": 0.631
+    },
+    "t": {
+     "linear": 0.887,
+     "knn": 0.753
+    },
+    "canon": {
+     "linear": 0.591,
+     "knn": 0.456
+    },
+    "answer": {
+     "linear": 0.449,
+     "knn": 0.418
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.549,
+     "knn": 0.58
+    },
+    "u": {
+     "linear": 0.593,
+     "knn": 0.653
+    },
+    "t": {
+     "linear": 0.647,
+     "knn": 0.702
+    },
+    "canon": {
+     "linear": 0.418,
+     "knn": 0.464
+    },
+    "answer": {
+     "linear": 0.302,
+     "knn": 0.389
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.796,
+     "knn": 0.551
+    },
+    "t": {
+     "linear": 0.709,
+     "knn": 0.473
+    },
+    "canon": {
+     "linear": 0.571,
+     "knn": 0.651
+    },
+    "answer": {
+     "linear": 0.453,
+     "knn": 0.413
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.813,
+     "knn": 0.569
+    },
+    "t": {
+     "linear": 0.696,
+     "knn": 0.471
+    },
+    "canon": {
+     "linear": 0.578,
+     "knn": 0.636
+    },
+    "answer": {
+     "linear": 0.464,
+     "knn": 0.422
+    }
+   },
+   "model_accuracy": 0.162
+  },
+  "B0600": {
+   "h": {
+    "v": {
+     "linear": 0.971,
+     "knn": 0.629
+    },
+    "u": {
+     "linear": 0.824,
+     "knn": 0.647
+    },
+    "t": {
+     "linear": 0.884,
+     "knn": 0.758
+    },
+    "canon": {
+     "linear": 0.6,
+     "knn": 0.48
+    },
+    "answer": {
+     "linear": 0.453,
+     "knn": 0.404
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.584,
+     "knn": 0.609
+    },
+    "u": {
+     "linear": 0.56,
+     "knn": 0.653
+    },
+    "t": {
+     "linear": 0.658,
+     "knn": 0.664
+    },
+    "canon": {
+     "linear": 0.402,
+     "knn": 0.469
+    },
+    "answer": {
+     "linear": 0.342,
+     "knn": 0.384
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.809,
+     "knn": 0.56
+    },
+    "t": {
+     "linear": 0.718,
+     "knn": 0.467
+    },
+    "canon": {
+     "linear": 0.576,
+     "knn": 0.656
+    },
+    "answer": {
+     "linear": 0.449,
+     "knn": 0.411
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.807,
+     "knn": 0.58
+    },
+    "t": {
+     "linear": 0.704,
+     "knn": 0.476
+    },
+    "canon": {
+     "linear": 0.582,
+     "knn": 0.636
+    },
+    "answer": {
+     "linear": 0.464,
+     "knn": 0.411
+    }
+   },
+   "model_accuracy": 0.196
+  },
+  "B0900": {
+   "h": {
+    "v": {
+     "linear": 0.969,
+     "knn": 0.649
+    },
+    "u": {
+     "linear": 0.813,
+     "knn": 0.642
+    },
+    "t": {
+     "linear": 0.898,
+     "knn": 0.707
+    },
+    "canon": {
+     "linear": 0.602,
+     "knn": 0.493
+    },
+    "answer": {
+     "linear": 0.462,
+     "knn": 0.402
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.624,
+     "knn": 0.644
+    },
+    "u": {
+     "linear": 0.556,
+     "knn": 0.611
+    },
+    "t": {
+     "linear": 0.649,
+     "knn": 0.673
+    },
+    "canon": {
+     "linear": 0.384,
+     "knn": 0.48
+    },
+    "answer": {
+     "linear": 0.338,
+     "knn": 0.424
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.804,
+     "knn": 0.573
+    },
+    "t": {
+     "linear": 0.711,
+     "knn": 0.469
+    },
+    "canon": {
+     "linear": 0.573,
+     "knn": 0.669
+    },
+    "answer": {
+     "linear": 0.449,
+     "knn": 0.409
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.818,
+     "knn": 0.556
+    },
+    "t": {
+     "linear": 0.718,
+     "knn": 0.484
+    },
+    "canon": {
+     "linear": 0.589,
+     "knn": 0.636
+    },
+    "answer": {
+     "linear": 0.462,
+     "knn": 0.404
+    }
+   },
+   "model_accuracy": 0.233
+  },
+  "B1200": {
+   "h": {
+    "v": {
+     "linear": 0.962,
+     "knn": 0.656
+    },
+    "u": {
+     "linear": 0.816,
+     "knn": 0.622
+    },
+    "t": {
+     "linear": 0.896,
+     "knn": 0.713
+    },
+    "canon": {
+     "linear": 0.587,
+     "knn": 0.502
+    },
+    "answer": {
+     "linear": 0.46,
+     "knn": 0.411
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.604,
+     "knn": 0.664
+    },
+    "u": {
+     "linear": 0.54,
+     "knn": 0.633
+    },
+    "t": {
+     "linear": 0.638,
+     "knn": 0.602
+    },
+    "canon": {
+     "linear": 0.389,
+     "knn": 0.52
+    },
+    "answer": {
+     "linear": 0.324,
+     "knn": 0.404
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.807,
+     "knn": 0.56
+    },
+    "t": {
+     "linear": 0.709,
+     "knn": 0.482
+    },
+    "canon": {
+     "linear": 0.573,
+     "knn": 0.667
+    },
+    "answer": {
+     "linear": 0.451,
+     "knn": 0.407
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.802,
+     "knn": 0.56
+    },
+    "t": {
+     "linear": 0.709,
+     "knn": 0.482
+    },
+    "canon": {
+     "linear": 0.589,
+     "knn": 0.649
+    },
+    "answer": {
+     "linear": 0.462,
+     "knn": 0.416
+    }
+   },
+   "model_accuracy": 0.264
+  },
+  "B1500": {
+   "h": {
+    "v": {
+     "linear": 0.976,
+     "knn": 0.649
+    },
+    "u": {
+     "linear": 0.809,
+     "knn": 0.618
+    },
+    "t": {
+     "linear": 0.896,
+     "knn": 0.722
+    },
+    "canon": {
+     "linear": 0.596,
+     "knn": 0.5
+    },
+    "answer": {
+     "linear": 0.451,
+     "knn": 0.396
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.6,
+     "knn": 0.64
+    },
+    "u": {
+     "linear": 0.538,
+     "knn": 0.598
+    },
+    "t": {
+     "linear": 0.633,
+     "knn": 0.642
+    },
+    "canon": {
+     "linear": 0.384,
+     "knn": 0.511
+    },
+    "answer": {
+     "linear": 0.331,
+     "knn": 0.404
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.809,
+     "knn": 0.571
+    },
+    "t": {
+     "linear": 0.711,
+     "knn": 0.478
+    },
+    "canon": {
+     "linear": 0.582,
+     "knn": 0.664
+    },
+    "answer": {
+     "linear": 0.451,
+     "knn": 0.4
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.804,
+     "knn": 0.571
+    },
+    "t": {
+     "linear": 0.722,
+     "knn": 0.489
+    },
+    "canon": {
+     "linear": 0.587,
+     "knn": 0.647
+    },
+    "answer": {
+     "linear": 0.464,
+     "knn": 0.427
+    }
+   },
+   "model_accuracy": 0.273
+  },
+  "c": {
+   "h": {
+    "v": {
+     "linear": 0.862,
+     "knn": 0.604
+    },
+    "u": {
+     "linear": 0.729,
+     "knn": 0.671
+    },
+    "t": {
+     "linear": 0.793,
+     "knn": 0.724
+    },
+    "canon": {
+     "linear": 0.542,
+     "knn": 0.491
+    },
+    "answer": {
+     "linear": 0.427,
+     "knn": 0.436
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.531,
+     "knn": 0.613
+    },
+    "u": {
+     "linear": 0.56,
+     "knn": 0.622
+    },
+    "t": {
+     "linear": 0.616,
+     "knn": 0.687
+    },
+    "canon": {
+     "linear": 0.382,
+     "knn": 0.493
+    },
+    "answer": {
+     "linear": 0.307,
+     "knn": 0.393
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.807,
+     "knn": 0.587
+    },
+    "t": {
+     "linear": 0.658,
+     "knn": 0.487
+    },
+    "canon": {
+     "linear": 0.609,
+     "knn": 0.658
+    },
+    "answer": {
+     "linear": 0.46,
+     "knn": 0.427
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.807,
+     "knn": 0.609
+    },
+    "t": {
+     "linear": 0.678,
+     "knn": 0.493
+    },
+    "canon": {
+     "linear": 0.591,
+     "knn": 0.671
+    },
+    "answer": {
+     "linear": 0.471,
+     "knn": 0.46
+    }
+   },
+   "model_accuracy": 0.107
+  }
+ }
+}

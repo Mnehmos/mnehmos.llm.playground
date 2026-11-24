@@ -1,0 +1,201 @@
+{
+ "record": {
+  "tool_id": "T003_stratified_accuracy",
+  "mode": "run",
+  "source_sha256": "8e6ee57191373717eef13651fc8ad0131f4346d97160e858880f40b239512e69",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T003_stratified_accuracy",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 100 (A and B)",
+   "kind": "observational",
+   "purpose": "Accuracy on development sets stratified by number style, unit style, canonical style, phrasing family, mass unit, distractor.",
+   "hypothesis": "Step-100 regression of both arms: if canonical-style accuracy fell, the shared optimizer-restart/warm-up shock disrupted a known skill; if only non-canonical strata are low, nothing was lost and the drop is a mixture effect.",
+   "input_schema": {
+    "args.sets": "optional list of set names",
+    "args.keys": "attributes to report"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "set": {
+      "acc": "rate",
+      "<attr>": {
+       "value": "[rate, n]"
+      }
+     }
+    }
+   },
+   "read_scope": "model copies; frozen development sets; never sealed",
+   "measurement_definitions": "accuracy = argmax answer equals the gold answer; a stratum's rate is over the examples of the set having that attribute value",
+   "version": "1"
+  },
+  "checkpoints": {
+   "A200": "runs/zoo_sem/A_fixed/step_0200",
+   "B200": "runs/zoo_sem/B_adaptive/step_0200"
+  },
+  "args": {
+   "sets": [
+    "dev/force_id_pretrainfam",
+    "dev/force_id_trainfam"
+   ],
+   "keys": [
+    "canonical_style",
+    "num",
+    "unit"
+   ]
+  },
+  "nonmutation": {
+   "before": {
+    "A200": "2375765d31d140691b96190391907b55ce570b90d17eaf6fc57a82397c3fdc4f",
+    "B200": "d6620d56f83aecc497b01075d202ee7ac9c63b7d3a05e20cc0ed75730c989563"
+   },
+   "after": {
+    "A200": "2375765d31d140691b96190391907b55ce570b90d17eaf6fc57a82397c3fdc4f",
+    "B200": "d6620d56f83aecc497b01075d202ee7ac9c63b7d3a05e20cc0ed75730c989563"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 2.1,
+  "error": "",
+  "time": "2026-11-23T23:33:18Z"
+ },
+ "result": {
+  "A200": {
+   "dev/force_id_pretrainfam": {
+    "acc": 0.3958,
+    "canonical_style": {
+     "False": [
+      0.129,
+      186
+     ],
+     "True": [
+      0.6465,
+      198
+     ]
+    },
+    "num": {
+     "num": [
+      0.5071,
+      282
+     ],
+     "word": [
+      0.0882,
+      102
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1574,
+      108
+     ],
+     "full": [
+      0.4891,
+      276
+     ]
+    }
+   },
+   "dev/force_id_trainfam": {
+    "acc": 0.2682,
+    "canonical_style": {
+     "False": [
+      0.117,
+      188
+     ],
+     "True": [
+      0.4133,
+      196
+     ]
+    },
+    "num": {
+     "num": [
+      0.3596,
+      267
+     ],
+     "word": [
+      0.0598,
+      117
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1731,
+      104
+     ],
+     "full": [
+      0.3036,
+      280
+     ]
+    }
+   }
+  },
+  "B200": {
+   "dev/force_id_pretrainfam": {
+    "acc": 0.4688,
+    "canonical_style": {
+     "False": [
+      0.1505,
+      186
+     ],
+     "True": [
+      0.7677,
+      198
+     ]
+    },
+    "num": {
+     "num": [
+      0.5887,
+      282
+     ],
+     "word": [
+      0.1373,
+      102
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1574,
+      108
+     ],
+     "full": [
+      0.5906,
+      276
+     ]
+    }
+   },
+   "dev/force_id_trainfam": {
+    "acc": 0.2917,
+    "canonical_style": {
+     "False": [
+      0.117,
+      188
+     ],
+     "True": [
+      0.4592,
+      196
+     ]
+    },
+    "num": {
+     "num": [
+      0.3745,
+      267
+     ],
+     "word": [
+      0.1026,
+      117
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1442,
+      104
+     ],
+     "full": [
+      0.3464,
+      280
+     ]
+    }
+   }
+  }
+ }
+}

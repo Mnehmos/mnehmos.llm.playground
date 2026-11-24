@@ -1,0 +1,13 @@
+{
+ "tool_id": "T002_swap_reconciler",
+ "author": "LLM supervisor (session of Issue #25)",
+ "created_at_checkpoint": "after registration commit 921a8d6, during study pretrain; validated and first run on non-study smoke checkpoints (seed 999)",
+ "kind": "causal-readonly",
+ "purpose": "Reconcile block-swap IIA (1.0) with exemplar-copy success (~0.55, T001) by stratifying swap success over source/base attributes.",
+ "hypothesis": "H-style: the fit-pool sources include word-number and abbreviated-unit surface forms that pretraining never showed (PRETRAIN_LESSON has no style); their block codes are off-distribution. Prediction: canonical-style sources >= 0.9, non-canonical-style sources markedly lower. Competing: H-pool (train vs dev tuples) or H-family (cross-family) explain the gap instead.",
+ "input_schema": {"args.checkpoints": "list", "args.families": "force family ids (default pretrain families)", "args.n": "pairs per pool"},
+ "output_schema": {"per checkpoint": {"overall": "rate", "canonical_style_sources": "rate", "noncanonical_style_sources": "rate", "strata": "{attr: {value: [rate, n]}}"}},
+ "read_scope": "model copies; dev-tuple force examples of the given families; ctx.observe.fit_pool; never sealed",
+ "measurement_definitions": "swap success = argmax of head(h_base with h[0:16] replaced by h_src[0:16]) equals M_src*A_base*S_base mod 13; only pairs whose target differs from the base answer are scored; bases are canonical style (digits, full units)",
+ "version": "1"
+}

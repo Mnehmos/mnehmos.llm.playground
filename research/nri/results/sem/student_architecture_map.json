@@ -1,0 +1,987 @@
+{
+ "schema": "student_architecture_map/1",
+ "source_sha256": {
+  "sem/lang.py": "2b3d8e8d466d3f72520a72e7fb74b00abd2cba7a59bb86f0968f9fac3bce12cd",
+  "sem/data.py": "08cc5817133cb74dad34655cb6e2dc90e9c24e51eea95d2fc166192bbcb0db09",
+  "sem/model.py": "e3866efc0796c6451ff750a9b78d3d60a10ac91ec5859452e1ee3ec394d14684",
+  "sem/train.py": "edddbbc92cfa989883b689c7602523a49caec9e45127fe2dc5e3604c87be469f",
+  "sem/observe.py": "9260e1c6773b8a51aae03c96989de99e4bb6fbc191961a94629b890df85a5ccd",
+  "run_sem.py": "f2456e92655da5a63aad4eb355367020b0aa8ef940ba1f6c726fc134b20b97ce",
+  "toolsmith/sandbox_child.py": "a07507cf64bd8ad5e606aace11cda550bd6f1b5c79faa9ffaf5d9c87da70fdc6",
+  "toolsmith/runner.py": "50b0e1207a3a50515a6440ef49f1270abf73ea17db8469fa6a6425b5d3dbee97"
+ },
+ "tokenization": {
+  "kind": "whole-word lexicon (lower-case, space-separated; punctuation as tokens)",
+  "vocab_size": 136,
+  "specials": [
+   "<pad>",
+   "<unk>",
+   "<q>"
+  ],
+  "max_len": 42,
+  "padding": "left; <q> marker last",
+  "unknown": "<unk> (words never seen in training renders)",
+  "note": "NOT BPE; no BPE-vs-ANLU comparison is made"
+ },
+ "semantics": {
+  "modulus": 13,
+  "mass_scales": [
+   1,
+   5,
+   8
+  ],
+  "acc_scales": [
+   1,
+   2,
+   7
+  ],
+  "force_output_factor": [
+   1,
+   11,
+   6
+  ],
+  "units": {
+   "mass": [
+    "brel",
+    "klot",
+    "vosk"
+   ],
+   "acc": [
+    "zep",
+    "quill",
+    "torv"
+   ],
+   "force": [
+    "nub",
+    "farl",
+    "gant"
+   ]
+  },
+  "answers": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "yes",
+   "no",
+   "phys",
+   "other"
+  ],
+  "tasks": [
+   "force",
+   "convert",
+   "equiv",
+   "inverse",
+   "sense"
+  ],
+  "roles": [
+   "pad",
+   "other",
+   "mass_val",
+   "mass_unit",
+   "acc_val",
+   "acc_unit",
+   "out_unit",
+   "force_val",
+   "target_unit",
+   "src_val",
+   "src_unit",
+   "poly_phys",
+   "poly_other",
+   "distract_num",
+   "query"
+  ],
+  "polysemous_words": [
+   "force",
+   "mass",
+   "work"
+  ]
+ },
+ "data_generator": {
+  "families": {
+   "F01": {
+    "task": "force",
+    "register": "textbook",
+    "syntax": "decl+imperative",
+    "split": "pretrain"
+   },
+   "F04": {
+    "task": "force",
+    "register": "engineering",
+    "syntax": "key-value",
+    "split": "pretrain"
+   },
+   "F11": {
+    "task": "force",
+    "register": "concise",
+    "syntax": "fragment",
+    "split": "pretrain"
+   },
+   "F02": {
+    "task": "force",
+    "register": "textbook",
+    "syntax": "reordered-question",
+    "split": "train"
+   },
+   "F03": {
+    "task": "force",
+    "register": "casual",
+    "syntax": "fragment-question",
+    "split": "train"
+   },
+   "F05": {
+    "task": "force",
+    "register": "symbolic",
+    "syntax": "equation",
+    "split": "train"
+   },
+   "F06": {
+    "task": "force",
+    "register": "textbook",
+    "syntax": "passive",
+    "split": "train"
+   },
+   "F08": {
+    "task": "force",
+    "register": "conversational",
+    "syntax": "request",
+    "split": "train"
+   },
+   "F07": {
+    "task": "force",
+    "register": "textbook",
+    "syntax": "coreference",
+    "split": "dev"
+   },
+   "F10": {
+    "task": "force",
+    "register": "verbose",
+    "syntax": "relative-clause",
+    "split": "dev"
+   },
+   "F09": {
+    "task": "force",
+    "register": "textbook",
+    "syntax": "declarative-completion",
+    "split": "sealed"
+   },
+   "F12": {
+    "task": "force",
+    "register": "casual",
+    "syntax": "unit-fronted-question",
+    "split": "sealed"
+   },
+   "C01": {
+    "task": "convert",
+    "register": "concise",
+    "syntax": "imperative",
+    "split": "train"
+   },
+   "C02": {
+    "task": "convert",
+    "register": "casual",
+    "syntax": "how-many",
+    "split": "train"
+   },
+   "C04": {
+    "task": "convert",
+    "register": "symbolic",
+    "syntax": "equation",
+    "split": "train"
+   },
+   "C05": {
+    "task": "convert",
+    "register": "casual",
+    "syntax": "what-is",
+    "split": "train"
+   },
+   "C03": {
+    "task": "convert",
+    "register": "textbook",
+    "syntax": "express",
+    "split": "dev"
+   },
+   "C06": {
+    "task": "convert",
+    "register": "verbose",
+    "syntax": "equals-how-many",
+    "split": "sealed"
+   },
+   "E01": {
+    "task": "equiv",
+    "register": "textbook",
+    "syntax": "same-as",
+    "split": "train"
+   },
+   "E03": {
+    "task": "equiv",
+    "register": "symbolic",
+    "syntax": "equation",
+    "split": "train"
+   },
+   "E04": {
+    "task": "equiv",
+    "register": "casual",
+    "syntax": "equivalent",
+    "split": "train"
+   },
+   "E02": {
+    "task": "equiv",
+    "register": "textbook",
+    "syntax": "describe-equal",
+    "split": "dev"
+   },
+   "E05": {
+    "task": "equiv",
+    "register": "casual",
+    "syntax": "colon-question",
+    "split": "sealed"
+   },
+   "I01": {
+    "task": "inverse",
+    "register": "textbook",
+    "syntax": "decl+question",
+    "split": "train"
+   },
+   "I03": {
+    "task": "inverse",
+    "register": "symbolic",
+    "syntax": "equation",
+    "split": "train"
+   },
+   "I04": {
+    "task": "inverse",
+    "register": "engineering",
+    "syntax": "key-value",
+    "split": "train"
+   },
+   "I02": {
+    "task": "inverse",
+    "register": "textbook",
+    "syntax": "fronted-question",
+    "split": "dev"
+   },
+   "I05": {
+    "task": "inverse",
+    "register": "casual",
+    "syntax": "conditional",
+    "split": "sealed"
+   },
+   "S01": {
+    "task": "sense",
+    "register": "textbook",
+    "syntax": "question",
+    "split": "train"
+   },
+   "S02": {
+    "task": "sense",
+    "register": "casual",
+    "syntax": "question",
+    "split": "train"
+   },
+   "S03": {
+    "task": "sense",
+    "register": "textbook",
+    "syntax": "question",
+    "split": "dev"
+   },
+   "S04": {
+    "task": "sense",
+    "register": "casual",
+    "syntax": "question",
+    "split": "sealed"
+   }
+  },
+  "contexts": {
+   "P-force-acts": {
+    "word": "force",
+    "sense": "phys",
+    "split": "train"
+   },
+   "P-force-net": {
+    "word": "force",
+    "sense": "phys",
+    "split": "dev"
+   },
+   "P-force-applied": {
+    "word": "force",
+    "sense": "phys",
+    "split": "sealed"
+   },
+   "P-mass-has": {
+    "word": "mass",
+    "sense": "phys",
+    "split": "train"
+   },
+   "P-mass-of": {
+    "word": "mass",
+    "sense": "phys",
+    "split": "dev"
+   },
+   "P-mass-measured": {
+    "word": "mass",
+    "sense": "phys",
+    "split": "sealed"
+   },
+   "P-work-done": {
+    "word": "work",
+    "sense": "phys",
+    "split": "train"
+   },
+   "P-work-net": {
+    "word": "work",
+    "sense": "phys",
+    "split": "dev"
+   },
+   "P-work-done2": {
+    "word": "work",
+    "sense": "phys",
+    "split": "sealed"
+   },
+   "O-force-compel": {
+    "word": "force",
+    "sense": "other",
+    "split": "train"
+   },
+   "O-force-habit": {
+    "word": "force",
+    "sense": "other",
+    "split": "dev"
+   },
+   "O-force-org": {
+    "word": "force",
+    "sense": "other",
+    "split": "sealed"
+   },
+   "O-mass-church": {
+    "word": "mass",
+    "sense": "other",
+    "split": "train"
+   },
+   "O-mass-crowd": {
+    "word": "mass",
+    "sense": "other",
+    "split": "dev"
+   },
+   "O-mass-priest": {
+    "word": "mass",
+    "sense": "other",
+    "split": "sealed"
+   },
+   "O-work-job": {
+    "word": "work",
+    "sense": "other",
+    "split": "train"
+   },
+   "O-work-art": {
+    "word": "work",
+    "sense": "other",
+    "split": "dev"
+   },
+   "O-work-shift": {
+    "word": "work",
+    "sense": "other",
+    "split": "sealed"
+   }
+  },
+  "split_axes": [
+   "family",
+   "context",
+   "tuple(hash 60/15/25)",
+   "numeric(held-out values: dev 9-10, sealed 11-12 on unit 2)"
+  ],
+  "truth_contract": "sem.lang.validate: independent re-reading must recover the AST and answer, else quarantine"
+ },
+ "model": {
+  "class_name": "SemStudent",
+  "source": "    def trunk(self, tok, ret=False):",
+  "n_params": 130255,
+  "n_params_without_aux": 129280,
+  "param_groups": {
+   "E": 8704,
+   "P": 2688,
+   "ln1a": 128,
+   "ln1m": 128,
+   "ln2a": 128,
+   "ln2m": 128,
+   "ln3a": 128,
+   "attn1": 16640,
+   "attn2": 16640,
+   "attn3": 16640,
+   "mlp1": 16576,
+   "mlp2": 16576,
+   "W_in": 16640,
+   "W_out": 16448,
+   "W_U": 1088,
+   "aux": 975
+  },
+  "params": {
+   "E.weight": {
+    "shape": [
+     136,
+     64
+    ],
+    "numel": 8704,
+    "group": "E"
+   },
+   "P.weight": {
+    "shape": [
+     42,
+     64
+    ],
+    "numel": 2688,
+    "group": "P"
+   },
+   "ln1a.weight": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln1a"
+   },
+   "ln1a.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln1a"
+   },
+   "ln1m.weight": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln1m"
+   },
+   "ln1m.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln1m"
+   },
+   "ln2a.weight": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln2a"
+   },
+   "ln2a.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln2a"
+   },
+   "ln2m.weight": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln2m"
+   },
+   "ln2m.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln2m"
+   },
+   "ln3a.weight": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln3a"
+   },
+   "ln3a.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "ln3a"
+   },
+   "attn1.qkv.weight": {
+    "shape": [
+     192,
+     64
+    ],
+    "numel": 12288,
+    "group": "attn1"
+   },
+   "attn1.qkv.bias": {
+    "shape": [
+     192
+    ],
+    "numel": 192,
+    "group": "attn1"
+   },
+   "attn1.o.weight": {
+    "shape": [
+     64,
+     64
+    ],
+    "numel": 4096,
+    "group": "attn1"
+   },
+   "attn1.o.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "attn1"
+   },
+   "attn2.qkv.weight": {
+    "shape": [
+     192,
+     64
+    ],
+    "numel": 12288,
+    "group": "attn2"
+   },
+   "attn2.qkv.bias": {
+    "shape": [
+     192
+    ],
+    "numel": 192,
+    "group": "attn2"
+   },
+   "attn2.o.weight": {
+    "shape": [
+     64,
+     64
+    ],
+    "numel": 4096,
+    "group": "attn2"
+   },
+   "attn2.o.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "attn2"
+   },
+   "attn3.qkv.weight": {
+    "shape": [
+     192,
+     64
+    ],
+    "numel": 12288,
+    "group": "attn3"
+   },
+   "attn3.qkv.bias": {
+    "shape": [
+     192
+    ],
+    "numel": 192,
+    "group": "attn3"
+   },
+   "attn3.o.weight": {
+    "shape": [
+     64,
+     64
+    ],
+    "numel": 4096,
+    "group": "attn3"
+   },
+   "attn3.o.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "attn3"
+   },
+   "mlp1.fc.weight": {
+    "shape": [
+     128,
+     64
+    ],
+    "numel": 8192,
+    "group": "mlp1"
+   },
+   "mlp1.fc.bias": {
+    "shape": [
+     128
+    ],
+    "numel": 128,
+    "group": "mlp1"
+   },
+   "mlp1.proj.weight": {
+    "shape": [
+     64,
+     128
+    ],
+    "numel": 8192,
+    "group": "mlp1"
+   },
+   "mlp1.proj.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "mlp1"
+   },
+   "mlp2.fc.weight": {
+    "shape": [
+     128,
+     64
+    ],
+    "numel": 8192,
+    "group": "mlp2"
+   },
+   "mlp2.fc.bias": {
+    "shape": [
+     128
+    ],
+    "numel": 128,
+    "group": "mlp2"
+   },
+   "mlp2.proj.weight": {
+    "shape": [
+     64,
+     128
+    ],
+    "numel": 8192,
+    "group": "mlp2"
+   },
+   "mlp2.proj.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "mlp2"
+   },
+   "W_in.weight": {
+    "shape": [
+     256,
+     64
+    ],
+    "numel": 16384,
+    "group": "W_in"
+   },
+   "W_in.bias": {
+    "shape": [
+     256
+    ],
+    "numel": 256,
+    "group": "W_in"
+   },
+   "W_out.weight": {
+    "shape": [
+     64,
+     256
+    ],
+    "numel": 16384,
+    "group": "W_out"
+   },
+   "W_out.bias": {
+    "shape": [
+     64
+    ],
+    "numel": 64,
+    "group": "W_out"
+   },
+   "W_U.weight": {
+    "shape": [
+     17,
+     64
+    ],
+    "numel": 1088,
+    "group": "W_U"
+   },
+   "aux.weight": {
+    "shape": [
+     15,
+     64
+    ],
+    "numel": 960,
+    "group": "aux"
+   },
+   "aux.bias": {
+    "shape": [
+     15
+    ],
+    "numel": 15,
+    "group": "aux"
+   }
+  },
+  "heads_per_layer": 4,
+  "head_dim": 16,
+  "layers": [
+   "attn1+mlp1",
+   "attn2+mlp2",
+   "attn3",
+   "readout MLP"
+  ],
+  "declared_block": [
+   0,
+   16
+  ]
+ },
+ "runtime": {
+  "batch_example": 4,
+  "sites": {
+   "x0": [
+    4,
+    42,
+    64
+   ],
+   "x1": [
+    4,
+    42,
+    64
+   ],
+   "x2": [
+    4,
+    42,
+    64
+   ],
+   "x3": [
+    4,
+    42,
+    64
+   ],
+   "h": [
+    4,
+    64
+   ],
+   "pat1": [
+    4,
+    4,
+    42,
+    42
+   ],
+   "pat2": [
+    4,
+    4,
+    42,
+    42
+   ],
+   "pat3": [
+    4,
+    4,
+    42,
+    42
+   ],
+   "pre3": [
+    4,
+    64
+   ],
+   "logits": [
+    4,
+    17
+   ],
+   "aux_logits": [
+    4,
+    42,
+    15
+   ]
+  },
+  "module_outputs": {
+   "E": [
+    4,
+    42,
+    64
+   ],
+   "P": [
+    42,
+    64
+   ],
+   "ln1a": [
+    4,
+    42,
+    64
+   ],
+   "attn1.qkv": [
+    4,
+    42,
+    192
+   ],
+   "attn1.o": [
+    4,
+    42,
+    64
+   ],
+   "ln1m": [
+    4,
+    42,
+    64
+   ],
+   "mlp1.fc": [
+    4,
+    42,
+    128
+   ],
+   "mlp1.proj": [
+    4,
+    42,
+    64
+   ],
+   "ln2a": [
+    4,
+    42,
+    64
+   ],
+   "attn2.qkv": [
+    4,
+    42,
+    192
+   ],
+   "attn2.o": [
+    4,
+    42,
+    64
+   ],
+   "ln2m": [
+    4,
+    42,
+    64
+   ],
+   "mlp2.fc": [
+    4,
+    42,
+    128
+   ],
+   "mlp2.proj": [
+    4,
+    42,
+    64
+   ],
+   "ln3a": [
+    4,
+    42,
+    64
+   ],
+   "attn3.qkv": [
+    4,
+    42,
+    192
+   ],
+   "attn3.o": [
+    4,
+    42,
+    64
+   ],
+   "W_out": [
+    4,
+    64
+   ],
+   "W_U": [
+    4,
+    17
+   ],
+   "aux": [
+    4,
+    42,
+    15
+   ]
+  }
+ },
+ "patch_points": {
+  "h": "final-position residual after attn3 (input of the readout); swap/patch exact, no normalisation",
+  "h[0:16]": "declared mass block (IIT-supervised on force examples)",
+  "W_in": "readout input weights: affine edits of h fold exactly into W_in/b_in",
+  "x1[pos], x2[pos]": "token residuals after block 1/2 (role head reads x1); positional patching needs aligned positions",
+  "pre3[head]": "attn3 per-head output at the query position (before the o projection)",
+  "pat{1,2,3}": "attention patterns (keys masked at <pad>)"
+ },
+ "objectives": {
+  "task": "CE on the answer at <q>",
+  "aux_role": "CE on per-token semantic role from x1 (training only)",
+  "iit": "block swap between force examples within the batch; target = source mass x base acceleration x base output factor",
+  "consistency": "symmetric KL between paraphrase twins in the batch",
+  "defaults": {
+   "aux_role": 0.5,
+   "iit": 3.0,
+   "consistency": 0.0
+  }
+ },
+ "optimizer": {
+  "kind": "AdamW",
+  "weight_decay": 0.01,
+  "state_per_param": [
+   "step",
+   "exp_avg",
+   "exp_avg_sq"
+  ],
+  "pretrain_lr": {
+   "peak": 0.002,
+   "warmup": 200,
+   "cap_steps": 5000
+  },
+  "continuation_lr": {
+   "peak": 0.001,
+   "warmup": 100,
+   "min": 0.0001,
+   "steps": 1500,
+   "schedule": "cosine"
+  },
+  "continuation_restart": "fresh AdamW from the common checkpoint for both arms",
+  "batch": 128,
+  "threads": 4
+ },
+ "checkpoints": {
+  "model": "model.safetensors",
+  "optimizer": "optim.pt (loaded with torch.load(weights_only=True))",
+  "rng": "rng.safetensors (torch) + state.json (python random state, JSON)",
+  "metadata": "state.json",
+  "pickle": "never loaded from artifacts"
+ },
+ "evaluation_permissions": {
+  "training": [
+   "families pretrain/train",
+   "contexts train",
+   "tuples train",
+   "numeric train"
+  ],
+  "supervisor_visible": [
+   "dev sets (runs/zoo_sem/eval/dev)",
+   "FIT pool",
+   "all checkpoints of A and B"
+  ],
+  "sealed": [
+   "generated only in memory by run_sem.py final; content hashes frozen in eval/manifest.json",
+   "sem.data.SEALED_LOCK blocks every sealed request"
+  ]
+ },
+ "tool_api": {
+  "context": "toolsmith.sandbox_child.Ctx",
+  "methods": [
+   "load_model(name)",
+   "vocab",
+   "data (guarded sem.data facade)",
+   "lang",
+   "encode(examples)",
+   "dev_sets()",
+   "observe (sem.observe)",
+   "out(name, obj)"
+  ]
+ },
+ "instruments_prebuilt": [
+  "acc",
+  "binding_probe",
+  "canon",
+  "dev_sets",
+  "fit_pool",
+  "head_roles",
+  "iia_block",
+  "linear_cka",
+  "observe",
+  "paraphrase_invariance",
+  "pooled_edit",
+  "ridge",
+  "role_vectors",
+  "sense_probe"
+ ],
+ "version": "9d515845e5dd08e3"
+}

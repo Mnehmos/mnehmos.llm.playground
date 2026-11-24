@@ -1,0 +1,12 @@
+{
+ "what_changed": "With the same lesson kind as step 1100-1200, B sets still moved by up to 0.12 in one block (sense_newframe 0.406 -> 0.284, convert_newfam +0.094, equiv_trainfam -0.073); A moved similarly on some sets. B-A in [-0.094, +0.068].",
+ "knows": "Unchanged: canonical force (partial), answer types, training-context sense.",
+ "fails": "Unchanged.",
+ "explanation": "The dev metrics of prior-driven sets (sense on unseen frames, equiv, small numeric sets near chance) have a block-to-block fluctuation of ~0.1 even when the representation is nearly frozen (CKA 0.993-0.998): small readout/bias changes flip many near-tie items. Any final B-A difference of this size on those sets is within this fluctuation and cannot be attributed to adaptive selection.",
+ "competing_explanation": "The step-1300->1400 drop of B newframe is a real decay of the sense-dose effect (H-prior), not fluctuation; it would not recover without more sense dose.",
+ "prediction": "Final block L14 (same as L13): at step 1500 B-A on the registered-primary analogues (convert, equiv, inverse, sense dev sets) stays within [-0.15, +0.10] each, and the mean B-A over those 8 dev sets is within [-0.05, +0.03] - i.e. NO adaptive advantage. For the sealed primary I predict the bootstrap CI includes 0.",
+ "tool_needed": "None.",
+ "next_action": "L14: same as L13 (hold).",
+ "why_this_checkpoint": "Last block at lr ~0.12 of peak; no lever tested in 14 blocks moved learning speed, so holding is the evidence-based choice.",
+ "previous_outcome": "Step-1300 prediction PARTLY FALSIFIED: B-A stayed within [-0.12, +0.08] (confirmed) but B's own sets did not stay within 0.06 of step 1300 (falsified: newframe -0.122, convert_newfam +0.094, equiv_trainfam -0.073)."
+}

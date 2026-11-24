@@ -1,0 +1,12 @@
+{
+ "what_changed": "B sense_newframe held 0.456 (A 0.357) at sense 0.25; equiv_newfam B 0.359 / A 0.414; all other sets within 0.05. Training log: the IIT term DOMINATES the objective - A: 3 x 1.456 = 4.37 of total 6.21 (task 1.51); B: 3 x 0.84 = 2.52 of 3.79. Within-pretrain-family block IIA has eroded to 0.34 (A) / 0.39 (B).",
+ "knows": "Sense type on the new frame (B), equiv answer types; partial canonical force.",
+ "fails": "Equiv is NOT computed: T004 v2 shows a frame-conditional prior (both arms answer 'no' on new families for ~66% while 61% of gold is 'yes'; in-distribution 0.56). Convert/inverse at chance. I deliberately do NOT exploit the dev yes-prior (it would raise dev/sealed numbers without any skill).",
+ "explanation": "H-iit-tax: the IIT target (swap the mass block between force items) is unattainable for styled and new-family force items whose block is unbound (T002: word-number sources swap at 0.07), so IIT produces large irreducible gradients (4.4 of 6.2 of A's loss) that crowd out task learning in the shared trunk/readout and even erode the block causality it is meant to train.",
+ "competing_explanation": "H-slow: the loss share is irrelevant; the student is simply in a long plateau (CKA 0.98-0.99/block) and lowering IIT will not accelerate task learning within 100 steps.",
+ "prediction": "L10 = L9 with IIT 1.0 (from 3.0): at step 1100 B task loss < 1.0 (from 1.12), B convert_trainfam >= 0.18 (A ~0.13), and B within-family IIA falls below 0.30 (cost). H-slow predicts no dev set moves by > 0.05 relative to A except via IIA.",
+ "tool_needed": "None new: training-log components and card IIA suffice.",
+ "next_action": "L10: as L9 but objectives iit 1.0.",
+ "why_this_checkpoint": "Five blocks remain and the lr is ~0.5 of peak; the objective-mixing hypothesis is the only untested lever that acts on learning speed rather than output priors.",
+ "previous_outcome": "Step-900 prediction: newframe >= 0.42 CONFIRMED (0.456); equiv_newfam >= 0.45 FALSIFIED (0.359); other sets within 0.05 of A CONFIRMED (largest gap equiv_newfam -0.055)."
+}

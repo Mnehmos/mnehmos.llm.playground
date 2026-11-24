@@ -1,0 +1,12 @@
+{
+ "what_changed": "B sense in-distribution 0.76 -> 0.93 (memorised: 6 training contexts) while dev new-context sense became MORE phys-biased (phys 307/384, gold phys 177/384); B new-frame sense 0.30 (numeric answers 209/384). B equiv collapsed 0.37 -> 0.27: equiv questions now answered phys/other 180/384 (cross-task answer-type contamination). A equiv 0.51 = mostly 'yes' (322/384 in-distribution) - not a skill.",
+ "knows": "Sense on training contexts (B 0.93); answer types still mostly correct for force/convert/inverse.",
+ "fails": "Equiv answer type (B), sense generalisation (both), all numeric computation beyond canonical force (convert in-distribution 0.19-0.23).",
+ "explanation": "Cross-task answer-type contamination: heavy sense dosing with max pair rate/consistency made the binary-answer region dominated by phys/other; equiv (dose 0.07 of the batch) lost its yes/no routing. The sense memorisation result supports H-cap: within training pools the student prefers memorising context words to a unit-presence rule.",
+ "competing_explanation": "Equiv routing loss is not dose-driven but consistency-driven: consistency=1.0 on twins pulls equiv twins (different families) toward each other's errors; lowering consistency alone would restore it.",
+ "prediction": "L5 (equiv 0.25, sense 0.2, consistency 0.3, pair 0.2): at step 600 B dev/equiv_trainfam >= 0.45 with yes/no >= 85% of answers; B sense in-distribution stays >= 0.85; sense dev does not improve (H-cap). Falsifier: B equiv yes/no share < 70%.",
+ "tool_needed": "T004 v2 again; NEW: why is convert at chance even in-distribution? If the canonical source quantity (value x unit scale) is decodable at h for convert items but the answer is wrong, the failure is in the readout composition; if not decodable, it is upstream. Building T005 for that.",
+ "next_action": "L5: force 0.25 / convert 0.2 / equiv 0.25 / inverse 0.1 / sense 0.2; replay 0.3; style 0.3/0.3; pair 0.2 + consistency 0.3; aux 0.5; IIT 3; hard negatives 0.3.",
+ "why_this_checkpoint": "B's equiv type routing broke at this block; repairing it is the cheapest recoverable primary-endpoint loss (2/8 sets) and the lr is still 0.85 of peak.",
+ "previous_outcome": "Step-400 predictions FALSIFIED: newframe 0.305 (< 0.45, numeric answers persist), newctx 0.375 (< 0.40) and phys share 80% (prediction < 55%); H-cap's prediction (newctx <= 0.32) also not met exactly (0.375) but its phys-bias prediction held. Unpredicted cost: equiv answer type lost."
+}

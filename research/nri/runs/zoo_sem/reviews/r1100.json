@@ -1,0 +1,12 @@
+{
+ "what_changed": "IIT 3 -> 1 changed nothing measurable: B task loss 1.12 -> 1.18, convert_trainfam 0.120 (A 0.102), within-family IIA 0.38 (unchanged), CKA(h, prev) 0.999 - B's representation barely moved. Equiv_newfam B 0.349 vs A 0.500 (A's yes-prior moved, not B's skill). Sense sets now equal to A (0.43/0.40 vs 0.45/0.39).",
+ "knows": "No change since step 900.",
+ "fails": "Numeric computation beyond canonical force; equiv is prior-driven in both arms.",
+ "explanation": "H-slow: the student is in a long plateau; per-block representation change is ~0.1-1% (CKA 0.99+), so lesson mixtures only shift output priors; the IIT share of the loss is not what limits learning (H-iit-tax FALSIFIED).",
+ "competing_explanation": "The plateau could still break late (pretraining broke its plateau after ~2,400 steps); with lr decaying to 1e-4 a break in the last 400 steps is unlikely but not excluded.",
+ "prediction": "L11 (registered objective weights restored: IIT 3, consistency 0.2; sense 0.25): at step 1200 B sense_newframe >= 0.40; B-A on equiv_newfam stays in [-0.20, -0.05] (prior-driven, not fixed by this lesson); no dev set changes by > 0.05 from step 1100 in B except equiv sets (prior drift).",
+ "tool_needed": "None.",
+ "next_action": "L11: force 0.1875 / convert 0.1875 / equiv 0.1875 / inverse 0.1875 / sense 0.25; replay 0.3; style 0.3/0.3; distractors 0.25; hard negatives 0.3; pair 0.1 + consistency 0.2; aux 0.5; IIT 3 (= A's stage-3 except sense 0.25).",
+ "why_this_checkpoint": "The objective-mixing test is resolved; remaining blocks should not introduce unproductive differences from A beyond the one B-specific effect that worked (sense dosing).",
+ "previous_outcome": "Step-1000 prediction FALSIFIED on all three parts: task loss 1.18 (>= 1.0), convert 0.120 (< 0.18), IIA 0.38 (did not fall below 0.30). H-slow's prediction (no relative movement > 0.05 except prior-driven sets) held, except equiv_newfam where A's prior moved (+0.09)."
+}

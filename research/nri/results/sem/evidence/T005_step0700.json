@@ -1,0 +1,242 @@
+{
+ "record": {
+  "tool_id": "T005_decodability_ladder",
+  "mode": "run",
+  "source_sha256": "34dca53563e4296463f076239653eaf8fcc1f8ca1271124575572d924737be29",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T005_decodability_ladder",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 600 (A and B)",
+   "kind": "observational",
+   "purpose": "Locate why convert stays at chance in-distribution: which answer ingredients (v, u, t, canonical v*s_u, answer) are linearly decodable at the query position h and at the source-value token (x1, x2).",
+   "hypothesis": "H-up: ingredients are not even decodable (upstream reading fails). H-comp: v, u, t decodable at h but canonical quantity / answer not (composition fails). H-read: answer decodable at h but readout fails.",
+   "input_schema": {
+    "args.checkpoints": "list",
+    "args.n": "training-pool items for fitting"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "site": {
+      "v|u|t|canon|answer": "held-out ridge accuracy"
+     },
+     "model_accuracy": "rate"
+    }
+   },
+   "read_scope": "model copies; fresh TRAINING-pool convert/force items (canonical style); never dev or sealed",
+   "measurement_definitions": "ridge one-vs-all linear classifier (sem.observe.ridge, lam 1e-2) fit on n items, scored on n/2 disjoint items; chance = 1/13 for values (1/3 for units); kNN = Euclidean 10-nearest-neighbour vote on centred unscaled vectors (separability without a linear-code assumption)",
+   "version": "1",
+   "changelog": [
+    "v1 pre-validation fix: the positive control (canonical mass at h, linear) failed at 0.43 on the common checkpoint although the model is 0.995 accurate and the block is causally sufficient - consistent with T001's curved-code verdict; added kNN and moved the positive control to kNN",
+    "v1 pre-validation fix 2: kNN on the full h was also 0.50 (other quantities dominate distances); positive control moved to the declared block h[0:16]; block added as a site",
+    "v1 pre-validation fix 3: the model-based control had an ARBITRARY threshold (0.8; observed 0.735 on the block) and was replaced by a planted-truth curved code (route-rotated discrete-log circle) - the real-model block decodability is reported as an observation, not used as a gate",
+    "v1 pre-validation fix 4: the planted code exposed a decoder flaw - per-dimension standardisation inflated pure-noise dimensions (kNN 0.36 on a decodable code); kNN now uses centred, unscaled Euclidean distance",
+    "v1 pre-validation fix 5: planted noise 0.15 made the gold case itself ambiguous (16-D noise distance ~0.85 > adjacent-class chord 0.52); set to 0.05 so the planted truth is unambiguous"
+   ]
+  },
+  "checkpoints": {
+   "A700": "runs/zoo_sem/A_fixed/step_0700",
+   "B700": "runs/zoo_sem/B_adaptive/step_0700"
+  },
+  "args": {},
+  "nonmutation": {
+   "before": {
+    "A700": "f69bd8d812fb517489140b22af58f5a197033b90e640ad35eb57af6dd58d82b0",
+    "B700": "6142726607e6bcf37531c56030c22e5034b00d103d9ef780d6e455625f9da65d"
+   },
+   "after": {
+    "A700": "f69bd8d812fb517489140b22af58f5a197033b90e640ad35eb57af6dd58d82b0",
+    "B700": "6142726607e6bcf37531c56030c22e5034b00d103d9ef780d6e455625f9da65d"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 3.1,
+  "error": "",
+  "time": "2026-11-23T23:40:58Z"
+ },
+ "result": {
+  "A700": {
+   "h": {
+    "v": {
+     "linear": 0.975,
+     "knn": 0.743
+    },
+    "u": {
+     "linear": 0.844,
+     "knn": 0.729
+    },
+    "t": {
+     "linear": 0.908,
+     "knn": 0.787
+    },
+    "canon": {
+     "linear": 0.557,
+     "knn": 0.612
+    },
+    "answer": {
+     "linear": 0.467,
+     "knn": 0.529
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.617,
+     "knn": 0.723
+    },
+    "u": {
+     "linear": 0.564,
+     "knn": 0.759
+    },
+    "t": {
+     "linear": 0.639,
+     "knn": 0.728
+    },
+    "canon": {
+     "linear": 0.389,
+     "knn": 0.629
+    },
+    "answer": {
+     "linear": 0.309,
+     "knn": 0.511
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.795,
+     "knn": 0.664
+    },
+    "t": {
+     "linear": 0.756,
+     "knn": 0.589
+    },
+    "canon": {
+     "linear": 0.551,
+     "knn": 0.748
+    },
+    "answer": {
+     "linear": 0.46,
+     "knn": 0.483
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.803,
+     "knn": 0.712
+    },
+    "t": {
+     "linear": 0.759,
+     "knn": 0.575
+    },
+    "canon": {
+     "linear": 0.58,
+     "knn": 0.755
+    },
+    "answer": {
+     "linear": 0.461,
+     "knn": 0.491
+    }
+   },
+   "model_accuracy": 0.28
+  },
+  "B700": {
+   "h": {
+    "v": {
+     "linear": 0.976,
+     "knn": 0.744
+    },
+    "u": {
+     "linear": 0.825,
+     "knn": 0.699
+    },
+    "t": {
+     "linear": 0.924,
+     "knn": 0.776
+    },
+    "canon": {
+     "linear": 0.591,
+     "knn": 0.609
+    },
+    "answer": {
+     "linear": 0.46,
+     "knn": 0.512
+    }
+   },
+   "h_block": {
+    "v": {
+     "linear": 0.588,
+     "knn": 0.752
+    },
+    "u": {
+     "linear": 0.567,
+     "knn": 0.763
+    },
+    "t": {
+     "linear": 0.651,
+     "knn": 0.757
+    },
+    "canon": {
+     "linear": 0.381,
+     "knn": 0.651
+    },
+    "answer": {
+     "linear": 0.308,
+     "knn": 0.537
+    }
+   },
+   "x1_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.804,
+     "knn": 0.687
+    },
+    "t": {
+     "linear": 0.751,
+     "knn": 0.587
+    },
+    "canon": {
+     "linear": 0.559,
+     "knn": 0.764
+    },
+    "answer": {
+     "linear": 0.459,
+     "knn": 0.488
+    }
+   },
+   "x2_srcval": {
+    "v": {
+     "linear": 1.0,
+     "knn": 1.0
+    },
+    "u": {
+     "linear": 0.823,
+     "knn": 0.711
+    },
+    "t": {
+     "linear": 0.735,
+     "knn": 0.609
+    },
+    "canon": {
+     "linear": 0.569,
+     "knn": 0.761
+    },
+    "answer": {
+     "linear": 0.467,
+     "knn": 0.496
+    }
+   },
+   "model_accuracy": 0.265
+  }
+ }
+}

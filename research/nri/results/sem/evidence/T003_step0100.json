@@ -1,0 +1,695 @@
+{
+ "record": {
+  "tool_id": "T003_stratified_accuracy",
+  "mode": "run",
+  "source_sha256": "8e6ee57191373717eef13651fc8ad0131f4346d97160e858880f40b239512e69",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T003_stratified_accuracy",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 100 (A and B)",
+   "kind": "observational",
+   "purpose": "Accuracy on development sets stratified by number style, unit style, canonical style, phrasing family, mass unit, distractor.",
+   "hypothesis": "Step-100 regression of both arms: if canonical-style accuracy fell, the shared optimizer-restart/warm-up shock disrupted a known skill; if only non-canonical strata are low, nothing was lost and the drop is a mixture effect.",
+   "input_schema": {
+    "args.sets": "optional list of set names",
+    "args.keys": "attributes to report"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "set": {
+      "acc": "rate",
+      "<attr>": {
+       "value": "[rate, n]"
+      }
+     }
+    }
+   },
+   "read_scope": "model copies; frozen development sets; never sealed",
+   "measurement_definitions": "accuracy = argmax answer equals the gold answer; a stratum's rate is over the examples of the set having that attribute value",
+   "version": "1"
+  },
+  "checkpoints": {
+   "c": "runs/zoo_sem/common",
+   "A100": "runs/zoo_sem/A_fixed/step_0100",
+   "B100": "runs/zoo_sem/B_adaptive/step_0100"
+  },
+  "args": {
+   "sets": [
+    "dev/force_id_pretrainfam",
+    "dev/force_id_trainfam",
+    "dev/convert_trainfam",
+    "dev/sense_trainframe_newctx"
+   ]
+  },
+  "nonmutation": {
+   "before": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860",
+    "A100": "01570e1f2e88fac1e2a21176735efbb404a007b7225dfc2061826bae35bdc8a2",
+    "B100": "843bd45456945d9ddda35ca0bd14af890a10aff0dcad15016c08652a8449c062"
+   },
+   "after": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860",
+    "A100": "01570e1f2e88fac1e2a21176735efbb404a007b7225dfc2061826bae35bdc8a2",
+    "B100": "843bd45456945d9ddda35ca0bd14af890a10aff0dcad15016c08652a8449c062"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 2.8,
+  "error": "",
+  "time": "2026-11-23T23:32:28Z"
+ },
+ "result": {
+  "A100": {
+   "dev/force_id_pretrainfam": {
+    "acc": 0.3984,
+    "num": {
+     "num": [
+      0.5035,
+      282
+     ],
+     "word": [
+      0.1078,
+      102
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.2037,
+      108
+     ],
+     "full": [
+      0.4746,
+      276
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.1559,
+      186
+     ],
+     "True": [
+      0.6263,
+      198
+     ]
+    },
+    "family": {
+     "F01": [
+      0.3243,
+      111
+     ],
+     "F04": [
+      0.4154,
+      130
+     ],
+     "F11": [
+      0.4406,
+      143
+     ]
+    }
+   },
+   "dev/force_id_trainfam": {
+    "acc": 0.2604,
+    "num": {
+     "num": [
+      0.3446,
+      267
+     ],
+     "word": [
+      0.0684,
+      117
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0962,
+      104
+     ],
+     "full": [
+      0.3214,
+      280
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.0851,
+      188
+     ],
+     "True": [
+      0.4286,
+      196
+     ]
+    },
+    "family": {
+     "F01": [
+      0.2889,
+      45
+     ],
+     "F02": [
+      0.1667,
+      42
+     ],
+     "F03": [
+      0.1538,
+      39
+     ],
+     "F04": [
+      0.3704,
+      54
+     ],
+     "F05": [
+      0.2778,
+      54
+     ],
+     "F06": [
+      0.119,
+      42
+     ],
+     "F08": [
+      0.2679,
+      56
+     ],
+     "F11": [
+      0.3654,
+      52
+     ]
+    }
+   },
+   "dev/convert_trainfam": {
+    "acc": 0.0859,
+    "num": {
+     "num": [
+      0.0651,
+      261
+     ],
+     "word": [
+      0.1301,
+      123
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0435,
+      115
+     ],
+     "full": [
+      0.1041,
+      269
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.09,
+      200
+     ],
+     "True": [
+      0.0815,
+      184
+     ]
+    },
+    "family": {
+     "C01": [
+      0.0909,
+      99
+     ],
+     "C02": [
+      0.1026,
+      78
+     ],
+     "C04": [
+      0.0865,
+      104
+     ],
+     "C05": [
+      0.068,
+      103
+     ]
+    }
+   },
+   "dev/sense_trainframe_newctx": {
+    "acc": 0.1172,
+    "num": {
+     "num": [
+      0.1151,
+      252
+     ],
+     "word": [
+      0.1212,
+      132
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0804,
+      112
+     ],
+     "full": [
+      0.1324,
+      272
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.1048,
+      210
+     ],
+     "True": [
+      0.1322,
+      174
+     ]
+    },
+    "family": {
+     "S01": [
+      0.2344,
+      192
+     ],
+     "S02": [
+      0.0,
+      192
+     ]
+    }
+   }
+  },
+  "B100": {
+   "dev/force_id_pretrainfam": {
+    "acc": 0.3828,
+    "num": {
+     "num": [
+      0.4858,
+      282
+     ],
+     "word": [
+      0.098,
+      102
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1389,
+      108
+     ],
+     "full": [
+      0.4783,
+      276
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.1237,
+      186
+     ],
+     "True": [
+      0.6263,
+      198
+     ]
+    },
+    "family": {
+     "F01": [
+      0.3243,
+      111
+     ],
+     "F04": [
+      0.4231,
+      130
+     ],
+     "F11": [
+      0.3916,
+      143
+     ]
+    }
+   },
+   "dev/force_id_trainfam": {
+    "acc": 0.224,
+    "num": {
+     "num": [
+      0.2921,
+      267
+     ],
+     "word": [
+      0.0684,
+      117
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1346,
+      104
+     ],
+     "full": [
+      0.2571,
+      280
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.1011,
+      188
+     ],
+     "True": [
+      0.3418,
+      196
+     ]
+    },
+    "family": {
+     "F01": [
+      0.3111,
+      45
+     ],
+     "F02": [
+      0.1429,
+      42
+     ],
+     "F03": [
+      0.1282,
+      39
+     ],
+     "F04": [
+      0.3519,
+      54
+     ],
+     "F05": [
+      0.2778,
+      54
+     ],
+     "F06": [
+      0.0952,
+      42
+     ],
+     "F08": [
+      0.1607,
+      56
+     ],
+     "F11": [
+      0.2692,
+      52
+     ]
+    }
+   },
+   "dev/convert_trainfam": {
+    "acc": 0.0521,
+    "num": {
+     "num": [
+      0.0651,
+      261
+     ],
+     "word": [
+      0.0244,
+      123
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.087,
+      115
+     ],
+     "full": [
+      0.0372,
+      269
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.055,
+      200
+     ],
+     "True": [
+      0.0489,
+      184
+     ]
+    },
+    "family": {
+     "C01": [
+      0.0606,
+      99
+     ],
+     "C02": [
+      0.0256,
+      78
+     ],
+     "C04": [
+      0.0673,
+      104
+     ],
+     "C05": [
+      0.0485,
+      103
+     ]
+    }
+   },
+   "dev/sense_trainframe_newctx": {
+    "acc": 0.0,
+    "num": {
+     "num": [
+      0.0,
+      252
+     ],
+     "word": [
+      0.0,
+      132
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0,
+      112
+     ],
+     "full": [
+      0.0,
+      272
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.0,
+      210
+     ],
+     "True": [
+      0.0,
+      174
+     ]
+    },
+    "family": {
+     "S01": [
+      0.0,
+      192
+     ],
+     "S02": [
+      0.0,
+      192
+     ]
+    }
+   }
+  },
+  "c": {
+   "dev/force_id_pretrainfam": {
+    "acc": 0.5807,
+    "num": {
+     "num": [
+      0.7447,
+      282
+     ],
+     "word": [
+      0.1275,
+      102
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.1481,
+      108
+     ],
+     "full": [
+      0.75,
+      276
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.1398,
+      186
+     ],
+     "True": [
+      0.9949,
+      198
+     ]
+    },
+    "family": {
+     "F01": [
+      0.5586,
+      111
+     ],
+     "F04": [
+      0.6,
+      130
+     ],
+     "F11": [
+      0.5804,
+      143
+     ]
+    }
+   },
+   "dev/force_id_trainfam": {
+    "acc": 0.3151,
+    "num": {
+     "num": [
+      0.4232,
+      267
+     ],
+     "word": [
+      0.0684,
+      117
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0962,
+      104
+     ],
+     "full": [
+      0.3964,
+      280
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.0904,
+      188
+     ],
+     "True": [
+      0.5306,
+      196
+     ]
+    },
+    "family": {
+     "F01": [
+      0.5111,
+      45
+     ],
+     "F02": [
+      0.1905,
+      42
+     ],
+     "F03": [
+      0.2308,
+      39
+     ],
+     "F04": [
+      0.4259,
+      54
+     ],
+     "F05": [
+      0.3333,
+      54
+     ],
+     "F06": [
+      0.0238,
+      42
+     ],
+     "F08": [
+      0.1786,
+      56
+     ],
+     "F11": [
+      0.5577,
+      52
+     ]
+    }
+   },
+   "dev/convert_trainfam": {
+    "acc": 0.1042,
+    "num": {
+     "num": [
+      0.1341,
+      261
+     ],
+     "word": [
+      0.0407,
+      123
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.113,
+      115
+     ],
+     "full": [
+      0.1004,
+      269
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.075,
+      200
+     ],
+     "True": [
+      0.1359,
+      184
+     ]
+    },
+    "family": {
+     "C01": [
+      0.0808,
+      99
+     ],
+     "C02": [
+      0.0641,
+      78
+     ],
+     "C04": [
+      0.1538,
+      104
+     ],
+     "C05": [
+      0.1068,
+      103
+     ]
+    }
+   },
+   "dev/sense_trainframe_newctx": {
+    "acc": 0.0,
+    "num": {
+     "num": [
+      0.0,
+      252
+     ],
+     "word": [
+      0.0,
+      132
+     ]
+    },
+    "unit": {
+     "abbr": [
+      0.0,
+      112
+     ],
+     "full": [
+      0.0,
+      272
+     ]
+    },
+    "canonical_style": {
+     "False": [
+      0.0,
+      210
+     ],
+     "True": [
+      0.0,
+      174
+     ]
+    },
+    "family": {
+     "S01": [
+      0.0,
+      192
+     ],
+     "S02": [
+      0.0,
+      192
+     ]
+    }
+   }
+  }
+ }
+}

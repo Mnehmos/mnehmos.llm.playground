@@ -1,0 +1,94 @@
+{
+ "record": {
+  "tool_id": "T006_cue_occlusion",
+  "mode": "run",
+  "source_sha256": "b31dd93f1dbd2f38c162718755718b4b14d101790966d30bc23e664130defd46",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T006_cue_occlusion",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 800 (A and B)",
+   "kind": "causal-readonly",
+   "purpose": "Identify which question-frame words drive the sense task-type decision (probability mass on phys/other) by occlusion with <unk>.",
+   "hypothesis": "H-physics: B's history (cross-frame consistency between S01 and S02 at step 400) made the word 'physics' - the only content word the two training frames share - the dominant type cue; S03 lacks it, so B reads S03 as numeric. Prediction: occluding 'physics' drops type mass more in B than in A, and 'quantity' contributes less in B than in A.",
+   "input_schema": {
+    "args.checkpoints": "list"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "pool": {
+      "type_mass": "mean P(phys)+P(other)",
+      "drop <word>": "mean decrease when the word is occluded"
+     }
+    }
+   },
+   "read_scope": "model copies; fresh TRAINING-pool sense items (frames S01, S02); development new-frame sense set",
+   "measurement_definitions": "type mass = softmax probability on {phys, other}; occlusion replaces every occurrence of the word after the last '.' (the question frame) with <unk>; drop = base - occluded, averaged over items containing the word",
+   "version": "1"
+  },
+  "checkpoints": {
+   "A900": "runs/zoo_sem/A_fixed/step_0900",
+   "B900": "runs/zoo_sem/B_adaptive/step_0900"
+  },
+  "args": {},
+  "nonmutation": {
+   "before": {
+    "A900": "9da5443f148806e4c50aa109c2e12a7383929056938f27d881fc01f1dfffb0c6",
+    "B900": "f345efbf4e3476e17442661633fe6a9248241371b8cad7f64e4c98089050f30e"
+   },
+   "after": {
+    "A900": "9da5443f148806e4c50aa109c2e12a7383929056938f27d881fc01f1dfffb0c6",
+    "B900": "f345efbf4e3476e17442661633fe6a9248241371b8cad7f64e4c98089050f30e"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 3.5,
+  "error": "",
+  "time": "2026-11-23T23:43:22Z"
+ },
+ "result": {
+  "A900": {
+   "train S01": {
+    "type_mass": 0.8677,
+    "drop is": 0.5173,
+    "drop a": 0.0116,
+    "drop physics": 0.0623,
+    "drop quantity": -0.0121,
+    "drop here": -0.0008
+   },
+   "train S02": {
+    "type_mass": 0.6932,
+    "drop physics": 0.0799,
+    "drop sense": 0.0533,
+    "drop of": 0.0577
+   },
+   "dev newframe": {
+    "type_mass": 0.2781,
+    "drop a": 0.0628,
+    "drop quantity": -0.0578
+   }
+  },
+  "B900": {
+   "train S01": {
+    "type_mass": 0.9586,
+    "drop is": 0.362,
+    "drop a": 0.0005,
+    "drop physics": 0.0326,
+    "drop quantity": -0.0059,
+    "drop here": 0.0098
+   },
+   "train S02": {
+    "type_mass": 0.9174,
+    "drop physics": 0.0442,
+    "drop sense": 0.0398,
+    "drop of": 0.023
+   },
+   "dev newframe": {
+    "type_mass": 0.2555,
+    "drop a": 0.0924,
+    "drop quantity": -0.2763
+   }
+  }
+ }
+}

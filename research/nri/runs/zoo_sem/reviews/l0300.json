@@ -1,0 +1,30 @@
+{
+ "task_weights": {
+  "force": 0.4,
+  "convert": 0.2,
+  "equiv": 0.15,
+  "inverse": 0.1,
+  "sense": 0.15
+ },
+ "replay_weight": 0.3,
+ "style": {
+  "p_word": 0.3,
+  "p_abbr": 0.3
+ },
+ "hard_negative_rate": 0.3,
+ "paraphrase_pair_rate": 0.3,
+ "sense_contexts": [
+  "P-force-acts",
+  "P-mass-has",
+  "P-work-done",
+  "O-force-compel",
+  "O-mass-church",
+  "O-work-job"
+ ],
+ "objectives": {
+  "aux_role": 1.0,
+  "iit": 3.0,
+  "consistency": 0.3
+ },
+ "note": "L3: generalise value-unit binding across templates (force on all training families, aux_role max)"
+}

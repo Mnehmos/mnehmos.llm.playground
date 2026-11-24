@@ -1,0 +1,70 @@
+{
+ "record": {
+  "tool_id": "T006_cue_occlusion",
+  "mode": "controls",
+  "source_sha256": "b31dd93f1dbd2f38c162718755718b4b14d101790966d30bc23e664130defd46",
+  "git_commit": "074ead9f8267b998fcb643a0a909bfe1e20488ba",
+  "manifest": {
+   "tool_id": "T006_cue_occlusion",
+   "author": "LLM supervisor (session of Issue #25)",
+   "created_at_checkpoint": "study continuation step 800 (A and B)",
+   "kind": "causal-readonly",
+   "purpose": "Identify which question-frame words drive the sense task-type decision (probability mass on phys/other) by occlusion with <unk>.",
+   "hypothesis": "H-physics: B's history (cross-frame consistency between S01 and S02 at step 400) made the word 'physics' - the only content word the two training frames share - the dominant type cue; S03 lacks it, so B reads S03 as numeric. Prediction: occluding 'physics' drops type mass more in B than in A, and 'quantity' contributes less in B than in A.",
+   "input_schema": {
+    "args.checkpoints": "list"
+   },
+   "output_schema": {
+    "per checkpoint": {
+     "pool": {
+      "type_mass": "mean P(phys)+P(other)",
+      "drop <word>": "mean decrease when the word is occluded"
+     }
+    }
+   },
+   "read_scope": "model copies; fresh TRAINING-pool sense items (frames S01, S02); development new-frame sense set",
+   "measurement_definitions": "type mass = softmax probability on {phys, other}; occlusion replaces every occurrence of the word after the last '.' (the question frame) with <unk>; drop = base - occluded, averaged over items containing the word",
+   "version": "1"
+  },
+  "checkpoints": {
+   "c": "runs/zoo_sem/common"
+  },
+  "args": {},
+  "nonmutation": {
+   "before": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860"
+   },
+   "after": {
+    "c": "27172b3aab26505b40354a55ea0c7c672f32f5b4e04363fff6712ac9b53bc860"
+   },
+   "ok": true
+  },
+  "returncode": 0,
+  "wall_s": 1.5,
+  "error": "",
+  "time": "2026-11-23T23:42:22Z",
+  "validated": true
+ },
+ "result": {
+  "cases": [
+   {
+    "name": "occluding the causal token drops type mass",
+    "expected": "> 0.5",
+    "observed": 0.8773,
+    "pass": true
+   },
+   {
+    "name": "occluding an irrelevant token changes nothing",
+    "expected": 0.0,
+    "observed": 0.0,
+    "pass": true
+   },
+   {
+    "name": "empty occlusion is undefined (no rows)",
+    "expected": null,
+    "observed": null,
+    "pass": true
+   }
+  ]
+ }
+}

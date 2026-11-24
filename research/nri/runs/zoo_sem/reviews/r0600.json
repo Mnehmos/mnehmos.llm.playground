@@ -1,0 +1,12 @@
+{
+ "what_changed": "B equiv answer routing restored (dev equiv_trainfam 0.27 -> 0.46; yes/no on 97% of answers); B sense in-distribution held (0.92); sense dev did not move (0.20 newframe, 0.36 newctx); force_id_pretrainfam 0.54 both arms.",
+ "knows": "Answer types for all tasks in B again; sense on training contexts; canonical force partially (~0.54 on the mixed-style dev set).",
+ "fails": "Convert (model accuracy in-distribution 0.21 B / 0.25 A), inverse (chance), equiv beyond the yes-prior, sense generalisation.",
+ "explanation": "H-read (T005, new): for canonical convert items the ingredients are present at the query position - source value 0.98 (linear), source unit 0.82, target unit 0.91 - and a probe recovers the answer at ~0.47-0.50, about twice the model's own 0.21-0.25. The bottleneck is the shared readout's composition mapping, not upstream reading. T005 also showed canonical mass in the force block is NOT linearly decodable (0.39 ridge vs 0.62 kNN) - consistent with T001's curved-code verdict; linear probes under-read this student.",
+ "competing_explanation": "H-cap-readout: the 256-unit readout MLP is already saturated by force; more convert dose will trade force for convert (force_id_pretrainfam falls by > 0.05) rather than add convert.",
+ "prediction": "L6 (convert 0.4, low style noise 0.15/0.15): at step 700 B dev/convert_trainfam >= 0.20 (A < 0.12) and T005 model accuracy on canonical convert >= 0.35. H-cap-readout predicts force_id_pretrainfam drops below 0.49. Falsifier: B convert_trainfam < 0.12.",
+ "tool_needed": "Built T005_decodability_ladder (validated on planted-truth codes; five pre-validation fixes logged in its manifest - the planted case exposed a kNN standardisation flaw). Re-run at 700.",
+ "next_action": "L6: force 0.15 / convert 0.4 / equiv 0.2 / inverse 0.1 / sense 0.15; replay 0.3; style 0.15/0.15; pair 0.2 + consistency 0.3; aux 0.5; IIT 3; hard negatives 0.3.",
+ "why_this_checkpoint": "Convert is 2/8 primary sets and is now shown to be readout-limited, not input-limited - the cheapest numeric skill to unlock; lr still 0.79 of peak.",
+ "previous_outcome": "Step-500 prediction CONFIRMED: equiv 0.464 (>= 0.45) with yes/no 97% (>= 85%); sense in-distribution 0.92 (>= 0.85); sense dev unchanged (H-cap). Note: A reached the same equiv (0.49) - B only recovered what its step-400 lesson cost."
+}
