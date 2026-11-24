@@ -1,0 +1,16 @@
+{
+  "public_sha256": "803ffbce035c269a528707005143cb19d17e50d31ff0bb7c0a2e52ba03b9e894",
+  "private_commitment": "b70d531e879e873256efe2c3ae16ae7a6fc0484a3b16dac7411ccbb26aab11d6",
+  "sources": {
+    "confirm.py": "be375e1255ff419841606cf65ecdec6277c26302dc31c23544ce9e159c4336b8",
+    "study_model.py": "fd8ac0648bdc41be4d08ae4697a3be2cc6daa63bdcf7d01d5d8a4f0ea0286692",
+    "confirm_review.py": "c1e0461516b04c6f4d29373c9e4069bf0914a4fa3483b39fc0c1e74e08b8386a",
+    "escrow.py": "c789f7596ad016fc1a6a43873f92e05f6a9c9d0eb3bf9777717d620027522b05",
+    "splits.py": "4178aac8acbfbe2dde1e2c7701b70abc1a03d7d1acdac2eaa7c8d80a97687b8e",
+    "stats_confirm.py": "2e61cc4d193df7a3358afd56289a5f746976668cd5f91005cd2cd9a516a0ccb5",
+    "REGISTRATION_LOCKED.md": "24ad391eb05bfe68000f3437a0c2356e35b989aebcb5a3be8fd22131c0aa011e",
+    "../nri/model.py": "e57441b87272bc01f57e737821d04a7e36c7a822d4d62eb274f94a86bf742cf7",
+    "../nri/tasks.py": "13981e442c9660df560d4288d55609bbc35c427c5a8ccd4f97009f820a1f0348",
+    "pilot.py": "463db14e2eecf72dfa605e0935094a7c1fdd29a78d7da8a1f85d2c7a0b4f2ea2"
+  }
+}
