@@ -1,0 +1,2 @@
+research/nri/runs/concept_pilot/**/*.safetensors
+research/nri/runs/concept_pilot/*.log
