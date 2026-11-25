@@ -133,7 +133,7 @@ def run_emod():
                     idx = select(pool, M, A, L, frac, sampling, seed)
                     mod, info = Q.train_module(h, y, read, idx, eval_sets, seed)
                     cov_pairs = len(set((M[idx] * P + A[idx]).tolist())) / (P * P)
-                    cov_trip = len(set((M[idx] * 100 + A[idx] * 10 + L["fu"][idx]).tolist())) / (P * P * 3)
+                    cov_trip = len(set((M[idx] * 1000 + A[idx] * 10 + L["fu"][idx]).tolist())) / (P * P * 3)
                     r = dict(cond=cond, frac=frac, sampling=sampling, seed=seed, final=info["final"], steps_to_competence=competence(info["history"]),
                              coverage_MA_pairs=cov_pairs, coverage_MAS_triples=cov_trip, params=info["params"],
                              module_flops_per_step=info["module_flops_per_step"])

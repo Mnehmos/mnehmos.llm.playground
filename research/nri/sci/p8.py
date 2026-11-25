@@ -305,6 +305,9 @@ GROUPS = {
     "P": [(f"P_{c}_{fr}_s{s}", c, s, dict(frac=f_, sampling="random_phase7" if f_ < 1 else "random",
                                           interchange=(c == "K5s")))
           for c in ("P", "K5s") for (fr, f_) in (("full", 1.0), ("q25", 0.25)) for s in (0, 1, 2)],
+    "E": [(f"E_{c}_{fr}_{smp}_s{s}", c, s, dict(frac=fr, sampling=smp, interchange=(c == "K5s")))
+          for c in ("B", "K5s", "P") for fr in (0.25, 0.40, 0.55, 0.70, 0.85, 1.0)
+          for smp in (("random", "structured") if fr in (0.25, 0.40) else ("random",)) for s in (0, 1)],
 }
 
 
