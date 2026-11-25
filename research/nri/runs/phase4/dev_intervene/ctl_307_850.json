@@ -1,0 +1,215 @@
+{
+ "spec": {
+  "steps": 2000,
+  "name": "ctl_307_850",
+  "seed": 307,
+  "resume": 850,
+  "control": true
+ },
+ "trajectory": {
+  "850": {
+   "acc_id": 0.49609375,
+   "oodM": 0.29296875,
+   "oodA": 0.3779296875,
+   "iia_oodsrc": 0.126953125,
+   "rsi_M": 0.7559510502979047,
+   "r2add": 0.963
+  },
+  "900": {
+   "acc_id": 0.529296875,
+   "oodM": 0.3740234375,
+   "oodA": 0.4072265625,
+   "iia_oodsrc": 0.1318359375,
+   "rsi_M": 0.6561087349120427,
+   "r2add": 0.933,
+   "bitwise_vs_reconstruction": true
+  },
+  "1000": {
+   "acc_id": 0.7314453125,
+   "oodM": 0.3994140625,
+   "oodA": 0.6025390625,
+   "iia_oodsrc": 0.3857421875,
+   "rsi_M": 0.42731195153164814,
+   "r2add": 0.991,
+   "bitwise_vs_reconstruction": true
+  },
+  "1100": {
+   "acc_id": 0.8388671875,
+   "oodM": 0.7158203125,
+   "oodA": 0.6669921875,
+   "iia_oodsrc": 0.65625,
+   "rsi_M": 0.35732892016690054,
+   "r2add": 0.998,
+   "bitwise_vs_reconstruction": true
+  },
+  "1200": {
+   "acc_id": 0.9677734375,
+   "oodM": 0.92578125,
+   "oodA": 0.9638671875,
+   "iia_oodsrc": 0.83203125,
+   "rsi_M": 0.3344865997975339,
+   "r2add": 0.999,
+   "bitwise_vs_reconstruction": true
+  },
+  "1300": {
+   "acc_id": 0.869140625,
+   "oodM": 0.65234375,
+   "oodA": 0.8173828125,
+   "iia_oodsrc": 0.755859375,
+   "rsi_M": 0.31605419135835733,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1400": {
+   "acc_id": 0.9970703125,
+   "oodM": 0.986328125,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.953125,
+   "rsi_M": 0.30539564930400087,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1500": {
+   "acc_id": 0.990234375,
+   "oodM": 0.958984375,
+   "oodA": 0.9951171875,
+   "iia_oodsrc": 0.939453125,
+   "rsi_M": 0.3048604630492272,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1600": {
+   "acc_id": 0.994140625,
+   "oodM": 0.974609375,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.958984375,
+   "rsi_M": 0.30385380012435426,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1700": {
+   "acc_id": 0.9736328125,
+   "oodM": 0.9423828125,
+   "oodA": 0.98046875,
+   "iia_oodsrc": 0.9404296875,
+   "rsi_M": 0.2982391100913543,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1800": {
+   "acc_id": 0.9921875,
+   "oodM": 0.9609375,
+   "oodA": 0.9931640625,
+   "iia_oodsrc": 0.9599609375,
+   "rsi_M": 0.2944471347267401,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "1900": {
+   "acc_id": 1.0,
+   "oodM": 0.98828125,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9453125,
+   "rsi_M": 0.2980558645930538,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2000": {
+   "acc_id": 0.99609375,
+   "oodM": 0.98046875,
+   "oodA": 0.9990234375,
+   "iia_oodsrc": 0.96484375,
+   "rsi_M": 0.29667122362813336,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2100": {
+   "acc_id": 1.0,
+   "oodM": 0.9921875,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9853515625,
+   "rsi_M": 0.2966004573208123,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2200": {
+   "acc_id": 0.9990234375,
+   "oodM": 0.984375,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.97265625,
+   "rsi_M": 0.2964008994228837,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2300": {
+   "acc_id": 1.0,
+   "oodM": 0.9951171875,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9873046875,
+   "rsi_M": 0.2964166911877246,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2400": {
+   "acc_id": 0.9990234375,
+   "oodM": 0.98828125,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9833984375,
+   "rsi_M": 0.29295155340160517,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2500": {
+   "acc_id": 1.0,
+   "oodM": 0.9951171875,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.98828125,
+   "rsi_M": 0.29256277474413783,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2600": {
+   "acc_id": 0.9990234375,
+   "oodM": 0.9921875,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9853515625,
+   "rsi_M": 0.29299056299883486,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2700": {
+   "acc_id": 1.0,
+   "oodM": 0.98828125,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9921875,
+   "rsi_M": 0.2924787427702029,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2800": {
+   "acc_id": 1.0,
+   "oodM": 0.9951171875,
+   "oodA": 1.0,
+   "iia_oodsrc": 0.9951171875,
+   "rsi_M": 0.2924993108472884,
+   "r2add": 1.0,
+   "bitwise_vs_reconstruction": true
+  },
+  "2850": {
+   "acc_id": 0.998046875,
+   "oodM": 0.990234375,
+   "oodA": 0.9951171875,
+   "iia_oodsrc": 0.9853515625,
+   "rsi_M": 0.29235366902974447,
+   "r2add": 1.0
+  }
+ },
+ "final": {
+  "acc_id": 0.998046875,
+  "oodM": 0.990234375,
+  "oodA": 0.9951171875,
+  "iia_oodsrc": 0.9853515625,
+  "rsi_M": 0.29235366902974447,
+  "r2add": 1.0
+ }
+}
