@@ -187,7 +187,7 @@ def instruction_check(m):
 
 
 def main():
-    torch.set_num_threads(4)
+    torch.set_num_threads(1)
     OUT.mkdir(parents=True, exist_ok=True)
     res = {}
     base, _ = C.build_C()
