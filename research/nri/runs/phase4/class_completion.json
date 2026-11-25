@@ -1,0 +1,55 @@
+{
+ "mass_only_s304": {
+  "purity": 0.7428571428571429,
+  "n_free": 6,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ },
+ "mass_only_s310": {
+  "purity": 0.6857142857142857,
+  "n_free": 5,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ },
+ "mass_only_s302": {
+  "purity": 0.8285714285714286,
+  "n_free": 4,
+  "assignment_correct": 1,
+  "R7_geometric": {
+   "id": 1.0,
+   "oodM": 0.5543212890625,
+   "disc_swap": 0.49744337797164917,
+   "disc_n": 2738
+  },
+  "R7_random_assignment_control": {
+   "id": 1.0,
+   "oodM": 0.236083984375,
+   "disc_swap": 0.1760409027338028,
+   "disc_n": 2738
+  },
+  "R7_best_of_24_oracle": {
+   "id": 1.0,
+   "oodM": 0.5543212890625,
+   "disc_swap": 0.49744337797164917,
+   "disc_n": 2738
+  }
+ },
+ "mass_only_s300": {
+  "purity": 0.8285714285714286,
+  "n_free": 5,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ },
+ "mass_only_s305": {
+  "purity": 0.8,
+  "n_free": 5,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ },
+ "mass_only_s307": {
+  "purity": 0.7142857142857143,
+  "n_free": 6,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ },
+ "mass_only_s311": {
+  "purity": 0.7714285714285715,
+  "n_free": 5,
+  "note": "cluster structure did not leave exactly 4 free classes; completion not defined"
+ }
+}
