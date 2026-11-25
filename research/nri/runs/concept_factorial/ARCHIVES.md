@@ -9,6 +9,27 @@ removed; every file's SHA-256 is in `<run>/manifest.json`.
 is ephemeral: copy the archives to durable storage to preserve them.** Verify a copy with
 `sha256sum <run>.tar.xz` against the table, and the contents with `tar -xJf <run>.tar.xz` + the manifest hashes.
 
+## Regenerating instead of restoring
+
+Training is deterministic (`torch.use_deterministic_algorithms`, seeded data streams, round-robin scheduling
+tested equal to standalone runs). Verified in the original environment: re-running `wd1.0_C_s2004` from the
+committed code for 300 steps reproduced `model.safetensors`, `optim.safetensors` and `updates.safetensors` at
+steps 0, 100, 200 and 300 **byte-identically** (SHA-256 equal to this manifest). Any run can therefore be
+regenerated and checked file-by-file against its manifest:
+
+```
+python - <<'PY'
+from pathlib import Path
+from sci import factorial as Fx
+Fx.train_worker(0, 1, live=Path("regen"), runs=[("C", 1.0, 2004)], steps=6000)   # ~10 CPU-min per network
+PY
+# then compare sha256 of regen/<run>/ckpt/... with runs/concept_factorial/<run>/manifest.json
+```
+
+Caveat: bit-identity is only established for the same software and CPU class (Python 3.13, the session's PyTorch
+build, x86-64); a different PyTorch version or CPU can change floating-point summation order. The manifests make
+any such divergence detectable. Audit tensors are recomputed with `python -m sci.factorial audit`.
+
 | run | archive | bytes | sha256 | files |
 |---|---|---|---|---|
 | wd0.1_A_s2001 | `wd0.1_A_s2001.tar.xz` | 159,920,452 | `4daae94496848b1d728f54689f0e78b2112493f4eb4e7fbeebb5eb462e2e7e07` | 612 |
