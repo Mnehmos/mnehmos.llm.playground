@@ -219,5 +219,73 @@
   "coverage_MAS_triples": 1.0,
   "params": 4429,
   "module_flops_per_step": 6684672
+ },
+ {
+  "cond": "reg",
+  "frac": 0.85,
+  "sampling": "random",
+  "seed": 1,
+  "final": {
+   "familiar": 1.0,
+   "unseen": 1.0,
+   "train": 1.0,
+   "step": 4000
+  },
+  "steps_to_competence": 200,
+  "coverage_MA_pairs": 1.0,
+  "coverage_MAS_triples": 1.0,
+  "params": 4429,
+  "module_flops_per_step": 6684672
+ },
+ {
+  "cond": "reg",
+  "frac": 1.0,
+  "sampling": "random",
+  "seed": 0,
+  "final": {
+   "familiar": 1.0,
+   "unseen": 1.0,
+   "train": 1.0,
+   "step": 4000
+  },
+  "steps_to_competence": 200,
+  "coverage_MA_pairs": 1.0,
+  "coverage_MAS_triples": 1.0,
+  "params": 4429,
+  "module_flops_per_step": 6684672
+ },
+ {
+  "cond": "reg",
+  "frac": 1.0,
+  "sampling": "random",
+  "seed": 1,
+  "final": {
+   "familiar": 1.0,
+   "unseen": 1.0,
+   "train": 1.0,
+   "step": 4000
+  },
+  "steps_to_competence": 200,
+  "coverage_MA_pairs": 1.0,
+  "coverage_MAS_triples": 1.0,
+  "params": 4429,
+  "module_flops_per_step": 6684672
+ },
+ {
+  "cond": "base",
+  "frac": 0.25,
+  "sampling": "random",
+  "seed": 0,
+  "final": {
+   "familiar": 0.9866666793823242,
+   "unseen": 0.9639639854431152,
+   "train": 1.0,
+   "step": 4000
+  },
+  "steps_to_competence": null,
+  "coverage_MA_pairs": 1.0,
+  "coverage_MAS_triples": 0.980276134122288,
+  "params": 2765,
+  "module_flops_per_step": 4128768
  }
 ]
