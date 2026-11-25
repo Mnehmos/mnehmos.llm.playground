@@ -179,6 +179,10 @@ def specs():
         add(name=f"ctl_{s}_2000", seed=s, resume=2000, control=True)
         add(name=f"P2c_{s}_2000", seed=s, resume=2000, lam_int=-1.0)
     add(name="F1_304_700", seed=304, resume=700, freeze_qk_steps=500)
+    # addendum A (doc 48)
+    for s_, r_ in ((304, 600), (310, 1200), (310, 1300)):
+        add(name=f"ctl_{s_}_{r_}", seed=s_, resume=r_, control=True)
+        add(name=f"P1early_{s_}_{r_}", seed=s_, resume=r_, lam_int=1.0, int_steps=500)
     add(name="G1_304_700", seed=304, resume=700, project_steps=500)
     return S
 
