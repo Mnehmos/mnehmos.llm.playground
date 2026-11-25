@@ -25,7 +25,8 @@ corresponding runs.
 without interfering?** Yes, with one condition. Freezing the compiled part is not enough; the learned parts must also be
 prevented from writing into the compiled part's working space.
 
-**1. Hybrid learning works when the programmed part is protected properly.**
+**1. Hybrid learning works when the programmed part is protected properly** (full training data; with 25% of the data,
+no condition learned the new operation, and only the fully protected K5 kept the programmed one intact).
 - In a network holding an exactly compiled F = M·A·S, a new operation (U = M·A + S) was learned in **600–800 steps**.
 - It generalises to never-seen renderings (0.99–1.00). The programmed operation stays **exactly** intact on every
   prompt.
@@ -250,7 +251,18 @@ domain of 2 × 9,126 prompts [E]. It has 3,501 nonzero parameters.
 | **K2** (frozen + learned writes into constructed dims held at 0) | 191,516 | **600–800** | **1.00 / 0.99** | **1.00 / 0.99** | **1.00 / 1.00** | 0.66 |
 | **K5** (K2 + semantic-preservation loss) | 191,516 | **600** | **1.00 / 1.00** | **1.00 / 0.995** | **1.00 / 1.00** | **1.00** |
 
-**25% data:** HYBRID_Q25
+**25% data (a fixed 25% subset of familiar prompt and operation pairs), final step 6,000, mean of 3 seeds:**
+
+| condition | steps to OP₂ criterion | OP₁ familiar / unseen | OP₂ familiar / unseen | OP₁ sub-circuit exact / silent on OP₂ | OP₁ M-interchange |
+|---|---|---|---|---|---|
+| B | none, none, none | 0.54 / 0.23 | 0.48 / 0.20 | — / — | 0.05 |
+| Bprime | none, none, none | 0.63 / 0.30 | 0.58 / 0.27 | — / — | 0.04 |
+| C | none, none, none | 0.51 / 0.22 | 0.48 / 0.18 | 0.00 / 0.00 | 0.05 |
+| K3 | none, none, none | 0.48 / 0.19 | 0.46 / 0.18 | 0.00 / 0.00 | 0.05 |
+| K0 | none, none, none | 0.56 / 0.24 | 0.53 / 0.23 | 0.00 / 0.00 | 0.05 |
+| D | none, none, none | 0.59 / 0.45 | 0.43 / 0.24 | 0.00 / 0.00 | 0.49 |
+| K2 | none, none, none | 0.50 / 0.22 | 0.46 / 0.17 | 1.00 / 1.00 | 0.11 |
+| K5 | none, none, none | 1.00 / 1.00 | 0.55 / 0.25 | 1.00 / 1.00 | 1.00 |
 
 ### Reading
 
@@ -269,8 +281,25 @@ domain of 2 × 9,126 prompts [E]. It has 3,501 nonzero parameters.
      knowledge.** The registered prediction (K1 fails, K2/K5 meet the target, K0 forgets) is **supported**.
 3. **A semantic-preservation loss alone (D) does not protect;** combined with structural protection (K5), it adds causal
    faithfulness. The end-to-end M-region interchange is 1.00 in K5 against 0.66 in K2.
-4. **Constructed mechanisms reduce training steps** (at least 7.5× to criterion against B, which never reaches it) and
-   **trainable parameters** (191,516 against 269,952), and they confer unseen-rendering generalisation.
+4. **With full data, constructed mechanisms reduce training steps and trainable parameters, and confer
+   generalisation.**
+   - Training steps: at least 7.5× fewer to criterion than B, which never reaches it.
+   - Trainable parameters: 191,516 against 269,952.
+   - Unseen renderings: the new operation generalises to them.
+5. **With 25% data, no condition learns the new operation** (OP₂ familiar 0.43–0.58). The constructed mechanism does
+   *not* substitute for data about the unknown operation. The prediction that hybrids need less data for the new
+   computation is **not supported** at this data level.
+6. **With scarce data, structural protection alone is not enough.**
+   - In K2 the programmed sub-circuit stays **exactly** one-hot (1.00/1.00), yet end-to-end OP₁ accuracy falls to
+     0.50. The learned components, overfitting the small training set, write their own logits for OP₁ prompts and
+     swamp the exact programmed ones.
+   - Only **K5** keeps OP₁ fully intact end to end (1.00 familiar, 1.00 unseen, interchange 1.00). It combines
+     structural protection with the semantic-preservation loss.
+   - Protecting programmed knowledge therefore needs two things:
+     - **(a)** no learned writes into its working subspace;
+     - **(b)** no learned *competing writes at the output* for the inputs it owns.
+
+     Structure gives (a). An output-level objective, or an output gate, gives (b).
 
 ## 58.7 Answer to the central question
 
