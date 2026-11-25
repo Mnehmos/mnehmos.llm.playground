@@ -1,0 +1,1010 @@
+{
+ "mass_only_s307": {
+  "kind": "learned",
+  "r2_additive": 0.8608286495040387,
+  "rho_var_frac": 0.13917135049596124,
+  "R1": {
+   "0.0": {
+    "fam": 0.49238094687461853,
+    "unseen": 0.5748873949050903,
+    "margin": 7.104490280151367,
+    "relu_state_flips": 0.032975838264299805
+   },
+   "0.25": {
+    "fam": 0.5248979330062866,
+    "unseen": 0.6137387156486511,
+    "margin": 10.262812614440918,
+    "relu_state_flips": 0.02504734070238878
+   },
+   "0.5": {
+    "fam": 0.5930612087249756,
+    "unseen": 0.6897522807121277,
+    "margin": 13.81702995300293,
+    "relu_state_flips": 0.017035376260135876
+   },
+   "0.75": {
+    "fam": 0.8866666555404663,
+    "unseen": 0.9797297120094299,
+    "margin": 17.424896240234375,
+    "relu_state_flips": 0.008696820896340126
+   },
+   "0.9": {
+    "fam": 0.9819047451019287,
+    "unseen": 0.9977477192878723,
+    "margin": 19.546436309814453,
+    "relu_state_flips": 0.0036023449484987946
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.9977477192878723,
+    "margin": 20.658584594726562,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.032975838264299805,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 7.234667307021159e-05,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.27751720637419086,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.7617711501063172,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 0.006341288513322052,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.40917200247107155,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.02301409042957281,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.8663477903585949
+   },
+   "f_boundary_energy_share": 0.38981865884723765,
+   "f_boundary_cell_frac": 0.06424338771093578,
+   "g_float64_vs_float32_max_abs_preact_diff": 0.000545786373095325,
+   "g_rho_rms": 6.030184026478703,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.5595918297767639,
+    "unseen": 0.6176801919937134,
+    "margin": 6.673668384552002,
+    "recovered_fam": 0.1324041768888142,
+    "recovered_unseen": 0.10119842089958318
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.9977477192878723,
+    "margin": 20.31100845336914,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.0
+   },
+   "low_margin_prompt_frac": 0.5103002410694718,
+   "family:a_canonical_operands": {
+    "fam": 0.49306121468544006,
+    "unseen": 0.5748873949050903,
+    "margin": 7.123680114746094,
+    "recovered_fam": 0.0013401148097833666,
+    "recovered_unseen": 0.0
+   },
+   "family:b_zero_handling": {
+    "fam": 0.4975510239601135,
+    "unseen": 0.585022509098053,
+    "margin": 7.687662601470947,
+    "recovered_fam": 0.010184954748375039,
+    "recovered_unseen": 0.023967995124054557
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.6254421472549438,
+    "unseen": 0.769707202911377,
+    "margin": 13.325984954833984,
+    "recovered_fam": 0.26212806544804634,
+    "recovered_unseen": 0.46071905253974993
+   },
+   "family:c2_product_phase": {
+    "fam": 0.49306121468544006,
+    "unseen": 0.5658783912658691,
+    "margin": 7.675783634185791,
+    "recovered_fam": 0.0013401148097833666,
+    "recovered_unseen": -0.021304915878241754
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.4606802761554718,
+    "unseen": 0.5264639854431152,
+    "margin": 9.006064414978027,
+    "recovered_fam": -0.06244972588000295,
+    "recovered_unseen": -0.11451395808451685
+   },
+   "family:e_order_x_token": {
+    "fam": 0.49088436365127563,
+    "unseen": 0.5726351141929626,
+    "margin": 7.5494184494018555,
+    "recovered_fam": -0.0029482408395203417,
+    "recovered_unseen": -0.005326299447495277
+   },
+   "family:all_families": {
+    "fam": 0.7375510334968567,
+    "unseen": 0.880630612373352,
+    "margin": 15.101177215576172,
+    "recovered_fam": 0.48298046559273133,
+    "recovered_unseen": 0.7230359526269875
+   }
+  }
+ },
+ "mass_only_s311": {
+  "kind": "learned",
+  "r2_additive": 0.8987141131768168,
+  "rho_var_frac": 0.1012858868231832,
+  "R1": {
+   "0.0": {
+    "fam": 0.54666668176651,
+    "unseen": 0.3536036014556885,
+    "margin": 1.598670244216919,
+    "relu_state_flips": 0.043452429870699104
+   },
+   "0.25": {
+    "fam": 0.6614965796470642,
+    "unseen": 0.4724099040031433,
+    "margin": 4.968088626861572,
+    "relu_state_flips": 0.032993815746219596
+   },
+   "0.5": {
+    "fam": 0.8020408153533936,
+    "unseen": 0.6869369149208069,
+    "margin": 8.205222129821777,
+    "relu_state_flips": 0.022565164091606398
+   },
+   "0.75": {
+    "fam": 0.9361904859542847,
+    "unseen": 0.9414414167404175,
+    "margin": 11.331871032714844,
+    "relu_state_flips": 0.011776106728029805
+   },
+   "0.9": {
+    "fam": 0.9982312917709351,
+    "unseen": 0.9954954981803894,
+    "margin": 13.023265838623047,
+    "relu_state_flips": 0.004788430719921104
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.9988738894462585,
+    "margin": 13.803977012634277,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.043452429870699104,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.5286825963650401,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.1210606143434203,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.9075134491897294,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 0.0012989911543229704,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.19869077491568365,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.017046218757573284,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.9498137655974889
+   },
+   "f_boundary_energy_share": 0.2619188669130948,
+   "f_boundary_cell_frac": 0.08731705771970195,
+   "g_float64_vs_float32_max_abs_preact_diff": 6.411010822660046e-05,
+   "g_rho_rms": 3.743251319745364,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.5721088647842407,
+    "unseen": 0.3986486494541168,
+    "margin": 1.38759446144104,
+    "recovered_fam": 0.05612246440846574,
+    "recovered_unseen": 0.06980803058312617
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.9988738894462585,
+    "margin": 11.68194580078125,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.0
+   },
+   "low_margin_prompt_frac": 0.5382423843962305,
+   "family:a_canonical_operands": {
+    "fam": 0.7013605237007141,
+    "unseen": 0.667792797088623,
+    "margin": 6.736037254333496,
+    "recovered_fam": 0.3412364273973986,
+    "recovered_unseen": 0.4869109913790515
+   },
+   "family:b_zero_handling": {
+    "fam": 0.5459864139556885,
+    "unseen": 0.352477490901947,
+    "margin": 2.327167510986328,
+    "recovered_fam": -0.0015005908091475426,
+    "recovered_unseen": -0.001745176517034846
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.990612268447876,
+    "unseen": 0.9752252101898193,
+    "margin": 12.381189346313477,
+    "recovered_fam": 0.9792917679452608,
+    "recovered_unseen": 0.963350738912707
+   },
+   "family:c2_product_phase": {
+    "fam": 0.5534693598747253,
+    "unseen": 0.3631756901741028,
+    "margin": 1.705629587173462,
+    "recovered_fam": 0.015005908091475426,
+    "recovered_unseen": 0.014834231323780079
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.6306122541427612,
+    "unseen": 0.49831080436706543,
+    "margin": 3.849696159362793,
+    "recovered_fam": 0.18517406288018506,
+    "recovered_unseen": 0.2242582768873618
+   },
+   "family:e_order_x_token": {
+    "fam": 0.5395918488502502,
+    "unseen": 0.35529279708862305,
+    "margin": 1.8178579807281494,
+    "recovered_fam": -0.015606249599805198,
+    "recovered_unseen": 0.0026178109613490463
+   },
+   "family:all_families": {
+    "fam": 0.9942857027053833,
+    "unseen": 0.9757882952690125,
+    "margin": 12.52995491027832,
+    "recovered_fam": 0.9873949320184899,
+    "recovered_unseen": 0.9642233733570211
+   }
+  }
+ },
+ "mass_only_s300": {
+  "kind": "learned",
+  "r2_additive": 0.7192559848186422,
+  "rho_var_frac": 0.2807440151813579,
+  "R1": {
+   "0.0": {
+    "fam": 0.3270748257637024,
+    "unseen": 0.1734234243631363,
+    "margin": -12.778748512268066,
+    "relu_state_flips": 0.07606486617904887
+   },
+   "0.25": {
+    "fam": 0.447074830532074,
+    "unseen": 0.23536035418510437,
+    "margin": 4.215410232543945,
+    "relu_state_flips": 0.05658797666009204
+   },
+   "0.5": {
+    "fam": 0.6508843302726746,
+    "unseen": 0.37105855345726013,
+    "margin": 13.007970809936523,
+    "relu_state_flips": 0.037559240083278544
+   },
+   "0.75": {
+    "fam": 0.9375510215759277,
+    "unseen": 0.45720720291137695,
+    "margin": 16.924728393554688,
+    "relu_state_flips": 0.018253992713127328
+   },
+   "0.9": {
+    "fam": 1.0,
+    "unseen": 0.4538288414478302,
+    "margin": 18.764728546142578,
+    "relu_state_flips": 0.007131923898750822
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.43355855345726013,
+    "margin": 19.3999080657959,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.07606486617904887,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.0028840385379225175,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.2166675161215561,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.9038440739792574,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 0.00044616688222054446,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.6083702686080272,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.01071547362208125,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.9480280084907068
+   },
+   "f_boundary_energy_share": 0.4899036766711575,
+   "f_boundary_cell_frac": 0.14962486987727372,
+   "g_float64_vs_float32_max_abs_preact_diff": 8.422673047903118e-05,
+   "g_rho_rms": 8.246635784699004,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.3680272102355957,
+    "unseen": 0.1784909963607788,
+    "margin": -12.138710975646973,
+    "recovered_fam": 0.06085726324382224,
+    "recovered_unseen": 0.019480536962806487
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.4470720589160919,
+    "margin": 17.67271614074707,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.0519480221909676
+   },
+   "low_margin_prompt_frac": 0.7304404996712689,
+   "family:a_canonical_operands": {
+    "fam": 0.3337414860725403,
+    "unseen": 0.17680180072784424,
+    "margin": -13.170804977416992,
+    "recovered_fam": 0.009906986042547567,
+    "recovered_unseen": 0.012987005547741919
+   },
+   "family:b_zero_handling": {
+    "fam": 0.32734695076942444,
+    "unseen": 0.17454954981803894,
+    "margin": -11.222991943359375,
+    "recovered_fam": 0.00040439118068495564,
+    "recovered_unseen": 0.004329001849247307
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.8791836500167847,
+    "unseen": 0.31418919563293457,
+    "margin": 16.264970779418945,
+    "recovered_fam": 0.8204609448289258,
+    "recovered_unseen": 0.5411255748502366
+   },
+   "family:c2_product_phase": {
+    "fam": 0.3302040696144104,
+    "unseen": 0.1734234243631363,
+    "margin": -12.76233959197998,
+    "recovered_fam": 0.004650210707690324,
+    "recovered_unseen": 0.0
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.5853061079978943,
+    "unseen": 0.28603604435920715,
+    "margin": 9.574097633361816,
+    "recovered_fam": 0.3837444222936947,
+    "recovered_unseen": 0.43290047133666676
+   },
+   "family:e_order_x_token": {
+    "fam": 0.3204081654548645,
+    "unseen": 0.1666666716337204,
+    "margin": -12.641548156738281,
+    "recovered_fam": -0.009906986042547567,
+    "recovered_unseen": -0.025974011095483838
+   },
+   "family:all_families": {
+    "fam": 0.9368707537651062,
+    "unseen": 0.3631756901741028,
+    "margin": 17.036785125732422,
+    "recovered_fam": 0.9061868263339395,
+    "recovered_unseen": 0.7294372984984625
+   }
+  }
+ },
+ "mass_only_s305": {
+  "kind": "learned",
+  "r2_additive": 0.6768870235486657,
+  "rho_var_frac": 0.32311297645133435,
+  "R1": {
+   "0.0": {
+    "fam": 0.2912925183773041,
+    "unseen": 0.20664414763450623,
+    "margin": -14.561044692993164,
+    "relu_state_flips": 0.06405847646833224
+   },
+   "0.25": {
+    "fam": 0.32734695076942444,
+    "unseen": 0.2567567527294159,
+    "margin": -7.424871444702148,
+    "relu_state_flips": 0.04751234453758492
+   },
+   "0.5": {
+    "fam": 0.405850350856781,
+    "unseen": 0.30405405163764954,
+    "margin": 1.4195327758789062,
+    "relu_state_flips": 0.031016292735042736
+   },
+   "0.75": {
+    "fam": 0.6197279095649719,
+    "unseen": 0.4611486494541168,
+    "margin": 10.111553192138672,
+    "relu_state_flips": 0.015190544186938418
+   },
+   "0.9": {
+    "fam": 0.9368707537651062,
+    "unseen": 0.6936936974525452,
+    "margin": 14.710576057434082,
+    "relu_state_flips": 0.006048566595441595
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.7240990996360779,
+    "margin": 17.15789794921875,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.06405847646833224,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.005720921276214486,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.08136574705750421,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.7486911673553753,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 0.0001388511692534955,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.06023263417515301,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.22035816048245738,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.76626024513916
+   },
+   "f_boundary_energy_share": 0.502994395896314,
+   "f_boundary_cell_frac": 0.12671042899408283,
+   "g_float64_vs_float32_max_abs_preact_diff": 0.0001558661930260996,
+   "g_rho_rms": 7.784373110668744,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.34448978304862976,
+    "unseen": 0.25563064217567444,
+    "margin": -12.155449867248535,
+    "recovered_fam": 0.07506237206572489,
+    "recovered_unseen": 0.09466813362531977
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.7454954981803894,
+    "margin": 17.29375457763672,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.0413492970963907
+   },
+   "low_margin_prompt_frac": 0.7460004383081306,
+   "family:a_canonical_operands": {
+    "fam": 0.2868027091026306,
+    "unseen": 0.21002252399921417,
+    "margin": -14.717974662780762,
+    "recovered_fam": -0.006335207954053689,
+    "recovered_unseen": 0.006528831836742546
+   },
+   "family:b_zero_handling": {
+    "fam": 0.2944217622280121,
+    "unseen": 0.2083333283662796,
+    "margin": -14.311996459960938,
+    "recovered_fam": 0.004415423756417976,
+    "recovered_unseen": 0.0032644015198607006
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.5912925004959106,
+    "unseen": 0.404842346906662,
+    "margin": 2.7949881553649902,
+    "recovered_fam": 0.42330579244304006,
+    "recovered_unseen": 0.38302503146506517
+   },
+   "family:c2_product_phase": {
+    "fam": 0.29224491119384766,
+    "unseen": 0.20720720291137695,
+    "margin": -14.122003555297852,
+    "recovered_fam": 0.0013438447331795167,
+    "recovered_unseen": 0.001088124240946519
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.2646258473396301,
+    "unseen": 0.2477477490901947,
+    "margin": -13.410589218139648,
+    "recovered_fam": -0.03762718996082342,
+    "recovered_unseen": 0.07943416387589936
+   },
+   "family:e_order_x_token": {
+    "fam": 0.2552380859851837,
+    "unseen": 0.17173422873020172,
+    "margin": -12.102104187011719,
+    "recovered_fam": -0.050873503281732166,
+    "recovered_unseen": -0.06746465324038192
+   },
+   "family:all_families": {
+    "fam": 0.583809494972229,
+    "unseen": 0.3930180072784424,
+    "margin": 2.7113149166107178,
+    "recovered_fam": 0.41274712653683554,
+    "recovered_unseen": 0.36017407684093455
+   }
+  }
+ },
+ "mass_only_s302": {
+  "kind": "learned",
+  "r2_additive": 0.3569102864064806,
+  "rho_var_frac": 0.6430897135935194,
+  "R1": {
+   "0.0": {
+    "fam": 0.25224488973617554,
+    "unseen": 0.1689189225435257,
+    "margin": -6.870765686035156,
+    "relu_state_flips": 0.19711281640368178
+   },
+   "0.25": {
+    "fam": 0.30666667222976685,
+    "unseen": 0.18693692982196808,
+    "margin": -2.608929395675659,
+    "relu_state_flips": 0.13975737247972825
+   },
+   "0.5": {
+    "fam": 0.48938775062561035,
+    "unseen": 0.2246621549129486,
+    "margin": 1.6580854654312134,
+    "relu_state_flips": 0.0853977475071225
+   },
+   "0.75": {
+    "fam": 0.8670748472213745,
+    "unseen": 0.31137385964393616,
+    "margin": 6.679993152618408,
+    "relu_state_flips": 0.03855827443567828
+   },
+   "0.9": {
+    "fam": 0.9987754821777344,
+    "unseen": 0.3586711585521698,
+    "margin": 9.418338775634766,
+    "relu_state_flips": 0.014795467619986851
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.37668919563293457,
+    "margin": 10.310529708862305,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.19711281640368178,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.5554806501922778,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.016249518809637542,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.8882859515086283,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 6.6430249272553255e-06,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.14593809901386,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.014735630965708513,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.9656618856421465
+   },
+   "f_boundary_energy_share": 0.7507374343758018,
+   "f_boundary_cell_frac": 0.3898284263368398,
+   "g_float64_vs_float32_max_abs_preact_diff": 5.924374158539081e-05,
+   "g_rho_rms": 7.374353778997893,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.5783673524856567,
+    "unseen": 0.2545045018196106,
+    "margin": -1.0517232418060303,
+    "recovered_fam": 0.4361353847978625,
+    "recovered_unseen": 0.41192408328430713
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.43186935782432556,
+    "margin": 11.093789100646973,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.2655825656428028
+   },
+   "low_margin_prompt_frac": 0.7867630944554022,
+   "family:a_canonical_operands": {
+    "fam": 0.41319727897644043,
+    "unseen": 0.272522509098053,
+    "margin": -1.2172545194625854,
+    "recovered_fam": 0.21524746140949455,
+    "recovered_unseen": 0.4986448976266398
+   },
+   "family:b_zero_handling": {
+    "fam": 0.2521088421344757,
+    "unseen": 0.1689189225435257,
+    "margin": -7.145810127258301,
+    "recovered_fam": -0.00018194138673532903,
+    "recovered_unseen": 0.0
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.8318367600440979,
+    "unseen": 0.2849099040031433,
+    "margin": 5.9759674072265625,
+    "recovered_fam": 0.7751092066805529,
+    "recovered_unseen": 0.5582655292064025
+   },
+   "family:c2_product_phase": {
+    "fam": 0.2519727945327759,
+    "unseen": 0.16835585236549377,
+    "margin": -6.818513870239258,
+    "recovered_fam": -0.00036388277347065807,
+    "recovered_unseen": -0.002710061307902396
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.27306121587753296,
+    "unseen": 0.16948197782039642,
+    "margin": -6.984245777130127,
+    "recovered_fam": 0.027838427120896524,
+    "recovered_unseen": 0.0027099895884933954
+   },
+   "family:e_order_x_token": {
+    "fam": 0.2519727945327759,
+    "unseen": 0.17229729890823364,
+    "margin": -7.90434455871582,
+    "recovered_fam": -0.00036388277347065807,
+    "recovered_unseen": 0.016260152689187374
+   },
+   "family:all_families": {
+    "fam": 0.9545578360557556,
+    "unseen": 0.3445945978164673,
+    "margin": 8.754396438598633,
+    "recovered_fam": 0.939228547795265,
+    "recovered_unseen": 0.8455284418736064
+   }
+  }
+ },
+ "mass_only_s304": {
+  "kind": "learned",
+  "r2_additive": 0.47339206613650586,
+  "rho_var_frac": 0.5266079338634941,
+  "R1": {
+   "0.0": {
+    "fam": 0.27605441212654114,
+    "unseen": 0.1390765756368637,
+    "margin": -4.2805304527282715,
+    "relu_state_flips": 0.16453248274161736
+   },
+   "0.25": {
+    "fam": 0.3648979663848877,
+    "unseen": 0.17286035418510437,
+    "margin": 4.812474250793457,
+    "relu_state_flips": 0.11803800610891957
+   },
+   "0.5": {
+    "fam": 0.6122449040412903,
+    "unseen": 0.24493242800235748,
+    "margin": 7.852221488952637,
+    "relu_state_flips": 0.07346455182993644
+   },
+   "0.75": {
+    "fam": 0.9185034036636353,
+    "unseen": 0.2668918967247009,
+    "margin": 10.00847339630127,
+    "relu_state_flips": 0.033851170419680034
+   },
+   "0.9": {
+    "fam": 1.0,
+    "unseen": 0.26970720291137695,
+    "margin": 11.765596389770508,
+    "relu_state_flips": 0.012840202443567829
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.2691441476345062,
+    "margin": 12.602665901184082,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.16453248274161736,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.2506245498729559,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.015246887416040522,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.9230222162464807,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 6.385829875255045e-05,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.4220348717839264,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.004840890655708585,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.9610306887365311
+   },
+   "f_boundary_energy_share": 0.6695773322825089,
+   "f_boundary_cell_frac": 0.32213807048542625,
+   "g_float64_vs_float32_max_abs_preact_diff": 3.788687804728852e-05,
+   "g_rho_rms": 6.38046370263456,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.47591835260391235,
+    "unseen": 0.1970720738172531,
+    "margin": 1.1601160764694214,
+    "recovered_fam": 0.27607591485495203,
+    "recovered_unseen": 0.445887451342911
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.2894144058227539,
+    "margin": 15.163466453552246,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.1558440576457834
+   },
+   "low_margin_prompt_frac": 0.7808459346920885,
+   "family:a_canonical_operands": {
+    "fam": 0.30829933285713196,
+    "unseen": 0.15202702581882477,
+    "margin": -6.204911231994629,
+    "recovered_fam": 0.04454053076738556,
+    "recovered_unseen": 0.09956709411163443
+   },
+   "family:b_zero_handling": {
+    "fam": 0.2763265371322632,
+    "unseen": 0.13851352035999298,
+    "margin": -4.53469705581665,
+    "recovered_fam": 0.000375891517650373,
+    "recovered_unseen": -0.004328944318887824
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.655102014541626,
+    "unseen": 0.12218468636274338,
+    "margin": 6.638359069824219,
+    "recovered_fam": 0.5235857621959014,
+    "recovered_unseen": -0.12987010532053675
+   },
+   "family:c2_product_phase": {
+    "fam": 0.2780952453613281,
+    "unseen": 0.1362612545490265,
+    "margin": -4.310644626617432,
+    "recovered_fam": 0.002819042299548778,
+    "recovered_unseen": -0.02164506528874274
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.3551020324230194,
+    "unseen": 0.18186937272548676,
+    "margin": -3.757113456726074,
+    "recovered_fam": 0.10919000215012747,
+    "recovered_unseen": 0.32900435082618956
+   },
+   "family:e_order_x_token": {
+    "fam": 0.2770068049430847,
+    "unseen": 0.13963964581489563,
+    "margin": -3.216794013977051,
+    "recovered_fam": 0.0013155585619924399,
+    "recovered_unseen": 0.0043290588836556974
+   },
+   "family:all_families": {
+    "fam": 0.8887074589729309,
+    "unseen": 0.21959459781646729,
+    "margin": 9.663172721862793,
+    "recovered_fam": 0.846269467082487,
+    "recovered_unseen": 0.6190476299585493
+   }
+  }
+ },
+ "mass_only_s310": {
+  "kind": "learned",
+  "r2_additive": 0.5415406236495524,
+  "rho_var_frac": 0.45845937635044764,
+  "R1": {
+   "0.0": {
+    "fam": 0.25904762744903564,
+    "unseen": 0.141328826546669,
+    "margin": -12.217000007629395,
+    "relu_state_flips": 0.15266905681569143
+   },
+   "0.25": {
+    "fam": 0.3202721178531647,
+    "unseen": 0.16722972691059113,
+    "margin": -1.1136064529418945,
+    "relu_state_flips": 0.11113679322813938
+   },
+   "0.5": {
+    "fam": 0.4678911566734314,
+    "unseen": 0.2409909963607788,
+    "margin": 5.431337356567383,
+    "relu_state_flips": 0.0710718345934692
+   },
+   "0.75": {
+    "fam": 0.8020408153533936,
+    "unseen": 0.25844594836235046,
+    "margin": 8.689105033874512,
+    "relu_state_flips": 0.0337719838921762
+   },
+   "0.9": {
+    "fam": 0.9961904883384705,
+    "unseen": 0.27646395564079285,
+    "margin": 10.173077583312988,
+    "relu_state_flips": 0.013088034872890642
+   },
+   "1.0": {
+    "fam": 1.0,
+    "unseen": 0.2775900959968567,
+    "margin": 10.52918529510498,
+    "relu_state_flips": 0.0
+   }
+  },
+  "sign_flip_cells_at_alpha0": 0.15266905681569143,
+  "R2": {
+   "a_canonical_operands": {
+    "r2_of_rho": 0.7260099077024129,
+    "n_regressors": 29
+   },
+   "b_zero_handling": {
+    "r2_of_rho": 0.028108893511046285,
+    "n_regressors": 50
+   },
+   "c1_pairwise_tokens": {
+    "r2_of_rho": 0.9730837328257548,
+    "n_regressors": 500
+   },
+   "c2_product_phase": {
+    "r2_of_rho": 6.936557622549966e-05,
+    "n_regressors": 13
+   },
+   "d_attention_weights_L2": {
+    "r2_of_rho": 0.2740752407075019,
+    "n_regressors": 32
+   },
+   "e_order_x_token": {
+    "r2_of_rho": 0.012330489639365338,
+    "n_regressors": 35
+   },
+   "all_families": {
+    "r2_of_rho": 0.9809794109593
+   },
+   "f_boundary_energy_share": 0.6797486217779101,
+   "f_boundary_cell_frac": 0.30369531421214113,
+   "g_float64_vs_float32_max_abs_preact_diff": 5.0234965472739646e-05,
+   "g_rho_rms": 6.808306807114141,
+   "g_predictions_identical_f64": true
+  },
+  "R3": {
+   "sign_relevant_cells": {
+    "fam": 0.4368707537651062,
+    "unseen": 0.171171173453331,
+    "margin": -7.759804725646973,
+    "recovered_fam": 0.23999265391897978,
+    "recovered_unseen": 0.2190082847978405
+   },
+   "low_margin_prompts": {
+    "fam": 1.0,
+    "unseen": 0.3079954981803894,
+    "margin": 13.530593872070312,
+    "recovered_fam": 1.0,
+    "recovered_unseen": 1.223140458812824
+   },
+   "low_margin_prompt_frac": 0.7847907078676309,
+   "family:a_canonical_operands": {
+    "fam": 0.522040843963623,
+    "unseen": 0.37894144654273987,
+    "margin": 4.336348533630371,
+    "recovered_fam": 0.3549394350532269,
+    "recovered_unseen": 1.7438016022809304
+   },
+   "family:b_zero_handling": {
+    "fam": 0.2593197226524353,
+    "unseen": 0.141328826546669,
+    "margin": -11.569961547851562,
+    "recovered_fam": 0.00036722360772377833,
+    "recovered_unseen": 0.0
+   },
+   "family:c1_pairwise_tokens": {
+    "fam": 0.955646276473999,
+    "unseen": 0.3102477490901947,
+    "margin": 9.42099666595459,
+    "recovered_fam": 0.9401395755393843,
+    "recovered_unseen": 1.239669373587309
+   },
+   "family:c2_product_phase": {
+    "fam": 0.2582312822341919,
+    "unseen": 0.14189189672470093,
+    "margin": -12.144807815551758,
+    "recovered_fam": -0.0011017512664588977,
+    "recovered_unseen": 0.004132283372259056
+   },
+   "family:d_attention_weights_L2": {
+    "fam": 0.31918367743492126,
+    "unseen": 0.16103602945804596,
+    "margin": -7.026895046234131,
+    "recovered_fam": 0.08116047969297693,
+    "recovered_unseen": 0.1446280589553821
+   },
+   "family:e_order_x_token": {
+    "fam": 0.26163265109062195,
+    "unseen": 0.15202702581882477,
+    "margin": -11.887649536132812,
+    "recovered_fam": 0.0034887851599510198,
+    "recovered_unseen": 0.07851239985744185
+   },
+   "family:all_families": {
+    "fam": 0.977142870426178,
+    "unseen": 0.2843468487262726,
+    "margin": 9.634514808654785,
+    "recovered_fam": 0.9691516885287389,
+    "recovered_unseen": 1.0495867443234552
+   }
+  }
+ }
+}
