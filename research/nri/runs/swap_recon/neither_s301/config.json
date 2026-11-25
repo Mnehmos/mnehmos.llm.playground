@@ -1,0 +1,33 @@
+{
+  "group": "neither",
+  "arm": "neither",
+  "condition": "neither",
+  "seed": 301,
+  "schedule": "warmup",
+  "steps": 6000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "lambda_iit": 0.0,
+  "declared": null,
+  "block": [
+    0,
+    16
+  ],
+  "warmup_steps": 2000,
+  "n_params": 69831,
+  "model_kw": {
+    "n_types": 1,
+    "aux_classes": 7,
+    "vocab": 25,
+    "seq_len": 8,
+    "n_out": 13
+  },
+  "torch": "2.15.0+cu132",
+  "encoder_forwards_per_step": 1,
+  "reconstruction": true,
+  "resumed_from": null,
+  "acc_id": 1.0,
+  "acc_ood": 0.9705810546875,
+  "train_seconds": 452.2
+}

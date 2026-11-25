@@ -1,0 +1,4454 @@
+{
+ "mass_only_s307": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 0.996337890625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.9952479004859924,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7060883954739788
+   },
+   "dec_value": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 0.996337890625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.9951612949371338,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7060884546905482
+   },
+   "double_value": {
+    "id_correct": 0.99951171875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.9966130256652832,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.6360118508471171
+   },
+   "invert_value": {
+    "id_correct": 0.999755859375,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.9988551735877991,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6105171727675853
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.6732082386975801
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 0.99951171875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.9953703880310059,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 0.9957275390625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.9957275390625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.17995438023742527
+   },
+   "mass_units_rotate": {
+    "id_correct": 0.9996337890625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.9963503479957581,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.32970347010379847
+   },
+   "acc_units_rotate": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.99658203125,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.99658203125,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.34414104425501285
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.9957275390625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.9957275390625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.31461672583268435
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.9957275390625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.9957275390625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7076981986080211
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8248313580300612
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.997389018535614,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7322402697205863
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6879938978352094
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6732082386975801
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9981226325035095,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.99658203125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.99658203125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3883511273431438
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9963503479957581,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 0.9957275390625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9957275390625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.276262226018432
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9986572265625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.99329674243927,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.768210882999411
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7430968953763092
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.999755859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.998161792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7792723187461325
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9981226325035095,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.99658203125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.99658203125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3883511273431438
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9958763122558594,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.996337890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9951612949371338,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7286593481284971
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.9957275390625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9957275390625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.99658203125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.99658203125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.46627963788104126
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9958763122558594,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.996337890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9951612949371338,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7286593481284971
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7138130461799042
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9958763122558594,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.996337890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9951612949371338,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7936801312208791
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7430968953763092
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.999755859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.998161792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7601378941158657
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6732082386975801
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.999755859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9983235597610474,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.6839016961585281
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.99609375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9928603172302246,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.789464596231484
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.999755859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9983235597610474,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.6839016961585281
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9963503479957581,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.4557280574774443
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.9957275390625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9957275390625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.31461672583268435
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7560703196614899
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.9993896484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9975369572639465,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 0.996826171875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9940353035926819,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.732942682937922
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 0.99951171875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9953703880310059,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 0.9957275390625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9957275390625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.17995438023742527
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6732082386975801
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9969712495803833,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.6609801355730278
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9963503479957581,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.32970347010379847
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9982993006706238,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.710175213698252
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.9957275390625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9957275390625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.999755859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.998161792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7792723187461325
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9958763122558594,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.996337890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9951612949371338,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7286593481284971
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9986882209777832,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.7139651804772568
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.9951171875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9937165975570679,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.7854895934829536
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9990234375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9929015040397644,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7105078135250946
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6407380388118733
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6407380388118733
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ },
+ "mass_only_s311": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7473284435051593
+   },
+   "dec_value": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7473284985497587
+   },
+   "double_value": {
+    "id_correct": 0.99951171875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.9966130256652832,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.7224702325185062
+   },
+   "invert_value": {
+    "id_correct": 0.9996337890625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.998282790184021,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6336881457492086
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.7293108696105959
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.19545833316232505
+   },
+   "mass_units_rotate": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.3481665711850123
+   },
+   "acc_units_rotate": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.9974365234375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.9974365234375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.3773586206240357
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.23646655356169777
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 1.0,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7864277497229656
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8919158109451635
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.9993896484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9978241920471191,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7247710705775495
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7053812371880925
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7293108696105959
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9998779296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9993742108345032,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.9974365234375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9974365234375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.4249746886472706
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.28812499742864667
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.7745170638134691
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7666881497212318
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8244512580423794
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9998779296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9993742108345032,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.9974365234375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9974365234375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.4249746886472706
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7724660983036754
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.9974365234375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.9974365234375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.44532681812211894
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7724660983036754
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7761315623528483
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.8078491489252841
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7666881497212318
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7998255446980431
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7293108696105959
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.997485339641571,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.6976461329665684
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.9984130859375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9970995187759399,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.8179426213435728
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.997485339641571,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.6976461329665684
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.42087573831479763
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.23646655356169777
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8211540074454583
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.7515547896321906
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.19545833316232505
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7293108696105959
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.9991455078125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9964664578437805,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.7484432010241066
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.3481665711850123
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9965986609458923,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.753548333263863
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8244512580423794
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7724660983036754
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.999267578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9973765015602112,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.7488821961000193
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.9976806640625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9970154166221619,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.83719727639943
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9996337890625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.997338056564331,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7256931668403824
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7392318617434439
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7392318617434439
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ },
+ "mass_only_s300": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 0.939697265625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.18883416056632996,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 0.7564697265625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.6839854121208191,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7572136243310799
+   },
+   "dec_value": {
+    "id_correct": 0.955810546875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.4253968298435211,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 0.6044921875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.47741934657096863,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7572137074634933
+   },
+   "double_value": {
+    "id_correct": 0.94482421875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.6172735095024109,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 0.615234375,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.2659524977207184,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.657661390820794
+   },
+   "invert_value": {
+    "id_correct": 0.8858642578125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.464796781539917,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 0.8719482421875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.6014437675476074,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6499595206439286
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.7549654622595118
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 0.954345703125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.5671296119689941,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 0.5745849609375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.5745849609375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.18277086792574349
+   },
+   "mass_units_rotate": {
+    "id_correct": 0.9561767578125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.5632603168487549,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.31577268767616373
+   },
+   "acc_units_rotate": {
+    "id_correct": 0.9342041015625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.3521634638309479,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.5308837890625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.5308837890625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.30573277341356286
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.5745849609375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.5745849609375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.24954799534156974
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.5745849609375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.5745849609375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8208774509773308
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8735890516570676
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.8419189453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4364664852619171,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 0.88916015625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.2265758067369461,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7430985279565863
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7087297430152407
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7549654622595118
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.89306640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.45181477069854736,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.5308837890625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5308837890625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.35619896937962026
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9561767578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5632603168487549,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 0.5745849609375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5745849609375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.2575018499793224
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.883056640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4162096381187439,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 0.874267578125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.6071701049804688,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.7603907367094768
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7951397118396637
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.922119140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.41360294818878174,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9583740234375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8204176210838211
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.89306640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.45181477069854736,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.5308837890625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5308837890625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.35619896937962026
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.9139404296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5154638886451721,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.6044921875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47741934657096863,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7789594253297558
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.5745849609375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5745849609375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.931396484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.32451921701431274,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.53271484375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.53271484375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3946476098545322
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9139404296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5154638886451721,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.6044921875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47741934657096863,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7789594253297558
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7053529537239641
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9127197265625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5085910558700562,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.6055908203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.4788709580898285,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.8179559466045894
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7951397118396637
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.922119140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.41360294818878174,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9583740234375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7976482847344297
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7549654622595118
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.943603515625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6127409934997559,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.600341796875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.26756152510643005,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.734633261704992
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 0.8985595703125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4030172526836395,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.7347412109375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5151718258857727,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.7921618287551884
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.943603515625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6127409934997559,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.600341796875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.26756152510643005,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.734633261704992
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9552001953125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5535279512405396,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.40247557319106236
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.5745849609375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5745849609375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.24954799534156974
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8145216282327108
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.8602294921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.435960590839386,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 0.742919921875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5168616771697998,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.7532948192348528
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 0.954345703125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5671296119689941,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 0.5745849609375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5745849609375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.18277086792574349
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7549654622595118
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.9000244140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5865724086761475,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 0.615234375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.2659524977207184,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.6825860023101822
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 0.9561767578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5632603168487549,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.31577268767616373
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.8775634765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4314059019088745,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 0.892822265625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.6777981519699097,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.7380079449553025
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.5745849609375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.5745849609375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.922119140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.41360294818878174,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9583740234375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8204176210838211
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.9139404296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5154638886451721,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.6044921875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47741934657096863,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7789594253297558
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.8369140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4158285856246948,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 0.9202880859375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.45673877000808716,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.7538536610640033
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9256591796875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4528301954269409,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.5782470703125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.457273006439209,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.8166058452685468
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.936279296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5368234515190125,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 0.74658203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5378450751304626,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7307857792681897
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6597337683121686
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6597337683121686
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ },
+ "mass_only_s305": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 0.969482421875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.5894909501075745,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 0.6512451171875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.5474417805671692,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7224223153704721
+   },
+   "dec_value": {
+    "id_correct": 0.98974609375,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.8666666746139526,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 0.5430908203125,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.3962903320789337,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7224223707464724
+   },
+   "double_value": {
+    "id_correct": 0.977294921875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.8425063490867615,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 0.6314697265625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.29692593216896057,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.6222195379289976
+   },
+   "invert_value": {
+    "id_correct": 0.9312744140625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.6777332425117493,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 0.9403076171875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.8142096996307373,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6406450032384895
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.7249165195367402
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 0.947509765625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.5023148059844971,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 0.4755859375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.4755859375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.2105194741117213
+   },
+   "mass_units_rotate": {
+    "id_correct": 0.9466552734375,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.46836984157562256,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.3714178359447355
+   },
+   "acc_units_rotate": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 1.0,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.4814453125,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.4814453125,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.3035150923314939
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.4766845703125,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.4766845703125,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.3188899399469844
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.4755859375,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.4755859375,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8033217516862114
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8692390870349432
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.9217529296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7210617661476135,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7404274181051279
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6959012229238688
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7249165195367402
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.946533203125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7259073853492737,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.4814453125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4814453125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3693776593848949
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9466552734375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.46836984157562256,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 0.4755859375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4755859375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3059946647811973
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9312744140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6569164991378784,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 0.9384765625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.8077803254127502,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.77732757910648
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7919562576883854
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9478759765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.607536792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8123085624329521
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.946533203125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7259073853492737,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.4814453125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4814453125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3693776593848949
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.9356689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6378006935119629,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.5430908203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.3962903320789337,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7524709334799531
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.4755859375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4755859375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 1.0,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.48095703125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.48095703125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.44024103064971876
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9356689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6378006935119629,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.5430908203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.3962903320789337,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7524709334799531
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7612710713252556
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9324951171875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6199312806129456,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.5386962890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.3904838562011719,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.8172535099536637
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7919562576883854
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9478759765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.607536792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.788555452149042
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7249165195367402
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9776611328125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.8466051816940308,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.6082763671875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.28210291266441345,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7238874354289088
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 0.963623046875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7859195470809937,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.722412109375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.4926372170448303,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.789713899604283
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9776611328125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.8466051816940308,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.6082763671875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.28210291266441345,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7238874354289088
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.94677734375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4695863723754883,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.48953242247684353
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.4766845703125,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4766845703125,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.3188899399469844
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7858914884241629
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.909912109375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6364532113075256,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 0.722412109375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.4783207178115845,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.7588445927459301
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 0.947509765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.5023148059844971,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 0.4755859375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4755859375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.2105194741117213
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7249165195367402
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.92431640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6870267391204834,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 0.6314697265625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.29692593216896057,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.6568680060391232
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 0.9466552734375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.46836984157562256,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.3714178359447355
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.9312744140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6808390021324158,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 0.9403076171875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.8205504417419434,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.7104901157914099
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.4755859375,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.4755859375,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9478759765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.607536792755127,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8123085624329521
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.9356689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.6378006935119629,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.5430908203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.3962903320789337,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7524709334799531
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.924072265625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7280279994010925,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 1.0,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.7111246263626428
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.99072265625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.9317160844802856,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.5477294921875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.4180018901824951,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.7835913686486464
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.96142578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.7196095585823059,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 0.7476806640625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5398486256599426,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7290587987037521
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6912618680730849
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6912618680730849
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ },
+ "mass_only_s304": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 0.940185546875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.19540229439735413,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 0.28076171875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.06668778508901596,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7202932131030276
+   },
+   "dec_value": {
+    "id_correct": 0.95068359375,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.35873016715049744,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 0.309814453125,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.0880645141005516,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7202932131030276
+   },
+   "double_value": {
+    "id_correct": 0.90625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.3497036397457123,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 0.533447265625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.10992082208395004,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.6507538388949373
+   },
+   "invert_value": {
+    "id_correct": 0.842529296875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.2615912854671478,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 0.7281494140625,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.15387538075447083,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6478017878193684
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.7188945190530729
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 0.9044189453125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.09375,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 0.0914306640625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.0914306640625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.20113962782779443
+   },
+   "mass_units_rotate": {
+    "id_correct": 0.9085693359375,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.08880778402090073,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.37062941945073313
+   },
+   "acc_units_rotate": {
+    "id_correct": 0.9503173828125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.510817289352417,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.094482421875,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.094482421875,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.31808967201429184
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.0914306640625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.0914306640625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.30515935479316075
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.0914306640625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.0914306640625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7909315904771994
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8691124810416654
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.7952880859375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.27023497223854065,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 0.919677734375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.43952301144599915,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7367797268465924
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6507788185907145
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7188945190530729
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.8602294921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.28347936272621155,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.094482421875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.094482421875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.37634847062612525
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9085693359375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.08880778402090073,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 0.0914306640625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0914306640625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.31130212673669994
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.8541259765625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2717854976654053,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 0.7335205078125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.16742944717407227,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.7835499080394337
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7809811003717066
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.8978271484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.23069852590560913,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.978271484375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47800585627555847,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8100545770201394
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.8602294921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.28347936272621155,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.094482421875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.094482421875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.37634847062612525
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.856689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.19312714040279388,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.309814453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0880645141005516,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7478499017646819
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.0914306640625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0914306640625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9468994140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4771634638309479,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.0946044921875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0946044921875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.44079845908930265
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.856689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.19312714040279388,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.309814453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0880645141005516,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7478499017646819
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7570910905531604
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.8560791015625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.1896907240152359,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.3101806640625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.08854838460683823,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.8077138262916496
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7809811003717066
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.8974609375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.22794117033481598,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.978271484375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47800585627555847,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.7776745247291588
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7188945190530729
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.8988037109375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.30511316657066345,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.50927734375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.10067114233970642,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7132634125303386
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 0.8818359375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.3045977056026459,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.52197265625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.12628291547298431,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.8128059300101144
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.8988037109375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.30511316657066345,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.50927734375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.10067114233970642,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7132634125303386
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9085693359375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.08880778402090073,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.4800920728153774
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.0914306640625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0914306640625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.30515935479316075
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7861236019792819
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.801025390625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.19704432785511017,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 0.524658203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.10667584091424942,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.7745511805011003
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 0.9044189453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.09375,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 0.0914306640625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0914306640625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.20113962782779443
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7188945190530729
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.8143310546875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.23220595717430115,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 0.533447265625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.10992082208395004,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.6811296788124368
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 0.9085693359375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.08880778402090073,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.37062941945073313
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.8353271484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2352607697248459,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 0.730712890625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.19045871496200562,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.712522711298075
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.0914306640625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0914306640625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.8978271484375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.23069852590560913,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.978271484375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.47800585627555847,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8100545770201394
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.856689453125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.19312714040279388,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.309814453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.0880645141005516,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7478499017646819
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.7938232421875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.26147791743278503,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 0.929443359375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5191347599029541,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.7074436829044901
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9173583984375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.3917340636253357,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.298828125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09770656377077103,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.7874028834761878
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.89892578125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.26530611515045166,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 0.5057373046875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09861976653337479,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7479789105937499
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6928670056924312
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6928670056924312
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ },
+ "mass_only_s310": {
+  "instructions": {
+   "inc_value": {
+    "id_correct": 0.94384765625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.24466338753700256,
+    "id_frac_unseen_readings": 0.0743408203125,
+    "oodM_correct": 0.285888671875,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.07334072887897491,
+    "oodM_frac_unseen_readings": 0.7706298828125,
+    "param_disp": 0.7432306498614639
+   },
+   "dec_value": {
+    "id_correct": 0.9639892578125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.5317460298538208,
+    "id_frac_unseen_readings": 0.076904296875,
+    "oodM_correct": 0.317626953125,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.09838709980249405,
+    "oodM_frac_unseen_readings": 0.7568359375,
+    "param_disp": 0.7432305158042425
+   },
+   "double_value": {
+    "id_correct": 0.9093017578125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.3708721399307251,
+    "id_frac_unseen_readings": 0.1441650390625,
+    "oodM_correct": 0.542236328125,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.1266884058713913,
+    "oodM_frac_unseen_readings": 0.524169921875,
+    "param_disp": 0.7446632255638077
+   },
+   "invert_value": {
+    "id_correct": 0.83203125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.2123640477657318,
+    "id_frac_unseen_readings": 0.2132568359375,
+    "oodM_correct": 0.71630859375,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": 0.11702127754688263,
+    "oodM_frac_unseen_readings": 0.3212890625,
+    "param_disp": 0.6905184841580486
+   },
+   "const_value_5": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.6811036841489568
+   },
+   "mass_unit_0_as_2": {
+    "id_correct": 0.905029296875,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.09953703731298447,
+    "id_frac_unseen_readings": 0.10546875,
+    "oodM_correct": 0.0966796875,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.0966796875,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.1820663711358153
+   },
+   "mass_units_rotate": {
+    "id_correct": 0.909423828125,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.09732360392808914,
+    "id_frac_unseen_readings": 0.100341796875,
+    "oodM_correct": 1.0,
+    "oodM_correct_on_trained_readings": 1.0,
+    "oodM_correct_on_unseen_readings": null,
+    "oodM_frac_unseen_readings": 0.0,
+    "param_disp": 0.35438871627307555
+   },
+   "acc_units_rotate": {
+    "id_correct": 0.947509765625,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": 0.48317307233810425,
+    "id_frac_unseen_readings": 0.1015625,
+    "oodM_correct": 0.1004638671875,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.1004638671875,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.3662962348227051
+   },
+   "force_units_swap01": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.09619140625,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.09619140625,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.25110952512556795
+   },
+   "identity": {
+    "id_correct": 1.0,
+    "id_correct_on_trained_readings": 1.0,
+    "id_correct_on_unseen_readings": null,
+    "id_frac_unseen_readings": 0.0,
+    "oodM_correct": 0.0966796875,
+    "oodM_correct_on_trained_readings": null,
+    "oodM_correct_on_unseen_readings": 0.0966796875,
+    "oodM_frac_unseen_readings": 1.0,
+    "param_disp": 0.0
+   }
+  },
+  "composition": {
+   "sequences": [
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7931416107129707
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "const_value_5",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.8506859187689622
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "double_value"
+     ],
+     "id_correct": 0.8013916015625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.29199305176734924,
+     "id_frac_unseen_readings": 0.280517578125,
+     "oodM_correct": 0.9111328125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.3798977732658386,
+     "oodM_frac_unseen_readings": 0.143310546875,
+     "param_disp": 0.7558107934855827
+    },
+    {
+     "seq": [
+      "double_value",
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7488558787277868
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6811036841489568
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.8603515625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.284105122089386,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.1004638671875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.1004638671875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.4090489948631346
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.909423828125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.09732360392808914,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 0.0966796875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0966796875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.30404472325850795
+    },
+    {
+     "seq": [
+      "invert_value",
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.854736328125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.27483242750167847,
+     "id_frac_unseen_readings": 0.2003173828125,
+     "oodM_correct": 0.735595703125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.17391304671764374,
+     "oodM_frac_unseen_readings": 0.320068359375,
+     "param_disp": 0.8210022789689311
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5",
+      "inc_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7259189087110495
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9102783203125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.32444852590560913,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9981689453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9560117125511169,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8233973106736167
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.8603515625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.284105122089386,
+     "id_frac_unseen_readings": 0.195068359375,
+     "oodM_correct": 0.1004638671875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.1004638671875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.4090489948631346
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.867919921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2563574016094208,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.317626953125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09838709980249405,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7652057421924069
+    },
+    {
+     "seq": [
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.0966796875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0966796875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9473876953125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.4819711446762085,
+     "id_frac_unseen_readings": 0.1015625,
+     "oodM_correct": 0.1024169921875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.1024169921875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.4441046332274395
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.867919921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2563574016094208,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.317626953125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09838709980249405,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7652057421924069
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "force_units_swap01"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7504394177842686
+    },
+    {
+     "seq": [
+      "dec_value",
+      "force_units_swap01",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.8681640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.25773194432258606,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.3201904296875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1017741933465004,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.8053544942118291
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7259189087110495
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate",
+      "mass_unit_0_as_2"
+     ],
+     "id_correct": 0.9100341796875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.3226102888584137,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9981689453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9560117125511169,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.793517807336114
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "double_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6811036841489568
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.906494140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.35792121291160583,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.5135498046875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1085011214017868,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7006902292511312
+    },
+    {
+     "seq": [
+      "acc_units_rotate",
+      "dec_value",
+      "dec_value"
+     ],
+     "id_correct": 0.8819580078125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.30531609058380127,
+     "id_frac_unseen_readings": 0.169921875,
+     "oodM_correct": 0.5274658203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.13632306456565857,
+     "oodM_frac_unseen_readings": 0.547119140625,
+     "param_disp": 0.8256237020779885
+    },
+    {
+     "seq": [
+      "double_value",
+      "inc_value"
+     ],
+     "id_correct": 0.906494140625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.35792121291160583,
+     "id_frac_unseen_readings": 0.1456298828125,
+     "oodM_correct": 0.5135498046875,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1085011214017868,
+     "oodM_frac_unseen_readings": 0.545654296875,
+     "param_disp": 0.7006902292511312
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9090576171875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.09367396682500839,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.4343355451652666
+    },
+    {
+     "seq": [
+      "force_units_swap01",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.09619140625,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.09619140625,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.25110952512556795
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "acc_units_rotate",
+      "acc_units_rotate"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7733531666401848
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.8067626953125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.22019705176353455,
+     "id_frac_unseen_readings": 0.247802734375,
+     "oodM_correct": 0.5361328125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1282404214143753,
+     "oodM_frac_unseen_readings": 0.5321044921875,
+     "param_disp": 0.761990678453001
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "invert_value",
+      "invert_value"
+     ],
+     "id_correct": 0.905029296875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.09953703731298447,
+     "id_frac_unseen_readings": 0.10546875,
+     "oodM_correct": 0.0966796875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0966796875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.1820663711358153
+    },
+    {
+     "seq": [
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.6811036841489568
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "double_value"
+     ],
+     "id_correct": 0.818603515625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2498738020658493,
+     "id_frac_unseen_readings": 0.2418212890625,
+     "oodM_correct": 0.542236328125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1266884058713913,
+     "oodM_frac_unseen_readings": 0.524169921875,
+     "param_disp": 0.7665973830953808
+    },
+    {
+     "seq": [
+      "mass_units_rotate",
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 0.909423828125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.09732360392808914,
+     "id_frac_unseen_readings": 0.100341796875,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.35438871627307555
+    },
+    {
+     "seq": [
+      "invert_value",
+      "inc_value"
+     ],
+     "id_correct": 0.8258056640625,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.19104307889938354,
+     "id_frac_unseen_readings": 0.21533203125,
+     "oodM_correct": 0.7266845703125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1783486306667328,
+     "oodM_frac_unseen_readings": 0.3326416015625,
+     "param_disp": 0.7247506490288659
+    },
+    {
+     "seq": [
+      "inc_value",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 0.0966796875,
+     "oodM_correct_on_trained_readings": null,
+     "oodM_correct_on_unseen_readings": 0.0966796875,
+     "oodM_frac_unseen_readings": 1.0,
+     "param_disp": 0.0
+    },
+    {
+     "seq": [
+      "dec_value",
+      "mass_units_rotate"
+     ],
+     "id_correct": 0.9102783203125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.32444852590560913,
+     "id_frac_unseen_readings": 0.1328125,
+     "oodM_correct": 0.9981689453125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.9560117125511169,
+     "oodM_frac_unseen_readings": 0.0416259765625,
+     "param_disp": 0.8233973106736167
+    },
+    {
+     "seq": [
+      "mass_unit_0_as_2",
+      "dec_value"
+     ],
+     "id_correct": 0.867919921875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2563574016094208,
+     "id_frac_unseen_readings": 0.1776123046875,
+     "oodM_correct": 0.317626953125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09838709980249405,
+     "oodM_frac_unseen_readings": 0.7568359375,
+     "param_disp": 0.7652057421924069
+    },
+    {
+     "seq": [
+      "inc_value",
+      "invert_value"
+     ],
+     "id_correct": 0.7923583984375,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.2562308609485626,
+     "id_frac_unseen_readings": 0.2791748046875,
+     "oodM_correct": 0.9337158203125,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.5482529401779175,
+     "oodM_frac_unseen_readings": 0.146728515625,
+     "param_disp": 0.748560528863553
+    },
+    {
+     "seq": [
+      "dec_value",
+      "acc_units_rotate"
+     ],
+     "id_correct": 0.9161376953125,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.3827493190765381,
+     "id_frac_unseen_readings": 0.1358642578125,
+     "oodM_correct": 0.304931640625,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.1055607944726944,
+     "oodM_frac_unseen_readings": 0.777099609375,
+     "param_disp": 0.8285919447932572
+    },
+    {
+     "seq": [
+      "inc_value",
+      "inc_value"
+     ],
+     "id_correct": 0.895263671875,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": 0.23868678510189056,
+     "id_frac_unseen_readings": 0.1375732421875,
+     "oodM_correct": 0.5042724609375,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": 0.09594835340976715,
+     "oodM_frac_unseen_readings": 0.54833984375,
+     "param_disp": 0.7399200533504853
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5",
+      "dec_value"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7071798118593552
+    },
+    {
+     "seq": [
+      "dec_value",
+      "const_value_5"
+     ],
+     "id_correct": 1.0,
+     "id_correct_on_trained_readings": 1.0,
+     "id_correct_on_unseen_readings": null,
+     "id_frac_unseen_readings": 0.0,
+     "oodM_correct": 1.0,
+     "oodM_correct_on_trained_readings": 1.0,
+     "oodM_correct_on_unseen_readings": null,
+     "oodM_frac_unseen_readings": 0.0,
+     "param_disp": 0.7071798118593552
+    }
+   ],
+   "reversible": {
+    "inc_value": true,
+    "double_value": true,
+    "invert_value": true,
+    "mass_units_rotate": true,
+    "acc_units_rotate": true,
+    "force_units_swap01": true
+   }
+  }
+ }
+}

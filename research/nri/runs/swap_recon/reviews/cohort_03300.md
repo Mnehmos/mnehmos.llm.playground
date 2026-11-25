@@ -1,0 +1,78 @@
+# Cohort review — step 3,300
+
+Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA = designed-block interchange accuracy for the declared variable; IIA-OOD = same with a never-trained source (validated causal measure); oodM/oodA = accuracy on never-trained combinations of mass / acceleration; RSI = route-specificity index.
+
+| group | n | mean ID | mean OOD | ID ≥ 0.95 | mean IIA | mean IIA-OOD |
+|---|---|---|---|---|---|---|
+| mass_only | 12 | 0.826 | 0.543 | 6 | 0.824 | 0.480 |
+| acc_only | 12 | 0.795 | 0.505 | 6 | 0.786 | 0.518 |
+| neither | 12 | 0.938 | 0.816 | 10 | — | — |
+
+## Focus, comparator and intermediate networks (mass_only)
+
+| network | role | ID | OOD | oodM | oodA | IIA | IIA-OOD | RSI-M | RSI-A |
+|---|---|---|---|---|---|---|---|---|---|
+| mass_only_s307 | focus | 1.000 | 0.998 | 0.99 | 1.00 | 1.00 | 0.99 | 0.32 | 0.56 |
+| mass_only_s311 | focus | 0.999 | 0.994 | 1.00 | 1.00 | 1.00 | 0.99 | 0.25 | 0.33 |
+| mass_only_s304 | comparator | 1.000 | 0.247 | 0.09 | 0.46 | 1.00 | 0.09 | 0.63 | 0.67 |
+| mass_only_s310 | comparator | 1.000 | 0.261 | 0.09 | 0.48 | 1.00 | 0.09 | 0.73 | 0.83 |
+| mass_only_s305 | intermediate | 1.000 | 0.744 | 0.53 | 1.00 | 1.00 | 0.38 | 0.39 | 0.58 |
+
+## Events since step 3,200
+
+- **acc_only_s303**: block LOST unseen inputs (IIA-OOD < 0.5)
+- **mass_only_s300**: block LOST unseen inputs (IIA-OOD < 0.5)
+- **mass_only_s302**: declared block formed (IIA >= 0.9)
+
+## All networks
+
+| network | ID | OOD | oodM | oodA | IIA | IIA-OOD | RSI-M | RSI-A |
+|---|---|---|---|---|---|---|---|---|
+| acc_only_s300 | 1.000 | 0.335 | 0.34 | 0.42 | 1.00 | 0.43 | 0.59 | 0.92 |
+| acc_only_s301 | 0.876 | 0.293 | 0.28 | 0.29 | 0.86 | 0.28 | 0.72 | 0.65 |
+| acc_only_s302 | 0.593 | 0.524 | 0.52 | 0.52 | 0.58 | 0.52 | 0.62 | 0.39 |
+| acc_only_s303 | 0.603 | 0.528 | 0.47 | 0.50 | 0.58 | 0.50 | 0.36 | 0.59 |
+| acc_only_s304 | 0.249 | 0.139 | 0.13 | 0.15 | 0.23 | 0.15 | 0.83 | 0.93 |
+| acc_only_s305 | 1.000 | 0.823 | 0.91 | 0.81 | 1.00 | 0.82 | 0.55 | 0.56 |
+| acc_only_s306 | 1.000 | 0.490 | 0.48 | 0.55 | 1.00 | 0.55 | 0.78 | 0.94 |
+| acc_only_s307 | 1.000 | 0.766 | 0.61 | 0.99 | 1.00 | 0.99 | 0.41 | 0.57 |
+| acc_only_s308 | 1.000 | 0.910 | 0.99 | 0.88 | 1.00 | 0.92 | 0.37 | 0.25 |
+| acc_only_s309 | 0.613 | 0.529 | 0.50 | 0.51 | 0.59 | 0.52 | 0.57 | 0.45 |
+| acc_only_s310 | 1.000 | 0.287 | 0.43 | 0.18 | 1.00 | 0.19 | 0.78 | 0.95 |
+| acc_only_s311 | 0.603 | 0.439 | 0.45 | 0.35 | 0.59 | 0.33 | 0.91 | 0.84 |
+| mass_only_s300 | 1.000 | 0.373 | 0.52 | 0.28 | 1.00 | 0.49 | 0.38 | 0.76 |
+| mass_only_s301 | 0.599 | 0.524 | 0.51 | 0.52 | 0.59 | 0.52 | 0.15 | 0.46 |
+| mass_only_s302 | 0.929 | 0.340 | 0.21 | 0.49 | 0.93 | 0.20 | 0.94 | 0.79 |
+| mass_only_s303 | 0.612 | 0.523 | 0.49 | 0.49 | 0.60 | 0.51 | 0.95 | 0.44 |
+| mass_only_s304 | 1.000 | 0.247 | 0.09 | 0.46 | 1.00 | 0.09 | 0.63 | 0.67 |
+| mass_only_s305 | 1.000 | 0.744 | 0.53 | 1.00 | 1.00 | 0.38 | 0.39 | 0.58 |
+| mass_only_s306 | 0.589 | 0.456 | 0.48 | 0.43 | 0.58 | 0.49 | 0.98 | 0.81 |
+| mass_only_s307 | 1.000 | 0.998 | 0.99 | 1.00 | 1.00 | 0.99 | 0.32 | 0.56 |
+| mass_only_s308 | 0.587 | 0.524 | 0.48 | 0.49 | 0.60 | 0.48 | 0.93 | 0.49 |
+| mass_only_s309 | 0.597 | 0.530 | 0.51 | 0.51 | 0.59 | 0.53 | 0.17 | 0.46 |
+| mass_only_s310 | 1.000 | 0.261 | 0.09 | 0.48 | 1.00 | 0.09 | 0.73 | 0.83 |
+| mass_only_s311 | 0.999 | 0.994 | 1.00 | 1.00 | 1.00 | 0.99 | 0.25 | 0.33 |
+| neither_s300 | 1.000 | 0.854 | 0.88 | 0.91 | — | — | 0.25 | 0.28 |
+| neither_s301 | 1.000 | 0.971 | 0.98 | 1.00 | — | — | 0.41 | 0.75 |
+| neither_s302 | 0.991 | 0.835 | 0.91 | 0.86 | — | — | 0.58 | 0.45 |
+| neither_s303 | 1.000 | 0.940 | 0.97 | 0.96 | — | — | 0.54 | 0.79 |
+| neither_s304 | 0.616 | 0.499 | 0.45 | 0.46 | — | — | 0.27 | 0.57 |
+| neither_s305 | 1.000 | 0.804 | 0.85 | 0.85 | — | — | 0.59 | 0.44 |
+| neither_s306 | 0.649 | 0.484 | 0.39 | 0.45 | — | — | 0.47 | 0.52 |
+| neither_s307 | 1.000 | 0.941 | 0.96 | 0.96 | — | — | 0.53 | 0.64 |
+| neither_s308 | 1.000 | 0.818 | 0.87 | 0.84 | — | — | 0.43 | 0.34 |
+| neither_s309 | 1.000 | 0.832 | 0.86 | 0.96 | — | — | 0.54 | 0.80 |
+| neither_s310 | 1.000 | 0.883 | 0.92 | 0.93 | — | — | 0.52 | 0.38 |
+| neither_s311 | 1.000 | 0.935 | 0.95 | 0.96 | — | — | 0.42 | 0.38 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 6/12 fit (ID ≥ 0.95), mean ID 0.83, mean OOD 0.49, block IIA 0.82, unseen-source IIA 0.48; acc_only: 6/12 fit (ID ≥ 0.95), mean ID 0.79, mean OOD 0.51, block IIA 0.79, unseen-source IIA 0.52; neither: 10/12 fit (ID ≥ 0.95), mean ID 0.94, mean OOD 0.82.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 0.99 / 0.99 / —; 311: 1.00 / 1.00 / 0.99 / —; 305: 1.00 / 0.53 / 0.38 / —; 304: 1.00 / 0.09 / 0.09 / —; 310: 1.00 / 0.09 / 0.09 / —.
+**Events since previous cohort:** 3 — acc_only_s303: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s300: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s302: declared block formed (IIA >= 0.9).
+**Interpretation.** Stable phase. No focus network changes by more than the noise of the audit panel. The remaining population changes are late settlements in the acceleration group (see events).
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): HELD (changes in unseen-mass accuracy: {307: -0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: 0.01}).
+**Prediction for step 3,400:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

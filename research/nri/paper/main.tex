@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,xcolor,enumitem,caption}
+\usepackage[numbers,sort]{natbib}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\newcommand{\Cten}{C\textsubscript{1.0}}
+\newcommand{\Cone}{C\textsubscript{0.1}}
+
+\title{Birth of a Concept: How Small Networks Come to Learn\\Reusable Computations, and Why Some Do Not}
+\author{Mnehmos research program\thanks{Experiments, analyses and drafting were carried out by an AI research agent
+(Claude Code) under the owner's registration, scope and approval rules; see Provenance. Draft for owner review ---
+not submitted.}}
+\date{Draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We ask when small neural networks (70K--130K parameters) learn a \emph{reusable computation}, one that works on
+input combinations never seen in training, rather than a lookup over the combinations they practised. In a
+registered experiment with 96 networks, supervising the \emph{canonical quantity} (the unit-free value behind a
+measurement) produced generalisation to reserved, never-trained combinations only together with strong weight decay
+(a training penalty that shrinks parameters): reserved-test accuracy 0.655 against 0.101 for a matched scrambled
+target (interaction $+0.48$, Holm $p=0.0012$). Using causal tests validated on hand-built mechanisms with known
+answers, we show that the composing networks convert the canonical code along never-trained combinations; the
+information is present and readable thousands of steps before it controls computation, and strong decay is what
+turns a decodable code into a reusable one. In a second, historical study, 36 networks replay bit-for-bit, and
+networks with identical settings split into perfect generalisers (99.8\% of 1,776 unseen questions) and failures
+(27\%). The split happens in a few hundred training steps: generalisers keep their declared internal variable
+\emph{factorised}, a sum of a value part and a unit part that can be recombined for unseen pairings, while failures
+lock in a value$\times$unit interaction that behaves like a lookup table. Factorisation $\ge 0.98$ is necessary for
+near-perfect generalisation in all 24 declared networks. The same organisation explains editability: the best
+generaliser cannot be edited by maps between average activations, but is edited perfectly, on seen and unseen
+inputs, by an edit that acts on its value and unit parts. Causal tests of these mechanisms are proposed, not run.
+\end{abstract}
+
+\section{Introduction}
+Interpretability usually asks whether a network \emph{represents} a variable. For generalisation, the question is
+whether it \emph{computes with} that variable on inputs it has never seen. We separate three levels: information is
+\emph{present} (distinguishable in the activations), \emph{readable} (decodable by a simple fitted readout), and
+\emph{controlling} (changing it changes the network's answer as predicted, including on never-trained combinations).
+We study which training conditions produce the third level, and what distinguishes networks that reach it from
+otherwise identical networks that do not.
+
+\paragraph{Contributions.}
+\begin{enumerate}[leftmargin=*,itemsep=1pt]
+\item A registered $4\times2$ factorial (96 networks, 5,856 complete checkpoints with optimizer state every 100
+steps): canonical-quantity supervision promotes compositional generalisation only under strong weight decay.
+\item Held-out causal instruments, interventions whose implied answers lie on never-trained combinations, validated
+on five planted mechanisms including a correct code read by a trained-combinations-only reader.
+\item A mechanism for the weight-decay interaction: the supervised target builds a canonical code at either decay
+strength; strong decay prunes the leftover route-specific structure and the downstream reader becomes reusable.
+\item Bit-exact replay of 36 historical networks with complete developmental records, and a developmental account of
+why identically configured networks generalise perfectly or fail: factorisation kept versus an interaction locked
+in during a critical window.
+\item A resolution of the apparent conflict between generalisation and editability: edits must act in the network's
+own composable coordinates.
+\end{enumerate}
+
+\section{Tasks and networks}
+\subsection{Modular unit conversion (factorial study)}
+Quantities in two fictional dimensions with three units each are converted by unit scale factors in
+$\mathbb{Z}_{13}^{\times}$: answer $= v\,s_u\,s_t^{-1} \bmod 13$, with canonical quantity $q=v\,s_u$. Of 156
+(route, value) combinations, 120 are trained, 18 held out for development and 18 reserved for a single final test;
+every withheld combination's canonical quantity appears in training by another route. The student is a three-block
+transformer (129,280 parameters). Populations: A narrow, B diverse, C diverse plus an auxiliary head predicting the
+canonical quantity at the number token, D the same head with an entropy-matched scrambled target; weight decay 0.1
+or 1.0; 12 paired seeds with identical initialisation across conditions.
+
+\subsection{Dimensional reasoning with a declared variable (historical study)}
+Inputs \emph{value unit $\times$ value unit $\to$ force-unit $=$}; target $F = M A S \bmod 13$ with canonical mass
+$M=m\,s_{mu}$ and acceleration $A=a\,s_{au}$. Unseen (out-of-distribution, OOD) renderings: unit 2 written with
+values 9--12; their canonical values all occur in training via other units. An interchange-intervention objective
+\citep{geiger2022iit}, which trains a chosen block of activations to carry a chosen variable by swapping that block
+between examples, declares $M$ (\texttt{mass\_only}) or $A$ (\texttt{acc\_only}) in dimensions 0--15 of the
+last-token residual; \texttt{neither} has no such objective. 69.8K parameters, weight decay 0.01, seeds 300--311.
+
+\section{Measurement}
+\paragraph{Complete records and exact replay.} Every 100 steps we save weights, optimizer moments, random states and
+the exact split of each update into decay and adaptive parts. The original role-swap code reproduces all 36
+historical networks bit-for-bit (every tensor and every logged loss identical); an instrumented trainer, resumption
+from step 3,000, and a 10-step replay of steps 600--2,000 are also bit-exact. An independent study (PR \#34)
+reproduces seeds 307 and 311 including all 61 checkpoint hashes.
+
+\paragraph{Held-out causal instruments.} We copy the activation at a token from a donor question into a base
+question. A \emph{number} code predicts the donor value converted along the base route; a \emph{canonical} code
+predicts the donor quantity in the base's target unit, which is the answer for the base-route input
+$v'=q_d\,s_{u_b}^{-1}$. Each pair is classified by whether the base and the implied combination $(\text{route}_b, v')$
+were trained (reserved combinations excluded everywhere). We report the \emph{switch rate}: among pairs whose
+unpatched answer is not the target, the fraction the patch moves onto it. Seven conditions vary the site, the
+positions, and whether only the canonical-mean subspace (I4), its complement (I5) or a random subspace of equal rank
+(I7) is patched; I6 uses a donor with the same canonical quantity, for which a canonical code predicts no change.
+Subspace patching can mislead through dormant pathways \citep{makelov2023illusion,wu2024reply} and flexible
+alignment maps can fit almost anything \citep{sutter2025nonlinear}; we therefore patch real donor activations, run
+complement and random controls, and validate on planted mechanisms (Table~\ref{tab:planted}).
+
+\begin{table}[t]\centering\small
+\caption{Planted-mechanism validation (criteria fixed before running). P3 failed its first criterion on an
+excess-over-baseline metric (0.88; the excess is capped by coincidental baseline answers); the switch rate was
+adopted and logged as a deviation before any real network was scored.}\label{tab:planted}
+\begin{tabular}{@{}lll@{}}\toprule
+Planted mechanism & Required result & Result\\\midrule
+P1 canonical code, compositional reader & canonical $\ge 0.9$ in all strata; same-canonical unchanged $\ge0.9$ & pass\\
+P2 number code, route lookup & number $\ge 0.9$, canonical $\le 0.05$ & pass\\
+P3 canonical code, trained-only reader & $\ge0.9$ when implied trained; $\le0.10$ when never trained & pass (1.00/0.00)\\
+P4 rotated distributed code & I4 $\ge0.9$; I5, I7 $\le 0.10$ & pass\\
+P5 null & all $|\text{effect}|\le0.05$ & pass\\\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{A probe illusion.} Classifiers fitted on familiar inputs (linear or nearest-class-mean) read 0.00 on
+unseen inputs even in a network whose declared block causally carries those inputs at 0.99. Probes fitted on
+familiar data are therefore not evidence about unseen inputs, in either direction; we use causal measures instead.
+
+\section{Registered factorial results}
+\begin{figure}[t]\centering
+\includegraphics[width=0.75\linewidth]{figures/fig1_primary.pdf}
+\caption{Reserved-test accuracy per network (dots; bar = mean of 12 seeds). Only canonical supervision with strong
+weight decay composes. Independently re-derived from archived weights with no discrepancy.}\label{fig:primary}
+\end{figure}
+All five registered contrasts were supported (Figure~\ref{fig:primary}): canonical vs scrambled at strong decay
+$+0.554$ [0.450, 0.659]; interaction $+0.478$ [0.372, 0.587]; strong vs weak decay within C $+0.521$; C vs diverse
+without auxiliary target $+0.348$; diverse vs narrow $+0.242$ (all Holm $p\le0.0015$). Registered mechanistic
+predictions: decay changes how the code is read (M3) and the code is decodable without composition at weak decay (M4),
+both confirmed.
+
+\section{The canonical code is converted along never-trained combinations}
+\begin{figure}[t]\centering
+\includegraphics[width=0.6\linewidth]{figures/fig2_heldout_causal.pdf}
+\caption{Canonical switch rate when the implied combination was never trained, every 100 steps (mean and range over
+12 seeds).}\label{fig:i1}
+\end{figure}
+\begin{table}[t]\centering\small
+\caption{Switch rate at step 6,000, trained base and never-trained implied combination (mean of 12 seeds); I6 =
+fraction unchanged with a same-canonical donor.}\label{tab:seven}
+\begin{tabular}{@{}lccccccc@{}}\toprule
+condition & I1 & I2 & I3 & I4 & I5 & I7 & I6\\\midrule
+C wd 1.0 & \textbf{0.469} & 0.523 & 0.289 & \textbf{0.469} & 0.000 & 0.004 & 0.90\\
+C wd 0.1 & 0.144 & 0.254 & 0.050 & 0.143 & 0.000 & 0.002 & 0.63\\
+D wd 1.0 & 0.049 & 0.142 & 0.042 & 0.049 & 0.000 & 0.003 & 0.32\\
+B wd 1.0 & 0.058 & 0.349 & 0.080 & 0.058 & 0.000 & 0.006 & 0.14\\
+A wd 1.0 & 0.051 & 0.141 & 0.029 & 0.050 & 0.001 & 0.014 & 0.14\\\bottomrule
+\end{tabular}
+\end{table}
+In \Cten, copying a donor's number-token activation makes the network output the donor quantity converted along the
+base route on combinations it never trained (Table~\ref{tab:seven}). The canonical-mean subspace alone reproduces the
+full effect; its complement and random subspaces carry nothing. Over training this reading grows in \Cten{} and stays
+flat in \Cone{} (Figure~\ref{fig:i1}); at 100-step resolution it begins before compositional onset in 11/12 \Cten{}
+networks and never after.
+
+\section{Why semantic supervision needs strong weight decay}
+Of five pre-operationalised mechanisms (\Cten{} vs \Cone, paired, Holm), two were supported: the code is more
+compressed (participation ratio 3.70 vs 4.64) and carries less \emph{route-specific} structure, variation that
+depends on which unit wrote the quantity rather than on the quantity itself (route-specificity index 0.078 vs 0.179;
+both $p_\text{Holm}=0.0012$, 12/12 seeds). Gradient cooperation between the task and auxiliary losses was not
+supported (they stay orthogonal), nor was a reader difference at the moment the code becomes decodable. The
+trajectories show two stages: a coherent semantic target builds a canonical code under either decay within about
+1,000 steps (route-specificity 0.75 $\to$ 0.17--0.27), while without one it stays route-specific even under strong
+decay (0.65--0.81); then strong decay keeps pruning residual route-specific structure (to 0.08) while the reader's
+use of the code on never-trained combinations grows from 0.14 to 0.47, and under weak decay both plateau. This fits
+the view that weight decay favours the cheaper of two solutions \citep{varma2023efficiency}: a reader that reuses one
+shared code is cheaper than a route-by-route lookup once the shared code exists.
+
+\section{Mathematical organisation of the canonical code}
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item \textbf{Present, readable and controlling separate.} In \Cten{} at step 1,000 the canonical quantity is present
+(0.87) and readable (0.88) but controls only 0.14 of unseen-combination answers; control reaches 0.47 by step 6,000.
+In \Cone{} it is present and readable (0.84--0.88) but never controls beyond 0.14.
+\item \textbf{About four dimensions do the work.} The span of the 13 class means has rank 12, but its top four
+directions carry 89\% of the final effect; effective rank falls from 5.4 to 4.6 over training.
+\item \textbf{Necessary, not only sufficient.} Removing this subspace during ordinary prediction drops trained accuracy
+to 0.15 (random subspace: 1.00). The same holds in every condition, where the span also carries number information,
+so necessity is not specific to canonical structure.
+\item \textbf{Geometry decides which edits are linear.} One linear map inside the subspace, fitted on 9 of 13 classes,
+inverts the 4 unseen classes at 0.78 and doubles them at 0.42 in \Cten{}; adding one never transfers (0.06).
+Multiplication and inversion are rotations and reflections of a discrete-logarithm circle; addition is not.
+\item \textbf{It can be aligned across networks.} A single rotation fitted only on class means lets an activation from
+one \Cten{} network drive another's computation: switch 0.41 versus 0.47 within the receiving network and 0.05 for a
+random rotation (12 pairs).
+\end{itemize}
+
+\section{Historical networks: identical settings, opposite outcomes}
+Among \texttt{mass\_only} networks that fit their training data, accuracy on unseen masses is 1.00 for seeds 307 and
+311 and 0.09 for 304 and 310 (chance 0.077); 305 is partial (0.46). An independent exhaustive evaluation over all
+1,776 unseen questions (PR \#34) gives 0.998, 0.999, 0.724, 0.269 and 0.278, and its discriminating swap test, which
+excludes coincidentally correct answers, moves 0 of 2,692 eligible answers in 304. Copying the declared block from an
+unseen input into a familiar one gives the predicted answer at 0.99--1.00 in generalisers and 0.09 in failures; across
+all 24 declared networks, declared-variable accuracy on unseen inputs equals this causal measure.
+
+\subsection{What happens in the critical window}
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{figures/fig3_swap_development.pdf}
+\caption{Steps 0--3,000 of the five focus networks (100-step records). All start on a shared plateau; the outcome
+separates during the escape from it.}\label{fig:dev}
+\end{figure}
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{figures/fig5_factorisation.pdf}
+\caption{Left: factorisation of the declared block (how well it is described as a value part plus a unit part) at
+10-step resolution. Generalisers dip briefly and recover; failures lose it during their escape and never regain it.
+Right: final factorisation vs declared-variable accuracy on unseen inputs, all 24 declared networks; near-perfect
+generalisation (dashed line) occurs only above 0.98 (dotted line).}\label{fig:fact}
+\end{figure}
+All networks first sit on a plateau at about 24\% accuracy, which a direct check shows to be a zero-detection shortcut
+(the answer is 0 whenever mass or acceleration is 0; everything else is guessed). The outcome is decided when they
+leave it (Figure~\ref{fig:dev}). Nothing measured before then (route-specificity at steps 0--1,000, escape time, early
+losses or gradient sizes) predicts the outcome across the 24 declared networks.
+
+During the escape, the declared block's code changes in one of two ways (Figure~\ref{fig:fact}). At initialisation
+every block is \emph{factorised}: its average activation for a (unit, value) rendering is almost exactly a value part
+plus a unit part (R$^2$ of an additive model $\approx 1.00$). Generalisers keep this: their block dips briefly (307:
+0.93 at step 900; 311: 0.91 at step 1,000) and recovers within about 150 steps. Failures lose it: 304 falls from 0.98
+to 0.75 between steps 600 and 950, 310 from 1.00 to 0.74 between steps 1,300 and 1,500, and both freeze there once
+their training losses reach zero. Factorisation matters because it makes unseen pairings predictable: in 307 the
+block activation for an unseen rendering is what the value and unit parts, each learned from other renderings, predict
+(error 0.03 of a typical activation), whereas in failures it is not (0.88--1.31). Failures instead hold a clean
+canonical circle for trained renderings (0.88--0.95 of variance at one discrete-log frequency), reached through a
+value$\times$unit interaction that amounts to a lookup over trained pairings. Across the 24 declared networks, final
+factorisation correlates with unseen-input accuracy at $\rho=0.82$ among the 16 that fit their data; every
+near-perfect generaliser has factorisation $\ge 0.98$, but two factorised networks only partially generalise, where
+the block holds the right parts and the downstream computation composes them only partly (and, in 305, increasingly
+less: 0.75 $\to$ 0.46 after fitting, with no loss anchoring unseen pairings). Attention routes and the order in which
+the task and interchange losses fall do not separate the groups.
+
+\section{Generalisation and editability}
+Across the 24 declared networks, the registered edit (a map between average activations of each canonical value,
+folded into weights) succeeds \emph{less} in better generalisers ($\rho=-0.55$); the four near-perfect generalisers
+score about zero. Locating the variable and replacing its activation with a real one work everywhere (1.00). The
+failure is in \emph{transforming} the activation: in a factorised block, one canonical value has as many internal
+patterns as it has renderings, so no single map between averages can send all of them to a valid pattern for the
+edited value (PR \#34 independently finds equal-quantity renderings far apart in the block yet predicting
+identically). An edit that acts on the composable parts, replacing the value part and the unit part separately
+(inversion: $v\to v^{-1}$ and unit-scale $5\leftrightarrow 8$), edits 307 perfectly: 1.00 on familiar and unseen
+renderings for inversion and doubling, with all fixed points preserved. Partly factorised networks are partly
+editable this way (0.4--0.99); failures and networks without a declared variable are not. Generalisation and
+editability are therefore not in conflict; they share a requirement, that the computation and the edit use the same
+composable coordinates. A permanent, weight-level form of the per-part edit has not yet been constructed.
+
+\section{Candidate mechanisms and proposed tests}
+\begin{table}[t]\centering\small
+\caption{Candidate mechanisms (all retrospective; tests proposed, not run).}\label{tab:mech}
+\begin{tabular}{@{}p{3.2cm}p{5.4cm}p{6.2cm}@{}}\toprule
+Mechanism & Evidence for / against & Proposed causal test\\\midrule
+C1 interaction lock-in & necessary-condition pattern in 24 nets; freezing in failures; transient dips in generalisers / not sufficient (300, 305); not visible before the window & rescue 304/310 from step 2,000 with a penalty on the interaction component or strong decay; disrupt 307/311 from step 850 by rewarding the interaction; random-direction and plain-resume controls\\
+C2 decoder generality & factorised but partial networks hold correct parts (errors 0.07--0.19) & construct a factorised block by hand; train only the head on trained pairings; test unseen\\
+C3 decay turns a code into a reusable reader (factorial) & condition-level trajectories / does not explain seed variation & switch decay mid-training in both directions from archived checkpoints\\
+C4 task-first ordering & weak ($\rho=0.43$); 304 equals 307 & --- (weakened)\\
+C5 attention binding route & failures use opposite routes & --- (contradicted)\\\bottomrule
+\end{tabular}
+\end{table}
+Table~\ref{tab:mech} lists the candidates. Each proposed test is reciprocal where possible (rescue a failure and
+disrupt a success) and resumes from bit-exact archived checkpoints, so the only difference from history is the
+intervention. None will run without a separate registration and owner approval. An independent crossing of
+initialisation, ordinary data and interchange data for the 307/304 and 311/310 pairs (PR \#34) will show which random
+stream carries the outcome; C1 predicts that factorisation tracks the outcome within every crossed cell.
+
+\section{A qualification standard for reusable computation}
+We count a network as having learned a reusable computation only with (i) $\ge 95\%$ accuracy on the \emph{entire}
+finite set of genuinely unseen problems, scored once per distinct prompt, and (ii) causal use, $\ge 90\%$ success of a
+discriminating intervention whose implied answer lies on unseen inputs. Partial generalisation is reported
+separately. A reliability claim needs many networks: twelve successes out of twelve give an exact 95\% lower bound of
+only 0.735; seventeen is the minimum for which 0.80 is reachable, and about 50 networks per condition give 90\% power
+if the true success rate is 0.95.
+
+\section{Related work}
+Seed-to-seed variation in out-of-distribution generalisation under identical in-distribution accuracy is well
+documented \citep{mccoy2020berts,mccoy2020trees}; we add bit-exact developmental records and a causal account of what
+differs. Delayed generalisation and its dependence on weight decay are studied as grokking
+\citep{power2022grokking,nanda2023progress,liu2023omnigrok,varma2023efficiency}; complexity control (initialisation
+scale and weight decay) is known to steer transformers between reasoning and memorising solutions, and recent work
+reports that this choice is made within a limited window of training (arXiv:2501.08537; arXiv:2605.04396; to be
+verified before citation). Our results add that what is decided in the window is whether a declared variable remains
+composable. Causal abstraction and interchange interventions \citep{geiger2021causal,geiger2022iit,geiger2024causal}
+and their pitfalls \citep{makelov2023illusion,wu2024reply,sutter2025nonlinear,zhang2024best,heimersheim2024patching}
+frame our instruments.
+
+\section{Limitations and scope}
+Toy tasks (modular arithmetic with fictional units) and CPU-scale networks. Everything beyond the registered
+factorial endpoints is retrospective and exploratory; correlations across 24 or 16 networks, and two-versus-two
+developmental comparisons, are descriptions of these networks, not population estimates or causal demonstrations.
+The historical study was not designed for generalisation. Interventions reported here are single-pass measurements on
+fixed networks; no training-time intervention was run. Durable owner-side preservation of the factorial's checkpoint
+archives is unverified at the time of writing.
+
+\section*{Provenance}
+Training, analysis and drafting were executed by an AI research agent (Claude Code) in a cloud container under the
+owner's registration, scope and approval rules. The specific model version is not inferred from attribution
+metadata. PR \#34 is an independent study by a different agent and was used read-only.
+
+\appendix
+\section{Reproducibility}
+Code, registrations, manifests, audits and results are in the repository (\texttt{research/nri}); checkpoint
+archives are held outside Git with SHA-256 manifests (factorial: 96 archives, 15.5\,GB; reconstructions: 36 archives,
+2.8\,GB; window replay: 5 archives). Commands for every number are listed in \texttt{paper/REPRODUCIBILITY.md}.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

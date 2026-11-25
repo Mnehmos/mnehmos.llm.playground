@@ -1,0 +1,1926 @@
+{
+ "mass_only_s307": {
+  "r1_inS_all_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.89501953125,
+   "oodM": 0.7071533203125,
+   "disc_swap": 0.64426589012146,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.7188720703125,
+   "oodM": 0.5179443359375,
+   "disc_swap": 0.43827611207962036,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.4957275390625,
+   "oodM": 0.39697265625,
+   "disc_swap": 0.31081080436706543,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.3485107421875,
+   "oodM": 0.2684326171875,
+   "disc_swap": 0.16070124506950378,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9661865234375,
+   "oodM": 0.7071533203125,
+   "disc_swap": 0.64426589012146,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.918212890625,
+   "oodM": 0.5179443359375,
+   "disc_swap": 0.43827611207962036,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.857666015625,
+   "oodM": 0.39697265625,
+   "disc_swap": 0.31081080436706543,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.7919921875,
+   "oodM": 0.2684326171875,
+   "disc_swap": 0.16070124506950378,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.7071533203125,
+   "disc_swap": 0.64426589012146,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.5179443359375,
+   "disc_swap": 0.43827611207962036,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.39697265625,
+   "disc_swap": 0.31081080436706543,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.2684326171875,
+   "disc_swap": 0.16070124506950378,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.98388671875,
+   "oodM": 0.8819580078125,
+   "disc_swap": 0.8206720352172852,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.909423828125,
+   "oodM": 0.71533203125,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.727783203125,
+   "oodM": 0.5257568359375,
+   "disc_swap": 0.4547114670276642,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.515380859375,
+   "oodM": 0.44287109375,
+   "disc_swap": 0.3517165780067444,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9949951171875,
+   "oodM": 0.8819580078125,
+   "disc_swap": 0.8206720352172852,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.973876953125,
+   "oodM": 0.71533203125,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.9249267578125,
+   "oodM": 0.5257568359375,
+   "disc_swap": 0.4547114670276642,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.8790283203125,
+   "oodM": 0.44287109375,
+   "disc_swap": 0.3517165780067444,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.8819580078125,
+   "disc_swap": 0.8206720352172852,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.71533203125,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.5257568359375,
+   "disc_swap": 0.4547114670276642,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.44287109375,
+   "disc_swap": 0.3517165780067444,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9666748046875,
+   "oodM": 0.83544921875,
+   "disc_swap": 0.7786705493927002,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.771728515625,
+   "oodM": 0.3883056640625,
+   "disc_swap": 0.30423668026924133,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.4793701171875,
+   "oodM": 0.3028564453125,
+   "disc_swap": 0.2289992719888687,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.30712890625,
+   "oodM": 0.1793212890625,
+   "disc_swap": 0.09751643240451813,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9945068359375,
+   "oodM": 0.83544921875,
+   "disc_swap": 0.7786705493927002,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.9462890625,
+   "oodM": 0.3883056640625,
+   "disc_swap": 0.30423668026924133,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.8765869140625,
+   "oodM": 0.3028564453125,
+   "disc_swap": 0.2289992719888687,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.7928466796875,
+   "oodM": 0.1793212890625,
+   "disc_swap": 0.09751643240451813,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.83544921875,
+   "disc_swap": 0.7786705493927002,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.3883056640625,
+   "disc_swap": 0.30423668026924133,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.3028564453125,
+   "disc_swap": 0.2289992719888687,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.1793212890625,
+   "disc_swap": 0.09751643240451813,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9989013671875,
+   "oodM": 0.9935302734375,
+   "disc_swap": 0.9912344813346863,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.98291015625,
+   "oodM": 0.9534912109375,
+   "disc_swap": 0.9189189076423645,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.93701171875,
+   "oodM": 0.8009033203125,
+   "disc_swap": 0.7220599055290222,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.74560546875,
+   "oodM": 0.49755859375,
+   "disc_swap": 0.38568297028541565,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9998779296875,
+   "oodM": 0.9935302734375,
+   "disc_swap": 0.9912344813346863,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.986328125,
+   "oodM": 0.9534912109375,
+   "disc_swap": 0.9189189076423645,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.9671630859375,
+   "oodM": 0.8009033203125,
+   "disc_swap": 0.7220599055290222,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.925048828125,
+   "oodM": 0.49755859375,
+   "disc_swap": 0.38568297028541565,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9935302734375,
+   "disc_swap": 0.9912344813346863,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.9534912109375,
+   "disc_swap": 0.9189189076423645,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.8009033203125,
+   "disc_swap": 0.7220599055290222,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.49755859375,
+   "disc_swap": 0.38568297028541565,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9825439453125,
+   "oodM": 0.9876708984375,
+   "disc_swap": 0.9945215582847595,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.8057861328125,
+   "oodM": 0.9326171875,
+   "disc_swap": 0.9338933825492859,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.5582275390625,
+   "oodM": 0.6822509765625,
+   "disc_swap": 0.661066472530365,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.355224609375,
+   "oodM": 0.463134765625,
+   "disc_swap": 0.413440465927124,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.995361328125,
+   "oodM": 0.9876708984375,
+   "disc_swap": 0.9945215582847595,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.9254150390625,
+   "oodM": 0.9326171875,
+   "disc_swap": 0.9338933825492859,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.8145751953125,
+   "oodM": 0.6822509765625,
+   "disc_swap": 0.661066472530365,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.7667236328125,
+   "oodM": 0.463134765625,
+   "disc_swap": 0.413440465927124,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9876708984375,
+   "disc_swap": 0.9945215582847595,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.9326171875,
+   "disc_swap": 0.9338933825492859,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.6822509765625,
+   "disc_swap": 0.661066472530365,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.463134765625,
+   "disc_swap": 0.413440465927124,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9671630859375,
+   "oodM": 0.9957275390625,
+   "disc_swap": 0.9908692240715027,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.8397216796875,
+   "oodM": 0.9490966796875,
+   "disc_swap": 0.9028487801551819,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.60888671875,
+   "oodM": 0.815185546875,
+   "disc_swap": 0.7428780198097229,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.425048828125,
+   "oodM": 0.5870361328125,
+   "disc_swap": 0.5043827891349792,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9957275390625,
+   "oodM": 0.9957275390625,
+   "disc_swap": 0.9908692240715027,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.939697265625,
+   "oodM": 0.9490966796875,
+   "disc_swap": 0.9028487801551819,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.833740234375,
+   "oodM": 0.815185546875,
+   "disc_swap": 0.7428780198097229,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.773681640625,
+   "oodM": 0.5870361328125,
+   "disc_swap": 0.5043827891349792,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9957275390625,
+   "disc_swap": 0.9908692240715027,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.9490966796875,
+   "disc_swap": 0.9028487801551819,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.815185546875,
+   "disc_swap": 0.7428780198097229,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.5870361328125,
+   "disc_swap": 0.5043827891349792,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9659423828125,
+   "oodM": 0.994384765625,
+   "disc_swap": 0.9883126616477966,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.7955322265625,
+   "oodM": 0.7528076171875,
+   "disc_swap": 0.7520087361335754,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.496337890625,
+   "oodM": 0.41455078125,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.2698974609375,
+   "oodM": 0.138916015625,
+   "disc_swap": 0.08217677474021912,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9906005859375,
+   "oodM": 0.994384765625,
+   "disc_swap": 0.9883126616477966,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.922119140625,
+   "oodM": 0.7528076171875,
+   "disc_swap": 0.7520087361335754,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.8563232421875,
+   "oodM": 0.41455078125,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.79150390625,
+   "oodM": 0.138916015625,
+   "disc_swap": 0.08217677474021912,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.994384765625,
+   "disc_swap": 0.9883126616477966,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.7528076171875,
+   "disc_swap": 0.7520087361335754,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.41455078125,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.138916015625,
+   "disc_swap": 0.08217677474021912,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9359130859375,
+   "oodM": 0.9412841796875,
+   "disc_swap": 0.9539809823036194,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.788818359375,
+   "oodM": 0.695068359375,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.6126708984375,
+   "oodM": 0.5220947265625,
+   "disc_swap": 0.4470416307449341,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.4456787109375,
+   "oodM": 0.4105224609375,
+   "disc_swap": 0.3155587911605835,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.980712890625,
+   "oodM": 0.9412841796875,
+   "disc_swap": 0.9539809823036194,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.94970703125,
+   "oodM": 0.695068359375,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.901123046875,
+   "oodM": 0.5220947265625,
+   "disc_swap": 0.4470416307449341,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.84130859375,
+   "oodM": 0.4105224609375,
+   "disc_swap": 0.3155587911605835,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9412841796875,
+   "disc_swap": 0.9539809823036194,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.695068359375,
+   "disc_swap": 0.6329437494277954,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.5220947265625,
+   "disc_swap": 0.4470416307449341,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.4105224609375,
+   "disc_swap": 0.3155587911605835,
+   "disc_n": 2738
+  }
+ },
+ "mass_only_s311": {
+  "r1_inS_all_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9920654296875,
+   "oodM": 0.88427734375,
+   "disc_swap": 0.8875091075897217,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.9044189453125,
+   "oodM": 0.7076416015625,
+   "disc_swap": 0.6515704989433289,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.72998046875,
+   "oodM": 0.5789794921875,
+   "disc_swap": 0.5273922681808472,
+   "disc_n": 2738
+  },
+  "r1_inS_all_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.520751953125,
+   "oodM": 0.40869140625,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.88427734375,
+   "disc_swap": 0.8875091075897217,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.96923828125,
+   "oodM": 0.7076416015625,
+   "disc_swap": 0.6515704989433289,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.9111328125,
+   "oodM": 0.5789794921875,
+   "disc_swap": 0.5273922681808472,
+   "disc_n": 2738
+  },
+  "r1_inS_unit2_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.8616943359375,
+   "oodM": 0.40869140625,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k0.25": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.88427734375,
+   "disc_swap": 0.8875091075897217,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k0.5": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.7076416015625,
+   "disc_swap": 0.6515704989433289,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k1.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.5789794921875,
+   "disc_swap": 0.5273922681808472,
+   "disc_n": 2738
+  },
+  "r1_inS_unseen_k2.0": {
+   "rank": 1,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.40869140625,
+   "disc_swap": 0.3739956319332123,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9981689453125,
+   "oodM": 0.9052734375,
+   "disc_swap": 0.908692479133606,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.971435546875,
+   "oodM": 0.799560546875,
+   "disc_swap": 0.7790358066558838,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.8699951171875,
+   "oodM": 0.6136474609375,
+   "disc_swap": 0.5858290791511536,
+   "disc_n": 2738
+  },
+  "r1_outS_all_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.6658935546875,
+   "oodM": 0.4794921875,
+   "disc_swap": 0.44594594836235046,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9052734375,
+   "disc_swap": 0.908692479133606,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.9901123046875,
+   "oodM": 0.799560546875,
+   "disc_swap": 0.7790358066558838,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.9541015625,
+   "oodM": 0.6136474609375,
+   "disc_swap": 0.5858290791511536,
+   "disc_n": 2738
+  },
+  "r1_outS_unit2_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.8604736328125,
+   "oodM": 0.4794921875,
+   "disc_swap": 0.44594594836235046,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k0.25": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9052734375,
+   "disc_swap": 0.908692479133606,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k0.5": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.799560546875,
+   "disc_swap": 0.7790358066558838,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k1.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.6136474609375,
+   "disc_swap": 0.5858290791511536,
+   "disc_n": 2738
+  },
+  "r1_outS_unseen_k2.0": {
+   "rank": 1,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.4794921875,
+   "disc_swap": 0.44594594836235046,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.80810546875,
+   "oodM": 0.7227783203125,
+   "disc_swap": 0.6555880308151245,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.5115966796875,
+   "oodM": 0.384521484375,
+   "disc_swap": 0.3089846670627594,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.338623046875,
+   "oodM": 0.1767578125,
+   "disc_swap": 0.0810810774564743,
+   "disc_n": 2738
+  },
+  "r2_inS_all_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.228271484375,
+   "oodM": 0.086181640625,
+   "disc_swap": 0.0014609204372391105,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.908203125,
+   "oodM": 0.7227783203125,
+   "disc_swap": 0.6555880308151245,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.829833984375,
+   "oodM": 0.384521484375,
+   "disc_swap": 0.3089846670627594,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.7969970703125,
+   "oodM": 0.1767578125,
+   "disc_swap": 0.0810810774564743,
+   "disc_n": 2738
+  },
+  "r2_inS_unit2_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.75390625,
+   "oodM": 0.086181640625,
+   "disc_swap": 0.0014609204372391105,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k0.25": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.7227783203125,
+   "disc_swap": 0.6555880308151245,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k0.5": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.384521484375,
+   "disc_swap": 0.3089846670627594,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k1.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.1767578125,
+   "disc_swap": 0.0810810774564743,
+   "disc_n": 2738
+  },
+  "r2_inS_unseen_k2.0": {
+   "rank": 2,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.086181640625,
+   "disc_swap": 0.0014609204372391105,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9947509765625,
+   "oodM": 0.9923095703125,
+   "disc_swap": 0.9667640328407288,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.9544677734375,
+   "oodM": 0.8909912109375,
+   "disc_swap": 0.8254200220108032,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.83349609375,
+   "oodM": 0.631591796875,
+   "disc_swap": 0.5463842153549194,
+   "disc_n": 2738
+  },
+  "r2_outS_all_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.6077880859375,
+   "oodM": 0.3441162109375,
+   "disc_swap": 0.3067932724952698,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9984130859375,
+   "oodM": 0.9923095703125,
+   "disc_swap": 0.9667640328407288,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.98876953125,
+   "oodM": 0.8909912109375,
+   "disc_swap": 0.8254200220108032,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.9566650390625,
+   "oodM": 0.631591796875,
+   "disc_swap": 0.5463842153549194,
+   "disc_n": 2738
+  },
+  "r2_outS_unit2_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.8909912109375,
+   "oodM": 0.3441162109375,
+   "disc_swap": 0.3067932724952698,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k0.25": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9923095703125,
+   "disc_swap": 0.9667640328407288,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k0.5": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.8909912109375,
+   "disc_swap": 0.8254200220108032,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k1.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.631591796875,
+   "disc_swap": 0.5463842153549194,
+   "disc_n": 2738
+  },
+  "r2_outS_unseen_k2.0": {
+   "rank": 2,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.3441162109375,
+   "disc_swap": 0.3067932724952698,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9588623046875,
+   "oodM": 0.984619140625,
+   "disc_swap": 0.9729729890823364,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.773681640625,
+   "oodM": 0.85302734375,
+   "disc_swap": 0.8294375538825989,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.53857421875,
+   "oodM": 0.60400390625,
+   "disc_swap": 0.5931336879730225,
+   "disc_n": 2738
+  },
+  "r4_inS_all_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.352783203125,
+   "oodM": 0.3187255859375,
+   "disc_swap": 0.2724616527557373,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.97509765625,
+   "oodM": 0.984619140625,
+   "disc_swap": 0.9729729890823364,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.8973388671875,
+   "oodM": 0.85302734375,
+   "disc_swap": 0.8294375538825989,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.8045654296875,
+   "oodM": 0.60400390625,
+   "disc_swap": 0.5931336879730225,
+   "disc_n": 2738
+  },
+  "r4_inS_unit2_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.7662353515625,
+   "oodM": 0.3187255859375,
+   "disc_swap": 0.2724616527557373,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k0.25": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.984619140625,
+   "disc_swap": 0.9729729890823364,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k0.5": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.85302734375,
+   "disc_swap": 0.8294375538825989,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k1.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.60400390625,
+   "disc_swap": 0.5931336879730225,
+   "disc_n": 2738
+  },
+  "r4_inS_unseen_k2.0": {
+   "rank": 4,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.3187255859375,
+   "disc_swap": 0.2724616527557373,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.97802734375,
+   "oodM": 1.0,
+   "disc_swap": 0.9875821471214294,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.8916015625,
+   "oodM": 0.9595947265625,
+   "disc_swap": 0.9401022791862488,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.7412109375,
+   "oodM": 0.6983642578125,
+   "disc_swap": 0.7151205539703369,
+   "disc_n": 2738
+  },
+  "r4_outS_all_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.5272216796875,
+   "oodM": 0.4208984375,
+   "disc_swap": 0.37983930110931396,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9854736328125,
+   "oodM": 1.0,
+   "disc_swap": 0.9875821471214294,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.9459228515625,
+   "oodM": 0.9595947265625,
+   "disc_swap": 0.9401022791862488,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.8802490234375,
+   "oodM": 0.6983642578125,
+   "disc_swap": 0.7151205539703369,
+   "disc_n": 2738
+  },
+  "r4_outS_unit2_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.80615234375,
+   "oodM": 0.4208984375,
+   "disc_swap": 0.37983930110931396,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k0.25": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 1.0,
+   "disc_swap": 0.9875821471214294,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k0.5": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.9595947265625,
+   "disc_swap": 0.9401022791862488,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k1.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.6983642578125,
+   "disc_swap": 0.7151205539703369,
+   "disc_n": 2738
+  },
+  "r4_outS_unseen_k2.0": {
+   "rank": 4,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.4208984375,
+   "disc_swap": 0.37983930110931396,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.8995361328125,
+   "oodM": 0.86865234375,
+   "disc_swap": 0.8619430065155029,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.6373291015625,
+   "oodM": 0.6121826171875,
+   "disc_swap": 0.6066471934318542,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.40185546875,
+   "oodM": 0.361083984375,
+   "disc_swap": 0.32213294506073,
+   "disc_n": 2738
+  },
+  "r8_inS_all_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.223388671875,
+   "oodM": 0.2940673828125,
+   "disc_swap": 0.2582176625728607,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.9573974609375,
+   "oodM": 0.86865234375,
+   "disc_swap": 0.8619430065155029,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.8839111328125,
+   "oodM": 0.6121826171875,
+   "disc_swap": 0.6066471934318542,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.80419921875,
+   "oodM": 0.361083984375,
+   "disc_swap": 0.32213294506073,
+   "disc_n": 2738
+  },
+  "r8_inS_unit2_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.7413330078125,
+   "oodM": 0.2940673828125,
+   "disc_swap": 0.2582176625728607,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k0.25": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.86865234375,
+   "disc_swap": 0.8619430065155029,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k0.5": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.6121826171875,
+   "disc_swap": 0.6066471934318542,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k1.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.361083984375,
+   "disc_swap": 0.32213294506073,
+   "disc_n": 2738
+  },
+  "r8_inS_unseen_k2.0": {
+   "rank": 8,
+   "orient": "inS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.2940673828125,
+   "disc_swap": 0.2582176625728607,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.25,
+   "id": 0.9935302734375,
+   "oodM": 0.9989013671875,
+   "disc_swap": 0.987947404384613,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 0.5,
+   "id": 0.965087890625,
+   "oodM": 0.9481201171875,
+   "disc_swap": 0.9159970879554749,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 1.0,
+   "id": 0.8194580078125,
+   "oodM": 0.731201171875,
+   "disc_swap": 0.6829802989959717,
+   "disc_n": 2738
+  },
+  "r8_outS_all_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "all",
+   "kappa": 2.0,
+   "id": 0.6195068359375,
+   "oodM": 0.3974609375,
+   "disc_swap": 0.34295105934143066,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.25,
+   "id": 0.99365234375,
+   "oodM": 0.9989013671875,
+   "disc_swap": 0.987947404384613,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 0.5,
+   "id": 0.9783935546875,
+   "oodM": 0.9481201171875,
+   "disc_swap": 0.9159970879554749,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 1.0,
+   "id": 0.93310546875,
+   "oodM": 0.731201171875,
+   "disc_swap": 0.6829802989959717,
+   "disc_n": 2738
+  },
+  "r8_outS_unit2_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unit2",
+   "kappa": 2.0,
+   "id": 0.8726806640625,
+   "oodM": 0.3974609375,
+   "disc_swap": 0.34295105934143066,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k0.25": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.25,
+   "id": 1.0,
+   "oodM": 0.9989013671875,
+   "disc_swap": 0.987947404384613,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k0.5": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 0.5,
+   "id": 1.0,
+   "oodM": 0.9481201171875,
+   "disc_swap": 0.9159970879554749,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k1.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 1.0,
+   "id": 1.0,
+   "oodM": 0.731201171875,
+   "disc_swap": 0.6829802989959717,
+   "disc_n": 2738
+  },
+  "r8_outS_unseen_k2.0": {
+   "rank": 8,
+   "orient": "outS",
+   "spec": "unseen",
+   "kappa": 2.0,
+   "id": 1.0,
+   "oodM": 0.3974609375,
+   "disc_swap": 0.34295105934143066,
+   "disc_n": 2738
+  }
+ }
+}

@@ -45,6 +45,15 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 36 | [`docs/36_birth_of_concept_pilot.md`](docs/36_birth_of_concept_pilot.md) | **Qualification pilot** (24 networks): canonical supervision at weight decay 1.0 composes in 3/3 seeds, entropy-matched control does not; representation precedes use; patch_semantics instrument; instrument defects fixed |
 | 37 | [`docs/37_registration_concept_factorial.md`](docs/37_registration_concept_factorial.md) | **Registration** of the 4 × 2 factorial (96 networks, seeds 2001-2012 paired), reserved test, H1-H5, onset definitions, M1-M4, preservation and audit protocol — committed before training |
 | 38 | [`docs/38_concept_factorial_results.md`](docs/38_concept_factorial_results.md) | **Factorial result**: C − D +0.55 and interaction +0.48 (all five contrasts significant, Holm); 12/12 C wd 1.0 networks compose, 0/84 elsewhere during training (B wd 1.0 partly on the reserved test); weight decay changes how the code is read (M3); collapses ride on instability episodes (19/21) and mostly recover; the episode-as-mechanism idea fails its population test |
+| 39 | [`docs/39_plan_heldout_causal.md`](docs/39_plan_heldout_causal.md) | Held-out causal test of the canonical code (plan committed first; retrospective) |
+| 40 | [`docs/40_independent_verification.md`](docs/40_independent_verification.md) | Independent re-derivation of every registered factorial result from archived weights: no discrepancy |
+| 41 | [`docs/41_protocol_phase2_phase3.md`](docs/41_protocol_phase2_phase3.md) | Protocol + results: validated causal instruments (planted mechanisms), weight-decay mechanism, exact replay of 36 historical networks |
+| 42 | [`docs/42_generalization_standard_and_proposal.md`](docs/42_generalization_standard_and_proposal.md) | Generalisation qualification standard (rev. 1: near-perfect ≥ 95% + causal; corrected sample size); prospective proposals (not run) |
+| 43 | [`docs/43_supervision_audit_ledger.md`](docs/43_supervision_audit_ledger.md) | Supervision audit and scientific decision ledger |
+| 44 | [`docs/44_literature_novelty_review.md`](docs/44_literature_novelty_review.md) | Literature and novelty review |
+| 45 | [`docs/45_registration_window_replay.md`](docs/45_registration_window_replay.md) | Registration: 10-step exact replay of the critical window |
+| 46 | [`docs/46_mechanistic_origins.md`](docs/46_mechanistic_origins.md) | **Mechanistic origins**: generalisers keep the declared block factorised (value + unit); failures lock in an interaction; per-part edits make the best generaliser perfectly editable; candidate mechanisms and reciprocal interventions |
+| 47 | [`docs/47_registry_proposals_and_implications.md`](docs/47_registry_proposals_and_implications.md) | Proposed Issue #31 registry updates; implications for NRI, Paper Three, Paper Five, Genesis, Chess Vision |
 
 ## Layout
 

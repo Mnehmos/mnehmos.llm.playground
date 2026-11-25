@@ -1,0 +1,1312 @@
+{
+ "wd1.0_C_s2001_x0_number_token": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.0,
+   "canonical_switch": 0.0,
+   "number_excess": 0.9697,
+   "number_switch": 1.0,
+   "unchanged": 0.0,
+   "b_unchanged": 0.6061
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.0,
+   "canonical_switch": 0.0102,
+   "number_excess": 0.96,
+   "number_switch": 0.9664,
+   "unchanged": 0.0,
+   "b_unchanged": 0.7533
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.0033,
+   "canonical_switch": 0.0033,
+   "number_excess": 0.9633,
+   "number_switch": 0.9633,
+   "unchanged": 0.0033,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.0067,
+   "canonical_switch": 0.0067,
+   "number_excess": 0.9567,
+   "number_switch": 0.9567,
+   "unchanged": 0.0,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2001_x0_number+unit": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.7879,
+   "canonical_switch": 0.7879,
+   "number_excess": -0.0303,
+   "number_switch": 0.0,
+   "unchanged": 0.0303,
+   "b_unchanged": 0.6061
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.7933,
+   "canonical_switch": 0.8136,
+   "number_excess": 0.0166,
+   "number_switch": 0.0235,
+   "unchanged": 0.0233,
+   "b_unchanged": 0.7533
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.75,
+   "canonical_switch": 0.75,
+   "number_excess": 0.02,
+   "number_switch": 0.02,
+   "unchanged": 0.0167,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.85,
+   "canonical_switch": 0.85,
+   "number_excess": 0.0233,
+   "number_switch": 0.0233,
+   "unchanged": 0.0167,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2001_step0_all": {
+  "I1": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1515,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0034,
+    "number_switch": 0.0037,
+    "unchanged": 0.06,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0037,
+    "unchanged": 0.08,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0073,
+    "number_excess": -0.01,
+    "number_switch": 0.0142,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I2": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1212,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0034,
+    "canonical_switch": 0.0037,
+    "number_excess": 0.01,
+    "number_switch": 0.0111,
+    "unchanged": 0.0567,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0037,
+    "unchanged": 0.0667,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0145,
+    "number_excess": -0.01,
+    "number_switch": 0.0107,
+    "unchanged": 0.08,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I3": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1515,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0034,
+    "canonical_switch": 0.0037,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.06,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0034,
+    "number_switch": 0.0037,
+    "unchanged": 0.08,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0034,
+    "canonical_switch": 0.0109,
+    "number_excess": -0.01,
+    "number_switch": 0.0036,
+    "unchanged": 0.08,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I4_rank": 12,
+  "I4": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1515,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0034,
+    "number_switch": 0.0037,
+    "unchanged": 0.06,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0037,
+    "unchanged": 0.08,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0073,
+    "number_excess": -0.0133,
+    "number_switch": 0.0071,
+    "unchanged": 0.08,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I5": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1515,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.06,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.08,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0033,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0667,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I7": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0202,
+    "number_switch": 0.0,
+    "unchanged": 0.1515,
+    "b_unchanged": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": -0.0055,
+    "canonical_switch": 0.0025,
+    "number_excess": 0.0033,
+    "number_switch": 0.0062,
+    "unchanged": 0.06,
+    "b_unchanged": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0011,
+    "number_switch": 0.0037,
+    "unchanged": 0.0822,
+    "b_unchanged": 0.08
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": -0.0044,
+    "canonical_switch": 0.0048,
+    "number_excess": -0.0089,
+    "number_switch": 0.0024,
+    "unchanged": 0.0722,
+    "b_unchanged": 0.0667
+   }
+  },
+  "I6": {
+   "base_heldout|can_implied_heldout": {
+    "n": 46,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0652,
+    "b_unchanged": 0.0652
+   },
+   "base_trained|can_implied_trained": {
+    "n": 273,
+    "canonical_excess": 0.0147,
+    "canonical_switch": 0.0162,
+    "number_excess": 0.011,
+    "number_switch": 0.012,
+    "unchanged": 0.1099,
+    "b_unchanged": 0.0952
+   }
+  }
+ },
+ "wd1.0_C_s2002_x0_number_token": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.0,
+   "canonical_switch": 0.0,
+   "number_excess": 1.0,
+   "number_switch": 1.0,
+   "unchanged": 0.0,
+   "b_unchanged": 1.0
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": -0.0067,
+   "canonical_switch": 0.0,
+   "number_excess": 0.9566,
+   "number_switch": 0.9631,
+   "unchanged": 0.0,
+   "b_unchanged": 0.94
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.0033,
+   "canonical_switch": 0.0033,
+   "number_excess": 0.9533,
+   "number_switch": 0.9533,
+   "unchanged": 0.0167,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.0067,
+   "canonical_switch": 0.0067,
+   "number_excess": 0.94,
+   "number_switch": 0.94,
+   "unchanged": 0.0333,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2002_x0_number+unit": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.697,
+   "canonical_switch": 0.697,
+   "number_excess": 0.0909,
+   "number_switch": 0.0909,
+   "unchanged": 0.0,
+   "b_unchanged": 1.0
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.82,
+   "canonical_switch": 0.8255,
+   "number_excess": 0.0433,
+   "number_switch": 0.0503,
+   "unchanged": 0.0133,
+   "b_unchanged": 0.94
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.7033,
+   "canonical_switch": 0.7033,
+   "number_excess": 0.0633,
+   "number_switch": 0.0633,
+   "unchanged": 0.0233,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.86,
+   "canonical_switch": 0.86,
+   "number_excess": 0.05,
+   "number_switch": 0.05,
+   "unchanged": 0.0167,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2002_step0_all": {
+  "I1": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I2": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I3": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I4_rank": 12,
+  "I4": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I5": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I7": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.303,
+    "b_unchanged": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1433,
+    "b_unchanged": 0.1433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0467
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.05
+   }
+  },
+  "I6": {
+   "base_heldout|can_implied_heldout": {
+    "n": 46,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.1739,
+    "b_unchanged": 0.1739
+   },
+   "base_trained|can_implied_trained": {
+    "n": 273,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0549,
+    "b_unchanged": 0.0549
+   }
+  }
+ },
+ "wd1.0_C_s2003_x0_number_token": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.0,
+   "canonical_switch": 0.0,
+   "number_excess": 0.9091,
+   "number_switch": 1.0,
+   "unchanged": 0.0,
+   "b_unchanged": 0.3939
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": -0.0066,
+   "canonical_switch": 0.0276,
+   "number_excess": 0.8,
+   "number_switch": 0.8191,
+   "unchanged": 0.0433,
+   "b_unchanged": 0.6167
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.01,
+   "canonical_switch": 0.01,
+   "number_excess": 0.9,
+   "number_switch": 0.9,
+   "unchanged": 0.02,
+   "b_unchanged": 0.99
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.0133,
+   "canonical_switch": 0.0133,
+   "number_excess": 0.9,
+   "number_switch": 0.9,
+   "unchanged": 0.01,
+   "b_unchanged": 0.9967
+  }
+ },
+ "wd1.0_C_s2003_x0_number+unit": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.5152,
+   "canonical_switch": 0.5152,
+   "number_excess": 0.0,
+   "number_switch": 0.1,
+   "unchanged": 0.0909,
+   "b_unchanged": 0.3939
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.6134,
+   "canonical_switch": 0.6517,
+   "number_excess": 0.06,
+   "number_switch": 0.0853,
+   "unchanged": 0.0433,
+   "b_unchanged": 0.6167
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.61,
+   "canonical_switch": 0.61,
+   "number_excess": 0.0733,
+   "number_switch": 0.0733,
+   "unchanged": 0.02,
+   "b_unchanged": 0.99
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.71,
+   "canonical_switch": 0.71,
+   "number_excess": 0.0667,
+   "number_switch": 0.0667,
+   "unchanged": 0.02,
+   "b_unchanged": 0.9967
+  }
+ },
+ "wd1.0_C_s2003_step0_all": {
+  "I1": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0933,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0033,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I2": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0033,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0867,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0033,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I3": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0933,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0033,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I4_rank": 12,
+  "I4": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0933,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0033,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I5": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0933,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I7": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0933,
+    "b_unchanged": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0833,
+    "b_unchanged": 0.0833
+   }
+  },
+  "I6": {
+   "base_heldout|can_implied_heldout": {
+    "n": 46,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0
+   },
+   "base_trained|can_implied_trained": {
+    "n": 273,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0989,
+    "b_unchanged": 0.0989
+   }
+  }
+ },
+ "wd1.0_C_s2004_x0_number_token": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.0,
+   "canonical_switch": 0.0,
+   "number_excess": 0.9394,
+   "number_switch": 1.0,
+   "unchanged": 0.0,
+   "b_unchanged": 0.6667
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": -0.0034,
+   "canonical_switch": 0.0136,
+   "number_excess": 0.9167,
+   "number_switch": 0.9358,
+   "unchanged": 0.0067,
+   "b_unchanged": 0.8133
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.0067,
+   "canonical_switch": 0.0067,
+   "number_excess": 0.95,
+   "number_switch": 0.95,
+   "unchanged": 0.01,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.0233,
+   "canonical_switch": 0.0233,
+   "number_excess": 0.9467,
+   "number_switch": 0.9467,
+   "unchanged": 0.01,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2004_x0_number+unit": {
+  "base_heldout|can_implied_heldout": {
+   "n": 33,
+   "canonical_excess": 0.6364,
+   "canonical_switch": 0.6364,
+   "number_excess": -0.0606,
+   "number_switch": 0.0,
+   "unchanged": 0.0303,
+   "b_unchanged": 0.6667
+  },
+  "base_heldout|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.8733,
+   "canonical_switch": 0.8949,
+   "number_excess": -0.0066,
+   "number_switch": 0.0068,
+   "unchanged": 0.0067,
+   "b_unchanged": 0.8133
+  },
+  "base_trained|can_implied_heldout": {
+   "n": 300,
+   "canonical_excess": 0.71,
+   "canonical_switch": 0.71,
+   "number_excess": 0.0,
+   "number_switch": 0.0,
+   "unchanged": 0.0233,
+   "b_unchanged": 1.0
+  },
+  "base_trained|can_implied_trained": {
+   "n": 300,
+   "canonical_excess": 0.9167,
+   "canonical_switch": 0.9167,
+   "number_excess": 0.0133,
+   "number_switch": 0.0133,
+   "unchanged": 0.01,
+   "b_unchanged": 1.0
+  }
+ },
+ "wd1.0_C_s2004_step0_all": {
+  "I1": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0066,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0033,
+    "number_switch": 0.0043,
+    "unchanged": 0.0667,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.07,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I2": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0066,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.04,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0033,
+    "number_switch": 0.0043,
+    "unchanged": 0.0567,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.0733,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I3": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0606,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0033,
+    "number_switch": 0.0043,
+    "unchanged": 0.0667,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0733,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I4_rank": 12,
+  "I4": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": -0.0066,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0033,
+    "number_switch": 0.0043,
+    "unchanged": 0.0667,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0033,
+    "number_switch": 0.0,
+    "unchanged": 0.07,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I5": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0606,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0567,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0467,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0733,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I7": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0606,
+    "b_unchanged": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0556,
+    "b_unchanged": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300.0,
+    "canonical_excess": -0.0044,
+    "canonical_switch": 0.0,
+    "number_excess": -0.0045,
+    "number_switch": 0.0,
+    "unchanged": 0.05,
+    "b_unchanged": 0.0533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300.0,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0722,
+    "b_unchanged": 0.0733
+   }
+  },
+  "I6": {
+   "base_heldout|can_implied_heldout": {
+    "n": 46,
+    "canonical_excess": 0.0,
+    "canonical_switch": 0.0,
+    "number_excess": 0.0,
+    "number_switch": 0.0,
+    "unchanged": 0.0435,
+    "b_unchanged": 0.0435
+   },
+   "base_trained|can_implied_trained": {
+    "n": 273,
+    "canonical_excess": 0.0073,
+    "canonical_switch": 0.0161,
+    "number_excess": -0.0037,
+    "number_switch": 0.0,
+    "unchanged": 0.0952,
+    "b_unchanged": 0.0879
+   }
+  }
+ },
+ "step0_max_abs_excess": 0.0202,
+ "step0_pass": true
+}
