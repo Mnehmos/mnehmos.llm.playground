@@ -1,0 +1,1485 @@
+{
+ "single": {
+  "op:MAS": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {}
+  },
+  "op:M2AS": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_in.weight": 706,
+    "W_in.bias": 12,
+    "W_out.weight": 37
+   }
+  },
+  "op:MA2S": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_in.weight": 706,
+    "W_in.bias": 12,
+    "W_out.weight": 37
+   }
+  },
+  "op:M+A": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_in.weight": 836,
+    "W_in.bias": 6,
+    "W_out.weight": 133
+   }
+  },
+  "op:M-A": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_in.weight": 863,
+    "W_in.bias": 33,
+    "W_out.weight": 119
+   }
+  },
+  "op:M/A": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_in.weight": 561,
+    "W_in.bias": 33,
+    "W_out.weight": 117
+   }
+  },
+  "unit:MU1->2": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn1.o.weight": 24
+   }
+  },
+  "unit:MU1->12": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn1.o.weight": 24
+   }
+  },
+  "unit:MU2->2": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn1.o.weight": 24
+   }
+  },
+  "unit:MU2->12": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn1.o.weight": 24
+   }
+  },
+  "unit:AU1->2": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {}
+  },
+  "unit:AU1->12": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn1.o.weight": 24
+   }
+  },
+  "unit:AU2->2": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.o.weight": 24
+   }
+  },
+  "unit:AU2->12": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.o.weight": 24
+   }
+  },
+  "unit:MU0->2": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.qkv.weight": 15,
+    "attn2.qkv.bias": 2,
+    "attn2.o.weight": 24
+   }
+  },
+  "unit:MU0->12": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.qkv.weight": 15,
+    "attn2.qkv.bias": 2,
+    "attn2.o.weight": 24
+   }
+  },
+  "swap:M2AS": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.qkv.weight": 12,
+    "attn2.o.weight": 48
+   }
+  },
+  "swap:M-A": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.qkv.weight": 12,
+    "attn2.o.weight": 48
+   }
+  },
+  "swap:M/A": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "attn2.qkv.weight": 12,
+    "attn2.o.weight": 48
+   }
+  },
+  "out:id": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {}
+  },
+  "out:F+1": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_U.weight": 26
+   }
+  },
+  "out:2F": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_U.weight": 24
+   }
+  },
+  "out:F^-1": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_U.weight": 20
+   }
+  },
+  "out:-F": {
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "changed": {
+    "W_U.weight": 24
+   }
+  }
+ },
+ "independence": {
+  "blocks_by_component": {
+   "op": [
+    "W_in.bias",
+    "W_in.weight",
+    "W_out.weight"
+   ],
+   "unit": [
+    "attn1.o.weight",
+    "attn2.o.weight",
+    "attn2.qkv.bias",
+    "attn2.qkv.weight"
+   ],
+   "swap": [
+    "attn2.o.weight",
+    "attn2.qkv.weight"
+   ],
+   "out": [
+    "W_U.weight"
+   ]
+  }
+ },
+ "composites": [
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [
+    "const_value_5"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     4,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "2F",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     2
+    ],
+    "AU": [
+     1,
+     5,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "2F",
+   "tokens": [
+    "force_units_swap01"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     6
+    ]
+   },
+   "swap": false,
+   "out": "F+1",
+   "tokens": [
+    "acc_units_rotate",
+    "acc_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     9,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "mass_units_rotate",
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     4,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "F+1",
+   "tokens": [
+    "acc_units_rotate",
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     8,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     4,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "-F",
+   "tokens": [
+    "const_value_5",
+    "acc_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     4,
+     10
+    ]
+   },
+   "swap": true,
+   "out": "F+1",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     2
+    ]
+   },
+   "swap": false,
+   "out": "F+1",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "-F",
+   "tokens": [
+    "mass_units_rotate",
+    "force_units_swap01"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MA2S",
+   "scales": {
+    "MU": [
+     10,
+     5,
+     11
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [
+    "const_value_5",
+    "acc_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     10,
+     8
+    ],
+    "AU": [
+     1,
+     6,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [
+    "mass_unit_0_as_2",
+    "invert_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "invert_value",
+    "mass_unit_0_as_2"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     1
+    ]
+   },
+   "swap": true,
+   "out": "F+1",
+   "tokens": [
+    "invert_value",
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     2,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "-F",
+   "tokens": [
+    "dec_value",
+    "mass_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     1,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F+1",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "id",
+   "tokens": [
+    "inc_value",
+    "force_units_swap01"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     2,
+     8
+    ],
+    "AU": [
+     1,
+     4,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "2F",
+   "tokens": [
+    "mass_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "dec_value",
+    "mass_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     12,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     3,
+     11
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "2F",
+   "tokens": [
+    "const_value_5",
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     1
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "F^-1",
+   "tokens": [
+    "force_units_swap01",
+    "const_value_5"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     11
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [
+    "inc_value",
+    "acc_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "id",
+   "tokens": [
+    "const_value_5",
+    "double_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     10,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "2F",
+   "tokens": [
+    "double_value",
+    "const_value_5"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     10,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     1
+    ]
+   },
+   "swap": true,
+   "out": "2F",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [
+    "mass_units_rotate",
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     11,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     12
+    ]
+   },
+   "swap": true,
+   "out": "F^-1",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MA2S",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     9
+    ],
+    "AU": [
+     1,
+     2,
+     8
+    ]
+   },
+   "swap": false,
+   "out": "-F",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     5,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "invert_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     1,
+     7
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "force_units_swap01",
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F+1",
+   "tokens": [
+    "const_value_5"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "F^-1",
+   "tokens": [
+    "dec_value",
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MA2S",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [
+    "mass_unit_0_as_2",
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     1,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "2F",
+   "tokens": [
+    "mass_unit_0_as_2",
+    "mass_unit_0_as_2"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "-F",
+   "tokens": [
+    "acc_units_rotate",
+    "acc_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M/A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     9,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "F^-1",
+   "tokens": [
+    "const_value_5",
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M2AS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "2F",
+   "tokens": [
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MA2S",
+   "scales": {
+    "MU": [
+     3,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "-F",
+   "tokens": [
+    "mass_unit_0_as_2"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     2
+    ],
+    "AU": [
+     1,
+     8,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "double_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     7,
+     8
+    ],
+    "AU": [
+     1,
+     6,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "id",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M-A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     6
+    ]
+   },
+   "swap": false,
+   "out": "2F",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "M+A",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MA2S",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     3
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F^-1",
+   "tokens": [
+    "dec_value",
+    "dec_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "id",
+   "tokens": [
+    "inc_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     9,
+     5,
+     8
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": true,
+   "out": "F^-1",
+   "tokens": [
+    "invert_value",
+    "mass_units_rotate"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  },
+  {
+   "op": "MAS",
+   "scales": {
+    "MU": [
+     1,
+     5,
+     5
+    ],
+    "AU": [
+     1,
+     2,
+     7
+    ]
+   },
+   "swap": false,
+   "out": "F+1",
+   "tokens": [
+    "invert_value"
+   ],
+   "acc": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true
+  }
+ ],
+ "reversibility": {
+  "op:MAS": true,
+  "op:M2AS": true,
+  "op:MA2S": true,
+  "op:M+A": true,
+  "op:M-A": true,
+  "op:M/A": true,
+  "unit:MU1": true,
+  "unit:MU2": true,
+  "unit:AU1": true,
+  "unit:AU2": true,
+  "unit:MU0": true,
+  "swap": true,
+  "out:F+1": true,
+  "out:2F": true,
+  "out:F^-1": true,
+  "out:-F": true
+ },
+ "unit_edits_exact": {
+  "n": 60,
+  "exact": 60
+ },
+ "composite_summary": {
+  "n": 50,
+  "all_exact": true,
+  "mean_acc": 1.0
+ },
+ "design_L_M+A": "refused: Design L supports only monomials (doc 53 \u00a753.2)"
+}
