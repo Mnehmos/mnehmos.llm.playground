@@ -163,6 +163,7 @@ def compile_dag(root, cse=True, regalloc=True):
             if sp[0] == "select":
                 c_dim = src(n.kids[0])[0][0]            # condition: child is zero  <=> its region's value-0 dim
                 X, Y = src(n.kids[1])[0], src(n.kids[2])[0]
+                assert len(X) == P and len(Y) == P, "select operands must be 13-valued one-hot registers (not S)"
                 for i in range(P):
                     Win[u0 + i, X[i]] = 1; Win[u0 + i, c_dim] += 1; bi[u0 + i] = -1; Wo[dest[i], u0 + i] += 1
                     Win[u0 + P + i, Y[i]] = 1; Win[u0 + P + i, c_dim] -= 1; Wo[dest[i], u0 + P + i] += 1
@@ -329,7 +330,7 @@ def main():
               "| flops", r0["decoder_flops_per_prompt"], "->", r1["decoder_flops_per_prompt"], flush=True)
     sel = [N("select", N("M"), N("A"), N("add", N("M"), N("A"))),
            N("select", N("A"), N("mul", N("M"), N("S")), N("div", N("M"), N("A"))),
-           N("add", N("select", N("sub", N("M"), N("A")), N("S"), N("mul", N("M"), N("A"))), N("M"))]
+           N("add", N("select", N("sub", N("M"), N("A")), N("A"), N("mul", N("M"), N("A"))), N("M"))]
     for t in sel:
         r = verify(t, True, True)
         res["select"].append(r)
