@@ -42,5 +42,43 @@
    }
   },
   "verdict": "EXACT"
+ },
+ "Q2_instrumented_replay": {
+  "trainer": "sci/swap_recon.py (read-only hooks; checkpoints every 100 steps)",
+  "results": {
+   "mass_only_s307": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s311": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   }
+  },
+  "verdict": "PASS (EXACT)"
+ },
+ "Q3_resume_from_3000": {
+  "result": {
+   "bitwise_state_dict": true,
+   "max_abs_diff": 0.0,
+   "log_identical": false,
+   "log_lines": [
+    24,
+    12
+   ]
+  },
+  "post_resume_log_lines_identical": true,
+  "note": "resumed log holds only the 12 post-resume lines; those are byte-identical to the historical lines 13-24",
+  "verdict": "PASS (EXACT)"
  }
 }
