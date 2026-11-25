@@ -225,5 +225,20 @@ def main():
     (OUT / "robust.json").write_text(json.dumps(res, indent=1))
 
 
+def combo():
+    """resume: the combined remedy R1+R2+R3 (the run that hit the time limit), merged into robust.json."""
+    torch.set_num_threads(1)
+    res = json.loads((OUT / "robust.json").read_text())
+    base, _ = C.build_C()
+    op = C.OPS["MAS"]
+    bal = rebalance(base)
+    gam = res.get("R1_gamma") or minimal_gain(bal)
+    m = trapezoid_mlp(scale_gain(bal, gam), op, copies=256 // (4 * 30 + 2))
+    res["R1+R2+R3"] = dict(kind="constructed", exact=exact_check(m), a=curve(m, "a"), b=curve(m, "b"), c=curve(m, "c"),
+                           single_weight=single_weight_dependence(m), instructions=instruction_check(m))
+    (OUT / "robust.json").write_text(json.dumps(res, indent=1))
+    print(res["R1+R2+R3"])
+
+
 if __name__ == "__main__":
-    main()
+    combo() if sys.argv[1:] == ["combo"] else main()

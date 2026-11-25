@@ -1,0 +1,630 @@
+{
+ "cond": "K5",
+ "regime": "full",
+ "seed": 1,
+ "kind": "hybrid-trained",
+ "trainable_params": 191516,
+ "steps_to_OP2_criterion": 600,
+ "final": {
+  "OP1_familiar": 1.0,
+  "OP1_unseen": 1.0,
+  "OP2_familiar": 1.0,
+  "OP2_unseen": 1.0,
+  "OP1_subcircuit_exact": 1.0,
+  "OP2_subcircuit_silent": 1.0,
+  "OP1_iit_M_disc": 1.0,
+  "step": 6000
+ },
+ "history": [
+  {
+   "OP1_familiar": 0.8453060984611511,
+   "OP1_unseen": 0.8243243098258972,
+   "OP2_familiar": 0.10530611872673035,
+   "OP2_unseen": 0.07826576381921768,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.8338125348091125,
+   "step": 0
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 0.2340136021375656,
+   "OP2_unseen": 0.15596847236156464,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.9884991645812988,
+   "step": 100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 0.253605455160141,
+   "OP2_unseen": 0.17173422873020172,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.9988499283790588,
+   "step": 200
+  },
+  {
+   "OP1_familiar": 0.9990476369857788,
+   "OP1_unseen": 0.994369387626648,
+   "OP2_familiar": 0.309659868478775,
+   "OP2_unseen": 0.19594594836235046,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.9982748627662659,
+   "step": 300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 0.6057142615318298,
+   "OP2_unseen": 0.4329954981803894,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 0.9454421997070312,
+   "OP2_unseen": 0.8479729890823364,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1000
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1200
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 1900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2000
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2200
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 2900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3000
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3200
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 3900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4000
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4200
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 4900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5000
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5100
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5200
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5300
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5400
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5500
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5600
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5700
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5800
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 5900
+  },
+  {
+   "OP1_familiar": 1.0,
+   "OP1_unseen": 1.0,
+   "OP2_familiar": 1.0,
+   "OP2_unseen": 1.0,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 1.0,
+   "step": 6000
+  }
+ ]
+}

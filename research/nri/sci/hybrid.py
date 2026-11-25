@@ -325,9 +325,10 @@ def train_one(args):
     return cond, regime, seed, crit, hist[-1]
 
 
-def run_train(workers=4):
+def run_train(workers=4, only=None, regimes=("full", "q25")):
     from concurrent.futures import ProcessPoolExecutor
-    jobs = [(c, r, s) for r in ("full", "q25") for c in CONDS for s in (0, 1, 2)]
+    jobs = [(c, r, s) for r in regimes for c in (only or CONDS) for s in (0, 1, 2)]
+    jobs = [j for j in jobs if not (OUT / f"{j[0]}_{j[1]}_s{j[2]}.json").exists()]   # resume: skip completed runs
     with ProcessPoolExecutor(workers) as ex:
         for cond, regime, seed, crit, fin in ex.map(train_one, jobs):
             print(cond, regime, seed, "crit", crit, {k: round(v, 3) for k, v in fin.items() if isinstance(v, float)}, flush=True)
@@ -337,4 +338,7 @@ if __name__ == "__main__":
     if sys.argv[1] == "A":
         run_A()
     else:
-        run_train(int(sys.argv[3]) if len(sys.argv) > 3 else 4)
+        args = sys.argv[2:]
+        w = int(args[args.index("--workers") + 1]) if "--workers" in args else 4
+        only = args[args.index("--only") + 1].split(",") if "--only" in args else None
+        run_train(w, only)
