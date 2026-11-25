@@ -151,3 +151,47 @@ if __name__ == "__main__":
     fig_swap(a.zoo)
     fig_swap_endpoint()
     print(sorted(p.name for p in FIG.iterdir()))
+
+
+def fig_factorization():
+    w = ROOT / "runs/swap_recon/window_factorization.json"
+    p = ROOT / "runs/swap_recon/factorization_trajectories.json"
+    a = ROOT / "runs/swap_recon/analysis.json"
+    if not (w.exists() and p.exists() and a.exists()):
+        return
+    W_ = json.loads(w.read_text())
+    F = json.loads(p.read_text())
+    A = json.loads(a.read_text())["networks"]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.7))
+    nets = [("307", "307 (generalises)", ORANGE), ("311", "311 (generalises)", YELLOW), ("305", "305 (partial)", AQUA),
+            ("304", "304 (fails)", BLUE), ("310", "310 (fails)", MUTED)]
+    for s, lab, col in nets:
+        st_ = sorted(int(k) for k in W_[s] if 0 <= int(k) <= 2500)
+        ax1.plot(st_, [W_[s][str(k)]["r2_additive"] for k in st_], color=col, lw=1.6, label=lab)
+    ax1.set_xlabel("step")
+    ax1.set_ylabel("block factorisation (R² of value + unit)")
+    ax1.set_ylim(0.6, 1.01)
+    ax1.legend(frameon=False, fontsize=6.5, loc="lower left")
+    for g, col, lab in (("mass_only", ORANGE, "mass declared"), ("acc_only", BLUE, "acceleration declared")):
+        xs, ys, fit = [], [], []
+        for n, tr in F.items():
+            if n.startswith(g):
+                xs.append(tr["6000"]); ys.append(A[n]["outcome"]); fit.append(A[n]["acc_id"] >= 0.95)
+        ax2.scatter([x for x, f in zip(xs, fit) if f], [y for y, f in zip(ys, fit) if f], s=22, color=col,
+                    edgecolors="white", linewidths=1.2, label=f"{lab}, fits training data", zorder=3)
+        ax2.scatter([x for x, f in zip(xs, fit) if not f], [y for y, f in zip(ys, fit) if not f], s=18, facecolors="none",
+                    edgecolors=col, linewidths=1.0, label=f"{lab}, does not fit", zorder=3)
+    ax2.axhline(0.95, color=MUTED, lw=0.8, ls="--")
+    ax2.axvline(0.98, color=MUTED, lw=0.8, ls=":")
+    ax2.set_xlabel("final block factorisation")
+    ax2.set_ylabel("declared-variable OOD accuracy")
+    ax2.set_xlim(0.1, 1.02)
+    ax2.set_ylim(0, 1.02)
+    ax2.legend(frameon=False, fontsize=6, loc="center left", bbox_to_anchor=(0.0, 0.7))
+    fig.tight_layout()
+    fig.savefig(FIG / "fig5_factorisation.pdf")
+    plt.close(fig)
+
+
+if __name__ == "__main__":
+    fig_factorization()
