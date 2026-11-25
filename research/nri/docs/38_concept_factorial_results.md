@@ -33,6 +33,13 @@ Task: modular unit conversion (mod 13, fictional units — not real-world arithm
    representation itself is also hit (decodability drop ≥ 0.10 in 10/21). The mechanism that *triggers* the episodes
    is identified only descriptively (thin margins at the equilibrium norm at wd 1.0; near-zero gradients at wd 0.1).
 
+> **Update (doc 39, retrospective).** An owner review found that the registered utilisation measure
+> (`patch_semantics`) draws base and donor only from trained combinations, so the causal account in §38.1 (Q3) was
+> supported only in trained contexts, and that M2's binomial test ignored clustering by seed. Doc 39 adds held-out
+> intervention evidence (the canonical code is converted correctly along never-trained (input, route) combinations in
+> C wd 1.0: excess 0.47 vs ≤ 0.14 in other conditions; precedes composition in 11/12 networks) and a seed-clustered M2
+> (mean 0.70, CI 0.60-0.80, p = 0.003). Primary results unchanged.
+
 ## 38.2 Primary endpoint (registered; reserved test, run once; 72 items per network; best constant 0.167)
 
 | | A narrow | B diverse | C canonical aux | D scrambled aux |

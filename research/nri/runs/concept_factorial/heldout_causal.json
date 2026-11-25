@@ -1,0 +1,6185 @@
+{
+ "n_pairs_by_stratum": {
+  "base_trained|can_implied_trained": 2229,
+  "base_trained|can_implied_heldout": 424,
+  "base_heldout|can_implied_trained": 388,
+  "base_heldout|can_implied_heldout": 33
+ },
+ "controls": {
+  "x0_token_C1.0_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 1.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0303,
+    "canonical_excess": 0.0,
+    "number_excess": 0.9697
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0167,
+    "number": 0.9667,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0067,
+    "canonical_excess": 0.0,
+    "number_excess": 0.96
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0033,
+    "number": 0.9633,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0033,
+    "number_excess": 0.9633
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.9567,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.9567
+   }
+  },
+  "x0_token+unit_C1.0_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.7879,
+    "number": 0.0,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0303,
+    "canonical_excess": 0.7879,
+    "number_excess": -0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.81,
+    "number": 0.0233,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0067,
+    "canonical_excess": 0.7933,
+    "number_excess": 0.0166
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.75,
+    "number": 0.02,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.75,
+    "number_excess": 0.02
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.85,
+    "number": 0.0233,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.85,
+    "number_excess": 0.0233
+   }
+  },
+  "x1_step0_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   }
+  },
+  "x0_token_C1.0_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 1.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 1.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.9633,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0067,
+    "baseline_number": 0.0067,
+    "canonical_excess": -0.0067,
+    "number_excess": 0.9566
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0033,
+    "number": 0.9533,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0033,
+    "number_excess": 0.9533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.94,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.94
+   }
+  },
+  "x0_token+unit_C1.0_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.697,
+    "number": 0.0909,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.697,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.8267,
+    "number": 0.05,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0067,
+    "baseline_number": 0.0067,
+    "canonical_excess": 0.82,
+    "number_excess": 0.0433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.7033,
+    "number": 0.0633,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.7033,
+    "number_excess": 0.0633
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.86,
+    "number": 0.05,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.86,
+    "number_excess": 0.05
+   }
+  },
+  "x1_step0_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1818,
+    "number": 0.0,
+    "unchanged": 0.2424,
+    "baseline_canonical": 0.1818,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.01,
+    "number": 0.0333,
+    "unchanged": 0.1233,
+    "baseline_canonical": 0.0133,
+    "baseline_number": 0.0267,
+    "canonical_excess": -0.0033,
+    "number_excess": 0.0066
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1267,
+    "number": 0.0,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.12,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.01,
+    "number": 0.0467,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.04,
+    "canonical_excess": -0.0067,
+    "number_excess": 0.0067
+   }
+  },
+  "x0_token_C1.0_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 1.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.0,
+    "number_excess": 0.9091
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0267,
+    "number": 0.8233,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.0233,
+    "canonical_excess": -0.0066,
+    "number_excess": 0.8
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.01,
+    "number": 0.9,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.01,
+    "number_excess": 0.9
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0133,
+    "number": 0.9,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0133,
+    "number_excess": 0.9
+   }
+  },
+  "x0_token+unit_C1.0_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.5152,
+    "number": 0.0909,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.5152,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.6467,
+    "number": 0.0833,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.0233,
+    "canonical_excess": 0.6134,
+    "number_excess": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.61,
+    "number": 0.0733,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.61,
+    "number_excess": 0.0733
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.71,
+    "number": 0.0667,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.71,
+    "number_excess": 0.0667
+   }
+  },
+  "x1_step0_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0,
+    "number": 0.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   }
+  },
+  "x0_token_C1.0_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 1.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.0,
+    "number_excess": 0.9394
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0133,
+    "number": 0.93,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0133,
+    "canonical_excess": -0.0034,
+    "number_excess": 0.9167
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.95,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.95
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0233,
+    "number": 0.9467,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0233,
+    "number_excess": 0.9467
+   }
+  },
+  "x0_token+unit_C1.0_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.6364,
+    "number": 0.0,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.6364,
+    "number_excess": -0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.89,
+    "number": 0.0067,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0133,
+    "canonical_excess": 0.8733,
+    "number_excess": -0.0066
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.71,
+    "number": 0.0,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.71,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.9167,
+    "number": 0.0133,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.9167,
+    "number_excess": 0.0133
+   }
+  },
+  "x1_step0_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2121,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0767,
+    "number": 0.0633,
+    "unchanged": 0.0467,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0633,
+    "canonical_excess": -0.0066,
+    "number_excess": 0.0
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.05,
+    "number": 0.23,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.05,
+    "baseline_number": 0.2267,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.13,
+    "number": 0.0667,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.13,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0,
+    "number_excess": -0.0033
+   }
+  }
+ },
+ "final": {
+  "wd0.1_A_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2727,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.2267,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0767,
+    "canonical_excess": -0.0234,
+    "number_excess": 0.15
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.21,
+    "unchanged": 0.17,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0533,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.1567
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0433,
+    "number": 0.23,
+    "unchanged": 0.16,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.05,
+    "canonical_excess": -0.03,
+    "number_excess": 0.18
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_A_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3636,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.25,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0733,
+    "canonical_excess": -0.0134,
+    "number_excess": 0.1767
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.2567,
+    "unchanged": 0.0967,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.0466,
+    "number_excess": 0.2067
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0967,
+    "number": 0.31,
+    "unchanged": 0.1033,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.0234,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_A_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0967,
+    "number": 0.13,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.0733,
+    "canonical_excess": -0.0033,
+    "number_excess": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0133,
+    "number": 0.16,
+    "unchanged": 0.2467,
+    "baseline_canonical": 0.0067,
+    "baseline_number": 0.0733,
+    "canonical_excess": 0.0066,
+    "number_excess": 0.0867
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.16,
+    "unchanged": 0.26,
+    "baseline_canonical": 0.05,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.0167,
+    "number_excess": 0.1033
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_A_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.3636,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": 0.0909,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.2767,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.03,
+    "number_excess": 0.2067
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.05,
+    "number": 0.2633,
+    "unchanged": 0.1433,
+    "baseline_canonical": 0.0133,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.0367,
+    "number_excess": 0.1966
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.32,
+    "unchanged": 0.1267,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.03,
+    "number_excess": 0.27
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd0.1_A_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4242,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.2633,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1966
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0167,
+    "number": 0.2733,
+    "unchanged": 0.11,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.0167,
+    "number_excess": 0.2133
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.3333,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.0133,
+    "number_excess": 0.2833
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd0.1_A_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3333,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.1515,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.1818
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.2067,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.0667,
+    "canonical_excess": -0.0133,
+    "number_excess": 0.14
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0167,
+    "number": 0.2767,
+    "unchanged": 0.1267,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2134
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.2933,
+    "unchanged": 0.13,
+    "baseline_canonical": 0.0633,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.0234,
+    "number_excess": 0.2466
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd0.1_A_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.4545,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0933,
+    "number": 0.25,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.1133,
+    "baseline_number": 0.0833,
+    "canonical_excess": -0.02,
+    "number_excess": 0.1667
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.02,
+    "number": 0.2633,
+    "unchanged": 0.12,
+    "baseline_canonical": 0.0067,
+    "baseline_number": 0.08,
+    "canonical_excess": 0.0133,
+    "number_excess": 0.1833
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.3167,
+    "unchanged": 0.0967,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.03,
+    "number_excess": 0.26
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_A_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.5152,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1818,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.3334
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.13,
+    "number": 0.27,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.06,
+    "number_excess": 0.1933
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1,
+    "number": 0.34,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.02,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.08,
+    "number_excess": 0.28
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1467,
+    "number": 0.3367,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.04,
+    "canonical_excess": 0.08,
+    "number_excess": 0.2967
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd0.1_A_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.3636,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.27,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.07,
+    "canonical_excess": -0.0134,
+    "number_excess": 0.2
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.01,
+    "number": 0.2567,
+    "unchanged": 0.1167,
+    "baseline_canonical": 0.0033,
+    "baseline_number": 0.0533,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.2034
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.06,
+    "number": 0.31,
+    "unchanged": 0.13,
+    "baseline_canonical": 0.06,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2467
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_A_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4242,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.2121
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.2533,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.0066,
+    "number_excess": 0.1933
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.27,
+    "unchanged": 0.0867,
+    "baseline_canonical": 0.01,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.2033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0967,
+    "number": 0.2967,
+    "unchanged": 0.0933,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.04,
+    "number_excess": 0.24
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd0.1_A_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.3636,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.2727
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.2433,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.0733,
+    "canonical_excess": -0.01,
+    "number_excess": 0.17
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0467,
+    "number": 0.2867,
+    "unchanged": 0.0767,
+    "baseline_canonical": 0.0133,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.0334,
+    "number_excess": 0.24
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.3133,
+    "unchanged": 0.05,
+    "baseline_canonical": 0.0633,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.02,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd0.1_A_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3636,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.25,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.11,
+    "baseline_number": 0.0967,
+    "canonical_excess": -0.0267,
+    "number_excess": 0.1533
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.05,
+    "number": 0.27,
+    "unchanged": 0.08,
+    "baseline_canonical": 0.0233,
+    "baseline_number": 0.03,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.24
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0933,
+    "number": 0.3133,
+    "unchanged": 0.0833,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.0166,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd0.1_B_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 1.0,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.7879
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1,
+    "number": 0.7267,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.02,
+    "number_excess": 0.66
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1,
+    "number": 0.6233,
+    "unchanged": 0.0367,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1,
+    "number_excess": 0.6233
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.6967,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1167,
+    "number_excess": 0.6967
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.8485,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2424,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.6061
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.7233,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.0567,
+    "canonical_excess": -0.0034,
+    "number_excess": 0.6666
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.03,
+    "number": 0.61,
+    "unchanged": 0.0867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.03,
+    "number_excess": 0.61
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0433,
+    "number": 0.7433,
+    "unchanged": 0.0467,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0433,
+    "number_excess": 0.7433
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_B_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.6667,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.1212,
+    "number_excess": 0.394
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.6233,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0567,
+    "canonical_excess": -0.0167,
+    "number_excess": 0.5666
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0467,
+    "number": 0.49,
+    "unchanged": 0.0733,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0467,
+    "number_excess": 0.49
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.5867,
+    "unchanged": 0.0767,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.11,
+    "number_excess": 0.5867
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_B_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.5455,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.1818,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.3637
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.4567,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.3934
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.31,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.31
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.4467,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1367,
+    "number_excess": 0.4467
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.7273,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.5152
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1467,
+    "number": 0.53,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.0767,
+    "number_excess": 0.4733
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1233,
+    "number": 0.42,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1233,
+    "number_excess": 0.42
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.19,
+    "number": 0.4633,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.19,
+    "number_excess": 0.4633
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.8788,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.1515,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.7273
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.59,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0633,
+    "canonical_excess": -0.0234,
+    "number_excess": 0.5267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0233,
+    "number": 0.57,
+    "unchanged": 0.13,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0233,
+    "number_excess": 0.57
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0567,
+    "number": 0.6133,
+    "unchanged": 0.1433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.6133
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_B_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.8485,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.6364
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.66,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.07,
+    "canonical_excess": -0.0234,
+    "number_excess": 0.59
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.04,
+    "number": 0.53,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.04,
+    "number_excess": 0.53
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.12,
+    "number": 0.5667,
+    "unchanged": 0.08,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.12,
+    "number_excess": 0.5667
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_B_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.7273,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.4546
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.55,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.02,
+    "number_excess": 0.4733
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.5033,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0533,
+    "number_excess": 0.5033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.57,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.11,
+    "number_excess": 0.57
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.4848,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.3636,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.6333,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0567,
+    "canonical_excess": -0.0334,
+    "number_excess": 0.5766
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.44,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0867,
+    "number_excess": 0.44
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.6167,
+    "unchanged": 0.0833,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1033,
+    "number_excess": 0.6167
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.7576,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.4849
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.71,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.0567,
+    "canonical_excess": -0.0267,
+    "number_excess": 0.6533
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.04,
+    "number": 0.56,
+    "unchanged": 0.0533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.04,
+    "number_excess": 0.56
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.6967,
+    "unchanged": 0.05,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0833,
+    "number_excess": 0.6967
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.7273,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.5152
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.7633,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0233,
+    "number_excess": 0.6933
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.5333,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.08,
+    "number_excess": 0.5333
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0933,
+    "number": 0.68,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0933,
+    "number_excess": 0.68
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_B_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.6364,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.5152
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.48,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0367,
+    "number_excess": 0.41
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.4,
+    "unchanged": 0.0567,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0733,
+    "number_excess": 0.4
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1267,
+    "number": 0.4533,
+    "unchanged": 0.0733,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1267,
+    "number_excess": 0.4533
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_C_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1515,
+    "number": 0.2424,
+    "unchanged": 0.1515,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.1515,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.46,
+    "number": 0.1867,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.38,
+    "number_excess": 0.1267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1433,
+    "number": 0.15,
+    "unchanged": 0.0867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1433,
+    "number_excess": 0.15
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4267,
+    "number": 0.2367,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4267,
+    "number_excess": 0.2367
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd0.1_C_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.2424,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3133,
+    "number": 0.2867,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.22,
+    "number_excess": 0.2234
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.2267,
+    "unchanged": 0.1933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0733,
+    "number_excess": 0.2267
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.2967,
+    "number": 0.2167,
+    "unchanged": 0.15,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2967,
+    "number_excess": 0.2167
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_C_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.4545,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.3333,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.2933,
+    "number": 0.2867,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.22,
+    "number_excess": 0.2267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1733,
+    "number": 0.22,
+    "unchanged": 0.1533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1733,
+    "number_excess": 0.22
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3167,
+    "number": 0.2533,
+    "unchanged": 0.13,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.3167,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_C_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.1818,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.1212,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3367,
+    "number": 0.2433,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.0833,
+    "canonical_excess": 0.2367,
+    "number_excess": 0.16
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.1667,
+    "unchanged": 0.1167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.14,
+    "number_excess": 0.1667
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.34,
+    "number": 0.1867,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.34,
+    "number_excess": 0.1867
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_C_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3233,
+    "number": 0.22,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.2533,
+    "number_excess": 0.1733
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.2633,
+    "unchanged": 0.1167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0733,
+    "number_excess": 0.2633
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.27,
+    "number": 0.28,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.27,
+    "number_excess": 0.28
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_C_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1818,
+    "number": 0.3333,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0909,
+    "number_excess": 0.1818
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5,
+    "number": 0.1867,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.1033,
+    "baseline_number": 0.0933,
+    "canonical_excess": 0.3967,
+    "number_excess": 0.0934
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1933,
+    "number": 0.1333,
+    "unchanged": 0.13,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1933,
+    "number_excess": 0.1333
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4567,
+    "number": 0.14,
+    "unchanged": 0.15,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4567,
+    "number_excess": 0.14
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd0.1_C_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1515,
+    "number": 0.2121,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.1212,
+    "number_excess": -0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3667,
+    "number": 0.2,
+    "unchanged": 0.0467,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.0733,
+    "canonical_excess": 0.2734,
+    "number_excess": 0.1267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.13,
+    "number": 0.17,
+    "unchanged": 0.1467,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.13,
+    "number_excess": 0.17
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.34,
+    "number": 0.2233,
+    "unchanged": 0.12,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.34,
+    "number_excess": 0.2233
+   },
+   "dev_heldout_acc": 0.1111
+  },
+  "wd0.1_C_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0909,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3567,
+    "number": 0.2167,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.2634,
+    "number_excess": 0.1567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0767,
+    "number": 0.2733,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0767,
+    "number_excess": 0.2733
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3767,
+    "number": 0.2233,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.3767,
+    "number_excess": 0.2233
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_C_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.4242,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.1212,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3833,
+    "number": 0.2667,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.3133,
+    "number_excess": 0.2034
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1833,
+    "number": 0.2167,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1833,
+    "number_excess": 0.2167
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.36,
+    "number": 0.3133,
+    "unchanged": 0.0533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.36,
+    "number_excess": 0.3133
+   },
+   "dev_heldout_acc": 0.1806
+  },
+  "wd0.1_C_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2727,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4767,
+    "number": 0.2233,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.4,
+    "number_excess": 0.1633
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.1833,
+    "unchanged": 0.11,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0833,
+    "number_excess": 0.1833
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5,
+    "number": 0.1767,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.5,
+    "number_excess": 0.1767
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_C_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.1212,
+    "unchanged": 0.1515,
+    "baseline_canonical": 0.1212,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0303,
+    "number_excess": -0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.38,
+    "number": 0.22,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0633,
+    "baseline_number": 0.0867,
+    "canonical_excess": 0.3167,
+    "number_excess": 0.1333
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.17,
+    "number": 0.1533,
+    "unchanged": 0.0967,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.17,
+    "number_excess": 0.1533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4133,
+    "number": 0.21,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4133,
+    "number_excess": 0.21
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd0.1_C_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5,
+    "number": 0.2133,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0533,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.4467,
+    "number_excess": 0.1366
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.2933,
+    "number": 0.24,
+    "unchanged": 0.04,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2933,
+    "number_excess": 0.24
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4533,
+    "number": 0.24,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4533,
+    "number_excess": 0.24
+   },
+   "dev_heldout_acc": 0.0972
+  },
+  "wd0.1_D_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.303,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1433,
+    "number": 0.2867,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.1033,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.04,
+    "number_excess": 0.2267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0767,
+    "number": 0.27,
+    "unchanged": 0.1433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0767,
+    "number_excess": 0.27
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1867,
+    "number": 0.2533,
+    "unchanged": 0.16,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1867,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.4545,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.1818
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.35,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.04,
+    "number_excess": 0.2833
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0333,
+    "number": 0.3133,
+    "unchanged": 0.14,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0333,
+    "number_excess": 0.3133
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.37,
+    "unchanged": 0.1567,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.14,
+    "number_excess": 0.37
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2121,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.1212,
+    "baseline_number": 0.1818,
+    "canonical_excess": -0.0909,
+    "number_excess": 0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1633,
+    "number": 0.2967,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.1,
+    "canonical_excess": 0.08,
+    "number_excess": 0.1967
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.05,
+    "number": 0.1767,
+    "unchanged": 0.1933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.05,
+    "number_excess": 0.1767
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1433,
+    "number": 0.2533,
+    "unchanged": 0.1867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1433,
+    "number_excess": 0.2533
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3636,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.3636,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1333,
+    "number": 0.3233,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.04,
+    "number_excess": 0.2633
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.03,
+    "number": 0.2233,
+    "unchanged": 0.1933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.03,
+    "number_excess": 0.2233
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1433,
+    "number": 0.2767,
+    "unchanged": 0.1933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1433,
+    "number_excess": 0.2767
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd0.1_D_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.3636,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.303,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.3867,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.1167,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.02,
+    "number_excess": 0.32
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0567,
+    "number": 0.3,
+    "unchanged": 0.15,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.3
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1267,
+    "number": 0.4,
+    "unchanged": 0.15,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1267,
+    "number_excess": 0.4
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4545,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1733,
+    "number": 0.3567,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.0733,
+    "canonical_excess": 0.08,
+    "number_excess": 0.2834
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.3167,
+    "unchanged": 0.17,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0533,
+    "number_excess": 0.3167
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1233,
+    "number": 0.4367,
+    "unchanged": 0.14,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1233,
+    "number_excess": 0.4367
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_D_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4242,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1818
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1467,
+    "number": 0.31,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.0734,
+    "number_excess": 0.2433
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.24,
+    "unchanged": 0.15,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0833,
+    "number_excess": 0.24
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.2467,
+    "unchanged": 0.1533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1367,
+    "number_excess": 0.2467
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd0.1_D_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.4545,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.3333,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1467,
+    "number": 0.28,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.05,
+    "number_excess": 0.2033
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.03,
+    "number": 0.2367,
+    "unchanged": 0.18,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.03,
+    "number_excess": 0.2367
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.25,
+    "unchanged": 0.1967,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1033,
+    "number_excess": 0.25
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2727,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1133,
+    "number": 0.3067,
+    "unchanged": 0.0067,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.1,
+    "canonical_excess": 0.03,
+    "number_excess": 0.2067
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0233,
+    "number": 0.3,
+    "unchanged": 0.1433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0233,
+    "number_excess": 0.3
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.2933,
+    "unchanged": 0.1667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1167,
+    "number_excess": 0.2933
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4545,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2121
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.15,
+    "number": 0.44,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.09,
+    "canonical_excess": 0.06,
+    "number_excess": 0.35
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0167,
+    "number": 0.3067,
+    "unchanged": 0.1367,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0167,
+    "number_excess": 0.3067
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1233,
+    "number": 0.3833,
+    "unchanged": 0.1,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1233,
+    "number_excess": 0.3833
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.2121,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0303,
+    "number_excess": -0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1733,
+    "number": 0.29,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0966,
+    "number_excess": 0.22
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.2233,
+    "unchanged": 0.1167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0867,
+    "number_excess": 0.2233
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.2033,
+    "number": 0.2233,
+    "unchanged": 0.1367,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2033,
+    "number_excess": 0.2233
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd0.1_D_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.5455,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0,
+    "number_excess": 0.3334
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.4333,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0933,
+    "canonical_excess": -0.0067,
+    "number_excess": 0.34
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0333,
+    "number": 0.3533,
+    "unchanged": 0.0833,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0333,
+    "number_excess": 0.3533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.38,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1167,
+    "number_excess": 0.38
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_A_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2727,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.1267,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0034,
+    "number_excess": 0.0567
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.04,
+    "number": 0.2433,
+    "unchanged": 0.1067,
+    "baseline_canonical": 0.0433,
+    "baseline_number": 0.0333,
+    "canonical_excess": -0.0033,
+    "number_excess": 0.21
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.14,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.04,
+    "number_excess": 0.0933
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd1.0_A_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.2424,
+    "number": 0.2121,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.2424,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0467,
+    "number": 0.12,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.09,
+    "canonical_excess": -0.0533,
+    "number_excess": 0.03
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.12,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.06,
+    "number_excess": 0.05
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.1333,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0867,
+    "canonical_excess": -0.02,
+    "number_excess": 0.0466
+   },
+   "dev_heldout_acc": 0.0972
+  },
+  "wd1.0_A_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.2424,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.1133,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0433,
+    "number_excess": 0.05
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0967,
+    "number": 0.15,
+    "unchanged": 0.1933,
+    "baseline_canonical": 0.0233,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0734,
+    "number_excess": 0.0867
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.1267,
+    "unchanged": 0.1633,
+    "baseline_canonical": 0.06,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.03,
+    "number_excess": 0.0767
+   },
+   "dev_heldout_acc": 0.1111
+  },
+  "wd1.0_A_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.1515,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.1267,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0933,
+    "canonical_excess": 0.02,
+    "number_excess": 0.0334
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0367,
+    "number": 0.0967,
+    "unchanged": 0.1733,
+    "baseline_canonical": 0.0267,
+    "baseline_number": 0.04,
+    "canonical_excess": 0.01,
+    "number_excess": 0.0567
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.12,
+    "number": 0.1367,
+    "unchanged": 0.1567,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.05,
+    "number_excess": 0.09
+   },
+   "dev_heldout_acc": 0.0694
+  },
+  "wd1.0_A_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3636,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0,
+    "number_excess": 0.2121
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.35,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.2933
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.27,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.02,
+    "baseline_number": 0.02,
+    "canonical_excess": -0.0133,
+    "number_excess": 0.25
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.07,
+    "number": 0.39,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.0533,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.0167,
+    "number_excess": 0.33
+   },
+   "dev_heldout_acc": 0.1528
+  },
+  "wd1.0_A_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.3636,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.1818,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.1515,
+    "number_excess": 0.2424
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.3067,
+    "unchanged": 0.03,
+    "baseline_canonical": 0.08,
+    "baseline_number": 0.08,
+    "canonical_excess": 0.0367,
+    "number_excess": 0.2267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.25,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.01,
+    "baseline_number": 0.06,
+    "canonical_excess": 0.0933,
+    "number_excess": 0.19
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1133,
+    "number": 0.35,
+    "unchanged": 0.0567,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.0466,
+    "number_excess": 0.3
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd1.0_A_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2121,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0606,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.18,
+    "unchanged": 0.0567,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.11
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.14,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.0667,
+    "canonical_excess": 0.0534,
+    "number_excess": 0.0733
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0833,
+    "number": 0.2267,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0933,
+    "baseline_number": 0.05,
+    "canonical_excess": -0.01,
+    "number_excess": 0.1767
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd1.0_A_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1515,
+    "number": 0.2727,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.1818,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.1433,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0333,
+    "number_excess": 0.0733
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.1867,
+    "unchanged": 0.1367,
+    "baseline_canonical": 0.0367,
+    "baseline_number": 0.0267,
+    "canonical_excess": 0.0266,
+    "number_excess": 0.16
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.19,
+    "unchanged": 0.1433,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.0733,
+    "canonical_excess": 0.03,
+    "number_excess": 0.1167
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd1.0_A_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4242,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.2727
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.32,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.0567,
+    "canonical_excess": 0.0334,
+    "number_excess": 0.2633
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0033,
+    "number": 0.3233,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.0367,
+    "canonical_excess": -0.03,
+    "number_excess": 0.2866
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.38,
+    "unchanged": 0.07,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0533,
+    "canonical_excess": 0.0334,
+    "number_excess": 0.3267
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_A_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.1212,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0606,
+    "number_excess": -0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.1633,
+    "unchanged": 0.0467,
+    "baseline_canonical": 0.06,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.0866
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0167,
+    "number": 0.1667,
+    "unchanged": 0.0967,
+    "baseline_canonical": 0.03,
+    "baseline_number": 0.0767,
+    "canonical_excess": -0.0133,
+    "number_excess": 0.09
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0967,
+    "number": 0.25,
+    "unchanged": 0.08,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.0367,
+    "canonical_excess": 0.03,
+    "number_excess": 0.2133
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_A_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1515,
+    "number": 0.1818,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.1515,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.08,
+    "number": 0.08,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.0833,
+    "canonical_excess": -0.01,
+    "number_excess": -0.0033
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0233,
+    "number": 0.0433,
+    "unchanged": 0.3767,
+    "baseline_canonical": 0.0267,
+    "baseline_number": 0.04,
+    "canonical_excess": -0.0034,
+    "number_excess": 0.0033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0433,
+    "number": 0.0667,
+    "unchanged": 0.4033,
+    "baseline_canonical": 0.06,
+    "baseline_number": 0.0433,
+    "canonical_excess": -0.0167,
+    "number_excess": 0.0234
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd1.0_A_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3636,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.1515,
+    "baseline_number": 0.1515,
+    "canonical_excess": -0.1515,
+    "number_excess": 0.2121
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.24,
+    "unchanged": 0.0467,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.1033,
+    "canonical_excess": -0.0234,
+    "number_excess": 0.1367
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.2667,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.03,
+    "canonical_excess": 0.04,
+    "number_excess": 0.2367
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.31,
+    "unchanged": 0.0933,
+    "baseline_canonical": 0.0567,
+    "baseline_number": 0.04,
+    "canonical_excess": 0.01,
+    "number_excess": 0.27
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_B_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.7273,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.303,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.4243
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.58,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0633,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.5167
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.52,
+    "unchanged": 0.05,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0633,
+    "number_excess": 0.52
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1367,
+    "number": 0.5767,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1367,
+    "number_excess": 0.5767
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_B_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.5758,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0,
+    "number_excess": 0.4243
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.7233,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.07,
+    "baseline_number": 0.07,
+    "canonical_excess": -0.0167,
+    "number_excess": 0.6533
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0433,
+    "number": 0.5267,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0433,
+    "number_excess": 0.5267
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.7,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0733,
+    "number_excess": 0.7
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_B_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.6364,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0,
+    "number_excess": 0.3637
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.4067,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.02,
+    "number_excess": 0.3367
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0267,
+    "number": 0.4567,
+    "unchanged": 0.1067,
+    "baseline_canonical": 0.0033,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0234,
+    "number_excess": 0.4567
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1567,
+    "number": 0.3633,
+    "unchanged": 0.1333,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0033,
+    "canonical_excess": 0.1567,
+    "number_excess": 0.36
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_B_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.3939,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.303,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1333,
+    "number": 0.42,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0733,
+    "canonical_excess": 0.0366,
+    "number_excess": 0.3467
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.1033,
+    "number": 0.3133,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1033,
+    "number_excess": 0.3133
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.4933,
+    "unchanged": 0.0867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1067,
+    "number_excess": 0.4933
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd1.0_B_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.3333,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.19,
+    "number": 0.3567,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.09,
+    "canonical_excess": 0.1,
+    "number_excess": 0.2667
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.2733,
+    "unchanged": 0.1267,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.09,
+    "number_excess": 0.2733
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1867,
+    "number": 0.35,
+    "unchanged": 0.12,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1867,
+    "number_excess": 0.35
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd1.0_B_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.9697,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0,
+    "number_excess": 0.697
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.7767,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0667,
+    "canonical_excess": -0.0334,
+    "number_excess": 0.71
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0033,
+    "number": 0.7033,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0033,
+    "number_excess": 0.7033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0267,
+    "number": 0.8,
+    "unchanged": 0.04,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.8
+   },
+   "dev_heldout_acc": 0.1111
+  },
+  "wd1.0_B_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.9091,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.2727,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.6364
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.09,
+    "number": 0.7367,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0033,
+    "number_excess": 0.6667
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0767,
+    "number": 0.5933,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0767,
+    "number_excess": 0.5933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.07,
+    "number": 0.7233,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.07,
+    "number_excess": 0.7233
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_B_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.9394,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0,
+    "number_excess": 0.697
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0367,
+    "number": 0.78,
+    "unchanged": 0.01,
+    "baseline_canonical": 0.0767,
+    "baseline_number": 0.0767,
+    "canonical_excess": -0.04,
+    "number_excess": 0.7033
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0067,
+    "number": 0.72,
+    "unchanged": 0.04,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0067,
+    "number_excess": 0.72
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.02,
+    "number": 0.82,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.02,
+    "number_excess": 0.82
+   },
+   "dev_heldout_acc": 0.125
+  },
+  "wd1.0_B_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.8485,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.6364
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0533,
+    "number": 0.74,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.0533,
+    "canonical_excess": -0.0134,
+    "number_excess": 0.6867
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.03,
+    "number": 0.6533,
+    "unchanged": 0.0567,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.03,
+    "number_excess": 0.6533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.04,
+    "number": 0.7833,
+    "unchanged": 0.06,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.04,
+    "number_excess": 0.7833
+   },
+   "dev_heldout_acc": 0.1667
+  },
+  "wd1.0_B_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.9394,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1818,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.7576
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.79,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0733,
+    "baseline_number": 0.0933,
+    "canonical_excess": -0.0066,
+    "number_excess": 0.6967
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0467,
+    "number": 0.71,
+    "unchanged": 0.0533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0467,
+    "number_excess": 0.71
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.7933,
+    "unchanged": 0.05,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0633,
+    "number_excess": 0.7933
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_B_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.4848,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1212,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.3636
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0867,
+    "number": 0.4967,
+    "unchanged": 0.03,
+    "baseline_canonical": 0.06,
+    "baseline_number": 0.05,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.4467
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.4867,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0667,
+    "number_excess": 0.4867
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0733,
+    "number": 0.5667,
+    "unchanged": 0.1133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0733,
+    "number_excess": 0.5667
+   },
+   "dev_heldout_acc": 0.25
+  },
+  "wd1.0_B_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.5152,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2121,
+    "canonical_excess": 0.0909,
+    "number_excess": 0.3031
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.4733,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0833,
+    "baseline_number": 0.0833,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.39
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.43,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.14,
+    "number_excess": 0.43
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1533,
+    "number": 0.5167,
+    "unchanged": 0.0533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1533,
+    "number_excess": 0.5167
+   },
+   "dev_heldout_acc": 0.0278
+  },
+  "wd1.0_C_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.9091,
+    "number": 0.0303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0303,
+    "canonical_excess": 0.9091,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.9133,
+    "number": 0.04,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0067,
+    "canonical_excess": 0.8966,
+    "number_excess": 0.0333
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.8,
+    "number": 0.0633,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.8,
+    "number_excess": 0.0633
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.9067,
+    "number": 0.0333,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.9067,
+    "number_excess": 0.0333
+   },
+   "dev_heldout_acc": 0.7917
+  },
+  "wd1.0_C_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1818,
+    "number": 0.0909,
+    "unchanged": 0.2121,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1818,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.49,
+    "number": 0.1667,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0067,
+    "baseline_number": 0.0067,
+    "canonical_excess": 0.4833,
+    "number_excess": 0.16
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.4733,
+    "number": 0.1333,
+    "unchanged": 0.0667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4733,
+    "number_excess": 0.1333
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.48,
+    "number": 0.1267,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.48,
+    "number_excess": 0.1267
+   },
+   "dev_heldout_acc": 0.9028
+  },
+  "wd1.0_C_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.2424,
+    "unchanged": 0.1212,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.0909,
+    "number_excess": 0.1515
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5933,
+    "number": 0.12,
+    "unchanged": 0.03,
+    "baseline_canonical": 0.0333,
+    "baseline_number": 0.0233,
+    "canonical_excess": 0.56,
+    "number_excess": 0.0967
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.34,
+    "number": 0.0933,
+    "unchanged": 0.1633,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.34,
+    "number_excess": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.51,
+    "number": 0.1,
+    "unchanged": 0.12,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.51,
+    "number_excess": 0.1
+   },
+   "dev_heldout_acc": 0.5694
+  },
+  "wd1.0_C_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.6364,
+    "number": 0.0303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.6364,
+    "number_excess": -0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.9367,
+    "number": 0.02,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0133,
+    "canonical_excess": 0.92,
+    "number_excess": 0.0067
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.77,
+    "number": 0.07,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.77,
+    "number_excess": 0.07
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.93,
+    "number": 0.0367,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.93,
+    "number_excess": 0.0367
+   },
+   "dev_heldout_acc": 0.8333
+  },
+  "wd1.0_C_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.303,
+    "number": 0.303,
+    "unchanged": 0.1818,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.303,
+    "number_excess": 0.303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4933,
+    "number": 0.2433,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0467,
+    "baseline_number": 0.0533,
+    "canonical_excess": 0.4466,
+    "number_excess": 0.19
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.29,
+    "number": 0.28,
+    "unchanged": 0.0367,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.29,
+    "number_excess": 0.28
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5333,
+    "number": 0.2133,
+    "unchanged": 0.04,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.5333,
+    "number_excess": 0.2133
+   },
+   "dev_heldout_acc": 0.5694
+  },
+  "wd1.0_C_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1515,
+    "number": 0.1212,
+    "unchanged": 0.2121,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1212,
+    "canonical_excess": 0.1515,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.61,
+    "number": 0.12,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0367,
+    "baseline_number": 0.0167,
+    "canonical_excess": 0.5733,
+    "number_excess": 0.1033
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.4467,
+    "number": 0.09,
+    "unchanged": 0.1533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4467,
+    "number_excess": 0.09
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5167,
+    "number": 0.1,
+    "unchanged": 0.1967,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.5167,
+    "number_excess": 0.1
+   },
+   "dev_heldout_acc": 0.6528
+  },
+  "wd1.0_C_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.1212,
+    "unchanged": 0.0909,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4333,
+    "number": 0.11,
+    "unchanged": 0.0633,
+    "baseline_canonical": 0.02,
+    "baseline_number": 0.0333,
+    "canonical_excess": 0.4133,
+    "number_excess": 0.0767
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.2967,
+    "number": 0.0667,
+    "unchanged": 0.1367,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2967,
+    "number_excess": 0.0667
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.3667,
+    "number": 0.12,
+    "unchanged": 0.1567,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.3667,
+    "number_excess": 0.12
+   },
+   "dev_heldout_acc": 0.5694
+  },
+  "wd1.0_C_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.2424,
+    "number": 0.0606,
+    "unchanged": 0.1818,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.1212,
+    "canonical_excess": 0.2121,
+    "number_excess": -0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.7267,
+    "number": 0.1033,
+    "unchanged": 0.03,
+    "baseline_canonical": 0.0267,
+    "baseline_number": 0.0433,
+    "canonical_excess": 0.7,
+    "number_excess": 0.06
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.4967,
+    "number": 0.1033,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4967,
+    "number_excess": 0.1033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.73,
+    "number": 0.0933,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.73,
+    "number_excess": 0.0933
+   },
+   "dev_heldout_acc": 0.4028
+  },
+  "wd1.0_C_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.2424,
+    "number": 0.1212,
+    "unchanged": 0.1515,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2424,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4167,
+    "number": 0.1133,
+    "unchanged": 0.0367,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.02,
+    "canonical_excess": 0.4,
+    "number_excess": 0.0933
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.3633,
+    "number": 0.1333,
+    "unchanged": 0.09,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.3633,
+    "number_excess": 0.1333
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.4533,
+    "number": 0.1067,
+    "unchanged": 0.0933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4533,
+    "number_excess": 0.1067
+   },
+   "dev_heldout_acc": 0.6528
+  },
+  "wd1.0_C_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.4545,
+    "number": 0.0909,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0909,
+    "canonical_excess": 0.4545,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.7867,
+    "number": 0.0667,
+    "unchanged": 0.0033,
+    "baseline_canonical": 0.0367,
+    "baseline_number": 0.0367,
+    "canonical_excess": 0.75,
+    "number_excess": 0.03
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.5833,
+    "number": 0.1167,
+    "unchanged": 0.0333,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.5833,
+    "number_excess": 0.1167
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.82,
+    "number": 0.09,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.82,
+    "number_excess": 0.09
+   },
+   "dev_heldout_acc": 0.5833
+  },
+  "wd1.0_C_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.303,
+    "number": 0.0606,
+    "unchanged": 0.1515,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.303,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.58,
+    "number": 0.16,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.0367,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.5433,
+    "number_excess": 0.1133
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.2767,
+    "number": 0.2033,
+    "unchanged": 0.04,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.2767,
+    "number_excess": 0.2033
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.5267,
+    "number": 0.2033,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.5267,
+    "number_excess": 0.2033
+   },
+   "dev_heldout_acc": 0.5417
+  },
+  "wd1.0_C_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.4545,
+    "number": 0.0303,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0606,
+    "canonical_excess": 0.4545,
+    "number_excess": -0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.6867,
+    "number": 0.11,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.05,
+    "baseline_number": 0.0467,
+    "canonical_excess": 0.6367,
+    "number_excess": 0.0633
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.4867,
+    "number": 0.0733,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.4867,
+    "number_excess": 0.0733
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.7233,
+    "number": 0.14,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.7233,
+    "number_excess": 0.14
+   },
+   "dev_heldout_acc": 0.3472
+  },
+  "wd1.0_D_s2001": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2727,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1515,
+    "canonical_excess": 0.0,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.18,
+    "number": 0.1767,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.0867,
+    "canonical_excess": 0.0833,
+    "number_excess": 0.09
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0567,
+    "number": 0.1833,
+    "unchanged": 0.2567,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.1833
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1567,
+    "number": 0.1767,
+    "unchanged": 0.27,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1567,
+    "number_excess": 0.1767
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2002": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.3333,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0909,
+    "baseline_number": 0.2121,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1633,
+    "number": 0.1967,
+    "unchanged": 0.0233,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0666,
+    "number_excess": 0.1267
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0567,
+    "number": 0.19,
+    "unchanged": 0.1867,
+    "baseline_canonical": 0.0167,
+    "baseline_number": 0.0133,
+    "canonical_excess": 0.04,
+    "number_excess": 0.1767
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1667,
+    "number": 0.1967,
+    "unchanged": 0.1867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1667,
+    "number_excess": 0.1967
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2003": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.2424,
+    "unchanged": 0.1818,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1567,
+    "number": 0.2,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.0967,
+    "canonical_excess": 0.0567,
+    "number_excess": 0.1033
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0333,
+    "number": 0.14,
+    "unchanged": 0.2867,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0333,
+    "number_excess": 0.14
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.1733,
+    "unchanged": 0.27,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.11,
+    "number_excess": 0.1733
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2004": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2121,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0,
+    "number_excess": -0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.16,
+    "number": 0.16,
+    "unchanged": 0.0133,
+    "baseline_canonical": 0.0967,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0633,
+    "number_excess": 0.09
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0467,
+    "number": 0.2067,
+    "unchanged": 0.23,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0467,
+    "number_excess": 0.2067
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.14,
+    "number": 0.16,
+    "unchanged": 0.3,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.14,
+    "number_excess": 0.16
+   },
+   "dev_heldout_acc": 0.0694
+  },
+  "wd1.0_D_s2005": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.1212,
+    "number": 0.1818,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.303,
+    "canonical_excess": 0.0909,
+    "number_excess": -0.1212
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1567,
+    "number": 0.21,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0933,
+    "canonical_excess": 0.07,
+    "number_excess": 0.1167
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.11,
+    "number": 0.11,
+    "unchanged": 0.2533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.11,
+    "number_excess": 0.11
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1867,
+    "number": 0.18,
+    "unchanged": 0.27,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1867,
+    "number_excess": 0.18
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2006": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0909,
+    "number": 0.1212,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.1212,
+    "baseline_number": 0.1212,
+    "canonical_excess": -0.0303,
+    "number_excess": 0.0
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.16,
+    "number": 0.1333,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.09,
+    "baseline_number": 0.0933,
+    "canonical_excess": 0.07,
+    "number_excess": 0.04
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.09,
+    "unchanged": 0.29,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0667,
+    "number_excess": 0.09
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.1233,
+    "unchanged": 0.3433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1067,
+    "number_excess": 0.1233
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2007": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0606,
+    "number": 0.3333,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0606,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1167,
+    "number": 0.1967,
+    "unchanged": 0.0267,
+    "baseline_canonical": 0.1033,
+    "baseline_number": 0.0867,
+    "canonical_excess": 0.0134,
+    "number_excess": 0.11
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0633,
+    "number": 0.1533,
+    "unchanged": 0.3067,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0633,
+    "number_excess": 0.1533
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.12,
+    "number": 0.14,
+    "unchanged": 0.3467,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.12,
+    "number_excess": 0.14
+   },
+   "dev_heldout_acc": 0.0139
+  },
+  "wd1.0_D_s2008": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2727,
+    "unchanged": 0.0606,
+    "baseline_canonical": 0.0606,
+    "baseline_number": 0.3636,
+    "canonical_excess": -0.0606,
+    "number_excess": -0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1133,
+    "number": 0.21,
+    "unchanged": 0.0433,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.0867,
+    "canonical_excess": 0.0266,
+    "number_excess": 0.1233
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.03,
+    "number": 0.0933,
+    "unchanged": 0.31,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.03,
+    "number_excess": 0.0933
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.2,
+    "unchanged": 0.3433,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1067,
+    "number_excess": 0.2
+   },
+   "dev_heldout_acc": 0.0556
+  },
+  "wd1.0_D_s2009": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.5455,
+    "unchanged": 0.0303,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0303,
+    "number_excess": 0.2728
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1267,
+    "number": 0.43,
+    "unchanged": 0.0367,
+    "baseline_canonical": 0.1,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.0267,
+    "number_excess": 0.36
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0133,
+    "number": 0.32,
+    "unchanged": 0.2233,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0133,
+    "number_excess": 0.32
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0933,
+    "number": 0.2867,
+    "unchanged": 0.2833,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0933,
+    "number_excess": 0.2867
+   },
+   "dev_heldout_acc": 0.1111
+  },
+  "wd1.0_D_s2010": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.2424,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.1818,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0606
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1,
+    "number": 0.2233,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.1067,
+    "baseline_number": 0.0967,
+    "canonical_excess": -0.0067,
+    "number_excess": 0.1266
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0367,
+    "number": 0.15,
+    "unchanged": 0.3133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0367,
+    "number_excess": 0.15
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1233,
+    "number": 0.2033,
+    "unchanged": 0.3267,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1233,
+    "number_excess": 0.2033
+   },
+   "dev_heldout_acc": 0.0
+  },
+  "wd1.0_D_s2011": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0303,
+    "number": 0.303,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0303,
+    "baseline_number": 0.2727,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0303
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1467,
+    "number": 0.1833,
+    "unchanged": 0.0167,
+    "baseline_canonical": 0.0867,
+    "baseline_number": 0.07,
+    "canonical_excess": 0.06,
+    "number_excess": 0.1133
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.2333,
+    "unchanged": 0.2933,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0667,
+    "number_excess": 0.2333
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.1067,
+    "number": 0.1267,
+    "unchanged": 0.3667,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.1067,
+    "number_excess": 0.1267
+   },
+   "dev_heldout_acc": 0.0417
+  },
+  "wd1.0_D_s2012": {
+   "base_heldout|can_implied_heldout": {
+    "n": 33,
+    "canonical": 0.0,
+    "number": 0.3333,
+    "unchanged": 0.0,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.2424,
+    "canonical_excess": 0.0,
+    "number_excess": 0.0909
+   },
+   "base_heldout|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.13,
+    "number": 0.2333,
+    "unchanged": 0.02,
+    "baseline_canonical": 0.0667,
+    "baseline_number": 0.0767,
+    "canonical_excess": 0.0633,
+    "number_excess": 0.1566
+   },
+   "base_trained|can_implied_heldout": {
+    "n": 300,
+    "canonical": 0.01,
+    "number": 0.15,
+    "unchanged": 0.4133,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.01,
+    "number_excess": 0.15
+   },
+   "base_trained|can_implied_trained": {
+    "n": 300,
+    "canonical": 0.0667,
+    "number": 0.1533,
+    "unchanged": 0.4533,
+    "baseline_canonical": 0.0,
+    "baseline_number": 0.0,
+    "canonical_excess": 0.0667,
+    "number_excess": 0.1533
+   },
+   "dev_heldout_acc": 0.0
+  }
+ },
+ "timing": {
+  "wd1.0_C_s2001": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.14,
+     "excess": 0.14
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.31,
+     "excess": 0.31
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.17,
+     "excess": 0.17
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.39,
+     "excess": 0.39
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.495,
+     "excess": 0.495
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.245,
+     "excess": 0.225
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.445,
+     "excess": 0.425
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.345,
+     "excess": 0.345
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.72,
+     "excess": 0.72
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.53,
+     "excess": 0.53
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.785,
+     "excess": 0.785
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.59,
+     "excess": 0.59
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.82,
+     "excess": 0.82
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.625,
+     "excess": 0.625
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.82,
+     "excess": 0.82
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.695,
+     "excess": 0.695
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.84,
+     "excess": 0.84
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.66,
+     "excess": 0.66
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.835,
+     "excess": 0.835
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.72,
+     "excess": 0.72
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.89,
+     "excess": 0.89
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.815,
+     "excess": 0.815
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.91,
+     "excess": 0.91
+    }
+   }
+  },
+  "wd1.0_C_s2002": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.01,
+     "excess": 0.01
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.215,
+     "excess": 0.215
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.105,
+     "excess": 0.105
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.33,
+     "excess": 0.33
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.15,
+     "excess": 0.15
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.355,
+     "excess": 0.355
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.175,
+     "excess": 0.175
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.36,
+     "excess": 0.36
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.27,
+     "excess": 0.27
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.34,
+     "excess": 0.34
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.27,
+     "excess": 0.27
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.405,
+     "excess": 0.405
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.24,
+     "excess": 0.24
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.345,
+     "excess": 0.345
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.41,
+     "excess": 0.41
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.32,
+     "excess": 0.305
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.415,
+     "excess": 0.395
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.42,
+     "excess": 0.42
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.545,
+     "excess": 0.545
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.37,
+     "excess": 0.37
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.47,
+     "excess": 0.47
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.47,
+     "excess": 0.47
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.5,
+     "excess": 0.5
+    }
+   }
+  },
+  "wd1.0_C_s2003": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.155,
+     "excess": 0.155
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.22,
+     "excess": 0.22
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.165,
+     "excess": 0.165
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.32,
+     "excess": 0.32
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.205,
+     "excess": 0.205
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.44,
+     "excess": 0.44
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.235,
+     "excess": 0.235
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.5,
+     "excess": 0.5
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.565,
+     "excess": 0.565
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.305,
+     "excess": 0.305
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.57,
+     "excess": 0.57
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.275,
+     "excess": 0.275
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.535,
+     "excess": 0.535
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.495,
+     "excess": 0.495
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.26,
+     "excess": 0.26
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.525,
+     "excess": 0.525
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.26,
+     "excess": 0.26
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.51,
+     "excess": 0.51
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.285,
+     "excess": 0.285
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.505,
+     "excess": 0.505
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.325,
+     "excess": 0.325
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.59,
+     "excess": 0.59
+    }
+   }
+  },
+  "wd1.0_C_s2004": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.17,
+     "excess": 0.17
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.25,
+     "excess": 0.25
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.225,
+     "excess": 0.225
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.435,
+     "excess": 0.435
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.235,
+     "excess": 0.235
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.485,
+     "excess": 0.485
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.33,
+     "excess": 0.33
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.55,
+     "excess": 0.55
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.345,
+     "excess": 0.33
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.375,
+     "excess": 0.315
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.665,
+     "excess": 0.665
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.735,
+     "excess": 0.72
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.73,
+     "excess": 0.73
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.91,
+     "excess": 0.91
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.745,
+     "excess": 0.745
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.915,
+     "excess": 0.915
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.77,
+     "excess": 0.77
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.93,
+     "excess": 0.93
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.805,
+     "excess": 0.805
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.91,
+     "excess": 0.91
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.785,
+     "excess": 0.785
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.9,
+     "excess": 0.9
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.79,
+     "excess": 0.79
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.935,
+     "excess": 0.935
+    }
+   }
+  },
+  "wd1.0_C_s2005": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.065,
+     "excess": 0.065
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.22,
+     "excess": 0.22
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.14,
+     "excess": 0.14
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.3,
+     "excess": 0.3
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.155,
+     "excess": 0.155
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.365,
+     "excess": 0.365
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.16,
+     "excess": 0.16
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.425,
+     "excess": 0.425
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.17,
+     "excess": 0.17
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.415,
+     "excess": 0.415
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.265,
+     "excess": 0.265
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.465,
+     "excess": 0.465
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.265,
+     "excess": 0.265
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.48,
+     "excess": 0.48
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.255,
+     "excess": 0.255
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.45,
+     "excess": 0.445
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.265,
+     "excess": 0.265
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.52,
+     "excess": 0.52
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.32,
+     "excess": 0.32
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.445,
+     "excess": 0.445
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.44,
+     "excess": 0.44
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.315,
+     "excess": 0.315
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.49,
+     "excess": 0.49
+    }
+   }
+  },
+  "wd1.0_C_s2006": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.08,
+     "excess": 0.08
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.19,
+     "excess": 0.19
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.06,
+     "excess": 0.06
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.285,
+     "excess": 0.285
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.135,
+     "excess": 0.135
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.39,
+     "excess": 0.39
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.19,
+     "excess": 0.19
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.415,
+     "excess": 0.415
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.215,
+     "excess": 0.215
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.465,
+     "excess": 0.465
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.39,
+     "excess": 0.39
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.595,
+     "excess": 0.595
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.435,
+     "excess": 0.435
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.565,
+     "excess": 0.565
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.41,
+     "excess": 0.41
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.525,
+     "excess": 0.525
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.46,
+     "excess": 0.46
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.495,
+     "excess": 0.495
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.485,
+     "excess": 0.485
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.53,
+     "excess": 0.53
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.465,
+     "excess": 0.465
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.48,
+     "excess": 0.48
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.435,
+     "excess": 0.435
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.47,
+     "excess": 0.47
+    }
+   }
+  },
+  "wd1.0_C_s2007": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.155,
+     "excess": 0.155
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.275,
+     "excess": 0.275
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.15,
+     "excess": 0.15
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.35,
+     "excess": 0.35
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.265,
+     "excess": 0.265
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.395,
+     "excess": 0.395
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.165,
+     "excess": 0.165
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.405,
+     "excess": 0.405
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.16,
+     "excess": 0.16
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.39,
+     "excess": 0.39
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.25,
+     "excess": 0.25
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.395,
+     "excess": 0.395
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.265,
+     "excess": 0.265
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.41,
+     "excess": 0.41
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.3,
+     "excess": 0.3
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.42,
+     "excess": 0.42
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.36,
+     "excess": 0.36
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.435,
+     "excess": 0.435
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.295,
+     "excess": 0.295
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.42,
+     "excess": 0.42
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.315,
+     "excess": 0.315
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.415,
+     "excess": 0.415
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.275,
+     "excess": 0.275
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.36,
+     "excess": 0.36
+    }
+   }
+  },
+  "wd1.0_C_s2008": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.09,
+     "excess": 0.09
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.295,
+     "excess": 0.295
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.085,
+     "excess": 0.085
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.33,
+     "excess": 0.33
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.16,
+     "excess": 0.16
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.295,
+     "excess": 0.295
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.195,
+     "excess": 0.195
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.29,
+     "excess": 0.29
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.255,
+     "excess": 0.255
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.33,
+     "excess": 0.33
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.315,
+     "excess": 0.315
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.365,
+     "excess": 0.365
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.29,
+     "excess": 0.29
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.37,
+     "excess": 0.37
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.435,
+     "excess": 0.435
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.605,
+     "excess": 0.605
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.445,
+     "excess": 0.445
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.67,
+     "excess": 0.67
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.505,
+     "excess": 0.505
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.69,
+     "excess": 0.69
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.275,
+     "excess": 0.27
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.575,
+     "excess": 0.575
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.52,
+     "excess": 0.52
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.755,
+     "excess": 0.755
+    }
+   }
+  },
+  "wd1.0_C_s2009": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.145,
+     "excess": 0.145
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.235,
+     "excess": 0.235
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.175,
+     "excess": 0.175
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.31,
+     "excess": 0.31
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.25,
+     "excess": 0.25
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.355,
+     "excess": 0.355
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.295,
+     "excess": 0.295
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.425,
+     "excess": 0.425
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.33,
+     "excess": 0.33
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.475,
+     "excess": 0.475
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.375,
+     "excess": 0.375
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.535,
+     "excess": 0.535
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.405,
+     "excess": 0.405
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.49,
+     "excess": 0.49
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.43,
+     "excess": 0.43
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.46,
+     "excess": 0.46
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.39,
+     "excess": 0.39
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.47,
+     "excess": 0.47
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.35,
+     "excess": 0.35
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.41,
+     "excess": 0.41
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.45,
+     "excess": 0.45
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.44,
+     "excess": 0.44
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.4,
+     "excess": 0.4
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.435,
+     "excess": 0.435
+    }
+   }
+  },
+  "wd1.0_C_s2010": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.08,
+     "excess": 0.08
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.325,
+     "excess": 0.325
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.13,
+     "excess": 0.13
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.4,
+     "excess": 0.4
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.175,
+     "excess": 0.175
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.47,
+     "excess": 0.47
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.275,
+     "excess": 0.275
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.565,
+     "excess": 0.565
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.6,
+     "excess": 0.6
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.29,
+     "excess": 0.29
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.605,
+     "excess": 0.605
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.405,
+     "excess": 0.405
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.67,
+     "excess": 0.67
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.5,
+     "excess": 0.5
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.69,
+     "excess": 0.69
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.505,
+     "excess": 0.505
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.665,
+     "excess": 0.665
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.56,
+     "excess": 0.56
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.795,
+     "excess": 0.795
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.61,
+     "excess": 0.61
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.79,
+     "excess": 0.79
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.615,
+     "excess": 0.615
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.815,
+     "excess": 0.815
+    }
+   }
+  },
+  "wd1.0_C_s2011": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.14,
+     "excess": 0.14
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.35,
+     "excess": 0.35
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.17,
+     "excess": 0.17
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.38,
+     "excess": 0.38
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.185,
+     "excess": 0.185
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.39,
+     "excess": 0.39
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.215,
+     "excess": 0.215
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.425,
+     "excess": 0.425
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.27,
+     "excess": 0.27
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.48,
+     "excess": 0.48
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.225,
+     "excess": 0.225
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.44,
+     "excess": 0.44
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.26,
+     "excess": 0.26
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.43,
+     "excess": 0.43
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.28,
+     "excess": 0.28
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.46,
+     "excess": 0.46
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.335,
+     "excess": 0.335
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.54,
+     "excess": 0.54
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.305,
+     "excess": 0.305
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.485,
+     "excess": 0.485
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.3,
+     "excess": 0.3
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.56,
+     "excess": 0.56
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.305,
+     "excess": 0.305
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.565,
+     "excess": 0.565
+    }
+   }
+  },
+  "wd1.0_C_s2012": {
+   "500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.2,
+     "excess": 0.2
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.28,
+     "excess": 0.28
+    }
+   },
+   "1000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.3,
+     "excess": 0.3
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.39,
+     "excess": 0.39
+    }
+   },
+   "1500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.355,
+     "excess": 0.355
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.53,
+     "excess": 0.53
+    }
+   },
+   "2000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.48,
+     "excess": 0.48
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.645,
+     "excess": 0.645
+    }
+   },
+   "2500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.555,
+     "excess": 0.555
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.7,
+     "excess": 0.7
+    }
+   },
+   "3000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.6,
+     "excess": 0.6
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.82,
+     "excess": 0.82
+    }
+   },
+   "3500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.57,
+     "excess": 0.57
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.795,
+     "excess": 0.795
+    }
+   },
+   "4000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.565,
+     "excess": 0.565
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.805,
+     "excess": 0.805
+    }
+   },
+   "4500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.44,
+     "excess": 0.44
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.68,
+     "excess": 0.68
+    }
+   },
+   "5000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.525,
+     "excess": 0.525
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.835,
+     "excess": 0.835
+    }
+   },
+   "5500": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.51,
+     "excess": 0.51
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.83,
+     "excess": 0.83
+    }
+   },
+   "6000": {
+    "base_trained|can_implied_heldout": {
+     "canonical": 0.515,
+     "excess": 0.515
+    },
+    "base_trained|can_implied_trained": {
+     "canonical": 0.71,
+     "excess": 0.71
+    }
+   }
+  }
+ },
+ "m2_clustered": {
+  "per_network": {
+   "wd1.0_C_s2001": {
+    "agree": 7,
+    "total": 12,
+    "fraction": 0.5833
+   },
+   "wd1.0_C_s2002": {
+    "agree": 8,
+    "total": 15,
+    "fraction": 0.5333
+   },
+   "wd1.0_C_s2003": {
+    "agree": 2,
+    "total": 5,
+    "fraction": 0.4
+   },
+   "wd1.0_C_s2004": {
+    "agree": 15,
+    "total": 21,
+    "fraction": 0.7143
+   },
+   "wd1.0_C_s2005": {
+    "agree": 3,
+    "total": 4,
+    "fraction": 0.75
+   },
+   "wd1.0_C_s2006": {
+    "agree": 6,
+    "total": 6,
+    "fraction": 1.0
+   },
+   "wd1.0_C_s2007": {
+    "agree": 7,
+    "total": 13,
+    "fraction": 0.5385
+   },
+   "wd1.0_C_s2008": {
+    "agree": 11,
+    "total": 12,
+    "fraction": 0.9167
+   },
+   "wd1.0_C_s2009": {
+    "agree": 5,
+    "total": 10,
+    "fraction": 0.5
+   },
+   "wd1.0_C_s2010": {
+    "agree": 7,
+    "total": 10,
+    "fraction": 0.7
+   },
+   "wd1.0_C_s2011": {
+    "agree": 6,
+    "total": 7,
+    "fraction": 0.8571
+   },
+   "wd1.0_C_s2012": {
+    "agree": 11,
+    "total": 12,
+    "fraction": 0.9167
+   }
+  },
+  "n_networks": 12,
+  "mean_fraction": 0.7008,
+  "ci95_seed_bootstrap": [
+   0.5963,
+   0.8044
+  ],
+  "p_signflip": 0.0029296875,
+  "pooled_registered": {
+   "agree": 88,
+   "total": 127
+  }
+ }
+}

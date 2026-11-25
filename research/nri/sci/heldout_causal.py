@@ -88,8 +88,10 @@ def run_pairs(model, vocab, pairs, site, positions="src"):
         x = x + model.mlp1(model.ln1m(x))
         s = 1
     pred = C.finish_from(model, x, bb["tok"] != D.PAD, s).argmax(-1)
+    base_pred = model(bb["tok"]).argmax(-1)                     # unpatched prediction: the no-intervention baseline
     ans = lambda k: torch.tensor([L.ANS_ID[str(p[k])] for p in pairs])
-    return dict(canonical=(pred == ans("a_can")), number=(pred == ans("a_num")), unchanged=(pred == ans("a_base")))
+    return dict(canonical=(pred == ans("a_can")), number=(pred == ans("a_num")), unchanged=(pred == ans("a_base")),
+                baseline_canonical=(base_pred == ans("a_can")), baseline_number=(base_pred == ans("a_num")))
 
 
 def strata_rates(model, vocab, pairs, site, positions="src", n=300, seed=0):
@@ -101,7 +103,10 @@ def strata_rates(model, vocab, pairs, site, positions="src", n=300, seed=0):
     for k, g in sorted(groups.items()):
         g = rng.sample(g, min(n, len(g)))
         r = run_pairs(model, vocab, g, site, positions)
-        res[f"base_{k[0]}|can_implied_{k[1]}"] = dict(n=len(g), **{m: round(v.float().mean().item(), 4) for m, v in r.items()})
+        d = {m: round(v.float().mean().item(), 4) for m, v in r.items()}
+        d["canonical_excess"] = round(d["canonical"] - d["baseline_canonical"], 4)     # doc 39 deviation: chance-corrected
+        d["number_excess"] = round(d["number"] - d["baseline_number"], 4)
+        res[f"base_{k[0]}|can_implied_{k[1]}"] = dict(n=len(g), **d)
     return res
 
 
@@ -176,7 +181,7 @@ def main():
         for st in range(500, 6001, 500):
             m, v = load(n, st)
             r = strata_rates(m, v, pairs, 1, "src", n=200)
-            res["timing"][n][st] = {k: r[k]["canonical"] for k in r if k.startswith("base_trained")}
+            res["timing"][n][st] = {k: dict(canonical=r[k]["canonical"], excess=r[k]["canonical_excess"]) for k in r if k.startswith("base_trained")}
     res["m2_clustered"] = m2_clustered()
     OUT.write_text(json.dumps(res, indent=1))
     return res
