@@ -1,0 +1,9 @@
+{
+  "discriminating_pairs": 667,
+  "canonical_planted_hits": 667,
+  "bypassed_planted_hits": 0,
+  "identity_exact": true,
+  "orthogonal_seed_streams": true,
+  "planted_main_and_interaction_contrasts": true,
+  "domain_count": 9126
+}
