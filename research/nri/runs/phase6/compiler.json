@@ -2732,5 +2732,99 @@
   ],
   "n_params": 330286,
   "nonzero_params": 10541
+ },
+ {
+  "spec": {
+   "p": 23,
+   "unit_scales": [
+    [
+     1,
+     20,
+     21
+    ],
+    [
+     1,
+     17,
+     12
+    ],
+    [
+     1,
+     21,
+     7
+    ]
+   ],
+   "out_scales": [
+    1,
+    7,
+    19
+   ],
+   "expr": "mono:1,-1,1"
+  },
+  "mode": "sampled 200000",
+  "domain_size": 5913162,
+  "n": 200000,
+  "acc": 1.0,
+  "logits_exact_onehot_frac": 1.0,
+  "role_regions_equal_canonical_onehot": true,
+  "iit_acc": 1.0,
+  "iit_n": 1081920,
+  "d": 182,
+  "heads": 7,
+  "d_head": 26,
+  "d_mlp": 68,
+  "residual_dims_used": 107,
+  "t_range": [
+   -21,
+   42
+  ],
+  "n_params": 304736,
+  "nonzero_params": 5369
+ },
+ {
+  "spec": {
+   "p": 23,
+   "unit_scales": [
+    [
+     1,
+     20,
+     21
+    ],
+    [
+     1,
+     17,
+     12
+    ],
+    [
+     1,
+     21,
+     7
+    ]
+   ],
+   "out_scales": [
+    1,
+    7,
+    19
+   ],
+   "expr": "sum"
+  },
+  "mode": "sampled 200000",
+  "domain_size": 5913162,
+  "n": 200000,
+  "acc": 1.0,
+  "logits_exact_onehot_frac": 1.0,
+  "role_regions_equal_canonical_onehot": true,
+  "iit_acc": 1.0,
+  "iit_n": 1081920,
+  "d": 182,
+  "heads": 7,
+  "d_head": 26,
+  "d_mlp": 69,
+  "residual_dims_used": 107,
+  "t_range": [
+   0,
+   66
+  ],
+  "n_params": 305101,
+  "nonzero_params": 5570
  }
 ]
