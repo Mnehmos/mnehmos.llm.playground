@@ -402,6 +402,28 @@ network that escapes the plateau purifies its neurons' writes to one frequency a
 second attention layer, failures included; generalisers then make their decoder input additive again (residual share
 $0.44\to0.12$), while failures keep a non-additive, lookup-like input (0.43--0.64) and recruit more neurons.
 
+\section{Compiled and learned computation in one network}\label{sec:hybrid}
+\emph{Constructed, demonstrated exhaustively.} The compiler extends to computational graphs. Each node computes
+$g(\sum_i\phi_i(\text{child}_i))$ with a ReLU ladder and writes the one-hot code of its value into its own residual
+region. $MA+S$, $(M+A)S$, $M^2+A^2$, $(M-A)/(M+A)$ and 60 random nested expressions of depth 1--6 are all exact, every
+intermediate variable is bitwise observable and causally interchangeable, and swapping one node's operation changes
+exactly that node. The cost is about 24 hidden units and 500 parameters per node. A Fourier variant, combining circular
+codes through exact products on finite sets, is exact as well.
+
+\emph{Robustness (observed).} The constructed networks are about $10\times$ more fragile than learned generalisers. The
+cause is saturated, sparse attention routing: 82\% of nonzero weights are individually critical. Balanced
+minimal-gain attention recovers about $10\times$ while keeping exact answers. Wider margins, readout redundancy and
+periodic geometry do not help, so the robustness of learned networks is not explained by their geometry.
+
+\emph{Hybrids (trained, registered).} A network holding an exactly compiled $F=MAS$ was trained to learn
+$U=MA+S$. With the learned components barred from writing into the compiled subspace, it learned $U$ in 600--800 steps
+and generalised to unseen renderings, while the compiled sub-circuit stayed exactly one-hot at every evaluation. The
+same architecture trained from scratch did not reach the criterion in 6,000 steps. Freezing the compiled weights alone
+was worse than training from scratch, because learned writes into the shared residual stream corrupted them. With 25\%
+of the data, no condition learned $U$, and only structural protection combined with a semantic-preservation loss kept
+$F$ intact end to end. Validated input-side lenses (finite, type-legal token interventions) replaced the gradient-based
+S-lens; the averaged-lens ``dark residual'' remains unresolved because no sector instrument passed validation.
+
 \section{A qualification standard for reusable computation}
 We count a network as having learned a reusable computation only with (i) $\ge 95\%$ accuracy on the \emph{entire}
 finite set of genuinely unseen problems, scored once per distinct prompt, and (ii) causal use, $\ge 90\%$ success of a

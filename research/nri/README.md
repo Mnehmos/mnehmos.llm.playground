@@ -63,6 +63,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 54 | [`docs/54_phase6_results.md`](docs/54_phase6_results.md) | **Phase VI results**: an exact, training-free constructed network in the existing architecture; internal-operator programming; the residual is pairwise token interactions; learned generalisers share the construction's causal variables but store them as a circle; hybrids fail; a general compiler |
 | 55 | [`docs/55_registration_phase6_addendum_neuron_lens.md`](docs/55_registration_phase6_addendum_neuron_lens.md) | Registration: bidirectional neuron-level interpretability (neuron-lens adapted, exact Jacobians, validation first) |
 | 56 | [`docs/56_phase6_addendum_results.md`](docs/56_phase6_addendum_results.md) | **Neuron atlas results**: averaged lenses fail validation (dark sector explained); the essential residual is lens-dark; single-frequency writers; direct path blocks output-only programming; escape purifies writes in all networks, generalisers then restore additive input |
+| 57 | [`docs/57_registration_phase7.md`](docs/57_registration_phase7.md) | Registration: Phase VII (instruments, robustness, graph and Fourier compilers, direct path, hybrid learning, protection) + addendum A |
+| 58 | [`docs/58_phase7_results.md`](docs/58_phase7_results.md) | **Phase VII results**: exact graph compiler; Fourier construction; corrected S-lens; fragility traced to saturated routing; compiled + learned coexist under residual-subspace protection |
 
 ## Layout
 

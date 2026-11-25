@@ -141,3 +141,28 @@ were seen, and that every post-hoc change is labelled.
 | 54 | V3 count criterion mis-specified (omitted competitor hats) | A | post | support criterion passes; count reported | doc 56 §56.1 |
 | 55 | N6(a) failure traced post hoc to the direct residual path (margin metric hid it); extra measurement `direct_path.json` | A | post | reported as finding | doc 56 §56.5 |
 | 56 | Predictions not supported: variance ordering not worst; failures also purify writes | A | post | reported | doc 56 §56.3, §56.6 |
+
+## Additions (Phase VII)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 57 | Phase VI dark-sector statements marked provisional before Phase VII | A | pre | doc 56 status note | doc 56 |
+| 58 | Phase VII registration (doc 57) and addendum A (the exact H/K configuration) committed before runs | A | pre | — | doc 57 |
+| 59 | Clarification before any training run: the constructed heads' full q/k/v rows are frozen (not only columns 0–63) | A | pre | documented in `sci/hybrid.py` | doc 58 |
+| 60 | I2 failed V5′ narrowly (2.25 against ≤ 2) and I3 failed; per the rule, neither was applied to learned networks; the dark residual is unresolved | A | post | criteria not relaxed | doc 58 §58.2 |
+| 61 | Background jobs were stopped at the 30-minute and 2-hour harness limits; incomplete runs were resumed with skip-completed (no completed run was rerun or replaced) | A | post (operational) | 48/48 hybrid runs and all robustness variants complete | doc 58 |
+| 62 | Condition A first build had an undersized stage-2 ladder (an IndexError before any evaluation); fixed | A | pre-eval | A exact | `sci/hybrid.py` |
+| 63 | Predictions not supported: D2 "partial" (it was complete); R1+R2+R3 robustness target; hybrid data-efficiency at 25% | A | post | reported | doc 58 |
+
+## Ledger after Phase VII
+
+| claim | status |
+|---|---|
+| Computational graphs compile exactly, with observable, interchangeable, programmable intermediates; cost linear in nodes | **demonstrated [E]** (4 named + 60 random expressions) |
+| Fourier (periodic) construction is exact | **demonstrated** (real arithmetic; float32 argmax-exact [E]) |
+| Interventional and integrated-gradient S-lenses are valid | **demonstrated** on constructed networks (V4′) |
+| Exact per-prompt Jacobians predict ablations in learned networks; averaged lenses under-predict 4–8× | observed [T] |
+| Constructed networks are fragile because of saturated sparse routing; balanced minimal gains help about 10×; geometry, margins and readout redundancy do not | observed [S] |
+| Compiled and learned computation coexist with residual-subspace protection (full data) | **demonstrated [T]**, 3 seeds × 2 conditions, exact sub-circuit at every evaluation |
+| Protection needs both write-blocking and output-level preservation when data are scarce | observed [T] (25% regime) |
+| Hybrids learn the unknown operation from less data | **not supported** at 25% |

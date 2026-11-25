@@ -139,9 +139,18 @@ changed until the owner merges them through the registry's own process.
 | **I33** (new) | P: learned generalisers share the construction's causal variables (factorised 2-D mass code, interchange-equivalent) but store them as a circle; exactness and robustness trade off | Doc 54 §54.5 | Exploratory. |
 | **I34** (new) | C-I (method): a compiler from modular specifications to transformer weights, exact over primes 5–23, 2–3 declared variables, monomial, inverse, sum and difference expressions | Doc 54 §54.6 | Single-statistic expressions; larger domains sampled. |
 
+## 47.7 Revisions after Phase VII (v3, proposals)
+
+| ID | proposal | evidence | boundary |
+|---|---|---|---|
+| **I34** | extend: the compiler handles computational graphs with observable, programmable intermediates (C-I, exhaustive) | doc 58 §58.4 | single-statistic nodes; 13-valued variables |
+| **I35** (new) | P: compiled and learned computations coexist in one network if learned writes into the compiled subspace are blocked; with scarce data an output-level preservation objective is also required | doc 58 §58.6 | one task, 3 seeds per condition |
+| **Q25** (new) | O: can exact construction be made as robust as learning (distributed soft routing)? | doc 58 §58.3 | current gap about 10× |
+
 ## 47.4 Change history
 
 v0 (2026-11-25): first proposal set, for owner review. No registry record was changed.
 v1 (2026-11-25): revisions after Phase IV and Phase V (§47.5), prepared for PR #36 as approved. Still proposals;
 no registry record was changed.
 v2 (2026-11-25): Phase VI proposals (§47.6). Still proposals; no registry record was changed.
+v3 (2026-11-25): Phase VII proposals (§47.7). Still proposals; no registry record was changed.

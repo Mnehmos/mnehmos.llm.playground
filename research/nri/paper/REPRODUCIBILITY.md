@@ -67,6 +67,8 @@ copies.
 | Phase VI comparison and hybrids | `python -m sci.compare_hybrid` | `runs/phase6/{compare,hybrid}.json` |
 | Phase VI compiler grid | `python -m sci.compiler` | `runs/phase6/compiler.json` |
 | Phase VI addendum: instrument validation, neuron atlas, development, direct path | `python -m sci.neuron_lens validate`; `... learned`; `... develop`; `... direct` | `runs/phase6/atlas/*.json` |
+| Phase VII D, I, R, G, F | `python -m sci.direct_path`; `python -m sci.instruments2 {validate,learned}`; `python -m sci.robust` (+ `combo`); `python -m sci.graph_compiler`; `python -m sci.fourier` | `runs/phase7/*.json` |
+| Phase VII H/K (training, 48 runs; resumable) | `python -m sci.hybrid A`; `python -m sci.hybrid train --workers 3 [--only C1,C2]` | `runs/phase7/hybrid/*.json` |
 | figures and PDF | `python paper/make_figures.py && cd paper && latexmk -pdf main.tex` | `paper/main.pdf` |
 
 ## Tests
