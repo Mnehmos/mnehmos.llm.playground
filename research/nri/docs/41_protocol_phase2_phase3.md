@@ -223,3 +223,92 @@ registration proposal (Phase IV) and requires owner approval before it runs.
 ---
 
 # 41R — Results (appended after running)
+
+Results are appended in stages. Sections marked *(final)* will not change. Sections marked *(interim)* will be
+replaced when all runs complete.
+
+## 41R.1 Instrument validation *(final)*
+
+Output: `runs/instruments/planted_validation.json`, `runs/instruments/real_controls.json`.
+
+### Planted mechanisms
+
+- 3,074 cross pairs and 319 same-canonical pairs, with no reserved-test combination anywhere.
+- **P1, P2, P4 and P5 passed** at the first run.
+- **P3** (correct canonical code, trained-only reader) **failed** its pre-stated criterion on the *excess* metric:
+  - held-out base | implied-trained excess was 0.88 against a criterion of 0.9;
+  - cause: the unpatched wrong answer coincides with the canonical prediction in 12% of pairs, and the excess is
+    bounded by 1 − baseline.
+
+**Deviation 1.** A **switch rate** was added: among pairs whose unpatched prediction is not the target, the
+fraction moved onto it. P3's criterion was restated on it. P3 then passed: 1.00 implied-trained, 0.00
+implied-held-out. This change was made before any real-network result was read.
+
+- The I6 control (same canonical donor) returned unchanged = 1.00 for P1 and P4. For P2, number-following was 1.00.
+- **I4 is not pure.** For a number code (P2), the canonical-mean subspace transfers some number information
+  (number excess ≈ 0.3), because canonical and number values correlate within the trained set. I4 is therefore
+  interpreted only through its *canonical* excess, which is ≤ 0.017 for P2.
+
+### Real-network controls
+
+| control | networks | result |
+|---|---|---|
+| untrained (step 0), every condition and stratum | 4 networks | max \|excess\| = 0.020 (criterion ≤ 0.05): **pass** |
+| x0 number-token swap | C wd 1.0 | number-switch 0.82–1.00 |
+| x0 number + unit swap | C wd 1.0 | canonical-switch 0.52–0.92, bounded by model accuracy on the implied combinations |
+
+## 41R.2 Probe validity for never-trained inputs *(final)*
+
+| probe | fitted on | read on OOD inputs | known-positive case |
+|---|---|---|---|
+| ridge (linear) | ID inputs | 0.00 | `mass_only_s307`, OOD-source block interchange 0.994 |
+| nearest centroid | ID inputs | 0.00 | same network |
+
+Both probes read **0.00** on OOD inputs in the known-positive case.
+
+**Deviation 2.** Probes are not used as evidence about never-trained inputs. They are kept in the audits as a
+documented false-negative illusion. The validated measure is causal: block interchange with a never-trained
+**source** (`iia_V_oodsrc`).
+
+## 41R.3 Replay qualification *(final)*
+
+Output: `runs/swap_recon/qualification.json`.
+
+| step | test | result |
+|---|---|---|
+| Q1 | original code from aaa67c6, 304 / 307 / 310 / 311 | **EXACT**: every final tensor bitwise equal to the 2026-11-22 `model.pt`; all 24 log lines byte-identical |
+| Q2 | instrumented trainer (checkpoint every 100 steps, update decomposition), 307 / 311 | **EXACT** |
+| Q3 | resume from step 3,000 (307) | **EXACT**: final weights bitwise equal; the 12 post-resume log lines byte-identical |
+| Q4 | reconstruction | every endpoint is compared bitwise with the historical `model.pt` (see 41R.6) |
+
+## 41R.4 Mixed-code composers at 100-step resolution *(final for C wd 1.0)*
+
+Measure: the validated I1 switch rate in the trained-base | implied-held-out stratum, every 100 steps.
+
+- **Timing.** Canonical reading of never-trained implied combinations (switch ≥ 0.2 at two consecutive audits)
+  begins **before** the registered compositional onset in 11/12 C wd 1.0 networks and at the **same** checkpoint in
+  1 (seed 2002). It never begins after.
+- **The three "mixed-code" networks** (2002, 2007, 2008) vs the other 9, steps 4,000–6,000:
+
+  | | canonical-switch | number-switch | development held-out accuracy |
+  |---|---|---|---|
+  | mixed-code | 0.38 | 0.12 | 0.63 |
+  | other 9 | 0.45 | 0.13 | 0.62 |
+
+- **Conclusion.** The registered M1 "exceptions" came from the trained-context limitation of the registered
+  measure, not from a different developmental order. This confirms doc 39 R4 at 5× finer resolution.
+- **Note.** Seed 2002 composes well (development held-out 0.90) while reading the x1 code only moderately (0.39), and
+  barely at x2 (I3 0.05). This points to a parallel pathway, consistent with R3's weak network-level correlation.
+
+## 41R.5 Endpoint audit of the 36 historical networks *(final)*
+
+Output: `runs/swap_recon/historical_endpoints_audit.json`.
+
+Declared networks that fit the training data (ID = 1.0) split sharply on the validated causal measure:
+
+| | seeds | OOD-source IIA | declared-variable OOD accuracy |
+|---|---|---|---|
+| generalisers | `mass_only` 307, 311 | 0.99 / 1.00 | 1.00 |
+| failures | `mass_only` 304, 310 | 0.09 | 0.09 (chance 0.077) |
+
+`acc_only` shows the same pattern (e.g. 308: 0.94; 310/311: 0.21/0.19).
