@@ -178,3 +178,18 @@ means intended ≥ 0.90 for every sequence.
 Five focus networks plus 300 and 302 (both partial or failing), so no seed is selected for success. Everything here
 is **exploratory** except the pass/fail criteria stated above, which are fixed now. All negative results are reported.
 The interventions and their configurations are archived with manifests.
+
+## Addendum A (2026-11-25, registered before these runs; motivated by interim E4 results)
+
+Interim results showed that the rescue depends on timing in 310:
+- penalty starting at step 1,350: unseen accuracy 0.55;
+- penalty starting at step 1,450: 0.22;
+- 304 was not rescued at any start point ≥ 700. Step 700 is already inside 304's factorisation dip, which begins at
+  about step 650.
+
+**Added runs.** Each uses λ = 1 for 500 steps, then release, 2,000 steps in total, with matched controls:
+- 304 from step 600, the earliest window state;
+- 310 from steps 1,200 and 1,300.
+
+**Prediction.** Starting before each network's dip onset rescues more than starting after it. Rescue counts at the
+registered criterion (unseen ≥ 0.90, familiar ≥ 0.95). Partial effects are reported as such.
