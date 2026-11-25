@@ -427,3 +427,13 @@ The I6 column is the trained-base same-canonical stratum.
    separate number and unit tokens downstream. In C wd 1.0 it is already assembled at the number token.
 4. **The code is read mostly after block 1 (I3).** By block 2, patching carries less canonical information (0.29
    in C wd 1.0): the conversion has partly happened.
+
+## 41R.8 Preservation check at the end of Phases II–III *(final)*
+
+- **Original factorial archives.** `python verify_archives.py /home/user/nri_archives` gives **96 OK, 0 mismatched,
+  0 missing**. The originals are untouched, and owner-side verification is still pending (`PRESERVATION.md`
+  unchanged).
+- **Reconstructions.** 36 runs, 2,196 checkpoints, 2.83 GB in `/home/user/swap_archives`. Each archive was verified
+  with `tar --diff`, and its per-file SHA-256 manifest is at `runs/swap_recon/<run>/manifest.json`. All 36 endpoints
+  are bitwise equal to the historical networks.
+- **Window replay.** 5 runs, 705 states, archived the same way; manifests at `runs/swap_recon/window/<run>/`.
