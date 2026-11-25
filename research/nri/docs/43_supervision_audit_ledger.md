@@ -131,3 +131,13 @@ were seen, and that every post-hoc change is labelled.
 | Generalisers' M code is factorised, 2-D and interchange-equivalent to the construction, but circular | observed |
 | Constructed parts repair learned networks | **not supported** |
 | Constructed networks are exact but fragile; learned ones robust | observed |
+
+## Additions (Phase VI addendum)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 52 | Addendum registered (doc 55) before measurement; Anthropic posts not readable (network policy), only owner's summary used | A | pre | citations flagged unverified | doc 55, CITATION_CHECKS |
+| 53 | Validation: S-lens (V4) and averaged-lens sectors (V5) failed on constructed nets → not used for learned-net interpretation | A | pre-interpretation | measures reported but excluded | doc 56 §56.1 |
+| 54 | V3 count criterion mis-specified (omitted competitor hats) | A | post | support criterion passes; count reported | doc 56 §56.1 |
+| 55 | N6(a) failure traced post hoc to the direct residual path (margin metric hid it); extra measurement `direct_path.json` | A | post | reported as finding | doc 56 §56.5 |
+| 56 | Predictions not supported: variance ordering not worst; failures also purify writes | A | post | reported | doc 56 §56.3, §56.6 |
