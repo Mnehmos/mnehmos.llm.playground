@@ -1,0 +1,21 @@
+{
+ "population": "C",
+ "wd": 1.0,
+ "seed": 2008,
+ "steps": 6000,
+ "lr": 0.001,
+ "warmup": 100,
+ "batch": 128,
+ "aux_weight": 1.0,
+ "n_train_combos": 120,
+ "frames": [
+  "C01",
+  "C02",
+  "C04",
+  "C05"
+ ],
+ "split_sha": "c103174ee0bfc1fa",
+ "n_params_inference": 129280,
+ "checkpoint_every": 100,
+ "init_sha": "592a3f3e0bd6814b"
+}
