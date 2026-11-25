@@ -72,7 +72,7 @@ def per_network(run, split):
     a = audits(run)
     inst = json.loads((CI.OUT_DIR / "factorial" / f"{run}.json").read_text())
     geo = {s: geometry(run, s, split) for s in range(0, 6001, 500)}
-    cos = [x["traces"]["x1m"]["task_aux_cos_src"] for x in a if x["step"] <= 2000]
+    cos = [x["traces"]["x1m"].get("task_aux_cos_src") for x in a if x["step"] <= 2000]   # absent for A, B (no aux head)
     cos = [c for c in cos if c is not None]
     dec = [x["representation"]["decode_x1m_q_knn"] >= 0.9 for x in a]
     steps = [x["step"] for x in a]

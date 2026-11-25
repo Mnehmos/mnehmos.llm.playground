@@ -312,3 +312,68 @@ Declared networks that fit the training data (ID = 1.0) split sharply on the val
 | failures | `mass_only` 304, 310 | 0.09 | 0.09 (chance 0.077) |
 
 `acc_only` shows the same pattern (e.g. 308: 0.94; 310/311: 0.21/0.19).
+
+## 41R.6 Why semantic supervision needs strong weight decay (H-A … H-E) *(final)*
+
+Output: `runs/instruments/mechanism_sswd.json`, from `sci/mechanism_sswd.py`. The operationalisations were fixed
+in the module docstring before running.
+
+**Bug fix (not a change of definition).** A and B have no auxiliary head, so the H-C cosine is absent for them.
+It is now read as optional. H-C concerns only C and D.
+
+### Primary contrasts
+
+C wd 1.0 vs C wd 0.1, 12 paired seeds, exact sign-flip, Holm over the five hypotheses.
+
+| | measure (number token, after block 1) | C1.0 | C0.1 | D1.0 | B1.0 | d (as predicted) | 95% CI | p_Holm | seeds | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H-A | participation ratio of the 120 trained class means | 3.70 | 4.64 | 4.43 | 5.77 | +0.94 | 0.73–1.16 | **0.0012** | 12/12 | supported |
+| H-B | route-specificity index (1 − R² on canonical q) | **0.078** | 0.179 | 0.805 | 0.650 | +0.10 | 0.086–0.117 | **0.0012** | 12/12 | supported |
+| H-C | task–aux gradient cosine, steps 0–2,000 | −0.014 | −0.006 | −0.011 | — | −0.008 | −0.021–0.004 | 0.89 | 5/12 | **not supported** (gradients orthogonal throughout, as in doc 38) |
+| H-D | I1 canonical switch, implied-held-out, at decodability onset | 0.185 | 0.133 | 0.049 | 0.058 | +0.052 | −0.006–0.131 | 0.17 | 8/12 | **not supported at onset** (see trajectory) |
+| H-E | total parameter norm at 6,000 | 19.2 | 66.0 | 21.0 | 18.3 | +46.8 | 46.3–47.2 | **0.0012** | 12/12 | supported but **not explanatory** |
+
+- **H-E.** Strong decay shrinks the norm in every population (B1.0 18.3, A1.0 16.9), including those that do not
+  compose. The norm is a consequence of the decay setting, not specific to the interaction.
+- **The H-E "knee" is degenerate.** The maximum total norm is at step 0 in every network, so "knee before onset
+  12/12" carries no information. It is reported as measured; the definition was not changed after seeing the data.
+
+**Secondary contrasts** (descriptive):
+- H-A and H-B separate C1.0 from D1.0 and from B1.0 (p ≤ 0.004).
+- H-D separates C1.0 from D1.0 and B1.0 (+0.13, p = 0.001).
+
+### Trajectories (means over 12 seeds)
+
+| step | RSI C1.0 | RSI C0.1 | RSI D1.0 | RSI B1.0 | I1 switch C1.0 | I1 switch C0.1 |
+|---|---|---|---|---|---|---|
+| 0 | 0.75 | 0.75 | 0.75 | 0.75 | 0.00 | 0.00 |
+| 1,000 | 0.17 | 0.27 | 0.78 | 0.73 | 0.14 | 0.10 |
+| 2,000 | 0.11 | 0.24 | 0.78 | 0.71 | 0.22 | 0.11 |
+| 4,000 | 0.09 | 0.20 | 0.80 | 0.64 | 0.41 | 0.12 |
+| 6,000 | 0.08 | 0.18 | 0.81 | 0.65 | 0.47 | 0.14 |
+
+### Account (retrospective, exploratory)
+
+1. **The coherent semantic target builds the code.** In both C conditions, the canonical auxiliary target turns
+   the number-token code from route-specific into canonical within about 1,000 steps (RSI 0.75 → 0.17–0.27). Without
+   a coherent target (B, or the entropy-matched scrambled D), the code stays route-specific even under strong
+   decay (0.65–0.81).
+2. **Strong decay then removes the residual route-specific structure** (0.17 → 0.08; under weak decay it plateaus
+   near 0.18–0.24). It also compresses the code (participation ratio 3.7 vs 4.6).
+3. **The downstream reader becomes a reusable conversion only under strong decay.**
+   - Its canonical reading of never-trained implied combinations grows steadily from 0.14 to 0.47 under strong
+     decay, and stays flat at 0.10–0.14 under weak decay.
+   - At the onset of decodability the two conditions barely differ (H-D). The difference develops over the
+     following thousands of steps.
+4. **Gradient cooperation is not the mechanism (H-C).** The task and auxiliary gradients stay orthogonal, so the
+   auxiliary loss does not pull the task pathway. It shapes the representation, and decay selects the reader that
+   reuses it.
+
+**Consistency with the literature.** This fits the efficiency account of weight decay (Varma et al. 2023): a reader
+that reuses one canonical code is cheaper in parameter norm than a route-by-route lookup, but only once a shared
+code exists to be reused.
+
+**Within-condition limits.**
+- Across the 12 C1.0 seeds, neither RSI (ρ = −0.05) nor PR (ρ = −0.08) predicts development held-out accuracy.
+- These measures separate *conditions*, not *seeds*. What distinguishes better from worse composers within C1.0
+  remains open; the strongest within-condition correlate is the final parameter norm (ρ = −0.52, n = 12).
