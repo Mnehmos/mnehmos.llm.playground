@@ -43,3 +43,31 @@ were seen, and that every post-hoc change is labelled.
 * Exploratory results stay labelled: docs 39 and 41R are retrospective and exploratory.
 * No original trajectory, checkpoint or measurement was modified. Archives and extracted weights are read-only.
   Their SHA-256 values are re-verified at the end of Phases II–III (doc 41R).
+
+## Additions (2026-11-25, second session block)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 22 | Owner corrections to the generalisation standard: partial vs near-perfect (≥ 95% exhaustive + causal ≥ 90%); n = 12 cannot give a 0.80 lower bound | O | — | doc 42 rev. 1; 108-network design withdrawn; about 50 per certified condition | doc 42 |
+| 23 | Critical-window replay registered before running (doc 45); bitwise qualification at steps 1,000 and 2,000 passed for all 5 | A | pre | 705 states at 10-step resolution | doc 45 |
+| 24 | Mechanism battery: attention route and computation-first ordering contradicted as explanations | A | post | reported as contradicted candidates C4/C5 | doc 46 |
+| 25 | Class-mean edit construction erased context (minimum-norm least squares) → in-span edit used; the original construction is documented | A | post (method) | edit ladder uses in-span maps | doc 46 §46.3, `sci/edit_ladder.py` |
+| 26 | Subspace edits: full 13-point fit is uninformative (R² = 1 by construction) → held-out-class fit | A | post (method), before reading results | geometry-linearity measure | `sci/subspace_math.py` |
+| 27 | P4 per-part edit: prediction stated in doc 46 §46.5 before the measurement | A | pre | supported for factorised networks; "reverse in failures" not supported | doc 46R.2 |
+| 28 | H-C cosine absent for A/B: bug fix, not a definition change | A | post | — | doc 41R.6 |
+| 29 | H-E knee degenerate (max norm at step 0): reported as is, not redefined | A | post | — | doc 41R.6 |
+| 30 | Step-0 control fails in the n = 33 descriptive stratum (24/2,304 cells; \|excess\| 0.061) | A | post | reported; stratum not used for claims | doc 41R.7 |
+
+## Scientific decision ledger: observed / inferred / demonstrated
+
+| claim | status |
+|---|---|
+| Registered factorial effects H1–H5 | **demonstrated** (registered, reserved test, independently re-derived) |
+| Historical networks replay bitwise (36/36; window; resume) | **demonstrated** (exact reproduction) |
+| Canonical code converted along never-trained combinations (C1.0) | observed (validated instrument; retrospective) |
+| Present / readable / controlling separation | observed |
+| Factorisation kept vs lost during the escape separates generalisers from failures | observed (24 networks); its causal role is **inferred**, tests P1–P3 not run |
+| Strong decay prunes route-specific structure; the reader becomes reusable | observed (condition level); causal role inferred, test P3 not run |
+| Per-part edit succeeds in factorised networks | observed (single-pass interventions on fixed networks) |
+| Head composition is a second requirement (C2) | inferred from observed partial cases (300, 305) |
+| Cross-network transplant of the canonical code | observed |
