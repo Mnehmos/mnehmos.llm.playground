@@ -24,6 +24,19 @@ Citations are checked against primary sources; the log is `paper/CITATION_CHECKS
     - unrestricted non-linear alignment maps can align any network with any algorithm (Sutter et al. 2025);
     - patching results depend on the corruption method and metric (Zhang & Nanda 2024; Heimersheim & Nanda 2024).
 
+- **Complexity control decides reasoning vs memorisation.**
+  - Zhang et al. (arXiv 2501.08537): initialisation scale and weight decay determine whether transformers learn
+    reasoning-based (compositional) or memorising solutions.
+  - A May 2026 preprint (arXiv 2605.04396): the decision is made within a sharp, observable *window* of training,
+    and weight decay matters only within it; reportedly the effect does not appear for grokking on modular
+    arithmetic.
+  - **These are the closest prior work to both our results.** The factorial's weight-decay requirement fits their
+    complexity-control account. The role-swap finding that the outcome is decided at the escape from a shared plateau
+    and never revised is an independent observation of a "decision window", in a setting with a declared causal
+    variable.
+  - Our novelty claims must be limited accordingly (§44.2). Author lists and figures are to be verified from the
+    PDFs before citing; summaries seen so far are partly third-party.
+
 ## 44.2 What appears new here (subject to a fuller search before any submission)
 
 1. **The semantic-supervision × weight-decay interaction for compositional generalisation**, established under a
@@ -39,6 +52,8 @@ Citations are checked against primary sources; the log is `paper/CITATION_CHECKS
    - Prior seed-variance work reports endpoints.
    - Here the split is decided within a few hundred steps, at the escape from a shared plateau, and is never
      revised afterwards (doc 41R, provisional).
+   - Decision windows have been reported before (arXiv 2605.04396). Our contribution is the causal
+     characterisation of what is decided: whether the declared representation of never-trained inputs is canonical.
 4. **A false-negative illusion for probes on never-trained inputs.** Probes fitted on trained inputs read 0.00 on OOD
    inputs that the network demonstrably processes correctly through the probed block. This complements the
    false-positive illusions of subspace patching.
