@@ -1160,6 +1160,29 @@
    "depth": 5,
    "all_intermediates_observable": true,
    "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+   "D": 155,
+   "blocks": 5,
+   "mlp_units": 149,
+   "widths": [
+    38,
+    42,
+    15,
+    27,
+    27
+   ],
+   "n_nodes": 7,
+   "n_params": 118960,
+   "nonzero_params": 4577,
+   "nonzero_params_decoder": 3286,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
   }
  ]
 }
