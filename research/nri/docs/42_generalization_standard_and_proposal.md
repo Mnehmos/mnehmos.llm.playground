@@ -98,3 +98,81 @@ failures (304, 310) of the declared variable. Two questions:
 - If B shows wd 1.0 makes the GQS outcome reliable (lower bound ≥ 0.8) in this second task as well, the factorial's
   interaction generalises across tasks and architectures. That is a recommended default.
 - If not, the factorial result is task-specific.
+
+---
+
+# 42 rev. 1 (2026-11-25) — owner corrections
+
+This revision supersedes §42.1 G-behaviour and G-population, and the sample size in §42.2 Design B. The original
+text above is kept for the record.
+
+## Revised G-behaviour: partial and near-perfect generalisation are different outcomes
+
+**Near-perfect generalisation (the program's target).**
+- **Behaviour:** ≥ 95% accuracy on the *entire* finite set of genuinely unfamiliar problems, scored exhaustively
+  with one vote per distinct prompt. For the role-swap task that is all 1,776 unfamiliar prompts (PR #34's
+  enumeration); a random panel is not enough.
+- **Causal use:** a demonstrated causal utilisation of the learned concept. Discriminating interchange with an
+  unfamiliar *source* must reach the intended answer in ≥ 90% of eligible pairs. Eligible means the intended,
+  unchanged and wrong-variable answers all differ, which excludes coincidental correct answers (PR #34's test).
+
+**Partial generalisation.** Above-chance accuracy that misses either criterion. It is reported as its own
+category, with the actual accuracy and causal rate, and is never pooled with near-perfect generalisation.
+
+Applied to the historical focus networks (PR #34 exhaustive scores; doc 41R):
+
+| network | unfamiliar accuracy (of 1,776) | discriminating unfamiliar-source swap | category |
+|---|---|---|---|
+| 307 | 0.998 | 0.993 | near-perfect |
+| 311 | 0.999 | 0.996 | near-perfect |
+| 305 | 0.724 | 0.298 | partial |
+| 304 | 0.269 | 0.000 | failure |
+| 310 | 0.278 | 0.001 | failure |
+
+## Revised G-population: sample size
+
+With n independent networks of which k qualify, the exact (Clopper–Pearson) two-sided 95% lower bound is the
+0.025 quantile of Beta(k, n − k + 1).
+
+- **Twelve networks cannot establish a lower bound of 0.80.** Even 12/12 successes give only 0.735 (this corrects
+  the original §42.2).
+- **17 networks** is the minimum for which 0.80 is achievable at all, and only if all 17 succeed (lower bound
+  0.805).
+
+Probability that the experiment demonstrates "lower bound ≥ 0.80", given the true per-network success rate p
+(computed exactly):
+
+| n | p = 0.90 | p = 0.95 | p = 0.98 |
+|---|---|---|---|
+| 17 | 0.17 | 0.42 | 0.71 |
+| 30 | 0.18 | 0.55 | 0.88 |
+| 40 | 0.22 | 0.68 | 0.95 |
+| 50 | 0.43 | **0.90** | 0.997 |
+| 60 | 0.44 | 0.92 | 0.999 |
+| 80 | 0.59 | 0.98 | 1.00 |
+
+**Requirement.** A reliability claim needs **about 50 independent networks** in the condition being certified
+for 90% power if the true rate is 0.95. It needs about 80 if the true rate might be as low as 0.90 and partial
+power is acceptable.
+
+## Revised Design B (proposal only; requires a new registration and owner approval)
+
+The original 108-network design (3 groups × 3 decays × 12 seeds) **is withdrawn**. It could not support its own
+reliability claim.
+
+A corrected two-stage design, still only a proposal:
+
+1. **Stage 1, screening.** Which decay values deserve certification?
+   - Design: `mass_only` × weight decay {0.01, 0.1, 1.0} × 17 fresh seeds = 51 networks.
+   - Decision rule: carry forward any decay whose observed near-perfect rate is ≥ 15/17.
+   - What it supports: comparisons only. Its rates come with exact intervals and are not reliability claims.
+2. **Stage 2, certification.** For each carried-forward decay, train 50 *new* seeds, so stage-1 seeds are not
+   reused for the claim.
+   - Claim criterion: the lower 95% bound ≥ 0.80 under the revised G-behaviour.
+   - Comparison: rate differences against wd 0.01 by exact unconditional test.
+
+**Compute.** About 10 CPU-minutes per network, so stage 1 is about 8.5 CPU-hours and stage 2 about 8.3 CPU-hours
+per certified condition.
+
+**Nothing runs** until PR #34's crossing results are in, this design is registered as its own document, and the
+owner approves it.
