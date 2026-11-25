@@ -311,3 +311,129 @@ discriminating unseen-source swap (304: 0 of 2,692; 310: 3 of 2,692) agree with 
   applied to its checkpoints without retraining.
 
 Neither study modifies the other.
+
+---
+
+# 46R — Results appended after the analyses ran (2026-11-25)
+
+## 46R.1 Canonical subspace in the factorial (`runs/instruments/subspace_math.json`) [O]
+
+Means over 12 seeds. The site is the source-number token after block 1, and "subspace" means the span of the 13
+canonical-class means fitted on trained bases.
+
+| condition, step | present (nearest-mean, held-out bases) | readable (linear, held-out) | **controlling** (canonical switch, implied-held-out) | top-4 share of control | effective rank | held-out accuracy | ablate subspace: trained / held-out acc | ablate random subspace: trained / held-out | linear edit across held-out classes: double / invert / add-one |
+|---|---|---|---|---|---|---|---|---|---|
+| C1.0, 1,000 | 0.87 | 0.88 | 0.14 | 0.63 | 5.35 | 0.04 | 0.16 / 0.02 | 0.99 / 0.04 | 0.32 / 0.33 / 0.06 |
+| C1.0, 3,000 | 0.95 | 0.94 | 0.36 | 0.89 | 4.83 | 0.35 | 0.16 / 0.06 | 0.99 / 0.33 | 0.35 / 0.67 / 0.06 |
+| C1.0, 6,000 | 0.96 | 0.94 | **0.47** | 0.89 | 4.58 | 0.64 | 0.15 / 0.07 | 1.00 / 0.61 | 0.42 / **0.78** / 0.06 |
+| C0.1, 6,000 | 0.84 | 0.88 | 0.14 | 0.69 | 5.98 | 0.05 | 0.20 / 0.03 | 0.99 / 0.03 | 0.28 / 0.33 / 0.07 |
+| D1.0, 6,000 | 0.18 | 0.37 | 0.05 | 0.61 | 5.29 | 0.02 | 0.29 / 0.03 | 0.99 / 0.02 | 0.10 / 0.14 / 0.09 |
+| B1.0, 6,000 | 0.26 | 0.33 | 0.06 | 0.90 | 5.89 | 0.08 | 0.13 / 0.04 | 0.99 / 0.08 | 0.23 / 0.16 / 0.05 |
+
+Findings:
+
+1. **Present ≠ readable ≠ controlling.**
+   - In C1.0 the canonical quantity is present and readable by step 1,000 (0.87–0.88). It controls only 0.14 of
+     unseen-combination answers, and held-out accuracy is 0.04.
+   - Control then grows to 0.47 over the next 5,000 steps while presence barely changes.
+   - In C0.1, information is present and readable (0.84–0.88) but never controls beyond 0.14.
+   - The structure that matters for generalisation is therefore **the reader's use of the code**, not the code's
+     existence. This is the same conclusion as doc 41R.6, now separated into three measured levels.
+2. **Dimensionality shrinks as the code becomes causal.** Effective rank falls 5.35 → 4.58. The top-4 directions
+   carry 63% of the control at step 1,000 and 89% at step 6,000. Of the "12-dimensional" subspace, about **4
+   dimensions do the causal work**.
+3. **Necessity for ordinary prediction holds, but is not specific to canonical structure.** Mean-ablating the
+   subspace destroys trained accuracy in **every** condition (0.13–0.29), while a random subspace of equal rank does
+   not (≥ 0.95). In conditions without canonical supervision, the same span also carries number and unit
+   information. So the subspace is necessary for ordinary predictions everywhere, and canonical *only* in C1.0.
+4. **The geometry becomes multiplicative over training, and that determines which edits are linear.**
+   - In C1.0, one linear map fitted on 9 classes inverts the 4 held-out classes at 0.33 → 0.67 → **0.78**
+     (steps 1,000 → 3,000 → 6,000), and doubles them at 0.32 → 0.42.
+   - Add-one never transfers (0.06).
+   - Inversion is a reflection and doubling a rotation of a discrete-log circle; add-one is neither. The
+     registry's I09 (inversion 96% vs add-one 9% in a different network) is the same phenomenon.
+5. **Consistency across networks.**
+   - The 13×13 class-mean distance structure correlates between seeds at mean ρ = 0.65 in C1.0 (range 0.24–0.89)
+     and 0.51 in C0.1.
+   - **Cross-network alignment:** a single orthogonal map fitted only on class means lets an activation from one
+     C1.0 network drive another C1.0 network's computation. Over 12 pairs:
+     - transplant switch rate 0.41 (0.23–0.69);
+     - the receiving network's own subspace effect 0.47;
+     - a random rotation 0.05.
+   - **The concept can be moved between independently trained networks at about 87% of its within-network effect.**
+
+## 46R.2 Generalisation and editability, resolved [O]
+
+Sources: `runs/swap_recon/part_edit.json` and `edit_ladder.json`. Prediction P4 was stated in §46.5 before running.
+
+A **per-part edit** treats the declared block as composable parts. It shifts the value part (v → f-consistent v′) and
+the unit part (u → u′) of the additive model separately. For inversion: v → v⁻¹, and mass unit-scale 5 ↔ 8.
+
+| network | unseen-mass generalisation | class-mean edit (L3) | **per-part inversion**, trained / unseen renderings | per-part doubling, trained / unseen | fixed points preserved (trained / unseen) |
+|---|---|---|---|---|---|
+| **307** | 1.00 | 0.14 | **1.00 / 1.00** | **1.00 / 1.00** | 1.00 / 1.00 |
+| 311 | 1.00 | 0.08 | 0.67 / 0.36 | 0.73 / 0.43 | 0.85 / 1.00 |
+| 300 | 0.57 | — | 0.78 / 0.54 | 0.99 / 0.55 | 0.91 / 1.00 |
+| 305 | 0.46 | — | 0.40 / 0.55 | 0.91 / 0.55 | 0.75 / 1.00 |
+| 304 | 0.09 | 0.14 | 0.12 / 0.25 | 0.49 / 0.10 | 0.68 / 1.00 |
+| 310 | 0.09 | 0.14 | 0.17 / 0.02 | 0.07 / 0.00 | 0.71 / 1.00 |
+| 302 | 0.19 | — | 0.02 / 0.25 | 0.08 / 0.02 | 0.88 / 1.00 |
+| 11 fitted `neither` networks (no declared block) | 0.78–0.97 | — | 0.00–0.10 | 0.00 | — |
+
+**P4 outcome.** *Supported* for factorised networks: the per-part edit succeeds where class-mean edits fail, perfectly
+in 307. *Not supported* for "the reverse in failures": class-mean edits also fail in failures.
+
+**Answering the owner's five possibilities** for why near-perfect generalisation did not yield successful weight
+edits:
+
+- **Limitation of the editing instrument: yes, primarily.** The class-mean affine edit (doc 15) assumes one internal
+  pattern per canonical value. In a factorised block a value has one pattern per rendering. An edit acting on the
+  parts edits 307 perfectly, on both trained and unseen renderings, with all fixed points preserved.
+- **Differences in internal organisation: yes.** Factorised (generalising) and interaction (failing) blocks need
+  different edits. The interaction blocks resist both edit types.
+- **Dependence on input units: yes,** in the specific sense that the edit must change the unit part, a different unit
+  pattern, not just the value part.
+- **Different representations of equivalent information: yes.** Equal canonical masses have different block patterns
+  but the same computational effect: PR #34 alias agreement 99.9%; here, alias distance ratio 1.5 with 98.6% equal
+  predictions.
+- **Distributed pathways: not needed to explain these results.** Replacing only the in-span coordinates of the block
+  suffices (L2′ = 1.00). Separately, the head's composition is the second requirement for generalisation (C2): in 300
+  and 305 the block for unseen pairings is predicted by the additive model (errors 0.07, 0.19), yet the networks are
+  only partly correct.
+
+**The six editing levels in 307** (generaliser) vs 304 (failure):
+
+| level | 307 | 304 |
+|---|---|---|
+| 1. localisation | yes (IIA 1.00) | yes (IIA 1.00) |
+| 2. activation replacement | 1.00 | 1.00 |
+| 3. mathematical transformation of activations | class-mean 0.14; **per-part 1.00** | class-mean 0.14; per-part 0.12 |
+| 4. permanent weight modification | not yet constructed for the per-part edit. It needs unit-conditional parameters or a per-part map folded into the embedding/attention value path, a proposal under P4. The class-mean map folded into W_in gives 0.08. | 0.08 |
+| 5. preservation of generalisation after edit | per-part edit on unseen renderings 1.00 | 0.25 |
+| 6. preservation of unrelated computations | fixed points 1.00 | 0.68 (trained) |
+
+## 46R.3 Decoder generality (C2), retrospective [O]
+
+Additive-model prediction error for the unseen renderings' block activations:
+- 0.07 for `mass_only_s300`, which has OOD 0.57;
+- 0.19 for 305 (OOD 0.46).
+
+The block holds the right composable parts, yet the head composes them correctly only part of the time. C2 is
+**supported** as the reason factorisation is necessary but not sufficient. In 305 the head's composition also
+**erodes** after fitting: OOD falls from 0.75 to 0.46 between steps 1,800 and 6,000, while factorisation stays at 0.96
+and route-specificity at 0.39. Unseen pairings are not anchored by any loss, and the head drifts.
+
+## 46R.4 Cohort supervision (`runs/swap_recon/reviews/`)
+
+All 61 cohorts carry a measurement-grounded review. Each has the state, events, interpretation, any anomaly
+investigated, and a prediction checked at the next cohort.
+
+**Predictions: 57 held, 3 failed.**
+- Step 100: two networks were still climbing to the plateau.
+- Steps 1,900 and 2,000: 305's unseen-mass accuracy oscillated by −0.28 and then +0.21, the first sign of its erosion.
+
+**Anomalies investigated:**
+- the zero-detection plateau (answers correct only when mass or acceleration is 0);
+- transient instabilities in 307 (steps 1,150 and 1,300) and 304 (around step 1,450);
+- 305's erosion;
+- late settlements in the acceleration group (309 settles at 4,100 and generalises; 311 settles at 4,200 and fails).
