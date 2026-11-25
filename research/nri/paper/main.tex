@@ -45,6 +45,18 @@ and its operation, unit conversions, operand binding and output decoding can eac
 independently. Learned generalisers share its causal variables (a factorised two-dimensional mass code,
 interchange-equivalent to the construction) but store them as a circle, and rely on pairwise token interactions that
 explain the residual of their decoders; the construction is exact but fragile, the learned solutions robust.
+The historical networks reconstruct bit for bit, but their individual outcomes are not numerically stable:
+rounding-level changes to the trainer (gradients equal to $\sim10^{-7}$ at the same weights) turned both near-perfect
+generalisers into ordinary ones (unseen accuracy $0.998\to0.14$--$0.79$). The developmental and causal results
+therefore describe the observed trajectories; how prevalent and how stable those trajectories are remains unresolved.
+In protected modular networks, the advantage of installing a compiled mechanism comes from its \emph{canonical
+semantic interface} rather than its compiled arithmetic. Read-only computational registers let new operations that
+combine existing quantities be learned 3--9$\times$ faster and generalise to withheld operand combinations (1.00 against
+0.00--0.15), while every earlier mechanism is retained bitwise. Structural output ownership guarantees a compiled
+operation's answer for every value of the trainable parameters, including adversarial ones; freezing and
+semantic-preservation losses do not. A mathematical rule recovered post hoc from a learned module and recompiled
+generalises perfectly, but the registered extraction criterion failed. Learning genuinely unfamiliar rules, and
+robustness of constructed networks, remain unresolved.
 \end{abstract}
 
 \section{Introduction}
@@ -74,6 +86,12 @@ critical window but not after it, and not sufficient (\S\ref{sec:causal}).
 separation of representation defects from decoder defects (\S\ref{sec:repair}--\ref{sec:decoder}).
 \item A neural compiler: exact, training-free construction of the computation in the same architecture, an
 instruction set over its internal components, and a comparison with the learned solutions (\S\ref{sec:compile}).
+\item Protected modular computation (\S\ref{sec:protect}): an ablation locating the hybrid advantage in canonical
+semantic interfaces; structural output ownership as a parameter-independent correctness guarantee; bitwise retention
+across sequentially trained modules; compositional generalisation through read-only registers; and a
+learn--extract--recompile cycle whose registered criterion failed.
+\item A separation of three reproducibility tiers (\S\ref{sec:tiers}): exact historical reconstruction holds, while
+numerical stability of individual outcomes fails for the historical generalisers.
 \end{enumerate}
 Throughout we distinguish \emph{demonstrated} results (registered endpoints, exact identities, and registered causal
 interventions) from \emph{observed} retrospective measurements and \emph{proposed} mechanisms.
@@ -208,6 +226,13 @@ excludes coincidentally correct answers, moves 0 of 2,692 eligible answers in 30
 unseen input into a familiar one gives the predicted answer at 0.99--1.00 in generalisers and 0.09 in failures; across
 all 24 declared networks, declared-variable accuracy on unseen inputs equals this causal measure.
 
+\emph{Status of these outcomes.} Every historical network reconstructs bit for bit (a 6,000-step replay of 307 gives
+its stored weights exactly), so the trajectories analysed below are exactly the ones that occurred. They are not
+numerically stable, however (\S\ref{sec:tiers}): retraining 307 and 311 with trainer changes that alter only floating-point
+rounding left neither a near-perfect generaliser, and 307 under one such change never left the plateau. The analyses
+in this and the next three sections describe these observed trajectories. They do not establish how often a given
+configuration produces them, or whether the same seed would produce them under a different numerical environment.
+
 \subsection{What happens in the critical window}
 \begin{figure}[t]\centering
 \includegraphics[width=\linewidth]{figures/fig3_swap_development.pdf}
@@ -304,6 +329,11 @@ the same intervention from step 2,000 destroyed 311's factorisation but not its 
 not sufficient: penalising the interaction from before each failure's lock-in gave only partial generalisation, later
 starts gave none, and restoring factorisation after lock-in to 0.98--0.99 left unseen accuracy at chance. No rescue met
 the registered criterion. Freezing or projecting the second attention layer's query/key gradients did not help.
+
+These are causal statements about the observed trajectories, each compared with its own bitwise-matched control. Because
+the generalisers' outcomes are not stable under rounding-level perturbation (\S\ref{sec:tiers}), whether factorisation
+is necessary during development in trajectories that the same configuration produces under other numerical conditions,
+and how prevalent such trajectories are, remain unresolved.
 
 \section{Repair without training}\label{sec:repair}
 Single-pass edits of fixed networks separate three defects. Replacing a failure's block for unseen inputs by the
@@ -423,6 +453,117 @@ was worse than training from scratch, because learned writes into the shared res
 of the data, no condition learned $U$, and only structural protection combined with a semantic-preservation loss kept
 $F$ intact end to end. Validated input-side lenses (finite, type-legal token interventions) replaced the gradient-based
 S-lens; the averaged-lens ``dark residual'' remains unresolved because no sector instrument passed validation.
+(Correction: the Phase VII trainable-parameter count for the protected hybrids, 191,516, included 38,656 structurally
+zeroed write-block entries; the effective count is 152,860, \S\ref{sec:protect}.)
+
+\section{Protected computation and modular accumulation}\label{sec:protect}
+All results in this section are registered (doc 59) unless labelled post hoc. Every Phase VII hybrid run audited
+here reproduced bitwise (11/11 runs, maximum difference 0.0).
+
+\paragraph{1. The hybrid advantage comes from canonical semantic interfaces, not compiled arithmetic.} Installing
+successively more of the construction (each with write protection) and training the new operation $MA+S$ shows where
+the advantage lies. Typed embeddings alone reached competence in 0/3 seeds, and adding operand binding in 1/3 (3,800
+steps). Adding the canonical unit-converted quantities at the readout position gave 3/3 at 600--800 steps. Adding the
+compiled arithmetic as well changed nothing for the new operation (600--1,200 steps); it only made the old one exact.
+The same frozen, write-protected slices filled with random values were worse than installing nothing: they did not
+even fit the training set (training accuracy 0.11--0.15).
+
+\begin{table}[t]\centering\small
+\caption{Cost to learn the new operation to competence (familiar $\ge0.99$, unseen $\ge0.95$). FLOPs are analytic
+training FLOPs (forward $+$ backward $\approx3\times$ forward, plus interchange passes), counting frozen and zeroed
+weights because they are still multiplied; periodic evaluation ($4.4\times10^{10}$ FLOPs per evaluation) is excluded.
+``Spent per success'' adds the full budget of every unsuccessful seed. Constructing the installed mechanism is
+closed-form (0.008 CPU-seconds); verifying it exhaustively on all 9,126 prompts costs $2.2\times10^{10}$ FLOPs (about
+1\% of the hybrids' cost to competence). Design and engineering effort for the compiler is not measurable in FLOPs and
+is not included.}\label{tab:cost}
+\setlength{\tabcolsep}{3pt}\footnotesize
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+condition & trainable & FLOPs/step & competent & to competence & spent/success\\\midrule
+from scratch (B) & 269,952 & $1.86\times10^9$ & 0/3 & --- & $>3.4\times10^{13}$\\
+parameter-matched (B$_p$) & 153,312 & $1.06\times10^9$ & 1/3 & $4.5\times10^{12}$ & $1.7\times10^{13}$\\
+compute-matched (B$_c$, 12k steps) & 269,952 & $1.86\times10^9$ & 1/3 & $1.6\times10^{13}$ & $6.1\times10^{13}$\\
+semantic interface only (S3) & 160,640 & $1.86\times10^9$ & 3/3 & $1.1$--$1.5\times10^{12}$ & $1.4\times10^{12}$\\
+protected hybrid (K2) & 152,860 & $1.86\times10^9$ & 3/3 & $1.1$--$1.5\times10^{12}$ & $1.3\times10^{12}$\\
+protected $+$ preservation loss (K5) & 152,860 & $3.63\times10^9$ & 3/3 & $2.2\times10^{12}$ & $2.2\times10^{12}$\\
+output ownership (P) & 152,860 & $1.86\times10^9$ & 1/3 & $1.5\times10^{12}$ & $2.4\times10^{13}$\\\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:cost} gives the corrected accounting. Measured by FLOPs actually spent per competent network, including
+unsuccessful seeds, the semantic-interface and protected-hybrid conditions (S3, K2) are 12--47$\times$ cheaper than the
+parameter- and compute-matched baselines, and K5 8--28$\times$. The advantage is not explained by fewer optimiser steps alone: K5 costs
+$1.95\times$ more per step than training from scratch.
+
+\paragraph{2. Protected registers enable compositional generalisation and reduce data and compute for related
+tasks.} In a modular network, a compiled stage writes read-only registers holding $MA$ and $M+A$; one small learned
+module per new operation reads only read-only dimensions and is frozen after its stage. 20\% of canonical $(M,A)$ pairs
+were withheld from all training. With registers visible, $MA+S$ and $(M+A)S$ were learned in 200--400 steps and were
+correct on all withheld pairs (1.00). With only $M$, $A$, $S$ visible they took 1,200--1,800 steps and scored 0.00--0.15
+on withheld pairs. With the $MA$ register, $MA+S$ reached competence from 25\% of the data in every seed (200--400
+steps). Without it, random 25\% just missed (unseen 0.95--0.96); structured sampling covering every canonical triple
+succeeded in 1,600--1,800 steps. \textbf{[Learning curves for the dual-operation transformers: pending the
+completion of experiment E.]}
+
+\paragraph{3. Structural output ownership gives a stronger guarantee than freezing or preservation losses.} With
+read-only regions, structural write masks and a deterministic output gate (the compiled operation owns its logits),
+the compiled operation was exact end to end for 20 random settings of every trainable parameter (scales $1$ to $10^4$)
+and after 500 adversarial optimisation steps \emph{maximising} its loss. This holds by construction for every parameter
+value. The same architecture without the gate kept its compiled sub-circuit exact but answered only 7\% correctly
+end to end under the same perturbations. A preservation loss (K5) constrains only trained parameter values, and freezing
+alone was already shown to fail in Phase VII. No gradient reached, and no write occurred in, any blocked entry. The
+gate costs something: on full data the gated network generalised the new operation in 1 of 3 seeds, against 3/3 for
+K5 (prediction not supported).
+
+\paragraph{4. Existing mechanisms are retained bitwise while new modules are trained.} Across three sequential
+stages and six runs, the compiled operations stayed exact and every earlier learned module's outputs stayed bitwise
+identical after every later stage.
+
+\paragraph{5. Recompilation of the post-hoc candidate generalises perfectly; the registered extraction criterion
+failed.} An extractor that never imports the rule generator queried a frozen learned module for an independently
+generated rule $(aM+bA+cS+d)\bmod13$ on all 507 canonical states and searched the compiler's hypothesis space. Its
+best candidate equalled the hidden rule and was unique by a wide margin (agreement 0.81 against 0.29), but the
+registered acceptance threshold (0.99) failed in all three seeds: the learned module was wrong on the withheld pairs.
+Restricting the query to trained pairs (\emph{post hoc}) gave the rule at agreement 1.00; the negative control (a
+random table) was rejected. The recompiled module was exact everywhere, including the withheld pairs where the learned
+module scored 0.01--0.03. We make no claim of automated discovery.
+
+\paragraph{6. Learning genuinely unfamiliar rules remains unresolved.} The independently generated rule was learned
+on familiar data in every condition but did not generalise to withheld operand pairs (0.01--0.03 with registers,
+0.17--0.20 without). The architecture accumulates capabilities that combine what it already has; from these data it
+does not induce a rule outside that span.
+
+\paragraph{7. Robustness remains unresolved.} Spreading attention scores over head dimensions, redundant heads with
+consensus, and balanced minimal gains kept exactness at zero noise but reached at most 0.52 accuracy under 1\%
+multiplicative weight noise (target 0.95; rescaling alone: 0.46). An alternative position-based routing was less
+robust. An independent report (unverified) attributes the residual sensitivity to the arithmetic decoder rather than
+routing.
+
+\paragraph{Reusable compiled operators.} Common-subexpression elimination, lifetime analysis with register reuse
+(exact clears), weight-tied function calls and conditional selection all compile exactly with observable
+intermediates (63 expressions, four variants each). Register reuse trades width for compute: it reduced the residual
+width by 14 dimensions on average but cost about 23\% more FLOPs. A tied loop computes $x^{2^n}$ for $n\le6$ with 7,510
+unique parameters, against 29,595 when unrolled.
+
+\section{Reproducibility tiers}\label{sec:tiers}
+We distinguish three properties that are often conflated.
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item \emph{Exact historical reconstruction}: the same code, library, machine type and thread count produce
+bit-identical weights. This holds for the historical networks: a 6,000-step replay of 307 equals its stored weights, and
+the Phase VII hybrid runs reproduce bitwise.
+\item \emph{Numerical stability}: rounding-level changes (library version, thread count, algebraically identical
+kernels) leave the scientific outcome unchanged. This \textbf{fails} for the historical generalisers. With trainer
+variants whose gradients equal the original's to $\sim10^{-7}$ at the same weights, \texttt{mass\_only} 307 and 311
+(unseen-mass accuracy 0.998 and 0.999) became ordinary networks (0.44 and 0.79 uncompiled; 0.14 and 0.28 with
+compilation, 307 never leaving the plateau); one \texttt{acc\_only} network stopped converging. The
+\texttt{neither} arm was stable in the seeds tested. Single-thread and four-thread runs of the unchanged trainer also
+differ bitwise.
+\item \emph{General (population) reproducibility}: arm-level outcome distributions are preserved under such changes.
+This is \textbf{untested}; it requires a preregistered multi-seed comparison.
+\end{itemize}
+The historical 307/311 outcomes were the only two near-perfect generalisers among twelve \texttt{mass\_only} seeds,
+and they do not survive rounding-level perturbation. They are best read as rare trajectories of a training process that
+is chaotic at this scale, not as properties of their seeds. Conclusions about training conditions must rest on
+distributions over many seeds, compared under a fixed numerical environment.
 
 \section{A qualification standard for reusable computation}
 We count a network as having learned a reusable computation only with (i) $\ge 95\%$ accuracy on the \emph{entire}
@@ -461,6 +602,11 @@ decoder-isolation construction deviated from its registration (\S\ref{sec:decode
 of per-variable codes; mixed-domain expressions (e.g.\ $MA+S$) need a second nonlinear stage that was not built, and
 the compiler's larger domains are verified on samples. Owner-side verification of the
 preserved checkpoint archives is pending at the time of writing.
+The historical per-seed outcomes are exactly reconstructible but not numerically stable (\S\ref{sec:tiers}); their
+developmental and causal analyses describe the observed trajectories, and the prevalence and stability of those
+trajectories are unresolved. Phase VIII results use 2--3 seeds per condition. The unfamiliar-rule and robustness
+problems are open. Results from an independent polynomial-attention study (Track C) are cited as unverified until its
+source revision, implementation and experiments have been checked.
 
 \section*{Hybrid repair}
 Decoder replacement (learned encoder, familiar-fitted linear readouts of the log coordinates, constructed decoder)
@@ -471,7 +617,8 @@ helped failures most (unseen 0.56--0.76; random-grouping control $\le0.13$) but 
 \section*{Provenance}
 Training, analysis and drafting were executed by an AI research agent (Claude Code) in a cloud container under the
 owner's registration, scope and approval rules. The specific model version is not inferred from attribution
-metadata. PR \#34 is an independent study by a different agent and was used read-only.
+metadata. PR \#34 is an independent study by a different agent and was used read-only. The CPU acceleration track
+(doc 61) was carried out jointly with a second agent (ChatGPT Work), whose results are cited from its own reports.
 
 \appendix
 \section{Reproducibility}
