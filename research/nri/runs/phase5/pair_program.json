@@ -1,0 +1,163 @@
+{
+ "mass_only_s307": {
+  "additive": {
+   "agree_familiar": 0.491700679063797,
+   "agree_unseen_mass": 0.5654761791229248,
+   "acc_unseen_mass": 0.5607143044471741
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.4922448992729187,
+   "agree_unseen_mass": 0.5654761791229248,
+   "acc_unseen_mass": 0.5607143044471741
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.4926530718803406,
+   "agree_unseen_mass": 0.19761905074119568,
+   "acc_unseen_mass": 0.1964285671710968
+  },
+  "+both": {
+   "agree_familiar": 0.4937414824962616,
+   "agree_unseen_mass": 0.19761905074119568,
+   "acc_unseen_mass": 0.1964285671710968
+  },
+  "network_acc_unseen_mass": 0.9952380657196045
+ },
+ "mass_only_s311": {
+  "additive": {
+   "agree_familiar": 0.5243537425994873,
+   "agree_unseen_mass": 0.24761904776096344,
+   "acc_unseen_mass": 0.24761904776096344
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.7722448706626892,
+   "agree_unseen_mass": 0.40119048953056335,
+   "acc_unseen_mass": 0.40119048953056335
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.5235373973846436,
+   "agree_unseen_mass": 0.2785714268684387,
+   "acc_unseen_mass": 0.2785714268684387
+  },
+  "+both": {
+   "agree_familiar": 0.8888435363769531,
+   "agree_unseen_mass": 0.3047619163990021,
+   "acc_unseen_mass": 0.3047619163990021
+  },
+  "network_acc_unseen_mass": 1.0
+ },
+ "mass_only_s300": {
+  "additive": {
+   "agree_familiar": 0.3359183669090271,
+   "agree_unseen_mass": 0.2083333283662796,
+   "acc_unseen_mass": 0.19523809850215912
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.33401361107826233,
+   "agree_unseen_mass": 0.2261904776096344,
+   "acc_unseen_mass": 0.21190476417541504
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.33673468232154846,
+   "agree_unseen_mass": 0.19523809850215912,
+   "acc_unseen_mass": 0.190476194024086
+  },
+  "+both": {
+   "agree_familiar": 0.33605441451072693,
+   "agree_unseen_mass": 0.20357142388820648,
+   "acc_unseen_mass": 0.19404761493206024
+  },
+  "network_acc_unseen_mass": 0.5559523701667786
+ },
+ "mass_only_s305": {
+  "additive": {
+   "agree_familiar": 0.2674829959869385,
+   "agree_unseen_mass": 0.24285714328289032,
+   "acc_unseen_mass": 0.1964285671710968
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.2665306031703949,
+   "agree_unseen_mass": 0.24761904776096344,
+   "acc_unseen_mass": 0.1964285671710968
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.2386394590139389,
+   "agree_unseen_mass": 0.15833333134651184,
+   "acc_unseen_mass": 0.130952388048172
+  },
+  "+both": {
+   "agree_familiar": 0.23687075078487396,
+   "agree_unseen_mass": 0.1547619104385376,
+   "acc_unseen_mass": 0.12976190447807312
+  },
+  "network_acc_unseen_mass": 0.4690476059913635
+ },
+ "mass_only_s302": {
+  "additive": {
+   "agree_familiar": 0.24965986609458923,
+   "agree_unseen_mass": 0.13571429252624512,
+   "acc_unseen_mass": 0.21785713732242584
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.26476189494132996,
+   "agree_unseen_mass": 0.12976190447807312,
+   "acc_unseen_mass": 0.2321428507566452
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.4234013557434082,
+   "agree_unseen_mass": 0.12261904776096344,
+   "acc_unseen_mass": 0.22738094627857208
+  },
+  "+both": {
+   "agree_familiar": 0.4540136158466339,
+   "agree_unseen_mass": 0.11547619104385376,
+   "acc_unseen_mass": 0.23571428656578064
+  },
+  "network_acc_unseen_mass": 0.19166666269302368
+ },
+ "mass_only_s304": {
+  "additive": {
+   "agree_familiar": 0.28040817379951477,
+   "agree_unseen_mass": 0.16190476715564728,
+   "acc_unseen_mass": 0.09285714477300644
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.2866666615009308,
+   "agree_unseen_mass": 0.16904762387275696,
+   "acc_unseen_mass": 0.08571428805589676
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.32163265347480774,
+   "agree_unseen_mass": 0.17976190149784088,
+   "acc_unseen_mass": 0.09642857313156128
+  },
+  "+both": {
+   "agree_familiar": 0.34190475940704346,
+   "agree_unseen_mass": 0.19285714626312256,
+   "acc_unseen_mass": 0.08690476417541504
+  },
+  "network_acc_unseen_mass": 0.08571428805589676
+ },
+ "mass_only_s310": {
+  "additive": {
+   "agree_familiar": 0.26326531171798706,
+   "agree_unseen_mass": 0.12261904776096344,
+   "acc_unseen_mass": 0.16190476715564728
+  },
+  "+acc_cell": {
+   "agree_familiar": 0.36625850200653076,
+   "agree_unseen_mass": 0.08571428805589676,
+   "acc_unseen_mass": 0.08571428805589676
+  },
+  "+mass_cell": {
+   "agree_familiar": 0.29319727420806885,
+   "agree_unseen_mass": 0.12619048357009888,
+   "acc_unseen_mass": 0.17738094925880432
+  },
+  "+both": {
+   "agree_familiar": 1.0,
+   "agree_unseen_mass": 0.08571428805589676,
+   "acc_unseen_mass": 0.08571428805589676
+  },
+  "network_acc_unseen_mass": 0.09166666865348816
+ }
+}

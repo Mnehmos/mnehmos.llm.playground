@@ -1,0 +1,163 @@
+{
+ "mass_only_s307": {
+  "additive_preact_real_skip": {
+   "agreement": 0.5048213601112366,
+   "acc_familiar": 0.491700679063797,
+   "acc_unseen": 0.556869387626648
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.5115056037902832,
+   "acc_familiar": 0.4953741431236267,
+   "acc_unseen": 0.5771396160125732
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.9229673743247986,
+   "acc_familiar": 0.9133333563804626,
+   "acc_unseen": 0.9605855941772461
+  },
+  "preact_r2_familiar": 0.8328220899735574,
+  "preact_r2_unseen": 0.9094399471824602,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.9977477192878723
+  }
+ },
+ "mass_only_s311": {
+  "additive_preact_real_skip": {
+   "agreement": 0.46088099479675293,
+   "acc_familiar": 0.5243537425994873,
+   "acc_unseen": 0.19819819927215576
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.45923733711242676,
+   "acc_familiar": 0.5216326713562012,
+   "acc_unseen": 0.20101352035999298
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.966469407081604,
+   "acc_familiar": 0.9776870608329773,
+   "acc_unseen": 0.9211711883544922
+  },
+  "preact_r2_familiar": 0.8952561120478398,
+  "preact_r2_unseen": 0.8208101980686839,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.9988738894462585
+  }
+ },
+ "mass_only_s300": {
+  "additive_preact_real_skip": {
+   "agreement": 0.30911681056022644,
+   "acc_familiar": 0.3359183669090271,
+   "acc_unseen": 0.16722972691059113
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.3235809803009033,
+   "acc_familiar": 0.35265305638313293,
+   "acc_unseen": 0.13963964581489563
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.7206881642341614,
+   "acc_familiar": 0.7321088314056396,
+   "acc_unseen": 0.34572070837020874
+  },
+  "preact_r2_familiar": 0.6836819539409118,
+  "preact_r2_unseen": 0.7499754115272349,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.43355855345726013
+  }
+ },
+ "mass_only_s305": {
+  "additive_preact_real_skip": {
+   "agreement": 0.2573964595794678,
+   "acc_familiar": 0.2674829959869385,
+   "acc_unseen": 0.1942567527294159
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.2321937382221222,
+   "acc_familiar": 0.23836734890937805,
+   "acc_unseen": 0.18130630254745483
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.731207549571991,
+   "acc_familiar": 0.7568707466125488,
+   "acc_unseen": 0.5647522807121277
+  },
+  "preact_r2_familiar": 0.6616034999489879,
+  "preact_r2_unseen": 0.669098754254736,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.7240990996360779
+  }
+ },
+ "mass_only_s302": {
+  "additive_preact_real_skip": {
+   "agreement": 0.2290159910917282,
+   "acc_familiar": 0.24965986609458923,
+   "acc_unseen": 0.18412162363529205
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.23175542056560516,
+   "acc_familiar": 0.24775509536266327,
+   "acc_unseen": 0.1987612545490265
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.9464168548583984,
+   "acc_familiar": 0.9745578169822693,
+   "acc_unseen": 0.35304054617881775
+  },
+  "preact_r2_familiar": 0.3347957460135521,
+  "preact_r2_unseen": 0.20404109503791656,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.37668919563293457
+  }
+ },
+ "mass_only_s304": {
+  "additive_preact_real_skip": {
+   "agreement": 0.25531449913978577,
+   "acc_familiar": 0.28040817379951477,
+   "acc_unseen": 0.11542792618274689
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.2539995610713959,
+   "acc_familiar": 0.27605441212654114,
+   "acc_unseen": 0.12894144654273987
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.9818102121353149,
+   "acc_familiar": 0.9995918273925781,
+   "acc_unseen": 0.2657657563686371
+  },
+  "preact_r2_familiar": 0.4788802009349007,
+  "preact_r2_unseen": 0.1923539752766119,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.2691441476345062
+  }
+ },
+ "mass_only_s310": {
+  "additive_preact_real_skip": {
+   "agreement": 0.23964497447013855,
+   "acc_familiar": 0.26326531171798706,
+   "acc_unseen": 0.14470720291137695
+  },
+  "additive_preact_and_skip": {
+   "agreement": 0.24117904901504517,
+   "acc_familiar": 0.2623129189014435,
+   "acc_unseen": 0.15090090036392212
+  },
+  "real_preact_additive_skip": {
+   "agreement": 0.9497041702270508,
+   "acc_familiar": 0.9801360368728638,
+   "acc_unseen": 0.28322070837020874
+  },
+  "preact_r2_familiar": 0.551661789782786,
+  "preact_r2_unseen": 0.19055628491679988,
+  "network": {
+   "acc_familiar": 1.0,
+   "acc_unseen": 0.2775900959968567
+  }
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "mass_only_s307": {
+  "preact_written_phases": 0.89540469141927,
+  "preact_canonical_phases": 0.36557074274648904,
+  "preact_token_additive": 0.8954765439732421,
+  "unit_dominant_k_hist": {
+   "1": 256,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.6730721910319355
+ },
+ "mass_only_s311": {
+  "preact_written_phases": 0.9164991849981946,
+  "preact_canonical_phases": 0.17469811821504322,
+  "preact_token_additive": 0.9167382599744271,
+  "unit_dominant_k_hist": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 256,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.6348449695349663
+ },
+ "mass_only_s300": {
+  "preact_written_phases": 0.7601061150217239,
+  "preact_canonical_phases": 0.12870192568042205,
+  "preact_token_additive": 0.7608747050400629,
+  "unit_dominant_k_hist": {
+   "1": 248,
+   "2": 8,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.5585279501451651
+ },
+ "mass_only_s305": {
+  "preact_written_phases": 0.6711182277485224,
+  "preact_canonical_phases": 0.22139935377049902,
+  "preact_token_additive": 0.6729187258913074,
+  "unit_dominant_k_hist": {
+   "1": 254,
+   "2": 0,
+   "3": 1,
+   "4": 0,
+   "5": 1,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.5467119423300169
+ },
+ "mass_only_s302": {
+  "preact_written_phases": 0.3440073918744624,
+  "preact_canonical_phases": 0.6721892903218776,
+  "preact_token_additive": 0.3466333865978768,
+  "unit_dominant_k_hist": {
+   "1": 57,
+   "2": 199,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.23854110941897932
+ },
+ "mass_only_s304": {
+  "preact_written_phases": 0.4606724409126377,
+  "preact_canonical_phases": 0.32463152603089585,
+  "preact_token_additive": 0.4612123600482215,
+  "unit_dominant_k_hist": {
+   "1": 255,
+   "2": 1,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.341334271192709
+ },
+ "mass_only_s310": {
+  "preact_written_phases": 0.4658264043741043,
+  "preact_canonical_phases": 0.655657481490511,
+  "preact_token_additive": 0.46641012075359023,
+  "unit_dominant_k_hist": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 256,
+   "6": 0
+  },
+  "unit_single_k_r2_median": 0.417907603562894
+ }
+}
