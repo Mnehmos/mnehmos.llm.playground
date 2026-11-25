@@ -1,0 +1,365 @@
+{
+  "controls": {
+    "discriminating_pairs": 667,
+    "canonical_planted_hits": 667,
+    "bypassed_planted_hits": 0,
+    "identity_exact": true
+  },
+  "archive": {
+    "307": {
+      "universe": {
+        "familiar": {
+          "hit": 7350,
+          "n": 7350
+        },
+        "unfamiliar": {
+          "hit": 1772,
+          "n": 1776
+        },
+        "mass_only": {
+          "hit": 836,
+          "n": 840
+        },
+        "acc_only": {
+          "hit": 840,
+          "n": 840
+        },
+        "both": {
+          "hit": 96,
+          "n": 96
+        }
+      },
+      "pred_sha256": "de63efc537b5dfee4f197ebdf3dd355358907ed2f91f32ec33d484f4406b11e5",
+      "frozen": {
+        "familiar": {
+          "hit": 8192,
+          "n": 8192,
+          "pred_sha256": "c0db3d25b4c32e0f4f47e58d9f93fcecda88da3834f615666939fb164d6e9902"
+        },
+        "unfamiliar": {
+          "hit": 8179,
+          "n": 8192,
+          "pred_sha256": "52279fca1d285f676a8b71da39b5a03f57ef94ce4863aebe3ce68739756eab69"
+        }
+      },
+      "swap": {
+        "familiar": {
+          "n": 4096,
+          "hit": 4096,
+          "eligible": 2652,
+          "intended": 2652,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 240,
+          "mlp_only_target": 1427,
+          "alias_both_correct": 2650,
+          "alias_prediction_agreement": 2650,
+          "block_alias_rms": 16.397457122802734
+        },
+        "unfamiliar": {
+          "n": 4096,
+          "hit": 4072,
+          "eligible": 2692,
+          "intended": 2674,
+          "unchanged": 0,
+          "wrong": 1,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 310,
+          "mlp_only_target": 1652,
+          "alias_both_correct": 2674,
+          "alias_prediction_agreement": 2674,
+          "block_alias_rms": 22.191692352294922
+        }
+      },
+      "model_file_sha256": "5613d63c2d7c44bca983acf80066356532405653062bce5b2b2019de68ce0ad7",
+      "historical_metrics_matched": true
+    },
+    "311": {
+      "universe": {
+        "familiar": {
+          "hit": 7350,
+          "n": 7350
+        },
+        "unfamiliar": {
+          "hit": 1774,
+          "n": 1776
+        },
+        "mass_only": {
+          "hit": 840,
+          "n": 840
+        },
+        "acc_only": {
+          "hit": 840,
+          "n": 840
+        },
+        "both": {
+          "hit": 94,
+          "n": 96
+        }
+      },
+      "pred_sha256": "ce052367c5b34ca426929a85fc6a52c84daeea1073960b7d2eed929d71ff2cf7",
+      "frozen": {
+        "familiar": {
+          "hit": 8192,
+          "n": 8192,
+          "pred_sha256": "c0db3d25b4c32e0f4f47e58d9f93fcecda88da3834f615666939fb164d6e9902"
+        },
+        "unfamiliar": {
+          "hit": 8181,
+          "n": 8192,
+          "pred_sha256": "1f5e3781367cfeae75ae8aaf2b166722d42f1c2c121b66d1c9d37a71b189f167"
+        }
+      },
+      "swap": {
+        "familiar": {
+          "n": 4096,
+          "hit": 4096,
+          "eligible": 2652,
+          "intended": 2652,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 211,
+          "mlp_only_target": 1470,
+          "alias_both_correct": 2650,
+          "alias_prediction_agreement": 2650,
+          "block_alias_rms": 12.329341888427734
+        },
+        "unfamiliar": {
+          "n": 4096,
+          "hit": 4085,
+          "eligible": 2692,
+          "intended": 2681,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 174,
+          "mlp_only_target": 1198,
+          "alias_both_correct": 2681,
+          "alias_prediction_agreement": 2681,
+          "block_alias_rms": 10.725111961364746
+        }
+      },
+      "model_file_sha256": "5c9f3dda0e66fffc2044f0bfe5ddc246faaab4a2f954f5b6a18ddb9957411452",
+      "historical_metrics_matched": true
+    },
+    "305": {
+      "universe": {
+        "familiar": {
+          "hit": 7350,
+          "n": 7350
+        },
+        "unfamiliar": {
+          "hit": 1286,
+          "n": 1776
+        },
+        "mass_only": {
+          "hit": 394,
+          "n": 840
+        },
+        "acc_only": {
+          "hit": 840,
+          "n": 840
+        },
+        "both": {
+          "hit": 52,
+          "n": 96
+        }
+      },
+      "pred_sha256": "e93406018ef1e7c973c354bd07caabf429b5185bcda03cdb180c3310a380081d",
+      "frozen": {
+        "familiar": {
+          "hit": 8192,
+          "n": 8192,
+          "pred_sha256": "c0db3d25b4c32e0f4f47e58d9f93fcecda88da3834f615666939fb164d6e9902"
+        },
+        "unfamiliar": {
+          "hit": 5826,
+          "n": 8192,
+          "pred_sha256": "f6f7dacee7b32349f3c1900097861eb5d0a18891f09229cda6012d10ff04fcfe"
+        }
+      },
+      "swap": {
+        "familiar": {
+          "n": 4096,
+          "hit": 4096,
+          "eligible": 2652,
+          "intended": 2652,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 199,
+          "mlp_only_target": 896,
+          "alias_both_correct": 2466,
+          "alias_prediction_agreement": 2466,
+          "block_alias_rms": 12.968055725097656
+        },
+        "unfamiliar": {
+          "n": 4096,
+          "hit": 1483,
+          "eligible": 2692,
+          "intended": 801,
+          "unchanged": 182,
+          "wrong": 158,
+          "unpatched_target": 0,
+          "complement_target": 157,
+          "residual_only_target": 158,
+          "mlp_only_target": 559,
+          "alias_both_correct": 801,
+          "alias_prediction_agreement": 801,
+          "block_alias_rms": 20.803712844848633
+        }
+      },
+      "model_file_sha256": "bbbde6aef2a1ea09062fe4403201f0fd059e79968d0540771b6db42136b112c6",
+      "historical_metrics_matched": true
+    },
+    "304": {
+      "universe": {
+        "familiar": {
+          "hit": 7350,
+          "n": 7350
+        },
+        "unfamiliar": {
+          "hit": 478,
+          "n": 1776
+        },
+        "mass_only": {
+          "hit": 72,
+          "n": 840
+        },
+        "acc_only": {
+          "hit": 403,
+          "n": 840
+        },
+        "both": {
+          "hit": 3,
+          "n": 96
+        }
+      },
+      "pred_sha256": "3f5418973534b10d032dcbc3a9e4b9119e8c24cc79a90bbb6b9c87942b4f8d66",
+      "frozen": {
+        "familiar": {
+          "hit": 8192,
+          "n": 8192,
+          "pred_sha256": "c0db3d25b4c32e0f4f47e58d9f93fcecda88da3834f615666939fb164d6e9902"
+        },
+        "unfamiliar": {
+          "hit": 2158,
+          "n": 8192,
+          "pred_sha256": "8149fb44e00d4da2d55eca5e85f070812d385e4ac9972b005645018c48c6fd5b"
+        }
+      },
+      "swap": {
+        "familiar": {
+          "n": 4096,
+          "hit": 4096,
+          "eligible": 2652,
+          "intended": 2652,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 308,
+          "mlp_only_target": 2647,
+          "alias_both_correct": 2376,
+          "alias_prediction_agreement": 2376,
+          "block_alias_rms": 8.2088041305542
+        },
+        "unfamiliar": {
+          "n": 4096,
+          "hit": 365,
+          "eligible": 2692,
+          "intended": 0,
+          "unchanged": 221,
+          "wrong": 227,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 52,
+          "mlp_only_target": 0,
+          "alias_both_correct": 0,
+          "alias_prediction_agreement": 0,
+          "block_alias_rms": 10.37484359741211
+        }
+      },
+      "model_file_sha256": "fb813db1546e98c1544d179a05c1ebc52d6369fc2a67691390de4f0785804604",
+      "historical_metrics_matched": true
+    },
+    "310": {
+      "universe": {
+        "familiar": {
+          "hit": 7350,
+          "n": 7350
+        },
+        "unfamiliar": {
+          "hit": 493,
+          "n": 1776
+        },
+        "mass_only": {
+          "hit": 77,
+          "n": 840
+        },
+        "acc_only": {
+          "hit": 414,
+          "n": 840
+        },
+        "both": {
+          "hit": 2,
+          "n": 96
+        }
+      },
+      "pred_sha256": "7960fba49dbfaeda00e010de5bf0fb5c94e6331b061e72344a193d929e73e1cc",
+      "frozen": {
+        "familiar": {
+          "hit": 8192,
+          "n": 8192,
+          "pred_sha256": "c0db3d25b4c32e0f4f47e58d9f93fcecda88da3834f615666939fb164d6e9902"
+        },
+        "unfamiliar": {
+          "hit": 2231,
+          "n": 8192,
+          "pred_sha256": "98c975a523f4182b08f7194883626b5aec6c0d02a371526c9eed94873d58945a"
+        }
+      },
+      "swap": {
+        "familiar": {
+          "n": 4096,
+          "hit": 4096,
+          "eligible": 2652,
+          "intended": 2652,
+          "unchanged": 0,
+          "wrong": 0,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 223,
+          "mlp_only_target": 2448,
+          "alias_both_correct": 2376,
+          "alias_prediction_agreement": 2376,
+          "block_alias_rms": 6.046856880187988
+        },
+        "unfamiliar": {
+          "n": 4096,
+          "hit": 370,
+          "eligible": 2692,
+          "intended": 3,
+          "unchanged": 178,
+          "wrong": 234,
+          "unpatched_target": 0,
+          "complement_target": 135,
+          "residual_only_target": 48,
+          "mlp_only_target": 92,
+          "alias_both_correct": 3,
+          "alias_prediction_agreement": 3,
+          "block_alias_rms": 7.5593085289001465
+        }
+      },
+      "model_file_sha256": "1ba27f60de20a64c43cf505400dc91771b9d085ba1095c83a543a19ebcffbeb7",
+      "historical_metrics_matched": true
+    }
+  }
+}
