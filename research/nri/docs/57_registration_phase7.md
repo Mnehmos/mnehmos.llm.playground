@@ -267,3 +267,66 @@ logits from the learned components), OP₂ learning speed, and final accuracy.
   logged as deviations, and the failed versions are kept.
 - No seed selection.
 - Mathematical guarantees, exhaustive verification and sampled verification are labelled as such.
+
+## Addendum A: exact configuration for H and K (committed before any training run)
+
+### Task
+
+| element | definition |
+|---|---|
+| vocabulary | 26: token 25 = **OP₂**; token 23 (→) = **OP₁** |
+| OP₁ target | F = M·A·S |
+| OP₂ target | U = (M·A + S) mod 13 |
+| training prompts | familiar renderings only, with both operations sampled equally |
+| evaluation | the full domain for both operations (2 × 9,126 prompts); "unseen" uses the usual OOD rule |
+| 25% regime | a fixed, seeded 25% subset of the familiar (prompt, operation) pairs |
+
+### Hybrid architecture
+
+- TinyTyped with d = 128, 8 heads × 16, d_mlp = 512, n_types = 1, no auxiliary head, vocabulary 26.
+- **Constructed slice** (Design C, installed exactly):
+  - E_c[0:26, 0:64], E_p[:, 0:64], E_t[:, 0:64];
+  - for heads 0–3 of each layer: the q, k and v rows (and their biases), restricted to input columns 0–63;
+  - o.weight[0:64, 0:64] and o.bias[0:64];
+  - W_in[0:36, 0:64] and b_in[0:36];
+  - W_out[0:64, 0:36] and b_out[0:64];
+  - W_U[:, 0:64].
+- **The constructed OP₁ path is gated off for OP₂ prompts.**
+  - Spare layer-2 head 3 carries an OP₂ flag (key: dimension 52 of the OP₂ embedding, set to 1; null key on ×) to
+    dimension 51 at "=".
+  - Every OP₁ hat and zero unit subtracts B·flag, so the constructed logits are exactly 0 for OP₂ prompts.
+  - This uses 36 hidden units: the 34 hats + 2 zero units.
+- All other entries take PyTorch's default initialisation (seeded).
+
+### Conditions
+
+| condition | initialisation | what is trainable | constraint |
+|---|---|---|---|
+| **B** | same architecture, all default | everything | — |
+| **B′** | d = 120, 8 heads × 15, d_mlp = 480; 237,720 parameters ≈ C's trainable count (within 4%) | everything | — |
+| **C = K1** | constructed slice installed | everything except the constructed slice | the constructed slice is restored bitwise after every optimiser step, so weight decay cannot touch it |
+| **K2** | as C | as C | additionally, *learned writes into dimensions 0–63* are zeroed and kept at zero: o.weight[0:64, 64:128] of both layers; W_out[0:64, 36:512]; E_c[:, 0:64] and E_p[:, 0:64] are part of the constructed slice. The constructed sub-circuit's inputs and its logit contribution are then exact by construction |
+| **K3** | as C | as C | updates to learned weights that write into dimensions 0–63 are projected out (their gradient rows are zeroed), *without* zeroing their random initial values |
+| **K0** | constructed slice installed | everything | none |
+| **D = K4** | constructed slice installed | everything | loss = task CE + 1.0 × interchange CE: for OP₁ prompts in the batch, the "=" residual dimensions 0–12 (the M region) are replaced by a random other batch item's, and the target is F(M_src, A, S) |
+| **K5** | as K2 | as K2 | K2 + K4's interchange loss |
+| **A** | entirely constructed: the encoder + OP-flag head; block 1 holds the gated OP₁ ladder and the M·A node; block 2 holds the U = X + S node gated by (1 − flag) | no training | — |
+
+### Training
+
+| setting | value |
+|---|---|
+| optimiser | AdamW (lr 2·10⁻³, weight decay 0.01, betas 0.9/0.999) |
+| learning-rate schedule | constant |
+| batch size | 256 |
+| steps | 6,000 |
+| seeds | 0, 1, 2 |
+| data regimes | full and 25% |
+| evaluation | every 100 steps |
+
+**Measures.**
+- OP₁ and OP₂ accuracy, familiar and unseen.
+- **OP₁ sub-circuit exactness:** the fraction of OP₁ prompts whose constructed logit contribution, W_U[:, 0:64]·r[0:64],
+  equals one-hot(F) exactly.
+- **OP₁ interchange:** M-region interchange accuracy on 2,048 pairs, over the discriminating subset.
+- **Steps to criterion:** the first evaluation at which OP₂ familiar accuracy ≥ 0.99.
