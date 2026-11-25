@@ -1,0 +1,235 @@
+{
+ "mass_only_s307": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.9977477192878723
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.3462584912776947,
+   "unseen": 0.23029279708862305,
+   "readout_r2_familiar": 0.8735767373320185,
+   "readout_r2_unseen": 0.868772036908863,
+   "readout_max_abs_err_unseen": 9.355949261540562,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.7387754917144775,
+   "unseen": 0.6216216087341309
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.1915646195411682,
+   "unseen": 0.09515766054391861
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.26829931139945984,
+   "unseen": 0.13738738000392914,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s311": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.9988738894462585
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.24136054515838623,
+   "unseen": 0.15427927672863007,
+   "readout_r2_familiar": 0.705997868488616,
+   "readout_r2_unseen": 0.4991493031113603,
+   "readout_max_abs_err_unseen": 17.283594047875006,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.6604081392288208,
+   "unseen": 0.5810810923576355
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.21238094568252563,
+   "unseen": 0.12443693727254868
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.25945577025413513,
+   "unseen": 0.17905405163764954,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s300": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.43355855345726013
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.24802720546722412,
+   "unseen": 0.1525900959968567,
+   "readout_r2_familiar": 0.7641311795784484,
+   "readout_r2_unseen": 0.6452311127222312,
+   "readout_max_abs_err_unseen": 15.317518241344448,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.7648979425430298,
+   "unseen": 0.6272522807121277
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.16122448444366455,
+   "unseen": 0.08671171218156815
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.2655782401561737,
+   "unseen": 0.17511261999607086,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s305": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.7240990996360779
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.271292507648468,
+   "unseen": 0.15934684872627258,
+   "readout_r2_familiar": 0.8121522592971426,
+   "readout_r2_unseen": 0.6900453577729004,
+   "readout_max_abs_err_unseen": 15.499859288895914,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.738095223903656,
+   "unseen": 0.6227477192878723
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.15088436007499695,
+   "unseen": 0.07713963836431503
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.2868027091026306,
+   "unseen": 0.1458333283662796,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s302": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.37668919563293457
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.24557822942733765,
+   "unseen": 0.14921170473098755,
+   "readout_r2_familiar": 0.8270725843207696,
+   "readout_r2_unseen": 0.6803663160739852,
+   "readout_max_abs_err_unseen": 17.15903567275577,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.9202721118927002,
+   "unseen": 0.7595720887184143
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.2531972825527191,
+   "unseen": 0.13006757199764252
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.8657143115997314,
+   "unseen": 0.3006756901741028,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s304": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.2691441476345062
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.32013604044914246,
+   "unseen": 0.20720720291137695,
+   "readout_r2_familiar": 0.8725580490358877,
+   "readout_r2_unseen": 0.8178574682403932,
+   "readout_max_abs_err_unseen": 10.113982123054349,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.8598639369010925,
+   "unseen": 0.5613738894462585
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.19292517006397247,
+   "unseen": 0.10022522509098053
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.6610884070396423,
+   "unseen": 0.2505630552768707,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "mass_only_s310": {
+  "baseline": {
+   "familiar": 1.0,
+   "unseen": 0.2775900959968567
+  },
+  "H1_decoder_replacement": {
+   "familiar": 0.2789115607738495,
+   "unseen": 0.13288287818431854,
+   "readout_r2_familiar": 0.8466146311622385,
+   "readout_r2_unseen": 0.6574671092973076,
+   "readout_max_abs_err_unseen": 15.505394597770302,
+   "constructed_params": 552
+  },
+  "H2_representation_replacement": {
+   "familiar": 0.9291156530380249,
+   "unseen": 0.6835585832595825
+  },
+  "H2_control_random_grouping": {
+   "familiar": 0.273333340883255,
+   "unseen": 0.12218468636274338
+  },
+  "H4_linear_self_correction": {
+   "familiar": 0.7597278952598572,
+   "unseen": 0.2590090036392212,
+   "changed_params_if_folded": 1040
+  }
+ },
+ "bypass_controls": {
+  "random_init": {
+   "H1": {
+    "familiar": 0.4161904752254486,
+    "unseen": 0.2944819927215576,
+    "readout_r2_familiar": 0.7405503048514166,
+    "readout_r2_unseen": 0.6600767693715617,
+    "readout_max_abs_err_unseen": 8.10760587220782,
+    "constructed_params": 552
+   },
+   "baseline": {
+    "familiar": 0.0693877562880516,
+    "unseen": 0.07770270109176636
+   }
+  },
+  "neither_s304": {
+   "H1": {
+    "familiar": 0.254693865776062,
+    "unseen": 0.14414414763450623,
+    "readout_r2_familiar": 0.6368338566465424,
+    "readout_r2_unseen": 0.5909088651901819,
+    "readout_max_abs_err_unseen": 14.189492774167748,
+    "constructed_params": 552
+   },
+   "baseline": {
+    "familiar": 0.7323809266090393,
+    "unseen": 0.4634009003639221
+   }
+  },
+  "neither_s307": {
+   "H1": {
+    "familiar": 0.30925169587135315,
+    "unseen": 0.20720720291137695,
+    "readout_r2_familiar": 0.6886167143134545,
+    "readout_r2_unseen": 0.6104569602919845,
+    "readout_max_abs_err_unseen": 10.262376815151317,
+    "constructed_params": 552
+   },
+   "baseline": {
+    "familiar": 1.0,
+    "unseen": 0.9476351141929626
+   }
+  }
+ }
+}
