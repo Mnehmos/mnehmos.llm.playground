@@ -406,7 +406,12 @@ reports that this choice is made within a limited window of training (arXiv:2501
 verified before citation). Our results add that what is decided in the window is whether a declared variable remains
 composable. Causal abstraction and interchange interventions \citep{geiger2021causal,geiger2022iit,geiger2024causal}
 and their pitfalls \citep{makelov2023illusion,wu2024reply,sutter2025nonlinear,zhang2024best,heimersheim2024patching}
-frame our instruments.
+frame our instruments. Output-centric neuron analysis, which treats a neuron's computational contribution as its activation
+times its output weight vector, has recently been argued for in large language models
+\citep{anthropic2026neuronbasis,anthropic2026neuronsafety} (cited from the owner's summary; to be verified before
+submission), and has been instrumented with averaged Jacobian lenses read through the unembedding (R-lens) and the
+embedding (S-lens), coordinate sectors, and dark-sector ablations \citep{neuronlens2026}. Our networks are small
+enough to replace the averaged lenses by exact per-prompt Jacobians, and their domains are finite and fully known.
 
 \section{Limitations and scope}
 Toy tasks (modular arithmetic with fictional units) and CPU-scale networks. Everything beyond the registered
