@@ -954,6 +954,28 @@
    "depth": 4,
    "all_intermediates_observable": true,
    "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+   "D": 181,
+   "blocks": 4,
+   "mlp_units": 227,
+   "widths": [
+    119,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 155309,
+   "nonzero_params": 6405,
+   "nonzero_params_decoder": 5114,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
   }
  ]
 }
