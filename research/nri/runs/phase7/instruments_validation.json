@@ -1,0 +1,140 @@
+{
+ "designC": {
+  "name": "designC",
+  "I1_interventional_mass_pair_share": 1.0,
+  "I1b_integrated_gradients_mass_pair_share": 0.9999903846796292,
+  "I2_gate_aware": {
+   "bright_dims": 1,
+   "ablate_dark_acc": [
+    1.0,
+    1.0
+   ],
+   "ablate_bright_acc": [
+    0.06938775510204082,
+    0.0777027027027027
+   ],
+   "dark_actual_rms": 0.10234554820132796,
+   "dark_pred_rms": 0.04548449144792089,
+   "bright_mass_inside_used": 0.9999999990724888
+  },
+  "I3_interventional": {
+   "bright_dims": 22,
+   "ablate_dark_acc": [
+    0.48653061224489796,
+    0.3885135135135135
+   ],
+   "dark_actual_rms": 0.894315966200272,
+   "dark_pred_rms": 1.3455269717100995,
+   "bright_mass_inside_used": 1.0
+  },
+  "I4": {
+   "averaged_J": {
+    "median_actual_over_pred": 5.169208526611328,
+    "spearman": 0.9269671504965621
+   },
+   "exact_per_prompt_J": {
+    "median_actual_over_pred": 0.2323988974094391,
+    "spearman": 0.9726369886797692
+   },
+   "gate_aware": {
+    "median_actual_over_pred": 0.2191469818353653,
+    "spearman": 0.9778248489478436
+   }
+  },
+  "retest_residual_gate_aware_u": {
+   "bright_dims_u": 5,
+   "rho_energy_frac_in_bright": 0.6301924261099536,
+   "acc_alpha0": [
+    0.26857142857142857,
+    0.13513513513513514
+   ],
+   "acc_plus_bright": [
+    0.7948299319727891,
+    0.7094594594594594
+   ],
+   "acc_plus_dark": [
+    0.27591836734693875,
+    0.1554054054054054
+   ],
+   "acc_full": [
+    1.0,
+    1.0
+   ]
+  },
+  "checks": {
+   "V4p_I1": true,
+   "V4p_I1b": true,
+   "V5p_I2_gate_aware": false,
+   "V5p_I3_interventional": false
+  }
+ },
+ "designL": {
+  "name": "designL",
+  "I1_interventional_mass_pair_share": 1.0000000000000002,
+  "I1b_integrated_gradients_mass_pair_share": 1.0,
+  "I2_gate_aware": {
+   "bright_dims": 1,
+   "ablate_dark_acc": [
+    1.0,
+    1.0
+   ],
+   "ablate_bright_acc": [
+    0.06993197278911564,
+    0.07545045045045046
+   ],
+   "dark_actual_rms": 0.06967937749327446,
+   "dark_pred_rms": 0.05028275674449426,
+   "bright_mass_inside_used": 0.999999999803665
+  },
+  "I3_interventional": {
+   "bright_dims": 5,
+   "ablate_dark_acc": [
+    1.0,
+    1.0
+   ],
+   "dark_actual_rms": 5.765421494852605e-31,
+   "dark_pred_rms": 5.8653968537687125e-31,
+   "bright_mass_inside_used": 1.0
+  },
+  "I4": {
+   "averaged_J": {
+    "median_actual_over_pred": 1.4118767976760864,
+    "spearman": 0.9899715258004027
+   },
+   "exact_per_prompt_J": {
+    "median_actual_over_pred": 0.0590667761862278,
+    "spearman": 0.7526703243280783
+   },
+   "gate_aware": {
+    "median_actual_over_pred": 0.05470908433198929,
+    "spearman": 0.7655392735606638
+   }
+  },
+  "retest_residual_gate_aware_u": {
+   "bright_dims_u": 257,
+   "rho_energy_frac_in_bright": 1.0000000000000009,
+   "acc_alpha0": [
+    1.0,
+    1.0
+   ],
+   "acc_plus_bright": [
+    1.0,
+    1.0
+   ],
+   "acc_plus_dark": [
+    1.0,
+    1.0
+   ],
+   "acc_full": [
+    1.0,
+    1.0
+   ]
+  },
+  "checks": {
+   "V4p_I1": true,
+   "V4p_I1b": true,
+   "V5p_I2_gate_aware": true,
+   "V5p_I3_interventional": true
+  }
+ }
+}
