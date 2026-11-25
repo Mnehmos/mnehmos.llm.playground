@@ -1,0 +1,10 @@
+{
+ "kind": "constructed",
+ "acc": 1.0,
+ "acc_OP1": 1.0,
+ "acc_OP2": 1.0,
+ "acc_unseen": 1.0,
+ "logits_exact_onehot": true,
+ "nonzero_params": 3501,
+ "n_params": 84845
+}
