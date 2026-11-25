@@ -222,8 +222,6 @@ domain accuracy).
 emits a TinyTyped network. Width, heads and MLP size are computed from the spec. All role orders are allowed.
 
 <!-- G_TABLE_START -->
-**Interim: 33 specifications completed so far; the grid is still running and this table will be replaced by the final one.**
-
 | p | roles | expression | verification | prompts | accuracy | logits exactly one-hot | role regions = canonical one-hot | interchange (per role × every value) | d / heads / MLP units | nonzero params |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 13 | 2 | `mono:1,1;S` | exhaustive | 9,126 | 1.0000 | 1.0000 | True | 1.0000 (106,496) | 80 / 5 / 34 | 1,296 |
@@ -259,7 +257,40 @@ emits a TinyTyped network. Width, heads and MLP size are computed from the spec.
 | 13 | 2 | `mono:1,-1` | exhaustive | 9,126 | 1.0000 | 1.0000 | True | 1.0000 (106,496) | 80 / 5 / 27 | 1,036 |
 | 13 | 2 | `sum` | exhaustive | 9,126 | 1.0000 | 1.0000 | True | 1.0000 (106,496) | 80 / 5 / 27 | 1,085 |
 | 13 | 2 | `diff` | exhaustive | 9,126 | 1.0000 | 1.0000 | True | 1.0000 (106,496) | 80 / 5 / 27 | 1,085 |
+| 13 | 3 | `mono:1,1,1;S` | exhaustive | 1,067,742 | 1.0000 | 1.0000 | True | 1.0000 (2,715,648) | 112 / 7 / 48 | 2,401 |
+| 13 | 3 | `mono:2,1,3;S` | exhaustive | 1,067,742 | 1.0000 | 1.0000 | True | 1.0000 (2,715,648) | 112 / 7 / 81 | 3,787 |
+| 13 | 3 | `mono:1,-1,1` | exhaustive | 1,067,742 | 1.0000 | 1.0000 | True | 1.0000 (2,715,648) | 112 / 7 / 38 | 1,909 |
+| 13 | 3 | `sum` | exhaustive | 1,067,742 | 1.0000 | 1.0000 | True | 1.0000 (2,715,648) | 112 / 7 / 39 | 2,020 |
+| 17 | 2 | `mono:1,1;S` | exhaustive | 15,606 | 1.0000 | 1.0000 | True | 1.0000 (139,264) | 100 / 5 / 50 | 2,240 |
+| 17 | 2 | `mono:2,2;S` | exhaustive | 15,606 | 1.0000 | 1.0000 | True | 1.0000 (139,264) | 100 / 5 / 80 | 3,380 |
+| 17 | 2 | `mono:1,-1` | exhaustive | 15,606 | 1.0000 | 1.0000 | True | 1.0000 (139,264) | 100 / 5 / 35 | 1,604 |
+| 17 | 2 | `sum` | exhaustive | 15,606 | 1.0000 | 1.0000 | True | 1.0000 (139,264) | 100 / 5 / 35 | 1,669 |
+| 17 | 2 | `diff` | exhaustive | 15,606 | 1.0000 | 1.0000 | True | 1.0000 (139,264) | 100 / 5 / 35 | 1,669 |
+| 17 | 3 | `mono:1,1,1;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (799,680) | 140 / 7 / 64 | 3,929 |
+| 17 | 3 | `mono:3,1,2;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (799,680) | 140 / 7 / 109 | 6,359 |
+| 17 | 3 | `mono:1,-1,1` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (799,680) | 140 / 7 / 50 | 3,077 |
+| 17 | 3 | `sum` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (799,680) | 140 / 7 / 51 | 3,224 |
+| 19 | 2 | `mono:1,1;S` | exhaustive | 19,494 | 1.0000 | 1.0000 | True | 1.0000 (155,648) | 110 / 5 / 49 | 2,430 |
+| 19 | 2 | `mono:1,1;S` | exhaustive | 19,494 | 1.0000 | 1.0000 | True | 1.0000 (155,648) | 110 / 5 / 49 | 2,430 |
+| 19 | 2 | `mono:1,-1` | exhaustive | 19,494 | 1.0000 | 1.0000 | True | 1.0000 (155,648) | 110 / 5 / 39 | 1,936 |
+| 19 | 2 | `sum` | exhaustive | 19,494 | 1.0000 | 1.0000 | True | 1.0000 (155,648) | 110 / 5 / 39 | 2,009 |
+| 19 | 2 | `diff` | exhaustive | 19,494 | 1.0000 | 1.0000 | True | 1.0000 (155,648) | 110 / 5 / 39 | 2,009 |
+| 19 | 3 | `mono:1,1,1;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (893,760) | 154 / 7 / 63 | 4,297 |
+| 19 | 3 | `mono:1,1,3;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (893,760) | 154 / 7 / 97 | 6,337 |
+| 19 | 3 | `mono:1,-1,1` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (893,760) | 154 / 7 / 56 | 3,769 |
+| 19 | 3 | `sum` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (893,760) | 154 / 7 / 57 | 3,934 |
+| 23 | 2 | `mono:1,1;S` | exhaustive | 28,566 | 1.0000 | 1.0000 | True | 1.0000 (188,416) | 130 / 5 / 66 | 3,736 |
+| 23 | 2 | `mono:3,2;S` | exhaustive | 28,566 | 1.0000 | 1.0000 | True | 1.0000 (188,416) | 130 / 5 / 129 | 6,886 |
+| 23 | 2 | `mono:1,-1` | exhaustive | 28,566 | 1.0000 | 1.0000 | True | 1.0000 (188,416) | 130 / 5 / 47 | 2,696 |
+| 23 | 2 | `sum` | exhaustive | 28,566 | 1.0000 | 1.0000 | True | 1.0000 (188,416) | 130 / 5 / 47 | 2,785 |
+| 23 | 2 | `diff` | exhaustive | 28,566 | 1.0000 | 1.0000 | True | 1.0000 (188,416) | 130 / 5 / 47 | 2,785 |
+| 23 | 3 | `mono:1,1,1;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (1,081,920) | 182 / 7 / 75 | 6,005 |
+| 23 | 3 | `mono:3,2,1;S` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (1,081,920) | 182 / 7 / 138 | 10,541 |
+| 23 | 3 | `mono:1,-1,1` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (1,081,920) | 182 / 7 / 68 | 5,369 |
+| 23 | 3 | `sum` | sampled 200000 | 200,000 | 1.0000 | 1.0000 | True | 1.0000 (1,081,920) | 182 / 7 / 69 | 5,570 |
 <!-- G_TABLE_END -->
+
+**Summary.** All 64 compiled networks are exact: accuracy 1.0, logits exactly one-hot, every role region bitwise equal to its canonical one-hot, and interchange 1.0 for every role and source value. 52 are verified exhaustively (up to 1,067,742 prompts each) and 12 on 200,000 sampled prompts. The specifications cover p = 5–23, 2 or 3 declared variables, random unit scales, and monomial (exponents 1–3), inverse, sum and difference expressions. The original task is reproduced by the compiler at d = 80 with 5 heads; the hand layout of §54.1 fits it into 64 dimensions and 4 heads.
 
 **Deviation 2** (logged here). The exhaustive cap was lowered from the registered 3·10⁶ to 1.2·10⁶ prompts to keep
 runtime practical. Larger domains are verified on 200,000 sampled prompts, labelled "sampled".
