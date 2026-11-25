@@ -1,0 +1,68 @@
+{
+ "B_full_s0.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": null,
+  "crit_repro": null
+ },
+ "B_full_s1.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": null,
+  "crit_repro": null
+ },
+ "B_full_s2.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": null,
+  "crit_repro": null
+ },
+ "K2_full_s0.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 600,
+  "crit_repro": 600
+ },
+ "K2_full_s1.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 800,
+  "crit_repro": 800
+ },
+ "K2_full_s2.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 700,
+  "crit_repro": 700
+ },
+ "K5_full_s0.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 600,
+  "crit_repro": 600
+ },
+ "K5_full_s1.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 600,
+  "crit_repro": 600
+ },
+ "K5_full_s2.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": 600,
+  "crit_repro": 600
+ },
+ "K2_q25_s0.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": null,
+  "crit_repro": null
+ },
+ "K5_q25_s0.json": {
+  "bitwise_identical_history": true,
+  "max_abs_diff": 0.0,
+  "crit_orig": null,
+  "crit_repro": null
+ }
+}
