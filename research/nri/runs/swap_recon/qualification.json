@@ -1,0 +1,46 @@
+{
+ "Q1_plain_replay": {
+  "code": "run_swap.train_one at aaa67c6 (pristine git-archive export), unmodified",
+  "torch": "2.15.0+cu132",
+  "python": "3.13.18",
+  "results": {
+   "mass_only_s304": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s307": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s310": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s311": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   }
+  },
+  "verdict": "EXACT"
+ }
+}
