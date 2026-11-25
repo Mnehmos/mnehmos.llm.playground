@@ -62,3 +62,14 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.078 | 0.073 | 0.07 | 0.07 | — | — | 0.26 | 0.24 |
 | neither_s310 | 0.061 | 0.077 | 0.08 | 0.07 | — | — | 0.19 | 0.18 |
 | neither_s311 | 0.073 | 0.072 | 0.08 | 0.07 | — | — | 0.22 | 0.15 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.07, mean OOD 0.08, block IIA 0.08, unseen-source IIA 0.08, factorisation R²_add 0.99; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.07, mean OOD 0.08, block IIA 0.08, unseen-source IIA 0.08, factorisation R²_add 0.99; neither: 0/12 fit (ID ≥ 0.95), mean ID 0.07, mean OOD 0.07.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.06 / 0.08 / 0.08 / 0.99; 311: 0.07 / 0.08 / 0.08 / 0.99; 305: 0.07 / 0.07 / 0.08 / 0.99; 304: 0.15 / 0.08 / 0.07 / 0.99; 310: 0.06 / 0.08 / 0.07 / 0.99.
+**Events since previous cohort:** 0.
+**Interpretation.** Initialisation. All 36 networks predict near chance on familiar (ID) and unseen (OOD) inputs. Every declared block is fully factorised (value + unit; R²_add ≈ 0.99), as expected from random embeddings mixed linearly by attention. Interchange accuracy is at chance. Nothing distinguishes the later generalisers 307/311 from the failures 304/310.
+**Prediction for step 100:** every network's ID stays in [0.20, 0.30] at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

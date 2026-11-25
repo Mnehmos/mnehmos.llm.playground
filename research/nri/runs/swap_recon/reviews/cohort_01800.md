@@ -66,3 +66,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.824 | 0.85 | 0.96 | — | — | 0.54 | 0.80 |
 | neither_s310 | 0.999 | 0.854 | 0.87 | 0.89 | — | — | 0.54 | 0.41 |
 | neither_s311 | 0.997 | 0.923 | 0.94 | 0.94 | — | — | 0.40 | 0.36 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 6/12 fit (ID ≥ 0.95), mean ID 0.76, mean OOD 0.50, block IIA 0.70, unseen-source IIA 0.43, factorisation R²_add 0.74; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.73, mean OOD 0.52, block IIA 0.72, unseen-source IIA 0.52, factorisation R²_add 0.78; neither: 8/12 fit (ID ≥ 0.95), mean ID 0.88, mean OOD 0.75.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.99 / 0.95 / 0.95 / 1.00; 311: 1.00 / 0.99 / 0.98 / 0.98; 305: 1.00 / 0.75 / 0.55 / 0.97; 304: 1.00 / 0.09 / 0.09 / 0.72; 310: 1.00 / 0.09 / 0.09 / 0.71.
+**Events since previous cohort:** 5 — acc_only_s302: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s308: ID >= 0.95, declared block formed (IIA >= 0.9), block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.47->0.88; mass_only_s305: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s310: ID >= 0.95, declared block formed (IIA >= 0.9); neither_s301: ID >= 0.95.
+**Interpretation.** Post-fit consolidation. All five focus networks fit the training data. Group means change little. The mass group's mean factorisation is about 0.74 and stays nearly fixed thereafter: with weight decay 0.01 and losses near zero, no measurable pressure reverses a locked-in interaction. 305's partial generalisation (OOD-mass about 0.75 at 1,800) starts to erode.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.09, 0.09]).
+**Prediction for step 1,900:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

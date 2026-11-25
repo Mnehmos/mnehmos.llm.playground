@@ -65,3 +65,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.454 | 0.341 | 0.38 | 0.34 | — | — | 0.50 | 0.62 |
 | neither_s310 | 0.448 | 0.274 | 0.29 | 0.30 | — | — | 0.73 | 0.63 |
 | neither_s311 | 0.415 | 0.276 | 0.27 | 0.31 | — | — | 0.53 | 0.48 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.26, mean OOD 0.16, block IIA 0.24, unseen-source IIA 0.16, factorisation R²_add 0.99; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.26, mean OOD 0.16, block IIA 0.24, unseen-source IIA 0.16, factorisation R²_add 1.00; neither: 0/12 fit (ID ≥ 0.95), mean ID 0.37, mean OOD 0.24.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.26 / 0.14 / 0.16 / 1.00; 311: 0.25 / 0.14 / 0.16 / 1.00; 305: 0.25 / 0.15 / 0.16 / 1.00; 304: 0.26 / 0.15 / 0.16 / 1.00; 310: 0.26 / 0.15 / 0.17 / 1.00.
+**Events since previous cohort:** 4 — neither_s301: OOD jump 0.17->0.43; neither_s302: OOD jump 0.15->0.32; neither_s303: OOD jump 0.18->0.35; neither_s309: OOD jump 0.16->0.34.
+**Interpretation.** End of the plateau for undeclared networks. The `neither` group, without the interchange objective, begins to escape first. Declared networks are still on the plateau: the interchange objective delays the escape.
+**Previous prediction** ('every network's ID stays in [0.20, 0.30] at the next cohort'): HELD (focus ID at next cohort: [0.26, 0.25, 0.25, 0.26, 0.26]).
+**Prediction for step 600:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

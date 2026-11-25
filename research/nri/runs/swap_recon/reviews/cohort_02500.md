@@ -63,3 +63,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.826 | 0.85 | 0.96 | — | — | 0.54 | 0.80 |
 | neither_s310 | 1.000 | 0.884 | 0.91 | 0.93 | — | — | 0.53 | 0.39 |
 | neither_s311 | 1.000 | 0.923 | 0.94 | 0.95 | — | — | 0.43 | 0.38 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 6/12 fit (ID ≥ 0.95), mean ID 0.79, mean OOD 0.52, block IIA 0.79, unseen-source IIA 0.51, factorisation R²_add 0.69; acc_only: 6/12 fit (ID ≥ 0.95), mean ID 0.77, mean OOD 0.53, block IIA 0.76, unseen-source IIA 0.54, factorisation R²_add 0.78; neither: 10/12 fit (ID ≥ 0.95), mean ID 0.93, mean OOD 0.82.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 1.00 / 0.98 / 1.00; 311: 1.00 / 1.00 / 0.99 / 0.98; 305: 1.00 / 0.59 / 0.45 / 0.96; 304: 0.99 / 0.09 / 0.09 / 0.71; 310: 1.00 / 0.09 / 0.09 / 0.69.
+**Events since previous cohort:** 2 — acc_only_s306: ID >= 0.95; mass_only_s300: block carries unseen inputs (IIA-OOD >= 0.5).
+**Interpretation.** Stable phase with slow drift. Failures are frozen at chance on unseen masses (304, 310: 0.09). Generalisers stay at 0.97-1.00. 305 erodes slowly: per-value accuracy on unit 2 with values 9 and 11 falls from 0.51/0.57 at 1,800 to 0.25/0.35 at 3,000, and its unseen-source interchange from 0.55 to 0.41, while route-specificity stays fixed at 0.39. Unconstrained unseen pairings drift once no loss anchors them. Undeclared networks keep improving OOD slowly.
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): HELD (changes in unseen-mass accuracy: {307: 0.01, 311: 0.0, 305: 0.04, 304: 0.0, 310: -0.0}).
+**Prediction for step 2,600:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

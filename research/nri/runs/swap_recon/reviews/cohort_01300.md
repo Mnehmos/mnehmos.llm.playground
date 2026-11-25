@@ -71,3 +71,16 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.912 | 0.654 | 0.68 | 0.76 | — | — | 0.53 | 0.76 |
 | neither_s310 | 0.995 | 0.837 | 0.89 | 0.91 | — | — | 0.56 | 0.43 |
 | neither_s311 | 0.966 | 0.846 | 0.83 | 0.87 | — | — | 0.35 | 0.33 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 3/12 fit (ID ≥ 0.95), mean ID 0.67, mean OOD 0.48, block IIA 0.62, unseen-source IIA 0.43, factorisation R²_add 0.67; acc_only: 2/12 fit (ID ≥ 0.95), mean ID 0.60, mean OOD 0.47, block IIA 0.58, unseen-source IIA 0.46, factorisation R²_add 0.80; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.85, mean OOD 0.71.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.85 / 0.66 / 0.74 / 1.00; 311: 0.98 / 0.92 / 0.82 / 0.98; 305: 0.53 / 0.44 / 0.26 / 0.98; 304: 0.99 / 0.14 / 0.14 / 0.71; 310: 0.31 / 0.16 / 0.15 / 0.99.
+**Events since previous cohort:** 10 — acc_only_s300: OOD jump 0.42->0.26; acc_only_s301: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s300: ID >= 0.95; mass_only_s302: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s307: ID fell below 0.95, OOD jump 0.94->0.71; mass_only_s311: ID >= 0.95, block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.59->0.90; neither_s300: ID >= 0.95, OOD jump 0.67->0.85; neither_s305: ID >= 0.95; neither_s309: OOD jump 0.44->0.65; neither_s311: ID >= 0.95, OOD jump 0.61->0.85.
+**Interpretation.** Generalisers settle. 307 (ID 0.97, OOD-mass 0.92) and 311 (settles at 1,300) reach near-perfect unseen-mass accuracy at the same time as they fit the training data. No memorise-then-generalise delay is seen. 305 escapes late with partial OOD and mild factorisation loss (0.96).
+**Anomaly investigated.** Anomaly check: 307's ID drops to 0.85 and OOD-mass to 0.66 at step 1,300, then recovers by 1,400. A transient instability during consolidation (task-loss spike in the per-step log at about 1,300-1,400). Not a collapse.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.14, 0.16]).
+**Prediction for step 1,400:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

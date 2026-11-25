@@ -67,3 +67,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.662 | 0.453 | 0.34 | 0.45 | — | — | 0.48 | 0.49 |
 | neither_s310 | 0.997 | 0.816 | 0.86 | 0.89 | — | — | 0.56 | 0.44 |
 | neither_s311 | 0.996 | 0.886 | 0.92 | 0.92 | — | — | 0.39 | 0.35 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 1/12 fit (ID ≥ 0.95), mean ID 0.56, mean OOD 0.37, block IIA 0.47, unseen-source IIA 0.31, factorisation R²_add 0.78; acc_only: 2/12 fit (ID ≥ 0.95), mean ID 0.56, mean OOD 0.43, block IIA 0.52, unseen-source IIA 0.40, factorisation R²_add 0.85; neither: 6/12 fit (ID ≥ 0.95), mean ID 0.82, mean OOD 0.69.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.83 / 0.72 / 0.64 / 1.00; 311: 0.57 / 0.35 / 0.36 / 0.95; 305: 0.39 / 0.25 / 0.15 / 0.98; 304: 0.96 / 0.11 / 0.10 / 0.73; 310: 0.26 / 0.15 / 0.15 / 1.00.
+**Events since previous cohort:** 6 — acc_only_s307: ID >= 0.95, declared block formed (IIA >= 0.9); acc_only_s308: ID >= 0.95, block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.19->0.79; mass_only_s304: ID >= 0.95, declared block formed (IIA >= 0.9); mass_only_s307: block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.49->0.71; mass_only_s308: block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.35->0.52; neither_s301: ID fell below 0.95.
+**Interpretation.** Decision period. 304 fits its training data (ID ≥ 0.95 by about 1,100) while unseen-mass stays at chance and factorisation freezes at about 0.71-0.75: the interaction is retained. 307 passes through its factorisation dip (0.93 at 900) and recovers to 1.00 by 1,050, and unseen-mass climbs. 311 dips later (0.91 at 1,000) and recovers. 310 is still on the plateau.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.11, 0.15]).
+**Prediction for step 1,200:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

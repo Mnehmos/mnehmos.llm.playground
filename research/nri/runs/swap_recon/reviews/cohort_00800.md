@@ -67,3 +67,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.597 | 0.508 | 0.45 | 0.48 | — | — | 0.47 | 0.48 |
 | neither_s310 | 0.981 | 0.778 | 0.83 | 0.85 | — | — | 0.55 | 0.41 |
 | neither_s311 | 0.987 | 0.848 | 0.87 | 0.90 | — | — | 0.40 | 0.37 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.39, mean OOD 0.27, block IIA 0.28, unseen-source IIA 0.20, factorisation R²_add 0.89; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.33, mean OOD 0.21, block IIA 0.25, unseen-source IIA 0.16, factorisation R²_add 0.98; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.81, mean OOD 0.68.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.35 / 0.18 / 0.15 / 0.98; 311: 0.46 / 0.26 / 0.16 / 0.95; 305: 0.26 / 0.14 / 0.15 / 1.00; 304: 0.50 / 0.19 / 0.13 / 0.93; 310: 0.25 / 0.16 / 0.16 / 1.00.
+**Events since previous cohort:** 6 — acc_only_s303: OOD jump 0.49->0.20; neither_s300: ID >= 0.95; neither_s305: ID >= 0.95; neither_s307: ID >= 0.95, OOD jump 0.64->0.88; neither_s308: ID >= 0.95, OOD jump 0.59->0.75; neither_s310: ID >= 0.95, OOD jump 0.62->0.78.
+**Interpretation.** Escape under way for the earliest declared networks. 304 leads (ID 0.50 at 800) and has already lost factorisation (0.93 → 0.84 by 850). Its unseen-mass accuracy does not rise with ID. 307 and 311 escape with unseen-mass accuracy rising together with ID. This is the first behavioural divergence.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.19, 0.16]).
+**Prediction for step 900:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

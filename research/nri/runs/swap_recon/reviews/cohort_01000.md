@@ -67,3 +67,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.605 | 0.506 | 0.44 | 0.50 | — | — | 0.44 | 0.48 |
 | neither_s310 | 0.999 | 0.836 | 0.87 | 0.90 | — | — | 0.57 | 0.45 |
 | neither_s311 | 0.973 | 0.864 | 0.90 | 0.90 | — | — | 0.38 | 0.34 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.50, mean OOD 0.32, block IIA 0.40, unseen-source IIA 0.25, factorisation R²_add 0.81; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.45, mean OOD 0.35, block IIA 0.42, unseen-source IIA 0.33, factorisation R²_add 0.91; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.82, mean OOD 0.69.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.73 / 0.41 / 0.37 / 0.99; 311: 0.63 / 0.43 / 0.17 / 0.91; 305: 0.29 / 0.15 / 0.15 / 0.99; 304: 0.88 / 0.13 / 0.13 / 0.75; 310: 0.25 / 0.15 / 0.16 / 1.00.
+**Events since previous cohort:** 6 — acc_only_s303: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s307: block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.41->0.63; neither_s307: ID >= 0.95, OOD jump 0.64->0.89; neither_s308: ID >= 0.95, OOD jump 0.41->0.80; neither_s310: ID >= 0.95, OOD jump 0.21->0.84; neither_s311: ID >= 0.95.
+**Interpretation.** Decision period. 304 fits its training data (ID ≥ 0.95 by about 1,100) while unseen-mass stays at chance and factorisation freezes at about 0.71-0.75: the interaction is retained. 307 passes through its factorisation dip (0.93 at 900) and recovers to 1.00 by 1,050, and unseen-mass climbs. 311 dips later (0.91 at 1,000) and recovers. 310 is still on the plateau.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.13, 0.15]).
+**Prediction for step 1,100:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

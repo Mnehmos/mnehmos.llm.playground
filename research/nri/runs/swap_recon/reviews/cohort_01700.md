@@ -67,3 +67,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.825 | 0.85 | 0.96 | — | — | 0.55 | 0.80 |
 | neither_s310 | 0.999 | 0.850 | 0.87 | 0.89 | — | — | 0.55 | 0.42 |
 | neither_s311 | 0.995 | 0.910 | 0.93 | 0.94 | — | — | 0.40 | 0.36 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 5/12 fit (ID ≥ 0.95), mean ID 0.74, mean OOD 0.49, block IIA 0.69, unseen-source IIA 0.42, factorisation R²_add 0.75; acc_only: 4/12 fit (ID ≥ 0.95), mean ID 0.70, mean OOD 0.47, block IIA 0.68, unseen-source IIA 0.46, factorisation R²_add 0.77; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.87, mean OOD 0.74.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.98 / 0.94 / 0.92 / 1.00; 311: 0.98 / 0.94 / 0.89 / 0.98; 305: 0.98 / 0.68 / 0.49 / 0.97; 304: 1.00 / 0.09 / 0.09 / 0.72; 310: 0.91 / 0.13 / 0.15 / 0.74.
+**Events since previous cohort:** 6 — acc_only_s301: block LOST unseen inputs (IIA-OOD < 0.5); acc_only_s302: OOD jump 0.33->0.48; acc_only_s306: block LOST unseen inputs (IIA-OOD < 0.5); acc_only_s308: ID fell below 0.95, block LOST unseen inputs (IIA-OOD < 0.5), OOD jump 0.89->0.47; mass_only_s303: OOD jump 0.50->0.15; mass_only_s306: block carries unseen inputs (IIA-OOD >= 0.5).
+**Interpretation.** Late escapes. 310 escapes now (ID 0.38 → 0.92 by 1,700) and loses factorisation in the same window (1.00 at 1,300 → 0.74 at 1,500). This replicates 304's pattern about 600 steps later, so failure is not tied to escaping early or late.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.09, 0.13]).
+**Prediction for step 1,800:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

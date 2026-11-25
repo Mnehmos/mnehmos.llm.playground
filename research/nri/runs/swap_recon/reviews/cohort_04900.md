@@ -62,3 +62,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.836 | 0.86 | 0.97 | — | — | 0.54 | 0.79 |
 | neither_s310 | 1.000 | 0.887 | 0.92 | 0.93 | — | — | 0.52 | 0.38 |
 | neither_s311 | 1.000 | 0.938 | 0.96 | 0.96 | — | — | 0.42 | 0.37 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 7/12 fit (ID ≥ 0.95), mean ID 0.84, mean OOD 0.47, block IIA 0.84, unseen-source IIA 0.46; acc_only: 9/12 fit (ID ≥ 0.95), mean ID 0.92, mean OOD 0.53, block IIA 0.91, unseen-source IIA 0.54; neither: 11/12 fit (ID ≥ 0.95), mean ID 0.98, mean OOD 0.84.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 1.00 / 0.99 / —; 311: 1.00 / 1.00 / 1.00 / —; 305: 1.00 / 0.48 / 0.38 / —; 304: 1.00 / 0.09 / 0.09 / —; 310: 1.00 / 0.09 / 0.09 / —.
+**Events since previous cohort:** 1 — mass_only_s301: block carries unseen inputs (IIA-OOD >= 0.5).
+**Interpretation.** Stable phase. Focus networks unchanged. 305 continues its slow erosion (OOD-mass about 0.46-0.48), consistent with drift of unanchored unseen pairings.
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): HELD (changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: -0.0}).
+**Prediction for step 5,000:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

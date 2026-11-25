@@ -64,3 +64,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.823 | 0.85 | 0.96 | — | — | 0.54 | 0.80 |
 | neither_s310 | 1.000 | 0.880 | 0.91 | 0.92 | — | — | 0.53 | 0.40 |
 | neither_s311 | 0.999 | 0.914 | 0.92 | 0.94 | — | — | 0.40 | 0.36 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 6/12 fit (ID ≥ 0.95), mean ID 0.77, mean OOD 0.51, block IIA 0.74, unseen-source IIA 0.46, factorisation R²_add 0.74; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.74, mean OOD 0.52, block IIA 0.73, unseen-source IIA 0.53, factorisation R²_add 0.78; neither: 9/12 fit (ID ≥ 0.95), mean ID 0.92, mean OOD 0.80.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 0.97 / 0.95 / 1.00; 311: 0.99 / 0.93 / 0.86 / 0.98; 305: 1.00 / 0.67 / 0.52 / 0.97; 304: 1.00 / 0.09 / 0.09 / 0.71; 310: 1.00 / 0.10 / 0.09 / 0.71.
+**Events since previous cohort:** 3 — mass_only_s301: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s305: ID >= 0.95, declared block formed (IIA >= 0.9), block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.61->0.81; neither_s303: ID >= 0.95.
+**Interpretation.** Post-fit consolidation. All five focus networks fit the training data. Group means change little. The mass group's mean factorisation is about 0.74 and stays nearly fixed thereafter: with weight decay 0.01 and losses near zero, no measurable pressure reverses a locked-in interaction. 305's partial generalisation (OOD-mass about 0.75 at 1,800) starts to erode.
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): FAILED (changes in unseen-mass accuracy: {307: -0.01, 311: -0.04, 305: 0.21, 304: 0.0, 310: -0.01}).
+**Prediction for step 2,100:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

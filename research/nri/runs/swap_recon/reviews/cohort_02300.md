@@ -68,3 +68,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.825 | 0.85 | 0.96 | — | — | 0.54 | 0.80 |
 | neither_s310 | 1.000 | 0.883 | 0.91 | 0.93 | — | — | 0.53 | 0.39 |
 | neither_s311 | 1.000 | 0.929 | 0.94 | 0.95 | — | — | 0.43 | 0.39 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 6/12 fit (ID ≥ 0.95), mean ID 0.79, mean OOD 0.52, block IIA 0.78, unseen-source IIA 0.50, factorisation R²_add 0.71; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.75, mean OOD 0.55, block IIA 0.75, unseen-source IIA 0.55, factorisation R²_add 0.78; neither: 10/12 fit (ID ≥ 0.95), mean ID 0.94, mean OOD 0.81.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 1.00 / 0.98 / 1.00; 311: 1.00 / 0.99 / 0.99 / 0.98; 305: 1.00 / 0.61 / 0.44 / 0.97; 304: 1.00 / 0.09 / 0.09 / 0.71; 310: 1.00 / 0.10 / 0.09 / 0.69.
+**Events since previous cohort:** 7 — acc_only_s301: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s306: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s310: ID >= 0.95, declared block formed (IIA >= 0.9); mass_only_s305: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s306: block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.23->0.46; mass_only_s309: block carries unseen inputs (IIA-OOD >= 0.5); neither_s302: ID >= 0.95, OOD jump 0.59->0.82.
+**Interpretation.** Stable phase with slow drift. Failures are frozen at chance on unseen masses (304, 310: 0.09). Generalisers stay at 0.97-1.00. 305 erodes slowly: per-value accuracy on unit 2 with values 9 and 11 falls from 0.51/0.57 at 1,800 to 0.25/0.35 at 3,000, and its unseen-source interchange from 0.55 to 0.41, while route-specificity stays fixed at 0.39. Unconstrained unseen pairings drift once no loss anchors them. Undeclared networks keep improving OOD slowly.
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): HELD (changes in unseen-mass accuracy: {307: 0.01, 311: 0.01, 305: -0.07, 304: 0.0, 310: 0.0}).
+**Prediction for step 2,400:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

@@ -62,3 +62,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.837 | 0.86 | 0.97 | — | — | 0.54 | 0.79 |
 | neither_s310 | 1.000 | 0.890 | 0.92 | 0.93 | — | — | 0.52 | 0.38 |
 | neither_s311 | 1.000 | 0.940 | 0.96 | 0.96 | — | — | 0.42 | 0.37 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 7/12 fit (ID ≥ 0.95), mean ID 0.84, mean OOD 0.45, block IIA 0.84, unseen-source IIA 0.45, factorisation R²_add 0.68; acc_only: 9/12 fit (ID ≥ 0.95), mean ID 0.93, mean OOD 0.53, block IIA 0.92, unseen-source IIA 0.54, factorisation R²_add 0.78; neither: 11/12 fit (ID ≥ 0.95), mean ID 0.98, mean OOD 0.84.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 1.00 / 0.99 / 1.00; 311: 1.00 / 1.00 / 1.00 / 0.98; 305: 1.00 / 0.46 / 0.36 / 0.96; 304: 1.00 / 0.09 / 0.09 / 0.71; 310: 1.00 / 0.09 / 0.09 / 0.68.
+**Events since previous cohort:** 0.
+**Interpretation.** Final state. Outcomes are as frozen since about step 2,000 for the focus networks: 307, 311 = 1.00; 305 = 0.46 (eroded from a peak of 0.75); 304, 310 = 0.09. Final factorisation: 307 1.00, 311 0.98, 305 0.96, 304 0.71, 310 0.68. Across all 24 declared networks, final factorisation ≥ 0.98 is necessary for near-perfect generalisation (4/4) but not sufficient (doc 46 §46.1).
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): HELD (changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.0, 304: 0.0, 310: 0.0}).
+**Final cohort.** No further prediction.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

@@ -75,3 +75,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.990 | 0.811 | 0.82 | 0.94 | — | — | 0.56 | 0.79 |
 | neither_s310 | 0.997 | 0.868 | 0.92 | 0.92 | — | — | 0.56 | 0.44 |
 | neither_s311 | 0.984 | 0.871 | 0.87 | 0.90 | — | — | 0.36 | 0.33 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 4/12 fit (ID ≥ 0.95), mean ID 0.71, mean OOD 0.50, block IIA 0.64, unseen-source IIA 0.44, factorisation R²_add 0.71; acc_only: 4/12 fit (ID ≥ 0.95), mean ID 0.70, mean OOD 0.46, block IIA 0.67, unseen-source IIA 0.45, factorisation R²_add 0.78; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.86, mean OOD 0.73.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 0.98 / 0.95 / 1.00; 311: 0.99 / 0.95 / 0.90 / 0.98; 305: 0.90 / 0.51 / 0.27 / 0.98; 304: 0.98 / 0.17 / 0.15 / 0.71; 310: 0.38 / 0.20 / 0.15 / 0.95.
+**Events since previous cohort:** 14 — acc_only_s300: ID >= 0.95, declared block formed (IIA >= 0.9); acc_only_s303: block LOST unseen inputs (IIA-OOD < 0.5), OOD jump 0.53->0.34; acc_only_s305: ID >= 0.95, declared block formed (IIA >= 0.9), block carries unseen inputs (IIA-OOD >= 0.5), OOD jump 0.29->0.46; acc_only_s309: block LOST unseen inputs (IIA-OOD < 0.5); acc_only_s310: declared block formed (IIA >= 0.9); mass_only_s300: declared block formed (IIA >= 0.9); mass_only_s301: block LOST unseen inputs (IIA-OOD < 0.5), OOD jump 0.50->0.15; mass_only_s303: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s305: OOD jump 0.43->0.62; mass_only_s306: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s307: ID >= 0.95, declared block formed (IIA >= 0.9), OOD jump 0.71->0.99; mass_only_s311: declared block formed (IIA >= 0.9); neither_s301: ID fell below 0.95; neither_s309: ID >= 0.95, OOD jump 0.65->0.81.
+**Interpretation.** Late escapes. 310 escapes now (ID 0.38 → 0.92 by 1,700) and loses factorisation in the same window (1.00 at 1,300 → 0.74 at 1,500). This replicates 304's pattern about 600 steps later, so failure is not tied to escaping early or late.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.17, 0.2]).
+**Prediction for step 1,500:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

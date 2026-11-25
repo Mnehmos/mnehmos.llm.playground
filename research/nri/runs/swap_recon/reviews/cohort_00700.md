@@ -69,3 +69,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.605 | 0.528 | 0.50 | 0.50 | — | — | 0.42 | 0.48 |
 | neither_s310 | 0.782 | 0.617 | 0.63 | 0.69 | — | — | 0.59 | 0.48 |
 | neither_s311 | 0.964 | 0.782 | 0.82 | 0.83 | — | — | 0.39 | 0.35 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.35, mean OOD 0.24, block IIA 0.25, unseen-source IIA 0.16, factorisation R²_add 0.95; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.32, mean OOD 0.22, block IIA 0.24, unseen-source IIA 0.16, factorisation R²_add 0.99; neither: 2/12 fit (ID ≥ 0.95), mean ID 0.73, mean OOD 0.59.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.27 / 0.13 / 0.15 / 1.00; 311: 0.33 / 0.15 / 0.16 / 0.98; 305: 0.26 / 0.16 / 0.16 / 1.00; 304: 0.33 / 0.15 / 0.15 / 0.94; 310: 0.27 / 0.13 / 0.16 / 1.00.
+**Events since previous cohort:** 8 — mass_only_s309: OOD jump 0.32->0.49; neither_s300: OOD jump 0.37->0.68; neither_s301: ID >= 0.95, OOD jump 0.60->0.82; neither_s304: OOD jump 0.23->0.44; neither_s305: OOD jump 0.42->0.63; neither_s307: OOD jump 0.18->0.64; neither_s308: OOD jump 0.23->0.59; neither_s311: ID >= 0.95.
+**Interpretation.** Critical window opens. The `neither` group escapes rapidly. In declared networks the block starts to lose factorisation (mass group mean R²_add below 0.98) before ID rises. In the 10-step replay, 304 is already at 0.97 at step 650, the earliest measured sign of its later failure. The focus networks are not yet behaviourally distinguishable.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.15, 0.13]).
+**Prediction for step 800:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

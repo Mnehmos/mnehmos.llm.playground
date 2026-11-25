@@ -1,0 +1,362 @@
+[
+ {
+  "step": 100,
+  "prediction": "every network's ID stays in [0.20, 0.30] at the next cohort",
+  "held": false,
+  "detail": "focus ID at next cohort: [0.25, 0.18, 0.18, 0.24, 0.24]"
+ },
+ {
+  "step": 200,
+  "prediction": "every network's ID stays in [0.20, 0.30] at the next cohort",
+  "held": true,
+  "detail": "focus ID at next cohort: [0.25, 0.25, 0.25, 0.24, 0.25]"
+ },
+ {
+  "step": 300,
+  "prediction": "every network's ID stays in [0.20, 0.30] at the next cohort",
+  "held": true,
+  "detail": "focus ID at next cohort: [0.25, 0.24, 0.24, 0.26, 0.25]"
+ },
+ {
+  "step": 400,
+  "prediction": "every network's ID stays in [0.20, 0.30] at the next cohort",
+  "held": true,
+  "detail": "focus ID at next cohort: [0.24, 0.25, 0.25, 0.24, 0.25]"
+ },
+ {
+  "step": 500,
+  "prediction": "every network's ID stays in [0.20, 0.30] at the next cohort",
+  "held": true,
+  "detail": "focus ID at next cohort: [0.26, 0.25, 0.25, 0.26, 0.26]"
+ },
+ {
+  "step": 600,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.16, 0.15]"
+ },
+ {
+  "step": 700,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.15, 0.13]"
+ },
+ {
+  "step": 800,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.19, 0.16]"
+ },
+ {
+  "step": 900,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.2, 0.17]"
+ },
+ {
+  "step": 1000,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.13, 0.15]"
+ },
+ {
+  "step": 1100,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.11, 0.15]"
+ },
+ {
+  "step": 1200,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.12, 0.13]"
+ },
+ {
+  "step": 1300,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.14, 0.16]"
+ },
+ {
+  "step": 1400,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.17, 0.2]"
+ },
+ {
+  "step": 1500,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.09, 0.16]"
+ },
+ {
+  "step": 1600,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.09, 0.1]"
+ },
+ {
+  "step": 1700,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.09, 0.13]"
+ },
+ {
+  "step": 1800,
+  "prediction": "304 and 310 stay \u2264 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)",
+  "held": true,
+  "detail": "304/310 unseen-mass: [0.09, 0.09]"
+ },
+ {
+  "step": 1900,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": false,
+  "detail": "changes in unseen-mass accuracy: {307: 0.03, 311: -0.02, 305: -0.28, 304: 0.0, 310: 0.01}"
+ },
+ {
+  "step": 2000,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": false,
+  "detail": "changes in unseen-mass accuracy: {307: -0.01, 311: -0.04, 305: 0.21, 304: 0.0, 310: -0.01}"
+ },
+ {
+  "step": 2100,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.02, 311: 0.05, 305: 0.01, 304: 0.0, 310: -0.01}"
+ },
+ {
+  "step": 2200,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.01, 311: 0.0, 305: -0.0, 304: 0.0, 310: 0.01}"
+ },
+ {
+  "step": 2300,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.01, 311: 0.01, 305: -0.07, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 2400,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.01, 311: 0.0, 305: -0.07, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 2500,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.01, 311: 0.0, 305: 0.04, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 2600,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.0, 311: -0.0, 305: -0.05, 304: 0.0, 310: 0.01}"
+ },
+ {
+  "step": 2700,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.0, 311: 0.0, 305: -0.02, 304: -0.0, 310: -0.01}"
+ },
+ {
+  "step": 2800,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.01, 311: 0.0, 305: 0.03, 304: 0.0, 310: 0.01}"
+ },
+ {
+  "step": 2900,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.01, 311: 0.0, 305: 0.03, 304: 0.0, 310: -0.01}"
+ },
+ {
+  "step": 3000,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.02, 311: -0.0, 305: -0.04, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 3100,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.02, 311: 0.0, 305: -0.05, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 3200,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: -0.0, 305: 0.05, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 3300,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: 0.01}"
+ },
+ {
+  "step": 3400,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.03, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 3500,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.04, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 3600,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 3700,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.05, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 3800,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 3900,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: -0.0, 305: 0.03, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 4000,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.03, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4100,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.02, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4200,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 4300,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4400,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 4500,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: -0.01, 311: 0.0, 305: 0.01, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4600,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.01, 311: 0.0, 305: -0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 4700,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.02, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4800,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: -0.0, 305: 0.02, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 4900,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 5000,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 5100,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.02, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5200,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.02, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5300,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.01, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 5400,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5500,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.0, 304: 0.0, 310: -0.0}"
+ },
+ {
+  "step": 5600,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.0, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5700,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.01, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5800,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.0, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 5900,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: -0.0, 304: 0.0, 310: 0.0}"
+ },
+ {
+  "step": 6000,
+  "prediction": "no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort",
+  "held": true,
+  "detail": "changes in unseen-mass accuracy: {307: 0.0, 311: 0.0, 305: 0.0, 304: 0.0, 310: 0.0}"
+ }
+]

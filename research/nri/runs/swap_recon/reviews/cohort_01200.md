@@ -71,3 +71,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.704 | 0.440 | 0.39 | 0.48 | — | — | 0.48 | 0.54 |
 | neither_s310 | 0.999 | 0.849 | 0.90 | 0.91 | — | — | 0.57 | 0.45 |
 | neither_s311 | 0.702 | 0.607 | 0.62 | 0.65 | — | — | 0.42 | 0.36 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 2/12 fit (ID ≥ 0.95), mean ID 0.62, mean OOD 0.43, block IIA 0.53, unseen-source IIA 0.35, factorisation R²_add 0.73; acc_only: 2/12 fit (ID ≥ 0.95), mean ID 0.60, mean OOD 0.46, block IIA 0.56, unseen-source IIA 0.43, factorisation R²_add 0.84; neither: 4/12 fit (ID ≥ 0.95), mean ID 0.79, mean OOD 0.64.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.97 / 0.92 / 0.82 / 1.00; 311: 0.64 / 0.56 / 0.47 / 0.97; 305: 0.47 / 0.32 / 0.17 / 0.96; 304: 1.00 / 0.12 / 0.11 / 0.72; 310: 0.29 / 0.13 / 0.15 / 1.00.
+**Events since previous cohort:** 10 — acc_only_s300: declared block formed (IIA >= 0.9); acc_only_s308: declared block formed (IIA >= 0.9); acc_only_s309: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s302: OOD jump 0.17->0.34; mass_only_s307: ID >= 0.95, OOD jump 0.71->0.94; mass_only_s311: OOD jump 0.42->0.59; neither_s300: ID fell below 0.95, OOD jump 0.84->0.67; neither_s301: ID >= 0.95; neither_s305: ID fell below 0.95; neither_s311: ID fell below 0.95, OOD jump 0.89->0.61.
+**Interpretation.** Generalisers settle. 307 (ID 0.97, OOD-mass 0.92) and 311 (settles at 1,300) reach near-perfect unseen-mass accuracy at the same time as they fit the training data. No memorise-then-generalise delay is seen. 305 escapes late with partial OOD and mild factorisation loss (0.96).
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.12, 0.13]).
+**Prediction for step 1,300:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

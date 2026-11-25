@@ -69,3 +69,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.998 | 0.812 | 0.84 | 0.96 | — | — | 0.55 | 0.81 |
 | neither_s310 | 0.982 | 0.762 | 0.79 | 0.82 | — | — | 0.57 | 0.45 |
 | neither_s311 | 0.997 | 0.911 | 0.93 | 0.94 | — | — | 0.39 | 0.35 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 5/12 fit (ID ≥ 0.95), mean ID 0.74, mean OOD 0.51, block IIA 0.69, unseen-source IIA 0.45, factorisation R²_add 0.69; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.72, mean OOD 0.49, block IIA 0.70, unseen-source IIA 0.48, factorisation R²_add 0.78; neither: 7/12 fit (ID ≥ 0.95), mean ID 0.86, mean OOD 0.73.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 0.98 / 0.94 / 1.00; 311: 1.00 / 0.97 / 0.93 / 0.98; 305: 0.98 / 0.64 / 0.43 / 0.97; 304: 1.00 / 0.09 / 0.09 / 0.72; 310: 0.66 / 0.10 / 0.10 / 0.75.
+**Events since previous cohort:** 8 — acc_only_s303: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s305: OOD jump 0.51->0.69; acc_only_s306: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s300: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s303: block LOST unseen inputs (IIA-OOD < 0.5); mass_only_s305: ID >= 0.95, declared block formed (IIA >= 0.9), OOD jump 0.61->0.77; mass_only_s306: block LOST unseen inputs (IIA-OOD < 0.5); neither_s301: ID fell below 0.95.
+**Interpretation.** Late escapes. 310 escapes now (ID 0.38 → 0.92 by 1,700) and loses factorisation in the same window (1.00 at 1,300 → 0.74 at 1,500). This replicates 304's pattern about 600 steps later, so failure is not tied to escaping early or late.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.09, 0.1]).
+**Prediction for step 1,700:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

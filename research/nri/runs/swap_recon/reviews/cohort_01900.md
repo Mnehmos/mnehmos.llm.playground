@@ -63,3 +63,16 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 1.000 | 0.824 | 0.85 | 0.96 | — | — | 0.54 | 0.80 |
 | neither_s310 | 1.000 | 0.871 | 0.89 | 0.91 | — | — | 0.54 | 0.40 |
 | neither_s311 | 0.999 | 0.899 | 0.92 | 0.94 | — | — | 0.40 | 0.35 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 5/12 fit (ID ≥ 0.95), mean ID 0.75, mean OOD 0.48, block IIA 0.70, unseen-source IIA 0.43, factorisation R²_add 0.75; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.73, mean OOD 0.52, block IIA 0.73, unseen-source IIA 0.52, factorisation R²_add 0.78; neither: 8/12 fit (ID ≥ 0.95), mean ID 0.91, mean OOD 0.79.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 1.00 / 0.99 / 0.93 / 1.00; 311: 1.00 / 0.97 / 0.97 / 0.98; 305: 0.87 / 0.47 / 0.35 / 0.97; 304: 0.99 / 0.09 / 0.09 / 0.72; 310: 0.99 / 0.11 / 0.10 / 0.72.
+**Events since previous cohort:** 2 — mass_only_s305: ID fell below 0.95, block LOST unseen inputs (IIA-OOD < 0.5), OOD jump 0.85->0.61; neither_s303: OOD jump 0.46->0.85.
+**Interpretation.** Post-fit consolidation. All five focus networks fit the training data. Group means change little. The mass group's mean factorisation is about 0.74 and stays nearly fixed thereafter: with weight decay 0.01 and losses near zero, no measurable pressure reverses a locked-in interaction. 305's partial generalisation (OOD-mass about 0.75 at 1,800) starts to erode.
+**Anomaly investigated.** Anomaly check: 305's ID dips to 0.87 at 1,900 (from 1.00) and recovers by 2,000. OOD-mass falls from 0.75 to 0.47 at the same time and recovers only partly (0.67). This is the first erosion step of its partial generalisation.
+**Previous prediction** ('no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort'): FAILED (changes in unseen-mass accuracy: {307: 0.03, 311: -0.02, 305: -0.28, 304: 0.0, 310: 0.01}).
+**Prediction for step 2,000:** no focus network changes unseen-mass accuracy by more than 0.10 at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

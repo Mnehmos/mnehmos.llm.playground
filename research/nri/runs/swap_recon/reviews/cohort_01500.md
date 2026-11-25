@@ -67,3 +67,16 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.988 | 0.800 | 0.83 | 0.93 | — | — | 0.57 | 0.79 |
 | neither_s310 | 0.978 | 0.852 | 0.91 | 0.91 | — | — | 0.57 | 0.46 |
 | neither_s311 | 0.987 | 0.894 | 0.91 | 0.91 | — | — | 0.39 | 0.35 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 4/12 fit (ID ≥ 0.95), mean ID 0.70, mean OOD 0.49, block IIA 0.65, unseen-source IIA 0.44, factorisation R²_add 0.70; acc_only: 5/12 fit (ID ≥ 0.95), mean ID 0.71, mean OOD 0.49, block IIA 0.69, unseen-source IIA 0.47, factorisation R²_add 0.78; neither: 8/12 fit (ID ≥ 0.95), mean ID 0.86, mean OOD 0.74.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.99 / 0.95 / 0.94 / 1.00; 311: 0.95 / 0.92 / 0.90 / 0.98; 305: 0.84 / 0.44 / 0.28 / 0.98; 304: 0.99 / 0.09 / 0.09 / 0.72; 310: 0.43 / 0.16 / 0.16 / 0.74.
+**Events since previous cohort:** 6 — acc_only_s303: OOD jump 0.34->0.53; acc_only_s309: block carries unseen inputs (IIA-OOD >= 0.5); acc_only_s310: ID >= 0.95; mass_only_s300: block carries unseen inputs (IIA-OOD >= 0.5); mass_only_s303: block carries unseen inputs (IIA-OOD >= 0.5); neither_s301: ID >= 0.95.
+**Interpretation.** Late escapes. 310 escapes now (ID 0.38 → 0.92 by 1,700) and loses factorisation in the same window (1.00 at 1,300 → 0.74 at 1,500). This replicates 304's pattern about 600 steps later, so failure is not tied to escaping early or late.
+**Anomaly investigated.** Anomaly check: 304 shows a single-step task-loss spike near 1,450 (100-step mean task loss 0.84) with no lasting change to its factorisation (0.72) or OOD (0.09). Instability without reorganisation, consistent with lock-in.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.09, 0.16]).
+**Prediction for step 1,600:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

@@ -62,3 +62,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.244 | 0.138 | 0.15 | 0.15 | — | — | 0.87 | 0.88 |
 | neither_s310 | 0.242 | 0.114 | 0.13 | 0.13 | — | — | 0.82 | 0.81 |
 | neither_s311 | 0.181 | 0.070 | 0.09 | 0.09 | — | — | 0.50 | 0.47 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.22, mean OOD 0.13, block IIA 0.20, unseen-source IIA 0.13, factorisation R²_add 1.00; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.22, mean OOD 0.13, block IIA 0.19, unseen-source IIA 0.12, factorisation R²_add 1.00; neither: 0/12 fit (ID ≥ 0.95), mean ID 0.22, mean OOD 0.11.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.25 / 0.16 / 0.15 / 0.99; 311: 0.18 / 0.09 / 0.09 / 1.00; 305: 0.18 / 0.09 / 0.09 / 0.99; 304: 0.24 / 0.15 / 0.15 / 1.00; 310: 0.24 / 0.13 / 0.14 / 1.00.
+**Events since previous cohort:** 0.
+**Interpretation.** Shared plateau. Every network, declared or not, sits at ID ≈ 0.24-0.25. A direct check on 307 at step 400 shows this is a zero-detection shortcut: questions where mass or acceleration is 0 (answer 0; 16.8% of questions) are answered perfectly and the rest at chance (0.083). Declared blocks remain factorised (R²_add 1.00). Interchange accuracy rises slightly above chance (≈ 0.2) because the zero case transfers through the block.
+**Previous prediction** ('every network's ID stays in [0.20, 0.30] at the next cohort'): FAILED (focus ID at next cohort: [0.25, 0.18, 0.18, 0.24, 0.24]).
+**Prediction for step 200:** every network's ID stays in [0.20, 0.30] at the next cohort.
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+

@@ -74,3 +74,15 @@ Generated from offline audits of the reconstructed networks (doc 41 §41.6). IIA
 | neither_s309 | 0.599 | 0.526 | 0.47 | 0.49 | — | — | 0.41 | 0.44 |
 | neither_s310 | 0.882 | 0.643 | 0.69 | 0.69 | — | — | 0.59 | 0.48 |
 | neither_s311 | 0.858 | 0.632 | 0.67 | 0.66 | — | — | 0.40 | 0.37 |
+
+## Scientific review (supervisor)
+
+**Measured state.** mass_only: 0/12 fit (ID ≥ 0.95), mean ID 0.31, mean OOD 0.22, block IIA 0.24, unseen-source IIA 0.16, factorisation R²_add 0.97; acc_only: 0/12 fit (ID ≥ 0.95), mean ID 0.30, mean OOD 0.20, block IIA 0.24, unseen-source IIA 0.16, factorisation R²_add 0.99; neither: 0/12 fit (ID ≥ 0.95), mean ID 0.59, mean OOD 0.43.
+**Focus networks** (ID / unseen-mass / unseen-source IIA / R²_add): 307: 0.26 / 0.14 / 0.15 / 1.00; 311: 0.27 / 0.14 / 0.16 / 0.99; 305: 0.24 / 0.16 / 0.16 / 1.00; 304: 0.26 / 0.16 / 0.16 / 0.98; 310: 0.26 / 0.15 / 0.16 / 1.00.
+**Events since previous cohort:** 13 — acc_only_s301: OOD jump 0.18->0.45; acc_only_s303: OOD jump 0.20->0.44; mass_only_s301: OOD jump 0.24->0.43; mass_only_s303: OOD jump 0.16->0.39; mass_only_s309: OOD jump 0.14->0.32; neither_s300: OOD jump 0.14->0.37; neither_s301: OOD jump 0.43->0.60; neither_s302: OOD jump 0.32->0.48; neither_s305: OOD jump 0.14->0.42; neither_s306: OOD jump 0.14->0.31; neither_s309: OOD jump 0.34->0.53; neither_s310: OOD jump 0.27->0.64; neither_s311: OOD jump 0.28->0.63.
+**Interpretation.** Critical window opens. The `neither` group escapes rapidly. In declared networks the block starts to lose factorisation (mass group mean R²_add below 0.98) before ID rises. In the 10-step replay, 304 is already at 0.97 at step 650, the earliest measured sign of its later failure. The focus networks are not yet behaviourally distinguishable.
+**Previous prediction** ('304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses)'): HELD (304/310 unseen-mass: [0.16, 0.15]).
+**Prediction for step 700:** 304 and 310 stay ≤ 0.25 on unseen masses at the next cohort, whatever their ID (failures never rise on unseen masses).
+
+*Observed: the measured state and events. Inferred: the interpretation. Nothing in this review is an experimental demonstration (doc 46 labels).*
+
