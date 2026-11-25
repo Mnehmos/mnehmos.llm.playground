@@ -80,5 +80,338 @@
   "post_resume_log_lines_identical": true,
   "note": "resumed log holds only the 12 post-resume lines; those are byte-identical to the historical lines 13-24",
   "verdict": "PASS (EXACT)"
+ },
+ "Q4_reconstruction": {
+  "endpoints_exact": 36,
+  "n": 36,
+  "all_archives_verified": true,
+  "checkpoints": 2196,
+  "archive_bytes": 2834988568,
+  "results": {
+   "mass_only_s300": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s301": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s302": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s303": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s304": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s305": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s306": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s307": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s308": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s309": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s310": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "mass_only_s311": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s300": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s301": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s302": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s303": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s304": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s305": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s306": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s307": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s308": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s309": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s310": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "acc_only_s311": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s300": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s301": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s302": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s303": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s304": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s305": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s306": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s307": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s308": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s309": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s310": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   },
+   "neither_s311": {
+    "bitwise_state_dict": true,
+    "max_abs_diff": 0.0,
+    "log_identical": true,
+    "log_lines": [
+     24,
+     24
+    ]
+   }
+  }
  }
 }

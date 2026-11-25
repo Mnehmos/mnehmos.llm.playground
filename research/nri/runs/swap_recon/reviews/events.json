@@ -1,0 +1,692 @@
+{
+ "0": {},
+ "100": {},
+ "200": {},
+ "300": {},
+ "400": {},
+ "500": {
+  "neither_s301": [
+   "OOD jump 0.17->0.43"
+  ],
+  "neither_s302": [
+   "OOD jump 0.15->0.32"
+  ],
+  "neither_s303": [
+   "OOD jump 0.18->0.35"
+  ],
+  "neither_s309": [
+   "OOD jump 0.16->0.34"
+  ]
+ },
+ "600": {
+  "acc_only_s301": [
+   "OOD jump 0.18->0.45"
+  ],
+  "acc_only_s303": [
+   "OOD jump 0.20->0.44"
+  ],
+  "mass_only_s301": [
+   "OOD jump 0.24->0.43"
+  ],
+  "mass_only_s303": [
+   "OOD jump 0.16->0.39"
+  ],
+  "mass_only_s309": [
+   "OOD jump 0.14->0.32"
+  ],
+  "neither_s300": [
+   "OOD jump 0.14->0.37"
+  ],
+  "neither_s301": [
+   "OOD jump 0.43->0.60"
+  ],
+  "neither_s302": [
+   "OOD jump 0.32->0.48"
+  ],
+  "neither_s305": [
+   "OOD jump 0.14->0.42"
+  ],
+  "neither_s306": [
+   "OOD jump 0.14->0.31"
+  ],
+  "neither_s309": [
+   "OOD jump 0.34->0.53"
+  ],
+  "neither_s310": [
+   "OOD jump 0.27->0.64"
+  ],
+  "neither_s311": [
+   "OOD jump 0.28->0.63"
+  ]
+ },
+ "700": {
+  "mass_only_s309": [
+   "OOD jump 0.32->0.49"
+  ],
+  "neither_s300": [
+   "OOD jump 0.37->0.68"
+  ],
+  "neither_s301": [
+   "ID >= 0.95",
+   "OOD jump 0.60->0.82"
+  ],
+  "neither_s304": [
+   "OOD jump 0.23->0.44"
+  ],
+  "neither_s305": [
+   "OOD jump 0.42->0.63"
+  ],
+  "neither_s307": [
+   "OOD jump 0.18->0.64"
+  ],
+  "neither_s308": [
+   "OOD jump 0.23->0.59"
+  ],
+  "neither_s311": [
+   "ID >= 0.95"
+  ]
+ },
+ "800": {
+  "acc_only_s303": [
+   "OOD jump 0.49->0.20"
+  ],
+  "neither_s300": [
+   "ID >= 0.95"
+  ],
+  "neither_s305": [
+   "ID >= 0.95"
+  ],
+  "neither_s307": [
+   "ID >= 0.95",
+   "OOD jump 0.64->0.88"
+  ],
+  "neither_s308": [
+   "ID >= 0.95",
+   "OOD jump 0.59->0.75"
+  ],
+  "neither_s310": [
+   "ID >= 0.95",
+   "OOD jump 0.62->0.78"
+  ]
+ },
+ "900": {
+  "acc_only_s303": [
+   "OOD jump 0.20->0.40"
+  ],
+  "acc_only_s306": [
+   "OOD jump 0.20->0.44"
+  ],
+  "acc_only_s309": [
+   "OOD jump 0.14->0.36"
+  ],
+  "mass_only_s301": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s307": [
+   "OOD jump 0.17->0.35"
+  ],
+  "neither_s307": [
+   "ID fell below 0.95",
+   "OOD jump 0.88->0.64"
+  ],
+  "neither_s308": [
+   "ID fell below 0.95",
+   "OOD jump 0.75->0.41"
+  ],
+  "neither_s310": [
+   "ID fell below 0.95",
+   "OOD jump 0.78->0.21"
+  ],
+  "neither_s311": [
+   "ID fell below 0.95"
+  ]
+ },
+ "1000": {
+  "acc_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s307": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.41->0.63"
+  ],
+  "neither_s307": [
+   "ID >= 0.95",
+   "OOD jump 0.64->0.89"
+  ],
+  "neither_s308": [
+   "ID >= 0.95",
+   "OOD jump 0.41->0.80"
+  ],
+  "neither_s310": [
+   "ID >= 0.95",
+   "OOD jump 0.21->0.84"
+  ],
+  "neither_s311": [
+   "ID >= 0.95"
+  ]
+ },
+ "1100": {
+  "acc_only_s307": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "acc_only_s308": [
+   "ID >= 0.95",
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.19->0.79"
+  ],
+  "mass_only_s304": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s307": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.49->0.71"
+  ],
+  "mass_only_s308": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.35->0.52"
+  ],
+  "neither_s301": [
+   "ID fell below 0.95"
+  ]
+ },
+ "1200": {
+  "acc_only_s300": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "acc_only_s308": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "acc_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s302": [
+   "OOD jump 0.17->0.34"
+  ],
+  "mass_only_s307": [
+   "ID >= 0.95",
+   "OOD jump 0.71->0.94"
+  ],
+  "mass_only_s311": [
+   "OOD jump 0.42->0.59"
+  ],
+  "neither_s300": [
+   "ID fell below 0.95",
+   "OOD jump 0.84->0.67"
+  ],
+  "neither_s301": [
+   "ID >= 0.95"
+  ],
+  "neither_s305": [
+   "ID fell below 0.95"
+  ],
+  "neither_s311": [
+   "ID fell below 0.95",
+   "OOD jump 0.89->0.61"
+  ]
+ },
+ "1300": {
+  "acc_only_s300": [
+   "OOD jump 0.42->0.26"
+  ],
+  "acc_only_s301": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s300": [
+   "ID >= 0.95"
+  ],
+  "mass_only_s302": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s307": [
+   "ID fell below 0.95",
+   "OOD jump 0.94->0.71"
+  ],
+  "mass_only_s311": [
+   "ID >= 0.95",
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.59->0.90"
+  ],
+  "neither_s300": [
+   "ID >= 0.95",
+   "OOD jump 0.67->0.85"
+  ],
+  "neither_s305": [
+   "ID >= 0.95"
+  ],
+  "neither_s309": [
+   "OOD jump 0.44->0.65"
+  ],
+  "neither_s311": [
+   "ID >= 0.95",
+   "OOD jump 0.61->0.85"
+  ]
+ },
+ "1400": {
+  "acc_only_s300": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "acc_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)",
+   "OOD jump 0.53->0.34"
+  ],
+  "acc_only_s305": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)",
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.29->0.46"
+  ],
+  "acc_only_s309": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "acc_only_s310": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s300": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s301": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)",
+   "OOD jump 0.50->0.15"
+  ],
+  "mass_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s305": [
+   "OOD jump 0.43->0.62"
+  ],
+  "mass_only_s306": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s307": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)",
+   "OOD jump 0.71->0.99"
+  ],
+  "mass_only_s311": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "neither_s301": [
+   "ID fell below 0.95"
+  ],
+  "neither_s309": [
+   "ID >= 0.95",
+   "OOD jump 0.65->0.81"
+  ]
+ },
+ "1500": {
+  "acc_only_s303": [
+   "OOD jump 0.34->0.53"
+  ],
+  "acc_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s310": [
+   "ID >= 0.95"
+  ],
+  "mass_only_s300": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "neither_s301": [
+   "ID >= 0.95"
+  ]
+ },
+ "1600": {
+  "acc_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s305": [
+   "OOD jump 0.51->0.69"
+  ],
+  "acc_only_s306": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s300": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s305": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)",
+   "OOD jump 0.61->0.77"
+  ],
+  "mass_only_s306": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "neither_s301": [
+   "ID fell below 0.95"
+  ]
+ },
+ "1700": {
+  "acc_only_s301": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "acc_only_s302": [
+   "OOD jump 0.33->0.48"
+  ],
+  "acc_only_s306": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "acc_only_s308": [
+   "ID fell below 0.95",
+   "block LOST unseen inputs (IIA-OOD < 0.5)",
+   "OOD jump 0.89->0.47"
+  ],
+  "mass_only_s303": [
+   "OOD jump 0.50->0.15"
+  ],
+  "mass_only_s306": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "1800": {
+  "acc_only_s302": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s308": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)",
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.47->0.88"
+  ],
+  "mass_only_s305": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s310": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "neither_s301": [
+   "ID >= 0.95"
+  ]
+ },
+ "1900": {
+  "mass_only_s305": [
+   "ID fell below 0.95",
+   "block LOST unseen inputs (IIA-OOD < 0.5)",
+   "OOD jump 0.85->0.61"
+  ],
+  "neither_s303": [
+   "OOD jump 0.46->0.85"
+  ]
+ },
+ "2000": {
+  "mass_only_s301": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s305": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)",
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.61->0.81"
+  ],
+  "neither_s303": [
+   "ID >= 0.95"
+  ]
+ },
+ "2100": {
+  "mass_only_s302": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "neither_s302": [
+   "ID >= 0.95"
+  ]
+ },
+ "2200": {
+  "acc_only_s310": [
+   "ID fell below 0.95"
+  ],
+  "mass_only_s306": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)",
+   "OOD jump 0.50->0.23"
+  ],
+  "neither_s302": [
+   "ID fell below 0.95",
+   "OOD jump 0.78->0.59"
+  ]
+ },
+ "2300": {
+  "acc_only_s301": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s306": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "acc_only_s310": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s305": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s306": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)",
+   "OOD jump 0.23->0.46"
+  ],
+  "mass_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "neither_s302": [
+   "ID >= 0.95",
+   "OOD jump 0.59->0.82"
+  ]
+ },
+ "2400": {
+  "acc_only_s301": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "acc_only_s306": [
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s308": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "2500": {
+  "acc_only_s306": [
+   "ID >= 0.95"
+  ],
+  "mass_only_s300": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "2600": {
+  "acc_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s308": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "2700": {
+  "acc_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s308": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "2800": {
+  "mass_only_s308": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "2900": {
+  "mass_only_s306": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "3000": {
+  "acc_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s308": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "3100": {
+  "acc_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s300": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "3200": {
+  "mass_only_s300": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "3300": {
+  "acc_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s300": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s302": [
+   "declared block formed (IIA >= 0.9)"
+  ]
+ },
+ "3400": {
+  "acc_only_s301": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "mass_only_s300": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s302": [
+   "ID >= 0.95"
+  ]
+ },
+ "3500": {},
+ "3600": {
+  "acc_only_s309": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "3700": {},
+ "3800": {
+  "acc_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "3900": {
+  "mass_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "neither_s306": [
+   "ID >= 0.95"
+  ]
+ },
+ "4000": {
+  "mass_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "4100": {
+  "acc_only_s309": [
+   "ID >= 0.95",
+   "declared block formed (IIA >= 0.9)"
+  ],
+  "acc_only_s311": [
+   "declared block formed (IIA >= 0.9)"
+  ]
+ },
+ "4200": {
+  "acc_only_s302": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "acc_only_s311": [
+   "ID >= 0.95"
+  ],
+  "mass_only_s303": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "4300": {},
+ "4400": {
+  "acc_only_s302": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "4500": {
+  "acc_only_s302": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "4600": {},
+ "4700": {
+  "acc_only_s302": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ],
+  "mass_only_s303": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "4800": {
+  "acc_only_s302": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ],
+  "mass_only_s301": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "4900": {
+  "mass_only_s301": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "5000": {
+  "mass_only_s301": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "5100": {},
+ "5200": {
+  "mass_only_s309": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "5300": {
+  "mass_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "5400": {
+  "mass_only_s309": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "5500": {
+  "mass_only_s309": [
+   "block carries unseen inputs (IIA-OOD >= 0.5)"
+  ]
+ },
+ "5600": {
+  "mass_only_s309": [
+   "block LOST unseen inputs (IIA-OOD < 0.5)"
+  ]
+ },
+ "5700": {},
+ "5800": {},
+ "5900": {},
+ "6000": {}
+}
