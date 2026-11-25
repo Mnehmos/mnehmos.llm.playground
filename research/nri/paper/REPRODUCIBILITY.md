@@ -66,6 +66,7 @@ copies.
 | Phase VI residual (R1–R3, per-pair split) | `python -m sci.residual`; `python -m sci.residual pairs` | `runs/phase6/residual*.json` |
 | Phase VI comparison and hybrids | `python -m sci.compare_hybrid` | `runs/phase6/{compare,hybrid}.json` |
 | Phase VI compiler grid | `python -m sci.compiler` | `runs/phase6/compiler.json` |
+| Phase VI addendum: instrument validation, neuron atlas, development, direct path | `python -m sci.neuron_lens validate`; `... learned`; `... develop`; `... direct` | `runs/phase6/atlas/*.json` |
 | figures and PDF | `python paper/make_figures.py && cd paper && latexmk -pdf main.tex` | `paper/main.pdf` |
 
 ## Tests

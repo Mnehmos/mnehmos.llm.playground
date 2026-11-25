@@ -16,6 +16,18 @@ training.
 - The two Anthropic posts were **not** read. Their hosts are blocked by this environment's network policy, and no URLs
   were supplied. Only the owner's summary of the output-centric principle cᵢ = aᵢ·wᵢ is used.
 
+> **Status note (added at the start of Phase VII, before any new measurement).** Every statement below that relies on
+> the averaged-lens "dark/bright" designation is **provisional**. That instrument failed validation V5 (§56.1), and so
+> did the S-lens (V4). The owner directed that these results not be promoted to mechanistic conclusions until corrected
+> instruments qualify. The correction is Phase VII experiment I (doc 57).
+>
+> Results that do **not** depend on those instruments stand as reported:
+> - exact neuron writes;
+> - restoration and ablation experiments;
+> - the additive versus pairwise decomposition;
+> - the direct-path measurement;
+> - development of purity, connectivity and residual share.
+
 ## Plain-language summary
 
 1. **First we checked the instruments on networks whose answers we know** (the constructed networks of doc 54).
@@ -74,7 +86,7 @@ training.
   r_{k−1} − 2r_k + r_{k+1} then cancel, so the averaged lens assigns near-zero gain to the directions that carry the
   computation.
 
-This is a **mechanistic explanation of the dark-sector effect** reported by neuron-lens (300–5,700× in Qwen3-8B),
+This is a **candidate explanation (provisional until a corrected instrument qualifies)** of the dark-sector effect reported by neuron-lens (300–5,700× in Qwen3-8B),
 shown here in a network with a known algorithm. The exact per-prompt Jacobian over-predicts instead: 1.07 against an
 actual 0.15 in Design C, because ReLU states flip under large ablations.
 
@@ -112,7 +124,7 @@ All values are over the full domain.
 | ablate the dark sector of h: accuracy / actual ÷ lens prediction | 0.22 / 0.17, 30× | 0.20 / 0.14, 49× | 0.16 / 0.12, 82× | 0.13 / 0.11, 35× | 0.23 / 0.15, 16× | 0.24 / 0.13, 45× | 0.24 / 0.15, 28× |
 
 **Reading.**
-1. **The essential residual is a lens-dark subspace** (the owner's hypothesis is supported):
+1. **Provisionally, the essential residual is a lens-dark subspace** (the owner's hypothesis; the designation uses the averaged lens, which failed V5):
    - more than 99% of its energy lies in directions the averaged lens rates near-zero;
    - restoring that dark part alone recovers most or all of the decision;
    - the bright part recovers nothing.

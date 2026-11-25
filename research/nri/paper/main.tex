@@ -393,9 +393,10 @@ MLP is the last nonlinearity, each neuron's write to the logits is exactly $a_i(
 learned networks the important neurons are output-monosemantic (each writes one discrete-log cosine at the network's
 frequency), while their inputs are tied to written tokens. Averaged-Jacobian lenses failed validation: on the
 constructed network they call the real computation ``dark'' and under-predict its ablation by 180--1,200$\times$,
-because averaging over ReLU gates cancels the hat ladder, a mechanistic account of the dark-sector effect reported for
-large models \citep{neuronlens2026}. The learned decoders' essential residual is dark in this sense (over 99\% of its
-energy; restoring that part alone recovers 307 and 311). Output-only reprogramming fails because the residual stream
+because averaging over ReLU gates cancels the hat ladder; this is a candidate account of the dark-sector effect reported
+for large models \citep{neuronlens2026}, provisional until a corrected instrument qualifies. By the same (unvalidated)
+lens, the learned decoders' essential residual is mostly dark (over 99\% of its energy; restoring that part alone
+recovers 307 and 311). Output-only reprogramming fails because the residual stream
 writes large class-specific logits directly to the readout, which the neurons partly cancel. Developmentally, every
 network that escapes the plateau purifies its neurons' writes to one frequency and reroutes their inputs through the
 second attention layer, failures included; generalisers then make their decoder input additive again (residual share

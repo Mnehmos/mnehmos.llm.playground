@@ -7,7 +7,7 @@ Decoder: h -> u = W_in h + b -> a = ReLU(u) -> logits = W_U (h + W_out a + b_out
   E4  S-lens K_s = mean_x dh/de(s); exact per prompt via autograd
   E5  u_i = W_in[i].(x0 + layer-1 heads + layer-2 heads at the last position) + b_i (exact split)
 
-    python -m sci.neuron_lens validate | learned | develop
+    python -m sci.neuron_lens validate | learned | develop | direct
 """
 from __future__ import annotations
 
@@ -582,5 +582,26 @@ def run_develop():
             print("done", net, root, flush=True)
 
 
+def run_direct_path():
+    """Doc 56 §56.5: the residual stream's direct write to the logits vs the MLP's (post-hoc measurement)."""
+    L = C.domain()
+    res = {}
+    for s_ in (307, 311, 300, 305, 302, 304, 310):
+        m = R.load(f"mass_only_s{s_}")
+        P_ = parts(m, L)
+        y = P_["y"]
+        q, a, full = P_["q"].double(), P_["a"].double(), P_["logits"].double()
+        direct, mlp = full - a @ q.T, a @ q.T
+        sigma = torch.tensor([pow(c, 5, P) for c in range(P)])
+        inv = torch.empty(P, dtype=torch.long); inv[sigma] = torch.arange(P)
+        tgt = sigma[y]
+        res[s_] = dict(direct_class_spread=float((direct.max(1).values - direct.min(1).values).mean()),
+                       mlp_class_spread=float((mlp.max(1).values - mlp.min(1).values).mean()),
+                       corr_direct_mlp=float(torch.corrcoef(torch.stack([direct.flatten(), mlp.flatten()]))[0, 1]),
+                       F5_mlp_only=float(((direct + mlp[:, inv]).argmax(-1) == tgt).double().mean()),
+                       F5_all_logits=float((full[:, inv].argmax(-1) == tgt).double().mean()))
+    (OUT / "direct_path.json").write_text(json.dumps(res, indent=1))
+
+
 if __name__ == "__main__":
-    {"validate": run_validate, "learned": run_learned, "develop": run_develop}[sys.argv[1]]()
+    {"validate": run_validate, "learned": run_learned, "develop": run_develop, "direct": run_direct_path}[sys.argv[1]]()
