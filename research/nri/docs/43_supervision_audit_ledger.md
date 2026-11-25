@@ -166,3 +166,33 @@ were seen, and that every post-hoc change is labelled.
 | Compiled and learned computation coexist with residual-subspace protection (full data) | **demonstrated [T]**, 3 seeds × 2 conditions, exact sub-circuit at every evaluation |
 | Protection needs both write-blocking and output-level preservation when data are scarce | observed [T] (25% regime) |
 | Hybrids learn the unknown operation from less data | **not supported** at 25% |
+
+## Additions (Phase VIII)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 64 | Phase VII effective trainable count was overstated (191,516 counted the 38,656 write-blocked entries); correct value 152,860 | A | post (audit) | corrected in doc 60 §60.1; doc 58 not altered | doc 60, `runs/phase8/accounting.json` |
+| 65 | `spec_terms('lin')` bug (constant only for one force unit) found during MR verification; fixed and re-run before reporting | A | pre-report | compiled R4 exact | `sci/modular.py` |
+| 66 | G2 select test with a 3-valued S operand failed; operands must be 13-valued (assert added); case changed to A; suite re-run | A | pre-report | 3/3 select cases exact | `sci/graph2.py` |
+| 67 | E-modular coverage key collision (`M*100+A*10+fu`); fixed and re-run (sampler unaffected) | A | pre-report | coverage figures corrected | `sci/p8_q.py` |
+| 68 | Not supported / not met: P matches K5 on OP₂; R2 robustness target (0.52 vs 0.95); MR registered extraction criterion (0.81 vs 0.99); 25% learning | A | post | reported as failures | doc 60 |
+| 69 | MR trained-pairs-only extraction is post hoc; no automated-discovery claim | A | post | labelled post hoc | doc 60 §60.8 |
+| 70 | Phase VII hybrid results reproduced bitwise (11/11 runs) | A | pre-analysis | audit passed | `runs/phase8/audit/comparison.json` |
+| 71 | **Flag for owner review (Track B, CPU-01, outside this phase).** The historical role-swap zoo reproduces bitwise on this machine (mass_only s307 replay = historical `model.pt`). But rounding-level trainer changes (gradients equal to ~1e-7 at the same weights) altered per-seed outcomes: mass_only s307/s311 OOD 0.998/0.999 → 0.14–0.79 across fast-path variants; the neither arm was stable. The s307/s311 outcomes studied as a "critical window" (doc 46 and following) are therefore reproducible but not robust to numerics; seed-specific mechanistic claims should be read as describing rare trajectories, and arm-level claims should rest on population statistics. No historical document altered. | A | post | pending owner decision | Track B report (delivered 25 Nov 2026, not in repo) |
+| 72 | Track C report (owner-supplied, external, package not verified) independently reproduced Phase VI/VII constructions at `f5ab660` (9,126/9,126; R1 gain 0.02371374) and reports a new negative result: three binding edits fail on top of the rebalanced R1 | external | post | cited as corroboration, unverified | doc 60 §60.7 |
+
+## Ledger after Phase VIII
+
+| claim | status |
+|---|---|
+| Phase VII hybrid results | **reproduced bitwise**; trainable count corrected to 152,860 |
+| Hybrid advantage over parameter- and compute-matched baselines | observed [T]: 3/3 vs 1/3 competent; ~3–15× fewer training FLOPs to competence |
+| The advantage comes from the canonical semantic variables (S3), not the compiled arithmetic | observed [T] (S ablation, 3 seeds) |
+| Compiled correctness guaranteed for all trainable parameter values | **demonstrated [E, M]** with output ownership; fails without it (0.07) |
+| Structural protection learns the new operation as well as K5 | **not supported** (1/3 vs 3/3 competent) |
+| Retention of all earlier computations across stages | **demonstrated [E]** (bitwise) |
+| Fast, compositional learning of combinations of compiled operators | observed [T] (registers visible) |
+| Generalising an unknown (non-compositional) relationship | **not supported** (memorisation) |
+| Extraction under the registered criterion | **not met**; post-hoc success labelled |
+| Robust distributed routing at 1% multiplicative noise | **not met** (0.52) |
+| CSE / register allocation / shared operators / select compile exactly | **demonstrated [E]** (63 trees × 4 variants; loop n ≤ 6) |

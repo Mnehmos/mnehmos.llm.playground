@@ -69,6 +69,12 @@ copies.
 | Phase VI addendum: instrument validation, neuron atlas, development, direct path | `python -m sci.neuron_lens validate`; `... learned`; `... develop`; `... direct` | `runs/phase6/atlas/*.json` |
 | Phase VII D, I, R, G, F | `python -m sci.direct_path`; `python -m sci.instruments2 {validate,learned}`; `python -m sci.robust` (+ `combo`); `python -m sci.graph_compiler`; `python -m sci.fourier` | `runs/phase7/*.json` |
 | Phase VII H/K (training, 48 runs; resumable) | `python -m sci.hybrid A`; `python -m sci.hybrid train --workers 3 [--only C1,C2]` | `runs/phase7/hybrid/*.json` |
+| Phase VIII A1 (bitwise reproduction of Phase VII) | `python -m sci.p8_audit_repro run`; `python -m sci.p8_audit_repro compare` | `runs/phase8/audit/` |
+| Phase VIII A2/A4 accounting | `python -m sci.p8_cost` | `runs/phase8/accounting.json` |
+| Phase VIII S, A3, P2, E (training; resumable, ≤ 3 workers) | `python -m sci.p8 run {S,A3,P,E} --workers 3` | `runs/phase8/runs/*.json` |
+| Phase VIII P1/P3 | `python -m sci.p8_p1` | `runs/phase8/p1_guarantee.json` |
+| Phase VIII G2, R2 | `python -m sci.graph2`; `python -m sci.routing2` | `runs/phase8/graph2.json`, `routing2.json` |
+| Phase VIII Q, E-modular, MR | `python -m sci.p8_q q`; `python -m sci.p8_q emod`; `python -m sci.p8_extract`; `python -m sci.p8_mr_verify` | `runs/phase8/q.json`, `e_modular.json`, `extraction.json`, `mr.json` |
 | figures and PDF | `python paper/make_figures.py && cd paper && latexmk -pdf main.tex` | `paper/main.pdf` |
 
 ## Tests

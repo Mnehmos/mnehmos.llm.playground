@@ -65,6 +65,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 56 | [`docs/56_phase6_addendum_results.md`](docs/56_phase6_addendum_results.md) | **Neuron atlas results**: averaged lenses fail validation (dark sector explained); the essential residual is lens-dark; single-frequency writers; direct path blocks output-only programming; escape purifies writes in all networks, generalisers then restore additive input |
 | 57 | [`docs/57_registration_phase7.md`](docs/57_registration_phase7.md) | Registration: Phase VII (instruments, robustness, graph and Fourier compilers, direct path, hybrid learning, protection) + addendum A |
 | 58 | [`docs/58_phase7_results.md`](docs/58_phase7_results.md) | **Phase VII results**: exact graph compiler; Fourier construction; corrected S-lens; fragility traced to saturated routing; compiled + learned coexist under residual-subspace protection |
+| 59 | [`docs/59_registration_phase8.md`](docs/59_registration_phase8.md) | Registration: Phase VIII (audit, ablation, permissions, reusable operators, progressive acquisition, data efficiency, distributed routing, recompilation) |
+| 60 | [`docs/60_phase8_results.md`](docs/60_phase8_results.md) | **Phase VIII results**: Phase VII reproduced bitwise, trainable count corrected; advantage from canonical semantic variables; output ownership guarantees compiled correctness for any parameters; bitwise retention across stages; compositions generalise, unknown rules memorise; routing and extraction targets not met |
 
 ## Layout
 
