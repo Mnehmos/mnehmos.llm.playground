@@ -101,6 +101,28 @@ The fixed task is OP₂ (M·A + S) in the dual-operation network. Competence = O
 
 This is a FLOPs comparison, not a step count, as the INIT requires.
 
+**Spent per competent network.** This divides the total training FLOPs, including the full budget of every
+unsuccessful seed, by the number of competent seeds. Periodic evaluation (4.4e10 FLOPs per evaluation) is excluded.
+
+| condition | competent | FLOPs to competence (successful seeds) | unsuccessful seeds' FLOPs | **spent per success** |
+|---|---|---|---|---|
+| B (Phase VII) | 0/3 | — | 3 × 1.1e13 | > 3.4e13 (none) |
+| B_p | 1/3 | 4.5e12 | 2 × 6.4e12 | **1.7e13** |
+| B_c | 1/3 | 1.6e13 | 2 × 2.2e13 | **6.1e13** |
+| S3 | 3/3 | 1.1e12 + 1.5e12 + 1.5e12 | — | **1.4e12** |
+| K2 (Phase VII) | 3/3 | 1.1e12 + 1.5e12 + 1.3e12 | — | **1.3e12** |
+| K5 | 3/3 | 3 × 2.2e12 | — | **2.2e12** |
+| P | 1/3 | 1.5e12 | 2 × 1.1e13 | **2.4e13** |
+
+On this measure, S3 and K2 are **12–47× cheaper** than the matched baselines, and K5 is 8–28× cheaper.
+
+**Cost of constructing the installed mechanisms.**
+- The construction is closed-form: building Design C takes 0.008 CPU-seconds.
+- Exhaustive verification on all 9,126 prompts costs 2.2e10 FLOPs (0.46 CPU-seconds), about 1% of a hybrid's training
+  FLOPs to competence.
+- The human and agent effort of designing the compiler (Phases VI–VII) is real, but it cannot be expressed in FLOPs and
+  is not included.
+
 **Sub-circuit versus end-to-end.**
 - OP₁'s compiled sub-circuit is exact at every evaluation in K2/K5/S4/P.
 - End-to-end OP₁ accuracy is a separate measure; it is 1.000 in all K5 and P runs.
