@@ -1022,6 +1022,52 @@
    "depth": 5,
    "all_intermediates_observable": true,
    "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+   "D": 181,
+   "blocks": 5,
+   "mlp_units": 221,
+   "widths": [
+    77,
+    67,
+    27,
+    23,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 153312,
+   "nonzero_params": 6264,
+   "nonzero_params_decoder": 4973,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+   "D": 220,
+   "blocks": 5,
+   "mlp_units": 284,
+   "widths": [
+    121,
+    52,
+    30,
+    54,
+    27
+   ],
+   "n_nodes": 12,
+   "n_params": 199035,
+   "nonzero_params": 6949,
+   "nonzero_params_decoder": 5658,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
   }
  ]
 }
