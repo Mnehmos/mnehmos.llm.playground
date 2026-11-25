@@ -1,0 +1,107 @@
+{
+ "candidate": [
+  8,
+  5,
+  9,
+  6
+ ],
+ "candidate_kind": "lin",
+ "registered_acceptance": [
+  false,
+  false,
+  false
+ ],
+ "oracle_rule": [
+  8,
+  5,
+  9,
+  6
+ ],
+ "candidate_equals_oracle": true,
+ "compiled_exact_vs_oracle": true,
+ "vs_learned": {
+  "0": {
+   "agree_trained_pairs": 1.0,
+   "agree_heldout_pairs": 0.020202020183205605,
+   "learned_vs_oracle_heldout": 0.020202020183205605,
+   "compiled_vs_oracle_heldout": 1.0,
+   "interchange_M_agreement_in_distribution": 1.0
+  },
+  "1": {
+   "agree_trained_pairs": 1.0,
+   "agree_heldout_pairs": 0.03030303120613098,
+   "learned_vs_oracle_heldout": 0.03030303120613098,
+   "compiled_vs_oracle_heldout": 1.0,
+   "interchange_M_agreement_in_distribution": 1.0
+  },
+  "2": {
+   "agree_trained_pairs": 1.0,
+   "agree_heldout_pairs": 0.010101010091602802,
+   "learned_vs_oracle_heldout": 0.010101010091602802,
+   "compiled_vs_oracle_heldout": 1.0,
+   "interchange_M_agreement_in_distribution": 1.0
+  }
+ },
+ "OP5": {
+  "with_R4_s0": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.28282827138900757,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 400
+  },
+  "with_R4_s1": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.2222222238779068,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 400
+  },
+  "with_R4_s2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.21212121844291687,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 600
+  },
+  "without_R4_s0": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.10101009905338287,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 600
+  },
+  "without_R4_s1": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.10101009905338287,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 600
+  },
+  "without_R4_s2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.07070706784725189,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 600
+  }
+ }
+}

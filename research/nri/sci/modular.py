@@ -126,7 +126,7 @@ def spec_terms(kind, coef=None):
     if kind == "lin":
         a, b, c, d = coef
         return [(M_[0], [a * v for v in M_[1]], z(M_[1])), (A_[0], [b * v for v in A_[1]], z(A_[1])),
-                (S_[0], [c * v + (d if i == 0 else 0) for i, v in enumerate(S_[1])], z(S_[1]))], (lambda t: t % P), False
+                (S_[0], [c * v + d for v in S_[1]], z(S_[1]))], (lambda t: t % P), False
     raise ValueError(kind)
 
 
