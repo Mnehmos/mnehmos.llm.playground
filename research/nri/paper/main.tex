@@ -388,6 +388,19 @@ construction's integer line 0.03). Splicing constructed parts into learned netwo
 (see ``Hybrid repair'' at the end). The constructed network is exact but fragile (1\% weight noise: 0.15), whereas the learned
 generalisers keep 0.999.
 
+\emph{Neuron-level analysis (observed; instruments validated on the constructed networks first).} Because the decoder
+MLP is the last nonlinearity, each neuron's write to the logits is exactly $a_i(x)\,W_UW_{\mathrm{out}}[:,i]$. In the
+learned networks the important neurons are output-monosemantic (each writes one discrete-log cosine at the network's
+frequency), while their inputs are tied to written tokens. Averaged-Jacobian lenses failed validation: on the
+constructed network they call the real computation ``dark'' and under-predict its ablation by 180--1,200$\times$,
+because averaging over ReLU gates cancels the hat ladder, a mechanistic account of the dark-sector effect reported for
+large models \citep{neuronlens2026}. The learned decoders' essential residual is dark in this sense (over 99\% of its
+energy; restoring that part alone recovers 307 and 311). Output-only reprogramming fails because the residual stream
+writes large class-specific logits directly to the readout, which the neurons partly cancel. Developmentally, every
+network that escapes the plateau purifies its neurons' writes to one frequency and reroutes their inputs through the
+second attention layer, failures included; generalisers then make their decoder input additive again (residual share
+$0.44\to0.12$), while failures keep a non-additive, lookup-like input (0.43--0.64) and recruit more neurons.
+
 \section{A qualification standard for reusable computation}
 We count a network as having learned a reusable computation only with (i) $\ge 95\%$ accuracy on the \emph{entire}
 finite set of genuinely unseen problems, scored once per distinct prompt, and (ii) causal use, $\ge 90\%$ success of a
