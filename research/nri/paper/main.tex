@@ -501,8 +501,14 @@ were withheld from all training. With registers visible, $MA+S$ and $(M+A)S$ wer
 correct on all withheld pairs (1.00). With only $M$, $A$, $S$ visible they took 1,200--1,800 steps and scored 0.00--0.15
 on withheld pairs. With the $MA$ register, $MA+S$ reached competence from 25\% of the data in every seed (200--400
 steps). Without it, random 25\% just missed (unseen 0.95--0.96); structured sampling covering every canonical triple
-succeeded in 1,600--1,800 steps. \textbf{[Learning curves for the dual-operation transformers: pending the
-completion of experiment E.]}
+succeeded in 1,600--1,800 steps. In the protected dual-operation transformers, whose learned components can read
+every residual dimension, the minimum fraction at which every seed qualified was 55\% (K5); the output-gated network
+qualified in only 1 of 2 seeds even at 100\%, and the unprotected network at no fraction. They failed at low data by
+memorising trained renderings (training accuracy 1.00, familiar 0.44--0.75 at 25\%), not for lack of canonical coverage:
+(M, A) pairs were fully covered and (M, A, S) triples 96--99\% covered at 25\%. Our post-hoc reading is that data
+efficiency comes from \emph{restricting} learned modules to read the semantic interface, not only from providing it.
+The registered prediction that coverage explains the 25\% failure was supported for the modular network but not for the
+transformers.
 
 \paragraph{3. Structural output ownership gives a stronger guarantee than freezing or preservation losses.} With
 read-only regions, structural write masks and a deterministic output gate (the compiled operation owns its logits),

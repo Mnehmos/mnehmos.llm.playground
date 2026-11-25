@@ -181,6 +181,10 @@ were seen, and that every post-hoc change is labelled.
 | 71 | **Flag for owner review (Track B, CPU-01, outside this phase).** The historical role-swap zoo reproduces bitwise on this machine (mass_only s307 replay = historical `model.pt`). But rounding-level trainer changes (gradients equal to ~1e-7 at the same weights) altered per-seed outcomes: mass_only s307/s311 OOD 0.998/0.999 → 0.14–0.79 across fast-path variants; the neither arm was stable. The s307/s311 outcomes studied as a "critical window" (doc 46 and following) are therefore reproducible but not robust to numerics; seed-specific mechanistic claims should be read as describing rare trajectories, and arm-level claims should rest on population statistics. No historical document altered. | A | post | owner approved committing the report (25 Nov 2026); manuscript distinguishes the reproducibility tiers | doc 61, `trackb/` |
 | 72 | Track C report (owner-supplied, external, package not verified) independently reproduced Phase VI/VII constructions at `f5ab660` (9,126/9,126; R1 gain 0.02371374) and reports a new negative result: three binding edits fail on top of the rebalanced R1 | external | post | cited as corroboration, unverified | doc 60 §60.7 |
 
+| 73 | E structured-sampler cell key collides across operations (`op*10000` vs `M*1000`, M ≤ 12): 1,014 cells merged into 897; runs reported as executed, coverage measured post hoc | A | post | structured coverage 0.98–0.99 rather than 1.00 | doc 60 §60.6, `sci/p8_ecov.py` |
+| 74 | E group stopped by the 2-hour background limit at 40/48 runs; resumed from checkpoints, no completed run re-run | A | post (operational) | 48/48 complete | doc 60 |
+| 75 | E prediction "25% failure = canonical-coverage failure" not supported for the transformers (coverage ≥ 0.96 at 25%; training accuracy 1.00 with familiar 0.44–0.75 = memorisation); supported for E-modular. Read-restriction interpretation is post hoc | A | post | reported | doc 60 §60.6 |
+
 ## Ledger after Phase VIII
 
 | claim | status |
@@ -195,4 +199,5 @@ were seen, and that every post-hoc change is labelled.
 | Generalising an unknown (non-compositional) relationship | **not supported** (memorisation) |
 | Extraction under the registered criterion | **not met**; post-hoc success labelled |
 | Robust distributed routing at 1% multiplicative noise | **not met** (0.52) |
+| Learning a related operation from 25% data | observed [T] with a protected register and read-restricted module (≤ 25%); protected transformers need ≥ 55% (K5s) or never qualify (P, B) |
 | CSE / register allocation / shared operators / select compile exactly | **demonstrated [E]** (63 trees × 4 variants; loop n ≤ 6) |

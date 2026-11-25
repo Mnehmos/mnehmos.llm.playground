@@ -1,0 +1,76 @@
+{
+ "cells_true": 1014,
+ "cells_with_collided_key": 897,
+ "runs": {
+  "0.25_random_s0": {
+   "n_op2": 1852,
+   "triple_cov": 0.9644970414201184,
+   "pair_cov": 1.0
+  },
+  "0.25_random_s1": {
+   "n_op2": 1846,
+   "triple_cov": 0.9783037475345168,
+   "pair_cov": 1.0
+  },
+  "0.25_structured_s0": {
+   "n_op2": 1845,
+   "triple_cov": 0.9901380670611439,
+   "pair_cov": 1.0
+  },
+  "0.25_structured_s1": {
+   "n_op2": 1829,
+   "triple_cov": 0.980276134122288,
+   "pair_cov": 1.0
+  },
+  "0.4_random_s0": {
+   "n_op2": 2912,
+   "triple_cov": 0.9980276134122288,
+   "pair_cov": 1.0
+  },
+  "0.4_random_s1": {
+   "n_op2": 2930,
+   "triple_cov": 0.9980276134122288,
+   "pair_cov": 1.0
+  },
+  "0.4_structured_s0": {
+   "n_op2": 2938,
+   "triple_cov": 0.9940828402366864,
+   "pair_cov": 1.0
+  },
+  "0.4_structured_s1": {
+   "n_op2": 2948,
+   "triple_cov": 0.9980276134122288,
+   "pair_cov": 1.0
+  },
+  "0.55_random_s0": {
+   "n_op2": 4087,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  },
+  "0.55_random_s1": {
+   "n_op2": 4040,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  },
+  "0.7_random_s0": {
+   "n_op2": 5141,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  },
+  "0.7_random_s1": {
+   "n_op2": 5192,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  },
+  "0.85_random_s0": {
+   "n_op2": 6252,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  },
+  "0.85_random_s1": {
+   "n_op2": 6266,
+   "triple_cov": 1.0,
+   "pair_cov": 1.0
+  }
+ }
+}

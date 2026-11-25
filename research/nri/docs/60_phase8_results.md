@@ -282,8 +282,70 @@ the register it disappears.
 
 ### E: B, K5s and P on the dual-operation transformer
 
-**PENDING.** The group is running (48 runs: 3 conditions × 6 fractions, plus structured 25%/40%, × 2 seeds). This
-section is filled in when the group completes.
+48 runs: 3 conditions × 6 fractions, plus structured sampling at 25% and 40%, × 2 seeds. The training budget is 6,000
+steps per run. Each cell gives seeds competent, then final OP₂ familiar / unseen as a range over seeds.
+
+| data | B | K5s | P |
+|---|---|---|---|
+| 25% random | 0/2; 0.55–0.60 / 0.23–0.29 | 0/2; 0.50–0.53 / 0.19–0.20 | 0/2; 0.47–0.48 / 0.16–0.17 |
+| 25% structured | 0/2; 0.51–0.55 / 0.21–0.23 | 0/2; 0.55–0.75 / 0.28–0.44 | 0/2; 0.44–0.48 / 0.16–0.19 |
+| 40% random | 0/2; 0.85–0.98 / 0.68–0.77 | 0/2; 0.98–0.99 / 0.73–0.84 | 0/2; 0.85–0.89 / 0.34–0.41 |
+| 40% structured | 0/2; 0.44–0.96 / 0.27–0.93 | 1/2 (800 steps); 0.99 / 0.93–0.94 | 0/2; 0.96–0.97 / 0.53–0.62 |
+| 55% | 0/2; 0.76–0.85 / 0.47–0.64 | **2/2** (600, 1,800); 1.00 / 0.99–1.00 | 0/2; 0.99–1.00 / 0.63–0.72 |
+| 70% | 0/2; 0.68–0.86 / 0.52–0.76 | 2/2 (600, 600) | 0/2; 1.00 / 0.76–0.80 |
+| 85% | 0/2; 0.89–0.92 / 0.70–0.74 | 2/2 (600, 600) | 0/2; 1.00 / 0.85–0.89 |
+| 100% | 0/2; 0.65–0.88 / 0.58–0.82 | 2/2 (600, 600) | 1/2 (800); 1.00 / 0.88–1.00 |
+
+**Minimum data to qualify** (all seeds competent):
+
+| network | minimum fraction |
+|---|---|
+| K5s | **55%** |
+| P | not reached (1/2 even at 100%) |
+| B | not reached at any fraction |
+| protected modular network with the M·A register (E-modular) | **≤ 25%** |
+
+**Diagnosis of the 25% failure.** The registered items are below.
+
+- **Optimisation (B).** B does not fit its own training set at ≥ 55% data (training accuracy 0.65–0.93) or in 3 of 4
+  runs at 40% (0.44–0.98). It fits it (≥ 0.94) at 25% and in one 40% random seed, and still fails there by overfitting.
+  B's failure at higher fractions is primarily an optimisation failure within 6,000 steps.
+- **Overfitting (K5s, P).** Training accuracy is **1.00 in every K5s and P run**, while familiar accuracy at 25% is
+  0.44–0.75. These networks memorise the trained prompts.
+- **Coverage (post hoc, `runs/phase8/e_coverage.json`)** of the OP₂ training set:
+
+  | sampling | (M, A) pair coverage | canonical (M, A, S) triple coverage |
+  |---|---|---|
+  | 25% random | 1.00 | 0.96–0.98 |
+  | 25% structured | 1.00 | 0.98–0.99 |
+  | 40% random | 1.00 | 0.998 |
+  | 40% structured | 1.00 | 0.994–0.998 |
+  | ≥ 55% | 1.00 | 1.00 |
+
+  Canonical coverage is nearly complete at 25%, and identical for random and structured sampling at 40%, where the
+  outcomes still differ.
+
+  **Prediction "the 25% failure is a coverage-of-canonical-combinations failure": not supported for the
+  transformers.** It was supported for E-modular (§60.6, first table).
+- **Interference.** OP₁ is exact end to end in every K5s and P run, at every fraction. B learns OP₁ too (familiar
+  0.50–0.99), so there is no compiled OP₁ to interfere with.
+- **Register use:** not applicable; the transformers have no register.
+
+**Interpretation (post hoc).** K5s and P carry the same canonical M, A, S at "=" as E-modular, yet need ≥ 55% data or
+fail. Their learned components can read *every* residual dimension, including rendering-specific raw value and unit
+features, and at low data they fit the trained renderings through those features. E-modular's learned module is
+**restricted to read only the canonical and register dimensions**. It succeeds at 25% (and its no-register variant at
+40% random, 25% structured).
+
+So the data efficiency comes from restricting what the learned part may read to the semantic interface, not merely
+from making the interface available. This is a hypothesis from a comparison of two designs that also differ in other
+ways (MLP module versus transformer), not a registered test.
+
+**Cost.** FLOPs to competence at the minimum qualifying fraction:
+- K5s at 55%: 2.2e12 and 6.5e12 (600 and 1,800 steps at 3.63e9 per step);
+- E-modular with register at 25%: 400 steps × 6.7e6 module FLOPs per step = **2.7e9**, plus one forward pass of the
+  frozen trunk over the domain to compute its features once. That pass was not measured separately; it is of the order
+  of one transformer evaluation pass, about 1e10 FLOPs.
 
 ## 60.7 Robust distributed routing (R2, constructed)
 
@@ -360,6 +422,7 @@ canonical (M, A, S) states. **Formalise.** It searched the linear (28,561 candid
 | Recovering a learned rule by extraction under the registered criterion | **not met**; post-hoc success labelled as such |
 | Recompiling an extracted rule to obtain generalisation | **demonstrated [E]**, post-hoc candidate |
 | Robust distributed routing at 1% multiplicative noise | **not met** (0.52) |
+| Learning a related operation from 25% of the data | **demonstrated [T]** with a protected register and a read-restricted module; **not** in the protected transformers (≥ 55% for K5s) |
 
 ## Deviations (ledger items 64–70)
 
@@ -374,7 +437,16 @@ canonical (M, A, S) states. **Formalise.** It searched the linear (28,561 candid
   - P matches K5 on OP₂;
   - the R2 target;
   - the MR registered criterion;
-  - all 25% conditions on the dual-operation transformer (pending E).
+  - all 25% conditions on the dual-operation transformer (minimum qualifying fraction 55% for K5s; P and B never
+    qualify);
+  - the registered E diagnosis "coverage of canonical combinations" for the transformers (§60.6).
 - **69.** P2 at 25% used the Phase VII sampler (`random_phase7`) for comparability, as registered.
+- **71.** The structured sampler's cell key (`op*10000 + M*1000 + A*10 + fu`) collides across operations because M
+  can reach 12; 1,014 true cells were merged into 897. Structured sampling was therefore less uniform than registered
+  (triple coverage 0.98–0.99 rather than 1.00 at 25%). The runs are reported as executed; the coverage is measured post
+  hoc (`sci/p8_ecov.py`). The E-modular sampler uses a different, correct key.
+- **72.** The E group was stopped once by the 2-hour background-job limit at 40/48 runs and resumed from its
+  checkpoints. No completed run was re-run or replaced.
+- **73.** The E-section interpretation (read restriction rather than coverage) is post hoc.
 - **70.** The A3 B_c baseline was run at 12,000 steps (the compute match to K5's 1.95× per-step cost); B_p at d = 96
   gives 153,312 trainable (+0.3%).

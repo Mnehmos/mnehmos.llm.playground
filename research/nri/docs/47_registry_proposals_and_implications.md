@@ -147,6 +147,18 @@ changed until the owner merges them through the registry's own process.
 | **I35** (new) | P: compiled and learned computations coexist in one network if learned writes into the compiled subspace are blocked; with scarce data an output-level preservation objective is also required | doc 58 §58.6 | one task, 3 seeds per condition |
 | **Q25** (new) | O: can exact construction be made as robust as learning (distributed soft routing)? | doc 58 §58.3 | current gap about 10× |
 
+## 47.8 Revisions after Phase VIII (v4, proposals)
+
+| ID | proposal | evidence | boundary |
+|---|---|---|---|
+| **I35** | revise: the hybrid advantage is a **semantic-interface** effect (canonical unit-converted quantities at the readout), not a compiled-arithmetic effect; with matched parameters or compute, plain learning reaches competence in 1/3 seeds at 12–47× more FLOPs per success | doc 60 §60.1–60.2 | one task, 3 seeds; trainable count corrected to 152,860 |
+| **I36** (new) | C-I (guarantee): structural read-only regions, write masks and deterministic output ownership make a compiled operation exact for **every** value of the trainable parameters; objective-based protection does not | doc 60 §60.3 [E, M] | output-gated networks generalised the learned operation less reliably (1/3 seeds) |
+| **I37** (new) | P: read-only computational registers give fast, compositional learning of operations in their span (held-out combinations 1.00) with bitwise retention of all earlier modules; restricting learned modules to read only the semantic interface gives data efficiency (≤ 25% data) | doc 60 §60.5–60.6 | read-restriction reading is post hoc; 2–3 seeds |
+| **Q26** (new) | O: how can a network learn a relationship **outside** the span of its compiled registers so that it generalises? (independent linear rule: memorised, held-out 0.01–0.20) | doc 60 §60.5 | — |
+| **Q27** (new) | O: under what registered criterion can a rule be extracted from a module that is wrong on withheld inputs? (registered criterion failed; post-hoc recompilation generalised perfectly) | doc 60 §60.8 | — |
+| **Q25** | update: routing redesign alone does not close the robustness gap (best 0.52 at 1% multiplicative noise); an independent unverified report locates the residual in the arithmetic decoder | doc 60 §60.7 | — |
+| **R1** (new) | reproducibility: per-seed developmental outcomes of the historical networks are exactly reconstructible but not numerically stable; seed-level mechanistic claims describe observed trajectories, and their prevalence is unresolved | doc 61; ledger 71 | population-level reproducibility untested |
+
 ## 47.4 Change history
 
 v0 (2026-11-25): first proposal set, for owner review. No registry record was changed.
