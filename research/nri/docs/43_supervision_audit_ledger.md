@@ -185,6 +185,10 @@ were seen, and that every post-hoc change is labelled.
 | 74 | E group stopped by the 2-hour background limit at 40/48 runs; resumed from checkpoints, no completed run re-run | A | post (operational) | 48/48 complete | doc 60 |
 | 75 | E prediction "25% failure = canonical-coverage failure" not supported for the transformers (coverage ≥ 0.96 at 25%; training accuracy 1.00 with familiar 0.44–0.75 = memorisation); supported for E-modular. Read-restriction interpretation is post hoc | A | post | reported | doc 60 §60.6 |
 
+| 76 | Phase VIII approved as complete by the owner (25 Nov 2026); PR #36 kept unmerged | owner | — | — | — |
+| 77 | Independent-track updates recorded as reported, **unverified**: Track C decoder continuation (ternary and factored-binary decoders at 100% under 1% additive / 5% multiplicative noise, 20 seeds; factored decoder 8,125 parameters versus 33,920); Track A MM-02AC (≈ 4.39% nominal savings, slower than GEMM); longitudinal 5M-parameter reuse experiment (primitive preserved bitwise; transfer on familiar but not new states) | external | pre | manuscript robustness conclusions unchanged pending §62.V | doc 62 §62.0 |
+| 78 | Phase IX registration (doc 62) drafted and committed before any Phase IX run; awaiting owner approval; Track C package not yet available to this session | A | pre | — | doc 62 |
+
 ## Ledger after Phase VIII
 
 | claim | status |
