@@ -141,13 +141,58 @@ were confirmed; M1 (utilisation precedes composition) was directionally supporte
 seed-clustered re-analysis gives mean agreement 0.70 [0.60, 0.80], $p=0.003$.
 
 \section{The canonical code is converted along never-trained combinations}
-\pending{full 7-condition results across all 96 networks and developmental trajectories (I1 every 100 steps)}.
-Pilot result on one network (\Cten, seed 2001, step 6,000): I1 switch rate 0.80 when the canonical-implied
-combination was never trained (0.91 when trained); the 12-dimensional canonical-mean subspace alone (I4) reproduces
-the full effect exactly, its complement (I5) gives 0.00, random 12-dimensional subspaces (I7) 0.02.
+\begin{figure}[t]\centering
+\includegraphics[width=0.62\linewidth]{figures/fig2_heldout_causal.pdf}
+\caption{Canonical switch rate (I1, site after block 1) when the combination implied by the canonical reading was
+never trained, every 100 steps; line = mean, band = range over 12 seeds. Exploratory, retrospective.}
+\label{fig:i1}
+\end{figure}
+Table~\ref{tab:seven} summarises the seven conditions at step 6,000 in the decisive stratum (trained base,
+canonical-implied combination never trained). In \Cten{}, patching the donor's number-token residual makes the
+network output the donor quantity converted along the base route on combinations it never trained (switch 0.47);
+the canonical-mean subspace alone (I4, rank $\le 12$ of 64) reproduces the full effect to within 0.007, its
+complement (I5) and same-rank random subspaces (I7) give $\le 0.005$ and $\le 0.014$, so no dormant pathway
+outside the hypothesised variable carries the effect. A donor with the same canonical quantity but a different
+number and unit leaves \Cten's answer unchanged in 90\% of pairs (I6), against 14--32\% in populations without
+canonical supervision, which instead assemble the quantity from number and unit downstream (patching the unit token
+too raises B from 0.06 to 0.35). Over training the reading of never-trained combinations grows steadily in \Cten{}
+and stays flat in \Cone{} (Figure~\ref{fig:i1}); at 100-step resolution it begins before compositional onset in
+11/12 \Cten{} networks and at the same checkpoint in one, never after. The untrained-network control holds in
+2,280/2,304 cells; the 24 exceptions ($|\text{excess}|=0.061$, two pairs) all lie in the held-out-base,
+held-out-implied stratum ($n=33$), which is reported descriptively only.
+
+\begin{table}[t]\centering\small
+\caption{Canonical switch rate at step 6,000, trained base $|$ canonical-implied combination never trained (mean
+of 12 seeds); I6 = fraction unchanged for a same-canonical donor.}\label{tab:seven}
+\begin{tabular}{@{}lccccccc@{}}\toprule
+condition & I1 & I2 & I3 & I4 & I5 & I7 & I6\\\midrule
+C wd 1.0 & \textbf{0.469} & 0.523 & 0.289 & \textbf{0.469} & 0.000 & 0.004 & 0.90\\
+C wd 0.1 & 0.144 & 0.254 & 0.050 & 0.143 & 0.000 & 0.002 & 0.63\\
+D wd 1.0 & 0.049 & 0.142 & 0.042 & 0.049 & 0.000 & 0.003 & 0.32\\
+B wd 1.0 & 0.058 & 0.349 & 0.080 & 0.058 & 0.000 & 0.006 & 0.14\\
+A wd 1.0 & 0.051 & 0.141 & 0.029 & 0.050 & 0.001 & 0.014 & 0.14\\\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Why semantic supervision needs strong weight decay}
-\pending{H-A--H-E results (doc 41 \S41.4)}
+Five candidate mechanisms were operationalised before analysis (doc 41 \S41.4) and tested as \Cten{} vs \Cone{}
+(12 paired seeds, exact sign-flip, Holm). Supported: the number-token code is more compressed under strong decay
+(participation ratio 3.70 vs 4.64, $p_\text{Holm}=0.0012$, 12/12) and carries less route-specific structure
+beyond the canonical quantity (route-specificity index 0.078 vs 0.179, $p_\text{Holm}=0.0012$, 12/12). Not
+supported: cooperation between task and auxiliary gradients (they stay orthogonal; $p=0.89$), and a difference in
+how the reader uses the code at the moment the code becomes decodable (0.19 vs 0.13, $p_\text{Holm}=0.17$). The
+parameter norm is far smaller under strong decay (19 vs 66) but equally so in populations that never compose, so it
+is not explanatory.
+
+The trajectories give a two-stage account. \emph{First}, a coherent semantic target builds a canonical code at the
+number token under either decay within about 1,000 steps (route-specificity 0.75 $\to$ 0.17--0.27); without one
+(B, or the entropy-matched scrambled D) the code remains route-specific even under strong decay (0.65--0.81).
+\emph{Second}, strong decay keeps pruning the residual route-specific structure (to 0.08) while the downstream
+reader's correct conversion of never-trained combinations grows from 0.14 to 0.47 over thousands of steps; under
+weak decay the residual plateaus near 0.2 and the reader stays at 0.10--0.14. This matches the efficiency view of
+weight decay \citep{varma2023efficiency}: a reader that reuses one canonical code is cheaper than a route-by-route
+lookup, but only once a shared code exists. Across seeds within \Cten{} these geometric measures do not predict
+held-out accuracy ($\rho \approx -0.05$), so they explain the condition difference, not seed-to-seed variation.
 
 \section{Historical networks: exact replay and all-or-none generalisation}
 \subsection{Replay qualification}
