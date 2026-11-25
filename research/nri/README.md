@@ -67,6 +67,7 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 58 | [`docs/58_phase7_results.md`](docs/58_phase7_results.md) | **Phase VII results**: exact graph compiler; Fourier construction; corrected S-lens; fragility traced to saturated routing; compiled + learned coexist under residual-subspace protection |
 | 59 | [`docs/59_registration_phase8.md`](docs/59_registration_phase8.md) | Registration: Phase VIII (audit, ablation, permissions, reusable operators, progressive acquisition, data efficiency, distributed routing, recompilation) |
 | 60 | [`docs/60_phase8_results.md`](docs/60_phase8_results.md) | **Phase VIII results**: Phase VII reproduced bitwise, trainable count corrected; advantage from canonical semantic variables; output ownership guarantees compiled correctness for any parameters; bitwise retention across stages; compositions generalise, unknown rules memorise; routing and extraction targets not met |
+| 61 | [`docs/61_track_b_cpu01.md`](docs/61_track_b_cpu01.md) | **Track B (CPU-01)**: role-swap trainer profile, qualified speed candidates (exact vs numeric tiers), workers × threads calibration; historical zoo reproduces bitwise but per-seed outcomes are not stable under rounding-level changes |
 
 ## Layout
 

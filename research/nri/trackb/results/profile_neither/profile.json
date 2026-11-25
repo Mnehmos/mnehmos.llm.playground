@@ -1,0 +1,39 @@
+{
+  "group": "neither",
+  "seed": 307,
+  "threads": 1,
+  "steps": 250,
+  "warmup": 20,
+  "timed_steps": 230,
+  "wall": 8.83775717899971,
+  "ms_per_update": 38.42503121304221,
+  "stage_ms_per_update": {
+    "sample_base": 0.4765128695670801,
+    "build_base": 0.31334766958737065,
+    "encode_base": 16.321161947808317,
+    "sample_src": 0.0,
+    "build_src": 0.0,
+    "encode_src": 0.0,
+    "counterfactual": 0.0,
+    "head_loss": 0.8976062478011401,
+    "backward": 18.22397598697258,
+    "optimizer": 1.2819288043196455,
+    "eval_acc4096": 0.8088063478245876
+  },
+  "stage_share": {
+    "sample_base": 0.012401105595077363,
+    "build_base": 0.00815477983218955,
+    "encode_base": 0.42475338165160925,
+    "sample_src": 0.0,
+    "build_src": 0.0,
+    "encode_src": 0.0,
+    "counterfactual": 0.0,
+    "head_loss": 0.02335993542398151,
+    "backward": 0.47427355064286847,
+    "optimizer": 0.03336181556267763,
+    "eval_acc4096": 0.02104894445863359
+  },
+  "eval_calls": 1,
+  "torch": "2.15.0+cu132",
+  "peak_rss_mib": 871.48046875
+}
