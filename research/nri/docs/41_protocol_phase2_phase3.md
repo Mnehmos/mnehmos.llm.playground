@@ -377,3 +377,53 @@ code exists to be reused.
 - Across the 12 C1.0 seeds, neither RSI (ρ = −0.05) nor PR (ρ = −0.08) predicts development held-out accuracy.
 - These measures separate *conditions*, not *seeds*. What distinguishes better from worse composers within C1.0
   remains open; the strongest within-condition correlate is the final parameter norm (ρ = −0.52, n = 12).
+
+## 41R.7 Seven conditions on all 96 networks *(final)*
+
+Output: `runs/instruments/seven_condition_summary.json`; per network `runs/instruments/factorial/*.json`.
+
+### Untrained-network control on all 96 networks
+
+- 2,280 of 2,304 cells (condition × stratum × network) satisfy |excess| ≤ 0.05; the mean |excess| is 0.0015.
+- **24 cells exceed it**, all with |excess| = 0.061 (2 of 33 pairs):
+  - all are in the held-out base | held-out implied stratum;
+  - all come from the same 8 networks;
+  - they appear under I1, I2 and I4, which patch the same site.
+- The pre-specified criterion therefore **fails in that one stratum**. The protocol already reported that stratum
+  (n ≤ 33) descriptively only, and it is not used for any claim. The four-network check reported earlier (0.020)
+  was a subset.
+
+### Canonical switch rate at step 6,000
+
+Stratum: trained base | canonical-implied held-out. Values are means over 12 seeds.
+
+| condition | I1 full | I2 +unit | I3 block 2 | I4 canonical subspace | I5 complement | I7 random subspace | max \|I4 − I1\| | I6 unchanged |
+|---|---|---|---|---|---|---|---|---|
+| C wd 1.0 | **0.469** | 0.523 | 0.289 | **0.469** | 0.000 | 0.004 | 0.007 | 0.90 |
+| C wd 0.1 | 0.144 | 0.254 | 0.050 | 0.143 | 0.000 | 0.002 | 0.033 | 0.63 |
+| D wd 1.0 | 0.049 | 0.142 | 0.042 | 0.049 | 0.000 | 0.003 | 0.003 | 0.32 |
+| D wd 0.1 | 0.048 | 0.181 | 0.033 | 0.041 | 0.003 | 0.004 | 0.020 | 0.24 |
+| B wd 1.0 | 0.058 | 0.349 | 0.080 | 0.058 | 0.000 | 0.006 | 0.010 | 0.14 |
+| B wd 0.1 | 0.059 | 0.292 | 0.031 | 0.049 | 0.005 | 0.005 | 0.027 | 0.15 |
+| A wd 1.0 | 0.051 | 0.141 | 0.029 | 0.050 | 0.001 | 0.014 | 0.003 | 0.14 |
+| A wd 0.1 | 0.036 | 0.141 | 0.016 | 0.034 | 0.002 | 0.005 | 0.017 | 0.14 |
+
+The I6 column is the trained-base same-canonical stratum.
+
+### Reading
+
+1. **The effect lies entirely in the canonical-mean subspace.** In every condition, patching only the ≤ 12-dim
+   canonical-mean subspace (I4) reproduces the full-residual effect (I1) to within 0.007 in C wd 1.0, and to within
+   0.033 in any network. Patching its complement (I5) gives ≤ 0.005. Random subspaces of the same rank (I7) give
+   ≤ 0.014. The subspace-patching illusion (a dormant pathway outside the hypothesised variable carrying the effect)
+   is therefore excluded here: the complement carries nothing.
+2. **The same-canonical control (I6) separates conditions.**
+   - In C wd 1.0, a donor with the same canonical quantity but a different number and unit leaves the answer
+     unchanged in 90% of pairs: the network reads the quantity.
+   - In A, B and D it does so in only 14–32%: the network reads the number and unit separately.
+   - C wd 0.1 is intermediate (63%).
+3. **Unit information is added outside the number token (I2).** Patching the unit token as well raises B's
+   switch rate from 0.06 to 0.29–0.35. In networks without canonical supervision, the quantity is assembled from
+   separate number and unit tokens downstream. In C wd 1.0 it is already assembled at the number token.
+4. **The code is read mostly after block 1 (I3).** By block 2, patching carries less canonical information (0.29
+   in C wd 1.0): the conversion has partly happened.
