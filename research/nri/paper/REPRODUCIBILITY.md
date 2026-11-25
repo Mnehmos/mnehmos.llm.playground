@@ -61,6 +61,11 @@ copies.
 | Phase V D1, D2, D3, D5 | `python -m sci.phase5_drivers {d1,d1_exact,d2,d3,d5}` | `runs/phase5/{decoder_profiles_*,decoder_birth,tolerance,transplant}.json` |
 | Phase V D4 algorithm | `python -c "import sci.algorithm as A; A.main(); A.main_preact(); A.main_program(); A.main_additive(); A.main_pair()"` | `runs/phase5/{algorithm,preact_phases,program_validation,additive_program,pair_program}.json` |
 | Phase V D7 output operators | `python -m sci.operator_edit` | `runs/phase5/operator_edit.json` |
+| Phase VI construction and qualification | `python -m sci.construct_qualify` | `runs/phase6/qualification.json` |
+| Phase VI instruction system | `python -m sci.instructions` | `runs/phase6/instructions.json` |
+| Phase VI residual (R1–R3, per-pair split) | `python -m sci.residual`; `python -m sci.residual pairs` | `runs/phase6/residual*.json` |
+| Phase VI comparison and hybrids | `python -m sci.compare_hybrid` | `runs/phase6/{compare,hybrid}.json` |
+| Phase VI compiler grid | `python -m sci.compiler` | `runs/phase6/compiler.json` |
 | figures and PDF | `python paper/make_figures.py && cd paper && latexmk -pdf main.tex` | `paper/main.pdf` |
 
 ## Tests

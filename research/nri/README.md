@@ -59,6 +59,8 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 50 | [`docs/50_handoff.md`](docs/50_handoff.md) | Handoff snapshot after Phase IV |
 | 51 | [`docs/51_registration_phase5_decoder.md`](docs/51_registration_phase5_decoder.md) | Registration: Phase V, the decoder (D1–D7) |
 | 52 | [`docs/52_phase5_results.md`](docs/52_phase5_results.md) | **Phase V results**: decoder classes, gradual birth of composition, discrete-log phase addition, failed programs and transplants, exact output operators |
+| 53 | [`docs/53_registration_phase6_compilation.md`](docs/53_registration_phase6_compilation.md) | Registration: Phase VI, neural compilation (derivations, Designs C/L, qualification, instruction set, residual, comparison, hybrids, compiler) |
+| 54 | [`docs/54_phase6_results.md`](docs/54_phase6_results.md) | **Phase VI results**: an exact, training-free constructed network in the existing architecture; internal-operator programming; the residual is pairwise token interactions; learned generalisers share the construction's causal variables but store them as a circle; hybrids fail; a general compiler |
 
 ## Layout
 

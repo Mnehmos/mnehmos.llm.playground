@@ -39,7 +39,12 @@ only partly (0.52--0.61), and only before lock-in. The missing ingredient is the
 composes per-token \emph{discrete-log phases} additively, while failures' decoders read a pre-combined canonical code.
 One memorising network was repaired without training (0.19$\to$0.93); token-level and output-level programs compile
 exactly into weights, compose and invert bit for bit; decoder transplants and a compact closed-form program of the
-learned algorithm failed.
+learned algorithm failed. Finally, we compile the task's mathematics directly into the same architecture without
+training: the constructed network is correct on all 9,126 prompts, every float32 activation equals its symbolic value,
+and its operation, unit conversions, operand binding and output decoding can each be rewritten exactly and
+independently. Learned generalisers share its causal variables (a factorised two-dimensional mass code,
+interchange-equivalent to the construction) but store them as a circle, and rely on pairwise token interactions that
+explain the residual of their decoders; the construction is exact but fragile, the learned solutions robust.
 \end{abstract}
 
 \section{Introduction}
@@ -67,6 +72,8 @@ own composable coordinates.
 critical window but not after it, and not sufficient (\S\ref{sec:causal}).
 \item Repair without training for one of three failures, exact weight-level programming, and the mechanistic
 separation of representation defects from decoder defects (\S\ref{sec:repair}--\ref{sec:decoder}).
+\item A neural compiler: exact, training-free construction of the computation in the same architecture, an
+instruction set over its internal components, and a comparison with the learned solutions (\S\ref{sec:compile}).
 \end{enumerate}
 Throughout we distinguish \emph{demonstrated} results (registered endpoints, exact identities, and registered causal
 interventions) from \emph{observed} retrospective measurements and \emph{proposed} mechanisms.
@@ -351,6 +358,36 @@ pre-activation variance is needed by the readout. Decoder transplants between ne
 and a familiar-data-only repair cannot in principle distinguish a composing from an interpolating decoder, because both
 agree on familiar inputs.
 
+\section{Compiling the computation}\label{sec:compile}
+\emph{Constructed, demonstrated (exact).} Because $\mathbb{Z}_{13}^{*}$ is cyclic, the discrete logarithm $\ell$
+turns $F=M A S$ into $\ell(F)=\ell(M)+\ell(A)+\ell(S) \bmod 12$. Adding two phase \emph{vectors} does not add their
+phases ($e^{i\alpha}+e^{i\beta}=2\cos\frac{\alpha-\beta}{2}e^{i(\alpha+\beta)/2}$), so we carry exact integers instead
+and reduce modulo 12 with ReLU ``hats'' $r_{k-1}-2r_k+r_{k+1}$, $r_j=\mathrm{ReLU}(t-j)$, which are exactly 1 at $t=k$
+and 0 at every other integer. Unit conversion is a permutation $P_s$ of one-hot codes, applied by attention heads whose
+queries fire only for that unit; hard attention is exact in float32 because score gaps of $\ge250$ underflow to 0.
+The construction fits the existing shapes (64 dimensions, $4\times16$ heads, 256 hidden units; 1,291 nonzero
+parameters). Exhaustively it is correct on all 9,126 prompts (1,776 never seen by the learned networks). It maps zero
+operands to 0. Its mass, acceleration and output-unit regions are bitwise identical for equivalent renderings, and all
+264,654 single-variable interchanges give the intended answer. Every float32 attention weight, activation and logit
+equals the symbolic value; in real arithmetic the softmax deviates by $<10^{-100}$ against a margin of 1. The same MLP
+computes $M^2AS$, $MA^2S$, $M+A$, $M-A$ and $M/A$ (with $x/0:=0$) exactly. The operation (MLP), each unit's
+conversion (one head's OV slice), operand binding (gather keys) and output decoding ($W_U$) are rewritten
+independently, exactly and reversibly; 50 random composite programs, including the Phase IV token programs, are all
+exact. A general compiler emits exact networks for primes 5--23, two or three declared variables, random unit scales,
+and monomial, inverse, sum and difference expressions. Its cost is one head per non-identity unit scale and (range of
+the statistic + 3) hidden units, so multiplicative expressions need tens of units where a lookup would need thousands.
+
+\emph{Learned versus constructed (observed).} The pre-activation residual not explained by per-token additive structure
+is essential: removing it lowers \emph{familiar} accuracy to 0.25--0.55. It is mostly pairwise token interactions
+formed before the decoder (0.75--0.97 of its variance): mass value $\times$ acceleration value in 307,
+acceleration-unit conversion in 311 (restoring that component alone recovers the network), and the mass lookup in
+failures. It is not ReLU-boundary tuning, zero handling or numerical precision. Generalisers' mass code is factorised
+and two-dimensional, like the log construction (12 dimensions in the canonical one), and swapping it is
+interchange-equivalent to the construction on all 1,761 discriminating tests; but it is a circle (RSA with the
+construction's integer line 0.03). Splicing constructed parts into learned networks did not repair them
+(see ``Hybrid repair'' at the end). The constructed network is exact but fragile (1\% weight noise: 0.15), whereas the learned
+generalisers keep 0.999.
+
 \section{A qualification standard for reusable computation}
 We count a network as having learned a reusable computation only with (i) $\ge 95\%$ accuracy on the \emph{entire}
 finite set of genuinely unseen problems, scored once per distinct prompt, and (ii) causal use, $\ge 90\%$ success of a
@@ -379,8 +416,16 @@ The historical study was not designed for generalisation. Interventions reported
 fixed networks, except the registered training continuations of \S\ref{sec:causal}, which are exploratory single
 runs per condition (no seed replication beyond the 307/311 pair). Several repair methods (class completion,
 geometric completion) were added after the registered methods failed and are labelled post-registration. The
-decoder-isolation construction deviated from its registration (\S\ref{sec:decoder}). Owner-side verification of the
+decoder-isolation construction deviated from its registration (\S\ref{sec:decoder}). The constructed networks cover modular expressions whose result is a function of one small linear statistic
+of per-variable codes; mixed-domain expressions (e.g.\ $MA+S$) need a second nonlinear stage that was not built, and
+the compiler's larger domains are verified on samples. Owner-side verification of the
 preserved checkpoint archives is pending at the time of writing.
+
+\section*{Hybrid repair}
+Decoder replacement (learned encoder, familiar-fitted linear readouts of the log coordinates, constructed decoder)
+failed for every network: the readouts err by up to 8--17 on unseen prompts, and a random encoder scored higher.
+Representation replacement (the constructed canonical mass code mapped into the learned block, learned decoder kept)
+helped failures most (unseen 0.56--0.76; random-grouping control $\le0.13$) but met no repair criterion.
 
 \section*{Provenance}
 Training, analysis and drafting were executed by an AI research agent (Claude Code) in a cloud container under the

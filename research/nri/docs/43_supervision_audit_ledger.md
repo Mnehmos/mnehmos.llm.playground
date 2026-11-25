@@ -105,3 +105,29 @@ were seen, and that every post-hoc change is labelled.
 | The composing decoder forms gradually, together with fitting (307) | observed |
 | Generalisers multiply by adding per-token discrete-log phases at one frequency coprime to 12 | observed structure (R² 0.90/0.92); the algorithmic reading is **proposed**; no exact program |
 | Decoder transplant or construction | not achieved |
+
+## Additions (Phase VI)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 44 | Phase VI registration (derivations, designs, Q-criteria, predictions) committed before any evaluation | A | pre | doc 53 | doc 53 (446bbeb) |
+| 45 | Designs C and L passed every Q-criterion on first build; float32 activations bitwise symbolic | A | — | "exactly programmed" claimed on Q-exact, not accuracy | doc 54 §54.2 |
+| 46 | `unit()` contained a dead destination computation; removed and re-run, identical results | A | post (code) | — | `sci/instructions.py` |
+| 47 | Residual prediction partly unsupported: effect not via ReLU-boundary cells | A | post | reported as is | doc 54 §54.4 |
+| 48 | Per-pair split of the pairwise residual family added after R2 (exploratory refinement) | A | post | labelled exploratory | `residual_pairs.json` |
+| 49 | H2 "wrong-code" control invalid (column permutation is absorbed by the affine fit); replaced by random regrouping before interpreting H2 | A | post (method) | deviation 3 | doc 54 §54.7 |
+| 50 | H1 and H2 fail the repair criterion; H1's random-encoder control beats every learned encoder | A | post | negative results kept; double dissociation only directional | doc 54 §54.7 |
+| 51 | Compiler exhaustive cap lowered 3·10⁶ → 1.2·10⁶ prompts for runtime | A | post (method) | deviation 2; larger domains sampled and labelled | doc 54 §54.6 |
+
+## Ledger after Phase VI
+
+| claim | status |
+|---|---|
+| The task's computation can be compiled into the existing architecture without training, exactly | **demonstrated** (exhaustive, float32 bitwise-symbolic; real-arithmetic bound < 10⁻¹⁰⁰) |
+| Internal operators (6), unit conversions (60), binding, decoding compile exactly, independently, reversibly, composably | **demonstrated** (exhaustive) |
+| The compiler generalises across primes, operand counts, unit scales and expressions | **demonstrated** for the grid (exhaustive ≤ 1.2·10⁶ prompts, sampled beyond) |
+| One ReLU layer cannot add phase vectors exactly; integer logs plus hats can | mathematical (D0, D1) |
+| The learned decoders' residual is essential readout structure made of pairwise token interactions | observed (7 networks) |
+| Generalisers' M code is factorised, 2-D and interchange-equivalent to the construction, but circular | observed |
+| Constructed parts repair learned networks | **not supported** |
+| Constructed networks are exact but fragile; learned ones robust | observed |

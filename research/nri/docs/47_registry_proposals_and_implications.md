@@ -130,8 +130,18 @@ changed until the owner merges them through the registry's own process.
 - **Chess Vision.** Monitoring is most useful before lock-in. Interventions after it fail, even when they restore the
   representation's measured structure.
 
+## 47.6 Revisions after Phase VI (v2, proposals)
+
+| ID | proposal | evidence | boundary |
+|---|---|---|---|
+| **Q24** | **C-I (constructive)** for construction and core-operator programming: an exact, training-free network for the task in the existing architecture; F = M²AS, MA²S, M±A, M/A compiled into the head; units, binding and decoding edited independently | Doc 54 §54.2–54.3, exhaustive, float32 bitwise-symbolic | Modular single-statistic expressions; one hidden layer. **C-N** for transplanting constructed parts into learned networks (§54.7). |
+| **I32** (new) | P: the learned decoders' unexplained residual is essential readout structure made of pairwise token interactions (cross-operand in 307, unit conversion in 311, lookup in failures) | Doc 54 §54.4 | 7 networks. |
+| **I33** (new) | P: learned generalisers share the construction's causal variables (factorised 2-D mass code, interchange-equivalent) but store them as a circle; exactness and robustness trade off | Doc 54 §54.5 | Exploratory. |
+| **I34** (new) | C-I (method): a compiler from modular specifications to transformer weights, exact over primes 5–23, 2–3 declared variables, monomial, inverse, sum and difference expressions | Doc 54 §54.6 | Single-statistic expressions; larger domains sampled. |
+
 ## 47.4 Change history
 
 v0 (2026-11-25): first proposal set, for owner review. No registry record was changed.
 v1 (2026-11-25): revisions after Phase IV and Phase V (§47.5), prepared for PR #36 as approved. Still proposals;
 no registry record was changed.
+v2 (2026-11-25): Phase VI proposals (§47.6). Still proposals; no registry record was changed.
