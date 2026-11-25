@@ -11,6 +11,17 @@ observed, what is running, and what is decided or pending.
   96/96 OK at the end of Phases II–III (doc 41R.8). The container restarted at about 05:22 UTC; re-run
   `verify_archives.py` before relying on them.
 
+> **Update (after PR #33 merged).** All 46 training-intervention runs finished and none failed. All 17 controls are
+> bitwise identical at every check. Final table: doc 49 §49.4. What changed since this snapshot:
+> - **The break replicates in 311:** 1.00 → 0.33 unseen, familiar 1.00. Factorisation is causally necessary during
+>   development in both generalisers.
+> - **After consolidation it is not necessary:** 311 keeps 0.92 with factorisation 0.15, and 307 resists entirely.
+> - **Earlier prevention in 310:** starting at step 1,200 gives 0.61 (1,300: 0.55; 1,450: 0.22). Timing dependence is
+>   confirmed, but the rescue criterion was never met.
+> - **No help from:** freezing attention-2 q/k (0.19), gradient projection (0.10), interchange ×3 (breaks 311, not 307).
+>
+> §5 ("Running") is now obsolete.
+
 **Labels.**
 - **[R]** registered or confirmatory;
 - **[X]** exact (bitwise or mathematical identity);
