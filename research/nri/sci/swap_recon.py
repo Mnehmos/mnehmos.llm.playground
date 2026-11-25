@@ -173,3 +173,36 @@ if __name__ == "__main__":
         jobs = [(g, int(s), zoo) for g, s in specs]
         with ProcessPoolExecutor(min(a.workers, len(jobs))) as ex:
             list(ex.map(_job, jobs))
+
+
+# ------------------------------------------------------------------ preservation (doc 41 §41.6 Q4)
+def archive(run, archive_dir="/home/user/swap_archives", repo_dir=None):
+    """Per-run tar.xz outside Git, verified with `tar --diff`; per-file SHA-256 manifest + small logs into Git.
+    Live copies are NOT deleted."""
+    import gzip
+    import hashlib
+    import shutil
+    import subprocess
+    run = Path(run)
+    repo_dir = Path(repo_dir or ROOT / "runs" / "swap_recon" / run.name)
+    repo_dir.mkdir(parents=True, exist_ok=True)
+    adir = Path(archive_dir)
+    adir.mkdir(parents=True, exist_ok=True)
+    files = {str(p.relative_to(run)): hashlib.sha256(p.read_bytes()).hexdigest()
+             for p in sorted(run.rglob("*")) if p.is_file()}
+    tar = adir / f"{run.name}.tar.xz"
+    env = dict(__import__("os").environ, XZ_OPT="-3 -T1")
+    subprocess.run(["tar", "-cJf", str(tar), "-C", str(run.parent), run.name], check=True, env=env)
+    diff = subprocess.run(["tar", "-dJf", str(tar), "-C", str(run.parent)], capture_output=True, text=True, env=env)
+    man = dict(run=run.name, n_files=len(files), n_checkpoints=sum(1 for k in files if k.endswith("/COMPLETE")),
+               archive=tar.name, archive_bytes=tar.stat().st_size,
+               archive_sha256=hashlib.sha256(tar.read_bytes()).hexdigest(), verified=diff.returncode == 0, files=files)
+    (repo_dir / "manifest.json").write_text(json.dumps(man, indent=1))
+    for name in ("config.json", "log.jsonl"):
+        if (run / name).exists():
+            shutil.copy(run / name, repo_dir / name)
+    for name in ("audits.jsonl", "interval.jsonl"):
+        if (run / name).exists():
+            with open(run / name, "rb") as f, gzip.open(repo_dir / f"{name}.gz", "wb") as g:
+                g.write(f.read())
+    return man
