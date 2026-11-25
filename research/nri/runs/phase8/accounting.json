@@ -1,0 +1,82 @@
+{
+ "B": {
+  "total": 269952,
+  "constructed_frozen": 0,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 0,
+  "effective_trainable": 269952,
+  "phase7_reported_trainable": 269952,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 1864826880
+ },
+ "Bprime": {
+  "total": 237720,
+  "constructed_frozen": 0,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 0,
+  "effective_trainable": 237720,
+  "phase7_reported_trainable": 237720,
+  "forward_flops_per_prompt": 2138160,
+  "train_flops_per_step": 1642106880
+ },
+ "C": {
+  "total": 269952,
+  "constructed_frozen": 78436,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 0,
+  "effective_trainable": 191516,
+  "phase7_reported_trainable": 191516,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 1864826880
+ },
+ "K2": {
+  "total": 269952,
+  "constructed_frozen": 78436,
+  "structurally_zeroed": 38656,
+  "frozen_at_init": 0,
+  "effective_trainable": 152860,
+  "phase7_reported_trainable": 191516,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 1864826880
+ },
+ "K3": {
+  "total": 269952,
+  "constructed_frozen": 78436,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 38656,
+  "effective_trainable": 152860,
+  "phase7_reported_trainable": 191516,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 1864826880
+ },
+ "K0": {
+  "total": 269952,
+  "constructed_frozen": 0,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 0,
+  "effective_trainable": 269952,
+  "phase7_reported_trainable": 269952,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 1864826880
+ },
+ "D": {
+  "total": 269952,
+  "constructed_frozen": 0,
+  "structurally_zeroed": 0,
+  "frozen_at_init": 0,
+  "effective_trainable": 269952,
+  "phase7_reported_trainable": 269952,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 3627712512.0
+ },
+ "K5": {
+  "total": 269952,
+  "constructed_frozen": 78436,
+  "structurally_zeroed": 38656,
+  "frozen_at_init": 0,
+  "effective_trainable": 152860,
+  "phase7_reported_trainable": 191516,
+  "forward_flops_per_prompt": 2428160,
+  "train_flops_per_step": 3627712512.0
+ }
+}
