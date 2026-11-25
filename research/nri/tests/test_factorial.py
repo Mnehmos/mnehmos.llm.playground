@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from sci import concept as C  # noqa: E402
+from sem import lang as _L  # noqa: E402,F401
 from sci import concept_audit as A  # noqa: E402
 from sci import factorial as Fx  # noqa: E402
 from sem import data as D  # noqa: E402
@@ -111,3 +112,21 @@ def test_registered_statistics_known_answers():
     lo, hi = FA.bootstrap_ci([0.2] * 12)
     assert lo == hi == 0.2
     assert abs(FA.binom_greater(10, 10) - 1 / 1024) < 1e-12
+
+
+def test_heldout_causal_pairs_exclude_reserved_test_and_classify_correctly():
+    from sci import heldout_causal as H
+    s = C.make_split()
+    pairs = H.enumerate_pairs(s)
+    test = set(s["test"])
+    assert pairs
+    for p in pairs:
+        rb = p["base"][0]
+        dim, ub, tb = rb
+        v_can = C.canonical(dim, p["donor"][1], p["donor"][0][1]) * _L.INV[_L.SCALES[dim][ub]] % C.P
+        assert C.answer(dim, v_can, ub, tb) == p["a_can"]                       # implied combination is exact
+        for combo in (p["base"], p["donor"], (rb, p["donor"][1]), (rb, v_can)):
+            assert combo not in test
+        assert p["donor"] in set(s["train"])
+    kinds = {(p["base_pool"], p["can_implied"]) for p in pairs}
+    assert ("trained", "heldout") in kinds and ("trained", "trained") in kinds and ("heldout", "trained") in kinds
