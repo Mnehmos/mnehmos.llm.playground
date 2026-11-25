@@ -53,7 +53,12 @@ an LLM's interpretation of a network be made *executable and refutable*?
 | 44 | [`docs/44_literature_novelty_review.md`](docs/44_literature_novelty_review.md) | Literature and novelty review |
 | 45 | [`docs/45_registration_window_replay.md`](docs/45_registration_window_replay.md) | Registration: 10-step exact replay of the critical window |
 | 46 | [`docs/46_mechanistic_origins.md`](docs/46_mechanistic_origins.md) | **Mechanistic origins**: generalisers keep the declared block factorised (value + unit); failures lock in an interaction; per-part edits make the best generaliser perfectly editable; candidate mechanisms and reciprocal interventions |
-| 47 | [`docs/47_registry_proposals_and_implications.md`](docs/47_registry_proposals_and_implications.md) | Proposed Issue #31 registry updates; implications for NRI, Paper Three, Paper Five, Genesis, Chess Vision |
+| 47 | [`docs/47_registry_proposals_and_implications.md`](docs/47_registry_proposals_and_implications.md) | Proposed Issue #31 registry updates; implications for NRI, Paper Three, Paper Five, Genesis, Chess Vision (v1 adds Phase IV/V revisions, §47.5) |
+| 48 | [`docs/48_registration_phase4_causal_engineering.md`](docs/48_registration_phase4_causal_engineering.md) | Registration: Phase IV causal engineering (P1–P3 training interventions, rescue, reverse, programming) + addendum A |
+| 49 | [`docs/49_phase4_results.md`](docs/49_phase4_results.md) | **Phase IV results**: 46 training interventions (factorisation necessary during development, not after; prevention partial), training-free repair of 302, exact token programming |
+| 50 | [`docs/50_handoff.md`](docs/50_handoff.md) | Handoff snapshot after Phase IV |
+| 51 | [`docs/51_registration_phase5_decoder.md`](docs/51_registration_phase5_decoder.md) | Registration: Phase V, the decoder (D1–D7) |
+| 52 | [`docs/52_phase5_results.md`](docs/52_phase5_results.md) | **Phase V results**: decoder classes, gradual birth of composition, discrete-log phase addition, failed programs and transplants, exact output operators |
 
 ## Layout
 

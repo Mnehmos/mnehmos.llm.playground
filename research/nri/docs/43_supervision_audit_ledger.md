@@ -66,8 +66,42 @@ were seen, and that every post-hoc change is labelled.
 | Historical networks replay bitwise (36/36; window; resume) | **demonstrated** (exact reproduction) |
 | Canonical code converted along never-trained combinations (C1.0) | observed (validated instrument; retrospective) |
 | Present / readable / controlling separation | observed |
-| Factorisation kept vs lost during the escape separates generalisers from failures | observed (24 networks); its causal role is **inferred**, tests P1–P3 not run |
-| Strong decay prunes route-specific structure; the reader becomes reusable | observed (condition level); causal role inferred, test P3 not run |
+| Factorisation kept vs lost during the escape separates generalisers from failures | observed (24 networks); **causal necessity during development demonstrated** by registered interventions in 307 and 311 (superseded row below) |
+| Strong decay prunes route-specific structure; the reader becomes reusable | observed (condition level); in role-swap, P3 (decay → 1.0 from step 2,000) helped only marginally (304: 0.25) — the factorial mechanism does not transfer as a rescue |
 | Per-part edit succeeds in factorised networks | observed (single-pass interventions on fixed networks) |
 | Head composition is a second requirement (C2) | inferred from observed partial cases (300, 305) |
 | Cross-network transplant of the canonical code | observed |
+
+## Additions (Phase IV and Phase V)
+
+| # | item | by | pre/post | effect | where |
+|---|---|---|---|---|---|
+| 31 | Phase IV registration (P1–P3, rescue, reverse, programming) committed before any run | A | pre | doc 48 | doc 48 |
+| 32 | P3 planted-mechanism criterion failed on excess (bounded by 1 − baseline) → switch rate added | A | post (method) | deviation 1 of doc 48; both measures reported | doc 49 |
+| 33 | Addendum A (earlier starts for 304/310; extra break variants) registered before its runs | A | pre | 6 runs added; prediction "earlier rescues more" supported for 310 | doc 48 addendum A |
+| 34 | All 17 matched controls bitwise identical at 20/20 checks | A | — | interventions are the only difference from history | doc 49 §49.4 |
+| 35 | Registered rescues R1–R5 failed → R6, R7, R7L, R7A added **after** registration | A | post | labelled post-registration; 302 repair (0.93) is a post-registration result | doc 49 §49.1 |
+| 36 | `compiled_value_edit` failed (≤ 0.44); a mathematical impossibility for a one-step linear form was shown | A | post | kept as a negative result | doc 49 §49.6 |
+| 37 | Phase V registration (D1–D7) committed before any run | A | pre | doc 51 | doc 51 (664a6c7) |
+| 38 | D1 registered synthetic construction failed its fidelity check (trained cells 0.33–0.89 except 307) → exact-context variant used; logged **before** interpreting classes | A | post (method) | doc 52 deviation 1; both outputs kept | doc 52 §52.1 |
+| 39 | D4 explicit programs (single-frequency, additive, pair, per-order) all failed full-domain validation | A | post | negative result; no compact program claimed | doc 52 §52.3 |
+| 40 | D5 transplants all at chance; no qualifying repair | A | post | negative result | doc 52 §52.5 |
+| 41 | D6 constructed decoder not built (its precondition, an identified program, failed) | A | — | recorded as open | doc 52 §52.7 |
+| 42 | D2/D3/D5 run as inline drivers, later recovered into `sci/phase5_drivers.py`; D5 re-run byte-identical | A | post | reproducibility | doc 52 §52.8 |
+| 43 | Archive manifests for reconstruction (36) and window (5) committed; delivered copies; owner check **pending** | A | — | not marked complete | `runs/swap_recon/archives/PRESERVATION.md` |
+
+## Ledger after Phase V: observed / inferred / demonstrated
+
+| claim | status |
+|---|---|
+| Rewarding the interaction during the window destroys generalisation (307, 311) | **demonstrated** (registered causal intervention, bitwise controls; one run per network) |
+| After consolidation factorisation is not necessary (311 keeps 0.92 at factorisation 0.15) | **demonstrated** for 311; 307 not testable (the interaction did not form) |
+| Preventing the interaction before lock-in partly rescues failures (0.52–0.61), later does not | **demonstrated** (registered); rescue criterion not met |
+| Failures' decoders are intact for canonical inputs; representation missing for unseen pairings | observed (oracle diagnostic) |
+| Training-free repair of 302 (0.19 → 0.93) | observed, post-registration method, no oracle |
+| Token-level and output-level programs compile exactly, compose and invert | **demonstrated** (mathematical identities, verified over the full domain) |
+| Execution of programs on unseen inputs is bounded by generalisation (ρ = 0.96) | observed (7 networks) |
+| 307's decoder is algorithmic; 300's interpolates | observed (deviation-1 construction) |
+| The composing decoder forms gradually, together with fitting (307) | observed |
+| Generalisers multiply by adding per-token discrete-log phases at one frequency coprime to 12 | observed structure (R² 0.90/0.92); the algorithmic reading is **proposed**; no exact program |
+| Decoder transplant or construction | not achieved |
