@@ -1,0 +1,22 @@
+# G05 Session 12: Computational observability
+
+## Result
+A fixed nonzero reference and one-site counterfactual output ratio isolate a site's relative computational contribution. This turns output-only observations into local supervision, with a supplied product architecture and reference gauge. On five exact frozen historical transformers, both raw and whitened full-batch gradient descent qualified in 10/10 model-seed configurations in the protected replication. Each achieved 91,260/91,260 ordinary products, 163,840/163,840 two-role, 163,840/163,840 five-site, and 163,840/163,840 masked-source recombinations, with 17,760/17,760 historically withheld products. Each also passed 456,300 single-site witnesses, 53,460 of which expose otherwise masked nonzero contributions. These are overlapping examinations, not independent seeds. All source and counterfactual target prompts used during protected training were historically familiar. These domains had previously been examined; this is not blind native-backbone qualification.
+
+Design-selected sparse least squares also passed all 10 configurations: 161 source-site observations, 30–31 distinct numerical oracle inputs after caching. Random32 passed all nonzero recombination panels but failed ordinary outputs in one 32002 run (1,350 errors); no zero value appeared in either sampled role. The sparse fit requires a complete familiar activation bank and supplied literal-equality conditioning; the query count is not total acquisition cost. No claim of superiority over least squares.
+
+## Negative results
+Initial ordinary/role/site/targeted exposure/explicit factor supervision pass counts: 6/8/7/7/10 out of 10. Random-reference ordinary/swap/ratio/factor: 4/2/4/10. Fixed-reference swap/ratio/local CE/local regression: 0/0/2/0; least squares 5/5. Full-batch local regression succeeds, but this changes objective, schedule, and conditioning; whitening only accelerates convergence, not the final result. One invalid preconditioning queue used absolute instead of relative phase targets; corrected and preserved. Earlier independently recombined target labels sometimes included historical forbidden value-unit pairs even though source activation prompts did not. See oracle_audit.csv. The final protected replication explicitly prevents this.
+
+## Audit
+190 primary training runs, including 20 invalid controls; 118,000 updates (116,000 valid), 1,910 primary checkpoint files (1,690 valid), 2,020 locked entries, 1,290 matched RNG comparisons, 62 bitwise replay checkpoint comparisons, 39 byte-identical S11 source and parent files. Frozen original weights. All 45 protected compiled heads agree with their unfused equivalents on 821,340 factor predictions, 410,670 ordinary outputs and 184,320 new nonzero site predictions. 585 affine weights+biases, 57 active coefficients in the conditioned basis; fixed phase code, reference output, typed parsing and product supplied. No claim of autonomous observability selection or native repair.
+
+## Archives and reproduction
+Extract both session archives into the same directory. Full reproducibility source, exact historical states, negative results, all checkpoint chains, compiled heads and SHA256SUMS are in the research-session archives delivered to the repository owner:
+- nri_G05_session12_observability_core.zip — SHA256 9bf0734c482db9aea99d74185dc901040719a79ddfd9b8666b1c6d02182326ee
+- nri_G05_session12_observability_checkpoints.zip — SHA256 9356f6b42a8c93e888751fde239d159a8026ecc069a1dbaa15a27278b2a1716e
+
+From the extracted session folder, with Python/PyTorch/pandas and one CPU thread per worker, run observe.py, anchor.py, gauge.py, precondition.py, protected.py for each of 32002_spontaneous, 34001_exact, 34001_quotient, 34002_exact, 34002_quotient; then audit12.py (requires original S11 core archive and invalid queue), compile12.py. Run in a clean copy; existing outputs are not overwritten. Prior exact repo code commit a14930091fbeb5acdf7c247205b20b74bf88d249. The PR records the scientific checkpoint; large binary checkpoint history stays in the delivered archives. One PR per completed research session or independently registered milestone, not per gradient checkpoint; no automatic merging.
+
+## Next milestone
+Learn where to intervene without supplied site factorization; examine additive cancellation and conditional gating, observability coverage including zero/branch cases, then prospective native-backbone developmental interventions.
