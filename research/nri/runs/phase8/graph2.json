@@ -1,0 +1,4872 @@
+{
+ "cse_regalloc": [
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(S)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     12
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 72769,
+    "nonzero_params": 1381,
+    "decoder_flops_per_prompt": 5698
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(S)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     12
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 72769,
+    "nonzero_params": 1381,
+    "decoder_flops_per_prompt": 5698
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(S)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     12
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 72769,
+    "nonzero_params": 1381,
+    "decoder_flops_per_prompt": 5698
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(S)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     12
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 72769,
+    "nonzero_params": 1381,
+    "decoder_flops_per_prompt": 5698
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M / A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2004,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M / A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2004,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M / A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2004,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M / A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2004,
+    "decoder_flops_per_prompt": 10318
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A * S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A * S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A * S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A * S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(S / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(S / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(S / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(S / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A - M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2053,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A - M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2053,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A - M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2053,
+    "decoder_flops_per_prompt": 10318
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A - M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     27
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 75094,
+    "nonzero_params": 2053,
+    "decoder_flops_per_prompt": 10318
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     15
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 73234,
+    "nonzero_params": 1537,
+    "decoder_flops_per_prompt": 6622
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     15
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 73234,
+    "nonzero_params": 1537,
+    "decoder_flops_per_prompt": 6622
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     15
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 73234,
+    "nonzero_params": 1537,
+    "decoder_flops_per_prompt": 6622
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     15
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 73234,
+    "nonzero_params": 1537,
+    "decoder_flops_per_prompt": 6622
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A + S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A + S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A + S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A + S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     25
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74784,
+    "nonzero_params": 1772,
+    "decoder_flops_per_prompt": 9702
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(S * A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(S * A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(S * A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(S * A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 77,
+    "blocks": 1,
+    "widths": [
+     23
+    ],
+    "n_nodes": 1,
+    "clears": 0,
+    "dense_params": 74474,
+    "nonzero_params": 1680,
+    "decoder_flops_per_prompt": 9086
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M / (S - M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80593,
+    "nonzero_params": 2472,
+    "decoder_flops_per_prompt": 21060
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M / (S - M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82946,
+    "nonzero_params": 2498,
+    "decoder_flops_per_prompt": 25740
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M / (S - M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80593,
+    "nonzero_params": 2472,
+    "decoder_flops_per_prompt": 21060
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M / (S - M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82946,
+    "nonzero_params": 2498,
+    "decoder_flops_per_prompt": 25740
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((A)^2 - (S + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     38,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 84831,
+    "nonzero_params": 2441,
+    "decoder_flops_per_prompt": 29458
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((A)^2 - (S + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     38,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 90213,
+    "nonzero_params": 2493,
+    "decoder_flops_per_prompt": 40170
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((A)^2 - (S + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     38,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 84831,
+    "nonzero_params": 2441,
+    "decoder_flops_per_prompt": 29458
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((A)^2 - (S + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     38,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 90213,
+    "nonzero_params": 2493,
+    "decoder_flops_per_prompt": 40170
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M / (S + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80593,
+    "nonzero_params": 2472,
+    "decoder_flops_per_prompt": 21060
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M / (S + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82946,
+    "nonzero_params": 2498,
+    "decoder_flops_per_prompt": 25740
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M / (S + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80593,
+    "nonzero_params": 2472,
+    "decoder_flops_per_prompt": 21060
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M / (S + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     25,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82946,
+    "nonzero_params": 2498,
+    "decoder_flops_per_prompt": 25740
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M)^2 - (S)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 82554,
+    "nonzero_params": 2363,
+    "decoder_flops_per_prompt": 24926
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M)^2 - (S)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     27,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 87936,
+    "nonzero_params": 2415,
+    "decoder_flops_per_prompt": 35638
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M)^2 - (S)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 82554,
+    "nonzero_params": 2363,
+    "decoder_flops_per_prompt": 24926
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M)^2 - (S)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     27,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 87936,
+    "nonzero_params": 2415,
+    "decoder_flops_per_prompt": 35638
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M + (A + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80955,
+    "nonzero_params": 2478,
+    "decoder_flops_per_prompt": 21780
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M + (A + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 83308,
+    "nonzero_params": 2504,
+    "decoder_flops_per_prompt": 26460
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M + (A + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80955,
+    "nonzero_params": 2478,
+    "decoder_flops_per_prompt": 21780
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M + (A + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 83308,
+    "nonzero_params": 2504,
+    "decoder_flops_per_prompt": 26460
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A / (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80955,
+    "nonzero_params": 2704,
+    "decoder_flops_per_prompt": 21780
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A / (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 83308,
+    "nonzero_params": 2730,
+    "decoder_flops_per_prompt": 26460
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A / (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80955,
+    "nonzero_params": 2704,
+    "decoder_flops_per_prompt": 21780
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A / (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     27,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 83308,
+    "nonzero_params": 2730,
+    "decoder_flops_per_prompt": 26460
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A + (M / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80231,
+    "nonzero_params": 2429,
+    "decoder_flops_per_prompt": 20340
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A + (M / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82584,
+    "nonzero_params": 2455,
+    "decoder_flops_per_prompt": 25020
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A + (M / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80231,
+    "nonzero_params": 2429,
+    "decoder_flops_per_prompt": 20340
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A + (M / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82584,
+    "nonzero_params": 2455,
+    "decoder_flops_per_prompt": 25020
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S / M) + M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80231,
+    "nonzero_params": 2429,
+    "decoder_flops_per_prompt": 20340
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S / M) + M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82584,
+    "nonzero_params": 2455,
+    "decoder_flops_per_prompt": 25020
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S / M) + M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     27
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 80231,
+    "nonzero_params": 2429,
+    "decoder_flops_per_prompt": 20340
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S / M) + M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     40
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 82584,
+    "nonzero_params": 2455,
+    "decoder_flops_per_prompt": 25020
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M / S))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     15
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 78059,
+    "nonzero_params": 1913,
+    "decoder_flops_per_prompt": 16020
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M / S))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     28
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 80412,
+    "nonzero_params": 1939,
+    "decoder_flops_per_prompt": 20700
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M / S))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     15
+    ],
+    "n_nodes": 2,
+    "clears": 0,
+    "dense_params": 78059,
+    "nonzero_params": 1913,
+    "decoder_flops_per_prompt": 16020
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M / S))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 90,
+    "blocks": 2,
+    "widths": [
+     23,
+     28
+    ],
+    "n_nodes": 2,
+    "clears": 1,
+    "dense_params": 80412,
+    "nonzero_params": 1939,
+    "decoder_flops_per_prompt": 20700
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M)^2 - (M + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     42,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 85659,
+    "nonzero_params": 3035,
+    "decoder_flops_per_prompt": 31106
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M)^2 - (M + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     42,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 91041,
+    "nonzero_params": 3087,
+    "decoder_flops_per_prompt": 41818
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M)^2 - (M + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     42,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 85659,
+    "nonzero_params": 3035,
+    "decoder_flops_per_prompt": 31106
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M)^2 - (M + A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 2,
+    "widths": [
+     42,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 91041,
+    "nonzero_params": 3087,
+    "decoder_flops_per_prompt": 41818
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M - M) + (M + S)) - (A / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     75,
+     27,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 105306,
+    "nonzero_params": 3747,
+    "decoder_flops_per_prompt": 69918
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M - M) + (M + S)) - (A / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     75,
+     53,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 118774,
+    "nonzero_params": 3851,
+    "decoder_flops_per_prompt": 96750
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M - M) + (M + S)) - (A / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     75,
+     27,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 105306,
+    "nonzero_params": 3747,
+    "decoder_flops_per_prompt": 69918
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M - M) + (M + S)) - (A / S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     75,
+     53,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 118774,
+    "nonzero_params": 3851,
+    "decoder_flops_per_prompt": 96750
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M - S) / ((A + M) - A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     52,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 96385,
+    "nonzero_params": 3970,
+    "decoder_flops_per_prompt": 52200
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M - S) / ((A + M) - A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     52,
+     40,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 105472,
+    "nonzero_params": 4048,
+    "decoder_flops_per_prompt": 70296
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M - S) / ((A + M) - A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     52,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 96385,
+    "nonzero_params": 3970,
+    "decoder_flops_per_prompt": 52200
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M - S) / ((A + M) - A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     52,
+     40,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 105472,
+    "nonzero_params": 4048,
+    "decoder_flops_per_prompt": 70296
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((A * S) * (A / (S - M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     48,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 95453,
+    "nonzero_params": 3548,
+    "decoder_flops_per_prompt": 50344
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((A * S) * (A / (S - M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     48,
+     40,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 104540,
+    "nonzero_params": 3626,
+    "decoder_flops_per_prompt": 68440
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((A * S) * (A / (S - M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     48,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 95453,
+    "nonzero_params": 3548,
+    "decoder_flops_per_prompt": 50344
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((A * S) * (A / (S - M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     48,
+     40,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 104540,
+    "nonzero_params": 3626,
+    "decoder_flops_per_prompt": 68440
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((S - S))^2 - ((S - S) + (S * A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 3,
+    "widths": [
+     69,
+     42,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 111433,
+    "nonzero_params": 3581,
+    "decoder_flops_per_prompt": 82076
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((S - S))^2 - ((S - S) + (S * A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 3,
+    "widths": [
+     69,
+     81,
+     53
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 129958,
+    "nonzero_params": 3711,
+    "decoder_flops_per_prompt": 118996
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((S - S))^2 - ((S - S) + (S * A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     46,
+     42,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 101680,
+    "nonzero_params": 3496,
+    "decoder_flops_per_prompt": 62694
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((S - S))^2 - ((S - S) + (S * A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     46,
+     68,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 115148,
+    "nonzero_params": 3600,
+    "decoder_flops_per_prompt": 89526
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M - A) - (S * M)) / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     27,
+     23
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 94987,
+    "nonzero_params": 3554,
+    "decoder_flops_per_prompt": 49416
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M - A) - (S * M)) / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     53,
+     36
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 104074,
+    "nonzero_params": 3632,
+    "decoder_flops_per_prompt": 67512
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M - A) - (S * M)) / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     27,
+     23
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 94987,
+    "nonzero_params": 3554,
+    "decoder_flops_per_prompt": 49416
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M - A) - (S * M)) / S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     53,
+     36
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 104074,
+    "nonzero_params": 3632,
+    "decoder_flops_per_prompt": 67512
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((S / M))^2 - (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     15,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 93123,
+    "nonzero_params": 3362,
+    "decoder_flops_per_prompt": 45704
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((S / M))^2 - (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     28,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 102210,
+    "nonzero_params": 3440,
+    "decoder_flops_per_prompt": 63800
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((S / M))^2 - (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     15,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 93123,
+    "nonzero_params": 3362,
+    "decoder_flops_per_prompt": 45704
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((S / M))^2 - (M * A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     50,
+     28,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 102210,
+    "nonzero_params": 3440,
+    "decoder_flops_per_prompt": 63800
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((A * A) / (S / S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     46,
+     27,
+     15
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 92191,
+    "nonzero_params": 2699,
+    "decoder_flops_per_prompt": 43848
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((A * A) / (S / S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     46,
+     53,
+     28
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 101278,
+    "nonzero_params": 2777,
+    "decoder_flops_per_prompt": 61944
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((A * A) / (S / S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     46,
+     27,
+     15
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 92191,
+    "nonzero_params": 2699,
+    "decoder_flops_per_prompt": 43848
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((A * A) / (S / S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     46,
+     53,
+     28
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 101278,
+    "nonzero_params": 2777,
+    "decoder_flops_per_prompt": 61944
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M)^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     15,
+     15,
+     15
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 80794,
+    "nonzero_params": 2003,
+    "decoder_flops_per_prompt": 21218
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M)^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     15,
+     28,
+     28
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 86176,
+    "nonzero_params": 2055,
+    "decoder_flops_per_prompt": 31930
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M)^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     15,
+     15,
+     15
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 80794,
+    "nonzero_params": 2003,
+    "decoder_flops_per_prompt": 21218
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M)^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     15,
+     28,
+     28
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 86176,
+    "nonzero_params": 2055,
+    "decoder_flops_per_prompt": 31930
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((A + (A * S)) - ((S)^2)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     35,
+     42,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 98831,
+    "nonzero_params": 3488,
+    "decoder_flops_per_prompt": 57018
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((A + (A * S)) - ((S)^2)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     35,
+     68,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 112299,
+    "nonzero_params": 3592,
+    "decoder_flops_per_prompt": 83850
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((A + (A * S)) - ((S)^2)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     35,
+     42,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 98831,
+    "nonzero_params": 3488,
+    "decoder_flops_per_prompt": 57018
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((A + (A * S)) - ((S)^2)^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     35,
+     68,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 112299,
+    "nonzero_params": 3592,
+    "decoder_flops_per_prompt": 83850
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M * M) / M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 85762,
+    "nonzero_params": 2635,
+    "decoder_flops_per_prompt": 31106
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M * M) / M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     40,
+     28
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 91144,
+    "nonzero_params": 2687,
+    "decoder_flops_per_prompt": 41818
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M * M) / M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 85762,
+    "nonzero_params": 2635,
+    "decoder_flops_per_prompt": 31106
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M * M) / M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     40,
+     28
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 91144,
+    "nonzero_params": 2687,
+    "decoder_flops_per_prompt": 41818
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((M + M) + (A)^2) * ((A - A) - (M)^2)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 4,
+    "widths": [
+     84,
+     54,
+     27,
+     15
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 133347,
+    "nonzero_params": 4727,
+    "decoder_flops_per_prompt": 125328
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((M + M) + (A)^2) * ((A - A) - (M)^2)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     84,
+     106,
+     53,
+     28
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 156747,
+    "nonzero_params": 4909,
+    "decoder_flops_per_prompt": 172050
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((M + M) + (A)^2) * ((A - A) - (M)^2)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 4,
+    "widths": [
+     84,
+     54,
+     27,
+     15
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 133347,
+    "nonzero_params": 4727,
+    "decoder_flops_per_prompt": 125328
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((M + M) + (A)^2) * ((A - A) - (M)^2)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     84,
+     106,
+     53,
+     28
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 156747,
+    "nonzero_params": 4909,
+    "decoder_flops_per_prompt": 172050
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M + (A - S)) * ((A + A) * (A + M))) / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     79,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 130623,
+    "nonzero_params": 5795,
+    "decoder_flops_per_prompt": 119970
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M + (A - S)) * ((A + A) * (A + M))) / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     79,
+     93,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 147770,
+    "nonzero_params": 5951,
+    "decoder_flops_per_prompt": 154212
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M + (A - S)) * ((A + A) * (A + M))) / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     79,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 130623,
+    "nonzero_params": 5795,
+    "decoder_flops_per_prompt": 119970
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M + (A - S)) * ((A + A) * (A + M))) / M)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     79,
+     93,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 147770,
+    "nonzero_params": 5951,
+    "decoder_flops_per_prompt": 154212
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M / (M + ((A + S) / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 4,
+    "widths": [
+     25,
+     23,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 95569,
+    "nonzero_params": 3597,
+    "decoder_flops_per_prompt": 50344
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M / (M + ((A + S) / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 4,
+    "widths": [
+     25,
+     36,
+     40,
+     40
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 100769,
+    "nonzero_params": 3675,
+    "decoder_flops_per_prompt": 60770
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M / (M + ((A + S) / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 4,
+    "widths": [
+     25,
+     23,
+     27,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 95569,
+    "nonzero_params": 3597,
+    "decoder_flops_per_prompt": 50344
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M / (M + ((A + S) / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 4,
+    "widths": [
+     25,
+     36,
+     40,
+     40
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 100769,
+    "nonzero_params": 3675,
+    "decoder_flops_per_prompt": 60770
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M * (A + (M / S))) * ((S / S))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     42,
+     42,
+     27,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 111575,
+    "nonzero_params": 4126,
+    "decoder_flops_per_prompt": 82076
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M * (A + (M / S))) * ((S / S))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     42,
+     68,
+     40,
+     53
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 124601,
+    "nonzero_params": 4256,
+    "decoder_flops_per_prompt": 108102
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M * (A + (M / S))) * ((S / S))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     42,
+     42,
+     27,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 111575,
+    "nonzero_params": 4126,
+    "decoder_flops_per_prompt": 82076
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M * (A + (M / S))) * ((S / S))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     42,
+     68,
+     40,
+     53
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 124601,
+    "nonzero_params": 4256,
+    "decoder_flops_per_prompt": 108102
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((S - (A)^2) - ((S - S))^2) / (S / A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     61,
+     40,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 120671,
+    "nonzero_params": 4148,
+    "decoder_flops_per_prompt": 100130
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((S - (A)^2) - ((S - S))^2) / (S / A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     61,
+     66,
+     53,
+     53
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 138650,
+    "nonzero_params": 4304,
+    "decoder_flops_per_prompt": 136036
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((S - (A)^2) - ((S - S))^2) / (S / A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     61,
+     40,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 120671,
+    "nonzero_params": 4148,
+    "decoder_flops_per_prompt": 100130
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((S - (A)^2) - ((S - S))^2) / (S / A))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     61,
+     66,
+     53,
+     53
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 138650,
+    "nonzero_params": 4304,
+    "decoder_flops_per_prompt": 136036
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((S + M))^2 * (((S)^2)^2 - S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     37,
+     30,
+     25,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 106160,
+    "nonzero_params": 3483,
+    "decoder_flops_per_prompt": 71284
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((S + M))^2 * (((S)^2)^2 - S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     37,
+     56,
+     38,
+     53
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 119680,
+    "nonzero_params": 3613,
+    "decoder_flops_per_prompt": 98298
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((S + M))^2 * (((S)^2)^2 - S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     37,
+     30,
+     25,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 106160,
+    "nonzero_params": 3483,
+    "decoder_flops_per_prompt": 71284
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((S + M))^2 * (((S)^2)^2 - S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     37,
+     56,
+     38,
+     53
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 119680,
+    "nonzero_params": 3613,
+    "decoder_flops_per_prompt": 98298
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((A + S) - ((S * M) / M)) / ((S * M) * (S + M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 4,
+    "widths": [
+     96,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 141435,
+    "nonzero_params": 5841,
+    "decoder_flops_per_prompt": 141456
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((A + S) - ((S * M) / M)) / ((S * M) * (S + M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     96,
+     93,
+     53,
+     53
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 164211,
+    "nonzero_params": 6023,
+    "decoder_flops_per_prompt": 186930
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((A + S) - ((S * M) / M)) / ((S * M) * (S + M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     73,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 128757,
+    "nonzero_params": 5465,
+    "decoder_flops_per_prompt": 116250
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((A + S) - ((S * M) / M)) / ((S * M) * (S + M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     73,
+     80,
+     53,
+     53
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 146060,
+    "nonzero_params": 5621,
+    "decoder_flops_per_prompt": 150804
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((S * M) * (A / S)) / (M - (A * S))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     69,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 127513,
+    "nonzero_params": 5330,
+    "decoder_flops_per_prompt": 113770
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((S * M) * (A / S)) / (M - (A * S))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     69,
+     93,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 144920,
+    "nonzero_params": 5486,
+    "decoder_flops_per_prompt": 148532
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((S * M) * (A / S)) / (M - (A * S))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 4,
+    "widths": [
+     69,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 127513,
+    "nonzero_params": 5330,
+    "decoder_flops_per_prompt": 113770
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((S * M) * (A / S)) / (M - (A * S))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 4,
+    "widths": [
+     69,
+     93,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 144920,
+    "nonzero_params": 5486,
+    "decoder_flops_per_prompt": 148532
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((M)^2 - (S)^2))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     27,
+     27,
+     15,
+     15
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 93780,
+    "nonzero_params": 2829,
+    "decoder_flops_per_prompt": 46698
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((M)^2 - (S)^2))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 4,
+    "widths": [
+     27,
+     53,
+     28,
+     28
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 103491,
+    "nonzero_params": 2933,
+    "decoder_flops_per_prompt": 66120
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((M)^2 - (S)^2))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 4,
+    "widths": [
+     27,
+     27,
+     15,
+     15
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 93780,
+    "nonzero_params": 2829,
+    "decoder_flops_per_prompt": 46698
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((M)^2 - (S)^2))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 4,
+    "widths": [
+     27,
+     53,
+     28,
+     28
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 103491,
+    "nonzero_params": 2933,
+    "decoder_flops_per_prompt": 66120
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 4,
+    "widths": [
+     119,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 155309,
+    "nonzero_params": 6405,
+    "decoder_flops_per_prompt": 169054
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 4,
+    "widths": [
+     119,
+     106,
+     53,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 184234,
+    "nonzero_params": 6613,
+    "decoder_flops_per_prompt": 226800
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 4,
+    "widths": [
+     119,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 155309,
+    "nonzero_params": 6405,
+    "decoder_flops_per_prompt": 169054
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 4,
+    "widths": [
+     119,
+     106,
+     53,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 184234,
+    "nonzero_params": 6613,
+    "decoder_flops_per_prompt": 226800
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((A + S) / (((S * S) * (M)^2) - (((M / A) * (A + S)) * ((M)^2 + (A - S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 233,
+    "blocks": 5,
+    "widths": [
+     151,
+     81,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 13,
+    "clears": 0,
+    "dense_params": 220196,
+    "nonzero_params": 8270,
+    "decoder_flops_per_prompt": 297774
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((A + S) / (((S * S) * (M)^2) - (((M / A) * (A + S)) * ((M)^2 + (A - S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 5,
+    "widths": [
+     151,
+     159,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 13,
+    "clears": 12,
+    "dense_params": 268192,
+    "nonzero_params": 8582,
+    "decoder_flops_per_prompt": 393714
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((A + S) / (((S * S) * (M)^2) - (((M / A) * (A + S)) * ((M)^2 + (A - S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 5,
+    "widths": [
+     111,
+     81,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 186852,
+    "nonzero_params": 7569,
+    "decoder_flops_per_prompt": 231426
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((A + S) / (((S * S) * (M)^2) - (((M / A) * (A + S)) * ((M)^2 + (A - S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     111,
+     133,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 219378,
+    "nonzero_params": 7829,
+    "decoder_flops_per_prompt": 296478
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((A - S) + ((S * M) + (M + M))) - (A)^2) * ((M + A) / (S - A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 5,
+    "widths": [
+     142,
+     54,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 188512,
+    "nonzero_params": 7670,
+    "decoder_flops_per_prompt": 234738
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((A - S) + ((S * M) + (M + M))) - (A)^2) * ((M + A) / (S - A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     142,
+     106,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 220830,
+    "nonzero_params": 7930,
+    "decoder_flops_per_prompt": 299374
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((A - S) + ((S * M) + (M + M))) - (A)^2) * ((M + A) / (S - A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 5,
+    "widths": [
+     142,
+     54,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 188512,
+    "nonzero_params": 7670,
+    "decoder_flops_per_prompt": 234738
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((A - S) + ((S * M) + (M + M))) - (A)^2) * ((M + A) / (S - A)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     142,
+     106,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 220830,
+    "nonzero_params": 7930,
+    "decoder_flops_per_prompt": 299374
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     77,
+     67,
+     27,
+     23,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 153312,
+    "nonzero_params": 6264,
+    "decoder_flops_per_prompt": 164710
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     77,
+     106,
+     53,
+     36,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 173696,
+    "nonzero_params": 6472,
+    "decoder_flops_per_prompt": 205530
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     77,
+     67,
+     27,
+     23,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 153312,
+    "nonzero_params": 6264,
+    "decoder_flops_per_prompt": 164710
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     77,
+     106,
+     53,
+     36,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 173696,
+    "nonzero_params": 6472,
+    "decoder_flops_per_prompt": 205530
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 220,
+    "blocks": 5,
+    "widths": [
+     121,
+     52,
+     30,
+     54,
+     27
+    ],
+    "n_nodes": 12,
+    "clears": 0,
+    "dense_params": 199035,
+    "nonzero_params": 6949,
+    "decoder_flops_per_prompt": 255640
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 5,
+    "widths": [
+     121,
+     91,
+     56,
+     106,
+     53
+    ],
+    "n_nodes": 12,
+    "clears": 11,
+    "dense_params": 216754,
+    "nonzero_params": 7235,
+    "decoder_flops_per_prompt": 291312
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 220,
+    "blocks": 5,
+    "widths": [
+     121,
+     52,
+     30,
+     54,
+     27
+    ],
+    "n_nodes": 12,
+    "clears": 0,
+    "dense_params": 199035,
+    "nonzero_params": 6949,
+    "decoder_flops_per_prompt": 255640
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 5,
+    "widths": [
+     121,
+     91,
+     56,
+     106,
+     53
+    ],
+    "n_nodes": 12,
+    "clears": 11,
+    "dense_params": 216754,
+    "nonzero_params": 7235,
+    "decoder_flops_per_prompt": 291312
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((A)^2 - ((S + S))^2) - M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 5,
+    "widths": [
+     38,
+     15,
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 107157,
+    "nonzero_params": 3656,
+    "decoder_flops_per_prompt": 72988
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((A)^2 - ((S + S))^2) - M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 5,
+    "widths": [
+     38,
+     28,
+     53,
+     40,
+     28
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 115490,
+    "nonzero_params": 3786,
+    "decoder_flops_per_prompt": 89784
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((A)^2 - ((S + S))^2) - M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 5,
+    "widths": [
+     38,
+     15,
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 107157,
+    "nonzero_params": 3656,
+    "decoder_flops_per_prompt": 72988
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((A)^2 - ((S + S))^2) - M))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 5,
+    "widths": [
+     38,
+     28,
+     53,
+     40,
+     28
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 115490,
+    "nonzero_params": 3786,
+    "decoder_flops_per_prompt": 89784
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((((M * A) - S) - (S / S)) + (A * M)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     73,
+     25,
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 124558,
+    "nonzero_params": 4967,
+    "decoder_flops_per_prompt": 107570
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((((M * A) - S) - (S / S)) + (A * M)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     73,
+     38,
+     53,
+     53,
+     28
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 135608,
+    "nonzero_params": 5123,
+    "decoder_flops_per_prompt": 129774
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((((M * A) - S) - (S / S)) + (A * M)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     73,
+     25,
+     27,
+     27,
+     15
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 124558,
+    "nonzero_params": 4967,
+    "decoder_flops_per_prompt": 107570
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((((M * A) - S) - (S / S)) + (A * M)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     73,
+     38,
+     53,
+     53,
+     28
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 135608,
+    "nonzero_params": 5123,
+    "decoder_flops_per_prompt": 129774
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((A * S) / (S * S)) + ((S * (A)^2) - S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 5,
+    "widths": [
+     57,
+     50,
+     25,
+     27,
+     15
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 131493,
+    "nonzero_params": 4537,
+    "decoder_flops_per_prompt": 121296
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((A * S) / (S * S)) + ((S * (A)^2) - S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 5,
+    "widths": [
+     57,
+     89,
+     38,
+     53,
+     28
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 147912,
+    "nonzero_params": 4719,
+    "decoder_flops_per_prompt": 154212
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((A * S) / (S * S)) + ((S * (A)^2) - S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 5,
+    "widths": [
+     57,
+     50,
+     25,
+     27,
+     15
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 131493,
+    "nonzero_params": 4537,
+    "decoder_flops_per_prompt": 121296
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((A * S) / (S * S)) + ((S * (A)^2) - S)))^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 5,
+    "widths": [
+     57,
+     89,
+     38,
+     53,
+     28
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 147912,
+    "nonzero_params": 4719,
+    "decoder_flops_per_prompt": 154212
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((M - (M + S)))^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     25,
+     27,
+     15,
+     15,
+     15
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 97276,
+    "nonzero_params": 3220,
+    "decoder_flops_per_prompt": 53406
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((M - (M + S)))^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 5,
+    "widths": [
+     25,
+     40,
+     28,
+     28,
+     28
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 102528,
+    "nonzero_params": 3324,
+    "decoder_flops_per_prompt": 64066
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((M - (M + S)))^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     25,
+     27,
+     15,
+     15,
+     15
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 97276,
+    "nonzero_params": 3220,
+    "decoder_flops_per_prompt": 53406
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((M - (M + S)))^2)^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 5,
+    "widths": [
+     25,
+     40,
+     28,
+     28,
+     28
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 102528,
+    "nonzero_params": 3324,
+    "decoder_flops_per_prompt": 64066
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     38,
+     42,
+     15,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 118960,
+    "nonzero_params": 4577,
+    "decoder_flops_per_prompt": 96410
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     38,
+     68,
+     28,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 130946,
+    "nonzero_params": 4733,
+    "decoder_flops_per_prompt": 120486
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     38,
+     42,
+     15,
+     27,
+     27
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 118960,
+    "nonzero_params": 4577,
+    "decoder_flops_per_prompt": 96410
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 5,
+    "widths": [
+     38,
+     68,
+     28,
+     53,
+     40
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 130946,
+    "nonzero_params": 4733,
+    "decoder_flops_per_prompt": 120486
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S + (M)^2) / ((M / ((A - S) / (S + M))) * (S / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     84,
+     52,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 151860,
+    "nonzero_params": 5805,
+    "decoder_flops_per_prompt": 161814
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S + (M)^2) / ((M / ((A - S) / (S + M))) * (S / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     84,
+     91,
+     40,
+     53,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 172452,
+    "nonzero_params": 6013,
+    "decoder_flops_per_prompt": 203050
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S + (M)^2) / ((M / ((A - S) / (S + M))) * (S / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 5,
+    "widths": [
+     84,
+     52,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 151860,
+    "nonzero_params": 5805,
+    "decoder_flops_per_prompt": 161814
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S + (M)^2) / ((M / ((A - S) / (S + M))) * (S / S)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 5,
+    "widths": [
+     84,
+     91,
+     40,
+     53,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 172452,
+    "nonzero_params": 6013,
+    "decoder_flops_per_prompt": 203050
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A + (((M / M) * (((S - S))^2 + ((M + A) / A))) / (((S + M) * (S)^2) * (((A - S) / (S - S)))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 285,
+    "blocks": 6,
+    "widths": [
+     162,
+     96,
+     42,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 17,
+    "clears": 0,
+    "dense_params": 308214,
+    "nonzero_params": 9523,
+    "decoder_flops_per_prompt": 472530
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A + (((M / M) * (((S - S))^2 + ((M + A) / A))) / (((S + M) * (S)^2) * (((A - S) / (S - S)))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 220,
+    "blocks": 6,
+    "widths": [
+     162,
+     174,
+     81,
+     106,
+     53,
+     40
+    ],
+    "n_nodes": 17,
+    "clears": 16,
+    "dense_params": 345667,
+    "nonzero_params": 9939,
+    "decoder_flops_per_prompt": 547800
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A + (((M / M) * (((S - S))^2 + ((M + A) / A))) / (((S + M) * (S)^2) * (((A - S) / (S - S)))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 272,
+    "blocks": 6,
+    "widths": [
+     139,
+     96,
+     42,
+     54,
+     27,
+     27
+    ],
+    "n_nodes": 16,
+    "clears": 0,
+    "dense_params": 284824,
+    "nonzero_params": 9438,
+    "decoder_flops_per_prompt": 425952
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A + (((M / M) * (((S - S))^2 + ((M + A) / A))) / (((S + M) * (S)^2) * (((A - S) / (S - S)))^2)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 6,
+    "widths": [
+     139,
+     161,
+     81,
+     106,
+     53,
+     40
+    ],
+    "n_nodes": 16,
+    "clears": 15,
+    "dense_params": 314464,
+    "nonzero_params": 9828,
+    "decoder_flops_per_prompt": 485622
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S)^2 + ((((A)^2)^2 * ((S / A))^2) * ((((M * M) - (M / A)) * ((S * M) + (A)^2)) / ((A)^2 * ((A + A) + S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 324,
+    "blocks": 6,
+    "widths": [
+     184,
+     109,
+     81,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 20,
+    "clears": 0,
+    "dense_params": 371282,
+    "nonzero_params": 11036,
+    "decoder_flops_per_prompt": 598104
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S)^2 + ((((A)^2)^2 * ((S / A))^2) * ((((M * M) - (M / A)) * ((S * M) + (A)^2)) / ((A)^2 * ((A + A) + S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 259,
+    "blocks": 6,
+    "widths": [
+     184,
+     200,
+     159,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 20,
+    "clears": 19,
+    "dense_params": 439090,
+    "nonzero_params": 11530,
+    "decoder_flops_per_prompt": 734006
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S)^2 + ((((A)^2)^2 * ((S / A))^2) * ((((M * M) - (M / A)) * ((S * M) + (A)^2)) / ((A)^2 * ((A + A) + S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 298,
+    "blocks": 6,
+    "widths": [
+     154,
+     109,
+     81,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 18,
+    "clears": 0,
+    "dense_params": 329218,
+    "nonzero_params": 10570,
+    "decoder_flops_per_prompt": 514348
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S)^2 + ((((A)^2)^2 * ((S / A))^2) * ((((M * M) - (M / A)) * ((S * M) + (A)^2)) / ((A)^2 * ((A + A) + S)))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 233,
+    "blocks": 6,
+    "widths": [
+     154,
+     174,
+     159,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 18,
+    "clears": 17,
+    "dense_params": 375940,
+    "nonzero_params": 11012,
+    "decoder_flops_per_prompt": 608130
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((((M - A))^2 - (S)^2) - A))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     39,
+     15,
+     27,
+     27,
+     15,
+     15
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 115694,
+    "nonzero_params": 4327,
+    "decoder_flops_per_prompt": 89590
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((((M - A))^2 - (S)^2) - A))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 6,
+    "widths": [
+     39,
+     28,
+     53,
+     40,
+     28,
+     28
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 122363,
+    "nonzero_params": 4483,
+    "decoder_flops_per_prompt": 103240
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((((M - A))^2 - (S)^2) - A))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     39,
+     15,
+     27,
+     27,
+     15,
+     15
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 115694,
+    "nonzero_params": 4327,
+    "decoder_flops_per_prompt": 89590
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((((M - A))^2 - (S)^2) - A))^2)^2",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 6,
+    "widths": [
+     39,
+     28,
+     53,
+     40,
+     28,
+     28
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 122363,
+    "nonzero_params": 4483,
+    "decoder_flops_per_prompt": 103240
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M * ((((M + (S * A)))^2 * ((S * S) - M)) - (((M * S) * A))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 6,
+    "widths": [
+     65,
+     81,
+     30,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 180419,
+    "nonzero_params": 6967,
+    "decoder_flops_per_prompt": 218178
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M * ((((M + (S * A)))^2 * ((S * S) - M)) - (((M * S) * A))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     65,
+     120,
+     56,
+     53,
+     53,
+     40
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 193133,
+    "nonzero_params": 7227,
+    "decoder_flops_per_prompt": 243970
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M * ((((M + (S * A)))^2 * ((S * S) - M)) - (((M * S) * A))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 6,
+    "widths": [
+     65,
+     81,
+     30,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 180419,
+    "nonzero_params": 6967,
+    "decoder_flops_per_prompt": 218178
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M * ((((M + (S * A)))^2 * ((S * S) - M)) - (((M * S) * A))^2))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     65,
+     120,
+     56,
+     53,
+     53,
+     40
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 193133,
+    "nonzero_params": 7227,
+    "decoder_flops_per_prompt": 243970
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(A + (((S / (S + (M * S))) - M))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 6,
+    "widths": [
+     23,
+     25,
+     23,
+     27,
+     15,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 112429,
+    "nonzero_params": 4255,
+    "decoder_flops_per_prompt": 83212
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(A + (((S / (S + (M * S))) - M))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 6,
+    "widths": [
+     23,
+     38,
+     36,
+     40,
+     28,
+     40
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 114223,
+    "nonzero_params": 4385,
+    "decoder_flops_per_prompt": 87138
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(A + (((S / (S + (M * S))) - M))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 6,
+    "widths": [
+     23,
+     25,
+     23,
+     27,
+     15,
+     27
+    ],
+    "n_nodes": 6,
+    "clears": 0,
+    "dense_params": 112429,
+    "nonzero_params": 4255,
+    "decoder_flops_per_prompt": 83212
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(A + (((S / (S + (M * S))) - M))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 6,
+    "widths": [
+     23,
+     38,
+     36,
+     40,
+     28,
+     40
+    ],
+    "n_nodes": 6,
+    "clears": 5,
+    "dense_params": 114223,
+    "nonzero_params": 4385,
+    "decoder_flops_per_prompt": 87138
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S - S) - ((M * M) + ((((S * M))^2 + ((S)^2 * (M)^2)) / ((A - S) - A))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 233,
+    "blocks": 6,
+    "widths": [
+     125,
+     69,
+     27,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 13,
+    "clears": 0,
+    "dense_params": 215292,
+    "nonzero_params": 7570,
+    "decoder_flops_per_prompt": 287522
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S - S) - ((M * M) + ((((S * M))^2 + ((S)^2 * (M)^2)) / ((A - S) - A))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 194,
+    "blocks": 6,
+    "widths": [
+     125,
+     121,
+     53,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 13,
+    "clears": 12,
+    "dense_params": 251679,
+    "nonzero_params": 7882,
+    "decoder_flops_per_prompt": 360452
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S - S) - ((M * M) + ((((S * M))^2 + ((S)^2 * (M)^2)) / ((A - S) - A))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 233,
+    "blocks": 6,
+    "widths": [
+     125,
+     69,
+     27,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 13,
+    "clears": 0,
+    "dense_params": 215292,
+    "nonzero_params": 7570,
+    "decoder_flops_per_prompt": 287522
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S - S) - ((M * M) + ((((S * M))^2 + ((S)^2 * (M)^2)) / ((A - S) - A))))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 194,
+    "blocks": 6,
+    "widths": [
+     125,
+     121,
+     53,
+     53,
+     53,
+     53
+    ],
+    "n_nodes": 13,
+    "clears": 12,
+    "dense_params": 251679,
+    "nonzero_params": 7882,
+    "decoder_flops_per_prompt": 360452
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((S / M) - ((M / ((A - A) + ((A / A) / (S + M)))))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 6,
+    "widths": [
+     102,
+     27,
+     27,
+     27,
+     15,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 154945,
+    "nonzero_params": 5503,
+    "decoder_flops_per_prompt": 167606
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((S / M) - ((M / ((A - A) + ((A / A) / (S + M)))))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 6,
+    "widths": [
+     102,
+     53,
+     53,
+     40,
+     28,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 166294,
+    "nonzero_params": 5711,
+    "decoder_flops_per_prompt": 190564
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((S / M) - ((M / ((A - A) + ((A / A) / (S + M)))))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 181,
+    "blocks": 6,
+    "widths": [
+     102,
+     27,
+     27,
+     27,
+     15,
+     27
+    ],
+    "n_nodes": 9,
+    "clears": 0,
+    "dense_params": 154945,
+    "nonzero_params": 5503,
+    "decoder_flops_per_prompt": 167606
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((S / M) - ((M / ((A - A) + ((A / A) / (S + M)))))^2)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 142,
+    "blocks": 6,
+    "widths": [
+     102,
+     53,
+     53,
+     40,
+     28,
+     53
+    ],
+    "n_nodes": 9,
+    "clears": 8,
+    "dense_params": 166294,
+    "nonzero_params": 5711,
+    "decoder_flops_per_prompt": 190564
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((((A * M) - ((A)^2 / A)))^2)^2 - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     42,
+     27,
+     27,
+     15,
+     15,
+     25
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 119737,
+    "nonzero_params": 4620,
+    "decoder_flops_per_prompt": 97650
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((((A * M) - ((A)^2 / A)))^2)^2 - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 6,
+    "widths": [
+     42,
+     40,
+     53,
+     28,
+     28,
+     38
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 125392,
+    "nonzero_params": 4776,
+    "decoder_flops_per_prompt": 109272
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((((A * M) - ((A)^2 / A)))^2)^2 - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     42,
+     27,
+     27,
+     15,
+     15,
+     25
+    ],
+    "n_nodes": 7,
+    "clears": 0,
+    "dense_params": 119737,
+    "nonzero_params": 4620,
+    "decoder_flops_per_prompt": 97650
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((((A * M) - ((A)^2 / A)))^2)^2 - S)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 6,
+    "widths": [
+     42,
+     40,
+     53,
+     28,
+     28,
+     38
+    ],
+    "n_nodes": 7,
+    "clears": 6,
+    "dense_params": 125392,
+    "nonzero_params": 4776,
+    "decoder_flops_per_prompt": 109272
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((((((A / S) + S) / M) / S) - ((M + A) + ((S * M) + (M * M)))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 6,
+    "widths": [
+     100,
+     52,
+     54,
+     23,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 191209,
+    "nonzero_params": 7743,
+    "decoder_flops_per_prompt": 239706
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((((((A / S) + S) / M) / S) - ((M + A) + ((S * M) + (M * M)))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     100,
+     91,
+     93,
+     36,
+     53,
+     40
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 201219,
+    "nonzero_params": 8003,
+    "decoder_flops_per_prompt": 260090
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((((((A / S) + S) / M) / S) - ((M + A) + ((S * M) + (M * M)))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 207,
+    "blocks": 6,
+    "widths": [
+     100,
+     52,
+     54,
+     23,
+     27,
+     27
+    ],
+    "n_nodes": 11,
+    "clears": 0,
+    "dense_params": 191209,
+    "nonzero_params": 7743,
+    "decoder_flops_per_prompt": 239706
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((((((A / S) + S) / M) / S) - ((M + A) + ((S * M) + (M * M)))) - A)",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 155,
+    "blocks": 6,
+    "widths": [
+     100,
+     91,
+     93,
+     36,
+     53,
+     40
+    ],
+    "n_nodes": 11,
+    "clears": 10,
+    "dense_params": 201219,
+    "nonzero_params": 8003,
+    "decoder_flops_per_prompt": 260090
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(M - (((A / S) * ((M / (A)^2) / A)) / (S * M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 6,
+    "widths": [
+     61,
+     27,
+     27,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 139075,
+    "nonzero_params": 5838,
+    "decoder_flops_per_prompt": 136080
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(M - (((A / S) * ((M / (A)^2) / A)) / (S * M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 6,
+    "widths": [
+     61,
+     40,
+     40,
+     53,
+     53,
+     40
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 146615,
+    "nonzero_params": 6020,
+    "decoder_flops_per_prompt": 151446
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(M - (((A / S) * ((M / (A)^2) / A)) / (S * M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 168,
+    "blocks": 6,
+    "widths": [
+     61,
+     27,
+     27,
+     27,
+     27,
+     27
+    ],
+    "n_nodes": 8,
+    "clears": 0,
+    "dense_params": 139075,
+    "nonzero_params": 5838,
+    "decoder_flops_per_prompt": 136080
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(M - (((A / S) * ((M / (A)^2) / A)) / (S * M)))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 6,
+    "widths": [
+     61,
+     40,
+     40,
+     53,
+     53,
+     40
+    ],
+    "n_nodes": 8,
+    "clears": 7,
+    "dense_params": 146615,
+    "nonzero_params": 6020,
+    "decoder_flops_per_prompt": 151446
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "((M * A) + ((M * A) * S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     54,
+     23,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 95919,
+    "nonzero_params": 3829,
+    "decoder_flops_per_prompt": 51272
+   },
+   "cse=False,regalloc=True": {
+    "expr": "((M * A) + ((M * A) * S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     54,
+     36,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 105006,
+    "nonzero_params": 3907,
+    "decoder_flops_per_prompt": 69368
+   },
+   "cse=True,regalloc=False": {
+    "expr": "((M * A) + ((M * A) * S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     23,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 87418,
+    "nonzero_params": 3129,
+    "decoder_flops_per_prompt": 34402
+   },
+   "cse=True,regalloc=True": {
+    "expr": "((M * A) + ((M * A) * S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     23,
+     53
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 92800,
+    "nonzero_params": 3181,
+    "decoder_flops_per_prompt": 45114
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M * A))^2 - ((M * A) + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     54,
+     42,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 103752,
+    "nonzero_params": 4435,
+    "decoder_flops_per_prompt": 66822
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M * A))^2 - ((M * A) + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     54,
+     68,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 117220,
+    "nonzero_params": 4539,
+    "decoder_flops_per_prompt": 93654
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M * A))^2 - ((M * A) + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     27,
+     42,
+     27
+    ],
+    "n_nodes": 4,
+    "clears": 0,
+    "dense_params": 94055,
+    "nonzero_params": 3735,
+    "decoder_flops_per_prompt": 47560
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M * A))^2 - ((M * A) + M))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 116,
+    "blocks": 3,
+    "widths": [
+     27,
+     55,
+     53
+    ],
+    "n_nodes": 4,
+    "clears": 3,
+    "dense_params": 103142,
+    "nonzero_params": 3813,
+    "decoder_flops_per_prompt": 65656
+   }
+  },
+  {
+   "cse=False,regalloc=False": {
+    "expr": "(((M * A) + S) / ((M * A) + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     54,
+     50,
+     27
+    ],
+    "n_nodes": 5,
+    "clears": 0,
+    "dense_params": 105824,
+    "nonzero_params": 4340,
+    "decoder_flops_per_prompt": 70950
+   },
+   "cse=False,regalloc=True": {
+    "expr": "(((M * A) + S) / ((M * A) + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 129,
+    "blocks": 3,
+    "widths": [
+     54,
+     76,
+     53
+    ],
+    "n_nodes": 5,
+    "clears": 4,
+    "dense_params": 119292,
+    "nonzero_params": 4444,
+    "decoder_flops_per_prompt": 97782
+   },
+   "cse=True,regalloc=False": {
+    "expr": "(((M * A) + S) / ((M * A) + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     25,
+     27
+    ],
+    "n_nodes": 3,
+    "clears": 0,
+    "dense_params": 87832,
+    "nonzero_params": 2595,
+    "decoder_flops_per_prompt": 35226
+   },
+   "cse=True,regalloc=True": {
+    "expr": "(((M * A) + S) / ((M * A) + S))",
+    "acc": 1.0,
+    "exact": true,
+    "intermediates_observable_in_live_interval": true,
+    "D": 103,
+    "blocks": 3,
+    "widths": [
+     27,
+     38,
+     40
+    ],
+    "n_nodes": 3,
+    "clears": 2,
+    "dense_params": 93214,
+    "nonzero_params": 2647,
+    "decoder_flops_per_prompt": 45938
+   }
+  }
+ ],
+ "select": [
+  {
+   "expr": "(if M==0 then A else (M + A))",
+   "acc": 1.0,
+   "exact": true,
+   "intermediates_observable_in_live_interval": true,
+   "D": 90,
+   "blocks": 2,
+   "widths": [
+    27,
+    39
+   ],
+   "n_nodes": 2,
+   "clears": 1,
+   "dense_params": 83127,
+   "nonzero_params": 2170,
+   "decoder_flops_per_prompt": 26100
+  },
+  {
+   "expr": "(if A==0 then (M * S) else (M / A))",
+   "acc": 1.0,
+   "exact": true,
+   "intermediates_observable_in_live_interval": true,
+   "D": 103,
+   "blocks": 2,
+   "widths": [
+    50,
+    52
+   ],
+   "n_nodes": 3,
+   "clears": 2,
+   "dense_params": 92490,
+   "nonzero_params": 2523,
+   "decoder_flops_per_prompt": 44702
+  },
+  {
+   "expr": "((if (M - A)==0 then A else (M * A)) + M)",
+   "acc": 1.0,
+   "exact": true,
+   "intermediates_observable_in_live_interval": true,
+   "D": 116,
+   "blocks": 3,
+   "widths": [
+    54,
+    52,
+    40
+   ],
+   "n_nodes": 4,
+   "clears": 3,
+   "dense_params": 105705,
+   "nonzero_params": 3671,
+   "decoder_flops_per_prompt": 70760
+  }
+ ],
+ "loop": {
+  "1": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 7510
+  },
+  "2": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 11927
+  },
+  "3": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 16344
+  },
+  "4": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 20761
+  },
+  "5": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 25178
+  },
+  "6": {
+   "exact": true,
+   "unique_decoder_params": 7510,
+   "unrolled_equivalent_params": 29595
+  }
+ }
+}

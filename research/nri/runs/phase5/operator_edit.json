@@ -1,0 +1,1138 @@
+{
+ "mass_only_s307": {
+  "single": {
+   "F+1": {
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   "2F": {
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   "F^-1": {
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   "-F": {
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   "identity": {
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   }
+  },
+  "composed": [
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "double_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "dec_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "force_units_swap01"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9994558095932007,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "-F",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9989115595817566,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "acc_units_rotate"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "mass_units_rotate",
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   }
+  ],
+  "reversible": {
+   "F+1": true,
+   "2F": true,
+   "F^-1": true,
+   "-F": true
+  }
+ },
+ "mass_only_s311": {
+  "single": {
+   "F+1": {
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   "2F": {
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   "F^-1": {
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   "-F": {
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   "identity": {
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   }
+  },
+  "composed": [
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9997279047966003,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "double_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "dec_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "force_units_swap01"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "-F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9994558095932007,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "acc_units_rotate"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate",
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9977477192878723
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.9988738894462585
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9997279047966003,
+    "unseen": 1.0
+   }
+  ],
+  "reversible": {
+   "F+1": true,
+   "2F": true,
+   "F^-1": true,
+   "-F": true
+  }
+ },
+ "mass_only_s300": {
+  "single": {
+   "F+1": {
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   "2F": {
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   "F^-1": {
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   "-F": {
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   "identity": {
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   }
+  },
+  "composed": [
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.8991836905479431,
+    "unseen": 0.8507882952690125
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "-F",
+    "familiar": 0.8772789239883423,
+    "unseen": 0.7286036014556885
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "double_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.8774149417877197,
+    "unseen": 0.9408783912658691
+   },
+   {
+    "tokens": [
+     "dec_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9666666388511658,
+    "unseen": 0.5715090036392212
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.4307432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "force_units_swap01"
+    ],
+    "output_op": "-F",
+    "familiar": 0.908979594707489,
+    "unseen": 0.8102477192878723
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9468027353286743,
+    "unseen": 0.6537162065505981
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9540135860443115,
+    "unseen": 0.6238738894462585
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.908979594707489,
+    "unseen": 0.8102477192878723
+   },
+   {
+    "tokens": [
+     "force_units_swap01"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.4307432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9666666388511658,
+    "unseen": 0.5715090036392212
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "2F",
+    "familiar": 0.8605442047119141,
+    "unseen": 0.7978603839874268
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9591836929321289,
+    "unseen": 0.602477490901947
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9666666388511658,
+    "unseen": 0.5715090036392212
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9591836929321289,
+    "unseen": 0.602477490901947
+   },
+   {
+    "tokens": [
+     "acc_units_rotate"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.923265278339386,
+    "unseen": 0.7511261105537415
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.908979594707489,
+    "unseen": 0.8102477192878723
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.43355855345726013
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "mass_units_rotate",
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9021768569946289,
+    "unseen": 0.8384009003639221
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.4307432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.9492517113685608,
+    "unseen": 0.6435810923576355
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.8991836905479431,
+    "unseen": 0.8507882952690125
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.908979594707489,
+    "unseen": 0.8102477192878723
+   }
+  ],
+  "reversible": {
+   "F+1": true,
+   "2F": true,
+   "F^-1": true,
+   "-F": true
+  }
+ },
+ "mass_only_s304": {
+  "single": {
+   "F+1": {
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   "2F": {
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   "F^-1": {
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   "-F": {
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   "identity": {
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   }
+  },
+  "composed": [
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9136054515838623,
+    "unseen": 0.6266891956329346
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "-F",
+    "familiar": 0.8428571224212646,
+    "unseen": 0.4611486494541168
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "double_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.8438095450401306,
+    "unseen": 0.9155405163764954
+   },
+   {
+    "tokens": [
+     "dec_value"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9634013772010803,
+    "unseen": 0.4206081032752991
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.895510196685791,
+    "unseen": 0.2432432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "force_units_swap01"
+    ],
+    "output_op": "-F",
+    "familiar": 0.8778231143951416,
+    "unseen": 0.7747747898101807
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9179592132568359,
+    "unseen": 0.6086711883544922
+   },
+   {
+    "tokens": [
+     "inc_value",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9560544490814209,
+    "unseen": 0.4510135054588318
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.8778231143951416,
+    "unseen": 0.7747747898101807
+   },
+   {
+    "tokens": [
+     "force_units_swap01"
+    ],
+    "output_op": "F+1",
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "-F",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.895510196685791,
+    "unseen": 0.2432432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.9634013772010803,
+    "unseen": 0.4206081032752991
+   },
+   {
+    "tokens": [
+     "invert_value",
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "2F",
+    "familiar": 0.77850341796875,
+    "unseen": 0.727477490901947
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9262585043907166,
+    "unseen": 0.5743243098258972
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "dec_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9634013772010803,
+    "unseen": 0.4206081032752991
+   },
+   {
+    "tokens": [
+     "double_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9262585043907166,
+    "unseen": 0.5743243098258972
+   },
+   {
+    "tokens": [
+     "acc_units_rotate"
+    ],
+    "output_op": "F^-1",
+    "familiar": 0.9405441880226135,
+    "unseen": 0.5152027010917664
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "-F",
+    "familiar": 0.8778231143951416,
+    "unseen": 0.7747747898101807
+   },
+   {
+    "tokens": [
+     "force_units_swap01",
+     "force_units_swap01"
+    ],
+    "output_op": "F^-1",
+    "familiar": 1.0,
+    "unseen": 0.2691441476345062
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "mass_units_rotate",
+     "invert_value"
+    ],
+    "output_op": "2F",
+    "familiar": 0.8530611991882324,
+    "unseen": 0.8772522807121277
+   },
+   {
+    "tokens": [
+     "mass_unit_0_as_2"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.895510196685791,
+    "unseen": 0.2432432472705841
+   },
+   {
+    "tokens": [
+     "mass_units_rotate"
+    ],
+    "output_op": "2F",
+    "familiar": 0.895510196685791,
+    "unseen": 0.7015765905380249
+   },
+   {
+    "tokens": [
+     "acc_units_rotate",
+     "inc_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.9136054515838623,
+    "unseen": 0.6266891956329346
+   },
+   {
+    "tokens": [
+     "invert_value"
+    ],
+    "output_op": "F+1",
+    "familiar": 0.8778231143951416,
+    "unseen": 0.7747747898101807
+   }
+  ],
+  "reversible": {
+   "F+1": true,
+   "2F": true,
+   "F^-1": true,
+   "-F": true
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "group": "mass_only",
+  "seed": 307,
+  "threads": 1,
+  "steps": 250,
+  "warmup": 20,
+  "timed_steps": 230,
+  "wall": 18.70404493100068,
+  "ms_per_update": 81.32193448261165,
+  "stage_ms_per_update": {
+    "sample_base": 0.5020810043828058,
+    "build_base": 0.31378098258795467,
+    "encode_base": 16.603660960861262,
+    "sample_src": 0.47411050001123245,
+    "build_src": 0.36963720432812924,
+    "encode_src": 19.237837678294614,
+    "counterfactual": 0.24251574780899557,
+    "head_loss": 2.0246671912742467,
+    "backward": 39.02849319137717,
+    "optimizer": 1.3991617478100322,
+    "eval_acc4096": 0.7827467869585393
+  },
+  "stage_share": {
+    "sample_base": 0.006173992386889928,
+    "build_base": 0.003858503669204373,
+    "encode_base": 0.20417198713357557,
+    "sample_src": 0.005830044538753653,
+    "build_src": 0.00454535675620414,
+    "encode_src": 0.23656394551716017,
+    "counterfactual": 0.002982168948045014,
+    "head_loss": 0.024896938374076222,
+    "backward": 0.47992578434939087,
+    "optimizer": 0.01720521968287907,
+    "eval_acc4096": 0.009625284887017868
+  },
+  "eval_calls": 1,
+  "torch": "2.15.0+cu132",
+  "peak_rss_mib": 1022.8203125
+}

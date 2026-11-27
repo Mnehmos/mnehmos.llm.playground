@@ -27,10 +27,12 @@ selected for success.
    - failures have a defective *representation*;
    - partial generalisers have a correct representation but a *decoder that interpolates rather than composes*;
    - generalisers have neither defect.
-5. **Training-time intervention was largely ineffective.**
-   - Forcing the representation to stay factorised during the critical window, or restoring it afterwards, did not
-     produce generalisation in 304. Factorisation is necessary but not sufficient.
-   - Results for the reverse (breaking 307/311) are in §49.4.
+5. **Training-time intervention (final, §49.4).**
+   - Rewarding the interaction during the critical window broke **both** generalisers (unseen 0.99/1.00 → 0.35/0.33,
+     familiar 1.00): factorisation is causally necessary during development.
+   - After consolidation it no longer is: 311 kept 0.92 with its factorisation destroyed.
+   - Preventing the interaction before each failure's dip gave only partial generalisation (0.52–0.61); later
+     prevention gave none. Factorisation is necessary but not sufficient, and the timing matters.
 6. **Permanent programming works exactly where the mathematics allows it.**
    - Edits that act on tokens: units relabelled, written values mapped, output unit changed. They compile *exactly*
      into embedding rows.
@@ -125,46 +127,75 @@ Per unseen cell (mass unit 2, value 9–12):
 - **Information stops being used correctly inside the head MLP.** There is no other computation after the block.
   The attention layers precede the block, so they do not cause the decoder failure.
 
-## 49.4 Developmental interventions (E4; training continuations)
+## 49.4 Developmental interventions (E4; training continuations) — final
 
-*(Interim; completed runs only. Every control continuation is checked bitwise against the reconstruction: all
-BITWISE so far.)*
+All 46 registered runs completed, none failed: 40 from doc 48 and 6 from addendum A. Each run is 2,000 steps from a
+bitwise-exact checkpoint. All **17 matched no-intervention controls are bitwise identical to the reconstruction at
+every 100-step check (20/20 each)**, so each intervention is the only difference from history. Data:
+`runs/phase4/dev_intervene/*.json`.
 
-| run | resume | intervention | unseen (start → end) | familiar (end) | factorisation (start → end) |
+Columns:
+- **unseen:** unseen-mass accuracy at the end, with the matched control in parentheses;
+- **familiar:** familiar accuracy at the end;
+- **fact.:** declared-block factorisation R²(value + unit), start → end;
+- **swap:** discriminating unseen-source interchange at the end.
+
+### Breaking generalisers (P2: reward the interaction, λ = −1; or interchange weight × 3)
+
+| network | resume | intervention | unseen (control) | familiar | fact. | swap | registered disruption (unseen ≤ 0.5, familiar ≥ 0.95) |
+|---|---|---|---|---|---|---|---|
+| 307 | 850 (before dip) | reward interaction | **0.35 (0.99)** | 1.00 | 0.96 → 0.03 | 0.35 | **met** |
+| 311 | 850 (before dip) | reward interaction | **0.33 (1.00)** | 1.00 | 0.93 → 0.04 | 0.21 | **met** |
+| 307 | 850 | interchange ×3 | 0.96 (0.99) | 1.00 | 0.96 → 1.00 | 0.95 | not met |
+| 311 | 850 | interchange ×3 | 0.32 (1.00) | 1.00 | 0.93 → 0.40 | 0.24 | met |
+| 307 | 2,000 (consolidated) | reward interaction | 1.00 (1.00) | 1.00 | 1.00 → 1.00 | 0.99 | not met; the interaction did not form |
+| 311 | 2,000 (consolidated) | reward interaction | **0.92** (1.00) | 1.00 | 0.98 → **0.15** | 0.91 | not met, although factorisation was destroyed |
+
+### Rescuing failures (P1: penalise the interaction; P3: strong decay; F1 freeze; G1 projection)
+
+| network | resume | intervention | unseen (control 0.10 unless noted) | familiar | fact. |
 |---|---|---|---|---|---|
-| ctl 304 | 2,000 | none | 0.10 → 0.10 | 1.00 | 0.71 → 0.71 |
-| P1a 304 | 2,000 | interaction penalty λ = 1 | 0.10 → **0.10** | 1.00 | 0.71 → **0.99** |
-| P1b 304 | 2,000 | λ = 0.1 | 0.10 → 0.10 | 1.00 | 0.71 → 0.88 |
-| P3a 304 | 2,000 | weight decay 0.01 → 1.0 | 0.10 → 0.25 | 1.00 | 0.71 → 0.41 |
-| ctl 310 | 2,000 | none | 0.11 → 0.10 | 1.00 | 0.71 → 0.69 |
-| P1a 310 | 2,000 | λ = 1 | 0.11 → 0.34 | 1.00 | 0.71 → 0.98 |
-| P1b 310 | 2,000 | λ = 0.1 | 0.11 → 0.17 | 1.00 | 0.71 → 0.84 |
-| P3a 310 | 2,000 | wd 1.0 | 0.11 → 0.10 | 1.00 | 0.71 → 0.48 |
-| ctl 302 | 2,000 | none | 0.51 → **0.19** (erosion) | 1.00 | 0.17 → 0.17 |
-| P1a 302 | 2,000 | λ = 1 | 0.51 → 0.39 | **0.63** | 0.17 → 0.99 |
-| P1b 302 | 2,000 | λ = 0.1 | 0.51 → **0.52** (erosion prevented) | 1.00 | 0.17 → 0.91 |
-| P3a 302 | 2,000 | wd 1.0 | 0.51 → 0.51 | 0.58 | 0.17 → 0.11 |
-| ctl 304 | 700 | none | 0.15 → 0.10 | 1.00 | 0.94 → 0.71 |
-| **P1early 304** | 700 | λ = 1 for 500 steps, then released | 0.15 → **0.10** (max 0.34 during the penalty) | 1.00 | 0.94 → 0.99 (during) → 0.85 |
-| P1early 304 | 850 | λ = 1 for 500 steps | 0.23 → 0.10 | 1.00 | 0.84 → 0.94 → 0.88 |
+| 304 | **600** | λ = 1 for 500 steps | **0.52** | 1.00 | 0.98 → 0.99 |
+| 304 | 700 / 850 | λ = 1 for 500 steps | 0.10 / 0.10 | 1.00 | → 0.85 / 0.88 |
+| 304 | 700 / 850 / 1,000 / 1,500 / 4,000 | λ = 1 throughout | 0.11 / 0.10 / 0.10 / 0.10 / 0.10 | 0.97–1.00 | → 0.97–0.99 |
+| 304 | 2,000 | λ = 1 / 0.1 / wd 1.0 | 0.10 / 0.10 / 0.25 | 1.00 | → 0.99 / 0.88 / 0.41 |
+| 304 | 700 | freeze attention-2 q/k for 500 steps (F1) | 0.19 | 1.00 | 0.94 → 0.44 |
+| 304 | 700 | gradient projection on attention-2 q/k (G1) | 0.10 | 1.00 | 0.94 → 0.74 |
+| 310 | **1,200** | λ = 1 for 500 steps | **0.61** | 1.00 | 1.00 → 0.97 |
+| 310 | 1,300 / 1,350 | λ = 1 for 500 steps | 0.55 / 0.55 | 1.00 | → 0.96 / 0.97 |
+| 310 | 1,450 | λ = 1 for 500 steps | 0.22 | 1.00 | 0.88 → 0.88 |
+| 310 | 2,000 | λ = 1 / 0.1 / wd 1.0 | 0.34 / 0.17 / 0.10 | 1.00 | → 0.98 / 0.84 / 0.48 |
+| 302 | 2,000 | λ = 1 / 0.1 / wd 1.0 | 0.39 / **0.52** / 0.51 (control **0.19**) | 0.63 / 1.00 / 0.58 | → 0.99 / 0.91 / 0.11 |
 
-**Reading so far:**
-1. **Restoring factorisation after lock-in does not restore generalisation.** In 304, factorisation rose from 0.71 to
-   0.99 while unseen accuracy stayed at 0.10.
-2. **Keeping the block factorised throughout the critical window does not create generalisation in 304 either.**
-   - During the penalty, factorisation stayed ≥ 0.94 while the network learned its training data (familiar
-     accuracy up to 0.92), but unseen accuracy never exceeded 0.34.
-   - After release it relaxed to 0.86, and unseen accuracy stayed at chance.
-   - The head learned a non-composing solution regardless of the block's form.
-   - **C1 ("interaction lock-in causes failure") is refuted as a sufficient account.** A factorised block is
-     necessary in the population (doc 46), but enforcing it does not produce a composing decoder.
-3. **A weak penalty prevented the post-fit erosion of 302's partial generalisation** (0.52 vs 0.19 in the control).
-   This is the only clearly beneficial training intervention so far.
-4. **Strong weight decay modestly raised unseen accuracy in 304** (0.25) while making the code *less* factorised.
-   This is consistent with the factorial's alternative route: a canonical code read by a reusable reader.
+No rescue run met the registered criterion (unseen ≥ 0.90 with familiar ≥ 0.95).
 
-Pending: the timing sweep (P1path), reverse interventions on 307/311 (P2a–c), freezing (F1), gradient projection (G1),
-and P1early on 310.
+### Reading [C: causal interventions, exploratory]
+
+1. **Factorisation is causally necessary *during development*.**
+   - Rewarding the interaction from step 850 destroyed generalisation in **both** generalisers (0.99/1.00 → 0.35/0.33).
+   - Familiar accuracy stayed at 1.00.
+   - Both meet the registered disruption criterion.
+2. **After consolidation it is no longer necessary.**
+   - In 311, the same intervention from step 2,000 destroyed factorisation (0.98 → 0.15) but generalisation survived
+     (0.92). The head, once composing, keeps composing.
+   - 307 resisted entirely.
+   - Necessity holds in the developmental window, not after it: **developmental path dependence in the breaking
+     direction.**
+3. **Factorisation is not sufficient, and prevention works only before the dip.**
+   - Penalising the interaction before each failure's dip onset gave partial generalisation: 304 0.52; 310 0.55–0.61.
+   - Starting once the dip had begun gave 0.10–0.22.
+   - Restoring factorisation after lock-in gave 0.10–0.34, even at factorisation 0.98–0.99.
+   - Addendum A's prediction (an earlier start rescues more) is **supported**: 310 shows 0.61 → 0.55 → 0.55 → 0.22
+     as the start moves later.
+   - The rescue criterion was **not met**.
+4. **The missing ingredient is the composing decoder.**
+   - Every partial rescue keeps the block factorised (≥ 0.96), yet unseen accuracy stalls at 0.5–0.6.
+   - This matches the partial generalisers 300 and 305, whose decoders interpolate (§49.3).
+5. **Other levers.**
+   - Strong weight decay helps only marginally (304: 0.25), and it makes the code less factorised: the factorial's
+     other route.
+   - Freezing (F1) and gradient projection (G1) on attention-2 query/key did not help.
+   - A weak penalty prevented 302's post-fit erosion (0.52 vs 0.19).
 
 ## 49.5 Reverse intervention without training (E3)
 

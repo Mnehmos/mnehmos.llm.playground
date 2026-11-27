@@ -1,0 +1,1466 @@
+{
+ "named": {
+  "M*A+S": {
+   "unfused": {
+    "expr": "((M * A) + S)",
+    "D": 90,
+    "blocks": 2,
+    "mlp_units": 52,
+    "widths": [
+     27,
+     25
+    ],
+    "n_nodes": 2,
+    "n_params": 80593,
+    "nonzero_params": 2472,
+    "nonzero_params_decoder": 1181,
+    "acc": 1.0,
+    "acc_unseen": 1.0,
+    "logits_exact_onehot": true,
+    "intermediates": {
+     "(M * A)": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     }
+    }
+   },
+   "fused": {
+    "blocks": 2,
+    "mlp_units": 52,
+    "acc": 1.0,
+    "exact": true,
+    "nonzero_params_decoder": 1181
+   },
+   "program_swap": {
+    "node": "(M * A)",
+    "swapped_to": "add",
+    "acc": 1.0,
+    "exact": true
+   }
+  },
+  "(M+A)*S": {
+   "unfused": {
+    "expr": "((M + A) * S)",
+    "D": 90,
+    "blocks": 2,
+    "mlp_units": 50,
+    "widths": [
+     27,
+     23
+    ],
+    "n_nodes": 2,
+    "n_params": 80231,
+    "nonzero_params": 2429,
+    "nonzero_params_decoder": 1138,
+    "acc": 1.0,
+    "acc_unseen": 1.0,
+    "logits_exact_onehot": true,
+    "intermediates": {
+     "(M + A)": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     }
+    }
+   },
+   "fused": {
+    "blocks": 2,
+    "mlp_units": 50,
+    "acc": 1.0,
+    "exact": true,
+    "nonzero_params_decoder": 1138
+   },
+   "program_swap": {
+    "node": "(M + A)",
+    "swapped_to": "mul",
+    "acc": 1.0,
+    "exact": true
+   }
+  },
+  "M^2+A^2": {
+   "unfused": {
+    "expr": "((M)^2 + (A)^2)",
+    "D": 103,
+    "blocks": 2,
+    "mlp_units": 57,
+    "widths": [
+     30,
+     27
+    ],
+    "n_nodes": 3,
+    "n_params": 83175,
+    "nonzero_params": 2519,
+    "nonzero_params_decoder": 1228,
+    "acc": 1.0,
+    "acc_unseen": 1.0,
+    "logits_exact_onehot": true,
+    "intermediates": {
+     "(M)^2": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     },
+     "(A)^2": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     }
+    }
+   },
+   "fused": {
+    "blocks": 1,
+    "mlp_units": 27,
+    "acc": 1.0,
+    "exact": true,
+    "nonzero_params_decoder": 762
+   },
+   "program_swap": null
+  },
+  "(M-A)/(M+A)": {
+   "unfused": {
+    "expr": "((M - A) / (M + A))",
+    "D": 103,
+    "blocks": 2,
+    "mlp_units": 81,
+    "widths": [
+     54,
+     27
+    ],
+    "n_nodes": 3,
+    "n_params": 88143,
+    "nonzero_params": 3502,
+    "nonzero_params_decoder": 2211,
+    "acc": 1.0,
+    "acc_unseen": 1.0,
+    "logits_exact_onehot": true,
+    "intermediates": {
+     "(M - A)": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     },
+     "(M + A)": {
+      "observable_bitwise": true,
+      "interchange_acc": 1.0
+     }
+    }
+   },
+   "fused": {
+    "blocks": 2,
+    "mlp_units": 81,
+    "acc": 1.0,
+    "exact": true,
+    "nonzero_params_decoder": 2211
+   },
+   "program_swap": {
+    "node": "(M - A)",
+    "swapped_to": "div",
+    "acc": 1.0,
+    "exact": true
+   }
+  }
+ },
+ "random": [
+  {
+   "expr": "(S)^2",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 12,
+   "widths": [
+    12
+   ],
+   "n_nodes": 1,
+   "n_params": 72769,
+   "nonzero_params": 1381,
+   "nonzero_params_decoder": 90,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M / A)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 27,
+   "widths": [
+    27
+   ],
+   "n_nodes": 1,
+   "n_params": 75094,
+   "nonzero_params": 2004,
+   "nonzero_params_decoder": 713,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A * S)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 23,
+   "widths": [
+    23
+   ],
+   "n_nodes": 1,
+   "n_params": 74474,
+   "nonzero_params": 1680,
+   "nonzero_params_decoder": 389,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M - S)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 25,
+   "widths": [
+    25
+   ],
+   "n_nodes": 1,
+   "n_params": 74784,
+   "nonzero_params": 1772,
+   "nonzero_params_decoder": 481,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(S / M)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 23,
+   "widths": [
+    23
+   ],
+   "n_nodes": 1,
+   "n_params": 74474,
+   "nonzero_params": 1680,
+   "nonzero_params_decoder": 389,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A - M)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 27,
+   "widths": [
+    27
+   ],
+   "n_nodes": 1,
+   "n_params": 75094,
+   "nonzero_params": 2053,
+   "nonzero_params_decoder": 762,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A / S)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 23,
+   "widths": [
+    23
+   ],
+   "n_nodes": 1,
+   "n_params": 74474,
+   "nonzero_params": 1680,
+   "nonzero_params_decoder": 389,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A)^2",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 15,
+   "widths": [
+    15
+   ],
+   "n_nodes": 1,
+   "n_params": 73234,
+   "nonzero_params": 1537,
+   "nonzero_params_decoder": 246,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + S)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 25,
+   "widths": [
+    25
+   ],
+   "n_nodes": 1,
+   "n_params": 74784,
+   "nonzero_params": 1772,
+   "nonzero_params_decoder": 481,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(S * A)",
+   "D": 77,
+   "blocks": 1,
+   "mlp_units": 23,
+   "widths": [
+    23
+   ],
+   "n_nodes": 1,
+   "n_params": 74474,
+   "nonzero_params": 1680,
+   "nonzero_params_decoder": 389,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 1,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M / (S - M))",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 52,
+   "widths": [
+    25,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80593,
+   "nonzero_params": 2472,
+   "nonzero_params_decoder": 1181,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((A)^2 - (S + S))",
+   "D": 103,
+   "blocks": 2,
+   "mlp_units": 65,
+   "widths": [
+    38,
+    27
+   ],
+   "n_nodes": 3,
+   "n_params": 84831,
+   "nonzero_params": 2441,
+   "nonzero_params_decoder": 1150,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M / (S + M))",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 52,
+   "widths": [
+    25,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80593,
+   "nonzero_params": 2472,
+   "nonzero_params_decoder": 1181,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((M)^2 - (S)^2)",
+   "D": 103,
+   "blocks": 2,
+   "mlp_units": 54,
+   "widths": [
+    27,
+    27
+   ],
+   "n_nodes": 3,
+   "n_params": 82554,
+   "nonzero_params": 2363,
+   "nonzero_params_decoder": 1072,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M + (A + A))",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 54,
+   "widths": [
+    27,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80955,
+   "nonzero_params": 2478,
+   "nonzero_params_decoder": 1187,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A / (M * A))",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 54,
+   "widths": [
+    27,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80955,
+   "nonzero_params": 2704,
+   "nonzero_params_decoder": 1413,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + (M / S))",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 50,
+   "widths": [
+    23,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80231,
+   "nonzero_params": 2429,
+   "nonzero_params_decoder": 1138,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S / M) + M)",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 50,
+   "widths": [
+    23,
+    27
+   ],
+   "n_nodes": 2,
+   "n_params": 80231,
+   "nonzero_params": 2429,
+   "nonzero_params_decoder": 1138,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((M / S))^2",
+   "D": 90,
+   "blocks": 2,
+   "mlp_units": 38,
+   "widths": [
+    23,
+    15
+   ],
+   "n_nodes": 2,
+   "n_params": 78059,
+   "nonzero_params": 1913,
+   "nonzero_params_decoder": 622,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((M)^2 - (M + A))",
+   "D": 103,
+   "blocks": 2,
+   "mlp_units": 69,
+   "widths": [
+    42,
+    27
+   ],
+   "n_nodes": 3,
+   "n_params": 85659,
+   "nonzero_params": 3035,
+   "nonzero_params_decoder": 1744,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 2,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((M - M) + (M + S)) - (A / S))",
+   "D": 129,
+   "blocks": 3,
+   "mlp_units": 129,
+   "widths": [
+    75,
+    27,
+    27
+   ],
+   "n_nodes": 5,
+   "n_params": 105306,
+   "nonzero_params": 3747,
+   "nonzero_params_decoder": 2456,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((M - S) / ((A + M) - A))",
+   "D": 116,
+   "blocks": 3,
+   "mlp_units": 106,
+   "widths": [
+    52,
+    27,
+    27
+   ],
+   "n_nodes": 4,
+   "n_params": 96385,
+   "nonzero_params": 3970,
+   "nonzero_params_decoder": 2679,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((A * S) * (A / (S - M)))",
+   "D": 116,
+   "blocks": 3,
+   "mlp_units": 102,
+   "widths": [
+    48,
+    27,
+    27
+   ],
+   "n_nodes": 4,
+   "n_params": 95453,
+   "nonzero_params": 3548,
+   "nonzero_params_decoder": 2257,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((S - S))^2 - ((S - S) + (S * A)))",
+   "D": 142,
+   "blocks": 3,
+   "mlp_units": 138,
+   "widths": [
+    69,
+    42,
+    27
+   ],
+   "n_nodes": 6,
+   "n_params": 111433,
+   "nonzero_params": 3581,
+   "nonzero_params_decoder": 2290,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((M - A) - (S * M)) / S)",
+   "D": 116,
+   "blocks": 3,
+   "mlp_units": 100,
+   "widths": [
+    50,
+    27,
+    23
+   ],
+   "n_nodes": 4,
+   "n_params": 94987,
+   "nonzero_params": 3554,
+   "nonzero_params_decoder": 2263,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((S / M))^2 - (M * A))",
+   "D": 116,
+   "blocks": 3,
+   "mlp_units": 92,
+   "widths": [
+    50,
+    15,
+    27
+   ],
+   "n_nodes": 4,
+   "n_params": 93123,
+   "nonzero_params": 3362,
+   "nonzero_params_decoder": 2071,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((A * A) / (S / S)))^2",
+   "D": 116,
+   "blocks": 3,
+   "mlp_units": 88,
+   "widths": [
+    46,
+    27,
+    15
+   ],
+   "n_nodes": 4,
+   "n_params": 92191,
+   "nonzero_params": 2699,
+   "nonzero_params_decoder": 1408,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((M)^2)^2)^2",
+   "D": 103,
+   "blocks": 3,
+   "mlp_units": 45,
+   "widths": [
+    15,
+    15,
+    15
+   ],
+   "n_nodes": 3,
+   "n_params": 80794,
+   "nonzero_params": 2003,
+   "nonzero_params_decoder": 712,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((A + (A * S)) - ((S)^2)^2)",
+   "D": 129,
+   "blocks": 3,
+   "mlp_units": 104,
+   "widths": [
+    35,
+    42,
+    27
+   ],
+   "n_nodes": 5,
+   "n_params": 98831,
+   "nonzero_params": 3488,
+   "nonzero_params_decoder": 2197,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((M * M) / M))^2",
+   "D": 103,
+   "blocks": 3,
+   "mlp_units": 69,
+   "widths": [
+    27,
+    27,
+    15
+   ],
+   "n_nodes": 3,
+   "n_params": 85762,
+   "nonzero_params": 2635,
+   "nonzero_params_decoder": 1344,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 3,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((M + M) + (A)^2) * ((A - A) - (M)^2)))^2",
+   "D": 168,
+   "blocks": 4,
+   "mlp_units": 180,
+   "widths": [
+    84,
+    54,
+    27,
+    15
+   ],
+   "n_nodes": 8,
+   "n_params": 133347,
+   "nonzero_params": 4727,
+   "nonzero_params_decoder": 3436,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((M + (A - S)) * ((A + A) * (A + M))) / M)",
+   "D": 155,
+   "blocks": 4,
+   "mlp_units": 187,
+   "widths": [
+    79,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 7,
+   "n_params": 130623,
+   "nonzero_params": 5795,
+   "nonzero_params_decoder": 4504,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M / (M + ((A + S) / S)))",
+   "D": 116,
+   "blocks": 4,
+   "mlp_units": 102,
+   "widths": [
+    25,
+    23,
+    27,
+    27
+   ],
+   "n_nodes": 4,
+   "n_params": 95569,
+   "nonzero_params": 3597,
+   "nonzero_params_decoder": 2306,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((M * (A + (M / S))) * ((S / S))^2)",
+   "D": 142,
+   "blocks": 4,
+   "mlp_units": 138,
+   "widths": [
+    42,
+    42,
+    27,
+    27
+   ],
+   "n_nodes": 6,
+   "n_params": 111575,
+   "nonzero_params": 4126,
+   "nonzero_params_decoder": 2835,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((S - (A)^2) - ((S - S))^2) / (S / A))",
+   "D": 155,
+   "blocks": 4,
+   "mlp_units": 155,
+   "widths": [
+    61,
+    40,
+    27,
+    27
+   ],
+   "n_nodes": 7,
+   "n_params": 120671,
+   "nonzero_params": 4148,
+   "nonzero_params_decoder": 2857,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((S + M))^2 * (((S)^2)^2 - S))",
+   "D": 142,
+   "blocks": 4,
+   "mlp_units": 119,
+   "widths": [
+    37,
+    30,
+    25,
+    27
+   ],
+   "n_nodes": 6,
+   "n_params": 106160,
+   "nonzero_params": 3483,
+   "nonzero_params_decoder": 2192,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((A + S) - ((S * M) / M)) / ((S * M) * (S + M)))",
+   "D": 168,
+   "blocks": 4,
+   "mlp_units": 204,
+   "widths": [
+    96,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 8,
+   "n_params": 141435,
+   "nonzero_params": 5841,
+   "nonzero_params_decoder": 4550,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((S * M) * (A / S)) / (M - (A * S))) - A)",
+   "D": 155,
+   "blocks": 4,
+   "mlp_units": 177,
+   "widths": [
+    69,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 7,
+   "n_params": 127513,
+   "nonzero_params": 5330,
+   "nonzero_params_decoder": 4039,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((M)^2 - (S)^2))^2)^2",
+   "D": 129,
+   "blocks": 4,
+   "mlp_units": 84,
+   "widths": [
+    27,
+    27,
+    15,
+    15
+   ],
+   "n_nodes": 5,
+   "n_params": 93780,
+   "nonzero_params": 2829,
+   "nonzero_params_decoder": 1538,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((A + M) * (A * A)) - ((A)^2 + (A / S))) - (M * M))",
+   "D": 181,
+   "blocks": 4,
+   "mlp_units": 227,
+   "widths": [
+    119,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 155309,
+   "nonzero_params": 6405,
+   "nonzero_params_decoder": 5114,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 4,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((A + S) / (((S * S) * (M)^2) - (((M / A) * (A + S)) * ((M)^2 + (A - S)))))",
+   "D": 233,
+   "blocks": 5,
+   "mlp_units": 313,
+   "widths": [
+    151,
+    81,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 13,
+   "n_params": 220196,
+   "nonzero_params": 8270,
+   "nonzero_params_decoder": 6979,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((A - S) + ((S * M) + (M + M))) - (A)^2) * ((M + A) / (S - A)))",
+   "D": 207,
+   "blocks": 5,
+   "mlp_units": 277,
+   "widths": [
+    142,
+    54,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 11,
+   "n_params": 188512,
+   "nonzero_params": 7670,
+   "nonzero_params_decoder": 6379,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S - (A + S)) + (S / (((M - A) * M) + ((S + A))^2)))",
+   "D": 181,
+   "blocks": 5,
+   "mlp_units": 221,
+   "widths": [
+    77,
+    67,
+    27,
+    23,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 153312,
+   "nonzero_params": 6264,
+   "nonzero_params_decoder": 4973,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((((S - S) + (S + A)))^2 - (A - M)) * ((S / S) + (((A * A) + S))^2))",
+   "D": 220,
+   "blocks": 5,
+   "mlp_units": 284,
+   "widths": [
+    121,
+    52,
+    30,
+    54,
+    27
+   ],
+   "n_nodes": 12,
+   "n_params": 199035,
+   "nonzero_params": 6949,
+   "nonzero_params_decoder": 5658,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((A)^2 - ((S + S))^2) - M))^2",
+   "D": 142,
+   "blocks": 5,
+   "mlp_units": 122,
+   "widths": [
+    38,
+    15,
+    27,
+    27,
+    15
+   ],
+   "n_nodes": 6,
+   "n_params": 107157,
+   "nonzero_params": 3656,
+   "nonzero_params_decoder": 2365,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((((M * A) - S) - (S / S)) + (A * M)))^2",
+   "D": 155,
+   "blocks": 5,
+   "mlp_units": 167,
+   "widths": [
+    73,
+    25,
+    27,
+    27,
+    15
+   ],
+   "n_nodes": 7,
+   "n_params": 124558,
+   "nonzero_params": 4967,
+   "nonzero_params_decoder": 3676,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((A * S) / (S * S)) + ((S * (A)^2) - S)))^2",
+   "D": 168,
+   "blocks": 5,
+   "mlp_units": 174,
+   "widths": [
+    57,
+    50,
+    25,
+    27,
+    15
+   ],
+   "n_nodes": 8,
+   "n_params": 131493,
+   "nonzero_params": 4537,
+   "nonzero_params_decoder": 3246,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((M - (M + S)))^2)^2)^2",
+   "D": 129,
+   "blocks": 5,
+   "mlp_units": 97,
+   "widths": [
+    25,
+    27,
+    15,
+    15,
+    15
+   ],
+   "n_nodes": 5,
+   "n_params": 97276,
+   "nonzero_params": 3220,
+   "nonzero_params_decoder": 1929,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + (((M)^2 * M) + (((S / M))^2)^2))",
+   "D": 155,
+   "blocks": 5,
+   "mlp_units": 149,
+   "widths": [
+    38,
+    42,
+    15,
+    27,
+    27
+   ],
+   "n_nodes": 7,
+   "n_params": 118960,
+   "nonzero_params": 4577,
+   "nonzero_params_decoder": 3286,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S + (M)^2) / ((M / ((A - S) / (S + M))) * (S / S)))",
+   "D": 181,
+   "blocks": 5,
+   "mlp_units": 217,
+   "widths": [
+    84,
+    52,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 151860,
+   "nonzero_params": 5805,
+   "nonzero_params_decoder": 4514,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 5,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + (((M / M) * (((S - S))^2 + ((M + A) / A))) / (((S + M) * (S)^2) * (((A - S) / (S - S)))^2)))",
+   "D": 285,
+   "blocks": 6,
+   "mlp_units": 408,
+   "widths": [
+    162,
+    96,
+    42,
+    54,
+    27,
+    27
+   ],
+   "n_nodes": 17,
+   "n_params": 308214,
+   "nonzero_params": 9523,
+   "nonzero_params_decoder": 8232,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S)^2 + ((((A)^2)^2 * ((S / A))^2) * ((((M * M) - (M / A)) * ((S * M) + (A)^2)) / ((A)^2 * ((A + A) + S)))))",
+   "D": 324,
+   "blocks": 6,
+   "mlp_units": 455,
+   "widths": [
+    184,
+    109,
+    81,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 20,
+   "n_params": 371282,
+   "nonzero_params": 11036,
+   "nonzero_params_decoder": 9745,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((((M - A))^2 - (S)^2) - A))^2)^2",
+   "D": 155,
+   "blocks": 6,
+   "mlp_units": 138,
+   "widths": [
+    39,
+    15,
+    27,
+    27,
+    15,
+    15
+   ],
+   "n_nodes": 7,
+   "n_params": 115694,
+   "nonzero_params": 4327,
+   "nonzero_params_decoder": 3036,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M * ((((M + (S * A)))^2 * ((S * S) - M)) - (((M * S) * A))^2))",
+   "D": 207,
+   "blocks": 6,
+   "mlp_units": 257,
+   "widths": [
+    65,
+    81,
+    30,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 11,
+   "n_params": 180419,
+   "nonzero_params": 6967,
+   "nonzero_params_decoder": 5676,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(A + (((S / (S + (M * S))) - M))^2)",
+   "D": 142,
+   "blocks": 6,
+   "mlp_units": 140,
+   "widths": [
+    23,
+    25,
+    23,
+    27,
+    15,
+    27
+   ],
+   "n_nodes": 6,
+   "n_params": 112429,
+   "nonzero_params": 4255,
+   "nonzero_params_decoder": 2964,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S - S) - ((M * M) + ((((S * M))^2 + ((S)^2 * (M)^2)) / ((A - S) - A))))",
+   "D": 233,
+   "blocks": 6,
+   "mlp_units": 302,
+   "widths": [
+    125,
+    69,
+    27,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 13,
+   "n_params": 215292,
+   "nonzero_params": 7570,
+   "nonzero_params_decoder": 6279,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((S / M) - ((M / ((A - A) + ((A / A) / (S + M)))))^2)",
+   "D": 181,
+   "blocks": 6,
+   "mlp_units": 225,
+   "widths": [
+    102,
+    27,
+    27,
+    27,
+    15,
+    27
+   ],
+   "n_nodes": 9,
+   "n_params": 154945,
+   "nonzero_params": 5503,
+   "nonzero_params_decoder": 4212,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(((((A * M) - ((A)^2 / A)))^2)^2 - S)",
+   "D": 155,
+   "blocks": 6,
+   "mlp_units": 151,
+   "widths": [
+    42,
+    27,
+    27,
+    15,
+    15,
+    25
+   ],
+   "n_nodes": 7,
+   "n_params": 119737,
+   "nonzero_params": 4620,
+   "nonzero_params_decoder": 3329,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "((((((A / S) + S) / M) / S) - ((M + A) + ((S * M) + (M * M)))) - A)",
+   "D": 207,
+   "blocks": 6,
+   "mlp_units": 283,
+   "widths": [
+    100,
+    52,
+    54,
+    23,
+    27,
+    27
+   ],
+   "n_nodes": 11,
+   "n_params": 191209,
+   "nonzero_params": 7743,
+   "nonzero_params_decoder": 6452,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  },
+  {
+   "expr": "(M - (((A / S) * ((M / (A)^2) / A)) / (S * M)))",
+   "D": 168,
+   "blocks": 6,
+   "mlp_units": 196,
+   "widths": [
+    61,
+    27,
+    27,
+    27,
+    27,
+    27
+   ],
+   "n_nodes": 8,
+   "n_params": 139075,
+   "nonzero_params": 5838,
+   "nonzero_params_decoder": 4547,
+   "acc": 1.0,
+   "acc_unseen": 1.0,
+   "logits_exact_onehot": true,
+   "depth": 6,
+   "all_intermediates_observable": true,
+   "min_intermediate_interchange": 1.0
+  }
+ ],
+ "fit_mlp_units_vs_nodes": {
+  "slope": 23.844884872436523,
+  "intercept": -2.942845582962036,
+  "r2": 0.9851909875869751
+ },
+ "fit_nonzero_params_decoder_vs_nodes": {
+  "slope": 508.8002624511719,
+  "intercept": -88.24187469482422,
+  "r2": 0.955787718296051
+ },
+ "fit_D_vs_nodes": {
+  "slope": 12.999993324279785,
+  "intercept": 64.00003051757812,
+  "r2": 1.0
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "mass_only",
+  "arm": "mass_only",
+  "condition": "mass_only",
+  "seed": 308,
+  "schedule": "warmup",
+  "steps": 6000,
+  "batch": 512,
+  "lr": 0.002,
+  "wd": 0.01,
+  "lambda_iit": 3.0,
+  "declared": "M",
+  "block": [
+    0,
+    16
+  ],
+  "warmup_steps": 2000,
+  "n_params": 69831,
+  "model_kw": {
+    "n_types": 1,
+    "aux_classes": 7,
+    "vocab": 25,
+    "seq_len": 8,
+    "n_out": 13
+  },
+  "torch": "2.15.0+cu132",
+  "encoder_forwards_per_step": 2,
+  "trackb": {
+    "fast": false,
+    "variant": "original",
+    "compiled": false,
+    "threads": 2,
+    "steps_run": 300
+  },
+  "acc_id": 0.244384765625,
+  "acc_ood": 0.1497802734375,
+  "train_seconds": 14.2,
+  "first_step_seconds": 0.06,
+  "process_seconds": 16.4,
+  "cpu_seconds": 30.4,
+  "peak_rss_mib": 842.48828125
+}

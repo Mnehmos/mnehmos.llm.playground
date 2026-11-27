@@ -141,6 +141,39 @@ def fig_swap_endpoint():
     plt.close(fig)
 
 
+def fig_decoder():
+    b = ROOT / "runs/phase5/decoder_birth.json"
+    t = ROOT / "runs/phase5/tolerance.json"
+    if not (b.exists() and t.exists()):
+        return
+    B = json.loads(b.read_text())
+    T_ = json.loads(t.read_text())
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.7))
+    nets = [("307", "307 (generalises)", ORANGE), ("311", "311 (generalises)", YELLOW), ("305", "305 (partial)", AQUA),
+            ("304", "304 (fails)", BLUE), ("310", "310 (fails)", MUTED)]
+    for s, lab, col in nets:
+        st_ = sorted(int(k) for k in B[s] if int(k) <= 2000)
+        ax1.plot(st_, [B[s][str(k)]["syn_unseen"] for k in st_], color=col, lw=1.6, label=lab)
+    ax1.set_xlabel("step")
+    ax1.set_ylabel("decoder alone: accuracy on\nsynthetic unseen inputs")
+    ax1.set_ylim(0, 1.02)
+    ax1.legend(frameon=False, fontsize=6.5, loc="upper left")
+    for s, lab, col in nets[:2]:
+        st_ = sorted(int(k) for k in T_[s])
+        ax2.plot(st_, [T_[s][str(k)]["clean"]["oodM"] for k in st_], color=col, lw=1.6, label=f"{s} clean")
+        ax2.plot(st_, [T_[s][str(k)]["inS"]["oodM"] for k in st_], color=col, lw=1.6, ls="--",
+                 label=f"{s} + in-subspace interaction")
+        ax2.plot(st_, [T_[s][str(k)]["outS"]["oodM"] for k in st_], color=col, lw=0.9, ls=":",
+                 label=f"{s} + out-of-subspace control")
+    ax2.set_xlabel("checkpoint step")
+    ax2.set_ylabel("unseen-mass accuracy")
+    ax2.set_ylim(0, 1.02)
+    ax2.legend(frameon=False, fontsize=5.5, loc="lower right")
+    fig.tight_layout()
+    fig.savefig(FIG / "fig6_decoder.pdf")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--zoo", default="/home/user/swap_recon/zoo")
@@ -193,5 +226,39 @@ def fig_factorization():
     plt.close(fig)
 
 
+def fig_decoder():
+    b = ROOT / "runs/phase5/decoder_birth.json"
+    t = ROOT / "runs/phase5/tolerance.json"
+    if not (b.exists() and t.exists()):
+        return
+    B = json.loads(b.read_text())
+    T_ = json.loads(t.read_text())
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.7))
+    nets = [("307", "307 (generalises)", ORANGE), ("311", "311 (generalises)", YELLOW), ("305", "305 (partial)", AQUA),
+            ("304", "304 (fails)", BLUE), ("310", "310 (fails)", MUTED)]
+    for s, lab, col in nets:
+        st_ = sorted(int(k) for k in B[s] if int(k) <= 2000)
+        ax1.plot(st_, [B[s][str(k)]["syn_unseen"] for k in st_], color=col, lw=1.6, label=lab)
+    ax1.set_xlabel("step")
+    ax1.set_ylabel("decoder alone: accuracy on\nsynthetic unseen inputs")
+    ax1.set_ylim(0, 1.02)
+    ax1.legend(frameon=False, fontsize=6.5, loc="upper left")
+    for s, lab, col in nets[:2]:
+        st_ = sorted(int(k) for k in T_[s])
+        ax2.plot(st_, [T_[s][str(k)]["clean"]["oodM"] for k in st_], color=col, lw=1.6, label=f"{s} clean")
+        ax2.plot(st_, [T_[s][str(k)]["inS"]["oodM"] for k in st_], color=col, lw=1.6, ls="--",
+                 label=f"{s} + in-subspace interaction")
+        ax2.plot(st_, [T_[s][str(k)]["outS"]["oodM"] for k in st_], color=col, lw=0.9, ls=":",
+                 label=f"{s} + out-of-subspace control")
+    ax2.set_xlabel("checkpoint step")
+    ax2.set_ylabel("unseen-mass accuracy")
+    ax2.set_ylim(0, 1.02)
+    ax2.legend(frameon=False, fontsize=5.5, loc="lower right")
+    fig.tight_layout()
+    fig.savefig(FIG / "fig6_decoder.pdf")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_factorization()
+    fig_decoder()

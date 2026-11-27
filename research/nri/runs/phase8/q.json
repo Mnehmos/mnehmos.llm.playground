@@ -1,0 +1,3071 @@
+{
+ "reg_s0": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 400,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.10077519714832306,
+     "unseen": 0.08652482181787491,
+     "heldout_pairs": 0.09090909361839294,
+     "train": 0.10077519714832306,
+     "step": 0
+    },
+    {
+     "familiar": 0.986518383026123,
+     "unseen": 0.980141818523407,
+     "heldout_pairs": 0.8787878751754761,
+     "train": 0.986518383026123,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 200,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.07111560553312302,
+     "unseen": 0.08368794620037079,
+     "heldout_pairs": 0.10101009905338287,
+     "train": 0.07111560553312302,
+     "step": 0
+    },
+    {
+     "familiar": 0.9949443936347961,
+     "unseen": 0.9957447052001953,
+     "heldout_pairs": 0.8989899158477783,
+     "train": 0.9949443936347961,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.020202020183205605,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 800,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.06336366385221481,
+     "unseen": 0.06524822860956192,
+     "heldout_pairs": 0.1111111119389534,
+     "train": 0.06336366385221481,
+     "step": 0
+    },
+    {
+     "familiar": 0.5257835984230042,
+     "unseen": 0.4553191363811493,
+     "heldout_pairs": 0.0,
+     "train": 0.5257835984230042,
+     "step": 200
+    },
+    {
+     "familiar": 0.8921469449996948,
+     "unseen": 0.7645390033721924,
+     "heldout_pairs": 0.0,
+     "train": 0.8921469449996948,
+     "step": 400
+    },
+    {
+     "familiar": 0.9898887872695923,
+     "unseen": 0.9659574627876282,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9898887872695923,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.03030303120613098,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 1.0,
+   "OP3": 1.0,
+   "OP4": 0.8086785078048706
+  },
+  "OPR": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.06060606241226196,
+    "train": 1.0,
+    "step": 4000
+   }
+  }
+ },
+ "reg_s1": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 200,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.06808223575353622,
+     "unseen": 0.08368794620037079,
+     "heldout_pairs": 0.08080808073282242,
+     "train": 0.06808223575353622,
+     "step": 0
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.9090909361839294,
+     "train": 1.0,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.9898989796638489,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 200,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.05965621769428253,
+     "unseen": 0.08085106313228607,
+     "heldout_pairs": 0.07070706784725189,
+     "train": 0.05965621769428253,
+     "step": 0
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.9090909361839294,
+     "train": 1.0,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.03030303120613098,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 600,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.09268621355295181,
+     "unseen": 0.09503546357154846,
+     "heldout_pairs": 0.06060606241226196,
+     "train": 0.09268621355295181,
+     "step": 0
+    },
+    {
+     "familiar": 0.5598247647285461,
+     "unseen": 0.43971630930900574,
+     "heldout_pairs": 0.0,
+     "train": 0.5598247647285461,
+     "step": 200
+    },
+    {
+     "familiar": 0.908998966217041,
+     "unseen": 0.8085106611251831,
+     "heldout_pairs": 0.0,
+     "train": 0.908998966217041,
+     "step": 400
+    },
+    {
+     "familiar": 0.9925851225852966,
+     "unseen": 0.980141818523407,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9925851225852966,
+     "step": 600
+    },
+    {
+     "familiar": 0.9966295957565308,
+     "unseen": 0.9886524677276611,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 0.9966295957565308,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.03030303120613098,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.03030303120613098,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 1.0,
+   "OP3": 1.0,
+   "OP4": 0.8106508851051331
+  },
+  "OPR": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.12121212482452393,
+    "train": 1.0,
+    "step": 4000
+   }
+  }
+ },
+ "reg_s2": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 200,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.07617121934890747,
+     "unseen": 0.07517730444669724,
+     "heldout_pairs": 0.07070706784725189,
+     "train": 0.07617121934890747,
+     "step": 0
+    },
+    {
+     "familiar": 0.9979777336120605,
+     "unseen": 0.9957447052001953,
+     "heldout_pairs": 0.8585858345031738,
+     "train": 0.9979777336120605,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.9898989796638489,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 1.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 200,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.08190090954303741,
+     "unseen": 0.08936170488595963,
+     "heldout_pairs": 0.06060606241226196,
+     "train": 0.08190090954303741,
+     "step": 0
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.9292929172515869,
+     "train": 1.0,
+     "step": 200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 1.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.010101010091602802,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 800,
+   "params": 4429,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.07313784956932068,
+     "unseen": 0.07517730444669724,
+     "heldout_pairs": 0.05050504952669144,
+     "train": 0.07313784956932068,
+     "step": 0
+    },
+    {
+     "familiar": 0.5234243273735046,
+     "unseen": 0.47801417112350464,
+     "heldout_pairs": 0.0,
+     "train": 0.5234243273735046,
+     "step": 200
+    },
+    {
+     "familiar": 0.8958544135093689,
+     "unseen": 0.7872340679168701,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.8958544135093689,
+     "step": 400
+    },
+    {
+     "familiar": 0.9871924519538879,
+     "unseen": 0.9645389914512634,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 0.9871924519538879,
+     "step": 600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 55
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 1.0,
+   "OP3": 1.0,
+   "OP4": 0.8067061305046082
+  },
+  "OPR": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.14141413569450378,
+    "train": 1.0,
+    "step": 4000
+   }
+  }
+ },
+ "base_s0": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.12121212482452393,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1400,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.06909336149692535,
+     "unseen": 0.06666667014360428,
+     "heldout_pairs": 0.07070706784725189,
+     "train": 0.06909336149692535,
+     "step": 0
+    },
+    {
+     "familiar": 0.39467474818229675,
+     "unseen": 0.27943262457847595,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.39467474818229675,
+     "step": 200
+    },
+    {
+     "familiar": 0.6528480052947998,
+     "unseen": 0.4822694957256317,
+     "heldout_pairs": 0.14141413569450378,
+     "train": 0.6528480052947998,
+     "step": 400
+    },
+    {
+     "familiar": 0.8237276673316956,
+     "unseen": 0.6822695136070251,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 0.8237276673316956,
+     "step": 600
+    },
+    {
+     "familiar": 0.9120323657989502,
+     "unseen": 0.8085106611251831,
+     "heldout_pairs": 0.13131313025951385,
+     "train": 0.9120323657989502,
+     "step": 800
+    },
+    {
+     "familiar": 0.9629254937171936,
+     "unseen": 0.8879432678222656,
+     "heldout_pairs": 0.13131313025951385,
+     "train": 0.9629254937171936,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9844961166381836,
+     "unseen": 0.937588632106781,
+     "heldout_pairs": 0.13131313025951385,
+     "train": 0.9844961166381836,
+     "step": 1200
+    },
+    {
+     "familiar": 0.9912369251251221,
+     "unseen": 0.9602836966514587,
+     "heldout_pairs": 0.13131313025951385,
+     "train": 0.9912369251251221,
+     "step": 1400
+    },
+    {
+     "familiar": 0.9973036646842957,
+     "unseen": 0.9858155846595764,
+     "heldout_pairs": 0.13131313025951385,
+     "train": 0.9973036646842957,
+     "step": 1600
+    },
+    {
+     "familiar": 0.9986518621444702,
+     "unseen": 0.9929078221321106,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 0.9986518621444702,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1111111119389534,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.010101010091602802,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1600,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.08324906975030899,
+     "unseen": 0.08368794620037079,
+     "heldout_pairs": 0.08080808073282242,
+     "train": 0.08324906975030899,
+     "step": 0
+    },
+    {
+     "familiar": 0.3201887309551239,
+     "unseen": 0.19716311991214752,
+     "heldout_pairs": 0.0,
+     "train": 0.3201887309551239,
+     "step": 200
+    },
+    {
+     "familiar": 0.5453320145606995,
+     "unseen": 0.3858155906200409,
+     "heldout_pairs": 0.0,
+     "train": 0.5453320145606995,
+     "step": 400
+    },
+    {
+     "familiar": 0.7512639164924622,
+     "unseen": 0.6042553186416626,
+     "heldout_pairs": 0.0,
+     "train": 0.7512639164924622,
+     "step": 600
+    },
+    {
+     "familiar": 0.8786653280258179,
+     "unseen": 0.7319148778915405,
+     "heldout_pairs": 0.0,
+     "train": 0.8786653280258179,
+     "step": 800
+    },
+    {
+     "familiar": 0.9329288601875305,
+     "unseen": 0.8099290728569031,
+     "heldout_pairs": 0.0,
+     "train": 0.9329288601875305,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9635996222496033,
+     "unseen": 0.8978723287582397,
+     "heldout_pairs": 0.0,
+     "train": 0.9635996222496033,
+     "step": 1200
+    },
+    {
+     "familiar": 0.9797775745391846,
+     "unseen": 0.9446808695793152,
+     "heldout_pairs": 0.0,
+     "train": 0.9797775745391846,
+     "step": 1400
+    },
+    {
+     "familiar": 0.9939332604408264,
+     "unseen": 0.9872340559959412,
+     "heldout_pairs": 0.0,
+     "train": 0.9939332604408264,
+     "step": 1600
+    },
+    {
+     "familiar": 0.9959555268287659,
+     "unseen": 0.9914893507957458,
+     "heldout_pairs": 0.0,
+     "train": 0.9959555268287659,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.1818181872367859,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1000,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.0748230516910553,
+     "unseen": 0.08085106313228607,
+     "heldout_pairs": 0.05050504952669144,
+     "train": 0.0748230516910553,
+     "step": 0
+    },
+    {
+     "familiar": 0.37782272696495056,
+     "unseen": 0.3503546118736267,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.37782272696495056,
+     "step": 200
+    },
+    {
+     "familiar": 0.7047522664070129,
+     "unseen": 0.6085106134414673,
+     "heldout_pairs": 0.020202020183205605,
+     "train": 0.7047522664070129,
+     "step": 400
+    },
+    {
+     "familiar": 0.8955173492431641,
+     "unseen": 0.8269503712654114,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.8955173492431641,
+     "step": 600
+    },
+    {
+     "familiar": 0.9753960371017456,
+     "unseen": 0.937588632106781,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9753960371017456,
+     "step": 800
+    },
+    {
+     "familiar": 0.9932591915130615,
+     "unseen": 0.9773049354553223,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9932591915130615,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9986518621444702,
+     "unseen": 0.9929078221321106,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9986518621444702,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 0.8284023404121399,
+   "OP3": 0.8067061305046082,
+   "OP4": 0.8402366638183594
+  }
+ },
+ "base_s1": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.1515151560306549,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1400,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.05965621769428253,
+     "unseen": 0.06808510422706604,
+     "heldout_pairs": 0.10101009905338287,
+     "train": 0.05965621769428253,
+     "step": 0
+    },
+    {
+     "familiar": 0.40006741881370544,
+     "unseen": 0.2950354516506195,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.40006741881370544,
+     "step": 200
+    },
+    {
+     "familiar": 0.6386922597885132,
+     "unseen": 0.49078014492988586,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.6386922597885132,
+     "step": 400
+    },
+    {
+     "familiar": 0.7987866401672363,
+     "unseen": 0.6212766170501709,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.7987866401672363,
+     "step": 600
+    },
+    {
+     "familiar": 0.9127064347267151,
+     "unseen": 0.7673758864402771,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9127064347267151,
+     "step": 800
+    },
+    {
+     "familiar": 0.9659588932991028,
+     "unseen": 0.8879432678222656,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9659588932991028,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9885405898094177,
+     "unseen": 0.958865225315094,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9885405898094177,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.010101010091602802,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1800,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.08088979125022888,
+     "unseen": 0.08085106313228607,
+     "heldout_pairs": 0.07070706784725189,
+     "train": 0.08088979125022888,
+     "step": 0
+    },
+    {
+     "familiar": 0.36703741550445557,
+     "unseen": 0.24255318939685822,
+     "heldout_pairs": 0.0,
+     "train": 0.36703741550445557,
+     "step": 200
+    },
+    {
+     "familiar": 0.5709471106529236,
+     "unseen": 0.4312056601047516,
+     "heldout_pairs": 0.0,
+     "train": 0.5709471106529236,
+     "step": 400
+    },
+    {
+     "familiar": 0.7266599535942078,
+     "unseen": 0.5546099543571472,
+     "heldout_pairs": 0.0,
+     "train": 0.7266599535942078,
+     "step": 600
+    },
+    {
+     "familiar": 0.8264240026473999,
+     "unseen": 0.6836879253387451,
+     "heldout_pairs": 0.0,
+     "train": 0.8264240026473999,
+     "step": 800
+    },
+    {
+     "familiar": 0.9063026905059814,
+     "unseen": 0.7943262457847595,
+     "heldout_pairs": 0.0,
+     "train": 0.9063026905059814,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9410178661346436,
+     "unseen": 0.852482259273529,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9410178661346436,
+     "step": 1200
+    },
+    {
+     "familiar": 0.974047839641571,
+     "unseen": 0.9049645662307739,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.974047839641571,
+     "step": 1400
+    },
+    {
+     "familiar": 0.9885405898094177,
+     "unseen": 0.9460992813110352,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9885405898094177,
+     "step": 1600
+    },
+    {
+     "familiar": 0.9939332604408264,
+     "unseen": 0.9744681119918823,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9939332604408264,
+     "step": 1800
+    },
+    {
+     "familiar": 0.9973036646842957,
+     "unseen": 0.9858155846595764,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9973036646842957,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.17171716690063477,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1000,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.08291203528642654,
+     "unseen": 0.07234042882919312,
+     "heldout_pairs": 0.03030303120613098,
+     "train": 0.08291203528642654,
+     "step": 0
+    },
+    {
+     "familiar": 0.42703068256378174,
+     "unseen": 0.33475178480148315,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.42703068256378174,
+     "step": 200
+    },
+    {
+     "familiar": 0.7765419483184814,
+     "unseen": 0.651063859462738,
+     "heldout_pairs": 0.08080808073282242,
+     "train": 0.7765419483184814,
+     "step": 400
+    },
+    {
+     "familiar": 0.9389955997467041,
+     "unseen": 0.8865247964859009,
+     "heldout_pairs": 0.12121212482452393,
+     "train": 0.9389955997467041,
+     "step": 600
+    },
+    {
+     "familiar": 0.9898887872695923,
+     "unseen": 0.9659574627876282,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9898887872695923,
+     "step": 800
+    },
+    {
+     "familiar": 0.9946073293685913,
+     "unseen": 0.9843971729278564,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9946073293685913,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9979777336120605,
+     "unseen": 0.9957447052001953,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 0.9979777336120605,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.14141413569450378,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 0.834319531917572,
+   "OP3": 0.8067061305046082,
+   "OP4": 0.8382642865180969
+  }
+ },
+ "base_s2": {
+  "OP2": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.1515151560306549,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1200,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true
+   },
+   "history": [
+    {
+     "familiar": 0.07886753976345062,
+     "unseen": 0.06382978707551956,
+     "heldout_pairs": 0.06060606241226196,
+     "train": 0.07886753976345062,
+     "step": 0
+    },
+    {
+     "familiar": 0.3896191418170929,
+     "unseen": 0.24964539706707,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.3896191418170929,
+     "step": 200
+    },
+    {
+     "familiar": 0.6723963618278503,
+     "unseen": 0.5021276473999023,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.6723963618278503,
+     "step": 400
+    },
+    {
+     "familiar": 0.8426019549369812,
+     "unseen": 0.7049645185470581,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 0.8426019549369812,
+     "step": 600
+    },
+    {
+     "familiar": 0.9416919350624084,
+     "unseen": 0.8624113202095032,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9416919350624084,
+     "step": 800
+    },
+    {
+     "familiar": 0.9814627766609192,
+     "unseen": 0.9503546357154846,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9814627766609192,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9966295957565308,
+     "unseen": 0.9886524677276611,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 0.9966295957565308,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP3": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.0,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 1600,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true
+   },
+   "history": [
+    {
+     "familiar": 0.06774519383907318,
+     "unseen": 0.07234042882919312,
+     "heldout_pairs": 0.10101009905338287,
+     "train": 0.06774519383907318,
+     "step": 0
+    },
+    {
+     "familiar": 0.3532187342643738,
+     "unseen": 0.2113475203514099,
+     "heldout_pairs": 0.0,
+     "train": 0.3532187342643738,
+     "step": 200
+    },
+    {
+     "familiar": 0.5699359774589539,
+     "unseen": 0.4099290668964386,
+     "heldout_pairs": 0.0,
+     "train": 0.5699359774589539,
+     "step": 400
+    },
+    {
+     "familiar": 0.7185709476470947,
+     "unseen": 0.5631205439567566,
+     "heldout_pairs": 0.0,
+     "train": 0.7185709476470947,
+     "step": 600
+    },
+    {
+     "familiar": 0.8351870775222778,
+     "unseen": 0.6851063966751099,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.8351870775222778,
+     "step": 800
+    },
+    {
+     "familiar": 0.9143916368484497,
+     "unseen": 0.7985815405845642,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9143916368484497,
+     "step": 1000
+    },
+    {
+     "familiar": 0.9700033664703369,
+     "unseen": 0.9219858050346375,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9700033664703369,
+     "step": 1200
+    },
+    {
+     "familiar": 0.9848331809043884,
+     "unseen": 0.9617021083831787,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9848331809043884,
+     "step": 1400
+    },
+    {
+     "familiar": 0.9959555268287659,
+     "unseen": 0.978723406791687,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9959555268287659,
+     "step": 1600
+    },
+    {
+     "familiar": 0.9986518621444702,
+     "unseen": 0.9929078221321106,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 0.9986518621444702,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.010101010091602802,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.0,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "OP4": {
+   "final": {
+    "familiar": 1.0,
+    "unseen": 1.0,
+    "heldout_pairs": 0.20202019810676575,
+    "train": 1.0,
+    "step": 4000
+   },
+   "steps_to_competence": 800,
+   "params": 2765,
+   "retention_bitwise": {
+    "OP1": true,
+    "OPadd": true,
+    "OP2": true,
+    "OP3": true
+   },
+   "history": [
+    {
+     "familiar": 0.077182337641716,
+     "unseen": 0.07092198729515076,
+     "heldout_pairs": 0.08080808073282242,
+     "train": 0.077182337641716,
+     "step": 0
+    },
+    {
+     "familiar": 0.37546342611312866,
+     "unseen": 0.24539007246494293,
+     "heldout_pairs": 0.0,
+     "train": 0.37546342611312866,
+     "step": 200
+    },
+    {
+     "familiar": 0.725648820400238,
+     "unseen": 0.5588652491569519,
+     "heldout_pairs": 0.04040404036641121,
+     "train": 0.725648820400238,
+     "step": 400
+    },
+    {
+     "familiar": 0.9234917163848877,
+     "unseen": 0.8241134881973267,
+     "heldout_pairs": 0.1111111119389534,
+     "train": 0.9234917163848877,
+     "step": 600
+    },
+    {
+     "familiar": 0.9905628561973572,
+     "unseen": 0.9758865237236023,
+     "heldout_pairs": 0.1515151560306549,
+     "train": 0.9905628561973572,
+     "step": 800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 1400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 1800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.1818181872367859,
+     "train": 1.0,
+     "step": 2000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 2600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.16161616146564484,
+     "train": 1.0,
+     "step": 2800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3000
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.17171716690063477,
+     "train": 1.0,
+     "step": 3200
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.19191919267177582,
+     "train": 1.0,
+     "step": 3400
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.20202019810676575,
+     "train": 1.0,
+     "step": 3600
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.20202019810676575,
+     "train": 1.0,
+     "step": 3800
+    },
+    {
+     "familiar": 1.0,
+     "unseen": 1.0,
+     "heldout_pairs": 0.20202019810676575,
+     "train": 1.0,
+     "step": 4000
+    }
+   ],
+   "read_dims": 29
+  },
+  "final_all_ops": {
+   "OP1": 1.0,
+   "OPadd": 1.0,
+   "OP2": 0.834319531917572,
+   "OP3": 0.8047337532043457,
+   "OP4": 0.844181478023529
+  }
+ }
+}

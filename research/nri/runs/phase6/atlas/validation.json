@@ -1,0 +1,256 @@
+{
+ "designC": {
+  "V0_E1_max_abs_err": 0.0,
+  "V1_token_additive_r2": 0.9565928141629857,
+  "V2_pairs": {
+   "mxmu": 0.6818181818181819,
+   "mxa": -2.220446049250313e-16,
+   "mxau": 0.0,
+   "mxfu": 0.0,
+   "mxorder": -2.220446049250313e-16,
+   "muxa": 0.0,
+   "muxau": 0.0,
+   "muxfu": -2.220446049250313e-16,
+   "muxorder": 0.0,
+   "axau": 0.31818181818181823,
+   "axfu": 0.0,
+   "axorder": -2.220446049250313e-16,
+   "auxfu": -2.220446049250313e-16,
+   "auxorder": 0.0,
+   "fuxorder": 0.0
+  },
+  "V2_unit_conversion_pairs_r2": 1.0,
+  "V2_acc_alpha0": [
+   0.26857142857142857,
+   0.13513513513513514
+  ],
+  "V2_acc_restore_unit_pairs": [
+   1.0,
+   1.0
+  ],
+  "V3_max_units_with_nonzero_margin": 7,
+  "V3_write_support_sizes": [
+   1,
+   2,
+   3
+  ],
+  "V4_mass_pair_share": 0.49773696064949036,
+  "V5_bright_mass_outside_used_dims": 0.9494952813210257,
+  "V5_sectors": {
+   "native": {
+    "readout_share_top7": 0.920559425116166,
+    "ablate_c": {
+     "n": 4,
+     "acc": [
+      0.03428571428571429,
+      0.010135135135135136
+     ]
+    },
+    "ablate_r": {
+     "n": 3,
+     "acc": [
+      0.16408163265306122,
+      0.08108108108108109
+     ]
+    },
+    "ablate_s": {
+     "n": 3,
+     "acc": [
+      0.9477551020408164,
+      0.8513513513513513
+     ]
+    },
+    "ablate_d": {
+     "n": 54,
+     "acc": [
+      0.23673469387755103,
+      0.14527027027027026
+     ]
+    },
+    "keep_only_R": [
+     0.23510204081632652,
+     0.15202702702702703
+    ]
+   },
+   "rotated": {
+    "readout_share_top7": 1.5072710764398412,
+    "ablate_c": {
+     "n": 2,
+     "acc": [
+      0.20326530612244897,
+      0.15202702702702703
+     ]
+    },
+    "ablate_r": {
+     "n": 5,
+     "acc": [
+      0.2383673469387755,
+      0.1891891891891892
+     ]
+    },
+    "ablate_s": {
+     "n": 5,
+     "acc": [
+      0.37578231292517006,
+      0.29954954954954954
+     ]
+    },
+    "ablate_d": {
+     "n": 52,
+     "acc": [
+      0.15700680272108844,
+      0.15090090090090091
+     ]
+    },
+    "keep_only_R": [
+     0.1414965986394558,
+     0.1036036036036036
+    ]
+   },
+   "dark_sector_h": {
+    "bright_dims": 1,
+    "ablate_dark": {
+     "acc": [
+      0.06938775510204082,
+      0.0777027027027027
+     ],
+     "mean_abs_dlogit_actual": 0.14977352762918983,
+     "lens_predicted": 0.0008176874280768,
+     "exact_jacobian_predicted": 1.0716449438941342,
+     "actual_over_lens": 183.16721339529093
+    },
+    "ablate_bright": {
+     "acc": [
+      0.9659863945578231,
+      0.9279279279279279
+     ],
+     "mean_abs_dlogit_actual": 0.05486384158047104,
+     "lens_predicted": 0.004855944341053005,
+     "exact_jacobian_predicted": 0.0542809574635056,
+     "actual_over_lens": 11.298284685152279
+    }
+   }
+  }
+ },
+ "designL": {
+  "V0_E1_max_abs_err": 0.0,
+  "V1_token_additive_r2": 1.0,
+  "V2_pairs": {
+   "mxmu": null,
+   "mxa": null,
+   "mxau": null,
+   "mxfu": null,
+   "mxorder": null,
+   "muxa": null,
+   "muxau": null,
+   "muxfu": null,
+   "muxorder": null,
+   "axau": null,
+   "axfu": null,
+   "axorder": null,
+   "auxfu": null,
+   "auxorder": null,
+   "fuxorder": null
+  },
+  "V2_unit_conversion_pairs_r2": null,
+  "V2_acc_alpha0": [
+   1.0,
+   1.0
+  ],
+  "V2_acc_restore_unit_pairs": [
+   1.0,
+   1.0
+  ],
+  "V3_max_units_with_nonzero_margin": 13,
+  "V3_write_support_sizes": [
+   1,
+   2,
+   3
+  ],
+  "V4_mass_pair_share": 0.25402966141700745,
+  "V5_bright_mass_outside_used_dims": 0.9608546047081613,
+  "V5_sectors": {
+   "native": {
+    "readout_share_top7": 0.9999999999999999,
+    "ablate_c": {
+     "n": 7,
+     "acc": [
+      0.06993197278911564,
+      0.07545045045045046
+     ]
+    },
+    "ablate_r": null,
+    "ablate_s": null,
+    "ablate_d": {
+     "n": 57,
+     "acc": [
+      1.0,
+      1.0
+     ]
+    },
+    "keep_only_R": [
+     1.0,
+     1.0
+    ]
+   },
+   "rotated": {
+    "readout_share_top7": 16.628561342086435,
+    "ablate_c": {
+     "n": 1,
+     "acc": [
+      0.2451700680272109,
+      0.1204954954954955
+     ]
+    },
+    "ablate_r": {
+     "n": 6,
+     "acc": [
+      0.17469387755102042,
+      0.11373873873873874
+     ]
+    },
+    "ablate_s": {
+     "n": 6,
+     "acc": [
+      0.18040816326530612,
+      0.12162162162162163
+     ]
+    },
+    "ablate_d": {
+     "n": 51,
+     "acc": [
+      0.09006802721088436,
+      0.060810810810810814
+     ]
+    },
+    "keep_only_R": [
+     0.08789115646258504,
+     0.07207207207207207
+    ]
+   },
+   "dark_sector_h": {
+    "bright_dims": 1,
+    "ablate_dark": {
+     "acc": [
+      0.06993197278911564,
+      0.07545045045045046
+     ],
+     "mean_abs_dlogit_actual": 0.14875849197201033,
+     "lens_predicted": 0.00012854708565379565,
+     "exact_jacobian_predicted": 1.7364295092704687,
+     "actual_over_lens": 1157.2295957968915
+    },
+    "ablate_bright": {
+     "acc": [
+      1.0,
+      1.0
+     ],
+     "mean_abs_dlogit_actual": 0.06122717765463615,
+     "lens_predicted": 0.003305163098882793,
+     "exact_jacobian_predicted": 0.06078650881633582,
+     "actual_over_lens": 18.524706897318346
+    }
+   }
+  }
+ }
+}

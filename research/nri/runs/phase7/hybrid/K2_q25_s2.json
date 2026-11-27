@@ -1,0 +1,630 @@
+{
+ "cond": "K2",
+ "regime": "q25",
+ "seed": 2,
+ "kind": "hybrid-trained",
+ "trainable_params": 191516,
+ "steps_to_OP2_criterion": null,
+ "final": {
+  "OP1_familiar": 0.5438095331192017,
+  "OP1_unseen": 0.21846847236156464,
+  "OP2_familiar": 0.49197277426719666,
+  "OP2_unseen": 0.19031532108783722,
+  "OP1_subcircuit_exact": 1.0,
+  "OP2_subcircuit_silent": 1.0,
+  "OP1_iit_M_disc": 0.11730879545211792,
+  "step": 6000
+ },
+ "history": [
+  {
+   "OP1_familiar": 0.20952381193637848,
+   "OP1_unseen": 0.22747747600078583,
+   "OP2_familiar": 0.0688435360789299,
+   "OP2_unseen": 0.07995495200157166,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.23691776394844055,
+   "step": 0
+  },
+  {
+   "OP1_familiar": 0.8987755179405212,
+   "OP1_unseen": 0.869369387626648,
+   "OP2_familiar": 0.234965980052948,
+   "OP2_unseen": 0.15540540218353271,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.7349051237106323,
+   "step": 100
+  },
+  {
+   "OP1_familiar": 0.8194558024406433,
+   "OP1_unseen": 0.7860360145568848,
+   "OP2_familiar": 0.24408163130283356,
+   "OP2_unseen": 0.154842346906662,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.6526739597320557,
+   "step": 200
+  },
+  {
+   "OP1_familiar": 0.6482993364334106,
+   "OP1_unseen": 0.5360360145568848,
+   "OP2_familiar": 0.28544217348098755,
+   "OP2_unseen": 0.14245495200157166,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.4496837258338928,
+   "step": 300
+  },
+  {
+   "OP1_familiar": 0.5715646147727966,
+   "OP1_unseen": 0.3913288414478302,
+   "OP2_familiar": 0.34503400325775146,
+   "OP2_unseen": 0.16047297418117523,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.31742382049560547,
+   "step": 400
+  },
+  {
+   "OP1_familiar": 0.5470748543739319,
+   "OP1_unseen": 0.3175675570964813,
+   "OP2_familiar": 0.41442176699638367,
+   "OP2_unseen": 0.17736487090587616,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.2277170717716217,
+   "step": 500
+  },
+  {
+   "OP1_familiar": 0.5734694004058838,
+   "OP1_unseen": 0.29954954981803894,
+   "OP2_familiar": 0.4706122577190399,
+   "OP2_unseen": 0.18468467891216278,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.20299021899700165,
+   "step": 600
+  },
+  {
+   "OP1_familiar": 0.589251697063446,
+   "OP1_unseen": 0.29729729890823364,
+   "OP2_familiar": 0.48775508999824524,
+   "OP2_unseen": 0.19256757199764252,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.20241518318653107,
+   "step": 700
+  },
+  {
+   "OP1_familiar": 0.5853061079978943,
+   "OP1_unseen": 0.27646395564079285,
+   "OP2_familiar": 0.5008163452148438,
+   "OP2_unseen": 0.1993243247270584,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1650373786687851,
+   "step": 800
+  },
+  {
+   "OP1_familiar": 0.5771428346633911,
+   "OP1_unseen": 0.27195945382118225,
+   "OP2_familiar": 0.49809524416923523,
+   "OP2_unseen": 0.19819819927215576,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1621621549129486,
+   "step": 900
+  },
+  {
+   "OP1_familiar": 0.5723809599876404,
+   "OP1_unseen": 0.26295045018196106,
+   "OP2_familiar": 0.496870756149292,
+   "OP2_unseen": 0.19988738000392914,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1489361673593521,
+   "step": 1000
+  },
+  {
+   "OP1_familiar": 0.5702040791511536,
+   "OP1_unseen": 0.25619369745254517,
+   "OP2_familiar": 0.4970068037509918,
+   "OP2_unseen": 0.19369369745254517,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.14778608083724976,
+   "step": 1100
+  },
+  {
+   "OP1_familiar": 0.5674830079078674,
+   "OP1_unseen": 0.24943692982196808,
+   "OP2_familiar": 0.49768707156181335,
+   "OP2_unseen": 0.19481982290744781,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1466359943151474,
+   "step": 1200
+  },
+  {
+   "OP1_familiar": 0.5648979544639587,
+   "OP1_unseen": 0.24831080436706543,
+   "OP2_familiar": 0.49510204792022705,
+   "OP2_unseen": 0.1993243247270584,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.14203564822673798,
+   "step": 1300
+  },
+  {
+   "OP1_familiar": 0.5612244606018066,
+   "OP1_unseen": 0.25,
+   "OP2_familiar": 0.49551019072532654,
+   "OP2_unseen": 0.1993243247270584,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1414606124162674,
+   "step": 1400
+  },
+  {
+   "OP1_familiar": 0.5628571510314941,
+   "OP1_unseen": 0.24605855345726013,
+   "OP2_familiar": 0.49455782771110535,
+   "OP2_unseen": 0.19763512909412384,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1414606124162674,
+   "step": 1500
+  },
+  {
+   "OP1_familiar": 0.5597279071807861,
+   "OP1_unseen": 0.24605855345726013,
+   "OP2_familiar": 0.4942857027053833,
+   "OP2_unseen": 0.1965090036392212,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.14031052589416504,
+   "step": 1600
+  },
+  {
+   "OP1_familiar": 0.5580952167510986,
+   "OP1_unseen": 0.24380630254745483,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.1942567527294159,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.14261069893836975,
+   "step": 1700
+  },
+  {
+   "OP1_familiar": 0.5582312941551208,
+   "OP1_unseen": 0.24211712181568146,
+   "OP2_familiar": 0.494829922914505,
+   "OP2_unseen": 0.19538287818431854,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1414606124162674,
+   "step": 1800
+  },
+  {
+   "OP1_familiar": 0.5568707585334778,
+   "OP1_unseen": 0.2409909963607788,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.19369369745254517,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.14031052589416504,
+   "step": 1900
+  },
+  {
+   "OP1_familiar": 0.5565986633300781,
+   "OP1_unseen": 0.2404279261827469,
+   "OP2_familiar": 0.494829922914505,
+   "OP2_unseen": 0.1942567527294159,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13916043937206268,
+   "step": 2000
+  },
+  {
+   "OP1_familiar": 0.5541496872901917,
+   "OP1_unseen": 0.23986487090587616,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.19594594836235046,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13973547518253326,
+   "step": 2100
+  },
+  {
+   "OP1_familiar": 0.554693877696991,
+   "OP1_unseen": 0.2404279261827469,
+   "OP2_familiar": 0.49306121468544006,
+   "OP2_unseen": 0.19481982290744781,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13571017980575562,
+   "step": 2200
+  },
+  {
+   "OP1_familiar": 0.5538775324821472,
+   "OP1_unseen": 0.23704954981803894,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.19369369745254517,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13973547518253326,
+   "step": 2300
+  },
+  {
+   "OP1_familiar": 0.5530612468719482,
+   "OP1_unseen": 0.23761261999607086,
+   "OP2_familiar": 0.49401360750198364,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13743530213832855,
+   "step": 2400
+  },
+  {
+   "OP1_familiar": 0.552925169467926,
+   "OP1_unseen": 0.23704954981803894,
+   "OP2_familiar": 0.49564626812934875,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13686026632785797,
+   "step": 2500
+  },
+  {
+   "OP1_familiar": 0.552925169467926,
+   "OP1_unseen": 0.2359234243631363,
+   "OP2_familiar": 0.4949660003185272,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1362852156162262,
+   "step": 2600
+  },
+  {
+   "OP1_familiar": 0.551564633846283,
+   "OP1_unseen": 0.23423422873020172,
+   "OP2_familiar": 0.494829922914505,
+   "OP2_unseen": 0.19256757199764252,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13571017980575562,
+   "step": 2700
+  },
+  {
+   "OP1_familiar": 0.551564633846283,
+   "OP1_unseen": 0.23198197782039642,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.1920045018196106,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13513512909412384,
+   "step": 2800
+  },
+  {
+   "OP1_familiar": 0.5507482886314392,
+   "OP1_unseen": 0.22972972691059113,
+   "OP2_familiar": 0.49455782771110535,
+   "OP2_unseen": 0.1942567527294159,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13571017980575562,
+   "step": 2900
+  },
+  {
+   "OP1_familiar": 0.5511564612388611,
+   "OP1_unseen": 0.23029279708862305,
+   "OP2_familiar": 0.49551019072532654,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13398504257202148,
+   "step": 3000
+  },
+  {
+   "OP1_familiar": 0.5517006516456604,
+   "OP1_unseen": 0.22522522509098053,
+   "OP2_familiar": 0.4952380955219269,
+   "OP2_unseen": 0.1920045018196106,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13283495604991913,
+   "step": 3100
+  },
+  {
+   "OP1_familiar": 0.5499319434165955,
+   "OP1_unseen": 0.22522522509098053,
+   "OP2_familiar": 0.49360543489456177,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1334100067615509,
+   "step": 3200
+  },
+  {
+   "OP1_familiar": 0.5503401160240173,
+   "OP1_unseen": 0.22353602945804596,
+   "OP2_familiar": 0.4949660003185272,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13225992023944855,
+   "step": 3300
+  },
+  {
+   "OP1_familiar": 0.5489795804023743,
+   "OP1_unseen": 0.22353602945804596,
+   "OP2_familiar": 0.4952380955219269,
+   "OP2_unseen": 0.18918919563293457,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.13225992023944855,
+   "step": 3400
+  },
+  {
+   "OP1_familiar": 0.5491156578063965,
+   "OP1_unseen": 0.2246621549129486,
+   "OP2_familiar": 0.49414965510368347,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12880966067314148,
+   "step": 3500
+  },
+  {
+   "OP1_familiar": 0.549795925617218,
+   "OP1_unseen": 0.22353602945804596,
+   "OP2_familiar": 0.49414965510368347,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12880966067314148,
+   "step": 3600
+  },
+  {
+   "OP1_familiar": 0.5485714077949524,
+   "OP1_unseen": 0.22353602945804596,
+   "OP2_familiar": 0.49346938729286194,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1282346248626709,
+   "step": 3700
+  },
+  {
+   "OP1_familiar": 0.5488435626029968,
+   "OP1_unseen": 0.2224099040031433,
+   "OP2_familiar": 0.4946938753128052,
+   "OP2_unseen": 0.1920045018196106,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12765957415103912,
+   "step": 3800
+  },
+  {
+   "OP1_familiar": 0.5493877530097961,
+   "OP1_unseen": 0.22072072327136993,
+   "OP2_familiar": 0.49551019072532654,
+   "OP2_unseen": 0.19313062727451324,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12650948762893677,
+   "step": 3900
+  },
+  {
+   "OP1_familiar": 0.5493877530097961,
+   "OP1_unseen": 0.2224099040031433,
+   "OP2_familiar": 0.4944217801094055,
+   "OP2_unseen": 0.1897522509098053,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1282346248626709,
+   "step": 4000
+  },
+  {
+   "OP1_familiar": 0.5489795804023743,
+   "OP1_unseen": 0.22184684872627258,
+   "OP2_familiar": 0.4946938753128052,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12133409827947617,
+   "step": 4100
+  },
+  {
+   "OP1_familiar": 0.5482993125915527,
+   "OP1_unseen": 0.220157653093338,
+   "OP2_familiar": 0.49455782771110535,
+   "OP2_unseen": 0.1920045018196106,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12363427132368088,
+   "step": 4200
+  },
+  {
+   "OP1_familiar": 0.5487074851989746,
+   "OP1_unseen": 0.21959459781646729,
+   "OP2_familiar": 0.49401360750198364,
+   "OP2_unseen": 0.1942567527294159,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12420931458473206,
+   "step": 4300
+  },
+  {
+   "OP1_familiar": 0.5476190447807312,
+   "OP1_unseen": 0.21903152763843536,
+   "OP2_familiar": 0.49360543489456177,
+   "OP2_unseen": 0.1920045018196106,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12248418480157852,
+   "step": 4400
+  },
+  {
+   "OP1_familiar": 0.5469387769699097,
+   "OP1_unseen": 0.22072072327136993,
+   "OP2_familiar": 0.4949660003185272,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12248418480157852,
+   "step": 4500
+  },
+  {
+   "OP1_familiar": 0.5468026995658875,
+   "OP1_unseen": 0.22072072327136993,
+   "OP2_familiar": 0.4949660003185272,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1230592280626297,
+   "step": 4600
+  },
+  {
+   "OP1_familiar": 0.5473469495773315,
+   "OP1_unseen": 0.22072072327136993,
+   "OP2_familiar": 0.49360543489456177,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12248418480157852,
+   "step": 4700
+  },
+  {
+   "OP1_familiar": 0.5469387769699097,
+   "OP1_unseen": 0.22128377854824066,
+   "OP2_familiar": 0.49401360750198364,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12248418480157852,
+   "step": 4800
+  },
+  {
+   "OP1_familiar": 0.54666668176651,
+   "OP1_unseen": 0.21959459781646729,
+   "OP2_familiar": 0.4942857027053833,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12190914154052734,
+   "step": 4900
+  },
+  {
+   "OP1_familiar": 0.5462585091590881,
+   "OP1_unseen": 0.22072072327136993,
+   "OP2_familiar": 0.49346938729286194,
+   "OP2_unseen": 0.19087837636470795,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12133409827947617,
+   "step": 5000
+  },
+  {
+   "OP1_familiar": 0.5458503365516663,
+   "OP1_unseen": 0.21959459781646729,
+   "OP2_familiar": 0.49455782771110535,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11960896849632263,
+   "step": 5100
+  },
+  {
+   "OP1_familiar": 0.5453061461448669,
+   "OP1_unseen": 0.21959459781646729,
+   "OP2_familiar": 0.49414965510368347,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.12018401175737381,
+   "step": 5200
+  },
+  {
+   "OP1_familiar": 0.5458503365516663,
+   "OP1_unseen": 0.21959459781646729,
+   "OP2_familiar": 0.49360543489456177,
+   "OP2_unseen": 0.19144144654273987,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11845888197422028,
+   "step": 5300
+  },
+  {
+   "OP1_familiar": 0.5448979735374451,
+   "OP1_unseen": 0.21903152763843536,
+   "OP2_familiar": 0.49292516708374023,
+   "OP2_unseen": 0.1897522509098053,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11960896849632263,
+   "step": 5400
+  },
+  {
+   "OP1_familiar": 0.5438095331192017,
+   "OP1_unseen": 0.21903152763843536,
+   "OP2_familiar": 0.49292516708374023,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11903392523527145,
+   "step": 5500
+  },
+  {
+   "OP1_familiar": 0.5446258783340454,
+   "OP1_unseen": 0.21903152763843536,
+   "OP2_familiar": 0.4926530718803406,
+   "OP2_unseen": 0.1875,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.1178838387131691,
+   "step": 5600
+  },
+  {
+   "OP1_familiar": 0.5438095331192017,
+   "OP1_unseen": 0.21846847236156464,
+   "OP2_familiar": 0.4931972920894623,
+   "OP2_unseen": 0.1897522509098053,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11730879545211792,
+   "step": 5700
+  },
+  {
+   "OP1_familiar": 0.5439455509185791,
+   "OP1_unseen": 0.217342346906662,
+   "OP2_familiar": 0.49251699447631836,
+   "OP2_unseen": 0.18806307017803192,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11673375219106674,
+   "step": 5800
+  },
+  {
+   "OP1_familiar": 0.5440816283226013,
+   "OP1_unseen": 0.217342346906662,
+   "OP2_familiar": 0.49210885167121887,
+   "OP2_unseen": 0.18918919563293457,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11673375219106674,
+   "step": 5900
+  },
+  {
+   "OP1_familiar": 0.5438095331192017,
+   "OP1_unseen": 0.21846847236156464,
+   "OP2_familiar": 0.49197277426719666,
+   "OP2_unseen": 0.19031532108783722,
+   "OP1_subcircuit_exact": 1.0,
+   "OP2_subcircuit_silent": 1.0,
+   "OP1_iit_M_disc": 0.11730879545211792,
+   "step": 6000
+  }
+ ]
+}

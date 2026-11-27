@@ -1,0 +1,586 @@
+{
+ "C": {
+  "MAS": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M*A*S",
+   "compile": {
+    "t_range": [
+     0,
+     29
+    ],
+    "hidden_units": 34
+   },
+   "nonzero_params": 1291,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "zero": {
+    "zero_inputs_to_zero": 1.0,
+    "nonzero_inputs_never_zero": true
+   },
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": false,
+    "logits_exactly_onehot_target": false,
+    "logits_max_abs_error": 1.1744436948381616e-107,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 15552,
+     "discriminating_acc": 1.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  },
+  "M2AS": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M^2*A*S",
+   "compile": {
+    "t_range": [
+     0,
+     40
+    ],
+    "hidden_units": 45
+   },
+   "nonzero_params": 1621,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "zero": {
+    "zero_inputs_to_zero": 1.0,
+    "nonzero_inputs_never_zero": true
+   },
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": false,
+    "logits_exactly_onehot_target": false,
+    "logits_max_abs_error": 1.1744436948381616e-107,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 93312,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 15552,
+     "discriminating_acc": 1.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  },
+  "MA2S": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M*A^2*S",
+   "compile": {
+    "t_range": [
+     0,
+     40
+    ],
+    "hidden_units": 45
+   },
+   "nonzero_params": 1621,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "zero": {
+    "zero_inputs_to_zero": 1.0,
+    "nonzero_inputs_never_zero": true
+   },
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": false,
+    "logits_exactly_onehot_target": false,
+    "logits_max_abs_error": 2.3488873896763232e-107,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 93312,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 15552,
+     "discriminating_acc": 1.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  },
+  "M+A": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M+A",
+   "compile": {
+    "t_range": [
+     0,
+     24
+    ],
+    "hidden_units": 27
+   },
+   "nonzero_params": 1080,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 109512,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 109512,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 0,
+     "discriminating_acc": 0.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  },
+  "M-A": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M-A",
+   "compile": {
+    "t_range": [
+     -12,
+     12
+    ],
+    "hidden_units": 27
+   },
+   "nonzero_params": 1080,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": false,
+    "logits_exactly_onehot_target": false,
+    "logits_max_abs_error": 3.2030282586495315e-108,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 109512,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 109512,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 0,
+     "discriminating_acc": 0.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  },
+  "M/A": {
+   "kind": "constructed",
+   "design": "C",
+   "op": "M/A",
+   "compile": {
+    "t_range": [
+     -11,
+     11
+    ],
+    "hidden_units": 27
+   },
+   "nonzero_params": 1031,
+   "total_params": 69831,
+   "acc_all": 1.0,
+   "acc_familiar": 1.0,
+   "acc_unseen": 1.0,
+   "n_familiar": 7350,
+   "n_unseen": 1776,
+   "zero": {
+    "zero_inputs_to_zero": 1.0,
+    "nonzero_inputs_never_zero": true
+   },
+   "exact_float32": {
+    "dtype": "torch.float32",
+    "attention_layer1_max_dev_from_0_1": 0.0,
+    "attention_layer2_max_dev_from_0_half_1": 0.0,
+    "h_regions_equal_symbolic": true,
+    "preactivations_equal_integer_symbolic": true,
+    "logits_exactly_onehot_target": true,
+    "logits_max_abs_error": 0.0,
+    "min_margin": 1.0
+   },
+   "exact_float64": {
+    "dtype": "torch.float64",
+    "attention_layer1_max_dev_from_0_1": 6.281932387132105e-128,
+    "attention_layer2_max_dev_from_0_half_1": 2.6691902155412764e-109,
+    "h_regions_equal_symbolic": false,
+    "preactivations_equal_integer_symbolic": false,
+    "logits_exactly_onehot_target": false,
+    "logits_max_abs_error": 1.6015141293247657e-108,
+    "min_margin": 1.0
+   },
+   "iit": {
+    "M": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "A": {
+     "n": 118638,
+     "acc": 1.0,
+     "discriminating_n": 101088,
+     "discriminating_acc": 1.0
+    },
+    "S": {
+     "n": 27378,
+     "acc": 1.0,
+     "discriminating_n": 0,
+     "discriminating_acc": 0.0
+    }
+   },
+   "invariance": {
+    "M": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "A": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 13
+    },
+    "S": {
+     "bitwise_identical_within_class": true,
+     "distinct_between_classes": true,
+     "n_classes": 3
+    }
+   }
+  }
+ },
+ "L": {
+  "MAS": {
+   "kind": "constructed",
+   "design": "L",
+   "op": "M*A*S",
+   "compile": {
+    "t_range": [
+     0,
+     55
+    ],
+    "hidden_units": 60
+   },
+   "nonzero_params": 613,
+   "acc_all": 1.0,
+   "acc_unseen": 1.0,
+   "acc_familiar": 1.0,
+   "M_state_equal_mod12": true,
+   "M_state_bitwise_invariant": false,
+   "n_distinct_M_states": 24,
+   "iit_M": {
+    "n": 219024,
+    "acc": 1.0
+   },
+   "logits_exactly_onehot": true,
+   "attention_layer2_eq_row_exact_1_8": true,
+   "attention_layer1_max_dev": 0.0
+  },
+  "M2AS": {
+   "kind": "constructed",
+   "design": "L",
+   "op": "M^2*A*S",
+   "compile": {
+    "t_range": [
+     0,
+     77
+    ],
+    "hidden_units": 82
+   },
+   "nonzero_params": 811,
+   "acc_all": 1.0,
+   "acc_unseen": 1.0,
+   "acc_familiar": 1.0,
+   "M_state_equal_mod12": true,
+   "M_state_bitwise_invariant": false,
+   "n_distinct_M_states": 24,
+   "iit_M": {
+    "n": 219024,
+    "acc": 1.0
+   },
+   "logits_exactly_onehot": true,
+   "attention_layer2_eq_row_exact_1_8": true,
+   "attention_layer1_max_dev": 0.0
+  },
+  "MA2S": {
+   "kind": "constructed",
+   "design": "L",
+   "op": "M*A^2*S",
+   "compile": {
+    "t_range": [
+     0,
+     77
+    ],
+    "hidden_units": 82
+   },
+   "nonzero_params": 811,
+   "acc_all": 1.0,
+   "acc_unseen": 1.0,
+   "acc_familiar": 1.0,
+   "M_state_equal_mod12": true,
+   "M_state_bitwise_invariant": false,
+   "n_distinct_M_states": 24,
+   "iit_M": {
+    "n": 219024,
+    "acc": 1.0
+   },
+   "logits_exactly_onehot": true,
+   "attention_layer2_eq_row_exact_1_8": true,
+   "attention_layer1_max_dev": 0.0
+  },
+  "M/A": {
+   "kind": "constructed",
+   "design": "L",
+   "op": "M/A",
+   "compile": {
+    "t_range": [
+     -22,
+     22
+    ],
+    "hidden_units": 49
+   },
+   "nonzero_params": 467,
+   "acc_all": 1.0,
+   "acc_unseen": 1.0,
+   "acc_familiar": 1.0,
+   "M_state_equal_mod12": true,
+   "M_state_bitwise_invariant": false,
+   "n_distinct_M_states": 24,
+   "iit_M": {
+    "n": 219024,
+    "acc": 1.0
+   },
+   "logits_exactly_onehot": true,
+   "attention_layer2_eq_row_exact_1_8": true,
+   "attention_layer1_max_dev": 0.0
+  }
+ },
+ "q_data": {
+  "weights_identical_without_ood_split": true,
+  "data_access_tokens_in_constructor": []
+ }
+}
