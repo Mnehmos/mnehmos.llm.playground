@@ -1,0 +1,11 @@
+{
+  "five_port_transactions": 16560,
+  "five_port_certificates": 14289,
+  "nine_port_transactions": 3096,
+  "nine_port_certificates": 2662,
+  "parent_manifest_entries": 36,
+  "primary_states": 14,
+  "replay_states": 14,
+  "bitwise_replay_comparisons": 14,
+  "online_transactions": 171
+}
