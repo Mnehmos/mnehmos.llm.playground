@@ -1,0 +1,56 @@
+[
+  {
+    "name": "34001_exact",
+    "status": "skip_insufficient",
+    "pool_counts": [
+      0,
+      4410,
+      0,
+      2940
+    ]
+  },
+  {
+    "name": "34001_quotient",
+    "status": "run",
+    "pool_counts": [
+      1840,
+      2570,
+      1240,
+      1700
+    ],
+    "fallback": 0
+  },
+  {
+    "name": "34002_exact",
+    "status": "run",
+    "pool_counts": [
+      1842,
+      2568,
+      1225,
+      1715
+    ],
+    "fallback": 3
+  },
+  {
+    "name": "34002_quotient",
+    "status": "run",
+    "pool_counts": [
+      1839,
+      2571,
+      1243,
+      1697
+    ],
+    "fallback": 0
+  },
+  {
+    "name": "32002_spontaneous",
+    "status": "run",
+    "pool_counts": [
+      1831,
+      2579,
+      1191,
+      1749
+    ],
+    "fallback": 4
+  }
+]
