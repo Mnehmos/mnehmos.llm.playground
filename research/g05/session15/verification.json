@@ -1,0 +1,7 @@
+{
+  "parents_verified": 5,
+  "full_final_states_verified": 64,
+  "sparse_horizon_states_verified": 288,
+  "max_metric_absolute_difference": 4.440892098500626e-16,
+  "scope": "reload and score reproduction, not full training replays"
+}
