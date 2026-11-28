@@ -1,0 +1,26 @@
+[
+  {
+    "backbone": "34001_quotient",
+    "status": "run",
+    "groups": 836,
+    "donor_fallback": 1
+  },
+  {
+    "backbone": "34002_exact",
+    "status": "run",
+    "groups": 996,
+    "donor_fallback": 4
+  },
+  {
+    "backbone": "34002_quotient",
+    "status": "run",
+    "groups": 971,
+    "donor_fallback": 0
+  },
+  {
+    "backbone": "32002_spontaneous",
+    "status": "run",
+    "groups": 856,
+    "donor_fallback": 1
+  }
+]
